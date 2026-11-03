@@ -1,0 +1,28 @@
+sequenceDiagram
+  actor P as Người chơi
+  participant A as Client người ném
+  participant S as Máy chủ
+  participant B as Client đối thủ
+  P->>A: Giữ rồi thả ACTION
+  A->>A: Phản hồi hoạt ảnh
+  A->>S: Input seq và hành động ném
+  S->>S: Kiểm dữ liệu và luật tại tick
+  alt Không hợp lệ hoặc trận đã kết thúc
+    S-->>A: Trạng thái hợp lệ và ackSeq
+  else Chấp nhận
+    S->>S: Tạo shotId và quỹ đạo dự kiến
+    loop Các tick khi bóng đang bay
+      S->>S: Kiểm hết giờ trước va chạm và điểm
+      S-->>A: Snapshot và ackSeq của A
+      S-->>B: Snapshot và ackSeq của B
+    end
+    alt Qua rổ hợp lệ trước hết giờ
+      S->>S: Cộng điểm một lần và kiểm kết thúc
+    else Bị Block hoặc trượt
+      S->>S: Bóng tự do
+    else Hết giờ
+      S->>S: Giữ tỷ số cuối và kết thúc
+    end
+    S-->>A: Trạng thái mới và sự kiện có eventId
+    S-->>B: Trạng thái mới và sự kiện có eventId
+  end

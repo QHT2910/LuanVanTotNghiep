@@ -1,0 +1,35 @@
+classDiagram
+  class RoomState {
+    String roomCode
+    RoomPhase phase
+  }
+  class SessionState {
+    String playerId
+    int lastProcessedSeq
+  }
+  class WorldState {
+    int tick
+    int remainingTicks
+    MatchPhase phase
+  }
+  class PlayerState {
+    Vector3 position
+    Vector3 velocity
+    ActionState action
+  }
+  class BallState {
+    Vector3 position
+    BallPhase phase
+    String holderId
+  }
+  class ShotState {
+    String shotId
+    String shooterId
+    int pointValue
+    bool scored
+  }
+  RoomState "1" o-- "0..2" SessionState : slots
+  RoomState "1" o-- "0..1" WorldState : match
+  WorldState "1" *-- "2" PlayerState : players
+  WorldState "1" *-- "1" BallState : ball
+  BallState "1" o-- "0..1" ShotState : shot

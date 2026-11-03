@@ -1,0 +1,14 @@
+flowchart TD
+  subgraph A[Android A - mạng thứ nhất]
+    A1[Input và giao diện Flutter] --> A2[Client mạng]
+    A2 --> A3[Trạng thái hiển thị và Scene]
+  end
+  subgraph B[Client B - mạng thứ hai]
+    B1[Input và giao diện Flutter] --> B2[Client mạng]
+    B2 --> B3[Trạng thái hiển thị và Scene]
+  end
+  A2 <-->|Input - snapshot| S[Máy chủ công khai]
+  B2 <-->|Input - snapshot| S
+  S --> R[Phòng và phiên]
+  S --> C[Lõi mô phỏng và luật]
+  C --> W[Trạng thái trận trong bộ nhớ]

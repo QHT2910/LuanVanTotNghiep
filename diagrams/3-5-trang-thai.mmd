@@ -1,0 +1,12 @@
+stateDiagram-v2
+  [*] --> Waiting
+  Waiting --> Countdown: Hai người sẵn sàng
+  Countdown --> Waiting: Có người rời hoặc hủy sẵn sàng
+  Countdown --> Playing: Đếm ngược hoàn tất
+  Playing --> Finished: Đủ điểm hoặc hết giờ
+  Playing --> Finished: Timeout một người theo chính sách
+  Playing --> Closed: Cả hai mất kết nối và hết hạn
+  Finished --> Waiting: Chơi lại và còn người trong phòng
+  Finished --> Closed: Phòng không còn người
+  Waiting --> Closed: Phòng không còn người
+  Closed --> [*]

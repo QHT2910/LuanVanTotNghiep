@@ -1,0 +1,18 @@
+flowchart LR
+  P[Người chơi]
+  subgraph SYS[Ứng dụng và máy chủ]
+    U1([UC01 Tạo hoặc vào phòng])
+    U2([UC02 Sẵn sàng])
+    U3([UC03 Điều khiển nhân vật])
+    U4([UC04 Ném bóng])
+    U5([UC05 Block])
+    U6([UC06 Xem kết quả])
+    U7([UC07 Cài đặt âm thanh])
+  end
+  P --- U1
+  P --- U2
+  P --- U3
+  P --- U4
+  P --- U5
+  P --- U6
+  P --- U7

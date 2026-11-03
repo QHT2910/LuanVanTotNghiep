@@ -1,0 +1,21 @@
+flowchart TD
+  A[Nhận yêu cầu ném] --> B{Dữ liệu và trạng thái hợp lệ?}
+  B -->|Không| R[Bỏ yêu cầu và trả trạng thái]
+  B -->|Có| C[Tạo cú ném và thả bóng]
+  C --> T{Hết giờ hoặc trận đã kết thúc?}
+  T -->|Có| E[Kết thúc, không cộng điểm mới]
+  T -->|Không| M[Cập nhật bóng và va chạm]
+  M --> K{Bị Block hợp lệ?}
+  K -->|Có| F[Bóng tự do, vô hiệu cú ném]
+  K -->|Không| G{Qua vùng rổ đúng chiều và chưa tính?}
+  G -->|Có| H[Cộng 2 hoặc 3 điểm một lần]
+  H --> I{Đạt điều kiện thắng?}
+  I -->|Có| E
+  I -->|Không| J[Check-ball, pha mới]
+  G -->|Không| L{Cú ném trượt đã được giải quyết?}
+  L -->|Có| F
+  L -->|Không| T
+  R --> Z[Kết thúc xử lý use case]
+  E --> Z
+  F --> Z
+  J --> Z

@@ -1,0 +1,11 @@
+flowchart TD
+  M[Menu: kết nối và chọn phòng] --> L[Sảnh: mã, hai người, sẵn sàng]
+  L --> G[Trận đấu]
+  G --> H[HUD: điểm, thời gian, trạng thái mạng]
+  G --> V[Cảnh 3D: sân, hai nhân vật, bóng]
+  G --> C[Điều khiển: joystick, ACTION, JUMP, DASH]
+  G --> R[Kết quả và lý do kết thúc]
+  R -->|Còn kết nối| L
+  R -->|Rời phòng| M
+  M --> S[Cài đặt âm thanh]
+  S --> M
