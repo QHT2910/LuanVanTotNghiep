@@ -12,7 +12,7 @@ Tái sử dụng research, thesis, game-design, diagrams, developer, qa; không 
 | thesis | Ba chương, REFERENCES.md, CITATION_MAP.md | 19 nguồn số duy nhất; không đổi bố cục hoặc tự tuyên bố thực nghiệm |
 | game-design | Nội dung design/ui-spec-r1.md | Worker trả trực tiếp; Lead lưu do lỗi tạo thư mục. Chưa có file thiết kế UI |
 | diagrams | SVG UML, lớp/tuần tự R1, traceability-r1.md | Lead render PNG và thay tham chiếu trong bản thảo |
-| developer | Đánh giá read-only và đề xuất probe; báo lỗi quyền ghi | Không chạy probe/analyze ở worker; không gán kết quả Lead cho developer |
+| developer | Đã chạy version/doctor/devices/adb và kiểm tra SDK/cache; báo cáo gửi muộn ở game/evidence-r1/developer-environment.md | Không resolve/probe/analyze/compile ở worker; kết quả Lead lưu riêng |
 | qa | Nội dung qa/review-r1.md | Rà tài liệu độc lập, bảy vấn đề và tám nhóm ca thử game chưa chạy; Lead lưu |
 | Lead | Tích hợp, luồng UI02, ví dụ Dart, probe, Word v0.3, kiểm tra và Git | Giữ giới hạn thiết bị/hạ tầng và các quyết định còn mở |
 
