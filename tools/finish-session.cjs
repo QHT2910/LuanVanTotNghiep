@@ -16,6 +16,11 @@ try {
  const staged=git(['diff','--cached','--name-only']).stdout.trim().split('\n').filter(Boolean);
  for(const file of staged) if(!allowed.includes(file.split('/')[0])) throw new Error(`Already staged path outside allowlist: ${file}`);
  const present=allowed.filter(x=>fs.existsSync(path.join(root,x)));
+ if(git(['status','--porcelain=v1','--',...present]).stdout.trim() && fs.existsSync(path.join(root,'docs/CONTEXT_HANDOFF.md'))){
+  const checkpoint=spawnSync(process.execPath,[path.join(__dirname,'checkpoint-context.cjs')],{encoding:'utf8',windowsHide:true});
+  if(checkpoint.status!==0)throw new Error(checkpoint.stderr||'Checkpoint update failed; no commit or push performed');
+  console.log(checkpoint.stdout.trim());
+ }
  git(['add','--',...present]);
  const diff=git(['diff','--cached','--quiet'],[0,1]);
  if(diff.status===1){ const idx=process.argv.indexOf('--message');const msg=idx>=0?process.argv[idx+1]:null;if(!msg)throw new Error('Provide --message for session changes');console.log(git(['commit','-m',msg]).stdout); }

@@ -9,6 +9,8 @@ Nghiên cứu Flutter Scene và ứng dụng xây dựng demo game bóng rổ đ
 - [Quy cách mẫu và kế hoạch](docs/QUY_CACH_VA_KE_HOACH.md)
 - [Bản Word hiện hành v0.3](thesis/Ban_thao_Chuong_1-3_v0.3.docx)
 - [Trạng thái hiện hành và bằng chứng](docs/CURRENT_STATUS.md)
+- [Checkpoint tiếp tục dự án](docs/CONTEXT_HANDOFF.md)
+- [Quy trình bảo toàn context](docs/CONTEXT_PROTOCOL.md)
 - [Báo cáo lượt cải thiện R1](docs/R1_REVIEW.md)
 - [Danh mục tài liệu tham khảo](thesis/REFERENCES.md)
 - [Rà soát v0.2 và phần giao diện còn thiếu](docs/REVIEW_v0.2.md)

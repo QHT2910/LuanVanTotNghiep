@@ -2,6 +2,8 @@
 
 Ngày cập nhật: 04/11/2026. Đây là bản để rà soát tiếp, chưa phải quyển nộp hoặc sản phẩm game hoàn chỉnh.
 
+Điểm bắt đầu cho phiên/nén ngữ cảnh tiếp theo: [CONTEXT_HANDOFF.md](CONTEXT_HANDOFF.md), quy trình [CONTEXT_PROTOCOL.md](CONTEXT_PROTOCOL.md). Snapshot host lượt context cho thấy sáu worker không làm việc, queue đều 0; chưa sửa root hoặc đổi model, không chạy lại R1. Checkpoint không có nghĩa auto rollover đã được cài.
+
 ## Sản phẩm hiện hành
 
 - Bản tổng hợp: thesis/BAN_THAO_CHUONG_1-3.md; ba chương nguồn giữ bố cục sinh viên chỉ định.
