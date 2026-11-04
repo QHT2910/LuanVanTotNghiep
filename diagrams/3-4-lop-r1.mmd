@@ -1,0 +1,51 @@
+classDiagram
+  %% Thiết kế đề xuất, chưa phải code hoặc API Flutter Scene.
+  class RoomState {
+    String roomCode
+    RoomPhase phase
+  }
+  class SessionState {
+    String playerId
+    int slotIndex
+    bool ready
+    ConnectionRef connection
+    int lastSeen
+    int lastProcessedSeq
+  }
+  class WorldState {
+    int tick
+    int remainingTicks
+    MatchPhase phase
+    List~int~ score
+    MatchResult result
+  }
+  class PlayerState {
+    Vector3 position
+    Vector3 velocity
+    Vector3 facing
+    ActionState action
+    Cooldowns cooldowns
+  }
+  class BallState {
+    Vector3 position
+    Vector3 velocity
+    BallPhase phase
+    String holderId
+  }
+  class ShotState {
+    String shotId
+    String shooterId
+    Vector3 releasePosition
+    int releaseTick
+    int pointValue
+    bool scored
+  }
+  RoomState "1" o-- "0..2" SessionState : slots
+  RoomState "1" o-- "0..1" WorldState : match
+  WorldState "1" *-- "2" PlayerState : players
+  WorldState "1" *-- "1" BallState : ball
+  BallState "1" o-- "0..1" ShotState : shot
+  note for SessionState "slotIndex ổn định trong phòng: 0 hoặc 1, không trùng; dùng phân xử nhặt bóng khi bằng khoảng cách."
+  note for WorldState "score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do kết thúc, chỉ có khi kết thúc."
+  note for ShotState "Chốt pointValue từ releasePosition tại releaseTick: trên vạch tính 2 điểm; scored ngăn cộng lặp."
+  note for BallState "holderId chỉ có nghĩa khi giữ bóng; shot có thể vắng. Kiểu giá trị và đơn vị thời gian cần cụ thể hóa khi triển khai."

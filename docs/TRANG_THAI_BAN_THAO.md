@@ -1,6 +1,6 @@
 # Bàn giao bản sơ bộ v0.1 — 2026-11-04
 
-Hồ sơ lịch sử của v0.1. Bản hiện hành là v0.2; xem REVIEW_v0.2.md. Gameplay/tên tạm đã được cập nhật, hai skill mới đã được áp dụng và hình wireframe tự sinh đã bị loại khỏi Word v0.2.
+Hồ sơ lịch sử của v0.1; những dòng dưới mô tả thời điểm bàn giao v0.1, không phải hiện tại. Bản hiện hành là v0.3; xem CURRENT_STATUS.md và R1_REVIEW.md. Gameplay/tên tạm đã được cập nhật, hai skill đã được áp dụng; hình wireframe tự sinh không nằm trong Word hiện hành.
 
 ## Có trong phiên bản
 

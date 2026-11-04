@@ -1,0 +1,11 @@
+flowchart TD
+  M[UI01 Menu chính] --> F[UI02 Tạo hoặc vào phòng]
+  F -->|Thành công| L[UI03 Sảnh chờ]
+  F -->|Hủy hoặc quay lại| M
+  L -->|Hai người sẵn sàng và bắt đầu được xác nhận| G[UI04 Trận đấu]
+  L -->|Rời phòng| M
+  G -->|Kết quả được máy chủ xác nhận| R[UI05 Kết quả]
+  R -->|Phòng còn hợp lệ, đặt lại sẵn sàng| L
+  R -->|Về Menu| M
+  M --> S[UI06 Cài đặt âm thanh]
+  S --> M

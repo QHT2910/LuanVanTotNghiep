@@ -77,29 +77,10 @@ flowchart TD
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
-Tác nhân chính là Người chơi. Ranh giới hệ thống bao gồm ứng dụng và máy chủ; do đó máy chủ không được vẽ như tác nhân bên ngoài. Hai người cùng sử dụng vai trò này. Hình 3-2 là sơ đồ ánh xạ use case bằng flowchart Mermaid, không phải sơ đồ use case UML chuẩn; khi định dạng bản chính thức có thể chuyển sang công cụ UML thích hợp mà giữ nguyên ý nghĩa.
+Tác nhân Người chơi đại diện cho vai trò của mỗi người trong hai người tham gia. Ranh giới hệ thống gồm ứng dụng và máy chủ, vì vậy máy chủ là thành phần bên trong. Hình 3-2 sử dụng ký hiệu UML: actor hình người, use case hình ellipse và association nét liền. UC08 Rời phòng thể hiện thao tác đã có trong yêu cầu F01; sơ đồ không dùng quan hệ include hoặc extend khi chưa có nhu cầu tương ứng.
 
-<!-- diagram: 3-2-usecase-tong-quat.mmd -->
-```mermaid
-flowchart LR
-  P[Người chơi]
-  subgraph SYS[Ứng dụng và máy chủ]
-    U1([UC01 Tạo hoặc vào phòng])
-    U2([UC02 Sẵn sàng])
-    U3([UC03 Điều khiển nhân vật])
-    U4([UC04 Ném bóng])
-    U5([UC05 Block])
-    U6([UC06 Xem kết quả])
-    U7([UC07 Cài đặt âm thanh])
-  end
-  P --- U1
-  P --- U2
-  P --- U3
-  P --- U4
-  P --- U5
-  P --- U6
-  P --- U7
-```
+<!-- diagram-svg: 3-2-usecase-uml.svg -->
+![Thiết kế đề xuất — 3-2-usecase-uml.svg](../diagrams/3-2-usecase-uml.png)
 
 Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
@@ -122,6 +103,18 @@ Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã 
 | Hậu điều kiện | Bóng bay, tự do hoặc trận kết thúc; cú ném chỉ cộng điểm một lần |
 
 UC05 Block chỉ nhận khi trạng thái và hồi chiêu hợp lệ. Khi vùng Block hợp lệ chạm bóng đang bay, máy chủ đổi vận tốc, phát sự kiện và chuyển bóng thành tự do. Giá trị phạm vi, thời gian hiệu lực và hồi chiêu chưa chốt. UC02 cần hủy đếm ngược nếu thiếu người; UC06 hiển thị kết quả đã xác nhận, không tự suy luận thắng từ điểm cục bộ.
+
+UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người chơi rời sảnh hoặc rời trận đang diễn ra.
+
+| Thuộc tính UC08 | Nội dung |
+|---|---|
+| Mục tiêu | Rời phòng hiện tại và kết thúc tham gia theo chính sách của phiên |
+| Tiền điều kiện | Người chơi đang thuộc một phòng ở sảnh hoặc trong trận |
+| Luồng chính | Người chơi yêu cầu rời; máy chủ kiểm tra phiên và trạng thái phòng; cập nhật thành viên; gửi trạng thái cho người còn lại; ứng dụng chuyển về màn hình phù hợp |
+| Rời sảnh | Bỏ trạng thái sẵn sàng của người rời; hủy đếm ngược nếu thiếu người; không tự bắt đầu trận |
+| Rời trận | Cần thống nhất chính sách kết thúc, xử kết quả hoặc cho phép chờ; chưa mặc định người rời bị xử thua |
+| Ngoại lệ | Mất kết nối, yêu cầu lặp, cả hai cùng rời hoặc yêu cầu đến sau kết thúc cần xử lý nhất quán; timeout và khả năng quay lại chưa chốt |
+| Hậu điều kiện | Phiên đã rời không tiếp tục điều khiển nhân vật; trạng thái phòng và kết quả chỉ thay đổi theo chính sách được máy chủ áp dụng |
 
 ### 3.2.5. Kiến trúc hệ thống và thiết kế mạng
 
@@ -149,6 +142,10 @@ Client B trong hình biểu diễn vai trò logic; hiện chưa có điện tho�
 
 Input dự kiến chứa số thứ tự, hướng di chuyển và cờ hành động. Máy chủ lấy danh tính người gửi từ phiên kết nối, kiểm tra kiểu, miền giá trị, tần suất và điều kiện luật. Không tin điểm hoặc vị trí người chơi tự khai báo. Snapshot mang tick, trạng thái và ackSeq riêng cho người nhận; sự kiện có eventId để tránh phát âm thanh hoặc cộng hiệu ứng lặp.
 
+Trong thiết kế, ackSeq của một client là số thứ tự input cuối cùng đã được máy chủ tiêu thụ theo luồng có thứ tự của phiên, kể cả hành động bị từ chối sau khi kiểm tra luật. Việc mới nhận một thông điệp chưa đủ để xác nhận; dữ liệu sai định dạng hoặc sai phiên không được làm tiến ackSeq. Máy khách loại các input đã được xác nhận rồi mới đối chiếu các input còn lại. Định danh phiên lấy từ kết nối, không lấy từ mã người chơi tự khai báo trong gói tin.
+
+Snapshot cũ không ghi đè trạng thái mới hơn của cùng một trận. Mã sự kiện phải được xét cùng mã trận để tránh nhầm khi chơi lại; thời hạn lưu sự kiện và quy tắc đặt lại bộ nhớ đệm sẽ được xác định khi cụ thể hóa giao thức.
+
 Các giá trị 60 nhịp mô phỏng/giây, 20 snapshot/giây và bộ đệm nội suy khoảng 100 ms từ bản nháp chỉ là thông số khởi tạo để thử. Prediction và reconciliation tập trung vào nhân vật cục bộ; bóng nhận trạng thái được máy chủ xác nhận. Không có cơ sở kết luận các giá trị này phù hợp Redmi Note 11 trước khi đo.
 
 ### 3.2.6. Mô hình dữ liệu và sơ đồ lớp
@@ -157,8 +154,8 @@ Dữ liệu kết nối tách khỏi dữ liệu mô phỏng. Phòng lưu mã, h
 
 | Cấu trúc dự kiến | Dữ liệu chính và bất biến |
 |---|---|
-| RoomState | Mã phòng, phase, tối đa hai phiên, trạng thái sẵn sàng |
-| SessionState | playerId, kết nối, lastSeen, thứ tự input đã xử lý |
+| RoomState | Mã phòng, phase, tối đa hai phiên; trạng thái sẵn sàng lấy từ các phiên |
+| SessionState | playerId, slotIndex ổn định, ready, kết nối, lastSeen, thứ tự input đã xử lý |
 | WorldState | tick, phase, thời gian còn lại, hai player, một ball, score, result |
 | PlayerState | Vị trí, vận tốc, hướng, hành động, hồi chiêu |
 | BallState | Vị trí, vận tốc, phase, holderId, shot hiện tại |
@@ -166,35 +163,47 @@ Dữ liệu kết nối tách khỏi dữ liệu mô phỏng. Phòng lưu mã, h
 
 Hình 3-4 mô tả cấu trúc lớp dự kiến, không phải API Flutter Scene hoặc mã đã có. Liên kết lớp với Scene được đặt ở lớp hiển thị để lõi không phụ thuộc node GPU.
 
-<!-- diagram: 3-4-lop.mmd -->
+<!-- diagram: 3-4-lop-r1.mmd -->
 ```mermaid
 classDiagram
+  %% Thiết kế đề xuất, chưa phải code hoặc API Flutter Scene.
   class RoomState {
     String roomCode
     RoomPhase phase
   }
   class SessionState {
     String playerId
+    int slotIndex
+    bool ready
+    ConnectionRef connection
+    int lastSeen
     int lastProcessedSeq
   }
   class WorldState {
     int tick
     int remainingTicks
     MatchPhase phase
+    List~int~ score
+    MatchResult result
   }
   class PlayerState {
     Vector3 position
     Vector3 velocity
+    Vector3 facing
     ActionState action
+    Cooldowns cooldowns
   }
   class BallState {
     Vector3 position
+    Vector3 velocity
     BallPhase phase
     String holderId
   }
   class ShotState {
     String shotId
     String shooterId
+    Vector3 releasePosition
+    int releaseTick
     int pointValue
     bool scored
   }
@@ -203,6 +212,10 @@ classDiagram
   WorldState "1" *-- "2" PlayerState : players
   WorldState "1" *-- "1" BallState : ball
   BallState "1" o-- "0..1" ShotState : shot
+  note for SessionState "slotIndex ổn định trong phòng: 0 hoặc 1, không trùng; dùng phân xử nhặt bóng khi bằng khoảng cách."
+  note for WorldState "score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do kết thúc, chỉ có khi kết thúc."
+  note for ShotState "Chốt pointValue từ releasePosition tại releaseTick: trên vạch tính 2 điểm; scored ngăn cộng lặp."
+  note for BallState "holderId chỉ có nghĩa khi giữ bóng; shot có thể vắng. Kiểu giá trị và đơn vị thời gian cần cụ thể hóa khi triển khai."
 ```
 
 ### 3.2.7. Mô hình xử lý
@@ -227,9 +240,10 @@ stateDiagram-v2
 
 Hình 3-6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
 
-<!-- diagram: 3-6-tuan-tu-nem.mmd -->
+<!-- diagram: 3-6-tuan-tu-nem-r1.mmd -->
 ```mermaid
 sequenceDiagram
+  %% Thiết kế đề xuất. resolved chỉ là cờ điều khiển vòng xử lý cú ném trong sơ đồ.
   actor P as Người chơi
   participant A as Client người ném
   participant S as Máy chủ
@@ -237,25 +251,46 @@ sequenceDiagram
   P->>A: Giữ rồi thả ACTION
   A->>A: Phản hồi hoạt ảnh
   A->>S: Input seq và hành động ném
-  S->>S: Kiểm dữ liệu và luật tại tick
-  alt Không hợp lệ hoặc trận đã kết thúc
+  S->>S: Kiểm seq, dữ liệu, trận, giữ bóng, trạng thái và hồi chiêu
+  alt Input cũ/trùng/sai hoặc không được ném
     S-->>A: Trạng thái hợp lệ và ackSeq
   else Chấp nhận
-    S->>S: Tạo shotId và quỹ đạo dự kiến
-    loop Các tick khi bóng đang bay
-      S->>S: Kiểm hết giờ trước va chạm và điểm
-      S-->>A: Snapshot và ackSeq của A
-      S-->>B: Snapshot và ackSeq của B
+    S->>S: Tạo shotId, lưu releasePosition/releaseTick, chốt pointValue
+    S->>S: Tạo quỹ đạo, thả bóng, scored = false, resolved = false
+    loop Các tick khi resolved = false
+      alt Trận đã kết thúc hoặc hết giờ tại tick này
+        S->>S: Giữ tỷ số cuối, xác định kết quả nếu chưa có
+        S->>S: Không cộng điểm mới, resolved = true
+      else Trận còn chạy và còn thời gian
+        S->>S: Cập nhật bóng và va chạm tại tick
+        alt Block hợp lệ chạm bóng đang bay
+          S->>S: Đổi vận tốc, bóng tự do, vô hiệu cú ném
+          S->>S: resolved = true
+        else Qua vùng rổ từ trên xuống hợp lệ với shotId hiện hành
+          alt scored = false
+            S->>S: Cộng pointValue cho người ném, scored = true
+            alt Người ném đạt ít nhất 11 điểm
+              S->>S: Kết thúc trận, xác nhận kết quả
+            else Chưa đạt điều kiện thắng
+              S->>S: Check-ball, cấp bóng cho người bị ghi điểm
+              S->>S: Đặt lại vị trí hai nhân vật cho pha mới
+            end
+          else Cú ném hiện hành đã tính
+            S->>S: Bỏ sự kiện, không cộng lặp
+          end
+          S->>S: resolved = true
+        else Sự kiện ghi điểm cũ hoặc không thuộc shotId hiện hành
+          S->>S: Bỏ sự kiện, không cộng điểm, tiếp tục xử lý cú ném hiện hành
+        else Cú ném trượt đã được giải quyết
+          S->>S: Bóng tự do, vô hiệu cú ném, resolved = true
+        else Bóng còn bay, chưa có kết quả cú ném
+          S->>S: Giữ resolved = false để xử lý tick tiếp
+        end
+      end
+      S-->>A: Snapshot, ackSeq của A và sự kiện có eventId nếu có
+      S-->>B: Snapshot, ackSeq của B và sự kiện có eventId nếu có
     end
-    alt Qua rổ hợp lệ trước hết giờ
-      S->>S: Cộng điểm một lần và kiểm kết thúc
-    else Bị Block hoặc trượt
-      S->>S: Bóng tự do
-    else Hết giờ
-      S->>S: Giữ tỷ số cuối và kết thúc
-    end
-    S-->>A: Trạng thái mới và sự kiện có eventId
-    S-->>B: Trạng thái mới và sự kiện có eventId
+    Note over S: resolved = true ngăn xử lý tiếp cú ném đã kết thúc<br/>Máy chủ quyết định điểm, quyền bóng và kết quả
   end
 ```
 
@@ -286,6 +321,22 @@ flowchart TD
   J --> Z
 ```
 
+Trong sơ đồ tuần tự, cờ resolved điều khiển việc dừng xử lý cú ném sau hết giờ, Block, ghi điểm hoặc ném trượt. Nhánh ghi điểm thực hiện check-ball khi trận chưa kết thúc. Thứ tự hết giờ trước ghi điểm kế thừa luật đang mô tả; thứ tự Block và bóng qua rổ trong cùng một tick hiện là đề xuất cần xác nhận hoặc thay bằng đối chiếu thời điểm va chạm. Sơ đồ chưa chứng minh tính đúng của phép phân xử này trên sản phẩm.
+
+Các trạng thái logic dự kiến của nhân vật và bóng được mô tả dưới đây để đối chiếu luật với xử lý. Tên trạng thái không phải API đã triển khai; các guard về phạm vi, thời gian và hồi chiêu còn cần thống nhất.
+
+| Đối tượng / trạng thái | Chuyển trạng thái và guard | Ngoại lệ, giới hạn |
+|---|---|---|
+| Player: đứng yên / di chuyển | Input hướng hợp lệ và trận đang diễn ra; trở về trung tính khi thả thao tác | Input sai/cũ/trùng bị bỏ; mất chạm hoặc xuống nền phải xóa nút giữ |
+| Player: nhảy | Yêu cầu JUMP và trạng thái cho phép | Điều kiện tiếp đất, nhảy lại và tham số chưa chốt |
+| Player: Dash | Yêu cầu DASH, trạng thái và hồi chiêu hợp lệ | Không nhận ném khi đang Dash; thời gian và hồi chiêu chưa chốt |
+| Player: ném | Có bóng, trận còn diễn ra và trạng thái cho phép; giữ rồi thả ACTION | Chỉ tạo cú ném khi máy chủ chấp nhận; không tự cộng điểm |
+| Player: Block | ACTION khi phòng thủ; trạng thái, vùng và hồi chiêu hợp lệ | Phạm vi và thời gian hiệu lực chưa chốt |
+| Ball: được giữ | holderId xác định người giữ; cú ném hợp lệ chuyển bóng sang đang bay | Không lưu thêm cờ có bóng độc lập gây mâu thuẫn |
+| Ball: đang bay | Máy chủ cập nhật; qua vùng rổ hợp lệ, đúng chiều và chưa tính thì cộng điểm một lần | Hết giờ không cộng điểm mới; Block hợp lệ vô hiệu cú ném và chuyển bóng tự do |
+| Ball: tự do | Sau cú ném trượt hoặc Block; người chơi có thể tranh bóng | Guard nhận bóng và xử lý tranh chấp đồng thời chưa chốt |
+| Ball: sau ghi điểm / kết thúc | Chưa đủ điều kiện thắng thì check-ball; đủ điểm hoặc hết giờ thì kết thúc | Không tạo check-ball chỉ vì rebound/Block; không tiếp tục xử cú ném sau kết thúc |
+
 ### 3.2.8. Thiết kế cảnh 3D và tài nguyên
 
 Cảnh gồm sân, rổ, hai nhân vật và bóng. Mỗi đối tượng cần thống nhất tỷ lệ, hệ tọa độ và quyền cập nhật transform. Lõi mô phỏng cung cấp trạng thái; lớp hiển thị ánh xạ sang node của Scene. Tài nguyên mô hình, texture, hoạt ảnh và âm thanh phải có nguồn và giấy phép sử dụng rõ ràng.
@@ -296,7 +347,7 @@ Cần kiểm chứng đường nạp tài nguyên và clip hoạt ảnh trước
 
 | Yêu cầu | Thiết kế đối chiếu | Bằng chứng cần có sau triển khai |
 |---|---|---|
-| F01–F02 | UC01–UC02, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
+| F01–F02 | UC01–UC02, UC08, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
 | F03 | UC03–UC05, Hình 3-6–3-7 | Input hợp lệ, sai, trùng và hồi chiêu |
 | F04 | ShotState, vòng xử lý điểm | Không cộng lặp; hết giờ; hai client cùng kết quả |
 | F05 | Kiến trúc, phiên và heartbeat | Hai mạng thực, timeout, ngắt mạng |
@@ -310,33 +361,33 @@ Các quyết định còn mở gồm tham số kỹ năng, phương án vật l�
 
 ### 3.3.1. Danh sách màn hình và luồng chuyển
 
-Game Bóng rổ đối kháng 3D sử dụng màn hình ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
+Giao diện game Bóng rổ đối kháng 3D được đề xuất theo hướng ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
 
 | Mã | Màn hình | Thông tin và thao tác chính | Màn hình tiếp theo |
 |---|---|---|---|
-| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Sảnh chờ hoặc Cài đặt |
+| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Tạo/vào phòng hoặc Cài đặt |
 | UI02 | Tạo/vào phòng | Mã phòng, ô nhập mã, thông báo mã sai hoặc phòng đầy, nút xác nhận và quay lại | Sảnh chờ hoặc Menu |
 | UI03 | Sảnh chờ | Mã phòng, hai vị trí người chơi, trạng thái sẵn sàng, đếm ngược và rời phòng | Trận đấu hoặc Menu |
 | UI04 | Trận đấu | Cảnh 3D, người giữ bóng, điểm, thời gian, thông tin mạng, cần di chuyển và ACTION/JUMP/DASH | Kết quả |
 | UI05 | Kết quả | Tỷ số, thắng/thua/hòa, lý do kết thúc, trở lại sảnh hoặc Menu | Sảnh chờ hoặc Menu |
-| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Màn hình trước đó |
+| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Menu chính trong phương án đầu |
 
-Ghép trận nhanh sử dụng trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
+Ghép trận nhanh là chức năng bổ sung sau; khi triển khai cần có trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
 
-Hình 3-8 mô tả quan hệ giữa các màn hình và thành phần trong trận. Hình này là sơ đồ luồng, không thay thế thiết kế giao diện.
+Hình 3-8 mô tả luồng chuyển giữa sáu màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Sơ đồ luồng không thay thế thiết kế giao diện.
 
-<!-- diagram: 3-8-giao-dien.mmd -->
+<!-- diagram: 3-8-giao-dien-r1.mmd -->
 ```mermaid
 flowchart TD
-  M[Menu: kết nối và chọn phòng] --> L[Sảnh: mã, hai người, sẵn sàng]
-  L --> G[Trận đấu]
-  G --> H[HUD: điểm, thời gian, trạng thái mạng]
-  G --> V[Cảnh 3D: sân, hai nhân vật, bóng]
-  G --> C[Điều khiển: joystick, ACTION, JUMP, DASH]
-  G --> R[Kết quả và lý do kết thúc]
-  R -->|Còn kết nối| L
-  R -->|Rời phòng| M
-  M --> S[Cài đặt âm thanh]
+  M[UI01 Menu chính] --> F[UI02 Tạo hoặc vào phòng]
+  F -->|Thành công| L[UI03 Sảnh chờ]
+  F -->|Hủy hoặc quay lại| M
+  L -->|Hai người sẵn sàng và bắt đầu được xác nhận| G[UI04 Trận đấu]
+  L -->|Rời phòng| M
+  G -->|Kết quả được máy chủ xác nhận| R[UI05 Kết quả]
+  R -->|Phòng còn hợp lệ, đặt lại sẵn sàng| L
+  R -->|Về Menu| M
+  M --> S[UI06 Cài đặt âm thanh]
   S --> M
 ```
 
@@ -345,6 +396,8 @@ flowchart TD
 Các màn hình sẽ được thiết kế trong phần mềm thiết kế giao diện và lưu tệp nguồn có thể chỉnh sửa. Mỗi màn hình cần có kích thước khung, vị trí thành phần, nội dung nhãn, kiểu chữ và các trạng thái tương tác. Hình xuất để đưa vào luận văn phải tương ứng với một phiên bản của tệp thiết kế. Phần mềm sử dụng chưa được lựa chọn; bản thảo hiện chưa có bộ hình giao diện đáp ứng yêu cầu này.
 
 Đối với màn hình trận đấu, cần bố trí cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION hiển thị chức năng ném khi người chơi có bóng và Block khi phòng thủ. Thanh canh ném xuất hiện trong lúc giữ ACTION. Điểm và đồng hồ đặt ở vùng dễ quan sát; thông báo kết nối tránh che nhân vật, bóng và các nút điều khiển.
+
+Trong phương án đầu, Cài đặt được mở từ Menu chính; chưa thiết kế lớp phủ cài đặt trong trận online.
 
 Ngoài trạng thái bình thường, bộ thiết kế cần thể hiện nút bị vô hiệu hóa hoặc đang hồi chiêu, chờ kết nối, chờ đối thủ, phòng đầy, mã không hợp lệ và mất kết nối trong trận. Mỗi trạng thái phải có nội dung thông báo và hành động tiếp theo. Không đưa nút tạm dừng vào trận online khi luật không hỗ trợ dừng mô phỏng.
 

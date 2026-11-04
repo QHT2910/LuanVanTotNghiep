@@ -1,5 +1,7 @@
 # Rà soát bản thảo v0.2
 
+Hồ sơ lịch sử v0.2. Bản hiện hành là v0.3; xem CURRENT_STATUS.md và R1_REVIEW.md để biết thay đổi và bằng chứng mới nhất. Nội dung bên dưới giữ lại để truy vết lượt sửa cũ.
+
 ## Phạm vi chỉnh sửa
 
 - Giữ cấu trúc Ch1, đổi 1.1.2 thành Mục tiêu của đề tài.

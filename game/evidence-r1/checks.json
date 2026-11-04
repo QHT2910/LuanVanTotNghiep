@@ -1,0 +1,48 @@
+﻿{
+    "date":  "2026-11-04",
+    "executedBy":  "Lead",
+    "flutter":  "3.47.8 stable",
+    "dart":  "3.13.7",
+    "androidSdk":  "37.0.0",
+    "androidDeviceConnected":  false,
+    "availableTargets":  [
+                             "Windows",
+                             "Chrome",
+                             "Edge"
+                         ],
+    "dependencyVersions":  {
+                               "flutter_scene":  "0.24.3",
+                               "scene":  "0.4.1",
+                               "vector_math":  "2.4.4"
+                           },
+    "checks":  [
+                   {
+                       "command":  "flutter pub get",
+                       "exitCode":  0
+                   },
+                   {
+                       "command":  "flutter analyze",
+                       "exitCode":  0
+                   },
+                   {
+                       "command":  "flutter build bundle --debug --target-platform android-arm64",
+                       "exitCode":  0,
+                       "stdoutBytes":  0,
+                       "artifact":  "build/flutter_assets/kernel_blob.bin",
+                       "artifactBytes":  63705384,
+                       "artifactSha256":  "e442f3aca89a8d1ce0978b8b3c87d188f5490efc801fac8010f0a448ddb0cbc5"
+                   },
+                   {
+                       "command":  "dart tool/sync_smoke.dart",
+                       "exitCode":  0,
+                       "scope":  "two clients on local loopback only"
+                   }
+               ],
+    "notTested":  [
+                      "Android rendering",
+                      "APK installation",
+                      "two Android devices",
+                      "two separate Internet networks",
+                      "performance targets"
+                  ]
+}

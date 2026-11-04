@@ -1,0 +1,2 @@
+PASS: two loopback clients share x=3/tick=2; duplicate input ignored; per-client ack=1.
+Not tested: Scene rendering, Android, Internet, latency tolerance, authentication, production reconnect.

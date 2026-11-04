@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1040" viewBox="0 0 1000 1040" role="img" aria-labelledby="title desc">
+<title id="title">Use case tổng quát — Bóng rổ đối kháng 3D</title>
+<desc id="desc">Thiết kế đề xuất. Một actor Người chơi, đại diện cho mỗi người trong hai người chơi, liên kết với tám use case trong ranh giới ứng dụng và máy chủ. Không có quan hệ include hoặc extend.</desc>
+<rect width="1000" height="1040" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#111" stroke="#111" stroke-width="2">
+<text x="500" y="38" text-anchor="middle" font-size="25" stroke="none">Use case tổng quát — Bóng rổ đối kháng 3D</text>
+<text x="500" y="69" text-anchor="middle" font-size="18" stroke="none">Thiết kế đề xuất, chưa triển khai</text>
+<rect id="system-boundary" x="380" y="100" width="540" height="860" fill="none"/>
+<text x="650" y="130" text-anchor="middle" font-size="20" stroke="none">Hệ thống: ứng dụng và máy chủ</text>
+<g id="actor-player">
+<circle cx="120" cy="425" r="23" fill="white"/>
+<path d="M120 448 V510 M80 480 H160 M120 510 L85 555 M120 510 L155 555" fill="none"/>
+<text x="120" y="592" text-anchor="middle" font-size="21" stroke="none">Người chơi</text>
+<text x="120" y="620" text-anchor="middle" font-size="16" stroke="none">Vai trò của mỗi người</text>
+<text x="120" y="642" text-anchor="middle" font-size="16" stroke="none">trong hai người chơi</text>
+</g>
+<line id="association-1" x1="160" y1="480" x2="440" y2="180"/>
+<g id="uc-1"><ellipse cx="650" cy="180" rx="210" ry="36" fill="white"/><text x="650" y="186" text-anchor="middle" font-size="18" stroke="none">UC01 — Tạo hoặc vào phòng</text></g>
+<line id="association-2" x1="160" y1="480" x2="440" y2="280"/>
+<g id="uc-2"><ellipse cx="650" cy="280" rx="210" ry="36" fill="white"/><text x="650" y="286" text-anchor="middle" font-size="18" stroke="none">UC02 — Sẵn sàng</text></g>
+<line id="association-3" x1="160" y1="480" x2="440" y2="380"/>
+<g id="uc-3"><ellipse cx="650" cy="380" rx="210" ry="36" fill="white"/><text x="650" y="386" text-anchor="middle" font-size="18" stroke="none">UC03 — Điều khiển nhân vật</text></g>
+<line id="association-4" x1="160" y1="480" x2="440" y2="480"/>
+<g id="uc-4"><ellipse cx="650" cy="480" rx="210" ry="36" fill="white"/><text x="650" y="486" text-anchor="middle" font-size="18" stroke="none">UC04 — Ném bóng</text></g>
+<line id="association-5" x1="160" y1="480" x2="440" y2="580"/>
+<g id="uc-5"><ellipse cx="650" cy="580" rx="210" ry="36" fill="white"/><text x="650" y="586" text-anchor="middle" font-size="18" stroke="none">UC05 — Block</text></g>
+<line id="association-6" x1="160" y1="480" x2="440" y2="680"/>
+<g id="uc-6"><ellipse cx="650" cy="680" rx="210" ry="36" fill="white"/><text x="650" y="686" text-anchor="middle" font-size="18" stroke="none">UC06 — Xem kết quả</text></g>
+<line id="association-7" x1="160" y1="480" x2="440" y2="780"/>
+<g id="uc-7"><ellipse cx="650" cy="780" rx="210" ry="36" fill="white"/><text x="650" y="786" text-anchor="middle" font-size="18" stroke="none">UC07 — Cài đặt âm thanh</text></g>
+<line id="association-8" x1="160" y1="480" x2="440" y2="880"/>
+<g id="uc-8"><ellipse cx="650" cy="880" rx="210" ry="36" fill="white"/><text x="650" y="886" text-anchor="middle" font-size="18" stroke="none">UC08 — Rời phòng</text></g>
+<text x="500" y="1000" text-anchor="middle" font-size="17" stroke="none">Đường liền: association giữa actor và use case; không biểu diễn thứ tự xử lý.</text></g></svg>

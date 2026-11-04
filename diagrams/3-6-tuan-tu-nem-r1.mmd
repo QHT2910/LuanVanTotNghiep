@@ -1,0 +1,50 @@
+sequenceDiagram
+  %% Thiết kế đề xuất. resolved chỉ là cờ điều khiển vòng xử lý cú ném trong sơ đồ.
+  actor P as Người chơi
+  participant A as Client người ném
+  participant S as Máy chủ
+  participant B as Client đối thủ
+  P->>A: Giữ rồi thả ACTION
+  A->>A: Phản hồi hoạt ảnh
+  A->>S: Input seq và hành động ném
+  S->>S: Kiểm seq, dữ liệu, trận, giữ bóng, trạng thái và hồi chiêu
+  alt Input cũ/trùng/sai hoặc không được ném
+    S-->>A: Trạng thái hợp lệ và ackSeq
+  else Chấp nhận
+    S->>S: Tạo shotId, lưu releasePosition/releaseTick, chốt pointValue
+    S->>S: Tạo quỹ đạo, thả bóng, scored = false, resolved = false
+    loop Các tick khi resolved = false
+      alt Trận đã kết thúc hoặc hết giờ tại tick này
+        S->>S: Giữ tỷ số cuối, xác định kết quả nếu chưa có
+        S->>S: Không cộng điểm mới, resolved = true
+      else Trận còn chạy và còn thời gian
+        S->>S: Cập nhật bóng và va chạm tại tick
+        alt Block hợp lệ chạm bóng đang bay
+          S->>S: Đổi vận tốc, bóng tự do, vô hiệu cú ném
+          S->>S: resolved = true
+        else Qua vùng rổ từ trên xuống hợp lệ với shotId hiện hành
+          alt scored = false
+            S->>S: Cộng pointValue cho người ném, scored = true
+            alt Người ném đạt ít nhất 11 điểm
+              S->>S: Kết thúc trận, xác nhận kết quả
+            else Chưa đạt điều kiện thắng
+              S->>S: Check-ball, cấp bóng cho người bị ghi điểm
+              S->>S: Đặt lại vị trí hai nhân vật cho pha mới
+            end
+          else Cú ném hiện hành đã tính
+            S->>S: Bỏ sự kiện, không cộng lặp
+          end
+          S->>S: resolved = true
+        else Sự kiện ghi điểm cũ hoặc không thuộc shotId hiện hành
+          S->>S: Bỏ sự kiện, không cộng điểm, tiếp tục xử lý cú ném hiện hành
+        else Cú ném trượt đã được giải quyết
+          S->>S: Bóng tự do, vô hiệu cú ném, resolved = true
+        else Bóng còn bay, chưa có kết quả cú ném
+          S->>S: Giữ resolved = false để xử lý tick tiếp
+        end
+      end
+      S-->>A: Snapshot, ackSeq của A và sự kiện có eventId nếu có
+      S-->>B: Snapshot, ackSeq của B và sự kiện có eventId nếu có
+    end
+    Note over S: resolved = true ngăn xử lý tiếp cú ném đã kết thúc<br/>Máy chủ quyết định điểm, quyền bóng và kết quả
+  end

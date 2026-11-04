@@ -6,7 +6,7 @@
 
 Game 3D trên mobile cần phối hợp cảnh, kết xuất, nhập liệu, chuyển động, luật và tài nguyên. Khi chơi qua mạng, các thiết bị phải thống nhất diễn biến dù thông điệp đến không đồng thời. Vì vậy, nghiên cứu engine cần xem xét từng thành phần lẫn cách tích hợp trong ứng dụng.
 
-Flutter Scene, được phân phối qua gói `flutter_scene`, là một engine 3D dành cho Flutter. Tài liệu của dự án giới thiệu việc tổ chức đồ thị cảnh, mô hình, vật liệu, ánh sáng, camera và hoạt ảnh trong môi trường Flutter, dựa trên Flutter GPU và Impeller ở các nền tảng native [SCENE-01], [SCENE-02]. Hướng tiếp cận này cho phép nghiên cứu sự kết hợp giữa giao diện Flutter và nội dung 3D trong cùng một ứng dụng Dart. Tuy nhiên, việc một thành phần được giới thiệu trong tài liệu không đồng nghĩa toàn bộ game dự kiến sẽ hoạt động phù hợp trên thiết bị và cấu hình mạng của đề tài.
+Flutter Scene, được phân phối qua gói `flutter_scene`, là một engine 3D dành cho Flutter. Tài liệu của dự án giới thiệu việc tổ chức đồ thị cảnh, mô hình, vật liệu, ánh sáng, camera và hoạt ảnh trong môi trường Flutter, dựa trên Flutter GPU và Impeller ở các nền tảng native [1], [2]. Hướng tiếp cận này cho phép nghiên cứu sự kết hợp giữa giao diện Flutter và nội dung 3D trong cùng một ứng dụng Dart. Tuy nhiên, việc một thành phần được giới thiệu trong tài liệu không đồng nghĩa toàn bộ game dự kiến sẽ hoạt động phù hợp trên thiết bị và cấu hình mạng của đề tài.
 
 Đề tài lựa chọn game bóng rổ đối kháng 3D làm tình huống ứng dụng để nghiên cứu Flutter Scene. Không gian sân, nhân vật, quả bóng và rổ giúp minh họa rõ vai trò của hình học, phép biến đổi, camera và chuyển động. Các hành động di chuyển, giữ bóng, ném và tranh bóng tạo điều kiện khảo sát mối liên hệ giữa trạng thái logic với hình ảnh hiển thị. Khi hai người chơi tham gia từ hai thiết bị, bài toán còn mở rộng sang trao đổi thao tác, đồng bộ bóng, cập nhật điểm và kết thúc trận nhất quán.
 
@@ -87,13 +87,6 @@ Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến
 
 Các giá trị như FPS mục tiêu, độ trễ chấp nhận, số trận lặp và thời lượng đo sẽ được chốt sau khi xác định môi trường và phạm vi sản phẩm. Những con số trong bản nháp cũ chỉ là đầu vào tham khảo, không được đưa thành kết quả đạt. Nếu chưa có đủ thiết bị hoặc chưa hoàn thành một phép thử, báo cáo phải ghi rõ phần chưa kiểm chứng.
 
-### Tài liệu tham khảo
-
-- [SCENE-01] Flutter Scene, *Welcome to Scene*, https://fscene.dev/getting-started/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ nhận diện engine và các thành phần, không chứng minh kết quả demo.
-- [SCENE-02] Flutter Scene, *Installation*, https://fscene.dev/getting-started/installation/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ mô tả nền tảng và điều kiện cấu hình. Cần đối chiếu lại khi chọn phiên bản triển khai.
-
-
----
 
 # Chương 2. Cơ sở lý thuyết
 
@@ -103,11 +96,11 @@ Các giá trị như FPS mục tiêu, độ trễ chấp nhận, số trận l�
 
 Các công cụ phát triển game được khảo sát theo cách tổ chức cảnh, khả năng làm game 3D trên Android và quan hệ với Flutter. Việc đối chiếu dựa trên tài liệu chính thức; chưa thực hiện phép đo để xếp hạng hiệu năng giữa các engine.
 
-Godot là engine mã nguồn mở hỗ trợ game 2D và 3D, tổ chức dự án trong một giao diện biên tập thống nhất. Tài liệu có quy trình xuất ứng dụng sang Android, bao gồm thiết lập SDK và môi trường Java. Cách làm này phù hợp với dự án cần công cụ biên tập cảnh và quy trình xuất game riêng. Với đề tài đang nghiên cứu nội dung 3D trong Flutter, Godot là một hướng tiếp cận để đối chiếu cách xây dựng và quản lý cảnh, nhưng không thay thế đối tượng nghiên cứu Flutter Scene. [HT01, HT02]
+Godot là engine mã nguồn mở hỗ trợ game 2D và 3D, tổ chức dự án trong một giao diện biên tập thống nhất. Tài liệu có quy trình xuất ứng dụng sang Android, bao gồm thiết lập SDK và môi trường Java. Cách làm này phù hợp với dự án cần công cụ biên tập cảnh và quy trình xuất game riêng. Với đề tài đang nghiên cứu nội dung 3D trong Flutter, Godot là một hướng tiếp cận để đối chiếu cách xây dựng và quản lý cảnh, nhưng không thay thế đối tượng nghiên cứu Flutter Scene. [3], [4]
 
-Flame được xây dựng trên Flutter và thường được dùng cho game 2D. Hệ sinh thái của dự án có `flame_3d`, một gói hỗ trợ kết xuất 3D đang ở giai đoạn thử nghiệm. Vì vậy, không thể kết luận Flame chỉ có khả năng giả lập 2.5D. Khi so sánh với Flutter Scene, cần phân biệt Flame cốt lõi với gói 3D đi kèm và đối chiếu đúng phiên bản. Hai hướng đều cho phép nghiên cứu nội dung game trong hệ sinh thái Flutter, nhưng API tổ chức cảnh và mức hỗ trợ của từng gói cần được khảo sát riêng. [HT03, HT04]
+Flame được xây dựng trên Flutter và thường được dùng cho game 2D. Hệ sinh thái của dự án có `flame_3d`, một gói hỗ trợ kết xuất 3D đang ở giai đoạn thử nghiệm. Vì vậy, không thể kết luận Flame chỉ có khả năng giả lập 2.5D. Khi so sánh với Flutter Scene, cần phân biệt Flame cốt lõi với gói 3D đi kèm và đối chiếu đúng phiên bản. Hai hướng đều cho phép nghiên cứu nội dung game trong hệ sinh thái Flutter, nhưng API tổ chức cảnh và mức hỗ trợ của từng gói cần được khảo sát riêng. [5], [6]
 
-Flutter Scene cung cấp các khái niệm cảnh, node, mesh, vật liệu, camera và hoạt ảnh trong ứng dụng Flutter. Đề tài chọn công cụ này để tìm hiểu cách phối hợp đồ họa 3D với giao diện và mã Dart. Lựa chọn đó xuất phát từ mục tiêu nghiên cứu; mức phù hợp với game bóng rổ sẽ được đánh giá thông qua demo và các phép thử sau khi triển khai. [LT01, LT02]
+Flutter Scene cung cấp các khái niệm cảnh, node, mesh, vật liệu, camera và hoạt ảnh trong ứng dụng Flutter. Đề tài chọn công cụ này để tìm hiểu cách phối hợp đồ họa 3D với giao diện và mã Dart. Lựa chọn đó xuất phát từ mục tiêu nghiên cứu; mức phù hợp với game bóng rổ sẽ được đánh giá thông qua demo và các phép thử sau khi triển khai. [2], [7]
 
 | Công cụ | Đặc điểm liên quan đến đề tài | Nội dung cần đối chiếu |
 |---|---|---|
@@ -119,7 +112,7 @@ Những đặc điểm trên chưa đủ để kết luận công cụ nào nhan
 
 ### 2.1.2. Game bóng rổ trên thiết bị di động
 
-Basketball Stars của Miniclip là ví dụ về game bóng rổ nhiều người chơi trên thiết bị di động. Trang giới thiệu của nhà phát hành mô tả các hoạt động dẫn bóng, ném và ghi điểm. Đây là cơ sở tham khảo về chủ đề và hình thức đối kháng; trang giới thiệu không cung cấp đủ thông tin để xác định kiến trúc máy chủ, thuật toán đồng bộ hoặc công thức tính kết quả cú ném. [HT05]
+Basketball Stars của Miniclip là ví dụ về game bóng rổ nhiều người chơi trên thiết bị di động. Trang giới thiệu của nhà phát hành mô tả các hoạt động dẫn bóng, ném và ghi điểm. Đây là cơ sở tham khảo về chủ đề và hình thức đối kháng; trang giới thiệu không cung cấp đủ thông tin để xác định kiến trúc máy chủ, thuật toán đồng bộ hoặc công thức tính kết quả cú ném. [8]
 
 Đối với demo Bóng rổ đối kháng 3D, các nội dung cần khảo sát từ sản phẩm cùng thể loại gồm bố trí nút điều khiển, cách báo người đang giữ bóng, phản hồi khi ném hoặc cản phá, bảng điểm và luồng vào trận. Khi thiết kế giao diện, cần ghi lại nguồn và giới hạn quan sát của từng nội dung thay vì suy đoán cơ chế bên trong từ hình ảnh quảng bá. Bản khảo sát hiện chưa bao gồm trải nghiệm chơi có ghi nhận thao tác hoặc phép đo trên Basketball Stars.
 
@@ -133,15 +126,17 @@ Nội dung nghiên cứu tiếp theo đi từ vai trò của Flutter Scene đế
 
 Flutter Scene là bộ công cụ xây dựng nội dung ba chiều trong ứng dụng Flutter. Thay vì chỉ mô tả các thành phần giao diện hai chiều, lập trình viên tổ chức đối tượng trong một không gian có vị trí, hướng, kích thước và góc quan sát. Cảnh ba chiều sau khi kết xuất vẫn tham gia bố cục ứng dụng thông qua widget, nên màn hình có thể kết hợp vùng hiển thị thế giới 3D với nút bấm, thông báo và bảng thông tin Flutter.
 
-Trong kiến trúc này, cần phân biệt ba lớp trách nhiệm. Flutter quản lý ứng dụng và giao diện. Flutter GPU cung cấp khả năng sử dụng tài nguyên và lệnh đồ họa ở mức thấp. Scene tổ chức những khái niệm thuận tiện hơn như cảnh, đối tượng, lưới, vật liệu và camera. Trên nền tảng native, tài liệu Scene xác định Flutter GPU và Impeller là nền tảng kết xuất; trên web sử dụng backend riêng. Vì vậy, mã điều khiển game không cần tự xây dựng toàn bộ đường ống đồ họa, nhưng vẫn phải quan tâm giới hạn tài nguyên và tương thích thiết bị. [LT01, LT02]
+Trong kiến trúc này, cần phân biệt ba lớp trách nhiệm. Flutter quản lý ứng dụng và giao diện. Flutter GPU cung cấp khả năng sử dụng tài nguyên và lệnh đồ họa ở mức thấp. Scene tổ chức những khái niệm thuận tiện hơn như cảnh, đối tượng, lưới, vật liệu và camera. Trên nền tảng native, tài liệu Scene xác định Flutter GPU và Impeller là nền tảng kết xuất; trên web sử dụng backend riêng. Vì vậy, mã điều khiển game không cần tự xây dựng toàn bộ đường ống đồ họa, nhưng vẫn phải quan tâm giới hạn tài nguyên và tương thích thiết bị. [2], [7]
 
-Quy trình tìm hiểu gồm: xác định phiên bản Flutter yêu cầu; chọn phiên bản Scene; đọc API tương ứng; dựng ví dụ nhỏ; sau đó mới bổ sung tài nguyên phức tạp. Hướng dẫn hiện yêu cầu Flutter 3.47 stable trở lên và bật Flutter GPU cho Android. Phiên bản Flutter cục bộ đã ghi nhận là 3.47.8, nhưng con số này chỉ chứng minh điều kiện phiên bản ban đầu, không chứng minh ứng dụng đã chạy trên Redmi Note 11. Scene còn trước phiên bản 1.0, nên phải lưu phiên bản dependency, lockfile và thay đổi API liên quan. [LT01]
+Quy trình tìm hiểu gồm: xác định phiên bản Flutter yêu cầu; chọn phiên bản Scene; đọc API tương ứng; dựng ví dụ nhỏ; sau đó mới bổ sung tài nguyên phức tạp. Hướng dẫn hiện yêu cầu Flutter 3.47 stable trở lên và bật Flutter GPU cho Android. Phiên bản Flutter cục bộ đã ghi nhận là 3.47.8, nhưng con số này chỉ chứng minh điều kiện phiên bản ban đầu, không chứng minh ứng dụng đã chạy trên Redmi Note 11. Scene còn trước phiên bản 1.0, nên phải lưu phiên bản dependency, lockfile và thay đổi API liên quan. [2]
+
+Bật Flutter GPU khác với bật Impeller. Theo tài liệu Flutter, Impeller mặc định trên Android API 29 trở lên; thiết bị ở API thấp hơn hoặc không hỗ trợ Vulkan có thể dùng bộ kết xuất OpenGL cũ. Cần ghi Android API, GPU và backend thực tế; fallback đồ họa Flutter không tự chứng minh Flutter GPU hoặc Scene hoạt động trên thiết bị đó. [9]
 
 ## 2.3. Đồ thị cảnh, node, hệ tọa độ và phép biến đổi
 
 ### 2.3.1. Scene và Node
 
-`Scene` là đối tượng quản lý cảnh. Bên dưới cảnh là cây các `Node`; một node có thể chứa phần hiển thị, node con và hành vi. Cách tổ chức phân cấp giúp biểu diễn những quan hệ như vật thể được gắn vào tay nhân vật hoặc camera đi theo một điểm điều khiển. Di chuyển node cha làm thay đổi vị trí thế giới của các node con mà không cần cập nhật từng đối tượng riêng. [LT03, LT04]
+`Scene` là đối tượng quản lý cảnh. Bên dưới cảnh là cây các `Node`; một node có thể chứa phần hiển thị, node con và hành vi. Cách tổ chức phân cấp giúp biểu diễn những quan hệ như vật thể được gắn vào tay nhân vật hoặc camera đi theo một điểm điều khiển. Di chuyển node cha làm thay đổi vị trí thế giới của các node con mà không cần cập nhật từng đối tượng riêng. [10], [11]
 
 Vị trí cục bộ được hiểu theo hệ tọa độ của cha, còn vị trí thế giới được hiểu theo toàn cảnh. Với một node con, ma trận biến đổi thế giới được tính từ ma trận thế giới của cha nhân với ma trận cục bộ. Do phép nhân ma trận không giao hoán, thay đổi thứ tự tịnh tiến, xoay và co giãn có thể tạo kết quả khác nhau. Khi nhập tài nguyên từ phần mềm dựng hình, cần thống nhất chiều cao, hướng nhìn và tỷ lệ thay vì sửa bằng nhiều phép xoay rời rạc không có quy ước.
 
@@ -153,53 +148,53 @@ Vị trí cục bộ được hiểu theo hệ tọa độ của cha, còn vị 
 4. Gán vị trí, góc xoay và tỷ lệ theo hệ tọa độ đã chọn.
 5. Quan sát riêng từng phép biến đổi trước khi ghép thành một phân cấp phức tạp.
 
-Tài liệu cung cấp thuộc tính `position`, `rotation`, `scale` và `localTransform`. Các getter biến đổi có thể trả về bản sao; sửa trực tiếp một thành phần trên giá trị trả về không nhất thiết sửa node. Cách an toàn theo ví dụ tài liệu là tạo giá trị mới rồi gán trở lại, chẳng hạn `node.position = vm.Vector3(0, 1, 0)`. Với hành vi liên tục, nên gom cập nhật vào một nơi, tránh widget và logic mô phỏng đồng thời ghi cùng thuộc tính. [LT02, LT04]
+Tài liệu cung cấp thuộc tính `position`, `rotation`, `scale` và `localTransform`. Theo README 0.24.3, các getter thành phần biến đổi trả về bản sao. Ví dụ sử dụng `node.position = vm.Vector3(0, 1, 0)` để gán lại; khi đổi ma trận, ưu tiên gán một `localTransform` mới và đối chiếu API của phiên bản đã khóa. Với hành vi liên tục, nên gom cập nhật vào một nơi, tránh widget và logic mô phỏng đồng thời ghi cùng thuộc tính. [7], [11]
 
 ### 2.3.3. Component và quyền sở hữu
 
-`Component` đóng gói hành vi gắn với node. Vòng đời được tài liệu mô tả gồm gắn thành phần, nạp bất đồng bộ, tham gia cảnh, cập nhật và rời cảnh. Việc gom chuyển động hoặc tương tác vào component giúp giảm mã cập nhật phân tán. Scene hỗ trợ cả khai báo cấu trúc bằng widget và thao tác cây cảnh trực tiếp. Hai cách cùng sử dụng đối tượng bên dưới, nhưng phải rõ bên nào sở hữu cấu trúc và thuộc tính: một giá trị do widget khai báo có thể được áp dụng lại khi widget rebuild. [LT03]
+`Component` đóng gói hành vi gắn với node. Tài liệu mô tả thứ tự vòng đời `onAttach → onLoad → onMount → update/fixedUpdate → onUnmount → onDetach`. `onLoad` thiết lập bất đồng bộ một lần; cập nhật chờ bước này hoàn tất. `update` chạy theo frame, còn `fixedUpdate` theo bước vật lý. Đây là mô tả tài liệu, chưa phải kết quả thử tái gắn node. Việc gom chuyển động hoặc tương tác vào component giúp giảm mã cập nhật phân tán. Scene hỗ trợ cả khai báo cấu trúc bằng widget và thao tác cây cảnh trực tiếp. Hai cách cùng sử dụng đối tượng bên dưới, nhưng phải rõ bên nào sở hữu cấu trúc và thuộc tính: một giá trị do widget khai báo có thể được áp dụng lại khi widget rebuild. [10]
 
 ## 2.4. Hình học, mesh và vật liệu
 
 ### 2.4.1. Vai trò từng thành phần
 
-Hình học mô tả hình dạng thông qua đỉnh, chỉ số nối đỉnh và các thuộc tính phục vụ tô bóng. Vật liệu mô tả phản ứng của bề mặt với ánh sáng. `Mesh` ghép hình học với vật liệu để tạo phần có thể được kết xuất. Một khối cầu giống nhau có thể được biểu diễn như nhựa, kim loại hoặc bề mặt màu phẳng khi thay vật liệu; ngược lại, cùng một vật liệu có thể dùng cho nhiều hình dạng. [LT03, LT05]
+Hình học mô tả hình dạng thông qua đỉnh, chỉ số nối đỉnh và các thuộc tính phục vụ tô bóng. Vật liệu mô tả phản ứng của bề mặt với ánh sáng. `Mesh` ghép hình học với vật liệu để tạo phần có thể được kết xuất. Một khối cầu giống nhau có thể được biểu diễn như nhựa, kim loại hoặc bề mặt màu phẳng khi thay vật liệu; ngược lại, cùng một vật liệu có thể dùng cho nhiều hình dạng. [10], [12]
 
 Scene cung cấp hình học cơ bản, phù hợp để học API và tạo nguyên mẫu. Ưu điểm của nguyên mẫu từ các khối là không phụ thuộc quy trình nhập mô hình và dễ nhận biết lỗi tỷ lệ. Tuy nhiên, số node và lưới vẫn cần kiểm soát; chia một vật thể đơn giản thành quá nhiều đối tượng độc lập có thể làm tăng chi phí quản lý và vẽ.
 
 ### 2.4.2. Vật liệu PBR và vật liệu không chiếu sáng
 
-`PhysicallyBasedMaterial` sử dụng những tham số như màu cơ sở, độ kim loại và độ nhám. Độ kim loại ảnh hưởng cách phản xạ, còn độ nhám điều chỉnh độ sắc của phản chiếu. Không nên xem tăng độ sáng màu cơ sở là cách thay thế ánh sáng, vì hai thao tác giải quyết hai vấn đề khác nhau. `UnlitMaterial` hiển thị bề mặt không phụ thuộc hệ chiếu sáng, thuận tiện cho đánh dấu, kiểm tra hình học hoặc phong cách giản lược. [LT05]
+`PhysicallyBasedMaterial` sử dụng những tham số như màu cơ sở, độ kim loại và độ nhám. Độ kim loại ảnh hưởng cách phản xạ, còn độ nhám điều chỉnh độ sắc của phản chiếu. Không nên xem tăng độ sáng màu cơ sở là cách thay thế ánh sáng, vì hai thao tác giải quyết hai vấn đề khác nhau. `UnlitMaterial` hiển thị bề mặt không phụ thuộc hệ chiếu sáng, thuận tiện cho đánh dấu, kiểm tra hình học hoặc phong cách giản lược. [12]
 
-Để sử dụng, trước hết chọn hình học; tiếp theo tạo vật liệu, điều chỉnh một nhóm tham số và ghép thành mesh; cuối cùng gắn mesh vào node. Nên thay một tham số mỗi lần để nhận biết tác động. Khi dùng texture, phải kiểm tra đường dẫn, tọa độ UV, độ phân giải và thông tin màu của tài nguyên. Tài liệu phân biệt texture màu cơ sở, normal, metallic–roughness và các kênh khác; chúng không thể thay thế tùy ý cho nhau. Vật liệu và hình học gắn với tài nguyên GPU nên cần tái sử dụng, tránh tạo lại liên tục trong mỗi khung hình. [LT03, LT05]
+Để sử dụng, trước hết chọn hình học; tiếp theo tạo vật liệu, điều chỉnh một nhóm tham số và ghép thành mesh; cuối cùng gắn mesh vào node. Nên thay một tham số mỗi lần để nhận biết tác động. Khi dùng texture, phải kiểm tra đường dẫn, tọa độ UV, độ phân giải và thông tin màu của tài nguyên. Tài liệu phân biệt texture màu cơ sở, normal, metallic–roughness và các kênh khác; chúng không thể thay thế tùy ý cho nhau. Vật liệu và hình học gắn với tài nguyên GPU nên cần tái sử dụng, tránh tạo lại liên tục trong mỗi khung hình. [10], [12]
 
 ## 2.5. Camera và ánh sáng
 
 ### 2.5.1. Camera
 
-Camera quyết định vùng thế giới được chiếu lên màn hình. Phép chiếu phối cảnh làm vật ở xa có kích thước biểu kiến nhỏ hơn vật ở gần, hỗ trợ nhận biết chiều sâu. Các tham số quan trọng gồm vị trí, điểm nhìn, hướng lên, góc nhìn và mặt phẳng cắt. Mặt phẳng gần hoặc xa đặt không hợp lý có thể cắt mất vật thể hoặc làm việc phân biệt độ sâu kém hiệu quả. [LT06]
+Camera quyết định vùng thế giới được chiếu lên màn hình. Phép chiếu phối cảnh làm vật ở xa có kích thước biểu kiến nhỏ hơn vật ở gần, hỗ trợ nhận biết chiều sâu. Các tham số quan trọng gồm vị trí, điểm nhìn, hướng lên, góc nhìn và mặt phẳng cắt. Mặt phẳng gần hoặc xa đặt không hợp lý có thể cắt mất vật thể hoặc làm việc phân biệt độ sâu kém hiệu quả. [13]
 
-Quy trình thiết lập bắt đầu bằng một camera cố định nhìn vào gốc tọa độ. Sau khi xác nhận đối tượng hiển thị đúng, mới thay đổi độ cao, khoảng cách và góc nhìn. Trong Scene, có thể truyền `PerspectiveCamera` trực tiếp vào `SceneView`, hoặc dùng `cameraBuilder` để tạo góc quan sát thay đổi theo thời gian. Với camera thuộc phân cấp cảnh, tài liệu giới thiệu `CameraComponent` và camera chính của scene. Chọn cách nào phụ thuộc việc camera chỉ quan sát cố định hay cần gắn vào cấu trúc chuyển động. [LT06]
+Quy trình thiết lập bắt đầu bằng một camera cố định nhìn vào gốc tọa độ. Sau khi xác nhận đối tượng hiển thị đúng, mới thay đổi độ cao, khoảng cách và góc nhìn. Trong Scene, có thể truyền `PerspectiveCamera` trực tiếp vào `SceneView`, hoặc dùng `cameraBuilder` để tạo góc quan sát thay đổi theo thời gian. Với camera thuộc phân cấp cảnh, tài liệu giới thiệu `CameraComponent` và camera chính của scene. Chọn cách nào phụ thuộc việc camera chỉ quan sát cố định hay cần gắn vào cấu trúc chuyển động. [13]
 
 ### 2.5.2. Ánh sáng và môi trường
 
-Ánh sáng giúp người quan sát nhận biết hình khối, vật liệu và độ cao. Chiếu sáng dựa trên ảnh môi trường mô phỏng ánh sáng tới từ nhiều hướng; nguồn sáng có hướng bổ sung đặc tính như mặt trời và bóng đổ. Skybox là phần nền nhìn thấy, không đồng nhất với nguồn chiếu sáng. Chỉ đổi nền chưa chắc làm đối tượng sáng lên, và đổi môi trường chiếu sáng cũng không tự bảo đảm nền tương ứng được vẽ. [LT07]
+Ánh sáng giúp người quan sát nhận biết hình khối, vật liệu và độ cao. Chiếu sáng dựa trên ảnh môi trường mô phỏng ánh sáng tới từ nhiều hướng; nguồn sáng có hướng bổ sung đặc tính như mặt trời và bóng đổ. Skybox là phần nền nhìn thấy, không đồng nhất với nguồn chiếu sáng. Chỉ đổi nền chưa chắc làm đối tượng sáng lên, và đổi môi trường chiếu sáng cũng không tự bảo đảm nền tương ứng được vẽ. [14]
 
-Tài liệu Scene mô tả môi trường mặc định cho cảnh mới, giúp bắt đầu với vật liệu PBR mà chưa phải dựng hệ đèn riêng. Quy trình học nên giữ môi trường mặc định, xác nhận vật liệu, rồi mới thử panorama hoặc đèn có hướng. Nếu thêm bóng đổ, cần so sánh cả hình ảnh lẫn thời gian khung hình. Hậu xử lý, phơi sáng và tone mapping là những bước điều chỉnh đầu ra; không nên bật hàng loạt hiệu ứng trước khi có một cấu hình cơ sở để đối chiếu. [LT07]
+Tài liệu Scene mô tả môi trường mặc định cho cảnh mới, giúp bắt đầu với vật liệu PBR mà chưa phải dựng hệ đèn riêng. Quy trình học nên giữ môi trường mặc định, xác nhận vật liệu, rồi mới thử panorama hoặc đèn có hướng. Nếu thêm bóng đổ, cần so sánh cả hình ảnh lẫn thời gian khung hình. Hậu xử lý, phơi sáng và tone mapping là những bước điều chỉnh đầu ra; không nên bật hàng loạt hiệu ứng trước khi có một cấu hình cơ sở để đối chiếu. [14]
 
 ## 2.6. Tài nguyên, mô hình và hoạt ảnh
 
 ### 2.6.1. Nạp mô hình
 
-Một mô hình có thể chứa phân cấp node, lưới, vật liệu, texture và hoạt ảnh. Định dạng glTF/GLB giúp trao đổi những dữ liệu này, nhưng việc một engine hỗ trợ định dạng không đồng nghĩa hỗ trợ mọi extension hoặc mọi cấu hình xuất. Cần kiểm tra bằng mô hình nhỏ trước, ghi công cụ xuất, tỷ lệ, giấy phép và những tính năng đã dùng. [LT08]
+Một mô hình có thể chứa phân cấp node, lưới, vật liệu, texture và hoạt ảnh. Định dạng glTF/GLB giúp trao đổi những dữ liệu này, nhưng việc một engine hỗ trợ định dạng không đồng nghĩa hỗ trợ mọi extension hoặc mọi cấu hình xuất. Cần kiểm tra bằng mô hình nhỏ trước, ghi công cụ xuất, tỷ lệ, giấy phép và những tính năng đã dùng. [15]
 
-Scene có hai đường nạp chính. `Node.fromGlbAsset` nạp GLB trong asset bundle tại runtime; sau khi hoàn tất, node được thêm vào cảnh. Đường còn lại chuyển tài nguyên khi build rồi dùng `loadScene` theo đường dẫn nguồn. Tiền xử lý giúp chuyển công việc khỏi thời điểm mở cảnh, nhưng đầu ra phụ thuộc quy trình build và phải được quản lý cùng nguồn tài nguyên. [LT08]
+Scene có hai đường nạp chính. `Node.fromGlbAsset` nạp GLB trong asset bundle tại runtime; sau khi hoàn tất, node được thêm vào cảnh. Đường còn lại chuyển tài nguyên khi build rồi dùng `loadScene` theo đường dẫn nguồn. Tiền xử lý giúp chuyển công việc khỏi thời điểm mở cảnh, nhưng đầu ra phụ thuộc quy trình build và phải được quản lý cùng nguồn tài nguyên. [15]
 
-Các bước sử dụng gồm: chuẩn bị mô hình có quyền sử dụng; khai báo hoặc đưa vào pipeline phù hợp; nạp bất đồng bộ; hiển thị trạng thái chờ hoặc lỗi; đặt tỷ lệ và vị trí; cuối cùng kiểm tra hình ảnh trên thiết bị. Không nên bỏ qua trạng thái lỗi rồi xem mô hình không hiển thị như một lỗi camera. Khi tài nguyên lớn, thời gian nạp, bộ nhớ và khung hình đầu đều là các khía cạnh cần ghi nhận riêng. [LT08]
+Các bước sử dụng gồm: chuẩn bị mô hình có quyền sử dụng; khai báo hoặc đưa vào pipeline phù hợp; nạp bất đồng bộ; hiển thị trạng thái chờ hoặc lỗi; đặt tỷ lệ và vị trí; cuối cùng kiểm tra hình ảnh trên thiết bị. Không nên bỏ qua trạng thái lỗi rồi xem mô hình không hiển thị như một lỗi camera. Khi tài nguyên lớn, thời gian nạp, bộ nhớ và khung hình đầu đều là các khía cạnh cần ghi nhận riêng. [15]
 
 ### 2.6.2. Hoạt ảnh
 
-Hoạt ảnh mô tả sự thay đổi theo thời gian của tư thế hoặc thuộc tính mô hình. Clip phát lại là đối tượng có trạng thái riêng: thời gian phát, lặp, dừng, tốc độ và trọng số hòa trộn. Tài liệu Scene cho phép duyệt `parsedAnimations`, tìm animation theo tên và tạo clip bằng `createAnimationClip`. Engine cập nhật clip đang phát, nên không được vừa để engine điều khiển vừa tự tăng thời gian của cùng clip mà không có chủ đích. [LT09]
+Hoạt ảnh mô tả sự thay đổi theo thời gian của tư thế hoặc thuộc tính mô hình. Clip phát lại là đối tượng có trạng thái riêng: thời gian phát, lặp, dừng, tốc độ và trọng số hòa trộn. Tài liệu Scene cho phép duyệt `parsedAnimations`, tìm animation theo tên và tạo clip bằng `createAnimationClip`. `Animation` chứa dữ liệu hoạt ảnh, còn `AnimationClip` giữ trạng thái phát. Khi tra bằng `findAnimationByName`, cần kiểm tra kết quả khác null trước khi gọi `createAnimationClip`. Clip không lặp tự tạm dừng ở keyframe cuối. Khi dùng vòng lặp do `SceneView` quản lý, không tự tiến cùng clip lần nữa. [16]
 
 Quy trình hợp lý là liệt kê tên clip, thử một clip, kiểm tra lặp và sau đó thử chuyển trạng thái. Hòa trộn giúp giảm thay đổi tư thế đột ngột, nhưng phải bảo đảm các clip được tác giả tạo cho cùng cấu trúc xương. Một hoạt ảnh ném bóng chỉ mô tả hình ảnh; thời điểm bóng rời tay, quyền giữ bóng và kết quả cú ném vẫn thuộc logic game. Không dùng việc một clip đã chạy xong làm bằng chứng bóng hợp lệ vào rổ.
 
@@ -207,13 +202,13 @@ Quy trình hợp lý là liệt kê tên clip, thử một clip, kiểm tra lặ
 
 ### 2.7.1. Cập nhật và hiển thị
 
-Game cần nhận thao tác, cập nhật trạng thái và vẽ trạng thái đó. Thời gian khung hình không cố định, nên chuyển động dựa trên cộng một lượng vị trí mỗi frame sẽ phụ thuộc tốc độ máy. Cần sử dụng thời gian đã trôi qua hoặc một bước mô phỏng cố định phù hợp. Tài liệu Scene mô tả `update` theo frame và `fixedUpdate` theo bước vật lý. Việc chọn đồng hồ nào phải gắn với loại hành vi: hiệu ứng thị giác có thể theo frame, còn mô phỏng cần quy tắc tiến thời gian rõ ràng. [LT03]
+Game cần nhận thao tác, cập nhật trạng thái và vẽ trạng thái đó. Thời gian khung hình không cố định, nên chuyển động dựa trên cộng một lượng vị trí mỗi frame sẽ phụ thuộc tốc độ máy. Cần sử dụng thời gian đã trôi qua hoặc một bước mô phỏng cố định phù hợp. Tài liệu Scene mô tả `update` theo frame và `fixedUpdate` theo bước vật lý. Việc chọn đồng hồ nào phải gắn với loại hành vi: hiệu ứng thị giác có thể theo frame, còn mô phỏng cần quy tắc tiến thời gian rõ ràng. [10]
 
-`SceneView` quản lý vòng kết xuất khi dùng widget. Nếu lập trình viên tự quản lý render loop, trách nhiệm tiến cảnh phải được xác định riêng. Không gọi thêm cập nhật thủ công chỉ vì một ví dụ sử dụng `CustomPainter` có làm như vậy; trộn hai cách có thể tiến mô phỏng hai lần. Đây là điểm cần kiểm tra khi chuyển ví dụ tài liệu thành cấu trúc ứng dụng. [LT03, LT11]
+`SceneView` quản lý vòng kết xuất khi dùng widget. Nếu lập trình viên tự quản lý render loop, trách nhiệm tiến cảnh phải được xác định riêng: chọn `SceneView` quản lý hoặc vòng lặp thủ công gọi `update` và `render`. Không gọi thêm cập nhật thủ công chỉ vì một ví dụ sử dụng `CustomPainter` có làm như vậy; trộn hai cách có thể tiến mô phỏng hai lần. Đây là điểm cần kiểm tra khi chuyển ví dụ tài liệu thành cấu trúc ứng dụng. [10], [17]
 
 ### 2.7.2. Nhập liệu và giao diện
 
-Thao tác cảm ứng ban đầu là tọa độ trên widget. Muốn chọn đối tượng trong cảnh, phải chuyển điểm chạm thành tia trong không gian rồi kiểm tra giao cắt. Tài liệu hướng dẫn dùng `screenPointToRay` của camera và `scene.raycast`; kết quả chứa node và thông tin điểm chạm. Kích thước dùng chuyển đổi phải là kích thước vùng SceneView, không mặc định là toàn bộ màn hình. [LT10]
+Thao tác cảm ứng ban đầu là tọa độ trên widget. Muốn chọn đối tượng trong cảnh, phải chuyển điểm chạm thành tia trong không gian rồi kiểm tra giao cắt. Tài liệu hướng dẫn dùng `screenPointToRay` của camera và `scene.raycast`; kết quả chứa node và thông tin điểm chạm. `Scene.raycast` kiểm tra hình học render; truy vấn thế giới vật lý kiểm tra collision shapes. Việc chọn đối tượng hiển thị và xử lý va chạm có thể cần hai truy vấn khác nhau. Kích thước dùng chuyển đổi phải là kích thước vùng SceneView, không mặc định là toàn bộ màn hình. [18]
 
 Đối với điều khiển nhân vật, lớp nhập liệu nên biến cử chỉ thành lệnh có ý nghĩa, thay vì sửa trực tiếp điểm số hay vị trí từ mọi callback. Có thể bố trí HUD Flutter trên vùng kết xuất bằng cơ chế bố cục thông thường. Cần tách tần suất cập nhật HUD với chuyển động 3D để hạn chế rebuild không cần thiết. Khi mất chạm, ứng dụng vào nền hoặc người chơi mở màn hình khác, trạng thái nút giữ cần được xóa theo quy tắc, tránh hành động tiếp tục ngoài ý muốn. Những quy tắc này thuộc thiết kế ứng dụng, không phải tính năng tự động được bảo đảm bởi engine.
 
@@ -223,7 +218,7 @@ Thao tác cảm ứng ban đầu là tọa độ trên widget. Muốn chọn đ�
 
 Vật thể đồ họa và vật thể va chạm có vai trò khác nhau. Mesh phục vụ hiển thị, collider phục vụ phát hiện hoặc giải quyết tiếp xúc. Rigid body lưu cách vật thể tham gia mô phỏng, chẳng hạn đứng yên hoặc chuyển động dưới tác động vật lý. Collider đơn giản có thể gần đúng hình dạng phức tạp để giảm chi phí, nhưng độ gần đúng phải đủ cho tương tác cần mô phỏng.
 
-`flutter_scene_rapier` triển khai hợp đồng vật lý của hệ sinh thái Scene thông qua Rapier; tài liệu mô tả rigid body, collider, joint, truy vấn và sự kiện. Quy trình bắt đầu bằng khởi tạo backend, gắn `PhysicsWorld` vào gốc cảnh, tạo body rồi collider cho node, thiết lập trọng lực và theo dõi sự kiện. Không nên đồng thời gán transform đồ họa theo một logic độc lập và yêu cầu rigid body động điều khiển cùng đối tượng. [LT11]
+`flutter_scene_rapier` triển khai hợp đồng vật lý của hệ sinh thái Scene thông qua Rapier; tài liệu mô tả rigid body, collider, joint, truy vấn và sự kiện. Theo ví dụ của `flutter_scene_rapier` 0.5.2, quy trình bắt đầu bằng `RapierWorld.ensureInitialized()`, gắn `PhysicsWorld` vào `scene.root`, tạo body trước collider cho node, thiết lập trọng lực và theo dõi sự kiện. Không nên đồng thời gán transform đồ họa theo một logic độc lập và yêu cầu rigid body động điều khiển cùng đối tượng. [17]
 
 ### 2.8.2. Trình tự nghiên cứu chuyển động
 
@@ -235,7 +230,7 @@ Phát hiện va chạm chưa đủ để tính điểm. Logic cần phân biệt
 
 Mạng truyền thông điệp giữa các tiến trình; engine kết xuất không tự giải quyết toàn bộ luật phiên chơi. Cần xác định nơi quyết định trạng thái, nơi gửi thao tác và cách xử lý khi thông điệp đến muộn. Mô hình máy chủ quyết định trạng thái giúp tập trung việc kiểm tra luật; máy khách có thể làm mượt hiển thị, nhưng kết quả cuối vẫn phải theo nguồn được giao quyền. Đây là nguyên tắc thiết kế của một giải pháp, chưa phải kiến trúc đã triển khai của đề tài.
 
-Tài liệu `flutter_scene_net` mô tả việc gắn replica với node, tạo hoặc xóa node theo trạng thái máy chủ và nội suy transform. Nội suy hiển thị vị trí ở một thời điểm trước hiện tại để giảm giật do nhịp nhận không đều; đổi lại có độ trễ hình ảnh. Nó không tự quyết định quyền sở hữu bóng, điểm hay điều kiện thắng. `SceneHost` hỗ trợ listener WebSocket trong ứng dụng native, nhưng việc host chạy trên điện thoại không đồng nghĩa điện thoại ở mạng khác sẽ kết nối được. [LT12]
+Tài liệu `flutter_scene_net` mô tả việc gắn replica với node, tạo hoặc xóa node theo trạng thái máy chủ và nội suy transform. Nội suy hiển thị vị trí ở một thời điểm trước hiện tại để giảm giật do nhịp nhận không đều; đổi lại có độ trễ hình ảnh. Nó không tự quyết định quyền sở hữu bóng, điểm hay điều kiện thắng. `SceneHost` hỗ trợ listener WebSocket trong ứng dụng native, nhưng việc host chạy trên điện thoại không đồng nghĩa điện thoại ở mạng khác sẽ kết nối được. [19]
 
 Đối với Internet, cần một điểm kết nối có thể tiếp cận, hoặc cơ chế chuyển tiếp phù hợp. NAT, firewall, chứng chỉ, địa chỉ máy chủ, vòng đời ứng dụng và bảo vệ dữ liệu đầu vào là những phần cần đánh giá riêng. Hiện chỉ có một điện thoại, nên một client trên máy tính hỗ trợ thử trao đổi thông điệp; kết quả đó không thay thế kiểm chứng hai Android từ hai mạng khác nhau.
 
@@ -243,60 +238,78 @@ Quy trình nghiên cứu gồm: thử kết nối và ngắt kết nối; truy�
 
 ## 2.10. Hướng dẫn từng bước dựng cảnh mẫu và tích hợp các thành phần
 
-Quy trình dưới đây là hướng dẫn để thực hiện sau, chưa phải biên bản chạy thành công. Nên dùng một project thử riêng để lỗi API không ảnh hưởng nội dung luận văn hoặc mã demo chính.
+Quy trình bắt đầu bằng một project thử riêng, sau đó bổ sung từng thành phần. Ví dụ dựng khối cơ bản đã được kiểm tra phân tích tĩnh và compile bundle với bộ phiên bản của probe; khả năng khởi tạo GPU và hiển thị trên Android vẫn cần được kiểm tra trên thiết bị.
 
 Bước 1: ghi môi trường. Thu thập `flutter --version`, `flutter doctor -v` và `flutter devices`. Ghi model, Android và chế độ build của điện thoại khi có kết nối. Không đưa số định danh hoặc dữ liệu cá nhân vào báo cáo công khai.
 
-Bước 2: tạo ứng dụng mẫu. Tạo Flutter project với Android, thêm dependency `flutter_scene` theo phiên bản được chọn và lưu lockfile. Lệnh tài liệu là `flutter pub add flutter_scene`; với nghiên cứu cần ghi lại phiên bản resolve thay vì chỉ nói dùng bản mới nhất. Không nâng SDK giữa quá trình đo nếu chưa ghi nhận thay đổi. [LT01]
+Bước 2: tạo ứng dụng mẫu. Tạo Flutter project với Android, thêm dependency `flutter_scene` theo phiên bản được chọn và lưu lockfile. Lệnh tài liệu là `flutter pub add flutter_scene`; với nghiên cứu cần ghi lại phiên bản resolve thay vì chỉ nói dùng bản mới nhất. Không nâng SDK giữa quá trình đo nếu chưa ghi nhận thay đổi. [2]
 
-Bước 3: bật GPU. Theo hướng dẫn hiện hành, Android có thể bật Flutter GPU qua metadata `io.flutter.embedding.android.EnableFlutterGPU` bên trong `application` của manifest; khi phát triển có cờ `--enable-flutter-gpu`. Kiểm tra đúng cú pháp tài liệu và phiên bản trước khi chạy. [LT01]
+Bước 3: bật GPU. Theo hướng dẫn hiện hành, Android có thể bật Flutter GPU qua metadata `io.flutter.embedding.android.EnableFlutterGPU` bên trong `application` của manifest; khi phát triển có cờ `--enable-flutter-gpu`. Metadata này cần có `android:value="true"` trong `<application>`. Bật cờ GPU không thay cho kiểm tra backend Android và khả năng hỗ trợ của thiết bị. Kiểm tra đúng cú pháp tài liệu và phiên bản trước khi chạy. [2], [9]
 
-Bước 4: dựng hình học. Tạo `Scene`, chờ tài nguyên engine cần thiết sẵn sàng, tạo một mesh từ hình học đơn giản và vật liệu, thêm node rồi hiển thị bằng `SceneView`. Khởi đầu chỉ với một đối tượng giúp phân biệt lỗi khởi tạo, camera và vật liệu. Dưới đây là mã giả tổ chức công việc, không phải API Dart có thể chạy trực tiếp:
+Bước 4: dựng hình học. Ví dụ dưới đây sử dụng API `flutter_scene` 0.24.3 để tạo một khối cơ bản. `Scene.initializeStaticResources()` hoàn tất trước khi tạo geometry và material. `FutureBuilder` hiển thị trạng thái đang chờ hoặc lỗi trong lúc khởi tạo, rồi chuyển sang `SceneView` khi tài nguyên sẵn sàng. Nếu dùng `setState` sau `await` thay cho cách này, cần kiểm tra widget còn mounted. [7], [10]
 
-```text
-khởi tạo scene và tài nguyên dùng chung
-tạo geometry → material → mesh → node
-đặt node gần gốc tọa độ và thêm vào scene
-tạo camera nhìn vào node
-hiển thị SceneView cùng vùng thông báo trạng thái
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_scene/scene.dart';
+import 'package:vector_math/vector_math.dart' as vm;
+
+void main() => runApp(const MaterialApp(home: SceneProbe()));
+
+class SceneProbe extends StatefulWidget {
+  const SceneProbe({super.key});
+  @override
+  State<SceneProbe> createState() => _SceneProbeState();
+}
+
+class _SceneProbeState extends State<SceneProbe> {
+  final Scene scene = Scene();
+  late final Future<void> ready;
+
+  @override
+  void initState() {
+    super.initState();
+    ready = initialize();
+  }
+
+  Future<void> initialize() async {
+    await Scene.initializeStaticResources();
+    scene.add(Node(mesh: Mesh(
+      CuboidGeometry(vm.Vector3(1, 1, 1)),
+      PhysicallyBasedMaterial(),
+    )));
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    body: FutureBuilder<void>(
+      future: ready,
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return Center(child: Text('Scene initialization failed: ${snapshot.error}'));
+        }
+        if (snapshot.connectionState != ConnectionState.done) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        return SceneView(scene,
+          camera: PerspectiveCamera(position: vm.Vector3(2, 2, -4)));
+      },
+    ),
+  );
+}
 ```
 
-Bước 5: thử biến đổi và quan sát. Thay đổi vị trí theo từng trục; thêm một node con và di chuyển node cha; điều chỉnh camera. Kiểm tra vật thể bị cắt, nằm sau camera hoặc bị che trước khi kết luận không render. Sau đó thêm component chuyển động sử dụng thời gian trôi qua. [LT04, LT06]
+Compile bundle chỉ kiểm tra đường biên dịch và tài nguyên đầu ra, chưa xác nhận cảnh đã render thành công trên thiết bị. Việc kiểm tra hiển thị cần bật Flutter GPU, chọn đúng thiết bị và ghi lại backend đang sử dụng.
 
-Bước 6: thử vật liệu và ánh sáng. So sánh một vật liệu màu phẳng với PBR; giữ hình học và camera không đổi. Điều chỉnh độ nhám, sau đó mới thêm texture hoặc nguồn sáng. Lưu ảnh minh họa thật khi đã chạy; không dùng ảnh thiết kế thay cho bằng chứng hiệu năng. [LT05, LT07]
+Bước 5: thử biến đổi và quan sát. Thay đổi vị trí theo từng trục; thêm một node con và di chuyển node cha; điều chỉnh camera. Kiểm tra vật thể bị cắt, nằm sau camera hoặc bị che trước khi kết luận không render. Sau đó thêm component chuyển động sử dụng thời gian trôi qua. [11], [13]
 
-Bước 7: thay mô hình và hoạt ảnh. Nạp một GLB có giấy phép rõ ràng, kiểm tra tên node và animation; thử clip lặp trước rồi chuyển clip. Sau khi đường runtime hoạt động, đánh giá tiền xử lý asset và trạng thái loading. Tách lỗi đường dẫn, định dạng và thiếu clip thành các tình huống khác nhau. [LT08, LT09]
+Bước 6: thử vật liệu và ánh sáng. So sánh một vật liệu màu phẳng với PBR; giữ hình học và camera không đổi. Điều chỉnh độ nhám, sau đó mới thêm texture hoặc nguồn sáng. Lưu ảnh minh họa thật khi đã chạy; không dùng ảnh thiết kế thay cho bằng chứng hiệu năng. [12], [14]
 
-Bước 8: bổ sung tương tác. Gắn cử chỉ với chọn đối tượng hoặc lệnh chuyển động, kiểm tra kích thước vùng chạm và việc thả tay. Sau đó mới thêm vật lý hoặc mạng, mỗi lần một cơ chế. Với Rapier, xác nhận body/collider bằng một vật rơi đơn giản; với mạng, xác nhận trạng thái một đối tượng trước khi ghép luật trận. [LT10–LT12]
+Bước 7: thay mô hình và hoạt ảnh. Nạp một GLB có giấy phép rõ ràng, kiểm tra tên node và animation; thử clip lặp trước rồi chuyển clip. Sau khi đường runtime hoạt động, đánh giá tiền xử lý asset và trạng thái loading. Tách lỗi đường dẫn, định dạng và thiếu clip thành các tình huống khác nhau. [15], [16]
+
+Bước 8: bổ sung tương tác. Gắn cử chỉ với chọn đối tượng hoặc lệnh chuyển động, kiểm tra kích thước vùng chạm và việc thả tay. Sau đó mới thêm vật lý hoặc mạng, mỗi lần một cơ chế. Với Rapier, xác nhận body/collider bằng một vật rơi đơn giản; với mạng, xác nhận trạng thái một đối tượng trước khi ghép luật trận. [18], [17], [19]
 
 Bước 9: ghi lại kết quả. Lưu phiên bản, cấu hình, lệnh, log, ảnh và giới hạn của từng lần chạy. Chỉ sau khi có sản phẩm mới đưa số đo và kết luận đạt vào Chương 4. Chương này cung cấp nền tảng và cách thao tác để xây dựng; những lựa chọn riêng cho game sẽ được trình bày ở Chương 3.
 
-## Tài liệu tham khảo của Chương 2
-
-Các nguồn được đọc ngày 04/11/2026; đánh số LT là mã làm việc, sẽ thống nhất với danh mục toàn luận văn. Những trang hướng dẫn trực tuyến không có phiên bản cố định phải được đối chiếu lại với dependency đã chọn.
-
-- [LT01] Flutter Scene, *Installation*: https://fscene.dev/getting-started/installation/ (đã đọc ngày 03/11/2026 trong khảo sát ban đầu; yêu cầu phiên bản cần kiểm tra khi triển khai).
-- [LT02] Flutter Scene, gói `flutter_scene`, 0.24.3: https://pub.dev/packages/flutter_scene.
-- [LT03] Flutter Scene, *Core concepts*: https://fscene.dev/getting-started/core-concepts/.
-- [LT04] Flutter Scene, *Scene graph*: https://fscene.dev/guides/scene-graph/.
-- [LT05] Flutter Scene, *Materials*: https://fscene.dev/guides/materials/.
-- [LT06] Flutter Scene, *Cameras*: https://fscene.dev/guides/cameras/.
-- [LT07] Flutter Scene, *Lighting and environment*: https://fscene.dev/guides/lighting-and-environment/.
-- [LT08] Flutter Scene, *Assets and loading*: https://fscene.dev/guides/assets-and-loading/.
-- [LT09] Flutter Scene, *Animation*: https://fscene.dev/guides/animation/.
-- [LT10] Flutter Scene, *Picking and input*: https://fscene.dev/guides/picking-and-input/.
-- [LT11] Gói `flutter_scene_rapier`, 0.5.2: https://pub.dev/packages/flutter_scene_rapier.
-- [LT12] Gói `flutter_scene_net`, 0.2.2: https://pub.dev/packages/flutter_scene_net.
-
-
-- [HT01] Godot Engine, Introduction. https://docs.godotengine.org/en/stable/about/introduction.html. Truy cập ngày 04/11/2026.
-- [HT02] Godot Engine, Exporting for Android. https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html. Truy cập ngày 04/11/2026.
-- [HT03] Flame, trang chính thức. https://flame-engine.org/. Truy cập ngày 04/11/2026.
-- [HT04] Flame, tài liệu flame_3d. https://github.com/flame-engine/flame/blob/main/packages/flame_3d/README.md. Truy cập ngày 04/11/2026.
-- [HT05] Miniclip, Basketball Stars. https://www.miniclip.com/games/basketball-stars/. Truy cập ngày 04/11/2026.
-
-
----
 
 # Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 
@@ -377,29 +390,10 @@ flowchart TD
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
-Tác nhân chính là Người chơi. Ranh giới hệ thống bao gồm ứng dụng và máy chủ; do đó máy chủ không được vẽ như tác nhân bên ngoài. Hai người cùng sử dụng vai trò này. Hình 3-2 là sơ đồ ánh xạ use case bằng flowchart Mermaid, không phải sơ đồ use case UML chuẩn; khi định dạng bản chính thức có thể chuyển sang công cụ UML thích hợp mà giữ nguyên ý nghĩa.
+Tác nhân Người chơi đại diện cho vai trò của mỗi người trong hai người tham gia. Ranh giới hệ thống gồm ứng dụng và máy chủ, vì vậy máy chủ là thành phần bên trong. Hình 3-2 sử dụng ký hiệu UML: actor hình người, use case hình ellipse và association nét liền. UC08 Rời phòng thể hiện thao tác đã có trong yêu cầu F01; sơ đồ không dùng quan hệ include hoặc extend khi chưa có nhu cầu tương ứng.
 
-<!-- diagram: 3-2-usecase-tong-quat.mmd -->
-```mermaid
-flowchart LR
-  P[Người chơi]
-  subgraph SYS[Ứng dụng và máy chủ]
-    U1([UC01 Tạo hoặc vào phòng])
-    U2([UC02 Sẵn sàng])
-    U3([UC03 Điều khiển nhân vật])
-    U4([UC04 Ném bóng])
-    U5([UC05 Block])
-    U6([UC06 Xem kết quả])
-    U7([UC07 Cài đặt âm thanh])
-  end
-  P --- U1
-  P --- U2
-  P --- U3
-  P --- U4
-  P --- U5
-  P --- U6
-  P --- U7
-```
+<!-- diagram-svg: 3-2-usecase-uml.svg -->
+![Thiết kế đề xuất — 3-2-usecase-uml.svg](../diagrams/3-2-usecase-uml.png)
 
 Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
@@ -422,6 +416,18 @@ Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã 
 | Hậu điều kiện | Bóng bay, tự do hoặc trận kết thúc; cú ném chỉ cộng điểm một lần |
 
 UC05 Block chỉ nhận khi trạng thái và hồi chiêu hợp lệ. Khi vùng Block hợp lệ chạm bóng đang bay, máy chủ đổi vận tốc, phát sự kiện và chuyển bóng thành tự do. Giá trị phạm vi, thời gian hiệu lực và hồi chiêu chưa chốt. UC02 cần hủy đếm ngược nếu thiếu người; UC06 hiển thị kết quả đã xác nhận, không tự suy luận thắng từ điểm cục bộ.
+
+UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người chơi rời sảnh hoặc rời trận đang diễn ra.
+
+| Thuộc tính UC08 | Nội dung |
+|---|---|
+| Mục tiêu | Rời phòng hiện tại và kết thúc tham gia theo chính sách của phiên |
+| Tiền điều kiện | Người chơi đang thuộc một phòng ở sảnh hoặc trong trận |
+| Luồng chính | Người chơi yêu cầu rời; máy chủ kiểm tra phiên và trạng thái phòng; cập nhật thành viên; gửi trạng thái cho người còn lại; ứng dụng chuyển về màn hình phù hợp |
+| Rời sảnh | Bỏ trạng thái sẵn sàng của người rời; hủy đếm ngược nếu thiếu người; không tự bắt đầu trận |
+| Rời trận | Cần thống nhất chính sách kết thúc, xử kết quả hoặc cho phép chờ; chưa mặc định người rời bị xử thua |
+| Ngoại lệ | Mất kết nối, yêu cầu lặp, cả hai cùng rời hoặc yêu cầu đến sau kết thúc cần xử lý nhất quán; timeout và khả năng quay lại chưa chốt |
+| Hậu điều kiện | Phiên đã rời không tiếp tục điều khiển nhân vật; trạng thái phòng và kết quả chỉ thay đổi theo chính sách được máy chủ áp dụng |
 
 ### 3.2.5. Kiến trúc hệ thống và thiết kế mạng
 
@@ -449,6 +455,10 @@ Client B trong hình biểu diễn vai trò logic; hiện chưa có điện tho�
 
 Input dự kiến chứa số thứ tự, hướng di chuyển và cờ hành động. Máy chủ lấy danh tính người gửi từ phiên kết nối, kiểm tra kiểu, miền giá trị, tần suất và điều kiện luật. Không tin điểm hoặc vị trí người chơi tự khai báo. Snapshot mang tick, trạng thái và ackSeq riêng cho người nhận; sự kiện có eventId để tránh phát âm thanh hoặc cộng hiệu ứng lặp.
 
+Trong thiết kế, ackSeq của một client là số thứ tự input cuối cùng đã được máy chủ tiêu thụ theo luồng có thứ tự của phiên, kể cả hành động bị từ chối sau khi kiểm tra luật. Việc mới nhận một thông điệp chưa đủ để xác nhận; dữ liệu sai định dạng hoặc sai phiên không được làm tiến ackSeq. Máy khách loại các input đã được xác nhận rồi mới đối chiếu các input còn lại. Định danh phiên lấy từ kết nối, không lấy từ mã người chơi tự khai báo trong gói tin.
+
+Snapshot cũ không ghi đè trạng thái mới hơn của cùng một trận. Mã sự kiện phải được xét cùng mã trận để tránh nhầm khi chơi lại; thời hạn lưu sự kiện và quy tắc đặt lại bộ nhớ đệm sẽ được xác định khi cụ thể hóa giao thức.
+
 Các giá trị 60 nhịp mô phỏng/giây, 20 snapshot/giây và bộ đệm nội suy khoảng 100 ms từ bản nháp chỉ là thông số khởi tạo để thử. Prediction và reconciliation tập trung vào nhân vật cục bộ; bóng nhận trạng thái được máy chủ xác nhận. Không có cơ sở kết luận các giá trị này phù hợp Redmi Note 11 trước khi đo.
 
 ### 3.2.6. Mô hình dữ liệu và sơ đồ lớp
@@ -457,8 +467,8 @@ Dữ liệu kết nối tách khỏi dữ liệu mô phỏng. Phòng lưu mã, h
 
 | Cấu trúc dự kiến | Dữ liệu chính và bất biến |
 |---|---|
-| RoomState | Mã phòng, phase, tối đa hai phiên, trạng thái sẵn sàng |
-| SessionState | playerId, kết nối, lastSeen, thứ tự input đã xử lý |
+| RoomState | Mã phòng, phase, tối đa hai phiên; trạng thái sẵn sàng lấy từ các phiên |
+| SessionState | playerId, slotIndex ổn định, ready, kết nối, lastSeen, thứ tự input đã xử lý |
 | WorldState | tick, phase, thời gian còn lại, hai player, một ball, score, result |
 | PlayerState | Vị trí, vận tốc, hướng, hành động, hồi chiêu |
 | BallState | Vị trí, vận tốc, phase, holderId, shot hiện tại |
@@ -466,35 +476,47 @@ Dữ liệu kết nối tách khỏi dữ liệu mô phỏng. Phòng lưu mã, h
 
 Hình 3-4 mô tả cấu trúc lớp dự kiến, không phải API Flutter Scene hoặc mã đã có. Liên kết lớp với Scene được đặt ở lớp hiển thị để lõi không phụ thuộc node GPU.
 
-<!-- diagram: 3-4-lop.mmd -->
+<!-- diagram: 3-4-lop-r1.mmd -->
 ```mermaid
 classDiagram
+  %% Thiết kế đề xuất, chưa phải code hoặc API Flutter Scene.
   class RoomState {
     String roomCode
     RoomPhase phase
   }
   class SessionState {
     String playerId
+    int slotIndex
+    bool ready
+    ConnectionRef connection
+    int lastSeen
     int lastProcessedSeq
   }
   class WorldState {
     int tick
     int remainingTicks
     MatchPhase phase
+    List~int~ score
+    MatchResult result
   }
   class PlayerState {
     Vector3 position
     Vector3 velocity
+    Vector3 facing
     ActionState action
+    Cooldowns cooldowns
   }
   class BallState {
     Vector3 position
+    Vector3 velocity
     BallPhase phase
     String holderId
   }
   class ShotState {
     String shotId
     String shooterId
+    Vector3 releasePosition
+    int releaseTick
     int pointValue
     bool scored
   }
@@ -503,6 +525,10 @@ classDiagram
   WorldState "1" *-- "2" PlayerState : players
   WorldState "1" *-- "1" BallState : ball
   BallState "1" o-- "0..1" ShotState : shot
+  note for SessionState "slotIndex ổn định trong phòng: 0 hoặc 1, không trùng; dùng phân xử nhặt bóng khi bằng khoảng cách."
+  note for WorldState "score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do kết thúc, chỉ có khi kết thúc."
+  note for ShotState "Chốt pointValue từ releasePosition tại releaseTick: trên vạch tính 2 điểm; scored ngăn cộng lặp."
+  note for BallState "holderId chỉ có nghĩa khi giữ bóng; shot có thể vắng. Kiểu giá trị và đơn vị thời gian cần cụ thể hóa khi triển khai."
 ```
 
 ### 3.2.7. Mô hình xử lý
@@ -527,9 +553,10 @@ stateDiagram-v2
 
 Hình 3-6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
 
-<!-- diagram: 3-6-tuan-tu-nem.mmd -->
+<!-- diagram: 3-6-tuan-tu-nem-r1.mmd -->
 ```mermaid
 sequenceDiagram
+  %% Thiết kế đề xuất. resolved chỉ là cờ điều khiển vòng xử lý cú ném trong sơ đồ.
   actor P as Người chơi
   participant A as Client người ném
   participant S as Máy chủ
@@ -537,25 +564,46 @@ sequenceDiagram
   P->>A: Giữ rồi thả ACTION
   A->>A: Phản hồi hoạt ảnh
   A->>S: Input seq và hành động ném
-  S->>S: Kiểm dữ liệu và luật tại tick
-  alt Không hợp lệ hoặc trận đã kết thúc
+  S->>S: Kiểm seq, dữ liệu, trận, giữ bóng, trạng thái và hồi chiêu
+  alt Input cũ/trùng/sai hoặc không được ném
     S-->>A: Trạng thái hợp lệ và ackSeq
   else Chấp nhận
-    S->>S: Tạo shotId và quỹ đạo dự kiến
-    loop Các tick khi bóng đang bay
-      S->>S: Kiểm hết giờ trước va chạm và điểm
-      S-->>A: Snapshot và ackSeq của A
-      S-->>B: Snapshot và ackSeq của B
+    S->>S: Tạo shotId, lưu releasePosition/releaseTick, chốt pointValue
+    S->>S: Tạo quỹ đạo, thả bóng, scored = false, resolved = false
+    loop Các tick khi resolved = false
+      alt Trận đã kết thúc hoặc hết giờ tại tick này
+        S->>S: Giữ tỷ số cuối, xác định kết quả nếu chưa có
+        S->>S: Không cộng điểm mới, resolved = true
+      else Trận còn chạy và còn thời gian
+        S->>S: Cập nhật bóng và va chạm tại tick
+        alt Block hợp lệ chạm bóng đang bay
+          S->>S: Đổi vận tốc, bóng tự do, vô hiệu cú ném
+          S->>S: resolved = true
+        else Qua vùng rổ từ trên xuống hợp lệ với shotId hiện hành
+          alt scored = false
+            S->>S: Cộng pointValue cho người ném, scored = true
+            alt Người ném đạt ít nhất 11 điểm
+              S->>S: Kết thúc trận, xác nhận kết quả
+            else Chưa đạt điều kiện thắng
+              S->>S: Check-ball, cấp bóng cho người bị ghi điểm
+              S->>S: Đặt lại vị trí hai nhân vật cho pha mới
+            end
+          else Cú ném hiện hành đã tính
+            S->>S: Bỏ sự kiện, không cộng lặp
+          end
+          S->>S: resolved = true
+        else Sự kiện ghi điểm cũ hoặc không thuộc shotId hiện hành
+          S->>S: Bỏ sự kiện, không cộng điểm, tiếp tục xử lý cú ném hiện hành
+        else Cú ném trượt đã được giải quyết
+          S->>S: Bóng tự do, vô hiệu cú ném, resolved = true
+        else Bóng còn bay, chưa có kết quả cú ném
+          S->>S: Giữ resolved = false để xử lý tick tiếp
+        end
+      end
+      S-->>A: Snapshot, ackSeq của A và sự kiện có eventId nếu có
+      S-->>B: Snapshot, ackSeq của B và sự kiện có eventId nếu có
     end
-    alt Qua rổ hợp lệ trước hết giờ
-      S->>S: Cộng điểm một lần và kiểm kết thúc
-    else Bị Block hoặc trượt
-      S->>S: Bóng tự do
-    else Hết giờ
-      S->>S: Giữ tỷ số cuối và kết thúc
-    end
-    S-->>A: Trạng thái mới và sự kiện có eventId
-    S-->>B: Trạng thái mới và sự kiện có eventId
+    Note over S: resolved = true ngăn xử lý tiếp cú ném đã kết thúc<br/>Máy chủ quyết định điểm, quyền bóng và kết quả
   end
 ```
 
@@ -586,6 +634,22 @@ flowchart TD
   J --> Z
 ```
 
+Trong sơ đồ tuần tự, cờ resolved điều khiển việc dừng xử lý cú ném sau hết giờ, Block, ghi điểm hoặc ném trượt. Nhánh ghi điểm thực hiện check-ball khi trận chưa kết thúc. Thứ tự hết giờ trước ghi điểm kế thừa luật đang mô tả; thứ tự Block và bóng qua rổ trong cùng một tick hiện là đề xuất cần xác nhận hoặc thay bằng đối chiếu thời điểm va chạm. Sơ đồ chưa chứng minh tính đúng của phép phân xử này trên sản phẩm.
+
+Các trạng thái logic dự kiến của nhân vật và bóng được mô tả dưới đây để đối chiếu luật với xử lý. Tên trạng thái không phải API đã triển khai; các guard về phạm vi, thời gian và hồi chiêu còn cần thống nhất.
+
+| Đối tượng / trạng thái | Chuyển trạng thái và guard | Ngoại lệ, giới hạn |
+|---|---|---|
+| Player: đứng yên / di chuyển | Input hướng hợp lệ và trận đang diễn ra; trở về trung tính khi thả thao tác | Input sai/cũ/trùng bị bỏ; mất chạm hoặc xuống nền phải xóa nút giữ |
+| Player: nhảy | Yêu cầu JUMP và trạng thái cho phép | Điều kiện tiếp đất, nhảy lại và tham số chưa chốt |
+| Player: Dash | Yêu cầu DASH, trạng thái và hồi chiêu hợp lệ | Không nhận ném khi đang Dash; thời gian và hồi chiêu chưa chốt |
+| Player: ném | Có bóng, trận còn diễn ra và trạng thái cho phép; giữ rồi thả ACTION | Chỉ tạo cú ném khi máy chủ chấp nhận; không tự cộng điểm |
+| Player: Block | ACTION khi phòng thủ; trạng thái, vùng và hồi chiêu hợp lệ | Phạm vi và thời gian hiệu lực chưa chốt |
+| Ball: được giữ | holderId xác định người giữ; cú ném hợp lệ chuyển bóng sang đang bay | Không lưu thêm cờ có bóng độc lập gây mâu thuẫn |
+| Ball: đang bay | Máy chủ cập nhật; qua vùng rổ hợp lệ, đúng chiều và chưa tính thì cộng điểm một lần | Hết giờ không cộng điểm mới; Block hợp lệ vô hiệu cú ném và chuyển bóng tự do |
+| Ball: tự do | Sau cú ném trượt hoặc Block; người chơi có thể tranh bóng | Guard nhận bóng và xử lý tranh chấp đồng thời chưa chốt |
+| Ball: sau ghi điểm / kết thúc | Chưa đủ điều kiện thắng thì check-ball; đủ điểm hoặc hết giờ thì kết thúc | Không tạo check-ball chỉ vì rebound/Block; không tiếp tục xử cú ném sau kết thúc |
+
 ### 3.2.8. Thiết kế cảnh 3D và tài nguyên
 
 Cảnh gồm sân, rổ, hai nhân vật và bóng. Mỗi đối tượng cần thống nhất tỷ lệ, hệ tọa độ và quyền cập nhật transform. Lõi mô phỏng cung cấp trạng thái; lớp hiển thị ánh xạ sang node của Scene. Tài nguyên mô hình, texture, hoạt ảnh và âm thanh phải có nguồn và giấy phép sử dụng rõ ràng.
@@ -596,7 +660,7 @@ Cần kiểm chứng đường nạp tài nguyên và clip hoạt ảnh trước
 
 | Yêu cầu | Thiết kế đối chiếu | Bằng chứng cần có sau triển khai |
 |---|---|---|
-| F01–F02 | UC01–UC02, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
+| F01–F02 | UC01–UC02, UC08, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
 | F03 | UC03–UC05, Hình 3-6–3-7 | Input hợp lệ, sai, trùng và hồi chiêu |
 | F04 | ShotState, vòng xử lý điểm | Không cộng lặp; hết giờ; hai client cùng kết quả |
 | F05 | Kiến trúc, phiên và heartbeat | Hai mạng thực, timeout, ngắt mạng |
@@ -610,33 +674,33 @@ Các quyết định còn mở gồm tham số kỹ năng, phương án vật l�
 
 ### 3.3.1. Danh sách màn hình và luồng chuyển
 
-Game Bóng rổ đối kháng 3D sử dụng màn hình ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
+Giao diện game Bóng rổ đối kháng 3D được đề xuất theo hướng ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
 
 | Mã | Màn hình | Thông tin và thao tác chính | Màn hình tiếp theo |
 |---|---|---|---|
-| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Sảnh chờ hoặc Cài đặt |
+| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Tạo/vào phòng hoặc Cài đặt |
 | UI02 | Tạo/vào phòng | Mã phòng, ô nhập mã, thông báo mã sai hoặc phòng đầy, nút xác nhận và quay lại | Sảnh chờ hoặc Menu |
 | UI03 | Sảnh chờ | Mã phòng, hai vị trí người chơi, trạng thái sẵn sàng, đếm ngược và rời phòng | Trận đấu hoặc Menu |
 | UI04 | Trận đấu | Cảnh 3D, người giữ bóng, điểm, thời gian, thông tin mạng, cần di chuyển và ACTION/JUMP/DASH | Kết quả |
 | UI05 | Kết quả | Tỷ số, thắng/thua/hòa, lý do kết thúc, trở lại sảnh hoặc Menu | Sảnh chờ hoặc Menu |
-| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Màn hình trước đó |
+| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Menu chính trong phương án đầu |
 
-Ghép trận nhanh sử dụng trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
+Ghép trận nhanh là chức năng bổ sung sau; khi triển khai cần có trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
 
-Hình 3-8 mô tả quan hệ giữa các màn hình và thành phần trong trận. Hình này là sơ đồ luồng, không thay thế thiết kế giao diện.
+Hình 3-8 mô tả luồng chuyển giữa sáu màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Sơ đồ luồng không thay thế thiết kế giao diện.
 
-<!-- diagram: 3-8-giao-dien.mmd -->
+<!-- diagram: 3-8-giao-dien-r1.mmd -->
 ```mermaid
 flowchart TD
-  M[Menu: kết nối và chọn phòng] --> L[Sảnh: mã, hai người, sẵn sàng]
-  L --> G[Trận đấu]
-  G --> H[HUD: điểm, thời gian, trạng thái mạng]
-  G --> V[Cảnh 3D: sân, hai nhân vật, bóng]
-  G --> C[Điều khiển: joystick, ACTION, JUMP, DASH]
-  G --> R[Kết quả và lý do kết thúc]
-  R -->|Còn kết nối| L
-  R -->|Rời phòng| M
-  M --> S[Cài đặt âm thanh]
+  M[UI01 Menu chính] --> F[UI02 Tạo hoặc vào phòng]
+  F -->|Thành công| L[UI03 Sảnh chờ]
+  F -->|Hủy hoặc quay lại| M
+  L -->|Hai người sẵn sàng và bắt đầu được xác nhận| G[UI04 Trận đấu]
+  L -->|Rời phòng| M
+  G -->|Kết quả được máy chủ xác nhận| R[UI05 Kết quả]
+  R -->|Phòng còn hợp lệ, đặt lại sẵn sàng| L
+  R -->|Về Menu| M
+  M --> S[UI06 Cài đặt âm thanh]
   S --> M
 ```
 
@@ -645,6 +709,8 @@ flowchart TD
 Các màn hình sẽ được thiết kế trong phần mềm thiết kế giao diện và lưu tệp nguồn có thể chỉnh sửa. Mỗi màn hình cần có kích thước khung, vị trí thành phần, nội dung nhãn, kiểu chữ và các trạng thái tương tác. Hình xuất để đưa vào luận văn phải tương ứng với một phiên bản của tệp thiết kế. Phần mềm sử dụng chưa được lựa chọn; bản thảo hiện chưa có bộ hình giao diện đáp ứng yêu cầu này.
 
 Đối với màn hình trận đấu, cần bố trí cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION hiển thị chức năng ném khi người chơi có bóng và Block khi phòng thủ. Thanh canh ném xuất hiện trong lúc giữ ACTION. Điểm và đồng hồ đặt ở vùng dễ quan sát; thông báo kết nối tránh che nhân vật, bóng và các nút điều khiển.
+
+Trong phương án đầu, Cài đặt được mở từ Menu chính; chưa thiết kế lớp phủ cài đặt trong trận online.
 
 Ngoài trạng thái bình thường, bộ thiết kế cần thể hiện nút bị vô hiệu hóa hoặc đang hồi chiêu, chờ kết nối, chờ đối thủ, phòng đầy, mã không hợp lệ và mất kết nối trong trận. Mỗi trạng thái phải có nội dung thông báo và hành động tiếp theo. Không đưa nút tạm dừng vào trận online khi luật không hỗ trợ dừng mô phỏng.
 
@@ -655,3 +721,44 @@ Giao diện sảnh chờ cập nhật theo trạng thái phòng do máy chủ g�
 Âm thanh và hiệu ứng được phát theo sự kiện có mã định danh để tránh lặp khi nhiều snapshot chứa cùng một sự kiện. Cài đặt âm thanh chỉ có tác dụng trên thiết bị hiện tại. Khi tắt âm thanh, điểm số và thông báo vẫn phải thể hiện đầy đủ diễn biến cần thiết.
 
 Khi ứng dụng xuống nền hoặc mất chạm, điều khiển liên tục trở về trung tính. Nếu mạng bị gián đoạn, màn hình hiển thị tình trạng kết nối và hành động được phép theo trạng thái trận. Việc tiếp tục mô phỏng hoặc xử kết quả thuộc quy tắc của máy chủ; giao diện không tự coi trận đã tạm dừng.
+
+
+# Tài liệu tham khảo
+
+[1] Flutter Scene, *Welcome to Scene*, https://fscene.dev/getting-started/. Truy cập ngày 03/11/2026.
+
+[2] Flutter Scene, *Installation*, https://fscene.dev/getting-started/installation/. Truy cập ngày 03/11/2026 và 04/11/2026.
+
+[3] Godot Engine, Introduction. https://docs.godotengine.org/en/stable/about/introduction.html. Truy cập ngày 04/11/2026.
+
+[4] Godot Engine, Exporting for Android. https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html. Truy cập ngày 04/11/2026.
+
+[5] Flame, trang chính thức. https://flame-engine.org/. Truy cập ngày 04/11/2026.
+
+[6] Flame, tài liệu flame_3d. https://github.com/flame-engine/flame/blob/main/packages/flame_3d/README.md. Truy cập ngày 04/11/2026.
+
+[7] Flutter Scene, gói `flutter_scene`, 0.24.3: https://pub.dev/packages/flutter_scene. Truy cập ngày 04/11/2026.
+
+[8] Miniclip, Basketball Stars. https://www.miniclip.com/games/basketball-stars/. Truy cập ngày 04/11/2026.
+
+[9] Flutter, Impeller rendering engine. https://docs.flutter.dev/perf/impeller. Truy cập ngày 04/11/2026.
+
+[10] Flutter Scene, *Core concepts*: https://fscene.dev/getting-started/core-concepts/. Truy cập ngày 04/11/2026.
+
+[11] Flutter Scene, *Scene graph*: https://fscene.dev/guides/scene-graph/. Truy cập ngày 04/11/2026.
+
+[12] Flutter Scene, *Materials*: https://fscene.dev/guides/materials/. Truy cập ngày 04/11/2026.
+
+[13] Flutter Scene, *Cameras*: https://fscene.dev/guides/cameras/. Truy cập ngày 04/11/2026.
+
+[14] Flutter Scene, *Lighting and environment*: https://fscene.dev/guides/lighting-and-environment/. Truy cập ngày 04/11/2026.
+
+[15] Flutter Scene, *Assets and loading*: https://fscene.dev/guides/assets-and-loading/. Truy cập ngày 04/11/2026.
+
+[16] Flutter Scene, *Animation*: https://fscene.dev/guides/animation/. Truy cập ngày 04/11/2026.
+
+[17] Gói `flutter_scene_rapier`, 0.5.2: https://pub.dev/packages/flutter_scene_rapier. Truy cập ngày 04/11/2026.
+
+[18] Flutter Scene, *Picking and input*: https://fscene.dev/guides/picking-and-input/. Truy cập ngày 04/11/2026.
+
+[19] Gói `flutter_scene_net`, 0.2.2: https://pub.dev/packages/flutter_scene_net. Truy cập ngày 04/11/2026.
