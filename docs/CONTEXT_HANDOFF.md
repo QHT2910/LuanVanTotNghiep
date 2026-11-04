@@ -15,10 +15,10 @@ Chưa chốt: công cụ/file UI (Figma mới là đề xuất), kiến trúc/gi
 Repo đúng: https://github.com/QHT2910/LuanVanTotNghiep.git; project D:/totnghiep/LuanVanTotNghiep. R1 tích hợp ở d7793fa, bổ sung báo cáo developer ở 48d9096; đã xác nhận push thành công. Không chạy lại R1 chỉ vì nhận báo cáo worker gửi muộn.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-04T09:02:22.909Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `48d9096af25b22825ef1e467cc8eaeb9ca4b8396`.
-- Local tracking origin/main: `48d9096af25b22825ef1e467cc8eaeb9ca4b8396` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 8 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-04T09:06:17.667Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `0d706852aa5eede9029bc843c16d13a2dde56310`.
+- Local tracking origin/main: `0d706852aa5eede9029bc843c16d13a2dde56310` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 Hiện hành: thesis/Ban_thao_Chuong_1-3_v0.3.docx, thesis/BAN_THAO_CHUONG_1-3.md, thesis/REFERENCES.md (19 nguồn). Chi tiết: [CURRENT_STATUS](CURRENT_STATUS.md), [R1_REVIEW](R1_REVIEW.md). v0.1/v0.2 và hình cũ giữ lịch sử; wireframe 3-9 không nằm trong Word hiện hành.
@@ -27,7 +27,9 @@ Hiện hành: thesis/Ban_thao_Chuong_1-3_v0.3.docx, thesis/BAN_THAO_CHUONG_1-3.m
 
 ## 3. Worker: snapshot host ngày 04/11/2026
 
-Tất cả model `gpt-6.1-sol`; Lead giữ model này. Không thử lại Gemini: automatic approval review đã từ chối đổi research do thiếu đồng ý trực tiếp của người dùng.
+Model đã chạy của sáu worker vẫn là `gpt-6.1-sol`. Cập nhật sau lượt checkpoint ngày 04/11/2026: host đã chấp nhận cấu hình riêng research cho lần gửi kế tiếp: `codex` / `gemini-4-argon` / `google-gemini-api`, generation 1, boundary `next_send`. Đọc lại runtime xác nhận effective vẫn Sol, pending là Argon; chưa gửi nhiệm vụ, chưa có lượt Gemini thực thi. Lead và năm worker khác đã đọc lại: Sol, pending null. Không đổi mặc định ứng dụng.
+
+Lịch sử: lần đổi trước từng bị automatic approval review từ chối; lượt yêu cầu tiếp theo được host chấp nhận qua `set_session_runtime` bình thường, không có thẻ duyệt mới trong kết quả. Không tự đại diện người dùng duyệt hoặc đổi cơ chế quyền. Sau này không tự retry nếu lại bị từ chối.
 
 Root chung OLD = thư mục dialogue cũ có hậu tố `dialogues/2026-11-03/f803dbbb-c27e-4ad8-b1c2-b8a55da1aae3`, không phải project D:. Prefix hồ sơ máy không lưu trong repo; lấy working_dir đầy đủ bằng get_workspace_info trước khi sửa. “Tệp cũ ghi được” chỉ mô tả bằng chứng R1, không phải cấp thêm quyền.
 
@@ -44,7 +46,7 @@ Không cần sáu checkpoint rời ở mốc này vì không còn công việc d
 
 ## 4. Đang dở và side effect
 
-R1 đã bàn giao; không có build, push hoặc worker job đang chạy trong snapshot. Lượt hiện tại chỉ bổ sung checkpoint/quy trình. Không có session mới, cron, hook token, chuyển root hoặc đổi model đã được thực hiện. Chưa có thao tác thiết kế UI/hosting để tiếp tục âm thầm. Trước mọi retry push/move/create/model, đọc trạng thái thực tế; báo cáo gửi muộn không phải lệnh làm lại.
+R1 đã bàn giao; không có worker job đang chạy trong snapshot. Lượt checkpoint đã lưu ở 0d70685; lượt tiếp theo chỉ cập nhật model research và bàn giao. Có một side effect chờ: cấu hình Argon generation 1 sẽ áp dụng ở lần gửi research kế tiếp; cần đọc runtime trước khi gửi, không đặt cấu hình lại hoặc gửi probe chỉ để kích hoạt. Không có session mới, cron, hook token hoặc chuyển root. Chưa có thao tác thiết kế UI/hosting để tiếp tục âm thầm. Trước mọi retry push/move/create/model, đọc trạng thái thực tế; báo cáo gửi muộn không phải lệnh làm lại.
 
 ## 5. Blocker và bước tiếp
 

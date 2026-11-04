@@ -4,6 +4,8 @@ Ngày cập nhật: 04/11/2026. Đây là bản để rà soát tiếp, chưa ph
 
 Điểm bắt đầu cho phiên/nén ngữ cảnh tiếp theo: [CONTEXT_HANDOFF.md](CONTEXT_HANDOFF.md), quy trình [CONTEXT_PROTOCOL.md](CONTEXT_PROTOCOL.md). Snapshot host lượt context cho thấy sáu worker không làm việc, queue đều 0; chưa sửa root hoặc đổi model, không chạy lại R1. Checkpoint không có nghĩa auto rollover đã được cài.
 
+Cập nhật sau snapshot trên: host chấp nhận riêng research dùng `gemini-4-argon` qua `google-gemini-api` ở `next_send`, generation 1. Đọc lại runtime: effective Sol, pending Argon, chưa có lượt Gemini chạy. Lead và năm worker khác giữ Sol/pending null; không đổi mặc định ứng dụng, không gửi nhiệm vụ hoặc chạy lại R1. Root cũ chưa được sửa. Chi tiết chuyển model và side effect chờ trong checkpoint.
+
 ## Sản phẩm hiện hành
 
 - Bản tổng hợp: thesis/BAN_THAO_CHUONG_1-3.md; ba chương nguồn giữ bố cục sinh viên chỉ định.
