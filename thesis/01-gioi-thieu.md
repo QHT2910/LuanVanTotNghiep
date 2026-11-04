@@ -1,6 +1,4 @@
-# Chương 1. GIỚI THIỆU
-
-> **Trạng thái bản thảo:** sơ bộ ngày 04/11/2026, giữ bốn mục chính của mẫu luận văn. Nội dung trình bày mục tiêu và phương án nghiên cứu; chưa phải báo cáo về sản phẩm đã hoàn thành. Những lựa chọn gameplay, kiến trúc và chỉ tiêu định lượng còn mở sẽ được thống nhất trước khi triển khai.
+# Chương 1. Giới thiệu
 
 ## 1.1. Đặt vấn đề, mục tiêu luận văn
 
@@ -14,7 +12,7 @@ Flutter Scene, được phân phối qua gói `flutter_scene`, là một engine 
 
 Luận văn nghiên cứu công nghệ qua một demo có phạm vi kiểm soát được. Các luật giản lược phải được phân biệt với luật thể thao chính thức. Hai người chơi từ hai mạng khác nhau qua Internet là hướng ưu tiên, cần kiểm chứng cùng phương án máy chủ và điều kiện triển khai.
 
-### 1.1.2. Mục tiêu luận văn
+### 1.1.2. Mục tiêu của đề tài
 
 Mục tiêu tổng quát là nghiên cứu các thành phần và cách sử dụng Flutter Scene, ứng dụng để thiết kế và xây dựng demo game bóng rổ đối kháng 3D trên Android, từ đó đánh giá mức độ phù hợp của công nghệ đối với phạm vi đã chọn.
 
@@ -29,19 +27,19 @@ Các mục tiêu cụ thể gồm:
 
 ## 1.2. Những thách thức cần giải quyết
 
-Thách thức đầu tiên là trình bày quy trình có thể tái hiện: điều kiện chuẩn bị, thứ tự tạo đối tượng, thiết lập tham số và dấu hiệu kiểm tra. Ví dụ phải ghi rõ phiên bản và trạng thái đã hoặc chưa chạy thử.
+Việc sử dụng các thành phần cần có quy trình có thể tái hiện: điều kiện chuẩn bị, thứ tự tạo đối tượng, thiết lập tham số và dấu hiệu kiểm tra. Ví dụ phải ghi rõ phiên bản và trạng thái đã hoặc chưa chạy thử.
 
-Thứ hai, API cần được xem xét theo phiên bản. Đề tài dự kiến cố định Flutter và dependency sau khi xác minh tương thích. Không coi tính năng trong nhánh phát triển hoặc pull request là đã có trong SDK tại máy.
+API cần được xem xét theo phiên bản. Đề tài dự kiến cố định Flutter và dependency sau khi xác minh tương thích. Không coi tính năng trong nhánh phát triển hoặc pull request là đã có trong SDK tại máy.
 
-Thứ ba là lựa chọn cách mô phỏng. Backend vật lý 3D và quỹ đạo điều khiển bằng thuật toán đều cần kết hợp luật ném, quyền giữ bóng, va chạm và ghi điểm. Hai hướng được so sánh theo mục tiêu demo, khả năng kiểm thử và công sức tích hợp.
+Cơ chế mô phỏng phải phù hợp với cách ném và luật chơi. Backend vật lý 3D và quỹ đạo điều khiển bằng thuật toán đều cần kết hợp luật ném, quyền giữ bóng, va chạm và ghi điểm. Hai hướng được so sánh theo mục tiêu demo, khả năng kiểm thử và công sức tích hợp.
 
-Thứ tư là phân xử thống nhất khi chơi qua mạng. Hệ thống cần kiểm tra thao tác và định danh sự kiện để tránh cộng điểm lặp hoặc tranh chấp quyền giữ bóng. Máy chủ quyết định trạng thái là phương án cần đánh giá cùng điều kiện triển khai Internet.
+Hai người chơi cần nhận cùng kết quả khi thi đấu qua mạng. Hệ thống cần kiểm tra thao tác và định danh sự kiện để tránh cộng điểm lặp hoặc tranh chấp quyền giữ bóng. Máy chủ quyết định trạng thái là phương án cần đánh giá cùng điều kiện triển khai Internet.
 
-Thứ năm là cân bằng phản hồi với tính nhất quán. Nội suy hoặc phản hồi sớm không được tự quyết định điểm. Mất kết nối, xuống nền, rời phòng và hành động đến sau kết thúc trận cần quy tắc và ca thử tương ứng.
+Phản hồi trên máy khách cần được đối chiếu với trạng thái chung. Nội suy hoặc phản hồi sớm không được tự quyết định điểm. Mất kết nối, xuống nền, rời phòng và hành động đến sau kết thúc trận cần quy tắc và ca thử tương ứng.
 
-Cuối cùng là giới hạn thiết bị: hiện có một Redmi Note 11, chưa có Android thứ hai hoặc kết quả chạy game. Client trên máy tính/giả lập hỗ trợ phát triển nhưng không thay bằng chứng thử hai điện thoại. Cần bố trí việc bổ sung thiết bị phù hợp tiến độ.
+Điều kiện thử nghiệm hiện còn giới hạn: hiện có một Redmi Note 11, chưa có Android thứ hai hoặc kết quả chạy game. Client trên máy tính/giả lập hỗ trợ phát triển nhưng không thay bằng chứng thử hai điện thoại. Cần bố trí việc bổ sung thiết bị phù hợp tiến độ.
 
-**Bảng 1-1. Thách thức và hướng xử lý dự kiến**
+Bảng 1-1. Thách thức và hướng xử lý dự kiến
 
 | Nhóm | Hướng xử lý | Bằng chứng cần bổ sung |
 |---|---|---|
@@ -66,7 +64,7 @@ Quá trình xây dựng dự kiến đi từ cảnh nhỏ và thao tác đơn gi
 
 Phạm vi đã xác nhận gồm Android, nội dung bóng rổ đối kháng 3D, hai người trên hai thiết bị qua mạng và sử dụng Flutter Scene làm công nghệ nghiên cứu. Hướng ưu tiên là kết nối qua Internet giữa hai mạng khác nhau. Trường hợp phải thu hẹp khả năng kết nối cần được trình bày cùng lý do và thống nhất lại, không tự coi kết nối cùng Wi-Fi là đã đáp ứng mục tiêu Internet.
 
-Phạm vi gameplay làm cơ sở thiết kế được đề xuất ở mức một sân, hai nhân vật, một bóng và các thao tác thiết yếu để thi đấu. Nửa sân, một rổ, quy tắc 2/3 điểm, giới hạn điểm/thời gian, Dash/Jump/Block, ghép trận nhanh và phòng bằng mã là các phương án từ bản nháp tham khảo; chưa phải toàn bộ yêu cầu đã được duyệt. Chúng chỉ trở thành phạm vi triển khai khi đã đánh giá tính khả thi và thống nhất trong thiết kế.
+Demo sử dụng tên tạm Bóng rổ đối kháng 3D, gồm hai người trên nửa sân với một rổ và một quả bóng. Người chơi di chuyển, ném, nhảy, Dash và Block. Luật tính 2 hoặc 3 điểm tùy vị trí ném; trận kết thúc khi một người đạt ít nhất 11 điểm hoặc hết 3 phút. Người chơi tạo hoặc vào phòng bằng mã; ghép trận nhanh được bổ sung sau khi luồng phòng ổn định. Cách ném theo hướng arcade giúp kiểm soát phạm vi của demo.
 
 Đề tài không đặt mục tiêu xây dựng nền tảng phát hành game thương mại, hệ thống kinh tế vật phẩm hoặc giải đấu quy mô lớn. Các chức năng bổ sung như tài khoản, bảng xếp hạng và chống gian lận nâng cao chỉ được xem xét nếu cần cho phạm vi được thống nhất. Không mặc định sử dụng cơ sở dữ liệu quan hệ khi dữ liệu của demo chỉ cần tồn tại trong phiên chơi; quyết định lưu trữ phải xuất phát từ yêu cầu thực tế.
 
@@ -74,7 +72,7 @@ Phạm vi gameplay làm cơ sở thiết kế được đề xuất ở mức m�
 
 Kết quả nghiên cứu được đánh giá bằng mức độ giải thích và khả năng truy vết, còn kết quả sản phẩm được đánh giá bằng hành vi quan sát được và dữ liệu kiểm tra. Việc mô tả một cơ chế trong thiết kế không thay thế bằng chứng cơ chế đó đã được triển khai. Tương tự, thông tin hỗ trợ nền tảng trong tài liệu không chứng minh hiệu năng trên Redmi Note 11.
 
-**Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến**
+Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến
 
 | Kết quả | Tiêu chí đối chiếu | Cách đánh giá |
 |---|---|---|
@@ -89,11 +87,7 @@ Kết quả nghiên cứu được đánh giá bằng mức độ giải thích 
 
 Các giá trị như FPS mục tiêu, độ trễ chấp nhận, số trận lặp và thời lượng đo sẽ được chốt sau khi xác định môi trường và phạm vi sản phẩm. Những con số trong bản nháp cũ chỉ là đầu vào tham khảo, không được đưa thành kết quả đạt. Nếu chưa có đủ thiết bị hoặc chưa hoàn thành một phép thử, báo cáo phải ghi rõ phần chưa kiểm chứng.
 
-Trong giai đoạn hiện tại, ưu tiên là hoàn thành sơ bộ Chương 1–3 trước đợt giữa kỳ, bảo đảm nội dung có nguồn và các quyết định còn mở được nhận diện. Sau khi có demo, các mô tả thiết kế sẽ được cập nhật theo sản phẩm; Chương 4 trình bày kiểm thử thực tế và Chương 5 kết luận trên những kết quả đã thu thập.
+### Tài liệu tham khảo
 
-### Nguồn dẫn trong bản thảo Chương 1
-
-- **[SCENE-01]** Flutter Scene, *Welcome to Scene*, https://fscene.dev/getting-started/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ nhận diện engine và các thành phần, không chứng minh kết quả demo.
-- **[SCENE-02]** Flutter Scene, *Installation*, https://fscene.dev/getting-started/installation/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ mô tả nền tảng và điều kiện cấu hình. Cần đối chiếu lại khi chọn phiên bản triển khai.
-
-Các mã nguồn trên là định danh nội bộ để tích hợp vào danh mục tài liệu tham khảo thống nhất; không phải xác nhận đã áp dụng một chuẩn trích dẫn cuối cùng.
+- [SCENE-01] Flutter Scene, *Welcome to Scene*, https://fscene.dev/getting-started/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ nhận diện engine và các thành phần, không chứng minh kết quả demo.
+- [SCENE-02] Flutter Scene, *Installation*, https://fscene.dev/getting-started/installation/ . Nguồn đã được nhóm đọc ngày 03/11/2026; hỗ trợ mô tả nền tảng và điều kiện cấu hình. Cần đối chiếu lại khi chọn phiên bản triển khai.

@@ -5,7 +5,7 @@ const {DOMParser,XMLSerializer}=require('../.local-tools/node_modules/@xmldom/xm
 const W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const R='http://schemas.openxmlformats.org/officeDocument/2006/relationships';
 const root=path.resolve(__dirname,'..');
-const file=path.join(root,'thesis/Ban_thao_Chuong_1-3_v0.1.docx');
+const file=path.resolve(root,process.argv[2]||'thesis/Ban_thao_Chuong_1-3_v0.2.docx');
 const parse=x=>new DOMParser().parseFromString(x,'text/xml');
 const serial=x=>new XMLSerializer().serializeToString(x);
 const all=(n,name)=>Array.from(n.getElementsByTagNameNS(W,name));
@@ -34,11 +34,14 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
   const level=/Heading([1-4])/i.exec(style);const size=level?({1:48,2:30,3:28,4:26}[level[1]]):26;
   const spacing=child(pp,'spacing');attr(spacing,'after',120);attr(spacing,'line',312);attr(spacing,'lineRule','auto');
   if(level){attr(child(pp,'keepNext'),'val',1);if(level[1]==='1'){attr(child(pp,'jc'),'val','right');attr(child(pp,'pageBreakBefore'),'val',1);}}
-  for(const r of all(p,'r')){const rp=child(r,'rPr'),font=child(rp,'rFonts');for(const a of ['ascii','hAnsi','eastAsia','cs'])attr(font,a,'Times New Roman');attr(child(rp,'sz'),'val',size);attr(child(rp,'szCs'),'val',size);attr(child(rp,'color'),'val','000000');}
+  for(const r of all(p,'r')){const rp=child(r,'rPr'),font=child(rp,'rFonts');for(const a of ['ascii','hAnsi','eastAsia','cs'])attr(font,a,'Times New Roman');attr(child(rp,'sz'),'val',size);attr(child(rp,'szCs'),'val',size);attr(child(rp,'color'),'val','000000');for(const name of ['b','bCs','caps','smallCaps'])attr(child(rp,name),'val',0);}
  }
  for(const s of all(d,'sectPr')){const sz=child(s,'pgSz');attr(sz,'w',11906);attr(sz,'h',16838);const m=child(s,'pgMar');for(const [key,value]of Object.entries({top:1134,bottom:1134,left:1701,right:1134,gutter:0}))attr(m,key,value);}
  z.file('word/document.xml',serial(d));z.file('word/_rels/document.xml.rels',serial(rel));z.file('[Content_Types].xml',serial(types));
- if(images!==9)throw Error('Expected 9 embedded figures, got '+images);
+ const styles=parse(await z.file('word/styles.xml').async('string'));
+ for(const rp of all(styles,'rPr'))for(const name of ['b','bCs','caps','smallCaps'])attr(child(rp,name),'val',0);
+ z.file('word/styles.xml',serial(styles));
+ if(images!==8)throw Error('Expected 8 embedded diagrams (UI mockup excluded), got '+images);
  fs.writeFileSync(file,await z.generateAsync({type:'nodebuffer',compression:'DEFLATE'}));
  console.log('Formatted A4/margins/font/spacing; embedded '+images+' diagrams. Final pagination, TOC and chapter headers require Word review.');
 })().catch(e=>{console.error(e);process.exit(1)});

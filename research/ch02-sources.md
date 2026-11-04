@@ -19,6 +19,16 @@ Ngày khảo sát: 2026-11-04. Không cài dependency, không chạy ví dụ, k
 
 ## Giới hạn cần giữ khi biên tập
 
+Nguồn bổ sung cho mục 2.1, đọc ngày 04/11/2026:
+
+| Mã | Nguồn | Luận điểm và giới hạn |
+|---|---|---|
+| HT01 | https://docs.godotengine.org/en/stable/about/introduction.html | Engine 2D/3D và môi trường biên tập; không benchmark |
+| HT02 | https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html | Có quy trình export Android; không xác nhận máy cụ thể |
+| HT03 | https://flame-engine.org/ | Flame trong hệ sinh thái Flutter; không suy ra toàn bộ tính năng 3D |
+| HT04 | https://github.com/flame-engine/flame/blob/main/packages/flame_3d/README.md | flame_3d thử nghiệm; không kết luận Flame chỉ hỗ trợ 2.5D |
+| HT05 | https://www.miniclip.com/games/basketball-stars/ | Nhà phát hành giới thiệu game bóng rổ multiplayer mobile; không có cơ sở suy đoán thuật toán/kiến trúc bên trong |
+
 - Không ghi các bước hướng dẫn là “đã thực hiện”. Toàn bộ walkthrough là quy trình đề xuất để chạy sau.
 - Những nhận xét về ma trận, thời gian, quyền quyết định trạng thái, kiểm tra lỗi và lưu bằng chứng là phần giải thích/phương pháp của bản thảo; không quy chúng thành tính năng tự động của Scene.
 - Không xem fixed timestep là bằng chứng tất định đa nền tảng.

@@ -1,5 +1,7 @@
 # Bàn giao bản sơ bộ v0.1 — 2026-11-04
 
+Hồ sơ lịch sử của v0.1. Bản hiện hành là v0.2; xem REVIEW_v0.2.md. Gameplay/tên tạm đã được cập nhật, hai skill mới đã được áp dụng và hình wireframe tự sinh đã bị loại khỏi Word v0.2.
+
 ## Có trong phiên bản
 
 - Nội dung Ch1–3 trong các file riêng và `thesis/BAN_THAO_CHUONG_1-3.md`.

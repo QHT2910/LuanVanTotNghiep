@@ -1,22 +1,20 @@
-# Chương 3. XÂY DỰNG GAME [Tên game]
-
-> Bản sơ bộ ngày 04/11/2026. Tên game chưa được lựa chọn. Toàn bộ kiến trúc, luật và hình minh họa trong chương này là **thiết kế đề xuất**, chưa phản ánh sản phẩm đã triển khai. Bố cục làm việc có thể được điều chỉnh theo thông báo của sinh viên và góp ý của người hướng dẫn. Các giá trị cấu hình được nêu để làm rõ thiết kế, không phải số liệu thực nghiệm.
+# Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 
 ## 3.1. Mô tả game
 
 ### 3.1.1. Ý tưởng, người chơi, bối cảnh và mục tiêu
 
-[Tên game] được định hướng là demo bóng rổ đối kháng 3D giữa hai người trên thiết bị Android. Mỗi người điều khiển một nhân vật, phối hợp di chuyển, giữ bóng, ném và phòng thủ để đạt số điểm cao hơn đối thủ. Trọng tâm nghiên cứu là cách tổ chức cảnh, hiển thị và tương tác bằng Flutter Scene, đồng thời tích hợp luật chơi và đồng bộ trạng thái qua mạng. Demo không đặt mục tiêu tái hiện đầy đủ mọi quy định hoặc chuyển động của bóng rổ chuyên nghiệp.
+Game Bóng rổ đối kháng 3D dành cho hai người trên thiết bị Android. Mỗi người điều khiển một nhân vật, phối hợp di chuyển, giữ bóng, ném và phòng thủ để đạt số điểm cao hơn đối thủ. Trọng tâm nghiên cứu là cách tổ chức cảnh, hiển thị và tương tác bằng Flutter Scene, đồng thời tích hợp luật chơi và đồng bộ trạng thái qua mạng. Demo sử dụng luật giản lược phù hợp với phạm vi nghiên cứu.
 
-Phương án ban đầu sử dụng nửa sân, một rổ, hai nhân vật và một quả bóng. Quy mô này tạo điều kiện khảo sát một vòng chơi đầy đủ mà không cần hệ thống đội hình, chiến thuật hoặc nhiều sân. Hai người kết nối đến cùng một máy chủ có địa chỉ tiếp cận được qua Internet. Khi được triển khai, mỗi ứng dụng hiển thị cùng diễn biến trận nhưng có thể có camera và giao diện điều khiển riêng. Yêu cầu ưu tiên chơi từ hai mạng khác nhau; phương án LAN chỉ phục vụ thử nghiệm bước đầu, không tự thay thế mục tiêu Internet.
+Game sử dụng nửa sân, một rổ, hai nhân vật và một quả bóng. Quy mô này tạo điều kiện khảo sát một vòng chơi đầy đủ mà không cần hệ thống đội hình, chiến thuật hoặc nhiều sân. Hai người kết nối đến cùng một máy chủ có địa chỉ tiếp cận được qua Internet. Khi được triển khai, mỗi ứng dụng hiển thị cùng diễn biến trận nhưng có thể có camera và giao diện điều khiển riêng. Yêu cầu ưu tiên chơi từ hai mạng khác nhau; phương án LAN chỉ phục vụ thử nghiệm bước đầu, không tự thay thế mục tiêu Internet.
 
 Hiện có một Redmi Note 11 để chuẩn bị thử nghiệm. Chưa xác định phiên bản Android, đặc điểm GPU và kết quả chạy Scene trên thiết bị. Máy khách thứ hai trên máy tính hoặc giả lập có thể hỗ trợ phát triển; tuy nhiên, kết quả đó không tương đương nghiệm thu trên hai điện thoại thật. Giới hạn thiết bị phải được ghi lại khi đánh giá ở Chương 4.
 
 ### 3.1.2. Phạm vi, luật chơi và vòng chơi
 
-Phạm vi đề xuất gồm tạo hoặc tham gia phòng hai người, xác nhận sẵn sàng, thi đấu, xem kết quả và quay lại sảnh. Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Tài khoản, bảng xếp hạng, giao dịch, cửa hàng, nhiều đội và chống gian lận nâng cao chưa thuộc phạm vi ban đầu.
+Các chức năng gồm tạo hoặc tham gia phòng hai người, xác nhận sẵn sàng, thi đấu, xem kết quả và quay lại sảnh. Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Tài khoản, bảng xếp hạng, giao dịch, cửa hàng, nhiều đội và chống gian lận nâng cao chưa thuộc phạm vi ban đầu.
 
-Luật tham khảo từ bản nháp sử dụng 2 điểm cho cú ném trong vạch và 3 điểm cho cú ném ngoài vạch. Vị trí người ném trên mặt sân tại thời điểm thả bóng quyết định giá trị cú ném; vị trí nằm trên vạch được tính 2 điểm. Trận dự kiến kết thúc khi một người đạt ít nhất 11 điểm hoặc hết 3 phút; nếu hết giờ và bằng điểm thì hòa. Những con số này cần được thống nhất trước khi trở thành tiêu chí nghiệm thu.
+Luật chơi sử dụng 2 điểm cho cú ném trong vạch và 3 điểm cho cú ném ngoài vạch. Vị trí người ném trên mặt sân tại thời điểm thả bóng quyết định giá trị cú ném; vị trí nằm trên vạch được tính 2 điểm. Trận kết thúc khi một người đạt ít nhất 11 điểm hoặc hết 3 phút; nếu hết giờ và bằng điểm thì hòa. Các quy tắc này là cơ sở xây dựng ca kiểm thử luật chơi.
 
 Sau một lần ghi điểm, người bị ghi điểm nhận bóng ở vị trí bắt đầu pha mới; hai nhân vật được bố trí lại để tránh chồng lấn. Bóng trượt hoặc bị cản trở thành bóng tự do. Khi hai người cùng đủ điều kiện nhặt bóng, máy chủ ưu tiên khoảng cách gần hơn; trường hợp bằng nhau sử dụng thứ tự vị trí trong phòng. Đây là luật arcade giản lược, không được trình bày như luật bóng rổ chuẩn.
 
@@ -24,7 +22,7 @@ Một cú ném chỉ được tính khi bóng qua vùng ghi điểm từ trên x
 
 ### 3.1.3. Điều khiển, kỹ năng và trạng thái
 
-Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION đổi ý nghĩa theo trạng thái: giữ rồi thả để ném khi có bóng; thực hiện Block khi phòng thủ. JUMP cho phép bật cao, DASH tạo dịch chuyển nhanh có hồi chiêu. Nhân vật đang Dash không được thả bóng để ném. Các kỹ năng này là đề xuất trong bản nháp, chưa phải yêu cầu đã được phê duyệt.
+Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION đổi ý nghĩa theo trạng thái: giữ rồi thả để ném khi có bóng; thực hiện Block khi phòng thủ. JUMP cho phép bật cao, DASH tạo dịch chuyển nhanh có hồi chiêu. Nhân vật đang Dash không được thả bóng để ném. Các kỹ năng này thuộc phạm vi demo, còn tham số hồi chiêu và phạm vi tác dụng sẽ được xác định khi triển khai.
 
 Máy trạng thái giúp ngăn các hành động mâu thuẫn. Nhân vật có thể ở trạng thái di chuyển, bật cao, Dash hoặc Block; quyền giữ bóng được lưu riêng thay vì tạo mọi tổ hợp thành một trạng thái mới. Hệ thống kiểm tra trạng thái trận, quyền giữ bóng và hồi chiêu trước khi nhận hành động. Khi ứng dụng mất chạm hoặc xuống nền, lệnh điều khiển liên tục phải trở về trung tính để tránh nhân vật tiếp tục chạy ngoài ý muốn.
 
@@ -40,7 +38,7 @@ Trong phòng, chỉ bắt đầu đếm ngược khi đủ hai người và cả
 
 ### 3.2.1. Phân tích yêu cầu và quy trình nghiệp vụ
 
-Các yêu cầu dưới đây dùng mã để truy vết thiết kế. Trạng thái của chúng là đề xuất triển khai, ngoại trừ định hướng Flutter Scene, Android, hai người và ưu tiên Internet đã được sinh viên xác nhận.
+Các mã yêu cầu được dùng để đối chiếu chức năng với thiết kế và ca kiểm thử. Luật chơi và các thao tác nằm trong phạm vi demo; kiến trúc chi tiết và tham số kỹ thuật còn cần được kiểm chứng khi triển khai.
 
 | Mã | Yêu cầu | Điều kiện quan sát dự kiến |
 |---|---|---|
@@ -79,7 +77,7 @@ flowchart TD
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
-Tác nhân chính là Người chơi. Ranh giới hệ thống bao gồm ứng dụng và máy chủ; do đó máy chủ không được vẽ như tác nhân bên ngoài. Hai người cùng sử dụng vai trò này. Hình 3-2 là sơ đồ ánh xạ use case bằng flowchart Mermaid, **không phải sơ đồ use case UML chuẩn**; khi định dạng bản chính thức có thể chuyển sang công cụ UML thích hợp mà giữ nguyên ý nghĩa.
+Tác nhân chính là Người chơi. Ranh giới hệ thống bao gồm ứng dụng và máy chủ; do đó máy chủ không được vẽ như tác nhân bên ngoài. Hai người cùng sử dụng vai trò này. Hình 3-2 là sơ đồ ánh xạ use case bằng flowchart Mermaid, không phải sơ đồ use case UML chuẩn; khi định dạng bản chính thức có thể chuyển sang công cụ UML thích hợp mà giữ nguyên ý nghĩa.
 
 <!-- diagram: 3-2-usecase-tong-quat.mmd -->
 ```mermaid
@@ -103,7 +101,7 @@ flowchart LR
   P --- U7
 ```
 
-Ghép trận nhanh có thể bổ sung thành use case sau khi duyệt phạm vi. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
+Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
 ### 3.2.4. Đặc tả use case chi tiết
 
@@ -288,11 +286,44 @@ flowchart TD
   J --> Z
 ```
 
-### 3.2.8. Thiết kế cảnh 3D, tài nguyên và giao diện
+### 3.2.8. Thiết kế cảnh 3D và tài nguyên
 
-Cảnh đề xuất có nhóm sân cố định, hai nhóm nhân vật, bóng và camera. Biến đổi nhân vật được cập nhật từ trạng thái hiển thị; mô hình, vật liệu và hoạt ảnh gắn vào node tương ứng. Giai đoạn đầu có thể dùng khối cơ bản để tách lỗi rendering khỏi lỗi tải tài nguyên. Asset chính thức cần ghi tác giả, URL, giấy phép và quyền chỉnh sửa; chưa có asset nào được xác nhận chỉ từ bản thiết kế này.
+Cảnh gồm sân, rổ, hai nhân vật và bóng. Mỗi đối tượng cần thống nhất tỷ lệ, hệ tọa độ và quyền cập nhật transform. Lõi mô phỏng cung cấp trạng thái; lớp hiển thị ánh xạ sang node của Scene. Tài nguyên mô hình, texture, hoạt ảnh và âm thanh phải có nguồn và giấy phép sử dụng rõ ràng.
 
-Hình 3-8 là cấu trúc giao diện, không phải ảnh chụp màn hình sản phẩm. HUD đọc điểm và thời gian từ trạng thái máy chủ; nội suy vị trí không được làm thay đổi kết quả trận. Chỉ dùng số ping khi phương pháp đo đã xác định, không trừ trực tiếp hai timestamp của hai đồng hồ chưa đồng bộ.
+Cần kiểm chứng đường nạp tài nguyên và clip hoạt ảnh trước khi sử dụng nhân vật hoàn chỉnh. Với cảnh thử ban đầu, hình học cơ bản giúp kiểm tra camera, phép biến đổi và thao tác. Chất lượng hình ảnh và mức độ phức tạp cảnh được điều chỉnh theo kết quả đo trên thiết bị.
+
+### 3.2.9. Truy vết và quyết định còn mở
+
+| Yêu cầu | Thiết kế đối chiếu | Bằng chứng cần có sau triển khai |
+|---|---|---|
+| F01–F02 | UC01–UC02, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
+| F03 | UC03–UC05, Hình 3-6–3-7 | Input hợp lệ, sai, trùng và hồi chiêu |
+| F04 | ShotState, vòng xử lý điểm | Không cộng lặp; hết giờ; hai client cùng kết quả |
+| F05 | Kiến trúc, phiên và heartbeat | Hai mạng thực, timeout, ngắt mạng |
+| F06/N02 | Hệ thống màn hình | Thao tác mobile, âm thanh và vùng an toàn |
+| N01/N03 | Cấu hình build và phép đo | Phiên bản, thiết bị, log và dữ liệu gốc |
+
+Các quyết định còn mở gồm tham số kỹ năng, phương án vật lý, giao thức, cấu hình mô phỏng, nơi chạy máy chủ và chính sách mất kết nối. Các mô hình hiện mô tả thiết kế dự kiến; chúng sẽ được đối chiếu với mã và kết quả kiểm thử khi có bản dựng.
+
+
+## 3.3. Hệ thống màn hình
+
+### 3.3.1. Danh sách màn hình và luồng chuyển
+
+Game Bóng rổ đối kháng 3D sử dụng màn hình ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
+
+| Mã | Màn hình | Thông tin và thao tác chính | Màn hình tiếp theo |
+|---|---|---|---|
+| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Sảnh chờ hoặc Cài đặt |
+| UI02 | Tạo/vào phòng | Mã phòng, ô nhập mã, thông báo mã sai hoặc phòng đầy, nút xác nhận và quay lại | Sảnh chờ hoặc Menu |
+| UI03 | Sảnh chờ | Mã phòng, hai vị trí người chơi, trạng thái sẵn sàng, đếm ngược và rời phòng | Trận đấu hoặc Menu |
+| UI04 | Trận đấu | Cảnh 3D, người giữ bóng, điểm, thời gian, thông tin mạng, cần di chuyển và ACTION/JUMP/DASH | Kết quả |
+| UI05 | Kết quả | Tỷ số, thắng/thua/hòa, lý do kết thúc, trở lại sảnh hoặc Menu | Sảnh chờ hoặc Menu |
+| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Màn hình trước đó |
+
+Ghép trận nhanh sử dụng trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
+
+Hình 3-8 mô tả quan hệ giữa các màn hình và thành phần trong trận. Hình này là sơ đồ luồng, không thay thế thiết kế giao diện.
 
 <!-- diagram: 3-8-giao-dien.mmd -->
 ```mermaid
@@ -309,23 +340,18 @@ flowchart TD
   S --> M
 ```
 
-Các nút phải tôn trọng vùng an toàn và kích thước màn hình, không che bóng hoặc nhân vật. Âm thanh được phát theo eventId duy nhất; tắt âm thanh không làm mất thông báo quan trọng. Khi xuống nền hoặc mất mạng, giao diện báo rõ tình trạng thay vì tạo cảm giác trận đã tạm dừng, vì máy chủ có thể vẫn tiếp tục mô phỏng.
+### 3.3.2. Thiết kế giao diện
 
-**Hình 3-9. Bố cục màn hình trận đấu đề xuất.** Bản wireframe được tạo bằng đồ họa vector, không phải ảnh chạy game. Các vị trí điều khiển và thông tin chỉ minh họa thiết kế; chưa được kiểm chứng khả năng chạm hoặc mức che khuất trên Redmi Note 11. Nguồn SVG có thể chỉnh sửa được lưu cùng ảnh PNG.
+Các màn hình sẽ được thiết kế trong phần mềm thiết kế giao diện và lưu tệp nguồn có thể chỉnh sửa. Mỗi màn hình cần có kích thước khung, vị trí thành phần, nội dung nhãn, kiểu chữ và các trạng thái tương tác. Hình xuất để đưa vào luận văn phải tương ứng với một phiên bản của tệp thiết kế. Phần mềm sử dụng chưa được lựa chọn; bản thảo hiện chưa có bộ hình giao diện đáp ứng yêu cầu này.
 
-![Thiết kế đề xuất — 3-9-wireframe.svg](../diagrams/3-9-wireframe.png)
+Đối với màn hình trận đấu, cần bố trí cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION hiển thị chức năng ném khi người chơi có bóng và Block khi phòng thủ. Thanh canh ném xuất hiện trong lúc giữ ACTION. Điểm và đồng hồ đặt ở vùng dễ quan sát; thông báo kết nối tránh che nhân vật, bóng và các nút điều khiển.
 
-### 3.2.9. Truy vết và quyết định còn mở
+Ngoài trạng thái bình thường, bộ thiết kế cần thể hiện nút bị vô hiệu hóa hoặc đang hồi chiêu, chờ kết nối, chờ đối thủ, phòng đầy, mã không hợp lệ và mất kết nối trong trận. Mỗi trạng thái phải có nội dung thông báo và hành động tiếp theo. Không đưa nút tạm dừng vào trận online khi luật không hỗ trợ dừng mô phỏng.
 
-| Yêu cầu | Thiết kế đối chiếu | Bằng chứng cần có sau triển khai |
-|---|---|---|
-| F01–F02 | UC01–UC02, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
-| F03 | UC03–UC05, Hình 3-6–3-7 | Input hợp lệ, sai, trùng và hồi chiêu |
-| F04 | ShotState, vòng xử lý điểm | Không cộng lặp; hết giờ; hai client cùng kết quả |
-| F05 | Kiến trúc, phiên và heartbeat | Hai mạng thực, timeout, ngắt mạng |
-| F06/N02 | Hệ thống màn hình | Thao tác mobile, âm thanh và vùng an toàn |
-| N01/N03 | Cấu hình build và phép đo | Phiên bản, thiết bị, log và dữ liệu gốc |
+### 3.3.3. Quy tắc cập nhật và phản hồi
 
-Các quyết định cần thống nhất gồm tên game, phạm vi kỹ năng, luật thắng, hướng màn hình, phương án vật lý và mạng, cấu hình mô phỏng, nơi chạy máy chủ và chính sách mất kết nối. Trước mắt, việc mô tả đầy đủ thiết kế hỗ trợ bản thảo Chương 1–3; nó không thay thế kiểm chứng kỹ thuật. Chương 4 chỉ được bổ sung kết quả sau khi có bản dựng, thiết bị và phép đo thực tế; Chương 5 phải đối chiếu những kết quả đó với mục tiêu ở Chương 1.
+Giao diện sảnh chờ cập nhật theo trạng thái phòng do máy chủ gửi. Trong trận, bảng điểm, thời gian và kết quả lấy từ trạng thái đã được máy chủ xác nhận. Máy khách có thể phản hồi thao tác sớm bằng chuyển động hoặc hoạt ảnh, sau đó đối chiếu với dữ liệu nhận được. Nội suy vị trí chỉ ảnh hưởng phần hiển thị.
 
-**Căn cứ nội bộ:** yêu cầu sinh viên ngày 04/11/2026 trong `PROJECT_BRIEF.md`, bố cục làm việc `OUTLINE.md`, nội dung tham khảo từ `LuanVan_Ch1-3_FlutterScene_reviewed.docx`. Các sơ đồ của chương là đề xuất do nhóm xây dựng từ những đầu vào này, chưa phải mô tả mã nguồn. Các khái niệm và API nền tảng cần dẫn nguồn kỹ thuật ở Chương 2; chương này không tuyên bố đã thực nghiệm chúng.
+Âm thanh và hiệu ứng được phát theo sự kiện có mã định danh để tránh lặp khi nhiều snapshot chứa cùng một sự kiện. Cài đặt âm thanh chỉ có tác dụng trên thiết bị hiện tại. Khi tắt âm thanh, điểm số và thông báo vẫn phải thể hiện đầy đủ diễn biến cần thiết.
+
+Khi ứng dụng xuống nền hoặc mất chạm, điều khiển liên tục trở về trung tính. Nếu mạng bị gián đoạn, màn hình hiển thị tình trạng kết nối và hành động được phép theo trạng thái trận. Việc tiếp tục mô phỏng hoặc xử kết quả thuộc quy tắc của máy chủ; giao diện không tự coi trận đã tạm dừng.
