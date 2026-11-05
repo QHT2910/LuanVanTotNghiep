@@ -1,0 +1,6 @@
+flowchart TB
+ S0["S trước tại t - h"] -->|"Bước h"| S1["S hiện tại tại t"]
+ S0 --> I["Nội suy trạng thái hiển thị"]
+ S1 --> I
+ A["Thời gian dư a: alpha = a / h; 0 ≤ a < h"] --> I
+ I --> R["Render theo frame"]

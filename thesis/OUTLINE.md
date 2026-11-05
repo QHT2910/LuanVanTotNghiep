@@ -11,18 +11,20 @@
 1.4 Kết quả cần đạt và tiêu chí đánh giá
 
 ## Chương 2. Cơ sở lý thuyết
-2.1 Các hệ thống tương tự
-2.2 Tổng quan Flutter Scene và nền tảng Flutter GPU/Impeller
-2.3 Đồ thị cảnh, node, hệ tọa độ và phép biến đổi
-2.4 Hình học, mesh và vật liệu
-2.5 Camera và ánh sáng
-2.6 Tài nguyên, mô hình và hoạt ảnh
-2.7 Vòng lặp, nhập liệu và tích hợp giao diện Flutter
-2.8 Chuyển động, va chạm và tính điểm
-2.9 Kết nối và đồng bộ game thời gian thực
-2.10 Hướng dẫn từng bước dựng cảnh mẫu và tích hợp các thành phần
+2.1. Các hệ thống tương tự
+2.2. Nền tảng Flutter Scene và pipeline kết xuất
+2.3. Cơ sở toán học của không gian 3D
+2.4. Đồ thị cảnh, thành phần và vòng đời
+2.5. Hình học, vật liệu và shader
+2.6. Camera, ánh sáng và môi trường
+2.7. Tài nguyên, mô hình và hoạt ảnh
+2.8. Vòng lặp, nhập liệu và giao diện hiển thị
+2.9. Chuyển động và mô phỏng vật lý
+2.10. Kết nối và đồng bộ trạng thái thời gian thực
+2.11. Hiệu năng và giới hạn đánh giá
+2.12. Hướng dẫn xây dựng một cảnh mẫu xuyên suốt
 
-Mỗi phần: khái niệm → vai trò → cách sử dụng → ví dụ/thao tác → giới hạn. Phân biệt API tài liệu với mã đã thử. Không đưa phân tích hệ thống game riêng vào Chương 2.
+Mục 2.1–2.11 dành cho lý thuyết; 2.12 hướng dẫn riêng xuyên suốt theo yêu cầu ngày 05/11/2026.
 
 ## Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 3.1 Mô tả game

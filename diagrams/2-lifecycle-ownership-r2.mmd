@@ -1,0 +1,11 @@
+flowchart TB
+ subgraph LIFE["Lần mount và nạp thành công: Component 0.24.3"]
+ A["onAttach: gắn node"] --> M["onMount: vào scene"] --> L["onLoad: thiết lập async"]
+ L -->|"Hoàn tất khi vẫn mounted"| T["fixedUpdate / update: mounted, enabled, loaded"]
+ T --> U["onUnmount: rời scene"]
+ U -.->|"Nếu gỡ component"| D["onDetach"]
+ end
+ subgraph OWNER["Ownership riêng của Scene"]
+ O["Ứng dụng tạo Scene"] --> S["Bên sở hữu gọi Scene.dispose"]
+ V["SceneView.declarative tạo Scene nội bộ"] --> S
+ end

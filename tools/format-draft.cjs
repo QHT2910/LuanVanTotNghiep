@@ -21,7 +21,7 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
  let images=0;
  for(const p of all(d,'p')){
   const text=all(p,'t').map(x=>x.textContent).join('');
-  const match=text.match(/^\[图片: Thiết kế đề xuất — (3-.*\.(?:mmd|svg))\]$/);
+  const match=text.match(/^\[图片: Thiết kế đề xuất — ([23]-.*\.(?:mmd|svg))\]$/);
   if(match){
    const name=match[1].replace(/\.(mmd|svg)$/,'.png'),png=fs.readFileSync(path.join(root,'diagrams',name));
    const width=png.readUInt32BE(16),height=png.readUInt32BE(20),ratio=Math.min(5700000/width,7100000/height),cx=Math.round(width*ratio),cy=Math.round(height*ratio);
@@ -41,7 +41,8 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
  const styles=parse(await z.file('word/styles.xml').async('string'));
  for(const rp of all(styles,'rPr'))for(const name of ['b','bCs','caps','smallCaps'])attr(child(rp,name),'val',0);
  z.file('word/styles.xml',serial(styles));
- if(images!==8)throw Error('Expected 8 embedded diagrams (UI mockup excluded), got '+images);
+ const expectedImages=/v0\.4\.docx$/.test(file)?14:8;
+ if(images!==expectedImages)throw Error('Expected '+expectedImages+' embedded diagrams (UI mockup excluded), got '+images);
  fs.writeFileSync(file,await z.generateAsync({type:'nodebuffer',compression:'DEFLATE'}));
  console.log('Formatted A4/margins/font/spacing; embedded '+images+' diagrams. Final pagination, TOC and chapter headers require Word review.');
 })().catch(e=>{console.error(e);process.exit(1)});

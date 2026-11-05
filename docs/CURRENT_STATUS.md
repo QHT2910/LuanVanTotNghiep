@@ -1,4 +1,10 @@
-# Trạng thái hiện hành R1 / v0.3
+# Trạng thái hiện hành R2 / v0.4
+
+Ngày 05/11/2026: Chương 2 đã viết lại với 2.1–2.11 lý thuyết và 2.12 hướng dẫn riêng; Word mới thesis/Ban_thao_Chuong_1-3_v0.4.docx. Bản cũ v0.3 giữ nguyên. R2_REVIEW.md ghi thay đổi, vai trò, kiểm chứng và giới hạn. Danh mục hiện có 35 nguồn; sáu hình lý thuyết mới làm tổng 14 ảnh. Source game/tutorial-r2 đã resolve offline/analyze/build bundle/loopback đạt; chưa Android/asset runtime/Internet. research/ch02-r2-sources.md ghi mức truy cập web/video/GitHub thực tế.
+
+QA tích hợp đã phát hiện mất dấu và bốn khoảng trống lý thuyết; Lead đã sửa, tạo lại Word và QA xác nhận đạt phạm vi text/structure, không còn P1 trong các điểm đã giao. Chưa xác nhận pagination Word hoặc nghiệm thu Android/game. Research Argon dispatch lỗi saved provider cindy_openai; không có lượt Gemini thực thi. Root worker cũ chưa sửa. V0.3 đang có thay đổi ngoài lượt này, loại staging để giữ nguyên.
+
+## Hồ sơ R1 bên dưới (lịch sử, không phải trạng thái R2)
 
 Ngày cập nhật: 04/11/2026. Đây là bản để rà soát tiếp, chưa phải quyển nộp hoặc sản phẩm game hoàn chỉnh.
 

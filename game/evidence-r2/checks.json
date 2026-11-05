@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-05",
+  "project": "game/tutorial-r2",
+  "checks": [
+    {
+      "command": "flutter pub get --offline",
+      "exitCode": 0
+    },
+    {
+      "command": "flutter analyze",
+      "exitCode": 0
+    },
+    {
+      "command": "flutter build bundle --debug --target-platform android-arm64",
+      "exitCode": 0
+    },
+    {
+      "command": "dart tool/sync_smoke.dart",
+      "exitCode": 0
+    }
+  ],
+  "kernelBytes": 63729312,
+  "kernelSha256": "05c1d660323b589260ff34b162a183a0fa6a532e8ac479d61b2895e489edea7f",
+  "limits": [
+    "No Android rendering",
+    "No external model/animation runtime",
+    "No Internet/two Android test"
+  ]
+}

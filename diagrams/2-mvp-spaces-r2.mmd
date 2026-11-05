@@ -1,0 +1,5 @@
+flowchart TB
+ L["Local space"] -->|M| W["World space"]
+ W -->|V| V["View space"]
+ V -->|P| C["Clip space"]
+ C -.- F["Vector cột: p_clip = P × V × M × p_local"]

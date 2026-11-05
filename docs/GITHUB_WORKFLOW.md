@@ -2,6 +2,8 @@
 
 Repo: https://github.com/QHT2910/LuanVanTotNghiep (công khai).
 
+Nếu tệp có thay đổi sẵn ngoài phạm vi chưa được rà, dùng `--exclude relative/project/path` với script cuối phiên để giữ nó ngoài staging. Ví dụ R2: `--exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx`. Script từ chối đường dẫn không hợp lệ hoặc tệp loại trừ đã được stage; không tự reset hoặc ghi đè thay đổi sẵn có.
+
 Trước bước cuối phiên, Lead cập nhật phần quyết định, đầu ra và việc dở trong [checkpoint](CONTEXT_HANDOFF.md). Script cuối phiên tự làm mới vùng Git của checkpoint khi có thay đổi; không tự tổng hợp lịch sử hoặc mở session mới. `--check` chỉ đọc, không cập nhật timestamp. Chi tiết khôi phục sau compaction ở [quy trình context](CONTEXT_PROTOCOL.md).
 
 Luồng được sinh viên yêu cầu ngày 2026-11-04: cuối phiên, Lead tích hợp các agent → rà nội dung và diff → chạy script → commit nếu có thay đổi → push main → báo kết quả thực tế. AGENTS.md nhắc lại quy tắc cho các phiên sau.

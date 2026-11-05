@@ -71,3 +71,6 @@ R8 trong báo cáo research ánh xạ IMP01 ở bảng trên. Không đưa mã R
 - Thiết kế còn cần kiểm chứng; UC08 được Lead duyệt thuộc F01. Bảng Player/Ball chỉ tổng hợp luật đã có, không tự đặt ngưỡng, chính sách rời trận và guard còn mở.
 - Tất cả khối Mermaid giữ nguyên; không sửa source hình 3-2 hoặc UI. Lead sẽ tích hợp sơ đồ mới.
 - Không chạy git, Word render, commit/push.
+# Bổ sung R2 — 05/11/2026
+
+Giữ nguyên [1]–[19] để không đổi citation Ch1/Ch3. [20] pipeline Vulkan; [21] glTF2; [22] timestep; [23] Rapier body; [24] authority; [25] prediction/reconciliation; [26] interpolation; [27] profiling; [28] coordinate systems; [29] normal matrix; [30] integration; [31] BRDF/PBR; [32] buffer/accessor; [33] skinning; [34] quaternion/physics3D; [35] source Component0.24.3. Metadata và mức truy cập trong research/ch02-r2-sources.md. Nguồn mới không làm thay ngày truy cập nguồn kế thừa. Video chỉ metadata, không đưa vào số citation như bằng chứng API.
