@@ -14,11 +14,30 @@ Flutter Scene tổ chức nội dung 3D trong ứng dụng Flutter thông qua c�
 
 Ba hướng trên khác nhau về môi trường phát triển, trách nhiệm tích hợp và phạm vi API. Một đánh giá công bằng phải xác định tiêu chí: khả năng biểu diễn cảnh, quy trình đưa tài nguyên vào ứng dụng, công cụ quan sát lỗi, nền tảng đích và khả năng tái hiện kết quả. Nếu so sánh hiệu năng, các bên cần dùng cảnh, độ phân giải, thiết bị và chế độ đo tương đương. Các mô tả tính năng hiện có chỉ hỗ trợ đối chiếu kiến trúc và quy trình.
 
+| Tiêu chí công cụ | Godot | Flame và flame_3d | Flutter Scene |
+|---|---|---|---|
+| Vai trò khảo sát | Engine và môi trường biên tập game riêng | Framework trong Flutter; tách gói cốt lõi và gói 3D thử nghiệm | Tổ chức và kết xuất nội dung 3D trong Flutter |
+| Cấu trúc cần đối chiếu | Scene/node và quy trình biên tập | Thành phần game và phạm vi riêng của flame_3d | Scene/node/component, mesh/material và camera |
+| Quan hệ với ứng dụng Android | Quy trình xuất Android theo tài liệu | Cần xét gói và điều kiện phiên bản Flutter | Cần xét Flutter GPU, backend và phiên bản Scene |
+| Mức bằng chứng hiện có | Tài liệu giới thiệu và export [3], [4] | Trang dự án và README gói 3D [5], [6] | Tài liệu khái niệm và gói Scene [7], [10] |
+| Nội dung chưa được bảng chứng minh | Hiệu năng trên cùng điện thoại | Độ ổn định và hiệu năng 3D trên cùng điện thoại | Hiệu năng game hoàn chỉnh trên thiết bị đích |
+
+Bảng sử dụng tiêu chí về cơ chế phát triển. Các tiêu chí của game cùng thể loại ở mục tiếp theo tập trung vào sản phẩm và tương tác, nên không dùng chung thang đánh giá với engine.
+
 ### 2.1.2. Game bóng rổ trên thiết bị di động
 
 Basketball Stars của Miniclip là sản phẩm cùng chủ đề trên thiết bị di động. Trang giới thiệu của nhà phát hành mô tả hình thức nhiều người chơi và các hoạt động như dẫn bóng, ném, ghi điểm. Nguồn này xác nhận chủ đề và những tương tác được công bố; nó không công bố đủ thuật toán mô phỏng, cấu trúc máy chủ hoặc phương pháp đồng bộ để suy ra cách hiện thực bên trong. [8]
 
 Khảo sát game cùng thể loại có giá trị ở mức tương tác: người chơi nhận biết quyền điều khiển qua đâu, hành động được phản hồi như thế nào và thông tin nào cần hiện trong một trận đấu. Những nội dung này khác với khảo sát engine, vốn giải thích cách xây dựng hệ thống. Hình ảnh quảng bá có thể cho thấy thành phần giao diện, nhưng chưa phản ánh thời gian đáp ứng, khả năng sử dụng khi thao tác thực tế hoặc tính nhất quán giữa hai thiết bị.
+
+Basketball Arena được trang Miniclip giới thiệu là game bóng rổ nhiều người chơi, có khả năng thách đấu người chơi khác. Trang cung cấp liên kết tới kho ứng dụng, nhưng chưa đủ để xác định phương pháp mô phỏng hoặc đồng bộ của sản phẩm. Nguồn này mở rộng đối tượng khảo sát ở mức hình thức chơi do nhà phát hành công bố; chưa có quan sát chơi hoặc phân tích video trong phạm vi khảo sát. [36]
+
+| Tiêu chí sản phẩm | Basketball Stars | Basketball Arena |
+|---|---|---|
+| Chủ đề được công bố | Bóng rổ trên mobile [8] | Bóng rổ nhiều người chơi [36] |
+| Hình thức tương tác theo giới thiệu | Nhiều người chơi; các thao tác dẫn bóng, ném và ghi điểm [8] | Thách đấu người chơi khác [36] |
+| Giá trị tham khảo | Xác định các nhóm thao tác cần khảo sát tiếp | Bổ sung ví dụ sản phẩm có tương tác giữa người chơi |
+| Chưa có bằng chứng trong khảo sát này | Trải nghiệm sử dụng, độ trễ, thuật toán ném và kiến trúc mạng | Trải nghiệm sử dụng, độ trễ, thuật toán ném và kiến trúc mạng |
 
 ### 2.1.3. Nhận xét và phạm vi đối chiếu
 
@@ -40,7 +59,13 @@ CPU thường đảm nhiệm cập nhật logic, chuẩn bị danh sách đối 
 
 Đối với nội dung 3D trong Flutter, kết quả kết xuất còn tham gia quá trình trình bày của ứng dụng. Thời gian hoàn tất phép mô phỏng và thời điểm ảnh được đưa lên màn hình là hai mốc khác nhau. Sự tách biệt này giải thích vì sao trạng thái logic cập nhật đúng vẫn có thể xuất hiện giật hình hoặc chậm phản hồi.
 
-![Sơ đồ nguyên lý — 2-rendering-layers-r2](../diagrams/2-rendering-layers-r2.png)
+Hình 2.1 phân biệt lớp tổ chức cảnh với lớp lệnh đồ họa và backend native khi nội dung 3D được kết xuất trong ứng dụng Flutter.
+
+![Các lớp kết xuất nội dung 3D trên nền tảng native](../diagrams/2-rendering-layers-r2.png)
+
+Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native. Nguồn: tác giả tổng hợp theo [7], [9], [10].
+
+Các mũi tên biểu diễn quan hệ giữa những lớp trách nhiệm; chúng không mô tả lịch thực thi thread hoặc độ dài từng giai đoạn. Hình giới hạn ở đường kết xuất native, không đại diện cho backend web.
 
 Clipping giữ phần primitive nằm trong thể tích nhìn; nó có thể tạo đỉnh mới ở giao tuyến thay vì chỉ bỏ cả tam giác. Depth test so sánh độ sâu fragment với giá trị đã lưu để giải quyết che khuất. Blending kết hợp màu nguồn và màu đích, chẳng hạn theo alpha; nó không thay thế depth test. Bề mặt trong suốt có thể cần thứ tự vẽ riêng vì kết quả phép trộn phụ thuộc thứ tự. Ba cơ chế giải quyết ba vấn đề khác nhau trong quá trình tạo ảnh. [20]
 
@@ -82,7 +107,25 @@ M_world = M_parent M_local.
 
 Công thức thể hiện sự kế thừa không gian của cây cảnh. Một đối tượng con có thể giữ tọa độ cục bộ không đổi nhưng thay đổi vị trí thế giới khi cha di chuyển. Đây là cơ sở toán học của việc gắn vật thể vào một bộ phận đang chuyển động. Ngược lại, muốn đổi một điểm thế giới về hệ cục bộ, cần phép nghịch đảo M_world⁻¹ nếu ma trận khả nghịch. Co giãn bằng 0 theo một trục có thể khiến phép nghịch đảo không tồn tại.
 
-Thứ tự tác động phụ thuộc quy ước vector và phép nhân; row-major/column-major chỉ mô tả bố trí phần tử trong bộ nhớ. Chẳng hạn, cha tịnh tiến (2, 0, 0) và con có vị trí cục bộ (1, 0, 0), không xoay/co giãn, cho vị trí thế giới (3, 0, 0). Đây là phép cộng độ dời trong một trường hợp riêng của tích ma trận, không phải quy tắc áp dụng khi cha có phép xoay.
+Ví dụ dùng vector cột, hệ trục tay phải và phép quay chủ động +90° quanh z. Với p = (1,0,0), tọa độ thuần nhất là (1,0,0,1)ᵀ, S là ma trận đơn vị. Các ma trận R và T dưới đây lần lượt quay rồi tịnh tiến (2,0,0):
+
+| Hàng | Ma trận R | Ma trận T |
+|---|---|---|
+| 1 | 0, −1, 0, 0 | 1, 0, 0, 2 |
+| 2 | 1, 0, 0, 0 | 0, 1, 0, 0 |
+| 3 | 0, 0, 1, 0 | 0, 0, 1, 0 |
+| 4 | 0, 0, 0, 1 | 0, 0, 0, 1 |
+
+TRp quay p thành (0,1,0), rồi tịnh tiến để được (2,1,0). RTp đưa p tới (3,0,0) trước rồi quay quanh gốc, cho (0,3,0). Vector tịnh tiến cũng bị quay trong RT. Row-major/column-major mô tả bố trí phần tử bộ nhớ, không tự quyết định thứ tự tác động. [28]
+
+Hình 2.2 giữ nguyên dữ liệu và chỉ đổi thứ tự thao tác để đối chiếu hai kết quả.
+
+![Ảnh hưởng của thứ tự quay và tịnh tiến](../diagrams/2-transform-order-r3.png)
+
+Hình 2.2. Ảnh hưởng của thứ tự quay và tịnh tiến. Nguồn: tác giả xây dựng theo nguyên lý [28].
+
+Hai nhánh là sơ đồ thao tác, không phải đồ thị tọa độ theo tỷ lệ hoặc ảnh render Scene.
+
 
 ### 2.3.3. Biểu diễn phép xoay
 
@@ -100,7 +143,13 @@ Ma trận nhìn đổi tọa độ thế giới sang hệ camera; ma trận chi�
 
 Chuỗi biến đổi giải thích những lỗi hiển thị khác nhau: sai M làm đối tượng lệch vị trí hoặc tỷ lệ; sai V khiến camera nhìn sai hướng; sai P hoặc mặt phẳng cắt có thể loại đối tượng khỏi vùng quan sát. Việc phân tách các hệ tọa độ cũng là cơ sở chuyển một điểm chạm trên màn hình thành tia chọn đối tượng trong thế giới.
 
-![Sơ đồ nguyên lý — 2-mvp-spaces-r2](../diagrams/2-mvp-spaces-r2.png)
+Chuỗi đổi hệ tọa độ của một đỉnh được tóm tắt ở Hình 2.3 theo quy ước vector cột.
+
+![Chuỗi biến đổi từ hệ mô hình đến tọa độ clip](../diagrams/2-mvp-spaces-r2.png)
+
+Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip. Nguồn: tác giả tổng hợp theo [28].
+
+M, V và P lần lượt nối hệ mô hình với thế giới, hệ camera và tọa độ clip. Sau đầu ra clip còn có chia cho w và ánh xạ viewport; hình không quy định miền depth cụ thể của Scene bằng quy ước OpenGL.
 
 ## 2.4. Đồ thị cảnh, thành phần và vòng đời
 
@@ -110,7 +159,13 @@ Chuỗi biến đổi giải thích những lỗi hiển thị khác nhau: sai M
 
 Mô hình phân cấp làm giảm số phép cập nhật trực tiếp khi nhiều đối tượng cùng di chuyển. Tuy nhiên, phân cấp sâu cũng làm việc truy vết tọa độ và phụ thuộc phức tạp hơn. Một node được tổ chức thuận tiện cho hình ảnh chưa chắc tương ứng một thực thể mô phỏng độc lập. Vì vậy, trạng thái dùng cho luật có thể được lưu riêng rồi ánh xạ sang cây cảnh để hiển thị.
 
-![Sơ đồ nguyên lý — 2-scenegraph-transform-r2](../diagrams/2-scenegraph-transform-r2.png)
+Quan hệ truyền transform giữa node cha và node con được biểu diễn trong Hình 2.4.
+
+![Tích lũy biến đổi trong cây node](../diagrams/2-scenegraph-transform-r2.png)
+
+Hình 2.4. Tích lũy biến đổi trong cây node. Nguồn: tác giả tổng hợp theo [11].
+
+Biến đổi thế giới của node con được tính từ biến đổi thế giới của cha và biến đổi cục bộ của con. Node gốc được ký hiệu bằng W_root, không mặc định bằng ma trận đơn vị. Quan hệ này giải thích vì sao đổi transform của cha có thể đổi vị trí thế giới của con dù dữ liệu cục bộ của con giữ nguyên.
 
 ### 2.4.2. Component và vòng đời
 
@@ -118,7 +173,13 @@ Component đóng gói hành vi hoặc trách nhiệm được gắn vào node. M
 
 Phân biệt các thời điểm này giúp tránh sử dụng tài nguyên chưa sẵn sàng hoặc giữ callback sau khi đối tượng rời cảnh. Một tác vụ bất đồng bộ có thể hoàn tất sau khi màn hình đã bị đóng; khi đó, dữ liệu trả về không mặc nhiên còn được phép cập nhật giao diện. Đây là bài toán vòng đời tài nguyên và người sở hữu, cần được xét cùng vòng đời của Flutter.
 
-![Sơ đồ nguyên lý — 2-lifecycle-ownership-r2](../diagrams/2-lifecycle-ownership-r2.png)
+Hình 2.5 thể hiện đường gắn và nạp thành công của Component theo mã nguồn Scene 0.24.3, cùng trách nhiệm sở hữu Scene.
+
+![Vòng đời Component và trách nhiệm sở hữu Scene](../diagrams/2-lifecycle-ownership-r2.png)
+
+Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3. Nguồn: tác giả tổng hợp từ mã nguồn gói phiên bản 0.24.3 [35].
+
+Mã mount gọi onMount trước khi khởi động onLoad. update chỉ được gọi khi component đồng thời mounted, enabled và loaded; việc nạp hoàn tất sau unmount không tự đặt loaded trong nhánh kiểm tra này. Nhánh sở hữu Scene là trách nhiệm riêng, không phải bước tiếp nối của mọi component. Hình không bao quát mọi trường hợp lỗi hoặc remount và không khẳng định mọi tài nguyên GPU dùng chung được hủy đồng bộ khi gọi dispose.
 
 ### 2.4.3. Quyền cập nhật và tài nguyên dùng chung
 
@@ -148,17 +209,28 @@ BRDF, ký hiệu f_r, mô tả quan hệ phản xạ theo hướng tới ω_i v�
 
 Trong mô hình vi bề mặt, roughness mô tả phân bố hướng phản xạ nhỏ. Nhánh diffuse mô tả ánh sáng tán xạ; nhánh specular mô tả phản xạ có hướng. Điện môi thường có cả hai, trong khi mô hình kim loại lý tưởng không có nhánh diffuse tương ứng. Metallic điều khiển quy ước vật liệu này, không phải độ sáng tổng thể. Đây là cơ sở PBR, không khẳng định một biến thể BRDF cụ thể của shader Scene 0.24.3. [31]
 
+Để phân biệt tác dụng của roughness và metallic, có thể xét bốn cấu hình của cùng một mesh dưới cùng camera, nguồn sáng, môi trường, exposure và tone mapping. Giữ base color tuyến tính ở (0,8; 0,3; 0,1), không dùng texture hoặc normal map và chỉ thay hai tham số sau:
+
+| Cấu hình | Metallic | Roughness | Đặc điểm dự kiến theo mô hình metallic–roughness |
+|---|---:|---:|---|
+| A | 0 | 0,2 | Điện môi có phản xạ specular tập trung hơn |
+| B | 0 | 0,8 | Điện môi có phản xạ specular phân tán hơn A |
+| C | 1 | 0,2 | Kim loại có phản xạ tập trung, mang màu base color |
+| D | 1 | 0,8 | Kim loại có phản xạ phân tán hơn C |
+
+So sánh A–B hoặc C–D làm rõ roughness; so sánh A–C hoặc B–D làm rõ metallic. Metallic không phải hệ số làm vật sáng lên, còn roughness không chỉ là độ mờ màu nền. Phản xạ thực tế còn phụ thuộc môi trường. Bảng nêu dự đoán lý thuyết, chưa có ảnh render đối chứng hoặc số đo của bốn cấu hình. [12], [31]
+
 ### 2.5.3. Texture và không gian biểu diễn
 
 Texture là dữ liệu lấy mẫu trên một miền tọa độ. Tọa độ UV liên hệ điểm trên bề mặt với vị trí trong ảnh. Bộ lọc quyết định cách lấy giá trị giữa các texel; cách xử lý biên quyết định điều xảy ra khi tọa độ vượt miền texture. Texture có thể mô tả màu, pháp tuyến hoặc tham số vật liệu, nên các kênh không có cùng ý nghĩa.
 
 Tài liệu Scene phân biệt các slot texture như base color, normal và metallic–roughness. Ảnh màu chứa thông tin phục vụ cảm nhận thị giác, trong khi ảnh tham số thường lưu đại lượng số. Đưa dữ liệu vào sai slot hoặc xử lý màu không phù hợp có thể làm vật liệu sai dù đường dẫn tài nguyên đúng. Bên cạnh độ phân giải, cần xét ý nghĩa kênh, UV và cách xuất từ công cụ tạo mô hình. [12]
 
+Ảnh màu base color cần được diễn giải theo quy ước màu của asset; tham số roughness/metallic là dữ liệu số. Tính chiếu sáng cần miền tuyến tính, vì cộng trực tiếp giá trị mã hóa sRGB không tương đương cộng năng lượng. Tangent-space normal map mô tả hướng trong cơ sở tangent–bitangent–normal trên bề mặt; nó bổ sung chi tiết chiếu sáng mà không thêm tam giác silhouette. [21]
+
 Chi phí vật liệu không chỉ phụ thuộc số lượng mesh. Shader phức tạp, nhiều lần lấy mẫu và bề mặt trong suốt chồng lớp có thể làm tăng công việc trên cùng một vùng ảnh. Tái sử dụng tài nguyên giảm sự lặp lại ở mức dữ liệu, nhưng mức giảm lệnh vẽ hoặc tải GPU phải được đo theo engine và cách tổ chức cảnh thực tế.
 
 ## 2.6. Camera, ánh sáng và môi trường
-
-Ảnh màu base color cần được diễn giải theo quy ước màu của asset; tham số roughness/metallic là dữ liệu số. Tính chiếu sáng cần miền tuyến tính, vì cộng trực tiếp giá trị mã hóa sRGB không tương đương cộng năng lượng. Tangent-space normal map mô tả hướng trong cơ sở tangent–bitangent–normal trên bề mặt; nó bổ sung chi tiết chiếu sáng mà không thêm tam giác silhouette. [21]
 
 ### 2.6.1. Camera và phép chiếu
 
@@ -168,11 +240,38 @@ Phép chiếu trực giao không tạo sự thu nhỏ theo khoảng cách. Hai p
 
 Góc nhìn, tỷ lệ khung hình và mặt phẳng cắt cùng quyết định vùng quan sát. Mặt phẳng gần quá sát camera trong một khoảng nhìn rất rộng có thể làm phân bố độ chính xác chiều sâu kém thuận lợi. Camera có thể bỏ sót một vật thể vì nằm ngoài vùng cắt dù vị trí trong thế giới của nó hợp lệ. Tài liệu Scene mô tả PerspectiveCamera, cameraBuilder và CameraComponent cho những cách quản lý camera khác nhau. [13]
 
+Gọi θᵥ là góc nhìn dọc, a = W/H là tỷ lệ chiều rộng trên chiều cao của viewport. Xét mặt phẳng vuông góc trục nhìn tại khoảng cách d > 0 tính dọc theo trục camera. Hình học tam giác vuông cho chiều cao vùng nhìn h và chiều rộng w:
+
+h = 2 × d × tan(θᵥ / 2)
+
+w = a × h
+
+θₕ = 2 × arctan(a × tan(θᵥ / 2))
+
+Tương đương, nếu biết góc nhìn ngang θₕ thì w = 2d tan(θₕ/2). Khoảng cách d ở đây không phải khoảng cách Euclid đến mọi điểm trong ảnh. Công thức xét một lát cắt của thể tích nhìn đối xứng; các mặt phẳng cắt gần và xa tiếp tục giới hạn miền có thể kết xuất.
+
+Ví dụ chọn θᵥ = 60°, d = 5 đơn vị cảnh và a = 16/9. Khi đó h ≈ 5,77, w ≈ 10,26 và θₕ ≈ 91,49°. Nếu chỉ đổi viewport thành a = 1 mà giữ góc dọc và d, h vẫn khoảng 5,77 nhưng w còn khoảng 5,77. Vì vậy, một vật ở gần mép ngang có thể ra khỏi khung khi tỷ lệ màn hình thay đổi, dù camera không di chuyển. Những số này là kết quả hình học, không phải kích thước sân hoặc cấu hình đã đo.
+
+Trong Scene 0.24.3, PerspectiveCamera dùng fovRadiansY cho góc dọc tính bằng radian; góc ngang được xác định từ góc dọc và aspect của render target. Hai thuộc tính fovNear và fovFar là khoảng cắt, không phải góc nhìn. Ví dụ trên giải thích các đại lượng của camera; hướng dẫn cuối chương có thể chọn tham số khác mà không thay đổi quan hệ hình học này. [13], [28], [35]
+
 ### 2.6.2. Ánh sáng và phản xạ
 
 Chiếu sáng xác định cách năng lượng tới bề mặt đóng góp vào ảnh. Trong mô hình khuếch tán giản lược, một thành phần độ sáng phụ thuộc max(0, n·l), với n là pháp tuyến đơn vị và l là hướng đơn vị tới nguồn sáng. Công thức diễn tả việc bề mặt nhận ít ánh sáng trực tiếp hơn khi quay lệch khỏi hướng nguồn; nó chưa mô tả toàn bộ phản xạ PBR.
 
-Nguồn sáng có hướng mô phỏng chùm tia gần song song. Chiếu sáng dựa trên ảnh môi trường biểu diễn đóng góp từ nhiều hướng xung quanh. Skybox tạo nền quan sát được; nền và nguồn chiếu sáng có thể liên quan nhưng là hai trách nhiệm khác nhau. Đổi ảnh nền không mặc nhiên thay năng lượng chiếu tới vật liệu. Tài liệu Scene mô tả môi trường, nguồn sáng có hướng và các tham số điều chỉnh đầu ra. [14]
+Ba loại nguồn sáng được phân biệt bởi vị trí, hướng và miền tác động. Những khác biệt này quyết định tham số nào có ý nghĩa khi di chuyển hoặc xoay node:
+
+| Loại | Mô hình không gian | Tác động của node trong Scene 0.24.3 | Tham số cần phân biệt |
+|---|---|---|---|
+| Directional | Các tia có hướng gần song song, dùng để xấp xỉ nguồn ở rất xa | Với DirectionalLightComponent thông thường, hướng dựa trên phép xoay thế giới của node; tịnh tiến node không đưa nguồn sáng tới gần bề mặt | Hướng và intensity; không điều chỉnh khoảng cách bằng position |
+| Point | Nguồn tại một vị trí, phát theo các hướng xung quanh và suy giảm theo khoảng cách | PointLightComponent lấy vị trí thế giới từ node sở hữu | intensity, range và falloffExponent |
+| Spot | Nguồn tại một vị trí với miền phát hình nón | SpotLightComponent lấy vị trí từ node và biến đổi hướng cục bộ của light sang thế giới | direction, range, innerConeAngle và outerConeAngle |
+
+Trong mã 0.24.3, PointLight mặc định dùng falloffExponent = 2; range là khoảng cách để ảnh hưởng giảm về 0, còn range = 0 biểu diễn không cắt hữu hạn theo range. Với SpotLight, hai góc nón là nửa góc tính bằng radian: vùng trong có cường độ đầy đủ theo mô hình góc, giảm về 0 ở biên nón ngoài. Các tham số này được đọc từ mã nguồn phiên bản, không suy ra từ tên biến trong một ví dụ. [35]
+
+Nguồn sáng trong hướng dẫn 2.12 là PointLight(intensity: 25, range: 10) gắn vào node tại (−2,3,−2). Vì thế, nó minh họa nguồn có vị trí và tầm tác động hữu hạn, không phải directional light. Di chuyển node làm đổi vị trí nguồn so với bề mặt; không thể diễn giải intensity = 25 là độ sáng đo được hoặc range = 10 là thông số đã hiệu chỉnh cho thiết bị.
+
+Ảnh môi trường biểu diễn đóng góp chiếu sáng từ nhiều hướng, còn skybox là phần nền nhìn thấy. Đổi nền không mặc nhiên thay đổi năng lượng tới bề mặt. Môi trường, nguồn sáng trực tiếp và vật liệu cần được xét cùng nhau khi giải thích hình ảnh. [14]
+
 
 ### 2.6.3. Bóng đổ và chuyển đổi màu đầu ra
 
@@ -212,6 +311,16 @@ Skeleton là phân cấp joint; skin liên kết mesh với các joint và dữ 
 
 Với tọa độ thuần nhất p và trọng số w_j có tổng bằng 1, linear blend skinning tính p′ = Σ_j w_j J_j(t)p. Joint index chỉ định ma trận; weight chỉ định mức ảnh hưởng. Sau đó M đặt kết quả vào thế giới. Skinning khác việc gắn cả mesh vào một node: các đỉnh có thể chịu các joint khác nhau. Sai bind pose hoặc trọng số có thể gây biến dạng dù clip vẫn phát. Công thức là mô hình dữ liệu glTF, không chứng minh mọi asset hoặc extension đã chạy trong demo. [33]
 
+Để tính thử với hai joint, chọn mesh world transform M = I, đỉnh p = (2,0,0), joint 0 ở gốc và joint 1 ở (1,0,0) trong bind pose. B₀ = I; B₁ = T(−1,0,0) là inverse bind. Ở pose hiện tại G₀ = I và G₁ = T(1,0,0)Rz(90°). Khi đó q₀ = G₀B₀p = (2,0,0), còn q₁ = G₁B₁p = (1,1,0). [33]
+
+Với w₀ = 0,25 và w₁ = 0,75, kết quả là 0,25q₀ + 0,75q₁ = (1,25;0,75;0). Các đóng góp đều ở world space; world và mesh trùng nhau chỉ vì M = I. Nếu M khác đơn vị, công thức J = M⁻¹GB đưa đầu ra về mesh trước khi nhân M đúng một lần.
+
+![Một đỉnh chịu ảnh hưởng của hai joint](../diagrams/2-skinning-two-joints-r3.png)
+
+Hình 2.6. Một đỉnh chịu ảnh hưởng của hai joint. Nguồn: ví dụ tác giả xây dựng theo [33].
+
+Inverse bind đưa đỉnh về hệ joint ở tư thế gốc; G đưa mỗi đóng góp về cùng world space để trộn. Đây là phép tính minh họa, chưa kiểm chứng importer hoặc hoạt ảnh runtime.
+
 ## 2.8. Vòng lặp, nhập liệu và giao diện hiển thị
 
 ### 2.8.1. Thời gian mô phỏng và thời gian kết xuất
@@ -222,7 +331,13 @@ Bước thời gian biến thiên sử dụng thời gian đo giữa các frame.
 
 Giới hạn số bước bù hoặc giới hạn khoảng thời gian đầu vào làm thay đổi cách ứng dụng phản ứng khi quá tải. Những lựa chọn này cần được nêu rõ vì có thể ảnh hưởng tốc độ thế giới hoặc độ trễ. Bước cố định giúp kiểm soát điều kiện tính toán, nhưng tính tất định còn phụ thuộc số thực, thứ tự xử lý, dữ liệu đầu vào và trạng thái ngẫu nhiên.
 
-![Sơ đồ nguyên lý — 2-fixed-render-interpolation-r2](../diagrams/2-fixed-render-interpolation-r2.png)
+Hình 2.7 tách bước mô phỏng cố định khỏi trạng thái được dùng để hiển thị nội suy.
+
+![Bước mô phỏng cố định và nội suy hiển thị](../diagrams/2-fixed-render-interpolation-r2.png)
+
+Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị. Nguồn: tác giả tổng hợp theo [22].
+
+Phần thời gian chưa đủ một bước h xác định hệ số nội suy giữa hai trạng thái mô phỏng gần nhau. Trạng thái nội suy chỉ phục vụ hiển thị; ghi ngược nó vào mô phỏng làm thay đổi bài toán tính bước cố định. Cách tổ chức này không tự chứng minh tất định giữa các nền tảng.
 
 Ví dụ bộ tích lũy dùng h = 0,02 s. Nếu đang dư 0,005 s và frame mới kéo dài 0,032 s, tổng 0,037 s cho phép một bước, còn dư 0,017 s. Hệ số nội suy a/h = 0,85 đặt ảnh giữa hai trạng thái gần nhất; cách này chấp nhận hiển thị trễ một bước để không ngoại suy. Các số chỉ minh họa tính toán, không phải tick của game. [22]
 
@@ -305,7 +420,13 @@ Interpolation dùng các trạng thái đã nhận để hiển thị một th�
 
 Gói flutter_scene_net mô tả replica gắn với node và nội suy transform. Những cơ chế này hỗ trợ biểu diễn trạng thái cảnh qua mạng; chúng chưa tự xác định toàn bộ luật, quyền điều khiển hoặc cách xử lý tranh chấp của ứng dụng. Tài liệu cũng mô tả SceneHost trong ứng dụng native, nhưng host chạy được trên một thiết bị chưa đồng nghĩa nó có địa chỉ mà mạng khác truy cập được. [19]
 
-![Sơ đồ nguyên lý — 2-network-snapshot-timeline-r2](../diagrams/2-network-snapshot-timeline-r2.png)
+Hình 2.8 minh họa việc đệm hai snapshot để tạo trạng thái hiển thị tại một thời điểm ở giữa.
+
+![Đệm snapshot và nội suy trạng thái qua mạng](../diagrams/2-network-snapshot-timeline-r2.png)
+
+Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng. Nguồn: tác giả tổng hợp theo [26].
+
+Các mốc t_a, t_b và t_r phải được diễn giải trong cùng miền thời gian, với t_a ≤ t_r ≤ t_b. Hình không giả định mỗi input sinh đúng một snapshot hoặc client nhận gói theo nhịp đều. Khi không có hai mẫu bao quanh thời điểm cần vẽ, hệ phải áp dụng chính sách khác; hình không chứng minh độ trễ hoặc chất lượng kết nối thực tế.
 
 ### 2.10.4. Độ trễ, kết nối và tính nhất quán
 
@@ -343,135 +464,248 @@ Các phần trên tạo cơ sở giải thích việc tổ chức và đánh gi�
 
 ## 2.12. Hướng dẫn xây dựng một cảnh mẫu xuyên suốt
 
-### 2.12.1 Mục tiêu và điều kiện thực hiện
+### 2.12.1. Mục tiêu và cách dùng các mốc
 
-Ví dụ xây dựng một cảnh nhỏ gồm mặt nền, quả cầu di chuyển, khối hộp quay, nguồn sáng và vùng phát hiện giao nhau. Giao diện Flutter cung cấp nút điều khiển và hiển thị vị trí quả cầu. Các bước sau bổ sung mô hình GLB, hoạt ảnh và chương trình kiểm tra đồng bộ cục bộ trong cùng project.
+Bài thực hành dùng một project với sáu entrypoint A–F. Mỗi mốc gọi builder của mốc trước rồi chỉ bổ sung một nhóm thành phần. Import tệp có main() không chạy main() của tệp đó. Người đọc không phải ghép đồng thời vật lý, asset và mạng để thấy cảnh đầu tiên.
 
-Ví dụ minh họa cách kết hợp các thành phần; chưa xây dựng luật bóng rổ, phòng đấu, prediction hoặc kết nối Internet.
+Mỗi mốc có mục tiêu, tiền đề, tệp, mã mới, lệnh và dấu hiệu dự kiến. Phân tích tĩnh không thay thế quan sát thiết bị. Kết quả kiểm chứng hiện có: A–F và toàn project qua analyze; bundle F tạo được; kiểm tra snapshot→node hai client đạt trong Flutter test headless. Chưa quan sát SceneView trên Android hoặc phát hoạt ảnh Fox thực tế.
 
-Bộ phiên bản tham chiếu lấy từ lockfile của probe R1:
+### 2.12.2. Môi trường và cấu hình
 
-| Thành phần | Phiên bản |
-|---|---|
-| Flutter | 3.47.8 stable |
-| Dart | 3.13.7 |
-| `flutter_scene` | 0.24.3 |
-| `scene` | 0.4.1, dependency gián tiếp |
-| `vector_math` | 2.4.4 |
+Dùng Flutter 3.47.8, Dart 3.13.7, flutter_scene 0.24.3, scene 0.4.1 và vector_math 2.4.4 theo lockfile đi kèm. Không thay phiên bản giữa các mốc nếu muốn đối chiếu kết quả.
 
-Máy phát triển cần Flutter và Android toolchain hoạt động. Muốn quan sát cảnh trên điện thoại phải có Android được Flutter nhận diện và hỗ trợ backend đồ họa cần thiết. Analyze hoặc build bundle không thay cho việc chạy cảnh trên thiết bị.
-
-Trạng thái kiểm chứng: probe R1 với khối hộp đơn giản đã qua analyze và build bundle. Mã cơ sở đã qua analyze, build bundle và smoke loopback ngày 05/11/2026; chưa chạy giao diện Android hoặc nhánh asset ngoài.
-
-Bộ source đã kiểm tra bundle chưa chứa runner Android. Khi dùng source có sẵn, cần tạo runner trước khi sửa manifest hoặc cài APK; quy trình tạo runner–manifest chưa được chạy trong lần kiểm tra bundle.
-
-### 2.12.2 Tạo project và bật Flutter GPU
-
-Tạo project riêng để giữ nguyên probe và bằng chứng cũ. Các lệnh dưới đây dành cho lần thực hiện sau, chưa chạy trong lượt soạn hướng dẫn:
+Có thể dùng bộ source game/tutorial-r3 trong repository của đề tài hoặc tạo project Android rồi đưa các tệp bài học vào. Bộ source đã kiểm tra bundle chưa chứa Android runner. Với project có sẵn chưa có runner, chạy lệnh tạo runner trong thư mục project trước khi sửa manifest:
 
 ```powershell
-flutter create --platforms=android --project-name=scene_tutorial_r2 game/tutorial-r2
-Set-Location game/tutorial-r2
-```
-
-Thay `pubspec.yaml` bằng:
-
-```yaml
-name: scene_tutorial_r2
-description: Vi du hoc Flutter Scene, khong phai game hoan chinh.
-publish_to: none
-
-environment:
-  sdk: '>=3.13.0 <4.0.0'
-
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_scene: 0.24.3
-  vector_math: 2.4.4
-
-flutter:
-  uses-material-design: true
-```
-
-Chạy:
-
-```powershell
+flutter create --platforms=android --project-name=scene_tutorial_r3 .
 flutter pub get
 ```
 
-Kiểm tra `pubspec.lock`: Scene phải là 0.24.3 và `vector_math` là 2.4.4. Dependency gián tiếp có thể thay đổi khi resolve mới; muốn tái lập toàn bộ bộ dependency R1 cần dùng lockfile R1 làm cơ sở và kiểm tra diff sau resolve. Không khẳng định cùng bộ dependency chỉ từ hai dòng ghim phiên bản trực tiếp.
-
-Trong `android/app/src/main/AndroidManifest.xml`, thêm metadata vào bên trong `<application>` hiện có:
+Lệnh tạo runner này chưa được thực hiện trong lần kiểm tra bundle. Kiểm tra diff pubspec và lockfile sau khi tạo, giữ các phiên bản nêu trên. Với AndroidManifest.xml, thêm metadata vào application hiện có:
 
 ```xml
-<meta-data
-    android:name="io.flutter.embedding.android.EnableFlutterGPU"
-    android:value="true" />
+<meta-data android:name="io.flutter.embedding.android.EnableFlutterGPU"
+           android:value="true" />
 ```
 
-Không tạo thêm một phần tử `<application>` thứ hai. Metadata này thuộc cấu hình Android; bật Impeller không tự thay thế bước bật Flutter GPU.
+Chỉ chạy flutter run khi flutter devices nhận đúng Android và backend đáp ứng Flutter GPU. Nếu thiết bị không xuất hiện, kiểm tra cáp, USB debugging và ủy quyền ADB; không lấy client desktop hoặc bundle thành công làm kết quả Android. [2], [35]
 
-README của package 0.24.3 cũng cung cấp cách bật khi chạy phát triển:
+### 2.12.3. Hạ tầng khởi tạo dùng chung
 
-```powershell
-flutter run --enable-flutter-gpu
-```
+Tạo lib/lesson_host.dart trước A từ tệp cùng tên trong bộ source đi kèm. Đây là phần hạ tầng Flutter đầy đủ, được lưu riêng để không che mạch học Scene bằng một khối mã dài. Source đầy đủ: [lesson_host.dart](https://github.com/QHT2910/LuanVanTotNghiep/blob/main/game/tutorial-r3/lib/lesson_host.dart).
 
-Trong project mẫu đã cấu hình manifest, có thể dùng `flutter run` và chọn đúng Android. Chưa thực hiện lệnh chạy trên điện thoại trong hướng dẫn này.
+Host cung cấp startLesson(builder) và Lesson giữ root, actor, material, camera cùng overlay. Host đợi initializeStaticResources, gọi builder một lần, rồi đặt SceneView; khi màn hình đóng, nó thu hồi lesson/scene. Một future lưu trong initState tránh khởi tạo lại từ build. Nếu builder hoàn tất sau khi widget đã đóng, cảnh tạm được giải phóng. Đường tải lỗi và cleanup cần được kiểm tra runtime trên thiết bị; analyze không xác nhận toàn bộ vòng đời.
 
-Dấu hiệu đúng: resolve dependency hoàn tất; manifest có metadata đúng vị trí. Việc xác nhận GPU hoạt động còn cần lần chạy thực tế.
+Tạo các thư mục lib/checkpoints/a đến f; mỗi tệp dưới đây lưu vào main.dart của đúng thư mục. Giữ toàn bộ tệp mốc trước vì builder ở mốc sau import chúng. Lỗi không tìm thấy lesson_host hoặc import mốc trước là lỗi thiếu source, chưa phải lỗi engine.
 
-### 2.12.3 Tổ chức tệp của ví dụ
+### 2.12.4. Mốc A — Scene và camera
 
-Project sử dụng các tệp sau:
+Mục tiêu: hiển thị một khối hộp bằng SceneView với camera cố định. Chưa có component chuyển động, input, vật lý hoặc asset.
 
-```text
-lib/
-  main.dart
-  assets_step.dart
-tool/
-  sync_smoke.dart
-assets/                 chỉ thêm khi có asset thật
-  model.glb
-  surface.png
-```
+Tiền đề: đã lưu `lesson_host.dart`, resolve dependency và cấu hình GPU khi chạy Android.
 
-`main.dart` chứa cảnh, component và giao diện. `assets_step.dart` là bước nạp tài nguyên tùy chọn. `tool/sync_smoke.dart` sử dụng nguyên chương trình smoke R1, không đưa một server thử nghiệm vào ứng dụng Android.
-
-Tên `model.glb` và `surface.png` là tên quy ước cần cung cấp, không phải các tệp đã có trong repository.
-
-### 2.12.4 Dựng scene, node, mesh và component
-
-Lưu nội dung sau vào `lib/main.dart`. Mã cơ sở đã qua analyze/build bundle; chưa quan sát runtime Android.
+Tệp `lib/checkpoints/a/main.dart`:
 
 ```dart
-import 'dart:async';
-import 'dart:typed_data';
-
-import 'package:flutter/material.dart';
 import 'package:flutter_scene/scene.dart' as fs;
-import 'package:flutter_scene/physics.dart' as ph;
 import 'package:vector_math/vector_math.dart' as vm;
 
-import 'assets_step.dart';
+import '../../lesson_host.dart';
 
-void main() {
-  runApp(const MaterialApp(home: TutorialPage()));
+void main() => startLesson(buildLesson);
+
+Lesson buildLesson(fs.Scene scene) {
+  final material = fs.PhysicallyBasedMaterial();
+  final actor = fs.Node(
+    name: 'actor',
+    mesh: fs.Mesh(
+      fs.CuboidGeometry(vm.Vector3(0.5, 0.5, 0.5)),
+      material,
+    ),
+  )..position = vm.Vector3(-1.5, 0.35, 0);
+  final root = fs.Node(name: 'world')..add(actor);
+  scene.add(root);
+
+  return Lesson(
+    root: root,
+    actor: actor,
+    material: material,
+    camera: fs.PerspectiveCamera(
+      position: vm.Vector3(3, 3, -6),
+      target: vm.Vector3(0, 0.5, 0),
+      fovNear: 0.1,
+      fovFar: 50,
+    ),
+  );
+}
+```
+
+Lệnh đề nghị:
+
+```powershell
+flutter analyze lib/checkpoints/a/main.dart
+flutter run --target lib/checkpoints/a/main.dart
+```
+
+Kết quả dự kiến: một khối hộp nằm lệch trái trong cảnh, camera đứng yên. Scene dùng cấu hình môi trường mặc định; chưa thêm nguồn sáng riêng.
+
+Nếu màn hình trống, kiểm tra exception khởi tạo, Flutter GPU, camera và thiết bị. Không thêm vật lý hoặc asset để xử lý lỗi của mốc A.
+
+### 2.12.5. Mốc B — Transform và component
+
+Mục tiêu: quan sát phép biến đổi cha–con và component cập nhật theo frame. Quả hộp chính của A giữ nguyên; thêm một khối hộp con quay quanh pivot riêng.
+
+Tiền đề: checkpoint A đã analyze đạt; khi có thiết bị, cần quan sát được A trước khi đánh giá B.
+
+Tệp `lib/checkpoints/b/main.dart`:
+
+```dart
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:vector_math/vector_math.dart' as vm;
+
+import '../../lesson_host.dart';
+import '../a/main.dart' as a;
+
+void main() => startLesson(buildLesson);
+
+class Spin extends fs.Component {
+  double angle = 0;
+
+  @override
+  void update(double deltaSeconds) {
+    final dt = deltaSeconds.clamp(0.0, 0.05).toDouble();
+    angle += 0.8 * dt;
+    node.rotation = vm.Quaternion.axisAngle(
+      vm.Vector3(0, 1, 0),
+      angle,
+    );
+  }
 }
 
-fs.PhysicallyBasedMaterial makeMaterial(vm.Vector4 color) {
-  return fs.PhysicallyBasedMaterial()
-    ..baseColorFactor = color
-    ..metallicFactor = 0.0
+Lesson buildLesson(fs.Scene scene) {
+  final lesson = a.buildLesson(scene);
+  final pivot = fs.Node(name: 'pivot')
+    ..position = vm.Vector3(0, 1.2, 1)
+    ..scale = vm.Vector3(1, 0.7, 1)
+    ..addComponent(Spin());
+  final marker = fs.Node(
+    name: 'marker',
+    mesh: fs.Mesh(
+      fs.CuboidGeometry(vm.Vector3(0.4, 0.4, 0.4)),
+      fs.PhysicallyBasedMaterial(),
+    ),
+  )..position = vm.Vector3(0.6, 0, 0);
+  pivot.add(marker);
+  lesson.root.add(pivot);
+  return lesson;
+}
+```
+
+Lệnh đề nghị:
+
+```powershell
+flutter analyze lib/checkpoints/b/main.dart
+flutter run --target lib/checkpoints/b/main.dart
+```
+
+Kết quả dự kiến: marker quay quanh pivot và chịu scale theo trục Y của cha. Actor chính không quay.
+
+`position`, `rotation` và `scale` trong Scene 0.24.3 trả bản sao. Để cập nhật vị trí phải gán lại:
+
+```dart
+final p = node.position;
+node.position = vm.Vector3(p.x + 0.1, p.y, p.z);
+```
+
+Không dùng `node.position.x += 0.1`. Khi component không cập nhật, kiểm tra node đã nằm trong scene và component đã load/mount; không tự thêm ticker thứ hai.
+
+Giới hạn delta 0.05 giây là quy ước minh họa, không phải timestep mạng hoặc ngưỡng nghiệm thu.
+
+### 2.12.6. Mốc C — Material và ánh sáng
+
+Mục tiêu: thay màu, độ nhám của actor, thêm nền và PointLight. Chưa dùng texture hoặc model ngoài.
+
+Tiền đề: mốc B hoạt động; không thêm dependency mới.
+
+Tệp `lib/checkpoints/c/main.dart`:
+
+```dart
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:vector_math/vector_math.dart' as vm;
+
+import '../../lesson_host.dart';
+import '../b/main.dart' as b;
+
+void main() => startLesson(buildLesson);
+
+Lesson buildLesson(fs.Scene scene) {
+  final lesson = b.buildLesson(scene);
+  lesson.material
+    ..baseColorFactor = vm.Vector4(0.9, 0.35, 0.1, 1)
+    ..metallicFactor = 0
     ..roughnessFactor = 0.7;
+
+  final floorMaterial = fs.PhysicallyBasedMaterial()
+    ..baseColorFactor = vm.Vector4(0.25, 0.35, 0.3, 1)
+    ..metallicFactor = 0
+    ..roughnessFactor = 0.9;
+  lesson.root.add(fs.Node(
+    name: 'floor',
+    mesh: fs.Mesh(
+      fs.CuboidGeometry(vm.Vector3(5, 0.1, 3)),
+      floorMaterial,
+    ),
+  )..position = vm.Vector3(0, -0.05, 0));
+
+  lesson.root.add(fs.Node(name: 'lamp')
+    ..position = vm.Vector3(-2, 3, -2)
+    ..addComponent(fs.PointLightComponent(
+      fs.PointLight(
+        intensity: 25,
+        range: 10,
+        castsShadow: false,
+      ),
+    )));
+  return lesson;
 }
+```
 
-class DriveComponent extends fs.Component {
-  DriveComponent(this.onChanged);
+Lệnh đề nghị:
 
-  final VoidCallback onChanged;
-  double direction = 0.0;
+```powershell
+flutter analyze lib/checkpoints/c/main.dart
+flutter run --target lib/checkpoints/c/main.dart
+```
+
+Kết quả dự kiến: actor màu cam, nền xanh xám; thay đổi vị trí lamp hoặc intensity làm thay đổi phần chiếu sáng trực tiếp. Môi trường mặc định vẫn có thể đóng góp ánh sáng.
+
+Nền dày 0.1, tâm tại `y = -0.05`, nên mặt trên nằm ở `y = 0`. Actor vẫn chưa có trọng lực.
+
+Nếu bề mặt quá sáng, kiểm tra intensity, metallic và exposure trước khi đổi renderer. Mốc này tắt shadow; không dùng nó để dự đoán hiệu năng cảnh có bóng đổ.
+
+### 2.12.7. Mốc D — Input và HUD
+
+Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ `Drive` ghi vị trí actor trong mốc này.
+
+Tiền đề: giữ source A–C và host chung. Không import physics.
+
+Tệp `lib/checkpoints/d/main.dart`:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:vector_math/vector_math.dart' as vm;
+
+import '../../lesson_host.dart';
+import '../c/main.dart' as c;
+
+void main() => startLesson(buildLesson);
+
+class Drive extends fs.Component {
+  Drive(this.onMove);
+
+  final VoidCallback onMove;
+  double direction = 0;
 
   @override
   void update(double deltaSeconds) {
@@ -480,454 +714,242 @@ class DriveComponent extends fs.Component {
     final x = (p.x + direction * 1.2 * dt)
         .clamp(-2.0, 2.0)
         .toDouble();
-
     node.position = vm.Vector3(x, p.y, p.z);
-    onChanged();
+    onMove();
   }
 }
 
-class SpinComponent extends fs.Component {
-  double angle = 0.0;
+Lesson buildLesson(fs.Scene scene) {
+  final lesson = c.buildLesson(scene);
+  final hud = ValueNotifier<String>('x = -1.50');
+  final drive = Drive(() {
+    final x = lesson.actor.position.x.toStringAsFixed(2);
+    hud.value = 'x = $x';
+  });
+  lesson.actor.addComponent(drive);
+  lesson.cleanups.add(() {
+    drive.enabled = false;
+    hud.dispose();
+  });
 
-  @override
-  void update(double deltaSeconds) {
-    final dt = deltaSeconds.clamp(0.0, 0.05).toDouble();
-    angle += 0.8 * dt;
-    node.rotation = vm.Quaternion.axisAngle(
-      vm.Vector3(0.0, 1.0, 0.0),
-      angle,
-    );
-  }
-}
-
-class TutorialPage extends StatefulWidget {
-  const TutorialPage({super.key});
-
-  @override
-  State<TutorialPage> createState() => _TutorialPageState();
-}
-
-class _TutorialPageState extends State<TutorialPage> {
-  fs.Scene? _scene;
-  fs.Node? _world;
-  fs.Node? _ball;
-  DriveComponent? _drive;
-
-  final ValueNotifier<String> _hud =
-      ValueNotifier<String>('Đang khởi tạo');
-
-  StreamSubscription<ph.CollisionEvent>? _collisionSubscription;
-  late final Future<void> _ready;
-  int _entries = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _ready = _initialize();
-  }
-
-  Future<void> _initialize() async {
-    await fs.Scene.initializeStaticResources();
-    if (!mounted) return;
-
-    final physics = ph.PhysicsWorld(ph.BasicSimulation());
-    final world = fs.Node(name: 'world')
-      ..addComponent(physics);
-
-    final floor = fs.Node(
-      name: 'floor',
-      mesh: fs.Mesh(
-        fs.CuboidGeometry(vm.Vector3(5.0, 0.1, 3.0)),
-        makeMaterial(vm.Vector4(0.25, 0.35, 0.3, 1.0)),
+  lesson.overlay = Column(
+    children: [
+      ValueListenableBuilder<String>(
+        valueListenable: hud,
+        builder: (context, value, child) =>
+            Card(child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Text(value),
+        )),
       ),
-    )..position = vm.Vector3(0.0, -0.05, 0.0);
-    world.add(floor);
-
-    final checker = fs.Texture2D.fromPixels(
-      Uint8List.fromList([
-        240, 120, 30, 255,
-        80, 30, 10, 255,
-        80, 30, 10, 255,
-        240, 120, 30, 255,
-      ]),
-      2,
-      2,
-    );
-
-    final ballMaterial =
-        makeMaterial(vm.Vector4(1.0, 1.0, 1.0, 1.0))
-          ..baseColorTexture = checker;
-
-    final ball = fs.Node(
-      name: 'ball',
-      mesh: fs.Mesh(
-        fs.SphereGeometry(
-          radius: 0.25,
-          segments: 24,
-          rings: 12,
-        ),
-        ballMaterial,
+      const Spacer(),
+      Wrap(
+        spacing: 8,
+        children: [
+          ElevatedButton(
+            onPressed: () => drive.direction = -1,
+            child: const Text('Trái'),
+          ),
+          ElevatedButton(
+            onPressed: () => drive.direction = 0,
+            child: const Text('Dừng'),
+          ),
+          ElevatedButton(
+            onPressed: () => drive.direction = 1,
+            child: const Text('Phải'),
+          ),
+        ],
       ),
-    )..position = vm.Vector3(-1.5, 0.35, 0.0);
-
-    ball.addComponent(ph.RigidBody(
-      type: ph.BodyType.kinematic,
-      useGravity: false,
-    ));
-    ball.addComponent(ph.Collider(
-      shape: const ph.SphereShape(radius: 0.25),
-    ));
-
-    final drive = DriveComponent(_refreshHud);
-    ball.addComponent(drive);
-    world.add(ball);
-
-    final gate = fs.Node(
-      name: 'gate',
-      mesh: fs.Mesh(
-        fs.CuboidGeometry(vm.Vector3(0.3, 0.7, 0.7)),
-        makeMaterial(vm.Vector4(0.2, 0.5, 0.9, 1.0)),
-      ),
-    )..position = vm.Vector3(0.0, 0.35, 0.0);
-
-    gate.addComponent(ph.Collider(
-      shape: ph.BoxShape(
-        halfExtents: vm.Vector3(0.15, 0.35, 0.35),
-      ),
-      isTrigger: true,
-    ));
-    world.add(gate);
-
-    final pivot = fs.Node(name: 'pivot')
-      ..position = vm.Vector3(0.0, 1.2, 1.0)
-      ..scale = vm.Vector3(1.0, 0.7, 1.0)
-      ..addComponent(SpinComponent());
-
-    pivot.add(fs.Node(
-      name: 'orbitingCube',
-      mesh: fs.Mesh(
-        fs.CuboidGeometry(vm.Vector3(0.4, 0.4, 0.4)),
-        makeMaterial(vm.Vector4(0.8, 0.7, 0.2, 1.0)),
-      ),
-    )..position = vm.Vector3(0.6, 0.0, 0.0));
-    world.add(pivot);
-
-    final lamp = fs.Node(name: 'lamp')
-      ..position = vm.Vector3(-2.0, 3.0, -2.0)
-      ..addComponent(fs.PointLightComponent(
-        fs.PointLight(
-          intensity: 25.0,
-          range: 10.0,
-          castsShadow: false,
-        ),
-      ));
-    world.add(lamp);
-
-    await addOptionalAssets(world, ballMaterial);
-    if (!mounted) {
-      physics.simulation.dispose();
-      return;
-    }
-
-    final scene = fs.Scene();
-    _scene = scene;
-    _world = world;
-    _ball = ball;
-    _drive = drive;
-
-    _collisionSubscription = physics.collisions.listen((event) {
-      if (!mounted || event is! ph.TriggerEntered) return;
-
-      final matches =
-          (identical(event.nodeA, ball) &&
-              identical(event.nodeB, gate)) ||
-          (identical(event.nodeA, gate) &&
-              identical(event.nodeB, ball));
-
-      if (matches) {
-        _entries++;
-        _refreshHud();
-      }
-    });
-
-    scene.add(world);
-    _refreshHud();
-  }
-
-  void _refreshHud() {
-    if (!mounted || _ball == null) return;
-    final x = _ball!.position.x.toStringAsFixed(2);
-    _hud.value = 'x = $x | Số lần vào vùng: $_entries';
-  }
-
-  @override
-  void dispose() {
-    final subscription = _collisionSubscription;
-    if (subscription != null) {
-      unawaited(subscription.cancel());
-    }
-
-    // Gỡ con trước để hủy body/collider trước physics world.
-    _world?.removeAll();
-    final world = _world;
-    if (world != null) _scene?.remove(world);
-    _scene?.dispose();
-    _hud.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder<void>(
-        future: _ready,
-        builder: (context, snapshot) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                'Không thể khởi tạo cảnh: ${snapshot.error}',
-              ),
-            );
-          }
-
-          if (snapshot.connectionState != ConnectionState.done) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-
-          final scene = _scene;
-          if (scene == null) {
-            return const SizedBox.shrink();
-          }
-
-          return Stack(
-            fit: StackFit.expand,
-            children: [
-              fs.SceneView(
-                scene,
-                camera: fs.PerspectiveCamera(
-                  position: vm.Vector3(3.0, 3.0, -6.0),
-                  target: vm.Vector3(0.0, 0.5, 0.0),
-                  fovNear: 0.1,
-                  fovFar: 50.0,
-                ),
-              ),
-              SafeArea(
-                child: Column(
-                  children: [
-                    ValueListenableBuilder<String>(
-                      valueListenable: _hud,
-                      builder: (context, value, child) {
-                        return Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Text(value),
-                          ),
-                        );
-                      },
-                    ),
-                    const Spacer(),
-                    Wrap(
-                      spacing: 8.0,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            _drive?.direction = -1.0;
-                          },
-                          child: const Text('Trái'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            _drive?.direction = 0.0;
-                          },
-                          child: const Text('Dừng'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            _drive?.direction = 1.0;
-                          },
-                          child: const Text('Phải'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          );
-        },
-      ),
-    );
-  }
+    ],
+  );
+  return lesson;
 }
 ```
 
-Ở bước chưa dùng asset ngoài, tạo `lib/assets_step.dart` với nội dung đầy đủ ở mục 2.12.9. Khi không truyền tham số asset, hàm đó không nạp tệp nào.
+Lệnh đề nghị:
 
-### 2.12.5 Quan sát cấu trúc node và transform
-
-Scene chứa node `world`. Node này chứa nền, quả cầu, vùng trigger, nguồn sáng và node `pivot`. Khối hộp `orbitingCube` là con của `pivot`; vị trí `(0.6, 0, 0)` của nó được hiểu trong hệ tọa độ của cha.
-
-`SpinComponent` thay đổi rotation của `pivot`. Vì vậy, khối hộp vừa nhận biến đổi quay của cha, vừa giữ độ lệch cục bộ. Scale `(1, 0.7, 1)` của cha làm thay đổi hình dạng hiển thị của node con. Quan sát này giúp phân biệt biến đổi cục bộ với vị trí cuối cùng trong cảnh.
-
-Trong Scene 0.24.3, getter `position`, `rotation` và `scale` trả bản sao. Cách cập nhật đúng là gán lại:
-
-```dart
-final p = node.position;
-node.position = vm.Vector3(p.x + 0.1, p.y, p.z);
+```powershell
+flutter analyze lib/checkpoints/d/main.dart
+flutter run --target lib/checkpoints/d/main.dart
 ```
 
-Không dùng cách sau:
+Kết quả dự kiến: chọn hướng làm actor chuyển động đến biên `[-2, 2]`; nút Dừng đặt vận tốc điều khiển về 0. Nút là chế độ chọn hướng, chưa phải nhấn giữ hoặc joystick đa chạm.
+
+HUD được cập nhật qua notifier; không dựng Scene mới mỗi frame. Nếu vị trí không đổi, kiểm tra direction, lifecycle component và phép gán `node.position`.
+
+Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của game.
+
+### 2.12.8. Mốc E — Trigger
+
+Mục tiêu: thêm vùng giao nhau và đếm số lần actor đi vào. Actor đổi từ hộp sang cầu để hình học và collider cùng bán kính.
+
+Tiền đề: D đã được kiểm tra. Backend chỉ là `BasicSimulation`, không cần Rapier và không mô phỏng bật nảy.
+
+Tệp `lib/checkpoints/e/main.dart`:
 
 ```dart
-node.position.x += 0.1;
-```
+import 'dart:async';
 
-Mã sau chỉ sửa đối tượng được trả về; source còn có kiểm tra debug phát hiện việc sửa transform thông qua bản sao.
+import 'package:flutter/material.dart';
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:flutter_scene/physics.dart' as ph;
+import 'package:vector_math/vector_math.dart' as vm;
 
-Dấu hiệu cần quan sát khi chạy: khối hộp chuyển động quanh pivot, không quay cùng một vị trí như khi đặt hộp trực tiếp ở tâm. Đây là kết quả dự kiến, chưa phải quan sát thực nghiệm.
+import '../../lesson_host.dart';
+import '../d/main.dart' as d;
 
-### 2.12.6 Mesh, material và texture
+void main() => startLesson(buildLesson);
 
-Mesh kết hợp hình học và vật liệu:
+Lesson buildLesson(fs.Scene scene) {
+  final lesson = d.buildLesson(scene);
+  final physics = ph.PhysicsWorld(ph.BasicSimulation());
+  lesson.root.addComponent(physics);
 
-```dart
-fs.Mesh(
-  fs.SphereGeometry(radius: 0.25),
-  fs.PhysicallyBasedMaterial(),
-)
-```
-
-Trong ví dụ, `SphereGeometry` dùng bán kính 0.25, 24 segment và 12 ring. Các giá trị này chỉ xác định độ phân giải hình học của ví dụ, chưa được chọn theo phép đo trên Redmi Note 11.
-
-Hàm `makeMaterial` đặt:
-
-- `baseColorFactor`: màu RGBA nhân với màu texture.
-- `metallicFactor = 0`: vật liệu phi kim.
-- `roughnessFactor = 0.7`: độ nhám của bề mặt.
-
-`baseColorFactor` được đặt trắng cho quả cầu để không làm lệch màu texture. Texture mặc định gồm bốn pixel RGBA8888, được tạo bởi `Texture2D.fromPixels`. Bước này không cần tải ảnh hoặc giả định asset đã có.
-
-Nền là khối hộp dày 0.1, đặt tâm ở `y = -0.05`; mặt trên nằm tại `y = 0`. Quả cầu có tâm ở `y = 0.35`, nên đáy nằm cao hơn nền 0.1 đơn vị. Không có trọng lực hoặc cơ chế giữ bóng trên nền trong ví dụ này.
-
-Dấu hiệu cần quan sát: quả cầu có biến thiên màu từ texture, khối hộp và nền có màu vật liệu khác nhau. Không thấy texture có thể do camera quá xa, texture rất nhỏ hoặc điều kiện ánh sáng; cần kiểm tra trên thiết bị trước khi kết luận.
-
-### 2.12.7 Camera và nguồn sáng
-
-Camera trong ví dụ đặt tại `(3, 3, -6)`, nhìn về `(0, 0.5, 0)`. Các tham số `fovNear` và `fovFar` lần lượt là khoảng cắt gần và xa, không phải vị trí camera.
-
-```dart
-fs.PerspectiveCamera(
-  position: vm.Vector3(3, 3, -6),
-  target: vm.Vector3(0, 0.5, 0),
-  fovNear: 0.1,
-  fovFar: 50,
-)
-```
-
-`SceneView` chỉ nhận một trong các lựa chọn `camera`, `cameraBuilder` hoặc `viewsBuilder`. Ví dụ dùng camera cố định.
-
-Nguồn sáng được gắn qua component:
-
-```dart
-final lamp = fs.Node()
-  ..position = vm.Vector3(-2, 3, -2)
-  ..addComponent(fs.PointLightComponent(
-    fs.PointLight(intensity: 25, range: 10),
+  lesson.actor.mesh = fs.Mesh(
+    fs.SphereGeometry(radius: 0.25, segments: 24, rings: 12),
+    lesson.material,
+  );
+  lesson.actor.addComponent(ph.RigidBody(
+    type: ph.BodyType.kinematic,
+    useGravity: false,
   ));
+  lesson.actor.addComponent(ph.Collider(
+    shape: const ph.SphereShape(radius: 0.25),
+  ));
+
+  final gateMaterial = fs.PhysicallyBasedMaterial()
+    ..baseColorFactor = vm.Vector4(0.2, 0.5, 0.9, 1)
+    ..metallicFactor = 0;
+  final gate = fs.Node(
+    name: 'gate',
+    mesh: fs.Mesh(
+      fs.CuboidGeometry(vm.Vector3(0.3, 0.7, 0.7)),
+      gateMaterial,
+    ),
+  )..position = vm.Vector3(0, 0.35, 0);
+  gate.addComponent(ph.Collider(
+    shape: ph.BoxShape(
+      halfExtents: vm.Vector3(0.15, 0.35, 0.35),
+    ),
+    isTrigger: true,
+  ));
+  lesson.root.add(gate);
+
+  final count = ValueNotifier<int>(0);
+  var closed = false;
+  final subscription = physics.collisions.listen((event) {
+    if (closed || event is! ph.TriggerEntered) return;
+    final matches =
+        (identical(event.nodeA, lesson.actor) &&
+            identical(event.nodeB, gate)) ||
+        (identical(event.nodeB, lesson.actor) &&
+            identical(event.nodeA, gate));
+    if (matches) count.value++;
+  });
+  lesson.cleanups.add(() {
+    closed = true;
+    unawaited(subscription.cancel());
+    count.dispose();
+  });
+
+  final controls = lesson.overlay!;
+  lesson.overlay = Column(
+    children: [
+      ValueListenableBuilder<int>(
+        valueListenable: count,
+        builder: (context, value, child) =>
+            Card(child: Text('Số lần vào vùng: $value')),
+      ),
+      Expanded(child: controls),
+    ],
+  );
+  return lesson;
+}
 ```
 
-Vị trí của PointLight lấy từ world transform của node sở hữu. Thay đổi vị trí node sẽ di chuyển nguồn sáng. Cường độ 25 và tầm ảnh hưởng 10 là giá trị minh họa, không phải thông số đã hiệu chỉnh cho game.
+Lệnh đề nghị:
 
-Ví dụ tắt bóng đổ để giảm số biến cần kiểm tra. Không lấy cảnh chưa bật shadow để kết luận hiệu năng khi game có shadow.
+```powershell
+flutter analyze lib/checkpoints/e/main.dart
+flutter run --target lib/checkpoints/e/main.dart
+```
 
-### 2.12.8 Vòng lặp, nhập liệu và HUD
+Kết quả dự kiến: cầu đi xuyên hộp xanh; counter tăng khi bắt đầu vào vùng, giữ nguyên khi đứng trong vùng, tăng tiếp sau khi ra rồi vào lại.
 
-`SceneView` sở hữu ticker và quá trình vẽ cảnh. Các component ghi đè `update(double deltaSeconds)` để cập nhật hành vi theo thời gian.
+`CuboidGeometry` dùng kích thước đầy đủ; `BoxShape` dùng half extents. Hai bộ số trong code mô tả cùng thể tích.
 
-`DriveComponent` tính quãng đường bằng tốc độ nhân thời gian:
+`BasicSimulation` chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Không gọi counter này là điểm bóng rổ. Không chọn fixed timestep hoặc solver của toàn game từ mốc này.
+
+Nếu không có event, kiểm tra PhysicsWorld ở ancestor, collider và thể tích giao nhau. Actor được Drive di chuyển theo frame; pose kinematic được đưa vào bước vật lý, nên không mặc định event xảy ra đúng frame nút được nhấn.
+
+### 2.12.9. Mốc F — Texture, model và animation
+
+Mục tiêu: thêm texture tạo từ dữ liệu trước; sau đó bật nhánh model/texture ngoài khi có asset thật. Không cần đợi asset để analyze F hoặc kiểm tra nhánh mặc định.
+
+Tiền đề: A–E và host đã tồn tại. Không import helper khác; hàm nạp asset được định nghĩa ngay trong checkpoint F.
+
+Tệp `lib/checkpoints/f/main.dart`:
 
 ```dart
-final x = p.x + direction * 1.2 * dt;
-```
+import 'dart:typed_data';
 
-Ba nút Flutter thay đổi `direction` thành −1, 0 hoặc 1. Nút “Trái” và “Phải” làm quả cầu tiếp tục di chuyển đến khi chọn “Dừng” hoặc chạm biên, không phải cơ chế nhấn giữ.
-
-Ví dụ giới hạn:
-
-- Tốc độ: 1.2 đơn vị cảnh/giây.
-- Biên di chuyển: `[-2, 2]`.
-- Delta dùng cho chuyển động minh họa: tối đa 0.05 giây.
-
-Giới hạn delta ngăn một bước chuyển động quá lớn sau khung hình chậm, nhưng làm chuyển động mất một phần thời gian khi bị chậm lâu. Đây không phải giải pháp đồng bộ thời gian cho multiplayer.
-
-HUD dùng `ValueNotifier` và `ValueListenableBuilder`. Thay đổi giá trị chỉ xây dựng lại phần văn bản theo dõi; không tạo Scene mới ở mỗi frame.
-
-Không đồng thời thêm ticker riêng để gọi `scene.update` mà vẫn để cơ chế cập nhật tự động hoạt động không kiểm soát. Nếu cần chủ động timestep, phải thiết kế rõ một nơi duy nhất chịu trách nhiệm cập nhật cảnh.
-
-Dấu hiệu cần quan sát: chọn hướng làm tọa độ x đổi, chọn “Dừng” giữ vị trí; counter chỉ đổi khi đi vào vùng trigger. Việc ứng dụng trở lại foreground và điều khiển đa chạm chưa được xử lý trong ví dụ.
-
-### 2.12.9 Nạp model, texture ngoài và animation
-
-Để sử dụng asset ngoài, cần chuẩn bị thực tế:
-
-1. Một GLB hợp lệ, có quyền sử dụng và ghi nguồn.
-2. Nếu thử animation, GLB phải chứa ít nhất một animation clip.
-3. Nếu thử texture ảnh riêng, cần tệp PNG/JPEG đọc được và có giấy phép phù hợp.
-
-Có thể tự tạo model/animation bằng công cụ dựng hình và xuất GLB. Hướng dẫn không giả định đã có nhân vật, tên clip `Idle` hoặc bộ tài nguyên được tải về.
-
-Chỉ sau khi có tệp thật, thêm đường dẫn vào `pubspec.yaml`:
-
-```yaml
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/model.glb
-    - assets/surface.png
-```
-
-Nếu chỉ có model thì chỉ khai báo model. Không khai báo các tệp chưa tồn tại vì Flutter sẽ báo lỗi asset.
-
-Nội dung `lib/assets_step.dart`:
-
-```dart
 import 'package:flutter_scene/scene.dart' as fs;
 import 'package:vector_math/vector_math.dart' as vm;
 
-const modelAsset = String.fromEnvironment('MODEL_ASSET');
-const textureAsset = String.fromEnvironment('TEXTURE_ASSET');
-const clipName = String.fromEnvironment('CLIP_NAME');
+import '../../lesson_host.dart';
+import '../e/main.dart' as e;
 
-Future<void> addOptionalAssets(
-  fs.Node world,
-  fs.PhysicallyBasedMaterial ballMaterial,
-) async {
-  if (textureAsset.isNotEmpty) {
-    ballMaterial.baseColorTexture = await fs.Texture2D.fromAsset(
-      textureAsset,
+void main() => startLesson(buildLesson);
+
+Future<Lesson> buildLesson(fs.Scene scene) async {
+  final lesson = e.buildLesson(scene);
+  try {
+    lesson.material
+      ..baseColorFactor = vm.Vector4(1, 1, 1, 1)
+      ..baseColorTexture = fs.Texture2D.fromPixels(
+        Uint8List.fromList([
+          240, 120, 30, 255, 80, 30, 10, 255,
+          80, 30, 10, 255, 240, 120, 30, 255,
+        ]),
+        2,
+        2,
+      );
+    await loadAssets(lesson);
+    return lesson;
+  } catch (_) {
+    lesson.close();
+    rethrow;
+  }
+}
+
+Future<void> loadAssets(Lesson lesson) async {
+  const texturePath = String.fromEnvironment('TEXTURE_ASSET');
+  const modelPath = String.fromEnvironment('MODEL_ASSET');
+  const clipName = String.fromEnvironment('CLIP_NAME');
+
+  if (clipName.isNotEmpty && modelPath.isEmpty) {
+    throw StateError('CLIP_NAME cần MODEL_ASSET.');
+  }
+  if (texturePath.isNotEmpty) {
+    lesson.material.baseColorTexture = await fs.Texture2D.fromAsset(
+      texturePath,
       maxSize: 1024,
     );
   }
-
-  if (modelAsset.isEmpty) return;
+  if (modelPath.isEmpty) return;
 
   final model = await fs.Node.fromGlbAsset(
-    modelAsset,
+    modelPath,
     maxTextureSize: 1024,
   );
-
-  model.position = vm.Vector3(-1.0, 0.0, 1.0);
-  model.scale = vm.Vector3(1.0, 1.0, 1.0);
-  world.add(model);
+  model.position = vm.Vector3(-1, 0, 1);
+  model.scale = vm.Vector3(0.01, 0.01, 0.01);
+  lesson.root.add(model);
 
   final animations = model.parsedAnimations;
   if (animations.isEmpty) {
     if (clipName.isNotEmpty) {
-      throw StateError(
-        'Có yêu cầu clip nhưng GLB không chứa animation.',
-      );
+      throw StateError('Model không chứa animation.');
     }
     return;
   }
@@ -935,196 +957,159 @@ Future<void> addOptionalAssets(
   final animation = clipName.isEmpty
       ? animations.first
       : model.findAnimationByName(clipName);
-
   if (animation == null) {
     throw StateError('Không tìm thấy clip: $clipName');
   }
 
   final clip = model.createAnimationClip(animation)
     ..loop = true
-    ..playbackTimeScale = 1.0;
-
+    ..playbackTimeScale = 1;
   clip.play();
 }
 ```
 
-Các lệnh chạy dự kiến:
+Lệnh cho nhánh không cần asset:
 
 ```powershell
-flutter run --dart-define=MODEL_ASSET=assets/model.glb
+flutter analyze lib/checkpoints/f/main.dart
+flutter run --target lib/checkpoints/f/main.dart
 ```
+
+Kết quả dự kiến: actor có texture bốn pixel; các hành vi input/trigger của E giữ nguyên.
+
+Bộ source kèm Fox.glb từ Khronos, phiên bản commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2. Khai báo asset này trong pubspec:
+
+```yaml
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/Fox.glb
+```
+
+Lệnh đề nghị cho từng nhánh:
 
 ```powershell
-flutter run --dart-define=MODEL_ASSET=assets/model.glb --dart-define=CLIP_NAME=TenClipThucTe
+flutter run --target lib/checkpoints/f/main.dart --dart-define=MODEL_ASSET=assets/Fox.glb --dart-define=CLIP_NAME=Walk
 ```
 
-```powershell
-flutter run --dart-define=TEXTURE_ASSET=assets/surface.png
-```
+Nhánh TEXTURE_ASSET là bài mở rộng, chỉ chạy khi có ảnh thật đã khai báo và giấy phép phù hợp. Fox.glb đã chứa texture của model; không cần surface.png để thử Fox.
 
-`TenClipThucTe` phải lấy từ model. Có thể xem danh sách tên trong debugger qua:
+Chỉ truyền `CLIP_NAME` sau khi đã đọc tên clip thực từ:
 
 ```dart
 model.parsedAnimations.map((animation) => animation.name).toList()
 ```
 
-Khi không truyền `CLIP_NAME`, ví dụ chọn animation đầu tiên nếu có. Khi không có animation và cũng không yêu cầu tên clip, model được hiển thị tĩnh.
+Không giả định model có clip `Idle`. Khi không truyền tên, code chọn clip đầu tiên nếu có; model không có animation được hiển thị tĩnh. Fox có ba clip Survey, Walk và Run theo JSON thực trong GLB; chỉ phát một clip tại một thời điểm. Scale 0,01 đưa kích thước asset về cỡ cảnh ví dụ, không khẳng định đơn vị xuất của mọi model là mét. [37]
 
-`createAnimationClip` tạo clip ở trạng thái dừng; `play()` bắt đầu phát. Các API điều khiển đã có trong source:
+Giới hạn 1024 là tham số minh họa giới hạn texture khi nạp, không phải ngân sách bộ nhớ đã đo. Placement model còn phụ thuộc đơn vị, gốc tọa độ và kích thước sample; không khẳng định mọi model sẽ vừa camera với vị trí mặc định.
 
-```dart
-clip.pause(); // Giữ thời điểm hiện tại.
-clip.play();  // Tiếp tục phát.
-clip.stop();  // Dừng và trở về đầu.
-```
+Nếu load lỗi, kiểm tra asset bundle, định dạng, warning importer và tên clip. Không sửa A–E để che lỗi của asset F.
 
-Scene cập nhật animation player trong vòng lặp của nó; không tự gọi thêm một animation ticker cho clip này.
+### 2.12.10. Asset Fox và phạm vi vật lý
 
-Giá trị 1024 giới hạn kích thước texture khi nạp, không phải ngân sách bộ nhớ đã được đo. Model có kích thước hoặc gốc tọa độ khác sẽ cần chỉnh placement, scale hoặc camera. Không dùng một scale tùy ý để kết luận model đã hiển thị đúng đơn vị.
+Fox.glb lấy từ KhronosGroup/glTF-Sample-Assets ở commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2, tệp Models/Fox/glTF-Binary/Fox.glb. URL tải phiên bản cố định:
 
-Trạng thái kiểm chứng: đã đối chiếu chữ ký `fromGlbAsset`, `fromAsset`, `parsedAnimations`, `findAnimationByName`, `createAnimationClip` và điều khiển clip trong source 0.24.3; nhánh asset đã qua phân tích tĩnh và biên dịch, nhưng chưa thực thi với GLB, texture hoặc animation thực.
+[Fox.glb](https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/4995a638c96dbc94376d3d6164e70fee3ac7f7a2/Models/Fox/glTF-Binary/Fox.glb)
 
-### 2.12.10 Vật lý và phát hiện giao nhau
+Đặt tệp tại assets/Fox.glb và khai báo trong pubspec trước khi chạy F. GLB thực được kiểm header phiên bản 2.0, có 162852 byte và ba clip Survey, Walk, Run. Attribution: model PixelMannen; rig/animation tomkranis; chuyển glTF @AsoboStudio và @scurest. README nguồn ghi model CC0, rig/animation và conversion CC BY 4.0; giữ attribution và điều kiện CC BY 4.0 cho asset hợp nhất. Bản phân phối kèm assets/ATTRIBUTION.md và README pháp lý, không sửa byte GLB. [37]
 
-Ví dụ import phần vật lý riêng:
+Nhánh GLB đã nằm trong mã được analyze và bundle, nhưng chưa có bằng chứng nạp, giải mã hoặc phát clip trên GPU. Nếu không thấy model, kiểm camera, scale, vị trí và warning importer; không kết luận chỉ từ tên clip tồn tại trong JSON.
 
-```dart
-import 'package:flutter_scene/physics.dart' as ph;
-```
+Mốc E được gọi đúng là bài trigger với BasicSimulation. Nó không có solver phản lực, gravity/contact response hoặc bóng bật nảy. Bài thực hành động lực học bằng backend solver chưa được thực hiện trong hướng dẫn này; không suy ra Rapier đã được chọn cho game.
 
-`PhysicsWorld` quản lý subtree. `RigidBody` của quả cầu có loại `kinematic`, còn `Collider` xác định thể tích hình cầu. Vùng `gate` có collider hình hộp với `isTrigger: true`.
+### 2.12.11. Từ smoke transport đến snapshot cập nhật node
+
+tool/sync_smoke.dart giữ phép thử transport R2 như bài tiền đề: hai client trao đổi x/tick, input trùng không cộng lại. Nó không cập nhật node. Bài tích hợp kế tiếp dùng lib/snapshot_replica.dart và test/snapshot_replica_test.dart trong source R3, mỗi client có một fs.Node riêng không gắn Drive, RigidBody hoặc SceneView.
+
+Adapter là nơi duy nhất được ghi node.position. Snapshot dùng schema/session/entity/tick và x,y,z; node nằm dưới parent identity hoặc không có parent nên tọa độ snapshot tương ứng local position. Nếu parent có transform, phải đổi hệ tọa độ trước khi gán; không gọi local position là world tùy ý.
 
 ```dart
-final world = fs.Node()
-  ..addComponent(ph.PhysicsWorld(ph.BasicSimulation()));
-```
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:vector_math/vector_math.dart' as vm;
 
-`BasicSimulation` trong `scene` 0.4.1 hỗ trợ truy vấn và trigger cho chuyển động kinematic. Source nêu rõ backend này không có solver, contact response hoặc joints; tạo dynamic body không phải cách mô phỏng bóng rơi bằng backend này.
+class SnapshotReplica {
+  SnapshotReplica({
+    required this.node,
+    required this.session,
+    this.entity = 'ball',
+  }) {
+    if (session.isEmpty) {
+      throw ArgumentError.value(session, 'session');
+    }
+  }
 
-Do đó, hành vi dự kiến của ví dụ là:
+  final fs.Node node;
+  final String session;
+  final String entity;
+  int _lastTick = -1;
+  bool _closed = false;
 
-- Quả cầu đi xuyên vùng hộp.
-- `TriggerEntered` phát ra khi bắt đầu giao nhau.
-- Counter tăng một lần khi vào vùng, không tăng liên tục khi còn ở trong.
-- Ra khỏi vùng rồi quay lại có thể tạo lần vào tiếp theo.
+  int get lastTick => _lastTick;
 
-Vùng trigger trong ví dụ có mesh hộp đục để nhìn thấy vị trí. Sự che khuất một phần quả cầu là kết quả vẽ hình học, không phải phản lực va chạm.
+  bool apply(Object? raw) {
+    if (_closed || raw is! Map) return false;
+    if (raw['schema'] != 1 ||
+        raw['session'] != session ||
+        raw['entity'] != entity) {
+      return false;
+    }
 
-Kích thước `CuboidGeometry` là kích thước đầy đủ, còn `BoxShape` dùng `halfExtents`; vì vậy hộp `(0.3, 0.7, 0.7)` tương ứng half extents `(0.15, 0.35, 0.35)`.
+    final tick = raw['tick'];
+    if (tick is! int || tick < 0 || tick <= _lastTick) {
+      return false;
+    }
 
-Component di chuyển cập nhật theo frame; body kinematic chuyển pose sang mô phỏng ở bước vật lý. Không mặc định event và HUD xuất hiện đúng cùng một frame với thao tác nút.
+    final x = raw['x'];
+    final y = raw['y'];
+    final z = raw['z'];
+    if (x is! num || y is! num || z is! num) {
+      return false;
+    }
 
-Counter này chỉ đếm sự kiện vào thể tích, chưa phải tính điểm bóng rổ. Ghi điểm qua rổ còn cần xác định hướng đi qua, thứ tự giao cắt, trạng thái cú ném và quyền quyết định kết quả. Chưa chọn Rapier hoặc backend solver cho toàn game.
+    final px = x.toDouble();
+    final py = y.toDouble();
+    final pz = z.toDouble();
+    if (!px.isFinite || !py.isFinite || !pz.isFinite) {
+      return false;
+    }
 
-### 2.12.11 Networking sample trong cùng project
+    // Chỉ ghi sau khi toàn bộ envelope đã hợp lệ.
+    node.position = vm.Vector3(px, py, pz);
+    _lastTick = tick;
+    return true;
+  }
 
-Trong bộ source đi kèm, dùng `tool/sync_smoke.dart`, có cùng nội dung với probe R1; đây là executable độc lập, chưa đồng bộ node Scene. Giữ nguyên source để đối chiếu với bằng chứng R1; không viết một phiên bản rút gọn rồi gán cho nó kết quả đã chạy của bản cũ.
-
-Chương trình dùng thư viện chuẩn:
-
-```dart
-import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
-```
-
-Mẫu tạo server loopback tại cổng được hệ điều hành cấp:
-
-```dart
-final server = await HttpServer.bind(
-  InternetAddress.loopbackIPv4,
-  0,
-);
-```
-
-Hai client kết nối đến cùng địa chỉ `ws://127.0.0.1:<port>`. Mỗi client gửi số thứ tự riêng. Phần xử lý cốt lõi trong source R1 là:
-
-```dart
-final seq = data['seq'] as int;
-if (seq > lastSeq[socket]!) {
-  lastSeq[socket] = seq;
-  x += data['dx'] as int;
-  tick++;
-}
-
-for (final peer in sockets) {
-  peer.add(jsonEncode({
-    'x': x,
-    'tick': tick,
-    'ack': lastSeq[peer],
-  }));
+  void close() {
+    _closed = true;
+  }
 }
 ```
 
-Trình tự kiểm tra:
+Session được xác lập từ bước tham gia phiên tin cậy, không lấy tùy ý từ packet đầu tiên. Tick là số thứ tự snapshot; không trừ timestamp hai đồng hồ. Adapter bỏ tick cũ/trùng, sai phiên/schema/entity và tọa độ không hữu hạn trước khi ghi node. Nó áp trực tiếp, chưa có interpolation, prediction hoặc handshake/xác thực.
 
-1. Client A gửi `seq = 1`, `dx = 1`.
-2. Chờ cả hai client nhận trạng thái đầu tiên.
-3. A gửi lại `seq = 1`, nhưng `dx = 100`.
-4. Chờ cả hai client quan sát phản hồi input trùng.
-5. Client B gửi `seq = 1`, `dx = 2`.
-6. Kiểm tra cả hai nhận `x = 3`, `tick = 2`, `ack = 1`.
-
-Lệnh dự kiến trong project hướng dẫn:
+Test headless tạo server loopback và hai WebSocket client, rồi truyền chuỗi (tick,x): (1,1), (1,99), (99,99) thuộc phiên khác, (3,3), (2,2). Lịch sử vị trí ở cả hai node phải là [1,1,1,3,3]; tick là [1,1,1,3,3]. Kiểm từng bước phát hiện cả trường hợp node nhảy sai rồi snapshot cuối sửa lại. Test cũng kiểm NaN, entity sai và adapter đóng. Sai số tọa độ y dùng 10⁻⁶ do lưu trữ Float32; việc so chuỗi tick và chấp nhận/từ chối vẫn chính xác.
 
 ```powershell
-dart tool/sync_smoke.dart
+flutter test test/snapshot_replica_test.dart --reporter expanded
 ```
 
-Dòng thành công của source R1:
+Test đã đạt trong Flutter test headless; nó xác nhận snapshot đi qua hai kết nối loopback rồi cập nhật hai đối tượng node. Nó chưa dựng hai cảnh có ảnh, chưa nhận input người chơi, chưa mô phỏng server authoritative đầy đủ, chưa TLS/Internet hoặc hai Android. Source đầy đủ test nằm trong bộ mã để người đọc chạy lại; không cần đưa toàn bộ harness socket vào chương.
 
-```text
-PASS: two loopback clients share x=3/tick=2; duplicate input ignored; per-client ack=1.
-```
+### 2.12.12. Kiểm tra và chẩn đoán theo mốc
 
-`tick` trong mẫu là bộ đếm input được chấp nhận, không phải tần số mô phỏng. Các timeout 5 giây trong chương trình chỉ giới hạn thời gian chờ của smoke check, không phải ngưỡng độ trễ gameplay.
-
-Mẫu kiểm tra seq trùng với payload hợp lệ; chưa kiểm tra validation dữ liệu không tin cậy, bỏ sót seq, phân xử luật hoặc input bị từ chối. Nó chưa kết nối với SceneView; việc gán `x` nhận từ mạng vào node cần được thiết kế và kiểm tra riêng.
-
-Chương trình chạy trong Dart VM và dùng `dart:io`; không chạy như chương trình trình duyệt. Không thay loopback bằng public bind rồi coi đó là giải pháp Internet. Chưa có TLS, xác thực, NAT/relay, hosting hoặc reconnect cho sản phẩm.
-
-### 2.12.12 Kiểm tra theo từng mức và xử lý lỗi
-
-Trong thư mục project ví dụ, kiểm tra lần lượt:
-
-```powershell
-flutter pub get
-flutter analyze
-flutter build bundle --debug --target-platform android-arm64
-dart tool/sync_smoke.dart
-```
-
-Chỉ khi có Android được nhận diện mới chạy:
-
-```powershell
-flutter devices
-flutter run
-```
-
-Dấu hiệu đạt của từng mức:
-
-| Mức | Dấu hiệu | Chưa chứng minh |
+| Mức | Kiểm tra thực hiện | Kết luận giới hạn |
 |---|---|---|
-| Resolve | Có lockfile, đúng Scene 0.24.3 | API dùng đúng hoặc render được |
-| Analyze | Không có lỗi phân tích tĩnh | GPU, asset và hành vi runtime |
-| Build bundle | Tạo kernel/assets thành công | APK, cài đặt hoặc render Android |
-| Smoke mạng | Đúng state, duplicate và ack | Hai Android hoặc Internet |
-| Chạy Android | Quan sát cảnh, điều khiển và trigger | Hiệu năng đạt hoặc game hoàn chỉnh |
-| GLB/animation | Model và clip thực hiển thị đúng | Tương thích mọi asset hoặc nhân vật game |
+| A–F | Analyze từng entrypoint và toàn project đạt | Chữ ký API và phân tích tĩnh; chưa render |
+| F | Build bundle Android arm64 đạt | Source và asset đóng gói; chưa APK/cài thiết bị |
+| Snapshot | Hai WebSocket client và hai node, test headless đạt | Áp trạng thái và guard trong loopback; chưa SceneView/Internet |
+| Fox | Header/JSON có clip, hash cố định | Không thay kiểm importer/animation runtime |
+| Android | Chưa chạy | Chưa kết luận ảnh, input, trigger hoặc hiệu năng |
 
-Các lỗi cần phân biệt:
+```powershell
+flutter analyze
+flutter build bundle --debug --target-platform android-arm64 --target lib/checkpoints/f/main.dart
+flutter test test/snapshot_replica_test.dart --reporter expanded
+```
 
-| Hiện tượng | Cách kiểm tra |
-|---|---|
-| Không tìm thấy package hoặc member | Kiểm tra lockfile, `flutter pub get`, tên import và source đúng 0.24.3 |
-| Flutter GPU chưa bật | Kiểm tra metadata trong `<application>` hoặc cờ chạy theo README package |
-| Không có thiết bị Android | Kiểm tra cáp, USB debugging, ủy quyền thiết bị và ADB; không lấy web/desktop thay kết quả Android |
-| Asset không tồn tại | Kiểm tra tên tệp, chữ hoa/thường và khai báo `pubspec.yaml` |
-| GLB không có clip | Kiểm tra `parsedAnimations`; chỉ thử animation khi asset chứa animation thật |
-| Model không thấy | Kiểm tra camera, scale, vị trí và warning importer; chưa kết luận lỗi engine |
-| Node không di chuyển | Gán lại `node.position`; kiểm tra component đã mount/load và direction khác 0 |
-| Quả cầu không bật nảy | Đây không phải hành vi của `BasicSimulation`; ví dụ chỉ có trigger |
-| Counter không tăng | Kiểm tra world ở ancestor, collider/trigger, thể tích giao nhau và listener |
-| Smoke timeout | Đọc exception và thứ tự chờ; không kết luận Internet có độ trễ quá cao từ phép thử loopback |
-
-Phân tích tĩnh, biên dịch bundle và quan sát trên thiết bị là ba mức kiểm chứng riêng. Kết quả của mã cơ sở không chứng minh nhánh asset hoặc giao diện Android đã hoạt động.
+Khi một mốc lỗi, quay lại mốc ngay trước đã đạt để khoanh phần thay đổi. Lỗi member/import cần đối chiếu lockfile/source 0.24.3; lỗi asset cần kiểm tệp thật và pubspec; màn hình trống cần kiểm GPU/camera/khởi tạo. Trigger không tạo phản lực là giới hạn backend, không phải lỗi solver cần che bằng tăng collider. Các nhận xét này là hướng chẩn đoán, không đảm bảo mọi lỗi thiết bị có cùng nguyên nhân.

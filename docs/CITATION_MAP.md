@@ -73,4 +73,8 @@ R8 trong báo cáo research ánh xạ IMP01 ở bảng trên. Không đưa mã R
 - Không chạy git, Word render, commit/push.
 # Bổ sung R2 — 05/11/2026
 
+R3 v0.5 bổ sung ví dụ TR/FOV theo [28], roughness/metallic [12],[31], skinning [33], camera/light đúng source mở rộng [35]; [36] publisher Basketball Arena và [37] Fox asset commit cố định. Không đổi số nguồn Ch1/Ch3. 8 hình Ch2 đánh số2.1–2.8 theo thứ tự xuất hiện sau thêm hai hình, không dùng basename làm caption.
+
+R3: giữ [1]–[35]; mở rộng mô tả [35] đúng các file source camera/light đã đọc. [36] Basketball Arena (publisher, không quan sát chơi); [37] Fox tại commit cố định + metadata/attribution. Chi tiết research/ch02-r3-sources.md. Không thêm video chưa xem làm nguồn nội dung.
+
 Giữ nguyên [1]–[19] để không đổi citation Ch1/Ch3. [20] pipeline Vulkan; [21] glTF2; [22] timestep; [23] Rapier body; [24] authority; [25] prediction/reconciliation; [26] interpolation; [27] profiling; [28] coordinate systems; [29] normal matrix; [30] integration; [31] BRDF/PBR; [32] buffer/accessor; [33] skinning; [34] quaternion/physics3D; [35] source Component0.24.3. Metadata và mức truy cập trong research/ch02-r2-sources.md. Nguồn mới không làm thay ngày truy cập nguồn kế thừa. Video chỉ metadata, không đưa vào số citation như bằng chứng API.

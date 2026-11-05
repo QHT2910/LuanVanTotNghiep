@@ -29,7 +29,8 @@ function check(ok,msg){if(!ok)throw Error(msg);}
  const text=Array.from(doc.getElementsByTagNameNS(W,'t')).map(n=>n.textContent).join(' ');
  check(!/PROJECT_BRIEF\.md|OUTLINE\.md|reviewed\.docx|Căn cứ nội bộ|3-9-wireframe|\[图片:/.test(text),'Internal text or unresolved image placeholder in Word');
  for(const name of ['b','bCs','caps','smallCaps'])for(const el of Array.from(doc.getElementsByTagNameNS(W,name)))check(['0','false','off'].includes(el.getAttributeNS(W,'val')),'Unexpected emphasis in Word: '+name);
- const media=Object.keys(z.files).filter(n=>/^word\/media\/.+\.png$/.test(n));check(media.length===14,'Expected 14 embedded diagrams');
+ const expectedImages=/v0\.5\.docx$/.test(file)?16:14;
+ const media=Object.keys(z.files).filter(n=>/^word\/media\/.+\.png$/.test(n));check(media.length===expectedImages,'Expected '+expectedImages+' embedded diagrams');
  check(media.some(n=>n.includes('3-2-usecase-uml')),'New UML not embedded');
  console.log(JSON.stringify({result:'PASS',chapters:3,numberedReferences:known.size,mermaidSourcesCompared:diagrams.length,embeddedDiagrams:media.length,xmlWellFormed:true,paginationVisuallyVerified:false},null,2));
 })().catch(e=>{console.error(e.message);process.exit(1);});

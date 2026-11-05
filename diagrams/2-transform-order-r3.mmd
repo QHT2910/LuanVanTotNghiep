@@ -1,0 +1,10 @@
+flowchart TB
+ P["Điểm p = (1, 0, 0)"]
+ subgraph TR["TRp: quay trước, tịnh tiến sau"]
+ A["Quay Z +90°: Rp = (0, 1, 0)"] --> B["Tịnh tiến (2, 0, 0): TRp = (2, 1, 0)"]
+ end
+ subgraph RT["RTp: tịnh tiến trước, quay sau"]
+ C["Tịnh tiến (2, 0, 0): Tp = (3, 0, 0)"] --> D["Quay Z +90°: RTp = (0, 3, 0)"]
+ end
+ P --> A
+ P --> C

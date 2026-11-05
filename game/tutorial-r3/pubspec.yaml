@@ -1,0 +1,17 @@
+name: scene_tutorial_r3
+description: Incremental Scene component tutorial, not the basketball game.
+publish_to: none
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_scene: 0.24.3
+  vector_math: 2.4.4
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/Fox.glb

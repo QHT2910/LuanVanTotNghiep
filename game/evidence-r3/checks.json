@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-05",
+  "scene": "0.24.3",
+  "analyzeCheckpoints": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+  ],
+  "analyzeAllExit": 0,
+  "snapshotTestExit": 0,
+  "buildBundleFExit": 0,
+  "kernelBytes": 63734120,
+  "kernelSha256": "4d203399c3e9746525529e8ab6e2d7e7d04de7307920c7e487aed5a9f4098691",
+  "assetIncluded": true,
+  "firstTestFailure": "Float32 rounding y=0.3499999940395355; tolerance 1e-9 too strict; corrected to 1e-6",
+  "limits": [
+    "No Android/SceneView rendering",
+    "No GLB animation runtime",
+    "No Internet/two Android",
+    "No Word pagination verification"
+  ]
+}

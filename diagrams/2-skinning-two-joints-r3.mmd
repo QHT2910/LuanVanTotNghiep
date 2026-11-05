@@ -1,0 +1,13 @@
+flowchart TB
+ P["Đỉnh mesh bind: p = (2, 0, 0)"]
+ subgraph J0["Joint 0"]
+ A["Inverse bind B0 = I"] --> B["G0 = I: q0 = (2, 0, 0)"]
+ end
+ subgraph J1["Joint 1"]
+ C["Inverse bind B1 = T(-1, 0, 0)"] --> D["G1 = T(1, 0, 0) Rz(90°): q1 = (1, 1, 0)"]
+ end
+ S["Cùng world space: 0,25 q0 + 0,75 q1 = (1,25; 0,75; 0)"]
+ P --> A
+ P --> C
+ B --> S
+ D --> S

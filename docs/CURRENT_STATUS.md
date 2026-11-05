@@ -1,4 +1,8 @@
-# Trạng thái hiện hành R2 / v0.4
+# Trạng thái hiện hành R3 / v0.5
+
+V0.5 đã tạo sau review độc lập Cindy: tutorial A–F, snapshot→node hai client có test headless đạt, Fox asset có commit/license, ví dụ số và caption học thuật. 37 refs,16 ảnh; Word mở chỉ đọc/repaginate/export PDF64 trang và inspect64/64 không trang trắng; đã xem ba trang mẫu và trang19 FOV sau sửa, chưa rà hết thị giác. QA R3 chỉ còn một P1 về dấu nhân FOV; Lead đã sửa, tạo lại bản xuất và xác minh XML/PDF. Chi tiết docs/R3_REVIEW.md, qa/ch02-r3-final.md, source/evidence game/tutorial-r3 và evidence-r3. Giữ Wordv0.4 và thay đổi ngoài lượt của Wordv0.3, không retry research provider.
+
+## Hồ sơ R2 bên dưới (lịch sử)
 
 Ngày 05/11/2026: Chương 2 đã viết lại với 2.1–2.11 lý thuyết và 2.12 hướng dẫn riêng; Word mới thesis/Ban_thao_Chuong_1-3_v0.4.docx. Bản cũ v0.3 giữ nguyên. R2_REVIEW.md ghi thay đổi, vai trò, kiểm chứng và giới hạn. Danh mục hiện có 35 nguồn; sáu hình lý thuyết mới làm tổng 14 ảnh. Source game/tutorial-r2 đã resolve offline/analyze/build bundle/loopback đạt; chưa Android/asset runtime/Internet. research/ch02-r2-sources.md ghi mức truy cập web/video/GitHub thực tế.
 

@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "4995a638c96dbc94376d3d6164e70fee3ac7f7a2",
+  "bytes": 162852,
+  "sha256": "d97044e701822bac5a62696459b27d7b375aada5de8574ed4362edbba94771f7",
+  "animations": [
+    "Survey",
+    "Walk",
+    "Run"
+  ],
+  "copyright": "CC-BY 4.0 Model by PixelMannen https://opengameart.org/content/fox-and-shiba and @tomkranis https://sketchfab.com/3d-models/low-poly-fox-by-pixelmannen-animated-371dea88d7e04a76af5763f2a36866bc and @AsoboStudio with @scurest https://github.com/KhronosGroup/glTF-Sample-Models/pull/150#issuecomment-406300118",
+  "glTFVersion": "2.0"
+}

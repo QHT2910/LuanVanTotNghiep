@@ -4,6 +4,12 @@
 
 ## 1. Mục tiêu và yêu cầu đã xác nhận
 
+Mốc cuối R3: QA đã có terminal report xác nhận 6điểm R3, chỉ mộtP1 dấu nhân FOV; Lead sửa thành θₕ=2×arctan(a×tan(θᵥ/2)), đồng bộWord/PDF, kiểmXML và xemtrang19. Wordv0.5 37refs16ảnh, PDF64/64khôngtrắng; docs/R3_REVIEW và qa/ch02-r3-final là hồsơhiệnhành. Chuẩn bị commit/push chỉnộidungđãrà, --exclude Wordv0.3; v0.4 hashblob giữ4722ba96f65008fe4593a72d6a8c83934daca6e1. Bước tiếp sau lưuGit: bàn giaoCindy/GVHD, không replayR3test hoặc retryprovider. Các dòng “chờQA/sắpgiao” dưới là lịch sử.
+
+Mốc R3 tích hợp: Wordv0.5 đã tạo, tutorial A–F và test snapshot→node (2WebSocket/2Node) đạt headless, bundleF có Fox asset; chưa Android/asset runtime. 37refs16ảnh; Word COM read-only repaginate/export PDF64p, inspect64/64ok, đã xem3trang mẫu; không phải rà toàn bộ thị giác. Xem docs/R3_REVIEW.md. Worker thesis/developer/diagrams đã terminal R3, QA sắp được giao rà bản mới. Giữ v0.3 thay đổi sẵn ngoài commit và v0.4 không sửa. Bước tiếp: QA R3→sửa nếu cần→diff/commit/push với --exclude v0.3; không replay R2/đổiprovider. Các mốc bên dưới là lịch sử.
+
+R3 bắt đầu sau review độc lập Cindy baseline 2e114a1: tutorial cần mốc A–F tăng dần, snapshot→node, ví dụ TR/FOV/skinning/PBR, caption và asset tái lập. Orca thesis/developer/diagrams được giao chỉ đọc, root cũ; diagrams đã bàn giao, thesis/developer chưa terminal report R3. Lead lưu 2 Mermaid r3 + bảng FOV và render PASS. Đã lấy Fox.glb từ Khronos commit thật 4995a638c96dbc94376d3d6164e70fee3ac7f7a2 (GitHub plugin list_commits), có attribution/legalREADME và kiểm header/clip/hash tại game/evidence-r3/fox-metadata.json. Chưa runtime asset. Giữ v0.3 sửa ngoài lượt và v0.4; Word kế tiếp v0.5. Không đổi model/provider hoặc retry Argon. Đọc docs R3 sau khi được tạo, không replay R2.
+
 Mốc cuối R2 05/11/2026: Word v0.4 đã tạo lại sau sửa; QA xác nhận text/structure không còn P1 trong phạm vi giao. Nguồn Ch2/outline, 35 refs/claim map, 6 PNG/Mermaid mới và tutorial đã đồng bộ; xem docs/R2_REVIEW.md, qa/ch02-r2-final.md. Việc tiếp theo là review độc lập của Cindy/GVHD, rà pagination bằng Word và kiểm tra runtime khi có thiết bị/asset; không chạy lại R1. Giữ thay đổi v0.3 ngoài commit bằng --exclude. Các đoạn ghi “đang tích hợp/đang rà” phía dưới là lịch sử mốc, không phải lệnh làm lại.
 
 Ưu tiên mới 05/11/2026: mở rộng Ch2 vì GVHD đánh giá thiếu lý thuyết. Bản thảo R2 đã tích hợp 2.1–2.11 và hướng dẫn riêng 2.12, nguồn/ảnh/code ở docs/R2_REVIEW.md và CURRENT_STATUS. Orca thesis/developer/diagrams/QA đã có terminal report; QA phát hiện 6 P1/10 P2, Lead đã sửa encoding và bổ sung BRDF/skinning/viewport/seqack, đang tạo lại Word v0.4 và giao rà sửa đổi. Không replay R1. 35 refs,14 ảnh; tutorial-r2 bốn check PASS. V0.3 có sửa trước R2, giữ byte, cuối phiên --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Research cấu hình Argon nhưng dispatch lỗi provider cindy_openai, chưa chạy; không tự retry. Các mô tả R1/R2 ban đầu bên dưới là lịch sử theo mốc.
@@ -19,10 +25,10 @@ Chưa chốt: công cụ/file UI (Figma mới là đề xuất), kiến trúc/gi
 Repo đúng: https://github.com/QHT2910/LuanVanTotNghiep.git; project D:/totnghiep/LuanVanTotNghiep. R1 tích hợp ở d7793fa, bổ sung báo cáo developer ở 48d9096; đã xác nhận push thành công. Không chạy lại R1 chỉ vì nhận báo cáo worker gửi muộn.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-05T07:52:07.238Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `e6d9092b50ca016459d3ff6cb2f84a642427dc06`.
-- Local tracking origin/main: `e6d9092b50ca016459d3ff6cb2f84a642427dc06` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 37 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-05T08:32:57.520Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `2e114a119e5d2374469c8401d4ad6c06f37fc33e`.
+- Local tracking origin/main: `2e114a119e5d2374469c8401d4ad6c06f37fc33e` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 26 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 Hiện hành: thesis/Ban_thao_Chuong_1-3_v0.3.docx, thesis/BAN_THAO_CHUONG_1-3.md, thesis/REFERENCES.md (19 nguồn). Chi tiết: [CURRENT_STATUS](CURRENT_STATUS.md), [R1_REVIEW](R1_REVIEW.md). v0.1/v0.2 và hình cũ giữ lịch sử; wireframe 3-9 không nằm trong Word hiện hành.
