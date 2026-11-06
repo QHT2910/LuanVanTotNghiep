@@ -1,0 +1,15 @@
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q4: trong tick ở panel (b1)
+ alt Qua rổ đúng chiều, đúng shotId hiện hành
+  Note over S: Q2 → panel (c1), rồi trở về
+ else Event cũ hoặc khác shotId
+  S->>S: Bỏ event, không cộng điểm
+  S->>S: Tiếp tục cú ném hiện hành
+ else Trượt đã được giải quyết
+  S->>S: Bóng tự do, vô hiệu cú ném
+  S->>S: resolved = true
+ else Bóng còn bay
+  S->>S: resolved = false
+ end
+ Note over S: Trả về Q3 ở panel (b1)

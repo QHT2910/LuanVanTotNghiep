@@ -1,0 +1,19 @@
+sequenceDiagram
+  actor P as Người chơi
+  participant A as Client A
+  participant S as Máy chủ
+
+  P->>A: Giữ rồi thả ACTION
+  A->>A: Phản hồi hoạt ảnh
+  A->>S: Input seq và hành động ném
+  S->>S: Kiểm seq, dữ liệu và trận
+  S->>S: Kiểm giữ bóng, trạng thái và hồi chiêu
+
+  alt Input cũ/trùng/sai hoặc không được ném
+    S-->>A: Trạng thái hợp lệ và ackSeq
+  else Chấp nhận
+    S->>S: shotId, releasePosition, releaseTick
+    S->>S: Chốt pointValue, tạo quỹ đạo, thả bóng
+    S->>S: scored = false, resolved = false
+    Note over S: Q1 → panel (b1)
+  end

@@ -1,0 +1,16 @@
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q2: từ nhánh qua rổ ở panel (b2)
+ alt scored = false
+  S->>S: Cộng pointValue, scored = true
+  alt Người ném đạt ít nhất 11 điểm
+   S->>S: Finished, xác nhận kết quả
+  else Chưa đạt điều kiện thắng
+   S->>S: Check-ball, cấp bóng người bị ghi điểm
+   S->>S: Đặt lại vị trí hai nhân vật
+  end
+ else Cú ném hiện hành đã tính
+  S->>S: Bỏ event, không cộng lặp
+ end
+ S->>S: resolved = true
+ Note over S: Trở về Q4, rồi Q3 trong tick

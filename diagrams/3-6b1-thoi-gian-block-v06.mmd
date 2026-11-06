@@ -1,0 +1,19 @@
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q1 / đầu tick
+ loop resolved = false
+  alt Finished hoặc hết giờ
+   S->>S: Giữ tỷ số, xác định kết quả nếu thiếu
+   S->>S: Không điểm mới, resolved = true
+  else Trận còn chạy và còn thời gian
+   S->>S: Cập nhật bóng và va chạm
+   alt Block hợp lệ chạm bóng đang bay
+    S->>S: Đổi vận tốc, bóng tự do, vô hiệu shot
+    S->>S: resolved = true
+   else Không Block hợp lệ
+    Note over S: Q4 → panel (b2), rồi trở về
+   end
+  end
+  Note over S: Q3 → panel (c2), kể cả tick cuối
+ end
+ Note over S: resolved = true dừng loop

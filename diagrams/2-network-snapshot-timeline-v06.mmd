@@ -1,0 +1,11 @@
+sequenceDiagram
+ participant C as Client
+ participant S as Server
+ participant R as Hiển thị
+ C->>S: Input
+ S->>S: Mô phỏng
+ S-->>C: Snapshot A tại t_a
+ S-->>C: Snapshot B tại t_b
+ Note over C,R: Bộ đệm, t_a ≤ t_r ≤ t_b cùng miền giờ
+ C->>R: A, B, β = (t_r - t_a)/(t_b - t_a)
+ R->>R: Nội suy

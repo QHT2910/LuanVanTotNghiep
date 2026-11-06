@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-06",
+  "baseline": "6697b3170aff0b668eab2b67b0789f2d0c7d0427",
+  "pdf": {
+    "path": "thesis/Ban_thao_Chuong_1-3_v0.6.pdf",
+    "sha256": "E5FB32A270DEDA86D0EB78D26EC948C13E4251B516D7A5B672368B1090DC61F4",
+    "pages": 71,
+    "inspectedThrough": 71,
+    "verdict": "ok",
+    "blankPages": [],
+    "renderer": "Cindy Chromium; reviewed DOCX content/images, MathML equations",
+    "reviewedLayoutPages": "1–71, 18 contact sheets",
+    "reviewedLargePages": [
+      15,
+      19,
+      52,
+      56,
+      63
+    ],
+    "markerValidator": "PASS",
+    "logs": [
+      ".scratch/v06-render-final.log",
+      ".scratch/v06-pdf-validate-final.log"
+    ]
+  },
+  "word": {
+    "path": "thesis/Ban_thao_Chuong_1-3_v0.6.docx",
+    "sha256": "92C14430EB5905EADBE22CE10AB31F1C98046E7B2C83B0E0F0026C307B08FEC3",
+    "references": 37,
+    "images": 27,
+    "displayOMML": 3,
+    "validator": "PASS",
+    "log": ".scratch/v06-word-validate-final.log",
+    "nativePaginationApproved": false
+  },
+  "qa": {
+    "channel": "Orca Worker",
+    "id": "bkm37d3uiwhgp757im7y9hov",
+    "scope": "source, Word XML and 15 panel PNGs",
+    "result": "No P1/P2 found within assigned scope",
+    "report": "qa/publication-v0.6.md"
+  },
+  "limitations": [
+    "Native Word PDF export did not finish; Word and PDF pagination may differ",
+    "Cover/header/TOC remain draft",
+    "Some legible panels occupy individual pages",
+    "No Android/Internet/game verification rerun"
+  ],
+  "preservedV03SHA256": "7062097215C87DF6F1EB429D8DCAF3CD773D3BC4F80C33D1ED80928BB8510404"
+}

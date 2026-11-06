@@ -1,0 +1,23 @@
+flowchart TB
+  XG(("G"))
+  G{"Qua vùng rổ đúng chiều<br/>và chưa tính?"}
+  H["Cộng 2 hoặc 3 điểm<br/>một lần"]
+  I{"Đạt điều kiện<br/>thắng?"}
+  J["Check-ball<br/>pha mới"]
+  L{"Cú ném trượt đã<br/>được giải quyết?"}
+
+  XE(("E"))
+  XF(("F"))
+  XT(("T"))
+  Z["Kết thúc xử lý<br/>use case"]
+
+  XG --> G
+  G -->|"Có"| H
+  H --> I
+  I -->|"Có"| XE
+  I -->|"Không"| J
+  J --> Z
+
+  G -->|"Không"| L
+  L -->|"Có"| XF
+  L -->|"Không"| XT

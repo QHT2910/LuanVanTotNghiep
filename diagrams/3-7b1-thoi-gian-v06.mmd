@@ -1,0 +1,7 @@
+flowchart TB
+ XT((T)) --> T{"Hết giờ hoặc<br/>trận kết thúc?"}
+ T -->|Có| E["Kết thúc,<br/>không cộng điểm mới"]
+ T -->|Không| M["Cập nhật bóng<br/>và va chạm"]
+ M --> XV((V))
+ XE((E)) --> E
+ E --> Z["Kết thúc use case"]

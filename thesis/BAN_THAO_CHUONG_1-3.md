@@ -151,7 +151,7 @@ CPU thường đảm nhiệm cập nhật logic, chuẩn bị danh sách đối 
 
 Hình 2.1 phân biệt lớp tổ chức cảnh với lớp lệnh đồ họa và backend native khi nội dung 3D được kết xuất trong ứng dụng Flutter.
 
-![Các lớp kết xuất nội dung 3D trên nền tảng native](../diagrams/2-rendering-layers-r2.png)
+![Các lớp kết xuất nội dung 3D trên nền tảng native](../diagrams/2-rendering-layers-v06.png)
 
 Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native. Nguồn: tác giả tổng hợp theo [7], [9], [10].
 
@@ -235,7 +235,7 @@ Chuỗi biến đổi giải thích những lỗi hiển thị khác nhau: sai M
 
 Chuỗi đổi hệ tọa độ của một đỉnh được tóm tắt ở Hình 2.3 theo quy ước vector cột.
 
-![Chuỗi biến đổi từ hệ mô hình đến tọa độ clip](../diagrams/2-mvp-spaces-r2.png)
+![Chuỗi biến đổi từ hệ mô hình đến tọa độ clip](../diagrams/2-mvp-spaces-v06.png)
 
 Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip. Nguồn: tác giả tổng hợp theo [28].
 
@@ -265,11 +265,11 @@ Phân biệt các thời điểm này giúp tránh sử dụng tài nguyên chư
 
 Hình 2.5 thể hiện đường gắn và nạp thành công của Component theo mã nguồn Scene 0.24.3, cùng trách nhiệm sở hữu Scene.
 
-![Vòng đời Component và trách nhiệm sở hữu Scene](../diagrams/2-lifecycle-ownership-r2.png)
+![Vòng đời Component và trách nhiệm sở hữu Scene](../diagrams/2-lifecycle-ownership-v06.png)
 
 Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3. Nguồn: tác giả tổng hợp từ mã nguồn gói phiên bản 0.24.3 [35].
 
-Mã mount gọi onMount trước khi khởi động onLoad. update chỉ được gọi khi component đồng thời mounted, enabled và loaded; việc nạp hoàn tất sau unmount không tự đặt loaded trong nhánh kiểm tra này. Nhánh sở hữu Scene là trách nhiệm riêng, không phải bước tiếp nối của mọi component. Hình không bao quát mọi trường hợp lỗi hoặc remount và không khẳng định mọi tài nguyên GPU dùng chung được hủy đồng bộ khi gọi dispose.
+Mã mount gọi onMount trước khi khởi động onLoad. update chỉ được gọi khi component đồng thời mounted, enabled và loaded; việc nạp hoàn tất sau unmount không tự đặt loaded trong nhánh kiểm tra này. Quyền sở hữu Scene là trách nhiệm riêng: ứng dụng dispose Scene do mình tạo; SceneView.declarative chịu trách nhiệm với Scene nội bộ khi view được dispose. Đây không phải bước tiếp nối của mọi component. Hình không bao quát mọi trường hợp lỗi hoặc remount và không khẳng định mọi tài nguyên GPU dùng chung được hủy đồng bộ khi gọi dispose.
 
 ### 2.4.3. Quyền cập nhật và tài nguyên dùng chung
 
@@ -295,7 +295,11 @@ Shader là chương trình thực hiện một phần công việc của pipelin
 
 Vật liệu dựa trên vật lý, thường gọi PBR, mô tả phản xạ theo những tham số có ý nghĩa bề mặt. Tài liệu Scene có PhysicallyBasedMaterial với màu cơ sở, độ kim loại và độ nhám. Độ nhám thay đổi độ phân tán của phản xạ; độ kim loại ảnh hưởng cách phân chia phản xạ và màu bề mặt. UnlitMaterial biểu diễn nội dung không phụ thuộc mô hình chiếu sáng của cảnh. PBR tạo cơ sở để vật liệu phản ứng với môi trường, nhưng không bảo đảm hình ảnh giống thực tế nếu dữ liệu texture, tỷ lệ hoặc chiếu sáng sai. [12]
 
-BRDF, ký hiệu f_r, mô tả quan hệ phản xạ theo hướng tới ω_i và hướng ra ω_o tại điểm x. Với bề mặt không phát sáng, phương trình phản xạ có dạng L_o(x,ω_o) = ∫_Ω f_r(x,ω_i,ω_o)L_i(x,ω_i)max(0,n·ω_i)dω_i. L_i và L_o là độ chói bức xạ tới/ra, n là pháp tuyến đơn vị, Ω là bán cầu phía trên bề mặt, dω_i là phần tử góc khối. Phương trình kết hợp ánh sáng môi trường với tính chất bề mặt. [31]
+BRDF, ký hiệu f_r, mô tả quan hệ phản xạ theo hướng tới ω_i và hướng ra ω_o tại điểm x. Với bề mặt không phát sáng, phương trình phản xạ có dạng:
+
+L_o(x,ω_o) = ∫_Ω f_r(x,ω_i,ω_o)L_i(x,ω_i)max(0,n·ω_i)dω_i
+
+L_i và L_o là độ chói bức xạ tới/ra, n là pháp tuyến đơn vị, Ω là bán cầu phía trên bề mặt, dω_i là phần tử góc khối. Phương trình kết hợp ánh sáng môi trường với tính chất bề mặt. [31]
 
 Trong mô hình vi bề mặt, roughness mô tả phân bố hướng phản xạ nhỏ. Nhánh diffuse mô tả ánh sáng tán xạ; nhánh specular mô tả phản xạ có hướng. Điện môi thường có cả hai, trong khi mô hình kim loại lý tưởng không có nhánh diffuse tương ứng. Metallic điều khiển quy ước vật liệu này, không phải độ sáng tổng thể. Đây là cơ sở PBR, không khẳng định một biến thể BRDF cụ thể của shader Scene 0.24.3. [31]
 
@@ -397,9 +401,17 @@ Hòa trộn kết hợp ảnh hưởng của nhiều hoạt ảnh để chuyển
 
 ### 2.7.4. Skeleton và skinning
 
-Skeleton là phân cấp joint; skin liên kết mesh với các joint và dữ liệu trọng số trên từng đỉnh. Inverse bind matrix B_j đưa đỉnh từ tư thế gốc sang hệ joint j. Nếu G_j(t) là world transform joint hiện tại và M(t) là world transform node chứa mesh, ma trận joint trong hệ mesh là J_j(t) = M(t)⁻¹G_j(t)B_j. Phép nghịch đảo yêu cầu M khả nghịch. [33]
+Skeleton là phân cấp joint; skin liên kết mesh với các joint và dữ liệu trọng số trên từng đỉnh. Inverse bind matrix B_j đưa đỉnh từ tư thế gốc sang hệ joint j. Nếu G_j(t) là world transform joint hiện tại và M(t) là world transform node chứa mesh, ma trận joint trong hệ mesh là:
 
-Với tọa độ thuần nhất p và trọng số w_j có tổng bằng 1, linear blend skinning tính p′ = Σ_j w_j J_j(t)p. Joint index chỉ định ma trận; weight chỉ định mức ảnh hưởng. Sau đó M đặt kết quả vào thế giới. Skinning khác việc gắn cả mesh vào một node: các đỉnh có thể chịu các joint khác nhau. Sai bind pose hoặc trọng số có thể gây biến dạng dù clip vẫn phát. Công thức là mô hình dữ liệu glTF, không chứng minh mọi asset hoặc extension đã chạy trong demo. [33]
+J_j(t) = M(t)⁻¹G_j(t)B_j
+
+Phép nghịch đảo yêu cầu M khả nghịch. [33]
+
+Với tọa độ thuần nhất p và trọng số w_j có tổng bằng 1, linear blend skinning tính:
+
+p′ = Σ_j w_j J_j(t)p
+
+Joint index chỉ định ma trận; weight chỉ định mức ảnh hưởng. Sau đó M đặt kết quả vào thế giới. Skinning khác việc gắn cả mesh vào một node: các đỉnh có thể chịu các joint khác nhau. Sai bind pose hoặc trọng số có thể gây biến dạng dù clip vẫn phát. Công thức là mô hình dữ liệu glTF, không chứng minh mọi asset hoặc extension đã chạy trong demo. [33]
 
 Để tính thử với hai joint, chọn mesh world transform M = I, đỉnh p = (2,0,0), joint 0 ở gốc và joint 1 ở (1,0,0) trong bind pose. B₀ = I; B₁ = T(−1,0,0) là inverse bind. Ở pose hiện tại G₀ = I và G₁ = T(1,0,0)Rz(90°). Khi đó q₀ = G₀B₀p = (2,0,0), còn q₁ = G₁B₁p = (1,1,0). [33]
 
@@ -423,7 +435,7 @@ Giới hạn số bước bù hoặc giới hạn khoảng thời gian đầu v�
 
 Hình 2.7 tách bước mô phỏng cố định khỏi trạng thái được dùng để hiển thị nội suy.
 
-![Bước mô phỏng cố định và nội suy hiển thị](../diagrams/2-fixed-render-interpolation-r2.png)
+![Bước mô phỏng cố định và nội suy hiển thị](../diagrams/2-fixed-render-interpolation-v06.png)
 
 Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị. Nguồn: tác giả tổng hợp theo [22].
 
@@ -512,7 +524,7 @@ Gói flutter_scene_net mô tả replica gắn với node và nội suy transform
 
 Hình 2.8 minh họa việc đệm hai snapshot để tạo trạng thái hiển thị tại một thời điểm ở giữa.
 
-![Đệm snapshot và nội suy trạng thái qua mạng](../diagrams/2-network-snapshot-timeline-r2.png)
+![Đệm snapshot và nội suy trạng thái qua mạng](../diagrams/2-network-snapshot-timeline-v06.png)
 
 Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng. Nguồn: tác giả tổng hợp theo [26].
 
@@ -1263,31 +1275,64 @@ Quy trình chính là kết nối, chọn phòng, sẵn sàng, thi đấu rồi 
 
 ### 3.2.2. Sơ đồ chức năng
 
-Hình 3-1 phân chia trách nhiệm để tránh trộn luật chơi vào phần hiển thị. Các nhánh là nhóm chức năng, không phải cấu trúc lớp đã được lập trình.
+Hai panel thuộc cùng một sơ đồ phân rã; nút Game bóng rổ 3D được lặp lại để nối các nhóm chức năng. Hình 3.1 phân chia trách nhiệm để tránh trộn luật chơi vào phần hiển thị. Các nhánh là nhóm chức năng, không phải cấu trúc lớp đã được lập trình.
 
-<!-- diagram: 3-1-chuc-nang.mmd -->
+<!-- diagram: 3-1a-chuc-nang-v06.mmd -->
 ```mermaid
-flowchart TD
-  G[Game bóng rổ 3D] --> P[Phiên và phòng]
-  G --> M[Thi đấu]
-  G --> N[Đồng bộ mạng]
-  G --> V[Hiển thị và âm thanh]
-  P --> P1[Tạo - vào - rời phòng]
-  P --> P2[Sẵn sàng và bắt đầu]
-  M --> M1[Di chuyển và hành động]
-  M --> M2[Bóng - điểm - kết quả]
-  N --> N1[Input và snapshot]
-  N --> N2[Đối chiếu và mất kết nối]
-  V --> V1[Cảnh Scene và camera]
-  V --> V2[HUD - màn hình - sự kiện]
+flowchart TB
+  G["Game bóng rổ 3D"]
+  P["Phiên và phòng"]
+  M["Thi đấu"]
+  P1["Tạo, vào,<br/>rời phòng"]
+  P2["Sẵn sàng<br/>và bắt đầu"]
+  M1["Di chuyển<br/>và hành động"]
+  M2["Bóng, điểm<br/>và kết quả"]
+
+  G --> P
+  G --> M
+  P --> P1
+  P --> P2
+  M --> M1
+  M --> M2
+
+  P1 ~~~ P2
+  M1 ~~~ M2
 ```
+
+Hình 3.1(a). Phân rã chức năng phiên, phòng và thi đấu. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-1b-chuc-nang-v06.mmd -->
+```mermaid
+flowchart TB
+  G["Game bóng rổ 3D"]
+  N["Đồng bộ mạng"]
+  V["Hiển thị<br/>và âm thanh"]
+  N1["Input<br/>và snapshot"]
+  N2["Đối chiếu<br/>và mất kết nối"]
+  V1["Cảnh Scene<br/>và camera"]
+  V2["HUD, màn hình<br/>và sự kiện"]
+
+  G --> N
+  G --> V
+  N --> N1
+  N --> N2
+  V --> V1
+  V --> V2
+
+  N1 ~~~ N2
+  V1 ~~~ V2
+```
+
+Hình 3.1(b). Phân rã chức năng đồng bộ, hiển thị và âm thanh. Nguồn: thiết kế đề xuất của tác giả.
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
-Tác nhân Người chơi đại diện cho vai trò của mỗi người trong hai người tham gia. Ranh giới hệ thống gồm ứng dụng và máy chủ, vì vậy máy chủ là thành phần bên trong. Hình 3-2 sử dụng ký hiệu UML: actor hình người, use case hình ellipse và association nét liền. UC08 Rời phòng thể hiện thao tác đã có trong yêu cầu F01; sơ đồ không dùng quan hệ include hoặc extend khi chưa có nhu cầu tương ứng.
+Tác nhân Người chơi đại diện cho vai trò của mỗi người trong hai người tham gia. Ranh giới hệ thống gồm ứng dụng và máy chủ, vì vậy máy chủ là thành phần bên trong. Hình 3.2 sử dụng ký hiệu UML: actor hình người, use case hình ellipse và association nét liền. UC08 Rời phòng thể hiện thao tác đã có trong yêu cầu F01; sơ đồ không dùng quan hệ include hoặc extend khi chưa có nhu cầu tương ứng.
 
 <!-- diagram-svg: 3-2-usecase-uml.svg -->
 ![Thiết kế đề xuất — 3-2-usecase-uml.svg](../diagrams/3-2-usecase-uml.png)
+
+Hình 3.2. Use case tổng quát của hệ thống đề xuất. Nguồn: tác giả thiết kế theo ký pháp UML.
 
 Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
@@ -1345,6 +1390,8 @@ flowchart TD
   C --> W[Trạng thái trận trong bộ nhớ]
 ```
 
+Hình 3.3. Kiến trúc kết nối dự kiến. Nguồn: thiết kế đề xuất của tác giả.
+
 Client B trong hình biểu diễn vai trò logic; hiện chưa có điện thoại thứ hai. Phương án WebSocket/JSON được chọn làm ứng viên vì dễ theo dõi thông điệp trong giai đoạn nghiên cứu. Kết nối triển khai công khai dự kiến dùng WSS và chứng chỉ hợp lệ; chưa có endpoint hoặc dịch vụ trả phí nào được tạo.
 
 Input dự kiến chứa số thứ tự, hướng di chuyển và cờ hành động. Máy chủ lấy danh tính người gửi từ phiên kết nối, kiểm tra kiểu, miền giá trị, tần suất và điều kiện luật. Không tin điểm hoặc vị trí người chơi tự khai báo. Snapshot mang tick, trạng thái và ackSeq riêng cho người nhận; sự kiện có eventId để tránh phát âm thanh hoặc cộng hiệu ứng lặp.
@@ -1368,16 +1415,18 @@ Dữ liệu kết nối tách khỏi dữ liệu mô phỏng. Phòng lưu mã, h
 | BallState | Vị trí, vận tốc, phase, holderId, shot hiện tại |
 | ShotState | shotId, shooterId, vị trí/thời điểm ném, giá trị điểm, cờ đã tính |
 
-Hình 3-4 mô tả cấu trúc lớp dự kiến, không phải API Flutter Scene hoặc mã đã có. Liên kết lớp với Scene được đặt ở lớp hiển thị để lõi không phụ thuộc node GPU.
+Hình 3.4 mô tả cấu trúc lớp dự kiến, không phải API Flutter Scene hoặc mã đã có. Liên kết lớp với Scene được đặt ở lớp hiển thị để lõi không phụ thuộc node GPU.
 
-<!-- diagram: 3-4-lop-r1.mmd -->
+<!-- diagram: 3-4a-phong-phien-v06.mmd -->
 ```mermaid
 classDiagram
-  %% Thiết kế đề xuất, chưa phải code hoặc API Flutter Scene.
+  direction TB
+
   class RoomState {
     String roomCode
     RoomPhase phase
   }
+
   class SessionState {
     String playerId
     int slotIndex
@@ -1386,6 +1435,26 @@ classDiagram
     int lastSeen
     int lastProcessedSeq
   }
+
+  class WorldState {
+    <<reference>>
+  }
+
+  RoomState "1" o-- "0..2" SessionState : slots
+  RoomState "1" o-- "0..1" WorldState : match
+
+  %% WorldState được khai triển trong Hình 3.4(b).
+```
+
+Hình 3.4(a). Cấu trúc phòng và phiên kết nối. Nguồn: thiết kế đề xuất của tác giả.
+
+WorldState trong panel (a) được khai triển tại (b). slotIndex ổn định trong phòng, là 0 hoặc 1 và không trùng; chỉ số này còn dùng phân xử nhặt bóng khi bằng khoảng cách.
+
+<!-- diagram: 3-4b-tran-nhan-vat-v06.mmd -->
+```mermaid
+classDiagram
+  direction TB
+
   class WorldState {
     int tick
     int remainingTicks
@@ -1393,6 +1462,7 @@ classDiagram
     List~int~ score
     MatchResult result
   }
+
   class PlayerState {
     Vector3 position
     Vector3 velocity
@@ -1400,12 +1470,34 @@ classDiagram
     ActionState action
     Cooldowns cooldowns
   }
+
+  class BallState {
+    <<reference>>
+  }
+
+  WorldState "1" *-- "2" PlayerState : players
+  WorldState "1" *-- "1" BallState : ball
+
+  %% WorldState là cùng lớp được tham chiếu ở Hình 3.4(a).
+  %% BallState được khai triển trong Hình 3.4(c).
+```
+
+Hình 3.4(b). Trạng thái trận và hai nhân vật. Nguồn: thiết kế đề xuất của tác giả.
+
+score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do khi trận kết thúc. BallState được khai triển tại panel (c); đó là cùng lớp tham chiếu trong panel (b).
+
+<!-- diagram: 3-4c-bong-cu-nem-v06.mmd -->
+```mermaid
+classDiagram
+  direction TB
+
   class BallState {
     Vector3 position
     Vector3 velocity
     BallPhase phase
     String holderId
   }
+
   class ShotState {
     String shotId
     String shooterId
@@ -1414,20 +1506,19 @@ classDiagram
     int pointValue
     bool scored
   }
-  RoomState "1" o-- "0..2" SessionState : slots
-  RoomState "1" o-- "0..1" WorldState : match
-  WorldState "1" *-- "2" PlayerState : players
-  WorldState "1" *-- "1" BallState : ball
+
   BallState "1" o-- "0..1" ShotState : shot
-  note for SessionState "slotIndex ổn định trong phòng: 0 hoặc 1, không trùng; dùng phân xử nhặt bóng khi bằng khoảng cách."
-  note for WorldState "score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do kết thúc, chỉ có khi kết thúc."
-  note for ShotState "Chốt pointValue từ releasePosition tại releaseTick: trên vạch tính 2 điểm; scored ngăn cộng lặp."
-  note for BallState "holderId chỉ có nghĩa khi giữ bóng; shot có thể vắng. Kiểu giá trị và đơn vị thời gian cần cụ thể hóa khi triển khai."
+
+  %% BallState là cùng lớp được tham chiếu ở Hình 3.4(b).
 ```
+
+Hình 3.4(c). Trạng thái bóng và dữ liệu cú ném. Nguồn: thiết kế đề xuất của tác giả.
+
+Các lớp mang nhãn reference được khai triển ở panel kế tiếp. pointValue được chốt từ releasePosition tại releaseTick; vị trí trên vạch tính 2 điểm. scored ngăn cộng điểm lặp. holderId chỉ có nghĩa khi bóng được giữ và shot có thể vắng. Kiểu giá trị và đơn vị thời gian còn cần cụ thể hóa khi triển khai.
 
 ### 3.2.7. Mô hình xử lý
 
-Hình 3-5 xác định trạng thái phòng/trận và nhánh thoát. Mất kết nối khi chơi không lập tức kết thúc nếu chính sách có timeout; sự kiện hết hạn được máy chủ tạo sau kiểm tra kết nối. Việc người chơi đồng thời rời hoặc đã kết thúc phải được xử lý một lần.
+Hình 3.5 xác định trạng thái phòng/trận và nhánh thoát. Mất kết nối khi chơi không lập tức kết thúc nếu chính sách có timeout; sự kiện hết hạn được máy chủ tạo sau kiểm tra kết nối. Việc người chơi đồng thời rời hoặc đã kết thúc phải được xử lý một lần.
 
 <!-- diagram: 3-5-trang-thai.mmd -->
 ```mermaid
@@ -1445,88 +1536,193 @@ stateDiagram-v2
   Closed --> [*]
 ```
 
-Hình 3-6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
+Hình 3.5. Trạng thái phòng và trận. Nguồn: thiết kế đề xuất của tác giả.
 
-<!-- diagram: 3-6-tuan-tu-nem-r1.mmd -->
+Hình 3.6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
+
+<!-- diagram: 3-6a-nhan-input-v06.mmd -->
 ```mermaid
 sequenceDiagram
-  %% Thiết kế đề xuất. resolved chỉ là cờ điều khiển vòng xử lý cú ném trong sơ đồ.
   actor P as Người chơi
-  participant A as Client người ném
+  participant A as Client A
   participant S as Máy chủ
-  participant B as Client đối thủ
+
   P->>A: Giữ rồi thả ACTION
   A->>A: Phản hồi hoạt ảnh
   A->>S: Input seq và hành động ném
-  S->>S: Kiểm seq, dữ liệu, trận, giữ bóng, trạng thái và hồi chiêu
+  S->>S: Kiểm seq, dữ liệu và trận
+  S->>S: Kiểm giữ bóng, trạng thái và hồi chiêu
+
   alt Input cũ/trùng/sai hoặc không được ném
     S-->>A: Trạng thái hợp lệ và ackSeq
   else Chấp nhận
-    S->>S: Tạo shotId, lưu releasePosition/releaseTick, chốt pointValue
-    S->>S: Tạo quỹ đạo, thả bóng, scored = false, resolved = false
-    loop Các tick khi resolved = false
-      alt Trận đã kết thúc hoặc hết giờ tại tick này
-        S->>S: Giữ tỷ số cuối, xác định kết quả nếu chưa có
-        S->>S: Không cộng điểm mới, resolved = true
-      else Trận còn chạy và còn thời gian
-        S->>S: Cập nhật bóng và va chạm tại tick
-        alt Block hợp lệ chạm bóng đang bay
-          S->>S: Đổi vận tốc, bóng tự do, vô hiệu cú ném
-          S->>S: resolved = true
-        else Qua vùng rổ từ trên xuống hợp lệ với shotId hiện hành
-          alt scored = false
-            S->>S: Cộng pointValue cho người ném, scored = true
-            alt Người ném đạt ít nhất 11 điểm
-              S->>S: Kết thúc trận, xác nhận kết quả
-            else Chưa đạt điều kiện thắng
-              S->>S: Check-ball, cấp bóng cho người bị ghi điểm
-              S->>S: Đặt lại vị trí hai nhân vật cho pha mới
-            end
-          else Cú ném hiện hành đã tính
-            S->>S: Bỏ sự kiện, không cộng lặp
-          end
-          S->>S: resolved = true
-        else Sự kiện ghi điểm cũ hoặc không thuộc shotId hiện hành
-          S->>S: Bỏ sự kiện, không cộng điểm, tiếp tục xử lý cú ném hiện hành
-        else Cú ném trượt đã được giải quyết
-          S->>S: Bóng tự do, vô hiệu cú ném, resolved = true
-        else Bóng còn bay, chưa có kết quả cú ném
-          S->>S: Giữ resolved = false để xử lý tick tiếp
-        end
-      end
-      S-->>A: Snapshot, ackSeq của A và sự kiện có eventId nếu có
-      S-->>B: Snapshot, ackSeq của B và sự kiện có eventId nếu có
-    end
-    Note over S: resolved = true ngăn xử lý tiếp cú ném đã kết thúc<br/>Máy chủ quyết định điểm, quyền bóng và kết quả
+    S->>S: shotId, releasePosition, releaseTick
+    S->>S: Chốt pointValue, tạo quỹ đạo, thả bóng
+    S->>S: scored = false, resolved = false
+    Note over S: Q1 → panel (b1)
   end
 ```
 
-Hình 3-7 giữ đầy đủ vòng lặp xử lý bóng và nhánh kết thúc. “Trượt đã giải quyết” nghĩa là cú ném không còn khả năng ghi điểm theo quy tắc mô phỏng, không chỉ là bóng chưa đến rổ trong tick hiện tại.
+Hình 3.6(a). Nhận input và kiểm tra tạo cú ném. Nguồn: thiết kế đề xuất của tác giả.
 
-<!-- diagram: 3-7-hoat-dong-nem.mmd -->
+<!-- diagram: 3-6b1-thoi-gian-block-v06.mmd -->
 ```mermaid
-flowchart TD
-  A[Nhận yêu cầu ném] --> B{Dữ liệu và trạng thái hợp lệ?}
-  B -->|Không| R[Bỏ yêu cầu và trả trạng thái]
-  B -->|Có| C[Tạo cú ném và thả bóng]
-  C --> T{Hết giờ hoặc trận đã kết thúc?}
-  T -->|Có| E[Kết thúc, không cộng điểm mới]
-  T -->|Không| M[Cập nhật bóng và va chạm]
-  M --> K{Bị Block hợp lệ?}
-  K -->|Có| F[Bóng tự do, vô hiệu cú ném]
-  K -->|Không| G{Qua vùng rổ đúng chiều và chưa tính?}
-  G -->|Có| H[Cộng 2 hoặc 3 điểm một lần]
-  H --> I{Đạt điều kiện thắng?}
-  I -->|Có| E
-  I -->|Không| J[Check-ball, pha mới]
-  G -->|Không| L{Cú ném trượt đã được giải quyết?}
-  L -->|Có| F
-  L -->|Không| T
-  R --> Z[Kết thúc xử lý use case]
-  E --> Z
-  F --> Z
-  J --> Z
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q1 / đầu tick
+ loop resolved = false
+  alt Finished hoặc hết giờ
+   S->>S: Giữ tỷ số, xác định kết quả nếu thiếu
+   S->>S: Không điểm mới, resolved = true
+  else Trận còn chạy và còn thời gian
+   S->>S: Cập nhật bóng và va chạm
+   alt Block hợp lệ chạm bóng đang bay
+    S->>S: Đổi vận tốc, bóng tự do, vô hiệu shot
+    S->>S: resolved = true
+   else Không Block hợp lệ
+    Note over S: Q4 → panel (b2), rồi trở về
+   end
+  end
+  Note over S: Q3 → panel (c2), kể cả tick cuối
+ end
+ Note over S: resolved = true dừng loop
 ```
+
+Hình 3.6(b1). Vòng tick, thời gian và Block. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-6b2-ro-truot-v06.mmd -->
+```mermaid
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q4: trong tick ở panel (b1)
+ alt Qua rổ đúng chiều, đúng shotId hiện hành
+  Note over S: Q2 → panel (c1), rồi trở về
+ else Event cũ hoặc khác shotId
+  S->>S: Bỏ event, không cộng điểm
+  S->>S: Tiếp tục cú ném hiện hành
+ else Trượt đã được giải quyết
+  S->>S: Bóng tự do, vô hiệu cú ném
+  S->>S: resolved = true
+ else Bóng còn bay
+  S->>S: resolved = false
+ end
+ Note over S: Trả về Q3 ở panel (b1)
+```
+
+Hình 3.6(b2). Các nhánh qua rổ, sự kiện cũ và trượt. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-6c1-diem-v06.mmd -->
+```mermaid
+sequenceDiagram
+ participant S as Máy chủ
+ Note over S: Q2: từ nhánh qua rổ ở panel (b2)
+ alt scored = false
+  S->>S: Cộng pointValue, scored = true
+  alt Người ném đạt ít nhất 11 điểm
+   S->>S: Finished, xác nhận kết quả
+  else Chưa đạt điều kiện thắng
+   S->>S: Check-ball, cấp bóng người bị ghi điểm
+   S->>S: Đặt lại vị trí hai nhân vật
+  end
+ else Cú ném hiện hành đã tính
+  S->>S: Bỏ event, không cộng lặp
+ end
+ S->>S: resolved = true
+ Note over S: Trở về Q4, rồi Q3 trong tick
+```
+
+Hình 3.6(c1). Xử lý điểm và check-ball. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-6c2-snapshot-v06.mmd -->
+```mermaid
+sequenceDiagram
+ participant A as Client A
+ participant S as Máy chủ
+ participant B as Client B
+ Note over A,B: Q3: cuối mỗi tick, kể cả tick resolved = true
+ S-->>A: Snapshot, ackSeq của A
+ S-->>B: Snapshot, ackSeq của B
+ Note over A,B: Kèm sự kiện có eventId nếu có
+ Note over S: Trở về kiểm guard loop ở panel (b1)
+```
+
+Hình 3.6(c2). Gửi snapshot cho hai client. Nguồn: thiết kế đề xuất của tác giả.
+
+Client A là người ném, Client B là đối thủ. Q1 nối tạo cú ném với vòng tick tại (b1); Q4 khai triển nhánh không Block tại (b2); Q2 khai triển ghi điểm ở (c1); Q3 gửi trạng thái ở (c2) cuối mọi tick, kể cả tick resolved = true, rồi kiểm lại guard loop. Các tham chiếu cùng nằm trong vòng tick, không thêm API hoặc gói tin mới. ackSeq thuộc riêng từng phiên; dữ liệu sai định dạng hoặc sai phiên không làm tiến ackSeq.
+
+Máy chủ quyết định điểm, quyền bóng và kết quả. Thứ tự hết giờ trước ghi điểm giữ từ thiết kế gốc. Block trước qua rổ trong cùng tick vẫn là đề xuất cần xác nhận hoặc thay bằng đối chiếu thời điểm va chạm; việc chia panel không phê duyệt chính sách này.
+
+Hình 3.7 giữ đầy đủ vòng lặp xử lý bóng và nhánh kết thúc. “Trượt đã giải quyết” nghĩa là cú ném không còn khả năng ghi điểm theo quy tắc mô phỏng, không chỉ là bóng chưa đến rổ trong tick hiện tại.
+
+<!-- diagram: 3-7a-nhan-yeu-cau-v06.mmd -->
+```mermaid
+flowchart TB
+  A["Nhận yêu cầu ném"]
+  B{"Dữ liệu và trạng thái<br/>hợp lệ?"}
+  R["Bỏ yêu cầu<br/>và trả trạng thái"]
+  C["Tạo cú ném<br/>và thả bóng"]
+  XT(("T"))
+  Z["Kết thúc xử lý<br/>use case"]
+
+  A --> B
+  B -->|"Không"| R
+  R --> Z
+  B -->|"Có"| C
+  C --> XT
+```
+
+Hình 3.7(a). Tiếp nhận yêu cầu ném. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-7b1-thoi-gian-v06.mmd -->
+```mermaid
+flowchart TB
+ XT((T)) --> T{"Hết giờ hoặc<br/>trận kết thúc?"}
+ T -->|Có| E["Kết thúc,<br/>không cộng điểm mới"]
+ T -->|Không| M["Cập nhật bóng<br/>và va chạm"]
+ M --> XV((V))
+ XE((E)) --> E
+ E --> Z["Kết thúc use case"]
+```
+
+Hình 3.7(b1). Kiểm tra thời gian và cập nhật bóng. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-7b2-block-v06.mmd -->
+```mermaid
+flowchart TB
+ XV((V)) --> K{"Block hợp lệ?"}
+ K -->|Có| F["Bóng tự do,<br/>vô hiệu cú ném"]
+ K -->|Không| XG((G))
+ XF((F)) --> F
+ F --> Z["Kết thúc use case"]
+```
+
+Hình 3.7(b2). Xử lý Block. Nguồn: thiết kế đề xuất của tác giả.
+
+<!-- diagram: 3-7c1-diem-v06.mmd -->
+```mermaid
+flowchart TB
+ XG((G)) --> G{"Qua rổ hợp lệ?"}
+ G -->|Có| H["Cộng 2 hoặc 3 điểm<br/>một lần"]
+ G -->|Không| XL((L))
+ H --> I{"Đã thắng?"}
+ I -->|Có| XE((E))
+ I -->|Không| J["Check-ball, pha mới"]
+ J --> Z["Kết thúc use case"]
+```
+
+Hình 3.7(c1). Xử lý ghi điểm và chuyển pha. Nguồn: thiết kế đề xuất của tác giả.
+
+Trong panel này, “Qua rổ hợp lệ” giữ điều kiện qua vùng rổ đúng chiều và chưa tính; “Đã thắng” là đạt điều kiện thắng trong thiết kế. Nhãn rút gọn không thay đổi các guard.
+
+<!-- diagram: 3-7c2-truot-v06.mmd -->
+```mermaid
+flowchart TB
+ XL((L)) --> L{"Trượt đã<br/>được giải quyết?"}
+ L -->|Có| XF((F))
+ L -->|Không| XT((T))
+```
+
+Hình 3.7(c2). Kiểm tra trượt và lặp lại. Nguồn: thiết kế đề xuất của tác giả.
 
 Trong sơ đồ tuần tự, cờ resolved điều khiển việc dừng xử lý cú ném sau hết giờ, Block, ghi điểm hoặc ném trượt. Nhánh ghi điểm thực hiện check-ball khi trận chưa kết thúc. Thứ tự hết giờ trước ghi điểm kế thừa luật đang mô tả; thứ tự Block và bóng qua rổ trong cùng một tick hiện là đề xuất cần xác nhận hoặc thay bằng đối chiếu thời điểm va chạm. Sơ đồ chưa chứng minh tính đúng của phép phân xử này trên sản phẩm.
 
@@ -1544,6 +1740,8 @@ Các trạng thái logic dự kiến của nhân vật và bóng được mô t�
 | Ball: tự do | Sau cú ném trượt hoặc Block; người chơi có thể tranh bóng | Guard nhận bóng và xử lý tranh chấp đồng thời chưa chốt |
 | Ball: sau ghi điểm / kết thúc | Chưa đủ điều kiện thắng thì check-ball; đủ điểm hoặc hết giờ thì kết thúc | Không tạo check-ball chỉ vì rebound/Block; không tiếp tục xử cú ném sau kết thúc |
 
+Đi theo connector cùng nhãn để tiếp tục: T vào kiểm tra thời gian ở (b1), V nối cập nhật bóng với kiểm Block ở (b2), G vào kiểm qua rổ ở (c1), L vào kiểm trượt ở (c2), E đến kết thúc không điểm mới ở (b1), F đến bóng tự do ở (b2). Z là kết thúc xử lý use case, không mặc định kết thúc trận. Nhánh trượt–Không quay về T, bảo toàn vòng cập nhật. Trượt đã giải quyết nghĩa là không còn khả năng ghi điểm theo mô phỏng, không chỉ là chưa tới rổ ở tick này. Thứ tự Block/qua rổ còn chịu giới hạn phân xử cùng tick của thiết kế.
+
 ### 3.2.8. Thiết kế cảnh 3D và tài nguyên
 
 Cảnh gồm sân, rổ, hai nhân vật và bóng. Mỗi đối tượng cần thống nhất tỷ lệ, hệ tọa độ và quyền cập nhật transform. Lõi mô phỏng cung cấp trạng thái; lớp hiển thị ánh xạ sang node của Scene. Tài nguyên mô hình, texture, hoạt ảnh và âm thanh phải có nguồn và giấy phép sử dụng rõ ràng.
@@ -1554,8 +1752,8 @@ Cần kiểm chứng đường nạp tài nguyên và clip hoạt ảnh trước
 
 | Yêu cầu | Thiết kế đối chiếu | Bằng chứng cần có sau triển khai |
 |---|---|---|
-| F01–F02 | UC01–UC02, UC08, Hình 3-5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
-| F03 | UC03–UC05, Hình 3-6–3-7 | Input hợp lệ, sai, trùng và hồi chiêu |
+| F01–F02 | UC01–UC02, UC08, Hình 3.5 | Luồng tạo/vào/sẵn sàng và phòng đầy |
+| F03 | UC03–UC05, Hình 3.6–3.7 | Input hợp lệ, sai, trùng và hồi chiêu |
 | F04 | ShotState, vòng xử lý điểm | Không cộng lặp; hết giờ; hai client cùng kết quả |
 | F05 | Kiến trúc, phiên và heartbeat | Hai mạng thực, timeout, ngắt mạng |
 | F06/N02 | Hệ thống màn hình | Thao tác mobile, âm thanh và vùng an toàn |
@@ -1581,7 +1779,7 @@ Giao diện game Bóng rổ đối kháng 3D được đề xuất theo hướng
 
 Ghép trận nhanh là chức năng bổ sung sau; khi triển khai cần có trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
 
-Hình 3-8 mô tả luồng chuyển giữa sáu màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Sơ đồ luồng không thay thế thiết kế giao diện.
+Hình 3.8 mô tả luồng chuyển giữa sáu màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Sơ đồ luồng không thay thế thiết kế giao diện.
 
 <!-- diagram: 3-8-giao-dien-r1.mmd -->
 ```mermaid
@@ -1597,6 +1795,8 @@ flowchart TD
   M --> S[UI06 Cài đặt âm thanh]
   S --> M
 ```
+
+Hình 3.8. Luồng chuyển màn hình dự kiến. Nguồn: thiết kế đề xuất của tác giả.
 
 ### 3.3.2. Thiết kế giao diện
 

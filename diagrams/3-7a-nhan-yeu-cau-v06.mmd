@@ -1,0 +1,13 @@
+flowchart TB
+  A["Nhận yêu cầu ném"]
+  B{"Dữ liệu và trạng thái<br/>hợp lệ?"}
+  R["Bỏ yêu cầu<br/>và trả trạng thái"]
+  C["Tạo cú ném<br/>và thả bóng"]
+  XT(("T"))
+  Z["Kết thúc xử lý<br/>use case"]
+
+  A --> B
+  B -->|"Không"| R
+  R --> Z
+  B -->|"Có"| C
+  C --> XT

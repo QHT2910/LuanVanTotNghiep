@@ -1,0 +1,9 @@
+sequenceDiagram
+ participant A as Client A
+ participant S as Máy chủ
+ participant B as Client B
+ Note over A,B: Q3: cuối mỗi tick, kể cả tick resolved = true
+ S-->>A: Snapshot, ackSeq của A
+ S-->>B: Snapshot, ackSeq của B
+ Note over A,B: Kèm sự kiện có eventId nếu có
+ Note over S: Trở về kiểm guard loop ở panel (b1)

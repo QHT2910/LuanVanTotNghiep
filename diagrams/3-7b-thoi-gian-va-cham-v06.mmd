@@ -1,0 +1,24 @@
+flowchart TB
+  XT(("T"))
+  T{"Hết giờ hoặc trận<br/>đã kết thúc?"}
+  M["Cập nhật bóng<br/>và va chạm"]
+  K{"Bị Block<br/>hợp lệ?"}
+  XG(("G"))
+
+  XE(("E"))
+  E["Kết thúc<br/>không cộng điểm mới"]
+  XF(("F"))
+  F["Bóng tự do<br/>vô hiệu cú ném"]
+  Z["Kết thúc xử lý<br/>use case"]
+
+  XT --> T
+  T -->|"Có"| E
+  T -->|"Không"| M
+  M --> K
+  K -->|"Có"| F
+  K -->|"Không"| XG
+
+  XE --> E
+  XF --> F
+  E --> Z
+  F --> Z

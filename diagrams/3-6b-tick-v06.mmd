@@ -1,0 +1,35 @@
+sequenceDiagram
+  participant S as Máy chủ
+
+  Note over S: Q1: tiếp nhận cú ném từ panel (a)
+
+  loop Các tick khi resolved = false
+    alt Trận đã kết thúc hoặc hết giờ tại tick này
+      S->>S: Giữ tỷ số cuối
+      S->>S: Xác định kết quả nếu chưa có
+      S->>S: Không cộng điểm mới, resolved = true
+    else Trận còn chạy và còn thời gian
+      S->>S: Cập nhật bóng và va chạm tại tick
+
+      alt Block hợp lệ chạm bóng đang bay
+        S->>S: Đổi vận tốc, bóng tự do
+        S->>S: Vô hiệu cú ném, resolved = true
+      else Qua vùng rổ từ trên xuống hợp lệ với shotId hiện hành
+        Note over S: Q2: khai triển nhánh ghi điểm ở panel (c)
+        Note over S: Trở về đây sau khi Q2 hoàn tất
+      else Sự kiện ghi điểm cũ hoặc khác shotId hiện hành
+        S->>S: Bỏ sự kiện, không cộng điểm
+        S->>S: Tiếp tục xử lý cú ném hiện hành
+      else Cú ném trượt đã được giải quyết
+        S->>S: Bóng tự do, vô hiệu cú ném
+        S->>S: resolved = true
+      else Bóng còn bay, chưa có kết quả cú ném
+        S->>S: Giữ resolved = false
+      end
+    end
+
+    Note over S: Q3: gửi snapshot theo panel (c), rồi trở về
+  end
+
+  Note over S: resolved = true dừng vòng xử lý cú ném
+  Note over S: Máy chủ quyết định điểm, quyền bóng và kết quả

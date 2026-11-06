@@ -1,0 +1,33 @@
+sequenceDiagram
+  participant A as Client A
+  participant S as Máy chủ
+  participant B as Client B
+
+  Note over A,B: Q2 và Q3 là hai đoạn được tham chiếu độc lập
+
+  opt Q2: từ nhánh qua rổ hợp lệ của panel (b)
+    alt scored = false
+      S->>S: Cộng pointValue cho người ném
+      S->>S: scored = true
+
+      alt Người ném đạt ít nhất 11 điểm
+        S->>S: Kết thúc trận, xác nhận kết quả
+      else Chưa đạt điều kiện thắng
+        S->>S: Check-ball
+        S->>S: Cấp bóng cho người bị ghi điểm
+        S->>S: Đặt lại vị trí hai nhân vật
+      end
+    else Cú ném hiện hành đã tính
+      S->>S: Bỏ sự kiện, không cộng lặp
+    end
+
+    S->>S: resolved = true
+    Note over S: Kết thúc Q2, trở về nhánh gọi ở panel (b)
+  end
+
+  opt Q3: cuối mỗi tick của panel (b)
+    S-->>A: Snapshot và ackSeq của A
+    S-->>B: Snapshot và ackSeq của B
+    Note over A,B: Kèm sự kiện có eventId nếu có
+    Note over S: Kết thúc Q3, trở về kiểm tra guard loop ở panel (b)
+  end

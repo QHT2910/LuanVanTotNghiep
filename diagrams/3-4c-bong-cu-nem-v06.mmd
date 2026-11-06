@@ -1,0 +1,22 @@
+classDiagram
+  direction TB
+
+  class BallState {
+    Vector3 position
+    Vector3 velocity
+    BallPhase phase
+    String holderId
+  }
+
+  class ShotState {
+    String shotId
+    String shooterId
+    Vector3 releasePosition
+    int releaseTick
+    int pointValue
+    bool scored
+  }
+
+  BallState "1" o-- "0..1" ShotState : shot
+
+  %% BallState là cùng lớp được tham chiếu ở Hình 3.4(b).

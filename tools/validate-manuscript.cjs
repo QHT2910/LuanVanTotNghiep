@@ -27,10 +27,15 @@ function check(ok,msg){if(!ok)throw Error(msg);}
  check(xmlErrors.length===0,xmlErrors.join('\n'));
  const doc=new DOMParser().parseFromString(await z.file('word/document.xml').async('string'),'text/xml'),W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
  const text=Array.from(doc.getElementsByTagNameNS(W,'t')).map(n=>n.textContent).join(' ');
+ require('./publication-checks.cjs').assertClean(text,'Word');
  check(!/PROJECT_BRIEF\.md|OUTLINE\.md|reviewed\.docx|Căn cứ nội bộ|3-9-wireframe|\[图片:/.test(text),'Internal text or unresolved image placeholder in Word');
  for(const name of ['b','bCs','caps','smallCaps'])for(const el of Array.from(doc.getElementsByTagNameNS(W,name)))check(['0','false','off'].includes(el.getAttributeNS(W,'val')),'Unexpected emphasis in Word: '+name);
- const expectedImages=/v0\.5\.docx$/.test(file)?16:14;
+ const publication=/v0\.6\.docx$/.test(file);
+ const expectedImages=publication?27:/v0\.5\.docx$/.test(file)?16:14;
+ const OM='http://schemas.openxmlformats.org/officeDocument/2006/math';
+ const equations=doc.getElementsByTagNameNS(OM,'oMathPara').length;
+ if(publication){check(equations>=3,'Missing display OMML equations');check(!/L_o|f_r|ω_[io]|J_j|Σ_j/.test(text),'Unformatted math subscripts remain');}
  const media=Object.keys(z.files).filter(n=>/^word\/media\/.+\.png$/.test(n));check(media.length===expectedImages,'Expected '+expectedImages+' embedded diagrams');
- check(media.some(n=>n.includes('3-2-usecase-uml')),'New UML not embedded');
- console.log(JSON.stringify({result:'PASS',chapters:3,numberedReferences:known.size,mermaidSourcesCompared:diagrams.length,embeddedDiagrams:media.length,xmlWellFormed:true,paginationVisuallyVerified:false},null,2));
+ check(media.some(n=>n.includes('3-2-usecase-uml'))||Array.from(doc.getElementsByTagName('wp:docPr')).some(n=>/3-2-usecase-uml/.test(n.getAttribute('name')||'')),'New UML not embedded');
+ console.log(JSON.stringify({result:'PASS',chapters:3,numberedReferences:known.size,mermaidSourcesCompared:diagrams.length,embeddedDiagrams:media.length,displayEquations:equations,xmlWellFormed:true,paginationVisuallyVerified:false},null,2));
 })().catch(e=>{console.error(e.message);process.exit(1);});

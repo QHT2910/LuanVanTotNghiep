@@ -1,0 +1,28 @@
+classDiagram
+  direction TB
+
+  class WorldState {
+    int tick
+    int remainingTicks
+    MatchPhase phase
+    List~int~ score
+    MatchResult result
+  }
+
+  class PlayerState {
+    Vector3 position
+    Vector3 velocity
+    Vector3 facing
+    ActionState action
+    Cooldowns cooldowns
+  }
+
+  class BallState {
+    <<reference>>
+  }
+
+  WorldState "1" *-- "2" PlayerState : players
+  WorldState "1" *-- "1" BallState : ball
+
+  %% WorldState là cùng lớp được tham chiếu ở Hình 3.4(a).
+  %% BallState được khai triển trong Hình 3.4(c).

@@ -1,0 +1,18 @@
+flowchart TB
+  G["Game bóng rổ 3D"]
+  P["Phiên và phòng"]
+  M["Thi đấu"]
+  P1["Tạo, vào,<br/>rời phòng"]
+  P2["Sẵn sàng<br/>và bắt đầu"]
+  M1["Di chuyển<br/>và hành động"]
+  M2["Bóng, điểm<br/>và kết quả"]
+
+  G --> P
+  G --> M
+  P --> P1
+  P --> P2
+  M --> M1
+  M --> M2
+
+  P1 ~~~ P2
+  M1 ~~~ M2

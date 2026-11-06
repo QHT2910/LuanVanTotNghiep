@@ -1,0 +1,10 @@
+flowchart TB
+ subgraph JOIN["Gắn và nạp thành công"]
+ direction LR
+ A["onAttach"] --> M["onMount"] --> L["onLoad"]
+ end
+ subgraph LIVE["Tham gia và rời cảnh"]
+ direction LR
+ T["update / fixedUpdate"] --> U["onUnmount"] -.-> D["onDetach"]
+ end
+ L -->|"loaded khi còn mounted"| T

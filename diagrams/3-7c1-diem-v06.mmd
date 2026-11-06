@@ -1,0 +1,8 @@
+flowchart TB
+ XG((G)) --> G{"Qua rổ hợp lệ?"}
+ G -->|Có| H["Cộng 2 hoặc 3 điểm<br/>một lần"]
+ G -->|Không| XL((L))
+ H --> I{"Đã thắng?"}
+ I -->|Có| XE((E))
+ I -->|Không| J["Check-ball, pha mới"]
+ J --> Z["Kết thúc use case"]

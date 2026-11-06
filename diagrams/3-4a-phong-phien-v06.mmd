@@ -1,0 +1,25 @@
+classDiagram
+  direction TB
+
+  class RoomState {
+    String roomCode
+    RoomPhase phase
+  }
+
+  class SessionState {
+    String playerId
+    int slotIndex
+    bool ready
+    ConnectionRef connection
+    int lastSeen
+    int lastProcessedSeq
+  }
+
+  class WorldState {
+    <<reference>>
+  }
+
+  RoomState "1" o-- "0..2" SessionState : slots
+  RoomState "1" o-- "0..1" WorldState : match
+
+  %% WorldState được khai triển trong Hình 3.4(b).

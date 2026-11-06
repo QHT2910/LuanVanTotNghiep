@@ -1,0 +1,18 @@
+flowchart TB
+  G["Game bóng rổ 3D"]
+  N["Đồng bộ mạng"]
+  V["Hiển thị<br/>và âm thanh"]
+  N1["Input<br/>và snapshot"]
+  N2["Đối chiếu<br/>và mất kết nối"]
+  V1["Cảnh Scene<br/>và camera"]
+  V2["HUD, màn hình<br/>và sự kiện"]
+
+  G --> N
+  G --> V
+  N --> N1
+  N --> N2
+  V --> V1
+  V --> V2
+
+  N1 ~~~ N2
+  V1 ~~~ V2

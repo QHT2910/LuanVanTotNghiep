@@ -1,4 +1,12 @@
-# Trạng thái hiện hành R3 / v0.5
+# Trạng thái hiện hành v0.6
+
+Ngày 06/11/2026: đã tích hợp lượt sửa bản xuất sau nghiệm thu nội dung R3. Word/PDF mới ở thesis/Ban_thao_Chuong_1-3_v0.6; giữ nguyên bản v0.5/v0.4 và sửa ngoài lượt v0.3. 37 nguồn, 27 ảnh, ba công thức OMML. Caption 3.x và panel có connector; comment kỹ thuật không còn trong bản xuất. Orca Worker QA xác nhận source/Word XML/15 panel, không có P1/P2 trong phạm vi đã rà. Lead đã inspect 71/71 trang PDF và xem đủ 18 contact sheet, rà riêng trang 15/19/52/56/63; không trang trắng. Xem PUBLICATION_v0.6_REVIEW.md, publication-v0.6-checks.json và qa/publication-v0.6.md.
+
+Native Word export did not finish. The PDF uses Cindy's Chromium renderer with content and images read from the reviewed DOCX; Word and PDF pagination can differ. Native Word pagination has not been visually approved. Do not describe this as a successful native Word PDF export.
+
+Bìa, header, mục lục bản nộp và bộ UI bên thứ ba chưa hoàn thiện. Không có bằng chứng Android/Internet mới, không chạy lại kiểm thử game trong lượt này. Các mục lịch sử bên dưới giữ nguyên để truy vết, không mô tả sản phẩm hiện hành.
+
+## Lịch sử R3 / v0.5
 
 V0.5 đã tạo sau review độc lập Cindy: tutorial A–F, snapshot→node hai client có test headless đạt, Fox asset có commit/license, ví dụ số và caption học thuật. 37 refs,16 ảnh; Word mở chỉ đọc/repaginate/export PDF64 trang và inspect64/64 không trang trắng; đã xem ba trang mẫu và trang19 FOV sau sửa, chưa rà hết thị giác. QA R3 chỉ còn một P1 về dấu nhân FOV; Lead đã sửa, tạo lại bản xuất và xác minh XML/PDF. Chi tiết docs/R3_REVIEW.md, qa/ch02-r3-final.md, source/evidence game/tutorial-r3 và evidence-r3. Giữ Wordv0.4 và thay đổi ngoài lượt của Wordv0.3, không retry research provider.
 
