@@ -1,0 +1,18 @@
+Creating project game\offline-practice...
+Resolving dependencies in `game\offline-practice`...
+Downloading packages...
+Got dependencies in `game\offline-practice`.
+Wrote 35 files.
+
+All done!
+You can find general documentation for Flutter at: https://docs.flutter.dev/
+Detailed API documentation is available at: https://api.flutter.dev/
+If you prefer video documentation, consider: https://www.youtube.com/c/flutterdev
+
+In order to run your application, type:
+
+  $ cd game\offline-practice
+  $ flutter run
+
+Your application code is in game\offline-practice\lib\main.dart.
+

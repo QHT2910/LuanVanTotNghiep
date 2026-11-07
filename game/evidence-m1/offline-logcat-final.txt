@@ -1,0 +1,257 @@
+--------- beginning of main
+I/libprocessgroup(10912): Created cgroup /sys/fs/cgroup/apps/uid_10235/pid_10912
+I/Zygote  (10912): Process 10912 created for com.example.offline_practice
+I/ffline_practice(10912): Late-enabling -Xcheck:jni
+I/ffline_practice(10912): Using generational CollectorTypeCMC GC.
+W/ffline_practice(10912): Unexpected CPU variant for x86: x86_64.
+W/ffline_practice(10912): Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+D/nativeloader(10912): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+D/ApplicationLoaders(10912): Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+D/ApplicationLoaders(10912): Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+D/nativeloader(10912): Configuring clns-9 for other apk /data/app/~~-7t_Dwqj9qeHxg0h8fmMbQ==/com.example.offline_practice-I5We_VTDGB-2bVzMBoubFA==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~-7t_Dwqj9qeHxg0h8fmMbQ==/com.example.offline_practice-I5We_VTDGB-2bVzMBoubFA==/lib/x86_64:/data/app/~~-7t_Dwqj9qeHxg0h8fmMbQ==/com.example.offline_practice-I5We_VTDGB-2bVzMBoubFA==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.offline_practice
+V/GraphicsEnvironment(10912): Currently set values for:
+V/GraphicsEnvironment(10912):   angle_gl_driver_selection_pkgs=[]
+V/GraphicsEnvironment(10912):   angle_gl_driver_selection_values=[]
+V/GraphicsEnvironment(10912): com.example.offline_practice is not listed in per-application setting
+V/GraphicsEnvironment(10912): No special selections for ANGLE, returning default driver choice
+V/GraphicsEnvironment(10912): Neither updatable production driver nor prerelease driver is supported.
+--------- beginning of system
+I/DisplayManager(10912): Choreographer implicitly registered for the refresh rate.
+D/FlutterJNI(10912): Beginning load of flutter...
+I/ResourceExtractor(10912): Found extracted resources res_timestamp-1-1794032832282
+I/ResourceExtractor(10912): Resource version mismatch res_timestamp-1-1794033076107
+I/GFXSTREAM(10912): [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+I/GFXSTREAM(10912): [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+W/libc    (10912): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+W/HWUI    (10912): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/nativeloader(10912): Load /data/app/~~-7t_Dwqj9qeHxg0h8fmMbQ==/com.example.offline_practice-I5We_VTDGB-2bVzMBoubFA==/base.apk!/lib/x86_64/libflutter.so using class loader ns clns-9 (caller=/data/app/~~-7t_Dwqj9qeHxg0h8fmMbQ==/com.example.offline_practice-I5We_VTDGB-2bVzMBoubFA==/base.apk): ok
+D/FlutterJNI(10912): flutter (null) was loaded normally!
+D/skia    (10912): [SkFontMgr Android Parser] '/product/etc/fonts_customization.xml' could not be opened
+I/ResourceExtractor(10912): Extracted baseline resource assets/flutter_assets/kernel_blob.bin
+I/ResourceExtractor(10912): Extracted baseline resource assets/flutter_assets/vm_snapshot_data
+I/ResourceExtractor(10912): Extracted baseline resource assets/flutter_assets/isolate_snapshot_data
+W/ffline_practice(10912): type=1400 audit(0.0:71): avc:  denied  { read } for  name="max_map_count" dev="proc" ino=31845 scontext=u:r:untrusted_app_34:s0:c235,c256,c512,c768 tcontext=u:object_r:proc_max_map_count:s0 tclass=file permissive=0 app=com.example.offline_practice
+W/libc    (10912): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/flutter (10912): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+W/libc    (10912): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/flutter (10912): The Dart VM service is listening on <LOCAL_DEBUG_SERVICE>
+I/ffline_practice(10912): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityNodeInfo;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported,test-api) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10912): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityRecord;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10912): hiddenapi: Accessing hidden field Landroid/view/accessibility/AccessibilityNodeInfo;->mChildNodeIds:Landroid/util/LongArray; (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10912): hiddenapi: Accessing hidden method Landroid/util/LongArray;->get(I)J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+D/AccessibilityBridge(10912): Setting not found: accessibility_display_inversion_enabled, using default: 0
+D/FlutterRenderer(10912): Width is zero. 0,0
+D/CompatChangeReporter(10912): Compat change id reported: 377864165; UID 10235; state: ENABLED
+W/HWUI    (10912): Unknown dataspace 0
+W/libc    (10912): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/Choreographer(10912): Skipped 118 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher(10912): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@9fcbff6
+I/WindowExtensionsImpl(10912): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils(10912): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@fe16255, of which baseContext=android.app.ContextImpl@b04768a
+D/VRI[MainActivity](10912): WindowInsets changed: 1080x2424 statusBars:[0,142,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,174,0,84] 
+D/FlutterRenderer(10912): Width is zero. 0,0
+I/Surface (10912): Creating surface for consumer unnamed-10912-0 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+I/Surface (10912): Creating surface for consumer unnamed-10912-1 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer a574ec4 SurfaceView[com.example.offline_practice/com.example.offline_practice.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/ffline_practice(10912): Compiler allocated 5239KB to compile void android.view.ViewRootImpl.performTraversals(long)
+D/WindowLayoutComponentImpl(10912): Register WindowLayoutInfoListener on Context=com.example.offline_practice.MainActivity@a4ac873, of which baseContext=android.app.ContextImpl@430dc06
+I/Choreographer(10912): Skipped 49 frames!  The application may be doing too much work on its main thread.
+D/VRI[MainActivity](10912): WindowInsets changed: 2424x1080 statusBars:[0,137,0,0] mandatorySystemGestures:[0,137,0,84] 
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+I/HWUI    (10912): Davey! duration=1018ms; Flags=1, FrameTimelineVsyncId=509754, IntendedVsync=1976302981495, Vsync=1977119648129, InputEventId=0, HandleInputStart=1977125325406, AnimationStart=1977125326369, PerformTraversalsStart=1977125326905, DrawStart=1977211361460, FrameDeadline=1976319648161, FrameStartTime=1977125004023, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=1977119648129, SyncQueued=1977212433308, SyncStart=1977212728399, IssueDrawCommandsStart=1977213230049, SwapBuffers=1977228351606, FrameCompleted=1977321635476, DequeueBufferDuration=2115705, QueueBufferDuration=384485, GpuCompleted=1977321635476, SwapBuffersCompleted=1977315339553, DisplayPresentTime=128006015279724, CommandSubmissionCompleted=1977228351606, 
+I/flutter (10912): flutter_scene: depth is 24-bit, reversed, near 0.10 m, fitted to 8.0 m. Faces 1 cm apart stay distinct to about 410 m face-on; an overlay that touches its surface needs a higher Material.depthLayer.
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+I/Choreographer(10912): Skipped 82 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+D/InsetsController(10912): hide(ime())
+I/ImeTracker(10912): com.example.offline_practice:4169a977: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":1,"simTime":0.0,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":2,"simTime":0.09999999999999999,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":3,"simTime":0.19999999999999998,"round":1,"shotId":0,"accepted":0.1}
+D/ProfileInstaller(10912): Installing profile for com.example.offline_practice
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":4,"simTime":0.3000000000000001,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":5,"simTime":0.47500000000000064,"round":1,"shotId":0}
+I/flutter (10912): practice_event {"event":"charge_cancel","eventId":6,"simTime":0.47500000000000064,"round":1,"shotId":0,"reason":"background"}
+I/flutter (10912): practice_event {"event":"paused","eventId":7,"simTime":0.47500000000000064,"round":1,"shotId":0}
+D/VRI[MainActivity](10912): visibilityChanged oldVisibility=true newVisibility=false
+D/ViewRootImpl(10912): Skipping stats log for color mode
+I/Surface (10912): Creating surface for consumer unnamed-10912-2 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer VRI[MainActivity]#2(BLAST Consumer)2 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer unnamed-10912-3 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer a574ec4 SurfaceView[com.example.offline_practice/com.example.offline_practice.MainActivity]#3(BLAST Consumer)3 with slotExpansion=1 for 64 slots
+E/SurfaceSyncGroup(10912): Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[MainActivity]#5) as ready
+E/SurfaceSyncGroup(10912): Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[MainActivity]#6) as ready
+E/SurfaceSyncGroup(10912): Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(SurfaceView[com.example.offline_practice/com.example.offline_practice.MainActivity]#4) as ready
+I/flutter (10912): practice_event {"event":"resumed","eventId":8,"simTime":0.47500000000000064,"round":1,"shotId":0}
+D/InsetsController(10912): hide(ime())
+I/ImeTracker(10912): com.example.offline_practice:671d3a38: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/flutter (10912): practice_event {"event":"charge_start","eventId":9,"simTime":0.47500000000000064,"round":1,"shotId":0}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":10,"simTime":0.47500000000000064,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_cancel","eventId":11,"simTime":0.5750000000000004,"round":1,"shotId":0,"reason":"background"}
+I/flutter (10912): practice_event {"event":"paused","eventId":12,"simTime":0.5750000000000004,"round":1,"shotId":0}
+D/VRI[MainActivity](10912): visibilityChanged oldVisibility=true newVisibility=false
+D/ViewRootImpl(10912): Skipping stats log for color mode
+D/FlutterJNI(10912): Sending viewport metrics to the engine.
+I/Surface (10912): Creating surface for consumer unnamed-10912-4 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer VRI[MainActivity]#4(BLAST Consumer)4 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer unnamed-10912-5 with slotExpansion=1 for 64 slots
+I/Surface (10912): Creating surface for consumer a574ec4 SurfaceView[com.example.offline_practice/com.example.offline_practice.MainActivity]#5(BLAST Consumer)5 with slotExpansion=1 for 64 slots
+I/flutter (10912): practice_event {"event":"resumed","eventId":13,"simTime":0.5750000000000004,"round":1,"shotId":0}
+D/InsetsController(10912): hide(ime())
+I/ImeTracker(10912): com.example.offline_practice:30a0d6fe: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":14,"simTime":0.5750000000000004,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":15,"simTime":0.675,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":16,"simTime":1.033333333333332,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":17,"simTime":1.416666666666664,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":18,"simTime":3.249999999999991,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":19,"simTime":3.7249999999999894,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":20,"simTime":4.141666666666662,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":21,"simTime":4.408333333333342,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":22,"simTime":4.8916666666666995,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":23,"simTime":4.991666666666704,"round":1,"shotId":0,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":24,"simTime":6.075000000000092,"round":1,"shotId":0}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":25,"simTime":6.7416666666667915,"round":1,"shotId":1,"charge":0.5555555555555557,"pointValue":3,"feetX":0.0,"feetZ":3.0,"originX":0.0,"originY":1.8,"originZ":3.0}
+I/flutter (10912): practice_event {"event":"score","eventId":26,"simTime":8.150000000000178,"round":1,"shotId":1,"points":3,"score":3}
+I/flutter (10912): practice_event {"event":"rim_crossing","eventId":27,"simTime":8.150000000000178,"round":1,"shotId":1,"inside":true,"x":0.0,"z":-2.822222222222223}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":28,"simTime":8.191666666666842,"round":1,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":29,"simTime":8.466666666666827,"round":1,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_end","eventId":30,"simTime":8.516666666666824,"round":1,"shotId":1,"scored":true,"score":3}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":31,"simTime":9.5250000000001,"round":2,"shotId":1,"reason":"auto","score":3}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":32,"simTime":9.666666666666758,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":33,"simTime":10.916666666666687,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":34,"simTime":11.083333333333345,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":35,"simTime":11.291666666666666,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":36,"simTime":11.39166666666666,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":37,"simTime":11.608333333333315,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":38,"simTime":12.99166666666657,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":39,"simTime":13.316666666666551,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":40,"simTime":13.466666666666542,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":41,"simTime":14.183333333333168,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":42,"simTime":14.883333333333129,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":43,"simTime":15.73333333333308,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":44,"simTime":17.366666666666323,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":45,"simTime":20.258333333332825,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":46,"simTime":20.82499999999946,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":47,"simTime":20.983333333332784,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":48,"simTime":23.349999999999316,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":49,"simTime":24.35833333333259,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":50,"simTime":25.324999999999203,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":51,"simTime":25.51666666666586,"round":2,"shotId":1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":52,"simTime":25.51666666666586,"round":2,"shotId":1,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":53,"simTime":26.15833333333249,"round":2,"shotId":2,"charge":0.5347222222222224,"pointValue":2,"feetX":0.0,"feetZ":-0.45833333333333726,"originX":0.0,"originY":1.8,"originZ":-0.45833333333333726}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":54,"simTime":26.15833333333249,"round":2,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":55,"simTime":26.733333333332457,"round":2,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":56,"simTime":27.46666666666575,"round":2,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"score","eventId":57,"simTime":27.566666666665743,"round":2,"shotId":2,"points":2,"score":5}
+I/flutter (10912): practice_event {"event":"rim_crossing","eventId":58,"simTime":27.566666666665743,"round":2,"shotId":2,"inside":true,"x":0.0,"z":-2.73888888888889}
+I/flutter (10912): practice_event {"event":"shot_end","eventId":59,"simTime":27.93333333333239,"round":2,"shotId":2,"scored":true,"score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":60,"simTime":27.93333333333239,"round":2,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":61,"simTime":28.941666666665665,"round":3,"shotId":2,"reason":"auto","score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":62,"simTime":29.27499999999898,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":63,"simTime":30.258333333332256,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":64,"simTime":30.641666666665568,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":65,"simTime":31.716666666665507,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":66,"simTime":32.20833333333215,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":67,"simTime":32.68333333333212,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":68,"simTime":34.44999999999869,"round":3,"shotId":2,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":69,"simTime":36.366666666665246,"round":3,"shotId":2}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":70,"simTime":36.43333333333191,"round":3,"shotId":3,"charge":0.05555555555555556,"pointValue":2,"feetX":0.0,"feetZ":-0.45833333333333726,"originX":0.0,"originY":1.8,"originZ":-0.45833333333333726}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":71,"simTime":37.2166666666652,"round":3,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"rim_crossing","eventId":72,"simTime":37.84166666666516,"round":3,"shotId":3,"inside":false,"x":0.0,"z":-0.8222222222222224}
+I/flutter (10912): practice_event {"event":"shot_end","eventId":73,"simTime":38.20833333333181,"round":3,"shotId":3,"scored":false,"score":5}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":74,"simTime":39.216666666665084,"round":4,"shotId":3,"reason":"auto","score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":75,"simTime":39.67499999999839,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":76,"simTime":40.83333333333166,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":77,"simTime":41.991666666664926,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":78,"simTime":44.42499999999812,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":79,"simTime":46.55833333333133,"round":4,"shotId":3}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":80,"simTime":46.90833333333131,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":81,"simTime":47.85833333333126,"round":4,"shotId":3,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":82,"simTime":48.08333333333125,"round":4,"shotId":4,"charge":1.0,"pointValue":2,"feetX":0.0,"feetZ":-0.45833333333333726,"originX":0.0,"originY":1.8,"originZ":-0.45833333333333726}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":83,"simTime":48.49166666666456,"round":4,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"rim_crossing","eventId":84,"simTime":49.4916666666645,"round":4,"shotId":4,"inside":false,"x":0.0,"z":-4.6000000000000005}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":85,"simTime":49.708333333331154,"round":4,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_end","eventId":86,"simTime":49.858333333331146,"round":4,"shotId":4,"scored":false,"score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":87,"simTime":50.04166666666447,"round":4,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":88,"simTime":50.86666666666442,"round":5,"shotId":4,"reason":"auto","score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":89,"simTime":51.983333333331025,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":90,"simTime":52.24999999999768,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":91,"simTime":53.35833333333095,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":92,"simTime":55.09166666666418,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":93,"simTime":57.53333333333071,"round":5,"shotId":4}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":94,"simTime":57.53333333333071,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":95,"simTime":57.99166666666402,"round":5,"shotId":4,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":96,"simTime":58.274999999997334,"round":5,"shotId":5,"charge":0.6180555555555555,"pointValue":2,"feetX":0.0,"feetZ":-0.45833333333333726,"originX":0.0,"originY":1.8,"originZ":-0.45833333333333726}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":97,"simTime":58.424999999997326,"round":5,"shotId":5,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":98,"simTime":58.52499999999732,"round":6,"shotId":5,"reason":"manual","score":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":99,"simTime":58.54999999999732,"round":6,"shotId":5,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":100,"simTime":59.74166666666392,"round":6,"shotId":5,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":101,"simTime":60.899999999997185,"round":6,"shotId":5,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"charge_start","eventId":102,"simTime":62.02499999999712,"round":6,"shotId":5}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":103,"simTime":62.02499999999712,"round":6,"shotId":5,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"shot_release","eventId":104,"simTime":62.74999999999708,"round":6,"shotId":6,"charge":0.6041666666666666,"pointValue":2,"feetX":0.0,"feetZ":-0.45833333333333726,"originX":0.0,"originY":1.8,"originZ":-0.45833333333333726}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":105,"simTime":63.16666666666372,"round":6,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":106,"simTime":63.466666666663706,"round":6,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":107,"simTime":63.5916666666637,"round":6,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":108,"simTime":63.86666666666368,"round":6,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"score","eventId":109,"simTime":64.15833333333046,"round":6,"shotId":6,"points":2,"score":7}
+I/flutter (10912): practice_event {"event":"rim_crossing","eventId":110,"simTime":64.15833333333046,"round":6,"shotId":6,"inside":true,"x":0.0,"z":-3.0166666666666666}
+I/flutter (10912): practice_event {"event":"shot_end","eventId":111,"simTime":64.52499999999742,"round":6,"shotId":6,"scored":true,"score":7}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":112,"simTime":64.54999999999744,"round":6,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"round_reset","eventId":113,"simTime":65.53333333333156,"round":7,"shotId":6,"reason":"auto","score":7}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":114,"simTime":65.71666666666503,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":115,"simTime":66.21666666666543,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":116,"simTime":68.26666666666706,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":117,"simTime":71.23333333333609,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":118,"simTime":73.82500000000482,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":119,"simTime":83.42500000001246,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":120,"simTime":83.84166666667946,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":121,"simTime":84.6416666666801,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":122,"simTime":86.77500000001513,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":123,"simTime":93.85000000002076,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":124,"simTime":95.78333333335563,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":125,"simTime":99.78333333335881,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":126,"simTime":100.41666666669265,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":127,"simTime":102.0750000000273,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":128,"simTime":103.00833333336138,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":129,"simTime":106.00000000003043,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":130,"simTime":113.60000000003647,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":131,"simTime":118.55000000004041,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":132,"simTime":119.04166666670747,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":133,"simTime":120.75000000004216,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":134,"simTime":121.5916666667095,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":135,"simTime":121.93333333337644,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":136,"simTime":123.65000000004447,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":137,"simTime":124.8666666667121,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":138,"simTime":126.825000000047,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":139,"simTime":127.81666666671445,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":140,"simTime":128.03333333338122,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":141,"simTime":128.3166666667143,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":142,"simTime":131.14166666671173,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":143,"simTime":132.4250000000439,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":144,"simTime":132.9750000000434,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":145,"simTime":135.59166666670768,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":146,"simTime":135.7583333333742,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":147,"simTime":140.16666666670352,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":148,"simTime":144.93333333336585,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":149,"simTime":146.19166666669804,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":150,"simTime":146.58333333336435,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":151,"simTime":147.10000000003055,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":152,"simTime":150.61666666669402,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":153,"simTime":156.64166666668854,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":154,"simTime":157.69166666668758,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":155,"simTime":158.38333333335362,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":156,"simTime":159.08333333335298,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":157,"simTime":159.29166666668613,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":158,"simTime":160.75833333335146,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":159,"simTime":162.5833333333498,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":160,"simTime":165.8166666666802,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":161,"simTime":166.48333333334625,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":162,"simTime":167.28333333334552,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":163,"simTime":169.7333333333433,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":164,"simTime":172.17500000000774,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":165,"simTime":178.4416666666687,"round":7,"shotId":6,"accepted":0.1}
+I/flutter (10912): practice_event {"event":"dt_clamped","eventId":166,"simTime":180.2500000000004,"round":7,"shotId":6,"accepted":0.1}

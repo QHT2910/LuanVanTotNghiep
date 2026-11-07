@@ -1,0 +1,978 @@
+[
+  {
+    "event": "dt_clamped",
+    "eventId": 1,
+    "simTime": 0,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 2,
+    "simTime": 0.09999999999999999,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 3,
+    "simTime": 0.19999999999999998,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 4,
+    "simTime": 0.3000000000000001,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 5,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_cancel",
+    "eventId": 6,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0,
+    "reason": "background"
+  },
+  {
+    "event": "paused",
+    "eventId": 7,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "resumed",
+    "eventId": 8,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_start",
+    "eventId": 9,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 10,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_cancel",
+    "eventId": 11,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0,
+    "reason": "background"
+  },
+  {
+    "event": "paused",
+    "eventId": 12,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "resumed",
+    "eventId": 13,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 14,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 15,
+    "simTime": 0.675,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 16,
+    "simTime": 1.033333333333332,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 17,
+    "simTime": 1.416666666666664,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 18,
+    "simTime": 3.249999999999991,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 19,
+    "simTime": 3.7249999999999894,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 20,
+    "simTime": 4.141666666666662,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 21,
+    "simTime": 4.408333333333342,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 22,
+    "simTime": 4.8916666666666995,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 23,
+    "simTime": 4.991666666666704,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 24,
+    "simTime": 6.075000000000092,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "shot_release",
+    "eventId": 25,
+    "simTime": 6.7416666666667915,
+    "round": 1,
+    "shotId": 1,
+    "charge": 0.5555555555555557,
+    "pointValue": 3,
+    "feetX": 0,
+    "feetZ": 3,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": 3
+  },
+  {
+    "event": "score",
+    "eventId": 26,
+    "simTime": 8.150000000000178,
+    "round": 1,
+    "shotId": 1,
+    "points": 3,
+    "score": 3
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 27,
+    "simTime": 8.150000000000178,
+    "round": 1,
+    "shotId": 1,
+    "inside": true,
+    "x": 0,
+    "z": -2.822222222222223
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 28,
+    "simTime": 8.191666666666842,
+    "round": 1,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 29,
+    "simTime": 8.466666666666827,
+    "round": 1,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_end",
+    "eventId": 30,
+    "simTime": 8.516666666666824,
+    "round": 1,
+    "shotId": 1,
+    "scored": true,
+    "score": 3
+  },
+  {
+    "event": "round_reset",
+    "eventId": 31,
+    "simTime": 9.5250000000001,
+    "round": 2,
+    "shotId": 1,
+    "reason": "auto",
+    "score": 3
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 32,
+    "simTime": 9.666666666666758,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 33,
+    "simTime": 10.916666666666687,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 34,
+    "simTime": 11.083333333333345,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 35,
+    "simTime": 11.291666666666666,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 36,
+    "simTime": 11.39166666666666,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 37,
+    "simTime": 11.608333333333315,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 38,
+    "simTime": 12.99166666666657,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 39,
+    "simTime": 13.316666666666551,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 40,
+    "simTime": 13.466666666666542,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 41,
+    "simTime": 14.183333333333168,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 42,
+    "simTime": 14.883333333333129,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 43,
+    "simTime": 15.73333333333308,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 44,
+    "simTime": 17.366666666666323,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 45,
+    "simTime": 20.258333333332825,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 46,
+    "simTime": 20.82499999999946,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 47,
+    "simTime": 20.983333333332784,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 48,
+    "simTime": 23.349999999999316,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 49,
+    "simTime": 24.35833333333259,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 50,
+    "simTime": 25.324999999999203,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 51,
+    "simTime": 25.51666666666586,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 52,
+    "simTime": 25.51666666666586,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 53,
+    "simTime": 26.15833333333249,
+    "round": 2,
+    "shotId": 2,
+    "charge": 0.5347222222222224,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 54,
+    "simTime": 26.15833333333249,
+    "round": 2,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 55,
+    "simTime": 26.733333333332457,
+    "round": 2,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 56,
+    "simTime": 27.46666666666575,
+    "round": 2,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "score",
+    "eventId": 57,
+    "simTime": 27.566666666665743,
+    "round": 2,
+    "shotId": 2,
+    "points": 2,
+    "score": 5
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 58,
+    "simTime": 27.566666666665743,
+    "round": 2,
+    "shotId": 2,
+    "inside": true,
+    "x": 0,
+    "z": -2.73888888888889
+  },
+  {
+    "event": "shot_end",
+    "eventId": 59,
+    "simTime": 27.93333333333239,
+    "round": 2,
+    "shotId": 2,
+    "scored": true,
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 60,
+    "simTime": 27.93333333333239,
+    "round": 2,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "round_reset",
+    "eventId": 61,
+    "simTime": 28.941666666665665,
+    "round": 3,
+    "shotId": 2,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 62,
+    "simTime": 29.27499999999898,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 63,
+    "simTime": 30.258333333332256,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 64,
+    "simTime": 30.641666666665568,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 65,
+    "simTime": 31.716666666665507,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 66,
+    "simTime": 32.20833333333215,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 67,
+    "simTime": 32.68333333333212,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 68,
+    "simTime": 34.44999999999869,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 69,
+    "simTime": 36.366666666665246,
+    "round": 3,
+    "shotId": 2
+  },
+  {
+    "event": "shot_release",
+    "eventId": 70,
+    "simTime": 36.43333333333191,
+    "round": 3,
+    "shotId": 3,
+    "charge": 0.05555555555555556,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 71,
+    "simTime": 37.2166666666652,
+    "round": 3,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 72,
+    "simTime": 37.84166666666516,
+    "round": 3,
+    "shotId": 3,
+    "inside": false,
+    "x": 0,
+    "z": -0.8222222222222224
+  },
+  {
+    "event": "shot_end",
+    "eventId": 73,
+    "simTime": 38.20833333333181,
+    "round": 3,
+    "shotId": 3,
+    "scored": false,
+    "score": 5
+  },
+  {
+    "event": "round_reset",
+    "eventId": 74,
+    "simTime": 39.216666666665084,
+    "round": 4,
+    "shotId": 3,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 75,
+    "simTime": 39.67499999999839,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 76,
+    "simTime": 40.83333333333166,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 77,
+    "simTime": 41.991666666664926,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 78,
+    "simTime": 44.42499999999812,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 79,
+    "simTime": 46.55833333333133,
+    "round": 4,
+    "shotId": 3
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 80,
+    "simTime": 46.90833333333131,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 81,
+    "simTime": 47.85833333333126,
+    "round": 4,
+    "shotId": 3,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 82,
+    "simTime": 48.08333333333125,
+    "round": 4,
+    "shotId": 4,
+    "charge": 1,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 83,
+    "simTime": 48.49166666666456,
+    "round": 4,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 84,
+    "simTime": 49.4916666666645,
+    "round": 4,
+    "shotId": 4,
+    "inside": false,
+    "x": 0,
+    "z": -4.6000000000000005
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 85,
+    "simTime": 49.708333333331154,
+    "round": 4,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_end",
+    "eventId": 86,
+    "simTime": 49.858333333331146,
+    "round": 4,
+    "shotId": 4,
+    "scored": false,
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 87,
+    "simTime": 50.04166666666447,
+    "round": 4,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "round_reset",
+    "eventId": 88,
+    "simTime": 50.86666666666442,
+    "round": 5,
+    "shotId": 4,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 89,
+    "simTime": 51.983333333331025,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 90,
+    "simTime": 52.24999999999768,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 91,
+    "simTime": 53.35833333333095,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 92,
+    "simTime": 55.09166666666418,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 93,
+    "simTime": 57.53333333333071,
+    "round": 5,
+    "shotId": 4
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 94,
+    "simTime": 57.53333333333071,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 95,
+    "simTime": 57.99166666666402,
+    "round": 5,
+    "shotId": 4,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 96,
+    "simTime": 58.274999999997334,
+    "round": 5,
+    "shotId": 5,
+    "charge": 0.6180555555555555,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 97,
+    "simTime": 58.424999999997326,
+    "round": 5,
+    "shotId": 5,
+    "accepted": 0.1
+  },
+  {
+    "event": "round_reset",
+    "eventId": 98,
+    "simTime": 58.52499999999732,
+    "round": 6,
+    "shotId": 5,
+    "reason": "manual",
+    "score": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 99,
+    "simTime": 58.54999999999732,
+    "round": 6,
+    "shotId": 5,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 100,
+    "simTime": 59.74166666666392,
+    "round": 6,
+    "shotId": 5,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 101,
+    "simTime": 60.899999999997185,
+    "round": 6,
+    "shotId": 5,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 102,
+    "simTime": 62.02499999999712,
+    "round": 6,
+    "shotId": 5
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 103,
+    "simTime": 62.02499999999712,
+    "round": 6,
+    "shotId": 5,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 104,
+    "simTime": 62.74999999999708,
+    "round": 6,
+    "shotId": 6,
+    "charge": 0.6041666666666666,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 105,
+    "simTime": 63.16666666666372,
+    "round": 6,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 106,
+    "simTime": 63.466666666663706,
+    "round": 6,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 107,
+    "simTime": 63.5916666666637,
+    "round": 6,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 108,
+    "simTime": 63.86666666666368,
+    "round": 6,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "score",
+    "eventId": 109,
+    "simTime": 64.15833333333046,
+    "round": 6,
+    "shotId": 6,
+    "points": 2,
+    "score": 7
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 110,
+    "simTime": 64.15833333333046,
+    "round": 6,
+    "shotId": 6,
+    "inside": true,
+    "x": 0,
+    "z": -3.0166666666666666
+  },
+  {
+    "event": "shot_end",
+    "eventId": 111,
+    "simTime": 64.52499999999742,
+    "round": 6,
+    "shotId": 6,
+    "scored": true,
+    "score": 7
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 112,
+    "simTime": 64.54999999999744,
+    "round": 6,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "round_reset",
+    "eventId": 113,
+    "simTime": 65.53333333333156,
+    "round": 7,
+    "shotId": 6,
+    "reason": "auto",
+    "score": 7
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 114,
+    "simTime": 65.71666666666503,
+    "round": 7,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 115,
+    "simTime": 66.21666666666543,
+    "round": 7,
+    "shotId": 6,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 116,
+    "simTime": 68.26666666666706,
+    "round": 7,
+    "shotId": 6,
+    "accepted": 0.1
+  }
+]

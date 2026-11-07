@@ -1,0 +1,7 @@
+node : Missing semantics new_round
+At line:9 char:1
++ node game/offline-practice/tool/avd-smoke.cjs emulator-5554 reset *>  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Missing semantics new_round:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

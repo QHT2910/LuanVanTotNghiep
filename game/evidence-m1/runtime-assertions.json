@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "source": "Real ADB touch events on one running Pixel_9a AVD",
+  "shots": 6,
+  "scoredShots": [
+    1,
+    2,
+    6
+  ],
+  "score": 7,
+  "backgroundResumeCycles": 2,
+  "resetFlightShot": 5,
+  "continuationShot": 6,
+  "limits": [
+    "Not a two-Android or Internet test",
+    "Not physical-device performance",
+    "Same-frame pointer race reviewed in source, not injected before a render tick",
+    "Simultaneous multi-touch not exercised on AVD; normalization covered in unit tests"
+  ]
+}

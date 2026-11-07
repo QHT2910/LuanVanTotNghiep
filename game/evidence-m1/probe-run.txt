@@ -1,0 +1,67 @@
+Launching lib/checkpoints/f/main.dart on sdk gphone16k x86 64 in debug mode...
+Running Gradle task 'assembleDebug'...                            309.7s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...          901ms
+I/FlutterActivityAndFragmentDelegate( 7080): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI( 7080): Beginning load of flutter...
+D/FlutterJNI( 7080): flutter (null) was loaded normally!
+I/flutter ( 7080): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 7080): Width is zero. 0,0
+I/Choreographer( 7080): Skipped 183 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher( 7080): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@15edff7
+I/WindowExtensionsImpl( 7080): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils( 7080): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@fe16255, of which baseContext=android.app.ContextImpl@5c0b4fb
+D/VRI[MainActivity]( 7080): WindowInsets changed: 1080x2424 statusBars:[0,142,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,174,0,84] 
+D/FlutterRenderer( 7080): Width is zero. 0,0
+I/Surface ( 7080): Creating surface for consumer unnamed-7080-0 with slotExpansion=1 for 64 slots
+I/Surface ( 7080): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI( 7080): Sending viewport metrics to the engine.
+I/Surface ( 7080): Creating surface for consumer unnamed-7080-1 with slotExpansion=1 for 64 slots
+I/Surface ( 7080): Creating surface for consumer c471ad SurfaceView[com.example.scene_tutorial_r3/com.example.scene_tutorial_r3.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/ene_tutorial_r3( 7080): Compiler allocated 5247KB to compile void android.view.ViewRootImpl.performTraversals(long)
+I/Choreographer( 7080): Skipped 35 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI( 7080): Sending viewport metrics to the engine.
+D/WindowLayoutComponentImpl( 7080): Register WindowLayoutInfoListener on Context=com.example.scene_tutorial_r3.MainActivity@6dc9330, of which baseContext=android.app.ContextImpl@1ef963a
+D/FlutterJNI( 7080): Sending viewport metrics to the engine.
+D/InsetsController( 7080): hide(ime())
+I/ImeTracker( 7080): com.example.scene_tutorial_r3:d70d6ab4: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/flutter ( 7080): Unpacking glTF (nodes: 26, meshes: 1, materials: 1, skins: 1, animations: 3)
+I/flutter ( 7080): flutter_scene: depth is 24-bit, reversed, near 0.10 m. Faces 1 cm apart stay distinct to about 46 m face-on; an overlay that touches its surface needs a higher Material.depthLayer.
+D/ProfileInstaller( 7080): Installing profile for com.example.scene_tutorial_r3
+I/ene_tutorial_r3( 7080): Background concurrent mark compact GC freed 1847KB AllocSpace bytes, 4(112KB) LOS objects, 49% free, 2507KB/5014KB, paused 132us,6.061ms total 21.293ms
+Syncing files to device sdk gphone16k x86 64...                    700ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone16k x86 64 is available at: <LOCAL_DEBUG_SERVICE>
+The Flutter DevTools debugger and profiler on sdk gphone16k x86 64 is available at: <LOCAL_DEBUG_SERVICE>
+D/VRI[MainActivity]( 7080): visibilityChanged oldVisibility=true newVisibility=false
+D/FlutterJNI( 7908): Beginning load of flutter...
+D/FlutterJNI( 7908): flutter (null) was loaded normally!
+I/flutter ( 7908): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 7908): Width is zero. 0,0
+D/FlutterRenderer( 7908): Width is zero. 0,0
+D/FlutterJNI( 7908): Sending viewport metrics to the engine.
+D/FlutterJNI( 7080): Sending viewport metrics to the engine.
+I/flutter ( 7908): flutter_scene: depth is 24-bit, reversed, near 0.10 m, fitted to 8.0 m. Faces 1 cm apart stay distinct to about 410 m face-on; an overlay that touches its surface needs a higher Material.depthLayer.
+D/FlutterJNI( 7908): Sending viewport metrics to the engine.
+D/FlutterJNI( 7908): Sending viewport metrics to the engine.
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":1,"simTime":0.0,"round":1,"shotId":0,"accepted":0.1}
+D/FlutterJNI( 7908): Sending viewport metrics to the engine.
+D/FlutterJNI( 7908): Sending viewport metrics to the engine.
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":2,"simTime":0.09999999999999999,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":3,"simTime":0.19999999999999998,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":4,"simTime":0.3000000000000001,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":5,"simTime":0.4000000000000004,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":6,"simTime":0.5000000000000007,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":7,"simTime":0.6000000000000003,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":8,"simTime":0.7,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":9,"simTime":0.7999999999999996,"round":1,"shotId":0,"accepted":0.1}
+I/flutter ( 7908): practice_event {"event":"dt_clamped","eventId":10,"simTime":0.8999999999999992,"round":1,"shotId":0,"accepted":0.1}
+Lost connection to device.

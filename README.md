@@ -2,6 +2,8 @@
 
 Nghiên cứu Flutter Scene và ứng dụng xây dựng demo game bóng rổ đối kháng 3D trên Android, ưu tiên hai người qua Internet.
 
+Ưu tiên hiện tại: demo từng phần trên giả lập; luận văn sửa song song sau. [Tập offline mốc1](game/offline-practice/README.md) đã có APK debug và bằng chứng trên một Pixel_9a; [báo cáo kiểm chứng](docs/MILESTONE_1_REVIEW.md). Đây chưa phải multiplayer hoặc kết quả máy thật. Figma đã được chọn cho UI01–UI06, chưa có file/session; giao diện demo chỉ là UI tạm.
+
 - [Bố cục sơ bộ](thesis/OUTLINE.md)
 - [Chương 1 — Giới thiệu](thesis/01-gioi-thieu.md)
 - [Chương 2 — Cơ sở lý thuyết](thesis/02-co-so-ly-thuyet.md)
@@ -27,8 +29,8 @@ Nghiên cứu Flutter Scene và ứng dụng xây dựng demo game bóng rổ đ
 - [Trạng thái và phần cần hoàn thiện](docs/TRANG_THAI_BAN_THAO.md)
 - [Lưu GitHub cuối phiên](docs/GITHUB_WORKFLOW.md)
 
-Trạng thái: bản thảo sơ bộ theo bố cục sinh viên chỉ định, có thể thay đổi. Có probe biệt lập qua analyze/build bundle và smoke hai client loopback; chưa có game hoàn chỉnh, APK chạy thật hoặc bằng chứng hai Android/Internet. Chương 4–5 chờ sản phẩm. Bản này chưa sẵn sàng nộp.
+Trạng thái: bản thảo sơ bộ theo bố cục sinh viên chỉ định, có thể thay đổi. Có probe và tập offline đã chạy trên một AVD; chưa có full game, kết quả Redmi hoặc bằng chứng hai Android/Internet. Chương 4–5 chờ sản phẩm. Bản này chưa sẵn sàng nộp.
 
 Nguồn Mermaid và SVG UML trong `diagrams/` có thể chỉnh sửa. Tài liệu gốc trường, bản nháp tham khảo, cache và cấu hình cá nhân không đưa lên repo công khai.
 
-Game dùng tên tạm Bóng rổ đối kháng 3D. Các tệp v0.1/v0.2 và wireframe 3-9 lưu lại để theo dõi lịch sử. Mục 3.3 cần bộ thiết kế bằng phần mềm bên thứ ba; Figma chỉ mới được đề xuất, chưa được xác nhận chọn/chạy. Xem [đặc tả UI](design/ui-spec-r1.md) và [kiểm chứng khả thi](game/feasibility-r1.md).
+Game dùng tên tạm Bóng rổ đối kháng 3D. Các tệp v0.1/v0.2 và wireframe 3-9 lưu lại để theo dõi lịch sử. Mục 3.3 cần bộ thiết kế bằng phần mềm bên thứ ba; Figma đã được sinh viên chọn; chưa có file/session hoặc bộ thiết kế chính thức. Xem [đặc tả UI](design/ui-spec-r1.md) và [kiểm chứng khả thi](game/feasibility-r1.md).

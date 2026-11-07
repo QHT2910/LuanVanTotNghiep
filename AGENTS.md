@@ -7,9 +7,9 @@
 - Tên game tạm: Bóng rổ đối kháng 3D. Gameplay demo đã được sinh viên đồng ý theo gợi ý: nửa sân 1v1, 2/3 điểm, 11 điểm hoặc 3 phút, di chuyển/ném/nhảy/Dash/Block, phòng bằng mã và ghép trận nhanh bổ sung sau. Kiến trúc và kết quả thực nghiệm vẫn chưa được xác nhận.
 - Ch2 có 2.1 Các hệ thống tương tự, các mục cũ dịch tăng một số. Ch3 có 3.3 Hệ thống màn hình riêng theo mẫu; bản UI tự sinh cũ không được dùng làm hình thiết kế chính thức. Giao diện phải được thiết kế trong công cụ bên thứ ba, lưu nguồn và ảnh xuất thực tế.
 - Đọc PROJECT_BRIEF.md (hồ sơ nội bộ) và thesis/OUTLINE.md trước khi viết.
-- Ưu tiên bản thảo Chương 1–3 trước giữa kỳ 16–28/11/2026. Ch4–5 chỉ viết nội dung kết quả sau khi có sản phẩm/bằng chứng. Bố cục hiện tại là sơ bộ, sẽ thay đổi khi sinh viên yêu cầu.
+- Ưu tiên mới ngày 07/11/2026: demo từng phần trên giả lập trước, luận văn sửa song song sau. Mốc 1 là Scene/asset probe trên một Pixel_9a và tập offline riêng; chưa multiplayer/Dash/Block. Giữ mốc giữa kỳ 16–28/11/2026; Ch4–5 chỉ viết kết quả theo bằng chứng thực. Bố cục luận văn vẫn sơ bộ.
 - Bản Word cũ chỉ là nguồn tham khảo. Không tự biến đề xuất trong đó thành yêu cầu đã phê duyệt hoặc tính năng đã hoàn thành.
-- Chưa có sản phẩm; không bịa kết quả thử, ảnh chụp, nguồn, API. Ghi rõ sơ đồ/kiến trúc là thiết kế đề xuất và code hướng dẫn chưa thực thi.
+- Không bịa kết quả thử, ảnh chụp, nguồn hoặc API. Phân biệt probe/demo/bản đầy đủ; trạng thái thực thi theo CURRENT_STATUS và hồ sơ evidence. Sơ đồ/kiến trúc chưa triển khai vẫn là đề xuất; code chưa chạy phải ghi đúng trạng thái.
 - Hiện có một Redmi Note11; mục tiêu kết nối hai mạng qua Internet nếu khả thi. Client desktop/giả lập không thay bằng chứng hai Android.
 - Cuối mỗi phiên có thay đổi đã rà soát: chạy `node tools/finish-session.cjs --message "mô tả thay đổi"`. Người dùng đã yêu cầu tự commit/push lên origin/main; không hỏi lại từng phiên. Khi chưa có thay đổi thì không tạo commit rỗng.
 - Script chỉ stage các đường dẫn dự án được liệt kê. Rà diff và chỉ chạy khi sản phẩm đã kiểm tra. Không push bản gốc trường, tài liệu tham khảo cá nhân, credential, môi trường máy hoặc dữ liệu nhạy cảm. Không force-push, tự sửa lịch sử, reset hoặc tự giải quyết xung đột bằng ghi đè. Nếu lỗi mạng/quyền/remote thay đổi: giữ commit local và báo rõ, không tuyên bố push thành công.

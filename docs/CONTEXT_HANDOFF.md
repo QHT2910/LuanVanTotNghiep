@@ -1,5 +1,19 @@
 # Checkpoint tiếp tục dự án
 
+## Mốc 1 đã kiểm chứng, đang chốt Git — sau tạm ngưng
+
+Người dùng đã cho tiếp tục trong phạm vi rà/chốt mốc1, không multiplayer/Dash/Block hoặc xuất luận văn. Nền cc48173; đọc git log/status để biết commit cuối, không replay finish-session khi đã thành công. Wordv0.3 ngoài lượt luôn loại staging; SHA2567062097215C87DF6F1EB429D8DCAF3CD773D3BC4F80C33D1ED80928BB8510404.
+
+Demo game/offline-practice/lib/main.dart; README và docs/MILESTONE_1_REVIEW.md là đầu vào hiện hành. APK build/app/outputs/flutter-apk/app-debug.apk dưới app, SHA256DA5144F2225F22432F316E38B1D4921AAA2E922DF7D270427B3B029587B562FA. Resume-source-audit.json xác nhận kernel cache=APK và 3source Dart hiện tại nằm nguyên văn trong kernel; không cần build lại.
+
+ProbeScene/Fox và offline đã kiểm trên một Pixel_9a Android37x86_64, ImpellerOpenGLES. 13 test/analyze/build/install PASS. 8workflow/6shot cuối: score3+2+2=7, hai miss, hủy shot5 giữa bay, hai background/resume, auto-reset/chơi tiếp. game/evidence-m1/checks.json, runtime-assertions.json, offline-runtime-events.json, ảnh offline-continued.png và probe-render.png. AA-none/constant ticker sửa ghost/freeze, initial* và checkpoint cũ chỉ là lỗi trung gian. QA cuối terminal không P1/P2 chặn; qa/milestone-1-final.md.
+
+Rà sau tạm ngưng: không emulator/qemu/dart được quan sát; ADB không có thiết bị. Đã đọc team thật: 6worker không chạy/queue0, không dispatch/retry provider. Developer o7v9oxz0vq8wm7n5527dnta1 và QA bkm37d3uiwhgp757im7y9hov giữ Sol6.1/rootOLD/chỉđọc, có terminal reports; Lead tích hợp/thực thi. Không tiến trình demo/build được tự khởi động lại. ADB daemon khởi động khi đọc devices, không boot AVD. Các exec-ID cũ trong history không phải lệnh replay.
+
+Giới hạn: AVD không thay Redmi/hiệu năng máy thật/hai Android/Internet; chưa đa ngón đồng thời và race trước tick trên AVD, chưa solver bảng-vành/fullgame. UI tạm không Figma; Figma được chọn nhưng chưa file/session. Không đổi model/provider/Argon.
+
+Bước cuối: rà dữ liệu nhạy cảm/diff, giữ luận văn cũ, finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx, kiểm origin/main, bàn giao Cindy. Nếu đã có commit/push mốc1 thì chỉ báo kết quả. Lịch sử mốc1 trong MILESTONE_1_CHECKPOINT_HISTORY.md, các mốc luận văn dưới đây là lịch sử.
+
 ## Lượt đang làm 07/11/2026 — bổ sung từ video Scene
 
 Mốc cuối v0.7: tích hợp/QA/source/Word/PDF hoàn tất trong phạm vi. Word41refs/27ảnh/3OMML; bài declarative analyze/buildtargetPASS, chưaruntime. QA khôngP1, P2 hồsơđãsửa; qa/video-v0.7.md. PDF titlemetadatađúng, inspect79/79okkhôngtrangtrắng; Leadxem20contactsheetvàtrang14/19/28/43/48lớn. SHA256PDF dac7ba0c5caad802ac35ebbb53cec8903766e5c50ec87c5a5d8f0e2e86eb4019. Sảnphẩmhiệnhànhthesis/Ban_thao_Chuong_1-3_v0.7.docx/.pdf, báo cáo docs/VIDEO_v0.7_REVIEW.md. Cả ba Orca thesis/developer/qa terminal, gpt-6.1-sol/rootOLD/chỉđọc; Leadthựcthivàtíchhợp. Khôngđổimodel/provider. V0.6vàv0.3đượcgiữ. Bướctiếplàfinish-sessionloạiv0.3; kiểm gitlog/statusvà.scratch/v07-finish.logtrướcretry, khôngreplaycácmốcdưới. SaupushbàngiaoCindyreview, khôngtựmởrộngchươnghoặcchạyAndroid. Các đoạn “chưa QA/chưa xuất” bên dưới là lịch sử trong lượt, không trạng thái hiện hành.
@@ -32,10 +46,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-07T04:25:21.036Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `8e67b8c9c0e5815bdc48cc77b8580243d35b54f7`.
-- Local tracking origin/main: `8e67b8c9c0e5815bdc48cc77b8580243d35b54f7` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 21 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-07T08:01:37.669Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `cc48173fb6d3b645fc73592a98d3e6ab092c62ab`.
+- Local tracking origin/main: `cc48173fb6d3b645fc73592a98d3e6ab092c62ab` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 17 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

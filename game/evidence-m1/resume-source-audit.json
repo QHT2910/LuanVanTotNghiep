@@ -1,0 +1,23 @@
+{
+  "apkSHA256": "da5144f2225f22432f316e38b1d4921aaa2e922df7d270427b3b029587b562fa",
+  "apkBytes": 97453215,
+  "kernelSHA256": "4647df72fb7e74fe13d273209f963dc734f1e07b80aff3754e0974101777ddc3",
+  "localKernelMatchesAPK": true,
+  "sources": {
+    "main.dart": {
+      "sha256": "176a48c705a5bd0ba0f65ed3b7fcd5be3cb2d3b1b661edd9f4e2d47fc189f01b",
+      "embeddedInAPKKernel": true
+    },
+    "practice.dart": {
+      "sha256": "c87000a9e5c4e005a7b21f404492348c8b9cf24abfdaebaa2b042fbff2e8894f",
+      "embeddedInAPKKernel": true
+    },
+    "config.dart": {
+      "sha256": "772127a79a7db045aaa379e25bebbee5dd00608163b52911c7a4914a646d4eca",
+      "embeddedInAPKKernel": true
+    }
+  },
+  "apkArchitectures": [
+    "lib/x86_64/libflutter.so"
+  ]
+}

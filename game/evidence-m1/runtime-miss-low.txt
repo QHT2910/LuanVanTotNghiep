@@ -1,0 +1,8 @@
+node : /sdcard/practice-miss-low.png: 1 file pulled, 0 skipped. 5.3 MB/s (98210 bytes in 0.018s)
+At line:2 char:1
++ node game/offline-practice/tool/avd-smoke.cjs emulator-5554 shot 60 m ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/practic...ytes in 0.018s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+PASS ADB workflow shot; captured evidence, assertions require event review

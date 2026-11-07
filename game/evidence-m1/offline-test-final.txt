@@ -1,0 +1,15 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart
+00:00 +0: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Outer footprint tangency and either side of the line
+00:00 +1: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Reset during charge or flight invalidates old action
+00:00 +2: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Swept crossing detects descent but not ascent or replay
+00:00 +3: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Perfect charge scores once, preserves release point and value
+00:00 +4: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Inside/on-line gives two; completely outside gives three
+00:00 +5: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Too little or too much charge misses instead of forcing score
+00:00 +6: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Pointer cancel/background cannot release a shot
+00:00 +7: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Manual and automatic reset retain score and permit next shot
+00:00 +8: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Bounds, diagonal normalization and invalid dt are enforced
+00:00 +9: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Large frame dt is capped, not simulated as an unbounded jump
+00:00 +10: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Equivalent accepted time yields the same deterministic shot
+00:00 +11: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_test.dart: Invalid configuration fails before simulation
+00:00 +12: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/widget_test.dart: Non-finite launch settings are rejected before rendering
+00:00 +13: All tests passed!

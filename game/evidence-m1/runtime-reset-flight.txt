@@ -1,0 +1,8 @@
+node : /sdcard/practice-reset-flight.png: 1 file pulled, 0 skipped. 20.2 MB/s (98380 bytes in 0.005s)
+At line:8 char:1
++ node game/offline-practice/tool/avd-smoke.cjs emulator-5554 reset-fli ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/practic...ytes in 0.005s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Shot did not reset within bounded runtime wait

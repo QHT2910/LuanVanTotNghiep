@@ -1,0 +1,7 @@
+adb.exe : /sdcard/scene-probe-m1.png: 1 file pulled, 0 skipped. 25.9 MB/s (191646 bytes in 0.007s)
+At line:3 char:1
++ & "$env:LOCALAPPDATA/Android/Sdk/platform-tools/adb.exe" -s emulator- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/scene-p...ytes in 0.007s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

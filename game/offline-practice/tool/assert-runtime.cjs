@@ -1,0 +1,20 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const evidence=path.resolve(__dirname,'../../evidence-m1');
+const es=JSON.parse(fs.readFileSync(path.join(evidence,'offline-runtime-events.json'),'utf8'));
+const of=name=>es.filter(e=>e.event===name),releases=of('shot_release'),scores=of('score'),resets=of('round_reset');
+assert.equal(releases.length,6,'Final suite must contain all six releases');
+assert.deepEqual(scores.map(e=>[e.shotId,e.points,e.score]),[[1,3,3],[2,2,5],[6,2,7]]);
+assert.equal(new Set(scores.map(e=>e.shotId)).size,scores.length,'No repeated score per shot');
+assert.equal(releases[0].pointValue,3);assert.equal(releases[1].pointValue,2);
+assert.ok(releases[2].charge<0.15);assert.ok(releases[3].charge>0.95);
+assert.ok(!scores.some(e=>[3,4,5].includes(e.shotId)),'Misses and canceled flight cannot score');
+const canceled=resets.find(e=>e.reason==='manual'&&e.shotId===5);assert.ok(canceled);
+assert.ok(canceled.simTime-releases[4].simTime<1.4,'Reset must precede rim crossing');
+assert.ok(resets.some(e=>e.reason==='auto'&&e.shotId===6&&e.score===7));
+assert.equal(of('paused').length,2);assert.equal(of('resumed').length,2);
+assert.equal(of('charge_cancel').filter(e=>e.reason==='background').length,2);
+assert.ok(releases[0].simTime>of('resumed').at(-1).simTime,'Simulation advances after second resume');
+for(let i=1;i<es.length;i++){assert.ok(es[i].eventId>es[i-1].eventId);assert.ok(es[i].simTime>=es[i-1].simTime);}
+const result={result:'PASS',source:'Real ADB touch events on one running Pixel_9a AVD',shots:6,scoredShots:scores.map(e=>e.shotId),score:7,backgroundResumeCycles:2,resetFlightShot:5,continuationShot:6,limits:['Not a two-Android or Internet test','Not physical-device performance','Same-frame pointer race reviewed in source, not injected before a render tick','Simultaneous multi-touch not exercised on AVD; normalization covered in unit tests']};
+fs.writeFileSync(path.join(evidence,'runtime-assertions.json'),JSON.stringify(result,null,2));
+console.log('PASS runtime event oracles | game/evidence-m1/runtime-assertions.json');

@@ -1,0 +1,9 @@
+node : Warning: Activity not started, its current task has been brought to the front
+At line:6 char:1
++ node game/offline-practice/tool/avd-smoke.cjs emulator-5554 backgroun ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: Activi...ht to the front:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+/sdcard/practice-resumed.png: 1 file pulled, 0 skipped. 29.9 MB/s (96333 bytes in 0.003s)
+PASS ADB workflow background; captured evidence, assertions require event review

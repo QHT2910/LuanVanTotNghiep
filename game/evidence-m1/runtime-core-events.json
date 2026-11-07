@@ -1,0 +1,362 @@
+[
+  {
+    "event": "charge_start",
+    "eventId": 5,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_cancel",
+    "eventId": 6,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0,
+    "reason": "background"
+  },
+  {
+    "event": "paused",
+    "eventId": 7,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "resumed",
+    "eventId": 8,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_start",
+    "eventId": 9,
+    "simTime": 0.47500000000000064,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_cancel",
+    "eventId": 11,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0,
+    "reason": "background"
+  },
+  {
+    "event": "paused",
+    "eventId": 12,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "resumed",
+    "eventId": 13,
+    "simTime": 0.5750000000000004,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "charge_start",
+    "eventId": 24,
+    "simTime": 6.075000000000092,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "shot_release",
+    "eventId": 25,
+    "simTime": 6.7416666666667915,
+    "round": 1,
+    "shotId": 1,
+    "charge": 0.5555555555555557,
+    "pointValue": 3,
+    "feetX": 0,
+    "feetZ": 3,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": 3
+  },
+  {
+    "event": "score",
+    "eventId": 26,
+    "simTime": 8.150000000000178,
+    "round": 1,
+    "shotId": 1,
+    "points": 3,
+    "score": 3
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 27,
+    "simTime": 8.150000000000178,
+    "round": 1,
+    "shotId": 1,
+    "inside": true,
+    "x": 0,
+    "z": -2.822222222222223
+  },
+  {
+    "event": "shot_end",
+    "eventId": 30,
+    "simTime": 8.516666666666824,
+    "round": 1,
+    "shotId": 1,
+    "scored": true,
+    "score": 3
+  },
+  {
+    "event": "round_reset",
+    "eventId": 31,
+    "simTime": 9.5250000000001,
+    "round": 2,
+    "shotId": 1,
+    "reason": "auto",
+    "score": 3
+  },
+  {
+    "event": "charge_start",
+    "eventId": 51,
+    "simTime": 25.51666666666586,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 53,
+    "simTime": 26.15833333333249,
+    "round": 2,
+    "shotId": 2,
+    "charge": 0.5347222222222224,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "score",
+    "eventId": 57,
+    "simTime": 27.566666666665743,
+    "round": 2,
+    "shotId": 2,
+    "points": 2,
+    "score": 5
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 58,
+    "simTime": 27.566666666665743,
+    "round": 2,
+    "shotId": 2,
+    "inside": true,
+    "x": 0,
+    "z": -2.73888888888889
+  },
+  {
+    "event": "shot_end",
+    "eventId": 59,
+    "simTime": 27.93333333333239,
+    "round": 2,
+    "shotId": 2,
+    "scored": true,
+    "score": 5
+  },
+  {
+    "event": "round_reset",
+    "eventId": 61,
+    "simTime": 28.941666666665665,
+    "round": 3,
+    "shotId": 2,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "charge_start",
+    "eventId": 69,
+    "simTime": 36.366666666665246,
+    "round": 3,
+    "shotId": 2
+  },
+  {
+    "event": "shot_release",
+    "eventId": 70,
+    "simTime": 36.43333333333191,
+    "round": 3,
+    "shotId": 3,
+    "charge": 0.05555555555555556,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 72,
+    "simTime": 37.84166666666516,
+    "round": 3,
+    "shotId": 3,
+    "inside": false,
+    "x": 0,
+    "z": -0.8222222222222224
+  },
+  {
+    "event": "shot_end",
+    "eventId": 73,
+    "simTime": 38.20833333333181,
+    "round": 3,
+    "shotId": 3,
+    "scored": false,
+    "score": 5
+  },
+  {
+    "event": "round_reset",
+    "eventId": 74,
+    "simTime": 39.216666666665084,
+    "round": 4,
+    "shotId": 3,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "charge_start",
+    "eventId": 79,
+    "simTime": 46.55833333333133,
+    "round": 4,
+    "shotId": 3
+  },
+  {
+    "event": "shot_release",
+    "eventId": 82,
+    "simTime": 48.08333333333125,
+    "round": 4,
+    "shotId": 4,
+    "charge": 1,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 84,
+    "simTime": 49.4916666666645,
+    "round": 4,
+    "shotId": 4,
+    "inside": false,
+    "x": 0,
+    "z": -4.6000000000000005
+  },
+  {
+    "event": "shot_end",
+    "eventId": 86,
+    "simTime": 49.858333333331146,
+    "round": 4,
+    "shotId": 4,
+    "scored": false,
+    "score": 5
+  },
+  {
+    "event": "round_reset",
+    "eventId": 88,
+    "simTime": 50.86666666666442,
+    "round": 5,
+    "shotId": 4,
+    "reason": "auto",
+    "score": 5
+  },
+  {
+    "event": "charge_start",
+    "eventId": 93,
+    "simTime": 57.53333333333071,
+    "round": 5,
+    "shotId": 4
+  },
+  {
+    "event": "shot_release",
+    "eventId": 96,
+    "simTime": 58.274999999997334,
+    "round": 5,
+    "shotId": 5,
+    "charge": 0.6180555555555555,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "round_reset",
+    "eventId": 98,
+    "simTime": 58.52499999999732,
+    "round": 6,
+    "shotId": 5,
+    "reason": "manual",
+    "score": 5
+  },
+  {
+    "event": "charge_start",
+    "eventId": 102,
+    "simTime": 62.02499999999712,
+    "round": 6,
+    "shotId": 5
+  },
+  {
+    "event": "shot_release",
+    "eventId": 104,
+    "simTime": 62.74999999999708,
+    "round": 6,
+    "shotId": 6,
+    "charge": 0.6041666666666666,
+    "pointValue": 2,
+    "feetX": 0,
+    "feetZ": -0.45833333333333726,
+    "originX": 0,
+    "originY": 1.8,
+    "originZ": -0.45833333333333726
+  },
+  {
+    "event": "score",
+    "eventId": 109,
+    "simTime": 64.15833333333046,
+    "round": 6,
+    "shotId": 6,
+    "points": 2,
+    "score": 7
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 110,
+    "simTime": 64.15833333333046,
+    "round": 6,
+    "shotId": 6,
+    "inside": true,
+    "x": 0,
+    "z": -3.0166666666666666
+  },
+  {
+    "event": "shot_end",
+    "eventId": 111,
+    "simTime": 64.52499999999742,
+    "round": 6,
+    "shotId": 6,
+    "scored": true,
+    "score": 7
+  },
+  {
+    "event": "round_reset",
+    "eventId": 113,
+    "simTime": 65.53333333333156,
+    "round": 7,
+    "shotId": 6,
+    "reason": "auto",
+    "score": 7
+  }
+]

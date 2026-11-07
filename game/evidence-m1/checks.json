@@ -1,0 +1,46 @@
+{
+  "logs": [
+    "offline-analyze-final.txt",
+    "offline-test-final.txt",
+    "offline-build-final.txt",
+    "offline-install.txt",
+    "offline-launch.txt",
+    "offline-logcat-final.txt"
+  ],
+  "checks": {
+    "runtimeOracles": "runtime-assertions.json",
+    "unitTests": 13,
+    "probeRenderAsset": "PASS",
+    "installLaunch": "PASS",
+    "analyze": "PASS",
+    "testResult": "PASS",
+    "buildAPK": "PASS",
+    "antiAliasing": "none"
+  },
+  "dart": "3.13.7",
+  "avd": {
+    "gpu": "auto",
+    "pageSizeKB": 16,
+    "name": "Pixel_9a",
+    "architecture": "x86_64",
+    "android": 37
+  },
+  "backend": "Impeller OpenGLES",
+  "flutter": "3.47.8",
+  "apk": {
+    "path": "game/offline-practice/build/app/outputs/flutter-apk/app-debug.apk",
+    "sha256": "DA5144F2225F22432F316E38B1D4921AAA2E922DF7D270427B3B029587B562FA",
+    "bytes": 97453215
+  },
+  "date": "2026-11-07",
+  "limits": [
+    "AVD, not physical device performance",
+    "Not multiplayer or two Androids",
+    "No rim/backboard contact solver",
+    "Not official Figma UI",
+    "Multi-touch simultaneous AVD not executed"
+  ],
+  "scene": "0.4.1",
+  "scope": "One Pixel_9a AVD offline milestone",
+  "flutter_scene": "0.24.3"
+}

@@ -1,4 +1,8 @@
-# Trạng thái hiện hành v0.7
+# Trạng thái hiện hành — demo mốc 1
+
+07/11/2026: ưu tiên demo từng phần trên AVD, luận văn sửa song song. ProbeF Scene/Fox chạy trên Pixel_9a Android37 x86_64, backendImpellerOpenGLES; game/evidence-m1/probe-render.png. App game/offline-practice/main entrypoint lib/main.dart, Androidlandscape/camera/court/player/ball/rim; di chuyển/charge/release/2–3 một lần/reset/chơi tiếp. 13test/analyze/build/installPASS; ADBsuitecuốiđạt3+2,2miss,2backgroundresume,resetflight+hủyshotcũ/tiếp2,tổng7; runtime-assertions.json. AA-none mitigation sạch vệt ở ảnh cuối; ticker khôngtạolạiqua autoTick. Chi tiết MILESTONE_1_REVIEW.md, code/README và evidence-m1. QA cuối đạt phạm vi source/test/evidence, không P1/P2 chặn; qa/milestone-1-final.md. Sau tạm ngưng đã xác minh APK/source/kernel khớp, không AVD/worker đang chạy, queue0; không chạy lại probe/build. Lead chốt Git theo AGENTS. Chưa fullgame/multiplayer/Dash/Block,khôngbenchmarkRedmi/haiAndroid/Internet. Figmađãchọnchưa file/session, UIhiệnchỉtạm. Wordv0.7giữnguyên,khôngxuấtlại; Wordv0.3loạistaging.
+
+## Luận văn hiện hành v0.7 — giữ nguyên trong mốc demo
 
 07/11/2026: bổ sung Ch2 từ video Scene theo bằng chứng chọn đoạn của Cindy, tài liệu official và source 0.24.3 đọc riêng. Thêm 2.4.4, mở rộng2.7, thêm2.11.4–5 và bài tùy chọn2.12.13–14. Word/PDF v0.7; 41refs/27ảnh/3OMML. Analyze/build bundle bài declarative đạt; chưa runtime Android/warm-up/hot reload/editor. QA không P1, P2 hồ sơ đã sửa. PDF Cindy Chromium inspect79/79ok, Lead rà20contactsheet và xem lớn14/19/28/43/48. Word pagination native vẫn chưa duyệt; bìa/header/TOC/UI chưa hoàn thiện. Chi tiết VIDEO_v0.7_REVIEW.md và qa/video-v0.7.md. Giữ v0.6 cùng thay đổi ngoài lượt v0.3.
 
