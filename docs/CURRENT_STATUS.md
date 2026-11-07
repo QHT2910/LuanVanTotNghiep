@@ -1,4 +1,8 @@
-# Trạng thái hiện hành v0.6
+# Trạng thái hiện hành v0.7
+
+07/11/2026: bổ sung Ch2 từ video Scene theo bằng chứng chọn đoạn của Cindy, tài liệu official và source 0.24.3 đọc riêng. Thêm 2.4.4, mở rộng2.7, thêm2.11.4–5 và bài tùy chọn2.12.13–14. Word/PDF v0.7; 41refs/27ảnh/3OMML. Analyze/build bundle bài declarative đạt; chưa runtime Android/warm-up/hot reload/editor. QA không P1, P2 hồ sơ đã sửa. PDF Cindy Chromium inspect79/79ok, Lead rà20contactsheet và xem lớn14/19/28/43/48. Word pagination native vẫn chưa duyệt; bìa/header/TOC/UI chưa hoàn thiện. Chi tiết VIDEO_v0.7_REVIEW.md và qa/video-v0.7.md. Giữ v0.6 cùng thay đổi ngoài lượt v0.3.
+
+## Lịch sử v0.6
 
 Ngày 06/11/2026: đã tích hợp lượt sửa bản xuất sau nghiệm thu nội dung R3. Word/PDF mới ở thesis/Ban_thao_Chuong_1-3_v0.6; giữ nguyên bản v0.5/v0.4 và sửa ngoài lượt v0.3. 37 nguồn, 27 ảnh, ba công thức OMML. Caption 3.x và panel có connector; comment kỹ thuật không còn trong bản xuất. Orca Worker QA xác nhận source/Word XML/15 panel, không có P1/P2 trong phạm vi đã rà. Lead đã inspect 71/71 trang PDF và xem đủ 18 contact sheet, rà riêng trang 15/19/52/56/63; không trang trắng. Xem PUBLICATION_v0.6_REVIEW.md, publication-v0.6-checks.json và qa/publication-v0.6.md.
 

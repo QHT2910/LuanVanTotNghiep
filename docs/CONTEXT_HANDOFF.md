@@ -1,5 +1,15 @@
 # Checkpoint tiếp tục dự án
 
+## Lượt đang làm 07/11/2026 — bổ sung từ video Scene
+
+Mốc cuối v0.7: tích hợp/QA/source/Word/PDF hoàn tất trong phạm vi. Word41refs/27ảnh/3OMML; bài declarative analyze/buildtargetPASS, chưaruntime. QA khôngP1, P2 hồsơđãsửa; qa/video-v0.7.md. PDF titlemetadatađúng, inspect79/79okkhôngtrangtrắng; Leadxem20contactsheetvàtrang14/19/28/43/48lớn. SHA256PDF dac7ba0c5caad802ac35ebbb53cec8903766e5c50ec87c5a5d8f0e2e86eb4019. Sảnphẩmhiệnhànhthesis/Ban_thao_Chuong_1-3_v0.7.docx/.pdf, báo cáo docs/VIDEO_v0.7_REVIEW.md. Cả ba Orca thesis/developer/qa terminal, gpt-6.1-sol/rootOLD/chỉđọc; Leadthựcthivàtíchhợp. Khôngđổimodel/provider. V0.6vàv0.3đượcgiữ. Bướctiếplàfinish-sessionloạiv0.3; kiểm gitlog/statusvà.scratch/v07-finish.logtrướcretry, khôngreplaycácmốcdưới. SaupushbàngiaoCindyreview, khôngtựmởrộngchươnghoặcchạyAndroid. Các đoạn “chưa QA/chưa xuất” bên dưới là lịch sử trong lượt, không trạng thái hiện hành.
+
+Mốc tích hợp: thesis và developer đều terminal, patch đã tích hợp Ch2/refs41 và OUTLINE, bài2.12.13–14 đã ghép. Mở formatter/validator/finalizer cho v0.7; Word/PDF v0.7 đã tạo, validator PASS41refs/27ảnh/3OMML. docs/VIDEO_v0.7_REVIEW.md là hồ sơ lượt này. PDF đầu đang mang titlemetadata v0.6 do generator cũ; generator đã sửa title chung, PHẢI tạo lại HTML/render PDF sau QA rồi inspect/rà toàn trang. QA chuẩn bị giao chỉ đọc source/Word/code/logs; không nghiệm thu PDF đầu. Lead chưa commit. Tham chiếu sourceweb/claimmap trong research/video-scene-v07-*.md. Bỏ qua các câu “thesis chờ terminal/chưa tích hợp” ở mốc cũ dưới đây; không replay.
+
+Mốc kiểm mã: developer Orca terminal, toàn văn lấy từ lịch sử session ddab0b98-abe6-4524-9b16-9a548be30b63; draft lưu research/declarative-v07-developer-draft.md. Entrypoint mới đã lưu tại game/tutorial-r3/lib/checkpoints/declarative/main.dart. Lead chạy flutter analyze target PASS và flutter build bundle --debug --target-platform android-arm64 --target lib/checkpoints/declarative/main.dart PASS; log game/evidence-v07/analyze-declarative.txt và build-declarative.txt. Chưa runtime/warm-up/hot reload Android. research/video-scene-v07-verification.md ghi nguồn Lead đã trực tiếp đọc và video kế thừa Cindy. Thesis Orca vẫn chờ terminal report, chưa tích hợp manuscript/refs hoặc xuất v0.7. Không dispatch lại developer. Cleanup hai thư mục rỗng tạo nhầm game/tutorial-r3/game/evidence-v07 và thư mục cha bị automatic approval review từ chối; đã để nguyên, không retry/lách. Đây không phải blocker sản phẩm. Tiếp: nhận patch thesis, đối chiếu/tích hợp+bài2.12.13–14, cập nhật trạng thái code đã analyze/build nhưng chưaruntime; mở hỗ trợ v0.7 trong formatter/validator/finalizer (hiện chỉ nhận v0.6), xuất bản mới không ghi đè v0.6, QA và rà PDF rồi commit/push loại v0.3.
+
+Cơ sở v0.6 / commit 8e67b8c. Yêu cầu mới: bổ sung Ch2 về declarative/imperative, retained graph/ownership, I/O–parse–build preprocessing–GPU preparation/loading/warm-up, hot reload và vai trò editor; một bài khai báo nhỏ tùy chọn so với A. Không mở rộng AI/ragdoll/audio, không nâng SDK hoặc đổi A–F/model/provider. Giữ v0.6 và sửa ngoài lượt Word v0.3. Đang giao Orca thesis và developer chỉ đọc vì root vẫn OLD; Lead tích hợp và thực thi kiểm mã tại D:. QA giao sau tích hợp. Không ghi nhận đã xem video độc lập: Cindy đã xem chọn đoạn, không có full transcript; báo cáo gốc được chuyển qua task, phải phân biệt bằng chứng kế thừa. Xuất Word/PDF phiên bản mới, giữ OMML/caption/comment filter v0.6, rà phân trang thật rồi finish-session loại v0.3. Chưa có sản phẩm mới hoặc commit lượt này.
+
 Ngày 06/11/2026. Đọc AGENTS → PROJECT_BRIEF (nội bộ) → checkpoint này → CURRENT_STATUS → tài liệu liên quan. Các checkpoint trước còn trong lịch sử Git; không replay báo cáo worker hoặc lệnh đã hoàn tất.
 
 ## Mục tiêu và quyết định
@@ -22,10 +32,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-06T10:04:57.988Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `6697b3170aff0b668eab2b67b0789f2d0c7d0427`.
-- Local tracking origin/main: `6697b3170aff0b668eab2b67b0789f2d0c7d0427` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 81 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-07T04:25:21.036Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `8e67b8c9c0e5815bdc48cc77b8580243d35b54f7`.
+- Local tracking origin/main: `8e67b8c9c0e5815bdc48cc77b8580243d35b54f7` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 21 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

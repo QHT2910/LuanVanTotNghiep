@@ -30,7 +30,7 @@ function check(ok,msg){if(!ok)throw Error(msg);}
  require('./publication-checks.cjs').assertClean(text,'Word');
  check(!/PROJECT_BRIEF\.md|OUTLINE\.md|reviewed\.docx|Căn cứ nội bộ|3-9-wireframe|\[图片:/.test(text),'Internal text or unresolved image placeholder in Word');
  for(const name of ['b','bCs','caps','smallCaps'])for(const el of Array.from(doc.getElementsByTagNameNS(W,name)))check(['0','false','off'].includes(el.getAttributeNS(W,'val')),'Unexpected emphasis in Word: '+name);
- const publication=/v0\.6\.docx$/.test(file);
+ const publication=/v0\.[67]\.docx$/.test(file);
  const expectedImages=publication?27:/v0\.5\.docx$/.test(file)?16:14;
  const OM='http://schemas.openxmlformats.org/officeDocument/2006/math';
  const equations=doc.getElementsByTagNameNS(OM,'oMathPara').length;

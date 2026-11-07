@@ -1,0 +1,17 @@
+﻿{
+    "build":  {
+                  "stdoutEmpty":  true,
+                  "exitCode":  0,
+                  "command":  "flutter build bundle --debug --target-platform android-arm64 --target lib/checkpoints/declarative/main.dart",
+                  "log":  "game/evidence-v07/build-declarative.txt",
+                  "kernelSHA256":  "45A633B55C7B850F64BA9EB78EEAE8ECA27F87A15FEAB2A79FE9A57336E0E8B0"
+              },
+    "entrypoint":  "lib/checkpoints/declarative/main.dart",
+    "deviceEvidence":  "No Android runtime evidence",
+    "analyze":  {
+                    "exitCode":  0,
+                    "log":  "game/evidence-v07/analyze-declarative.txt"
+                },
+    "date":  "2026-11-07",
+    "runtime":  "NOT RUN"
+}

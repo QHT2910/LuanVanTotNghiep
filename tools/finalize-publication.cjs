@@ -3,7 +3,7 @@ const Zip=require('../.local-tools/node_modules/jszip');
 const {DOMParser,XMLSerializer}=require('../.local-tools/node_modules/@xmldom/xmldom');
 const W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 (async()=>{
- const file=process.argv[2];if(!/v0\.6\.docx$/.test(file||''))throw Error('Only v0.6');
+ const file=process.argv[2];if(!/v0\.[67]\.docx$/.test(file||''))throw Error('Only v0.6/v0.7');
  const z=await Zip.loadAsync(fs.readFileSync(file)),parse=s=>new DOMParser().parseFromString(s,'text/xml'),d=parse(await z.file('word/document.xml').async('string'));
  const all=(n,t)=>Array.from(n.getElementsByTagNameNS(W,t));let count=0;
  function set(n,t,v){let x=Array.from(n.childNodes).find(x=>x.localName===t);if(!x){x=d.createElementNS(W,'w:'+t);n.appendChild(x);}x.setAttributeNS(W,'w:val',v);}

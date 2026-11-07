@@ -25,7 +25,7 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
   if(match){
    const name=match[1].replace(/\.(mmd|svg)$/,'.png'),png=fs.readFileSync(path.join(root,'diagrams',name));
    const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
-   const publication=/v0\.6\.docx$/.test(file);
+   const publication=/v0\.[67]\.docx$/.test(file);
    const maxHeight=/^3-6/.test(name)?560:520;
    const ratio=publication?Math.min(431*12700/width,maxHeight*12700/height,0.34*12700):Math.min(5700000/width,7100000/height);
    const cx=Math.round(width*ratio),cy=Math.round(height*ratio);
@@ -33,17 +33,17 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
    const re=rel.createElementNS(rel.documentElement.namespaceURI,'Relationship');re.setAttribute('Id',id);re.setAttribute('Type',R+'/image');re.setAttribute('Target','media/'+name);rel.documentElement.appendChild(re);
    const fragment=parse(`<w:p xmlns:w="${W}" xmlns:r="${R}" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="${9000+images}" name="${name}" descr="Thiết kế đề xuất, chưa triển khai"/><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="${images}" name="${name}"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${id}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`);
    const imageParagraph=d.importNode(fragment.documentElement,true);
-   if(/v0\.[56]\.docx$/.test(file))attr(child(child(imageParagraph,'pPr'),'keepNext'),'val',1);
+   if(/v0\.[567]\.docx$/.test(file))attr(child(child(imageParagraph,'pPr'),'keepNext'),'val',1);
    p.parentNode.replaceChild(imageParagraph,p);continue;
   }
   const pp=child(p,'pPr'),style=Array.from(pp.childNodes).find(n=>n.localName==='pStyle')?.getAttributeNS(W,'val')||'';
   const level=/Heading([1-4])/i.exec(style);
-  const code=/v0\.[56]\.docx$/.test(file)&&all(pp,'shd').some(n=>n.getAttributeNS(W,'fill')==='F2F3F5');
+  const code=/v0\.[567]\.docx$/.test(file)&&all(pp,'shd').some(n=>n.getAttributeNS(W,'fill')==='F2F3F5');
   const size=code?20:level?({1:48,2:30,3:28,4:26}[level[1]]):26;
   const spacing=child(pp,'spacing');attr(spacing,'after',120);attr(spacing,'line',312);attr(spacing,'lineRule','auto');
   if(level){attr(child(pp,'keepNext'),'val',1);if(level[1]==='1'){attr(child(pp,'jc'),'val','right');attr(child(pp,'pageBreakBefore'),'val',1);}}
   if(code){attr(spacing,'before',0);attr(spacing,'after',0);attr(spacing,'line',240);}
-  if(code&&/v0\.6\.docx$/.test(file)){
+  if(code&&/v0\.[67]\.docx$/.test(file)){
    let next=p.nextSibling;while(next&&next.nodeType!==1)next=next.nextSibling;
    const nextCode=next?.localName==='p'&&all(next,'shd').some(n=>n.getAttributeNS(W,'fill')==='F2F3F5');
    attr(child(pp,'keepNext'),'val',nextCode?1:0);
@@ -54,7 +54,7 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
  }
  for(const s of all(d,'sectPr')){const sz=child(s,'pgSz');attr(sz,'w',11906);attr(sz,'h',16838);const m=child(s,'pgMar');for(const [key,value]of Object.entries({top:1134,bottom:1134,left:1701,right:1134,gutter:0}))attr(m,key,value);}
  let math={};
- if(/v0\.6\.docx$/.test(file)){
+ if(/v0\.[67]\.docx$/.test(file)){
   math=require('./word-math.cjs')(d);
   for(const table of all(d,'tbl')){
    const rows=Array.from(table.childNodes).filter(n=>n.localName==='tr');
@@ -69,7 +69,7 @@ function attr(el,key,value){el.setAttributeNS(W,'w:'+key,String(value));}
  const styles=parse(await z.file('word/styles.xml').async('string'));
  for(const rp of all(styles,'rPr'))for(const name of ['b','bCs','caps','smallCaps'])attr(child(rp,name),'val',0);
  z.file('word/styles.xml',serial(styles));
- const expectedImages=/v0\.6\.docx$/.test(file)?27:/v0\.5\.docx$/.test(file)?16:/v0\.4\.docx$/.test(file)?14:8;
+ const expectedImages=/v0\.[67]\.docx$/.test(file)?27:/v0\.5\.docx$/.test(file)?16:/v0\.4\.docx$/.test(file)?14:8;
  if(images!==expectedImages)throw Error('Expected '+expectedImages+' embedded diagrams (UI mockup excluded), got '+images);
  fs.writeFileSync(file,await z.generateAsync({type:'nodebuffer',compression:'DEFLATE'}));
  console.log(JSON.stringify({images,...math}));

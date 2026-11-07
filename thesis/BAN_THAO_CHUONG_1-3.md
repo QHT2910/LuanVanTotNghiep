@@ -279,6 +279,22 @@ Theo README Scene 0.24.3, các getter thành phần biến đổi trả về b�
 
 Tài nguyên dùng chung có vòng đời khác với một node hiển thị. Hủy một đối tượng không đồng nghĩa mọi tài nguyên nó từng dùng đều có thể giải phóng nếu đối tượng khác còn tham chiếu. Ngược lại, giữ tài nguyên không còn dùng làm tăng bộ nhớ. Kiến trúc cần xác định đơn vị nạp, sử dụng lại và giải phóng thay vì tạo tài nguyên đồ họa liên tục trong hàm cập nhật.
 
+### 2.4.4. Biểu diễn khai báo và thao tác trực tiếp
+
+Scene cung cấp hai cách điều khiển cây cảnh. Với cách thao tác trực tiếp, ứng dụng giữ Scene, tạo node và gọi API để thay đổi thuộc tính hoặc cấu trúc. Với cách khai báo, các widget như SceneNode và SceneMesh mô tả cấu trúc mong muốn theo trạng thái Flutter. Phần mô tả được đối chiếu với cây đối tượng engine còn được giữ lại, gọi là retained graph. Quá trình đối chiếu và áp dụng khác biệt này được gọi là reconciliation. [39], [41]
+
+Widget là mô tả bất biến, còn State của widget cảnh giữ đối tượng engine và cập nhật nó khi cấu hình thay đổi. Vì vậy, một lần build không mặc nhiên tạo lại mọi node hoặc toàn bộ tài nguyên GPU. Identity của geometry và material có ý nghĩa khi đối chiếu; tạo một đối tượng tài nguyên mới trong mỗi build có thể làm mất lợi ích của việc giữ và tái sử dụng đối tượng. [39], [41]
+
+| Trách nhiệm | Thao tác trực tiếp | Khai báo |
+|---|---|---|
+| Biểu diễn cấu trúc | Ứng dụng tạo, thêm và gỡ node | Widget và children mô tả cấu trúc theo state |
+| Áp dụng thay đổi | Mã ghi thuộc tính hoặc cập nhật qua component | State đối chiếu cấu hình mới với đối tượng engine được giữ lại |
+| Sở hữu Scene | Ứng dụng giải phóng Scene do mình tạo | SceneView.declarative tạo và giải phóng Scene nội bộ |
+| Kết hợp hai cách | Có thể gắn cây con khai báo vào Scene của ứng dụng | Có cầu nối để truy cập node hoặc đặt cây con thao tác trực tiếp |
+| Ranh giới cần giữ | Xác định một nơi chịu trách nhiệm cho mỗi thuộc tính | Không để mã khác đồng thời sửa cấu trúc hoặc thuộc tính do widget quản lý |
+
+SceneNodeController cung cấp tham chiếu tới node do widget quản lý nhưng không chuyển quyền sở hữu cho mã gọi. Đối với một node được tạo theo khai báo, mã thao tác trực tiếp cần tránh sửa những thuộc tính mà widget cũng khai báo hoặc tự tổ chức lại cấu trúc của nó. SceneView nhận Scene từ ứng dụng không chịu trách nhiệm dispose Scene đó; SceneView.declarative chịu trách nhiệm cho Scene nội bộ của mình. Hai cách có thể phối hợp trong cùng hệ thống nếu ranh giới này được giữ rõ. [41]
+
 ## 2.5. Hình học, vật liệu và shader
 
 ### 2.5.1. Dữ liệu hình học và cấu trúc mesh
@@ -379,17 +395,29 @@ Exposure điều chỉnh mức sáng biểu diễn, còn tone mapping ánh xạ 
 
 Tài nguyên 3D có thể gồm phân cấp node, mesh, vật liệu, texture, dữ liệu xương và hoạt ảnh. Một mô hình nhìn như một vật thể duy nhất có thể tham chiếu nhiều phần dữ liệu với vòng đời khác nhau. glTF là định dạng trao đổi cho nội dung 3D; GLB là dạng đóng gói nhị phân. Việc hỗ trợ định dạng cần được xét cùng tập extension mà công cụ nhập thực sự xử lý. [21]
 
-Scene có đường nạp GLB tại thời điểm chạy và đường tiền xử lý tài nguyên khi build. Nạp tại runtime linh hoạt theo luồng ứng dụng; tiền xử lý chuyển một phần công việc sang giai đoạn chuẩn bị sản phẩm. Cả hai đều cần giữ mối liên hệ giữa dữ liệu nguồn, cấu hình chuyển đổi và phiên bản đầu ra để tái hiện nội dung. [15]
+Scene có hai đường chuẩn bị mô hình: nhập GLB lúc chạy hoặc chuyển đổi nội dung biết trước khi build rồi nạp đầu ra đã tiền xử lý. Tiền xử lý chuyển một phần công việc chuẩn bị sang giai đoạn tạo sản phẩm; nó không loại bỏ mọi việc phải làm lúc chạy. Cả hai đường vẫn cần quản lý phiên bản dữ liệu nguồn, cấu hình chuyển đổi và tài nguyên đầu ra. [15]
 
 Trong glTF, buffer chứa byte; bufferView chọn một vùng byte; accessor bổ sung kiểu thành phần, số phần tử và dạng scalar/vector/matrix. Primitive tham chiếu accessor cho vị trí, pháp tuyến hoặc chỉ số. Vì vậy đọc được byte chưa đồng nghĩa đã hiểu dữ liệu hình học: cần cả layout và kiểu dữ liệu. [32]
 
 ### 2.7.2. Nạp bất đồng bộ và quản lý bộ nhớ
 
-Nạp tài nguyên là quá trình chuyển dữ liệu từ lưu trữ sang cấu trúc mà ứng dụng và GPU sử dụng. Nó có thể gồm đọc tệp, phân tích, giải mã ảnh và tạo tài nguyên đồ họa; thời gian hoàn tất các giai đoạn không nhất thiết trùng nhau. Vì thế, hoàn thành đọc tệp chưa đồng nghĩa đối tượng đã sẵn sàng để kết xuất.
+Chuẩn bị tài nguyên cần được phân biệt theo loại công việc và thời điểm thực hiện. Các giai đoạn có thể đan xen; tiền xử lý khi build là một đường chuẩn bị thay thế cho một phần công việc runtime, không phải bước luôn diễn ra sau khi ứng dụng đã đọc GLB.
+
+| Giai đoạn | Công việc chính | Giới hạn của dấu hiệu hoàn tất |
+|---|---|---|
+| I/O | Đọc byte từ bundle, tệp hoặc nguồn dữ liệu | Đọc xong chưa có nghĩa đã hiểu cấu trúc mô hình |
+| Phân tích và chuyển đổi dữ liệu | Diễn giải mô hình, vật liệu, ảnh và quan hệ node | Cây dữ liệu chưa chứng minh các tài nguyên kết xuất đã sẵn sàng |
+| Tiền xử lý khi build | Chuyển nội dung biết trước sang dạng chuẩn bị cho engine | Không thay cho mọi khởi tạo tại runtime |
+| Chuẩn bị cho kết xuất | Tạo hoặc chuyển dữ liệu tới tài nguyên cần dùng để vẽ | Chưa bảo đảm mọi pipeline của khung hình đầu đã được chuẩn bị |
+| Warm-up | Chuẩn bị pipeline cho các view và nội dung hiện có | Không bao phủ tự động mọi nội dung hoặc cấu hình sẽ thêm về sau |
+
+Phân biệt các giai đoạn giúp giải thích vì sao hoàn tất đọc tệp và hiển thị khung hình đầu là hai mốc khác nhau. Khi đánh giá thời gian mở cảnh, cần chỉ rõ khoảng thời gian đo bắt đầu và kết thúc ở mốc nào. [15], [41]
 
 Một tài nguyên nên có trạng thái chưa nạp, đang nạp, sẵn sàng hoặc lỗi để ứng dụng phản hồi có kiểm soát. Bộ nhớ cũng không được ước lượng chỉ từ dung lượng tệp nén. Chẳng hạn, một ảnh W×H với bốn kênh 8 bit có dữ liệu nền W×H×4 byte trước khi xét các mức ảnh phụ, cách nén GPU và chi phí quản lý. Công thức này cho thấy vì sao một tệp ảnh nhỏ trên đĩa vẫn có thể chiếm bộ nhớ đáng kể khi sử dụng.
 
-Tài liệu Scene phân biệt nạp tài nguyên và xây dựng cấu trúc cảnh, đồng thời có bước chuẩn bị tài nguyên dùng chung trong ví dụ cơ bản. Với mốc 0.24.3, Scene.initializeStaticResources() cần được xem xét trong quy trình khởi tạo, trước khi tạo những tài nguyên mà ví dụ yêu cầu. Đây là điều kiện API, không phải một phép đo tốc độ nạp. [7], [15]
+Trong Scene 0.24.3, loading của SceneView nhận ResourceGroup để theo dõi nhóm tác vụ trước khi hiện cảnh; loadingBuilder tạo phần giao diện chờ. Cơ chế này khác với warmUp, có giá trị mặc định false và yêu cầu SceneView chuẩn bị pipeline trước khi cho thấy cảnh. Cây con khai báo vẫn được giữ mounted và tiếp tục tải khi view đang chờ; màn hình chờ không có nghĩa quá trình tạo nội dung phải dừng. [41]
+
+Trong đường reveal đã đối chiếu, view chờ tài nguyên tĩnh dùng chung, nhóm tải được truyền vào, các tác vụ nạp của cây con và tài nguyên trì hoãn liên quan. Nếu warmUp được bật, nó tiếp tục gọi Scene.warmUp với các view sẽ dùng rồi mới cho hiện cảnh. Nội dung cần được đưa vào cảnh trước bước này. Scene.initializeStaticResources(), nhóm tải và warm-up vì thế phục vụ những phạm vi khác nhau. Việc bật các tùy chọn này chưa chứng minh thời gian mở cảnh, mức dùng bộ nhớ hoặc tốc độ hiển thị trên thiết bị cụ thể. [41]
 
 ### 2.7.3. Dữ liệu hoạt ảnh và trạng thái phát
 
@@ -561,6 +589,26 @@ Tài liệu Flutter khuyến nghị phân tích hiệu năng trên thiết bị 
 Một báo cáo cần nêu thiết bị, hệ điều hành, backend, phiên bản phần mềm, độ phân giải, chế độ build và tình huống đo. Giá trị trung bình cần đi cùng phân bố hoặc những frame chậm để tránh che khuất giật ngắn. Trên mobile, thời gian chạy và điều kiện nhiệt có thể ảnh hưởng trạng thái quan sát, nên những lần so sánh phải kiểm soát điều kiện tương ứng.
 
 Phép phân tích tĩnh xác định một nhóm lỗi mã; build xác nhận quá trình biên dịch hoặc đóng gói; chạy và quan sát xác nhận những hành vi trong môi trường cụ thể. Ba loại bằng chứng hỗ trợ những kết luận khác nhau. Một bản build thành công chưa cho biết ảnh có hiển thị đúng, tương tác có nhất quán hoặc tốc độ có phù hợp khi nhiều hệ cùng hoạt động.
+
+### 2.11.4. Hot reload và vòng phản hồi phát triển
+
+Vòng chỉnh sửa–quan sát–kiểm chứng giúp liên hệ thay đổi trong mã hoặc tài nguyên với trạng thái ứng dụng. Cần phân biệt rebuild cây mô tả, hot reload mã Dart, reload tài nguyên và khởi động lại: chúng tác động tới các phạm vi trạng thái khác nhau.
+
+| Cơ chế | Phạm vi cần xét | Điều không được suy ra |
+|---|---|---|
+| Rebuild widget | Đối chiếu lại mô tả với đối tượng được giữ lại | Mọi tài nguyên GPU đều bị tạo lại |
+| Hot reload mã Dart | Áp dụng sửa mã trong phiên phát triển, liên quan vòng reassemble | Mọi bước khởi tạo ứng dụng đều đã chạy lại |
+| Reload tài nguyên | Đọc lại và cập nhật tài nguyên có cơ chế theo dõi tương ứng | Mọi tệp ngoài đều được tự phát hiện |
+| Khởi động lại | Tạo lại phiên chạy và trạng thái khởi tạo tương ứng | Kết quả giống một phiên được duy trì qua reload |
+| Bản release | Kiểm chứng bản dựng và luồng nạp thực tế khi phát hành | Kết quả phiên debug tự đại diện cho bản release |
+
+Trong nguồn 0.24.3, SceneView.reassemble gọi HotReloadCoordinator. Bộ điều phối có thể làm mới những scene, texture, môi trường và vật liệu đã đăng ký khi nội dung thay đổi. Các nhánh này được giới hạn bởi kDebugMode; chúng không phải cơ chế reload của bản release. Sự có mặt của hook cũng không bảo đảm một tài nguyên bất kỳ do ứng dụng tự đọc đã tham gia cơ chế theo dõi. [41]
+
+Một lượt kiểm tra nên ghi nội dung trước sửa, chỉ thay một yếu tố, rồi đối chiếu ảnh và trạng thái sau cập nhật: node có bị nhân đôi không, thuộc tính nào cần giữ và tài nguyên mới có thay cho bản cũ không. Sau đó kiểm tra lại từ phiên khởi động mới và bản dựng tương ứng với mục tiêu đánh giá. Đây là nguyên tắc kiểm chứng quy trình phát triển, chưa phải kết quả đã thử của đề tài.
+
+### 2.11.5. Vai trò của công cụ biên tập cảnh
+
+Scene Editor là ứng dụng desktop phục vụ tạo, quan sát và chỉnh cảnh. Công cụ biên tập hỗ trợ vòng chuẩn bị nội dung, còn ứng dụng runtime sử dụng dữ liệu để xử lý và kết xuất. Tài liệu yêu cầu xét phiên bản editor cùng phiên bản package của dự án. Đề tài hiện chưa dùng editor để tạo sản phẩm; phần này chỉ giới thiệu vai trò, không xác nhận tính tương thích hoặc hiệu năng của một cấu hình editor cụ thể. [40]
 
 Các phần trên tạo cơ sở giải thích việc tổ chức và đánh giá ứng dụng 3D thời gian thực. Phần hướng dẫn thực hành tiếp theo áp dụng các khái niệm vào một cảnh tối thiểu, tách các thao tác cụ thể khỏi định nghĩa và nguyên lý của chúng.
 
@@ -1215,6 +1263,249 @@ flutter test test/snapshot_replica_test.dart --reporter expanded
 ```
 
 Khi một mốc lỗi, quay lại mốc ngay trước đã đạt để khoanh phần thay đổi. Lỗi member/import cần đối chiếu lockfile/source 0.24.3; lỗi asset cần kiểm tệp thật và pubspec; màn hình trống cần kiểm GPU/camera/khởi tạo. Trigger không tạo phản lực là giới hạn backend, không phải lỗi solver cần che bằng tăng collider. Các nhận xét này là hướng chẩn đoán, không đảm bảo mọi lỗi thiết bị có cùng nguyên nhân.
+
+### 2.12.13 Ví dụ khai báo tùy chọn
+
+Mục tiêu của ví dụ là biểu diễn khối hộp tương tự bài A bằng `SceneView.declarative`, `SceneNode` và `SceneMesh`. Cảnh dùng geometry, material và camera được tạo một lần trong State. Một nút đếm giúp quan sát state và identity của node khi rebuild.
+
+Tiền đề: dùng project hiện có với `flutter_scene` 0.24.3, `scene` 0.4.1 và `vector_math` 2.4.4 theo lockfile R3. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ không cần model, texture hoặc asset ngoài.
+
+Tệp mới: `lib/checkpoints/declarative/main.dart`.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_scene/scene.dart' as fs;
+import 'package:vector_math/vector_math.dart' as vm;
+
+void main() {
+  runApp(const MaterialApp(home: DeclarativeLesson()));
+}
+
+class DeclarativeLesson extends StatefulWidget {
+  const DeclarativeLesson({super.key});
+
+  @override
+  State<DeclarativeLesson> createState() =>
+      _DeclarativeLessonState();
+}
+
+class _DeclarativeLessonState extends State<DeclarativeLesson> {
+  final fs.SceneNodeController _controller =
+      fs.SceneNodeController();
+
+  late final Future<void> _ready;
+  late final fs.CuboidGeometry _geometry;
+  late final fs.PhysicallyBasedMaterial _material;
+  late final fs.PerspectiveCamera _camera;
+
+  fs.Node? _firstNode;
+  int _counter = 0;
+  String _identity = 'Chưa đánh dấu';
+
+  @override
+  void initState() {
+    super.initState();
+    _ready = _prepare();
+  }
+
+  Future<void> _prepare() async {
+    await fs.Scene.initializeStaticResources();
+    if (!mounted) return;
+
+    _geometry = fs.CuboidGeometry(
+      vm.Vector3(0.5, 0.5, 0.5),
+    );
+    _material = fs.PhysicallyBasedMaterial();
+    _camera = fs.PerspectiveCamera(
+      position: vm.Vector3(3, 3, -6),
+      target: vm.Vector3(0, 0.5, 0),
+      fovNear: 0.1,
+      fovFar: 50,
+    );
+  }
+
+  // Chỉnh thân hàm này trong bài thử hot reload.
+  vm.Vector4 _tint() => vm.Vector4(0.9, 0.35, 0.1, 1);
+
+  void _recordState() {
+    final node = _controller.node;
+    setState(() {
+      _counter++;
+      if (node == null) {
+        _identity = 'Node chưa mount';
+        return;
+      }
+      _firstNode ??= node;
+      _identity = identical(_firstNode, node)
+          ? 'Giữ nguyên'
+          : 'Đã đổi';
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: FutureBuilder<void>(
+        future: _ready,
+        builder: (context, snapshot) {
+          if (snapshot.hasError) {
+            return Center(
+              child: Text('Lỗi chuẩn bị cảnh: ${snapshot.error}'),
+            );
+          }
+          if (snapshot.connectionState != ConnectionState.done) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          // Cập nhật tham số trên material cũ, không tạo material mới.
+          _material.baseColorFactor = _tint();
+
+          return Stack(
+            fit: StackFit.expand,
+            children: [
+              fs.SceneView.declarative(
+                camera: _camera,
+                warmUp: true,
+                loadingBuilder: (context, progress) =>
+                    const Center(
+                  child: CircularProgressIndicator(),
+                ),
+                children: [
+                  fs.SceneNode(
+                    key: const ValueKey('actor'),
+                    name: 'actor',
+                    controller: _controller,
+                    position: vm.Vector3(-1.5, 0.35, 0),
+                    children: [
+                      fs.SceneMesh(
+                        key: const ValueKey('actorMesh'),
+                        geometry: _geometry,
+                        material: _material,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SafeArea(
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text('Số lần nhấn: $_counter'),
+                          Text('Identity node: $_identity'),
+                          ElevatedButton(
+                            onPressed: _recordState,
+                            child: const Text('Ghi nhận state'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+```
+
+Trong project ví dụ, chạy từ `game/tutorial-r3`:
+
+```powershell
+flutter analyze lib/checkpoints/declarative/main.dart
+```
+
+```powershell
+flutter build bundle --debug --target-platform android-arm64 --target lib/checkpoints/declarative/main.dart
+```
+
+Hai lệnh đã thực hiện ngày 07/11/2026 và đều kết thúc với mã 0. Analyze kiểm tra mã tĩnh; build bundle kiểm tra biên dịch và đóng gói kernel/assets, chưa tạo bằng chứng render trên Android.
+
+Khi có thiết bị phù hợp:
+
+```powershell
+flutter run --debug --target lib/checkpoints/declarative/main.dart
+```
+
+Kết quả dự kiến là một khối hộp được tô màu, có camera và vị trí tương tự A. Nhấn nút làm tăng bộ đếm. Từ lần ghi nhận đầu, các lần rebuild thông thường được kỳ vọng vẫn tham chiếu cùng node; cần chạy thực tế để xác nhận.
+
+### So sánh với bài A và quyền sở hữu
+
+| Nội dung | Bài A | Ví dụ khai báo |
+|---|---|---|
+| Scene | Ứng dụng tạo và host quản lý cleanup | `SceneView.declarative` tạo và sở hữu scene nội bộ |
+| Cấu trúc | Tạo `Node`, `Mesh`, gọi `add` | Mô tả bằng `SceneNode`, `SceneMesh`, `children` |
+| Geometry/material | Builder tạo đối tượng | State giữ đối tượng ổn định qua rebuild |
+| Node | Ứng dụng thao tác trực tiếp | Widget sở hữu node được giữ lại |
+| Controller | Không cần cho bài A | Chỉ đọc node để so sánh identity |
+
+Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. `SceneMesh` tạo một mesh node con dưới `SceneNode`; cây engine vì thế không hoàn toàn giống cấu trúc một node có mesh ở A.
+
+`SceneMesh` đối chiếu geometry/material theo identity. Tạo hai đối tượng này trong mỗi lần `build()` sẽ làm mất sự ổn định cần minh họa. Mã trên chỉ tạo widget mô tả và giá trị vector nhỏ khi rebuild; không tạo lại geometry, material hoặc camera.
+
+State là nơi duy nhất cập nhật `baseColorFactor`. Controller chỉ đọc node, không gán position hoặc thay cấu trúc cây. Không để mã khác đồng thời ghi thuộc tính mà `SceneNode` đã khai báo.
+
+Khi view bị hủy, source của `SceneView` thu hồi ticker/listener và dispose scene nội bộ. Widget node chịu trách nhiệm detach node/component và bỏ liên kết controller. Ví dụ không giữ một `Scene` riêng để tự dispose và không gọi API `controller.dispose()` không có trong lớp này. Geometry/material là các payload được State giữ tham chiếu; không suy rằng việc bỏ widget bảo đảm GPU memory được trả đồng bộ ngay lập tức.
+
+### Loading và warm-up
+
+Future bên ngoài chờ static resources và tạo các đối tượng dùng lại. Bên trong, `warmUp: true` yêu cầu view chuẩn bị render pipelines trước khi reveal; `loadingBuilder` cung cấp giao diện chờ.
+
+Trường `loading` của API là `ResourceGroup?`, không phải boolean hoặc future tùy ý. Ví dụ không có nhóm asset nên bỏ trường này. Loading, warm-up và hoàn tất I/O là các trạng thái khác nhau; không dùng spinner hoặc bật warm-up làm bằng chứng đã loại bỏ mọi stall.
+
+### Lỗi thường gặp
+
+| Hiện tượng | Điều cần kiểm tra |
+|---|---|
+| Không nhận constructor/member | Import `package:flutter_scene/scene.dart` và lockfile đúng 0.24.3 |
+| Không tìm thấy SceneScope | `SceneNode`/`SceneMesh` phải nằm dưới SceneView; không đặt cạnh nó trong Stack |
+| Controller trả null | Node chưa mount hoặc đã unmount; không đọc một lần trong `initState` rồi mặc định luôn có |
+| Assert transform | Không truyền đồng thời `transform` và bộ `position`/`rotation`/`scale` |
+| Node bị đổi ngoài dự kiến | Kiểm tra key, kiểu widget, vị trí cây và thao tác remount |
+| Màn hình trống/loading kéo dài | Đọc log static initialization, GPU và warm-up; analyze đạt không chứng minh runtime |
+| Màu không đổi sau reload | Sửa thân `_tint()`, không chỉ sửa initializer hoặc `_prepare()` đã chạy một lần |
+
+Trạng thái: đã đối chiếu source 0.24.3, analyze và build bundle đạt; chưa quan sát runtime.
+
+### 2.12.14 Kiểm tra hot reload có điều kiện
+
+Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận diện, ứng dụng debug đã mở cảnh thành công và công cụ phát triển vẫn kết nối. Nếu chưa có các điều kiện đó, ghi “chưa chạy”; không lấy log compile thay cho quan sát.
+
+1. Chạy đúng entrypoint khai báo. Đợi cảnh xuất hiện, nhấn “Ghi nhận state” ba lần. Ghi lại màu, bộ đếm bằng 3 và trạng thái identity. Không ghi serial vào tài liệu công khai.
+
+2. Chỉ sửa thân `_tint()`:
+
+   ```dart
+   vm.Vector4 _tint() => vm.Vector4(0.1, 0.35, 0.9, 1);
+   ```
+
+   Không sửa key, tên lớp hoặc initializer trong lần thử này.
+
+3. Thực hiện hot reload bằng nút của IDE hoặc `r` trong phiên `flutter run` tương tác. Không chạy thêm `flutter run` để thay thế thao tác reload.
+
+4. Quan sát màu và bộ đếm trước khi nhấn tiếp. Sau đó nhấn nút một lần nữa để so identity với node đã đánh dấu trước reload.
+
+   Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. `_ready`, geometry và material được kỳ vọng giữ nguyên vì State không được tạo lại trong lần hot reload thông thường.
+
+5. Thực hiện hot restart bằng IDE hoặc `R` trong phiên tương tác. Kỳ vọng State được khởi tạo lại: counter về 0, identity về “Chưa đánh dấu”, geometry/material được tạo lại. Không so identity xuyên hai lần restart bằng trường tham chiếu đã bị reset.
+
+6. Ghi kết quả thực tế từng thao tác, kể cả lỗi. Nếu Flutter yêu cầu restart hoặc reload thất bại, ghi đúng thông báo; không sửa kết quả thành hành vi kỳ vọng.
+
+| Thao tác | Nội dung quan sát |
+|---|---|
+| Rebuild do nhấn nút | Counter tăng; kiểm tra node còn cùng identity |
+| Hot reload thân `_tint()` | Kiểm tra mã màu mới và State cũ |
+| Hot restart | Kiểm tra khởi tạo lại State |
+| Dừng rồi chạy lại | Phiên ứng dụng mới; không gọi là hot reload |
+
+Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng reload GLB, ảnh texture, `.fmat`, shader bundle hoặc tài nguyên tiền xử lý. Source có coordinator cho asset reload trong debug, nhưng mỗi đường nạp cần bài thử riêng. Không suy hành vi bản release từ kết quả hot reload.
 
 
 # Chương 3. Xây dựng game Bóng rổ đối kháng 3D
@@ -1892,3 +2183,11 @@ Khi ứng dụng xuống nền hoặc mất chạm, điều khiển liên tục 
 [36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/. Truy cập ngày 05/11/2026. Chỉ dùng các đặc tính do nhà phát hành công bố, chưa quan sát chơi.
 
 [37] KhronosGroup, glTF Sample Assets, Fox, commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/4995a638c96dbc94376d3d6164e70fee3ac7f7a2/Models/Fox. Đọc README pháp lý và metadata GLB ngày 05/11/2026.
+
+[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026 theo trang YouTube; Cindy xem chọn đoạn ngày 07/11/2026, không có transcript đầy đủ.
+
+[39] Flutter Scene, Declarative scenes: https://fscene.dev/guides/declarative-scenes/. Truy cập ngày 07/11/2026.
+
+[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. Truy cập ngày 07/11/2026; chưa chạy editor.
+
+[41] Gói flutter_scene 0.24.3, mã nguồn phân phối scene_view.dart, declarative.dart và hot_reload_coordinator.dart trong lib/src: https://pub.dev/packages/flutter_scene/versions/0.24.3. Đối chiếu cache ngày 07/11/2026.

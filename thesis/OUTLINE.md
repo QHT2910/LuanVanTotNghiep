@@ -1,5 +1,7 @@
 # Bố cục sơ bộ theo yêu cầu sinh viên — 2026-11-04
 
+Cập nhật 07/11/2026: thêm 2.4.4 khai báo/thao tác trực tiếp; mở rộng 2.7 về loading/warm-up; thêm 2.11.4 hot reload và 2.11.5 editor; 2.12.13 bài khai báo tùy chọn, 2.12.14 kiểm hot reload có điều kiện. Giữ các mục lớn, A–F và thứ tự hiện hành; không đổi kiến trúc game.
+
 Đây là phiên bản làm việc, có thể sửa khi sinh viên thông báo. Không khẳng định đã được GVHD phê duyệt.
 
 ## Chương 1. Giới thiệu

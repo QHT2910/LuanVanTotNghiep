@@ -73,3 +73,11 @@
 [36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/. Truy cập ngày 05/11/2026. Chỉ dùng các đặc tính do nhà phát hành công bố, chưa quan sát chơi.
 
 [37] KhronosGroup, glTF Sample Assets, Fox, commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/4995a638c96dbc94376d3d6164e70fee3ac7f7a2/Models/Fox. Đọc README pháp lý và metadata GLB ngày 05/11/2026.
+
+[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026 theo trang YouTube; Cindy xem chọn đoạn ngày 07/11/2026, không có transcript đầy đủ.
+
+[39] Flutter Scene, Declarative scenes: https://fscene.dev/guides/declarative-scenes/. Truy cập ngày 07/11/2026.
+
+[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. Truy cập ngày 07/11/2026; chưa chạy editor.
+
+[41] Gói flutter_scene 0.24.3, mã nguồn phân phối scene_view.dart, declarative.dart và hot_reload_coordinator.dart trong lib/src: https://pub.dev/packages/flutter_scene/versions/0.24.3. Đối chiếu cache ngày 07/11/2026.
