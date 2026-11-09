@@ -1,0 +1,8 @@
+Starting: Intent { cmp=com.example.offline_practice/.MainActivity }
+adb.exe : Warning: Activity not started, intent has been delivered to currently running top-most instance.
+At line:2 char:502
++ ... e_practice; & $adb -s emulator-5554 shell am start -n com.example.off ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: Activi...-most instance.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

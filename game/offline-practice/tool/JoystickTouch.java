@@ -32,7 +32,7 @@ public final class JoystickTouch {
     }
   }
   public static void main(String[] args) throws Exception {
-    if (args.length != 8) throw new IllegalArgumentException(
+    if (args.length != 8 && args.length != 9) throw new IllegalArgumentException(
       "centerX centerY targetX targetY shootX shootY holdMillis mode");
     Class<?> type = Class.forName("android.hardware.input.InputManagerGlobal");
     manager = type.getMethod("getInstance").invoke(null);
@@ -44,13 +44,15 @@ public final class JoystickTouch {
     coords[0].x=Float.parseFloat(args[0]);coords[0].y=Float.parseFloat(args[1]);
     coords[1].x=Float.parseFloat(args[4]);coords[1].y=Float.parseFloat(args[5]);
     long hold=Long.parseLong(args[6]);String mode=args[7];
+    long leadIn=args.length==9?Long.parseLong(args[8]):300;
+    if(leadIn<0||leadIn>500)throw new IllegalArgumentException("Invalid lead-in");
     if(hold<0||hold>2000||!(mode.equals("shoot")||mode.equals("cancel")))
       throw new IllegalArgumentException("Invalid hold/mode");
     down=SystemClock.uptimeMillis();boolean active=false;
     try {
       send(MotionEvent.ACTION_DOWN,1);active=true;
       coords[0].x=Float.parseFloat(args[2]);coords[0].y=Float.parseFloat(args[3]);
-      waitMoving(1,300);
+      waitMoving(1,leadIn);
       send(MotionEvent.ACTION_POINTER_DOWN | (1<<MotionEvent.ACTION_POINTER_INDEX_SHIFT),2);
       System.out.println("BOTH_DOWN pointer0=joystick pointer1=shoot");System.out.flush();
       waitMoving(2,hold);

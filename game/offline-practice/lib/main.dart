@@ -10,6 +10,7 @@ import 'package:vector_math/vector_math.dart' as vm;
 import 'config.dart';
 import 'practice.dart';
 import 'joystick.dart';
+import 'jump_button.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,7 @@ class _PracticePageState extends State<PracticePage>
   late final SemanticsHandle semanticsHandle;
   late final Future<void> ready;
   fs.Scene? scene;
-  late fs.Node playerNode, ballNode;
+  late fs.Node playerNode, ballNode, feetNode;
   late fs.PerspectiveCamera camera;
   final hud = ValueNotifier<(String, double)>(('', 0.0));
   int joystickResetToken = 0;
@@ -172,11 +173,12 @@ class _PracticePageState extends State<PracticePage>
           ),
         )..position = vm.Vector3(0, 1.45, 0),
       );
-      // Feet disc makes the line-touching convention visible.
-      playerNode.add(
-        fs.Node(mesh: fs.Mesh(fs.DiscGeometry(radius: c.footRadius), blue))
-          ..position = vm.Vector3(0, 0.025, 0),
+      // Ground projection stays on the court while the player jumps.
+      feetNode = fs.Node(
+        name: 'feet_projection',
+        mesh: fs.Mesh(fs.DiscGeometry(radius: c.footRadius), blue),
       );
+      root.add(feetNode);
       root.add(playerNode);
       ballNode = fs.Node(
         name: 'ball',
@@ -207,6 +209,7 @@ class _PracticePageState extends State<PracticePage>
     final p = game.player, b = game.ball;
     playerNode.position = vm.Vector3(p.x, p.y, p.z);
     ballNode.position = vm.Vector3(b.x, b.y, b.z);
+    feetNode.position = vm.Vector3(p.x, 0.025, p.z);
   }
 
   void publish() {
@@ -231,7 +234,12 @@ class _PracticePageState extends State<PracticePage>
         '% | Canh khoảng ' +
         (c.idealCharge * 100).toStringAsFixed(0) +
         '%';
-    hud.value = (text, game.charge);
+    final jumpInfo =
+        ' | y=' +
+        p.y.toStringAsFixed(3) +
+        ' | ' +
+        (game.grounded ? 'grounded' : 'airborne');
+    hud.value = (text + jumpInfo, game.charge);
   }
 
   void tick(Duration elapsed, double dt) {
@@ -302,11 +310,28 @@ class _PracticePageState extends State<PracticePage>
               cancelInputs('manual_reset');
               game.newRound();
               seenRound = game.round;
+              syncScene();
               setState(() {});
               publish();
             },
             child: const Text('Lượt mới'),
           ),
+        ),
+        const SizedBox(width: 12),
+        PracticeJumpButton(
+          key: const ValueKey('practice_jump'),
+          enabled: resumed,
+          resetToken: inputEpoch,
+          onJump: () {
+            if (!mounted ||
+                !resumed ||
+                inputEpoch != joystickResetToken ||
+                seenRound != game.round) {
+              return;
+            }
+            game.jump();
+            publish();
+          },
         ),
         const SizedBox(width: 16),
         Semantics(

@@ -1,0 +1,7 @@
+Formatted lib/config.dart
+Formatted lib/practice.dart
+Formatted lib/main.dart
+Formatted lib/jump_button.dart
+Formatted test/jump_test.dart
+Formatted test/jump_button_test.dart
+Formatted 6 files (6 changed) in 0.03 seconds.

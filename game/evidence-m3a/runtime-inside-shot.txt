@@ -1,0 +1,1 @@
+PASS inside-shot input workflow; inspect event/image oracle

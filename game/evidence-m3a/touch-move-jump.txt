@@ -1,0 +1,4 @@
+BOTH_DOWN pointer0=joystick pointer1=shoot
+SHOOT_UP_JOYSTICK_STILL_DOWN
+JOYSTICK_UP
+

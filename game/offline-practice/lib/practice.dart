@@ -28,19 +28,28 @@ V3? descendingCrossing({
   required double to,
 }) {
   final values = [
-    origin.x, origin.y, origin.z, velocity.x, velocity.y, velocity.z,
-    gravity, planeY, from, to,
+    origin.x,
+    origin.y,
+    origin.z,
+    velocity.x,
+    velocity.y,
+    velocity.z,
+    gravity,
+    planeY,
+    from,
+    to,
   ];
   if (values.any((v) => !v.isFinite) ||
-      gravity <= 0 || from < 0 || to <= from) {
+      gravity <= 0 ||
+      from < 0 ||
+      to <= from) {
     return null;
   }
   final discriminant =
       velocity.y * velocity.y - 2 * gravity * (planeY - origin.y);
   if (discriminant <= 0) return null; // Tangency is not descent.
   final time = (velocity.y + math.sqrt(discriminant)) / gravity;
-  if (time <= from || time > to ||
-      velocity.y - gravity * time >= 0) {
+  if (time <= from || time > to || velocity.y - gravity * time >= 0) {
     return null;
   }
   final p = ballistic(origin, velocity, gravity, time);
@@ -55,11 +64,13 @@ class Shot {
     required this.velocity,
     required this.pointValue,
     required this.normalizedCharge,
+    required this.releasePlayerY,
   });
 
   final int id, pointValue;
   final V3 releaseFeet, origin, velocity;
   final double normalizedCharge;
+  final double releasePlayerY;
   double _time = 0;
   bool _crossed = false;
   bool _scored = false;
@@ -69,10 +80,7 @@ class Shot {
 }
 
 class Practice {
-  Practice({
-    this.config = const PracticeConfig(),
-    this.onEvent,
-  }) {
+  Practice({this.config = const PracticeConfig(), this.onEvent}) {
     config.validate();
     _player = V3(config.spawnX, 0, config.spawnZ);
     _ball = _held;
@@ -87,15 +95,22 @@ class Practice {
   double _charge = 0, _axisX = 0, _axisZ = 0;
   double _accumulator = 0, _wait = 0, _simTime = 0;
   bool _paused = false;
+  bool _jumpActive = false;
+  double _jumpTime = 0;
+  int _jumpSerial = 0;
 
   V3 get player => _player;
   V3 get ball => _ball;
-  V3 get _held => V3(_player.x, config.releaseY, _player.z);
+  V3 get _held => V3(_player.x, _player.y + config.releaseY, _player.z);
   int get score => _score;
   int get round => _round;
   Shot? get shot => _shot;
   PracticePhase get phase => _phase;
   bool get paused => _paused;
+  bool get grounded => !_jumpActive;
+  double get jumpVelocity =>
+      _jumpActive ? config.jumpSpeed - config.gravity * _jumpTime : 0;
+  double get simulatedTime => _simTime;
   double get charge =>
       (_charge / config.chargeSeconds).clamp(0.0, 1.0).toDouble();
 
@@ -106,18 +121,24 @@ class Practice {
     final threshold = config.arcRadius + config.footRadius;
     // A numerical tolerance preserves tangency after coordinate subtraction.
     return math.sqrt(dx * dx + dz * dz) - threshold > config.lineTolerance
-        ? 3 : 2;
+        ? 3
+        : 2;
   }
 
   void _emit(String name, [Map<String, Object?> data = const {}]) {
-    onEvent?.call(Map<String, Object?>.unmodifiable({
-      'event': name,
-      'eventId': ++_eventSerial,
-      'simTime': _simTime,
-      'round': _round,
-      'shotId': _shot?.id ?? _shotSerial,
-      ...data,
-    }));
+    onEvent?.call(
+      Map<String, Object?>.unmodifiable({
+        'event': name,
+        'eventId': ++_eventSerial,
+        'simTime': _simTime,
+        'round': _round,
+        'shotId': _shot?.id ?? _shotSerial,
+        'jumpId': _jumpSerial,
+        'playerY': _player.y,
+        'grounded': grounded,
+        ...data,
+      }),
+    );
   }
 
   void setMove(double x, double z) {
@@ -131,6 +152,49 @@ class Practice {
     final length = math.sqrt(x * x + z * z);
     _axisX = length > 1 ? x / length : x;
     _axisZ = length > 1 ? z / length : z;
+  }
+
+  bool jump() {
+    final reason = _paused
+        ? 'paused'
+        : !grounded
+        ? 'airborne'
+        : _phase == PracticePhase.waiting
+        ? 'waiting'
+        : null;
+    if (reason != null) {
+      _emit('jump_rejected', {'reason': reason});
+      return false;
+    }
+    _jumpActive = true; // Latch immediately, before the first simulation step.
+    _jumpTime = 0;
+    _jumpSerial++;
+    _emit('jump_start', {
+      'initialVy': config.jumpSpeed,
+      'plannedLandingSimTime': _simTime + config.jumpDuration,
+    });
+    return true;
+  }
+
+  void _advanceJump(double dt) {
+    if (!_jumpActive) return;
+    final previous = _jumpTime;
+    final next = previous + dt;
+    final landing = config.jumpDuration;
+    if (next >= landing) {
+      _jumpTime = landing;
+      _jumpActive = false;
+      _player = V3(_player.x, 0, _player.z);
+      _emit('jump_land', {
+        // The event is processed at the end of this fixed step.
+        // This field records the exact crossing time inside that step.
+        'landingSimTime': _simTime - dt + (landing - previous),
+      });
+      return;
+    }
+    _jumpTime = next;
+    final height = config.jumpSpeed * next - 0.5 * config.gravity * next * next;
+    _player = V3(_player.x, math.max(0.0, height), _player.z);
   }
 
   bool startCharge() {
@@ -152,8 +216,10 @@ class Practice {
   bool release() {
     if (_paused || _phase != PracticePhase.charging) return false;
     final q = charge;
-    final feet = _player; // V3 is immutable.
-    final origin = _held;
+    final feet = V3(_player.x, 0, _player.z);
+    // Last held-ball sample. syncScene rendered this same immutable value.
+    final origin = _ball;
+    final playerY = _player.y;
     final dx = config.hoopX - origin.x;
     final dz = config.hoopZ - origin.z;
     final distance = math.sqrt(dx * dx + dz * dz);
@@ -164,11 +230,21 @@ class Practice {
     final targetZ = config.hoopZ + uz * error;
     final t = config.flightSeconds;
     final vy = (config.rimY - origin.y + 0.5 * config.gravity * t * t) / t;
-    final velocity = V3(
-      (targetX - origin.x) / t,
-      vy,
-      (targetZ - origin.z) / t,
-    );
+    final velocity = V3((targetX - origin.x) / t, vy, (targetZ - origin.z) / t);
+    if (![
+          origin.x,
+          origin.y,
+          origin.z,
+          velocity.x,
+          velocity.y,
+          velocity.z,
+        ].every((v) => v.isFinite) ||
+        vy <= 0 ||
+        vy - config.gravity * t >= 0) {
+      _emit('shot_rejected', {'reason': 'invalid_arc'});
+      cancelCharge('invalid_arc');
+      return false;
+    }
     _shot = Shot(
       id: ++_shotSerial,
       releaseFeet: feet,
@@ -176,12 +252,19 @@ class Practice {
       velocity: velocity,
       pointValue: pointsAt(feet),
       normalizedCharge: q,
+      releasePlayerY: playerY,
     );
     _phase = PracticePhase.flying;
     _emit('shot_release', {
-      'charge': q, 'pointValue': _shot!.pointValue,
-      'feetX': feet.x, 'feetZ': feet.z,
-      'originX': origin.x, 'originY': origin.y, 'originZ': origin.z,
+      'charge': q,
+      'pointValue': _shot!.pointValue,
+      'feetX': feet.x,
+      'feetY': feet.y,
+      'feetZ': feet.z,
+      'originX': origin.x,
+      'originY': origin.y,
+      'originZ': origin.z,
+      'releasePlayerY': playerY,
     });
     return true;
   }
@@ -199,6 +282,7 @@ class Practice {
   }
 
   void newRound([String reason = 'manual']) {
+    final wasAirborne = _jumpActive;
     cancelCharge('new_round');
     _shot = null;
     _phase = PracticePhase.ready;
@@ -206,9 +290,16 @@ class Practice {
     _wait = 0;
     _axisX = 0;
     _axisZ = 0;
+    _jumpActive = false;
+    _jumpTime = 0;
+    _player = V3(_player.x, 0, _player.z);
     _ball = _held;
     _round++;
-    _emit('round_reset', {'reason': reason, 'score': _score});
+    _emit('round_reset', {
+      'reason': reason,
+      'score': _score,
+      'jumpCancelled': wasAirborne,
+    });
   }
 
   void advance(double frameDt) {
@@ -230,23 +321,29 @@ class Practice {
 
   void _step(double dt) {
     _simTime += dt;
+    _advanceJump(dt);
     if (_phase != PracticePhase.waiting) {
       _player = V3(
         (_player.x + _axisX * config.moveSpeed * dt)
-            .clamp(config.minX + config.footRadius,
-                config.maxX - config.footRadius).toDouble(),
-        0,
+            .clamp(
+              config.minX + config.footRadius,
+              config.maxX - config.footRadius,
+            )
+            .toDouble(),
+        _player.y,
         (_player.z + _axisZ * config.moveSpeed * dt)
-            .clamp(config.minZ + config.footRadius,
-                config.maxZ - config.footRadius).toDouble(),
+            .clamp(
+              config.minZ + config.footRadius,
+              config.maxZ - config.footRadius,
+            )
+            .toDouble(),
       );
     }
 
     if (_phase == PracticePhase.charging) {
       _charge = math.min(config.chargeSeconds, _charge + dt);
     }
-    if (_phase == PracticePhase.ready ||
-        _phase == PracticePhase.charging) {
+    if (_phase == PracticePhase.ready || _phase == PracticePhase.charging) {
       _ball = _held;
       return;
     }
@@ -279,12 +376,12 @@ class Practice {
         _emit('score', {'points': shot.pointValue, 'score': _score});
       }
       _emit('rim_crossing', {
-        'inside': inside, 'x': crossing.x, 'z': crossing.z,
+        'inside': inside,
+        'x': crossing.x,
+        'z': crossing.z,
       });
     }
-    final p = ballistic(
-      shot.origin, shot.velocity, config.gravity, shot._time,
-    );
+    final p = ballistic(shot.origin, shot.velocity, config.gravity, shot._time);
     _ball = p;
     if (p.y <= config.ballRadius || shot._time >= config.maxFlight) {
       _ball = V3(p.x, config.ballRadius, p.z);

@@ -1,8 +1,12 @@
 # Checkpoint tiếp tục dự án
 
+## M3a bắt đầu — nhảy, 09/11/2026
+
+Nền 112afd0, status ban đầu chỉ Wordv0.3 ngoài lượt. M2 đã được Cindy chấp nhận. Chỉ thêm nhảy/no double-jump, bóng giữ theo độ cao và ném từ bóng hiển thị; điểm theo chân mặt sân. Chưa Dash/Block/multiplayer/model thật. VS Code reuse-window mở practice.dart trước sửa. Developer cũ chỉ đọc đề xuất, Lead tích hợp/chạy;  Giữ Wordv0.3 và version/AA/ticker; kiểm AVD/process trước runtime, không mở trùng hoặc giành input. M3a hiện analyze/34tests/build/install/runtime PASS, QA cuối PASS không P1/P2 chặn; qa/milestone-3a-final.md, docs/MILESTONE_3A_PROGRESS.md và game/evidence-m3a. 6jump/5land+1reset; score3+2=tổng5, airborneorigin đúngheight/projectedfeet0, pause/resume ổn định. APKhashd4745966535ecf924d13f617dc357c3c4549a77d3140176158c29b3719413c14. ChưacommitM3a; QA đọc rồi chốtGit, không mởDash. Không đổi model/provider.
+
 ## Mốc 2 joystick — 09/11/2026, QA đạt
 
-Nền d882fc7. Lead tích hợp main/joystick + 9 test mới, tổng 22/analyze/build x64 PASS; Practice/config/SDK/dependency/luận văn không đổi. APK SHA2564610a8ddf9156daa59662056bca9167d1e145e40a28bf4f64eab81b8b65a7763, source trong kernel và hash APK cài khớp. game/evidence-m2 và docs/MILESTONE_2_PROGRESS.md hiện hành. Một Pixel_9a visible: joystick di chuyển; hai pointer thực charge/release cộng3 một lần; cancel cả hai không ném; background/resume rồi ném thêm3 tổng6/reset. Hủy riêng/race chỉ widget. Giữ VS Code/emulator mở, không tranh input. Developer o7v9oxz0vq8wm7n5527dnta1 Sol6.1/rootOLD terminal chỉ đọc; Orca QA bkm37d3uiwhgp757im7y9hov Sol6.1/rootOLD đã terminal PASS source/test/evidence/sáu ảnh, không P1/P2 chặn; qa/milestone-2-final.md. Không worker mới/model/provider. Wordv0.3 ngoài lượt SHA2567062097215C87DF6F1EB429D8DCAF3CD773D3BC4F80C33D1ED80928BB8510404 phải giữ/loại staging. Chuẩn bị finish-session sau QA/rà diff; đọc git log/status trước replay. Bàn giao Cindy, không thêm tính năng. M2 ban đầu dưới đây là lịch sử, không replay.
+Nền d882fc7. Lead tích hợp main/joystick + 9 test mới, tổng 22/analyze/build x64 PASS; Practice/config/SDK/dependency/luận văn không đổi. APK SHA2564610a8ddf9156daa59662056bca9167d1e145e40a28bf4f64eab81b8b65a7763, source trong kernel và hash APK cài khớp. game/evidence-m2 và docs/MILESTONE_2_PROGRESS.md hiện hành. Một Pixel_9a visible: joystick di chuyển; hai pointer thực charge/release cộng3 một lần; cancel cả hai không ném; background/resume rồi ném thêm3 tổng6/reset. Hủy riêng/race chỉ widget. Giữ VS Code/emulator mở, không tranh input. Developer o7v9oxz0vq8wm7n5527dnta1 Sol6.1/rootOLD terminal chỉ đọc; Orca QA bkm37d3uiwhgp757im7y9hov Sol6.1/rootOLD đã terminal PASS source/test/evidence/sáu ảnh, không P1/P2 chặn; qa/milestone-2-final.md. Không worker mới/model/provider. Wordv0.3 ngoài lượt SHA2567062097215C87DF6F1EB429D8DCAF3CD773D3BC4F80C33D1ED80928BB8510404 phải giữ/loại staging. M2 đã commit/push 112afd0, được Cindy chấp nhận; không replay finish-session. Bàn giao Cindy, không thêm tính năng. M2 ban đầu dưới đây là lịch sử, không replay.
 ## Mốc 2 joystick đang làm — 09/11/2026
 
 Yêu cầu mới tiếp tục từ d882fc7: thay4padbằngjoysticktrái, kiểm vừađivừagiữ/thảném, khôngmodelthật/multiplayer/Dash/Block. UsermuốnxemVSCodevàAVDvisible/cácảnhmốc; toolsavedfilekhôngstreamphím. ĐãcheckGit/status/process/team: chỉWordv0.3ngoàilượt, VSCodeoffline-practicemain.dartđangmở; CLIreuse-windowđãgoto main.dart:250. KhôngAVD/devicebanđầu. Khôngsửalâuđàieditor/extension. DeveloperexistingSol6.1/rootOLDchỉđọcchuẩnbịsource/testproposal; Leadghi/chạyởD:, QAgausau. Queue0trướcgiao; khôngđổiArgon/provider/tạoworkertrùng. docs/MILESTONE_2_PROGRESS.md ghi tiến độ; game/evidence-m2 mới. Chưaeditcode/build/bootAVDhoặccommit/pushmốc2. Chỉfinish-sessionloạiWordv0.3sau reviewphùhợp; khôngreplaymốc1.
@@ -53,10 +57,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-09T01:25:28.438Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `d882fc7e92b1c19cfda0af0e21fd11fcbe27a7ef`.
-- Local tracking origin/main: `d882fc7e92b1c19cfda0af0e21fd11fcbe27a7ef` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 14 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-09T02:10:23.552Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `112afd0e55f96871a9dd9343fe9dcbf60d9b2f93`.
+- Local tracking origin/main: `112afd0e55f96871a9dd9343fe9dcbf60d9b2f93` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 17 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

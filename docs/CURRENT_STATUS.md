@@ -1,6 +1,10 @@
+# M3a — QA đạt, chốt Git
+
+09/11/2026: thêm nhảy, analyze/34test/build/install PASS; một AVD hai ca hai pointer joystick+jump và jump+shoot, score3+2=tổng5, no doublejump/reset/backgroundresume oracle đạt. Xem MILESTONE_3A_PROGRESS.md. QA đã đạt, chuẩn bị finish-session; đọc Git trước replay; Wordv0.3giữ; chưaDash/Block/multiplayer/máythật. M2 đãpush112afd0/Cindy chấp nhận. Bên dưới lịch sử.
+
 # Trạng thái hiện hành — mốc 2 joystick QA đạt
 
-09/11/2026: joystick thay pad, analyze/22 test/build x64 đạt; runtime hai pointer trên một AVD, 3+3 điểm, cancel cả hai và background/resume rồi ném tiếp. Source/APK cài khớp. Xem MILESTONE_2_PROGRESS.md và game/evidence-m2. QA đạt; đang chốt Git theo AGENTS, đọc git log/status trước replay. Hủy riêng/race mới kiểm widget; chưa máy thật/Internet/full game. Giữ Wordv0.3, Figma chưa file/session. Bên dưới là lịch sử.
+09/11/2026: joystick thay pad, analyze/22 test/build x64 đạt; runtime hai pointer trên một AVD, 3+3 điểm, cancel cả hai và background/resume rồi ném tiếp. Source/APK cài khớp. Xem MILESTONE_2_PROGRESS.md và game/evidence-m2. M2 commit/push 112afd0 đã hoàn tất, Cindy chấp nhận trong phạm vi một AVD. Hủy riêng/race mới kiểm widget; chưa máy thật/Internet/full game. Giữ Wordv0.3, Figma chưa file/session. Bên dưới là lịch sử.
 
 # Trạng thái hiện hành — demo mốc 1
 

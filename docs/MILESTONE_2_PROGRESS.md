@@ -1,6 +1,6 @@
 # Mốc 2 nhỏ — joystick và phối hợp ném
 
-09/11/2026, nền Git d882fc7. Lead tích hợp/thực thi tại root hiện hành; Orca Worker developer Sol6.1/root OLD chỉ đọc đề xuất, không chạy code. Orca Worker QA đã rà độc lập, không P1/P2 chặn; xem qa/milestone-2-final.md. Chưa commit/push M2 ở thời điểm cập nhật trước finish-session. Giữ Word v0.3 ngoài lượt và các bản luận văn cũ.
+09/11/2026, nền Git d882fc7. Lead tích hợp/thực thi tại root hiện hành; Orca Worker developer Sol6.1/root OLD chỉ đọc đề xuất, không chạy code. Orca Worker QA đã rà độc lập, không P1/P2 chặn; xem qa/milestone-2-final.md. M2 đã commit/push 112afd0 và được Cindy chấp nhận trong phạm vi một AVD. Giữ Word v0.3 ngoài lượt và các bản luận văn cũ.
 
 ## Đã làm
 
@@ -41,4 +41,4 @@ Hủy riêng từng pointer, deadzone/diagonal/NaN và reset/disable race đư�
 
 Logs TXT đã chuẩn hóa UTF-8 và lọc mẫu profile/debug URL/IP/MAC, raw chỉ .scratch/m2-raw; quét không bảo đảm phát hiện mọi dữ liệu nhạy cảm. Không đưa serial/đường dẫn APK cài ngẫu nhiên vào hồ sơ công khai.
 
-QA source/test/helper/events/sáu ảnh đã PASS. Bước cuối: Lead rà diff/finish-session loại Word v0.3, xác minh origin/main rồi bàn giao Cindy; không mở tính năng mới.
+QA source/test/helper/events/sáu ảnh đã PASS. M2 đã chốt tại 112afd0; lượt M3a mới chỉ thêm nhảy theo yêu cầu tiếp theo, không replay kiểm thử M2 khi chưa đổi source.

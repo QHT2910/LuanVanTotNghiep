@@ -1,4 +1,4 @@
-# Offline practice — mốc 2: joystick
+# Offline practice — M3a: joystick và nhảy
 
 Demo tập offline tách biệt, Flutter Scene 0.24.3, scene 0.4.1, vector_math 2.4.4. Không multiplayer/Dash/Block hoặc rigid-body solver. UI tạm để thử; không phải thiết kế Figma chính thức.
 
@@ -75,3 +75,26 @@ node tool/avd-smoke.cjs <avd-id> reset-flight
 ```
 
 Helper chỉ điều khiển AVD đang chạy, không boot/đóng AVD. Nhãn: practice_hud, shoot_hold_release, new_round, move_left/right/toward_rim/away_rim. Chờ event reset có giới hạn; workflow thành công chưa thay việc kiểm oracle score/charge. Events JSON có eventId/simTime/round/shotId, không serial/credential. Ca nhiều pointer đồng thời và ranh giới chính xác cần phân biệt unit test với thao tác AVD đã thực hiện.
+
+## M3a — nhảy (09/11/2026)
+
+Nút Nhảy bên phải nhận một lần khi chạm xuống, chỉ lúc grounded; giữ nút không tự nhảy lại sau landing. Đang bay không double-jump. Joystick và ném độc lập. Nhảy theo thời gian mô phỏng, jumpSpeed=5 và gravity=9,81 cho đỉnh khoảng1,274 và thời gian khoảng1,019s; đây là tham số thử nghiệm trong config, không luật đã chốt.
+
+Nhân vật và bóng cầm nâng lên thật; đĩa chân là hình chiếu giữ trên sân. Ném lấy đúng mẫu held-ball gần nhất đang được syncScene hiển thị, điểm2/3 lấy projectedfeet y=0 tại release. Quỹ đạo arcade tính lại vận tốc từ origin cao để giữ thời gian crossing, không mang thêm vận tốc đứng của người chơi sang bóng, không solver bảng/vành. Mẫu origin cao hơn vành cũng có test. Một shot chỉ cộng một lần.
+
+Pause hủy charge/hướng đi nhưng giữ tiến trình nhảy; resume tiếp tục, không tự ném hoặc nhảy mới. Reset đưa player về y0 và bóng về tay, giữ tổng điểm. Pointer cancel của nút Nhảy kết thúc giữ nút, không đảo ngược chuyển động đã bắt đầu. HUD có y/grounded; simTime chỉ ở event để tránh cập nhật semantics liên tục.
+
+Lead analyze/34test/build/install PASS. Runtime một Pixel_9a: joystick+jump, jump+shoot ngoài/trong vạch, repeatedjump từ chối, resetmidair, backgroundmidair+charging rồi resume/land. Hai airborne release originY=playerY+1,8, feetY0; score3+2=tổng5, không lặp. Đây là hai ca hai pointer riêng, chưa ba pointer đồng thời hoặc máy thật. Xem ../../docs/MILESTONE_3A_PROGRESS.md và ../evidence-m3a; bằng chứng M2 bên trên là lịch sử trước M3a.
+
+```powershell
+node tool/jump-avd.cjs <avd-id> move-jump
+node tool/jump-avd.cjs <avd-id> jump-shot
+node tool/jump-avd.cjs <avd-id> repeat
+node tool/jump-avd.cjs <avd-id> reset
+node tool/jump-avd.cjs <avd-id> background
+node tool/jump-avd.cjs <avd-id> inside
+node tool/jump-avd.cjs <avd-id> inside-shot
+node tool/assert-jump-runtime.cjs
+```
+
+Compile JoystickTouch.java như hướng dẫn M2 nhưng push dex tới /data/local/tmp/joystick-m3.dex. Harness thêm leadInMillis tùy chọn (mặc định300 để giữ M2), M3a jump+shoot dùng50ms trước khi nhấn ném. Timing wall-clock không phải oracle; chỉ nhận ném trên không khi event releasePlayerY>0. Helper dùng AVD hiện hành/foreground demo, không boot/đóng AVD; mode background dùng HOME. Assertions là oracle phiên M3a lưu (6jump/2release/tổng5), không phải mọi phiên tùy ý. Không dùng helper trong khi người dùng đang điều khiển. Không thêm Dash/Block/multiplayer/model thật.

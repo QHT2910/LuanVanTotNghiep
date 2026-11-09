@@ -1,0 +1,14 @@
+{
+    "buildExitCode":  0,
+    "runtimeAssertionExitCode":  0,
+    "testsPassed":  34,
+    "installExitCode":  0,
+    "testExitCode":  0,
+    "initialFailures":  "Late cancel after dispose fixed; HUD clock prevented accessibility idle, removed; see initial logs versus final logs",
+    "qa":  "qa/milestone-3a-final.md",
+    "date":  "2026-11-09",
+    "baseline":  "112afd0",
+    "limits":  "One AVD, two separate two-pointer cases; no three simultaneous fingers/physical phone/benchmark/Internet/Dash/Block/multiplayer",
+    "analyzeExitCode":  0,
+    "apkSHA256":  "d4745966535ecf924d13f617dc357c3c4549a77d3140176158c29b3719413c14"
+}
