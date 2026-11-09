@@ -1,0 +1,5 @@
+Formatted lib/joystick.dart
+Formatted lib/main.dart
+Formatted test/joystick_test.dart
+Formatted test/joystick_coordination_test.dart
+Formatted 4 files (4 changed) in 0.04 seconds.

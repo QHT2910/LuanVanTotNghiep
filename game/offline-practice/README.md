@@ -1,4 +1,4 @@
-# Offline practice — mốc 1
+# Offline practice — mốc 2: joystick
 
 Demo tập offline tách biệt, Flutter Scene 0.24.3, scene 0.4.1, vector_math 2.4.4. Không multiplayer/Dash/Block hoặc rigid-body solver. UI tạm để thử; không phải thiết kế Figma chính thức.
 
@@ -23,7 +23,7 @@ APK ở build/app/outputs/flutter-apk/app-debug.apk (không đưa binary/build v
 
 ## Điều khiển
 
-Giữ pad để di chuyển; hai hướng được chuẩn hóa. Lên đi tới rổ. Giữ/thả nút ném, canh khoảng 60% thanh charge; thả sớm hoặc giữ đầy sẽ lệch. Thời gian giữ theo mô phỏng, AVD chậm có thể khác thời gian thực. Không có nút cộng điểm.
+Kéo joystick trái để di chuyển analog; thả hoặc hủy touch thì về tâm. Vùng chết bán kính 15%, ngoài vùng chết tốc độ tăng dần và được giới hạn theo vòng tròn nên đường chéo không nhanh hơn. Kéo lên đi tới rổ. Một ngón sở hữu joystick, ngón khác có thể giữ/thả nút ném đồng thời; ngón lạ không chiếm joystick đang bận. Canh khoảng 60% thanh charge; thả sớm hoặc giữ đầy sẽ lệch. Thời gian giữ theo mô phỏng, AVD chậm có thể khác thời gian thực. Không có nút cộng điểm.
 
 Lượt mới hủy cú ném, giữ tổng điểm và vị trí chân. Sau bóng chạm đất tự reset lượt; có thể ném tiếp. Xuống nền hủy charge và hướng đi; trở lại phải nhấn lại. Phiên ứng dụng mới bắt đầu từ 0.
 
@@ -39,9 +39,32 @@ SceneView giữ một ticker suốt vòng đời; logic pause/skip frame đầu 
 
 ## Kiểm chứng
 
-Lead đã chạy analyze, 13 test logic/config và build/install APK. Đây không phải widget/touch test; runtime ADB được ghi riêng và phải đối chiếu events/ảnh. Không lấy build hoặc log rỗng làm render PASS. Xem báo cáo mốc 1 cho kết quả runtime cuối và hạn chế.
+Mốc 2 ngày 09/11/2026: analyze đạt, 22 test đạt (13 test cũ và 9 test logic/widget joystick/phối hợp), build/install APK x64 đạt. Pixel_9a chạy joystick, hai pointer MotionEvent thực vừa di chuyển vừa giữ/thả ném; ghi 3 điểm, hủy cả hai pointer không ném, xuống nền/trở lại rồi ném thêm 3 điểm. Xem ../../docs/MILESTONE_2_PROGRESS.md và ../evidence-m2. Không dùng widget fixture làm bằng chứng runtime Scene; hủy riêng từng pointer mới được kiểm trong widget test, chưa kiểm riêng trên AVD.
 
-Helper ADB đọc bounds semantics, không gán tọa độ màn hình cố định:
+Helper M2 đọc bounds semantics `move_joystick` và `shoot_hold_release`. Chỉ chạy khi chính demo đang ở foreground; không tranh input với người dùng. Lệnh từ thư mục app:
+
+```powershell
+node tool/joystick-avd.cjs <avd-id> render
+node tool/joystick-avd.cjs <avd-id> move
+node tool/joystick-avd.cjs <avd-id> multi
+node tool/joystick-avd.cjs <avd-id> cancel
+node tool/joystick-avd.cjs <avd-id> background
+node tool/joystick-avd.cjs <avd-id> multi-resumed
+node tool/assert-joystick-runtime.cjs
+```
+
+`multi`/`cancel` cần shell harness Java có sẵn JDK, android.jar và d8. Không cài thêm phần mềm, không sửa quyền APK. Từ gốc repo, tạo thư mục build tạm .scratch/m2-touch/classes và .scratch/m2-touch/dex rồi:
+
+```powershell
+$sdk = "$env:LOCALAPPDATA/Android/Sdk"
+javac --release 17 -cp "$sdk/platforms/android-37.0/android.jar" -d .scratch/m2-touch/classes game/offline-practice/tool/JoystickTouch.java
+& "$sdk/build-tools/37.0.0/d8.bat" --lib "$sdk/platforms/android-37.0/android.jar" --output .scratch/m2-touch/dex .scratch/m2-touch/classes/JoystickTouch.class
+& "$sdk/platform-tools/adb.exe" -s <avd-id> push .scratch/m2-touch/dex/classes.dex /data/local/tmp/joystick-m2.dex
+```
+
+Harness dùng injectInputEvent qua shell trên AVD hiện hành, không bảo đảm khả dụng trên thiết bị/bản Android khác. Nó gửi DOWN/MOVE/POINTER_DOWN/POINTER_UP/UP với hai pointer, hoặc ACTION_CANCEL toàn bộ. Helper có thao tác HOME khi thử background, chỉ dùng trên AVD thử nghiệm. Assertion hiện là oracle cho phiên M2 đã lưu (hai cú ném/tổng 6), không phải mọi phiên tùy ý. Ảnh tĩnh không thay quan sát toàn bộ chuyển động.
+
+Helper cũ dưới đây thuộc lịch sử mốc 1 có pad bốn nút; không dùng nguyên workflow move cho UI joystick hiện hành:
 
 ```powershell
 node tool/avd-smoke.cjs <avd-id> render

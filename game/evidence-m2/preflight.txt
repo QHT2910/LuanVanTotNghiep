@@ -1,0 +1,1 @@
+2026-11-09: reused VS Code offline-practice, opened lib/main.dart before edits. HEAD d882fc7; only Wordv0.3 modified; no AVD/device at initial check.

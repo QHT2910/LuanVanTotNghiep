@@ -1,0 +1,15 @@
+{
+    "date":  "2026-11-09",
+    "baseline":  "d882fc7",
+    "analyzeExitCode":  0,
+    "testExitCode":  0,
+    "testsPassed":  22,
+    "buildApkExitCode":  0,
+    "installExitCode":  0,
+    "runtimeAssertionExitCode":  0,
+    "qa":  "qa/milestone-2-final.md",
+    "apkSHA256":  "4610a8ddf9156daa59662056bca9167d1e145e40a28bf4f64eab81b8b65a7763",
+    "runtime":  "One Pixel_9a AVD, actual two MotionEvent pointers; scores 3+3, whole-stream cancel, background/resume then shot",
+    "limits":  "Individual pointer cancel/races unit/widget only; no physical phone, benchmark, Internet, multiplayer, Dash/Block, Figma source",
+    "evidenceTextScan":  "PASS declared patterns; not exhaustive"
+}

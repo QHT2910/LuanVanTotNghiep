@@ -9,6 +9,7 @@ import 'package:vector_math/vector_math.dart' as vm;
 
 import 'config.dart';
 import 'practice.dart';
+import 'joystick.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +37,7 @@ class _PracticePageState extends State<PracticePage>
   late fs.Node playerNode, ballNode;
   late fs.PerspectiveCamera camera;
   final hud = ValueNotifier<(String, double)>(('', 0.0));
-  final movePointers = <int, Offset>{};
+  int joystickResetToken = 0;
   int? shotPointer;
   bool resumed = true;
   bool skipFrame = false;
@@ -46,9 +47,12 @@ class _PracticePageState extends State<PracticePage>
   void initState() {
     super.initState();
     semanticsHandle = WidgetsBinding.instance.ensureSemantics();
-    game = Practice(config: c, onEvent: (event) {
-      debugPrint('practice_event ' + jsonEncode(event));
-    });
+    game = Practice(
+      config: c,
+      onEvent: (event) {
+        debugPrint('practice_event ' + jsonEncode(event));
+      },
+    );
     final lifecycle = WidgetsBinding.instance.lifecycleState;
     resumed = lifecycle == null || lifecycle == AppLifecycleState.resumed;
     game.setPaused(!resumed);
@@ -59,9 +63,7 @@ class _PracticePageState extends State<PracticePage>
   fs.UnlitMaterial material(double r, double g, double b) =>
       fs.UnlitMaterial()..baseColorFactor = vm.Vector4(r, g, b, 1);
 
-  fs.Node box(
-    vm.Vector3 size, vm.Vector3 position, fs.UnlitMaterial paint,
-  ) {
+  fs.Node box(vm.Vector3 size, vm.Vector3 position, fs.UnlitMaterial paint) {
     return fs.Node(mesh: fs.Mesh(fs.CuboidGeometry(size), paint))
       ..position = position;
   }
@@ -80,24 +82,29 @@ class _PracticePageState extends State<PracticePage>
       final blue = material(0.08, 0.35, 0.95);
       final dark = material(0.15, 0.15, 0.18);
 
-      root.add(box(
-        vm.Vector3(c.maxX - c.minX, 0.1, c.maxZ - c.minZ),
-        vm.Vector3((c.minX + c.maxX) / 2, -0.05,
-            (c.minZ + c.maxZ) / 2),
-        court,
-      ));
+      root.add(
+        box(
+          vm.Vector3(c.maxX - c.minX, 0.1, c.maxZ - c.minZ),
+          vm.Vector3((c.minX + c.maxX) / 2, -0.05, (c.minZ + c.maxZ) / 2),
+          court,
+        ),
+      );
 
       void line(double x1, double z1, double x2, double z2) {
         final dx = x2 - x1, dz = z2 - z1;
         final length = math.sqrt(dx * dx + dz * dz);
         if (length < 1e-6) return;
-        root.add(box(
-          vm.Vector3(length, 0.02, 0.035),
-          vm.Vector3((x1 + x2) / 2, 0.015, (z1 + z2) / 2),
-          white,
-        )..rotation = vm.Quaternion.axisAngle(
-          vm.Vector3(0, 1, 0), -math.atan2(dz, dx),
-        ));
+        root.add(
+          box(
+              vm.Vector3(length, 0.02, 0.035),
+              vm.Vector3((x1 + x2) / 2, 0.015, (z1 + z2) / 2),
+              white,
+            )
+            ..rotation = vm.Quaternion.axisAngle(
+              vm.Vector3(0, 1, 0),
+              -math.atan2(dz, dx),
+            ),
+        );
       }
 
       line(c.minX, c.minZ, c.maxX, c.minZ);
@@ -112,50 +119,78 @@ class _PracticePageState extends State<PracticePage>
         final z1 = c.hoopZ + c.arcRadius * math.sin(a);
         final x2 = c.hoopX + c.arcRadius * math.cos(b);
         final z2 = c.hoopZ + c.arcRadius * math.sin(b);
-        if (x1 >= c.minX && x1 <= c.maxX &&
-            x2 >= c.minX && x2 <= c.maxX &&
-            z1 >= c.minZ && z1 <= c.maxZ &&
-            z2 >= c.minZ && z2 <= c.maxZ) {
+        if (x1 >= c.minX &&
+            x1 <= c.maxX &&
+            x2 >= c.minX &&
+            x2 <= c.maxX &&
+            z1 >= c.minZ &&
+            z1 <= c.maxZ &&
+            z2 >= c.minZ &&
+            z2 <= c.maxZ) {
           line(x1, z1, x2, z2);
         }
       }
 
-      root.add(box(vm.Vector3(0.12, 3.4, 0.12),
-          vm.Vector3(c.hoopX, 1.7, c.hoopZ - 0.8), dark));
-      root.add(box(vm.Vector3(1.8, 1, 0.1),
-          vm.Vector3(c.hoopX, c.rimY + 0.35, c.hoopZ - 0.6), white));
-      root.add(fs.Node(
-        name: 'rim',
-        mesh: fs.Mesh(fs.TorusGeometry(
-          radius: c.rimInnerRadius + c.rimTubeRadius,
-          tubeRadius: c.rimTubeRadius,
-          radialSegments: 32, tubularSegments: 8,
-        ), orange),
-      )..position = vm.Vector3(c.hoopX, c.rimY, c.hoopZ));
+      root.add(
+        box(
+          vm.Vector3(0.12, 3.4, 0.12),
+          vm.Vector3(c.hoopX, 1.7, c.hoopZ - 0.8),
+          dark,
+        ),
+      );
+      root.add(
+        box(
+          vm.Vector3(1.8, 1, 0.1),
+          vm.Vector3(c.hoopX, c.rimY + 0.35, c.hoopZ - 0.6),
+          white,
+        ),
+      );
+      root.add(
+        fs.Node(
+          name: 'rim',
+          mesh: fs.Mesh(
+            fs.TorusGeometry(
+              radius: c.rimInnerRadius + c.rimTubeRadius,
+              tubeRadius: c.rimTubeRadius,
+              radialSegments: 32,
+              tubularSegments: 8,
+            ),
+            orange,
+          ),
+        )..position = vm.Vector3(c.hoopX, c.rimY, c.hoopZ),
+      );
 
       playerNode = fs.Node(name: 'player');
-      playerNode.add(box(vm.Vector3(0.44, 0.8, 0.3),
-          vm.Vector3(0, 0.85, 0), blue));
-      playerNode.add(fs.Node(mesh: fs.Mesh(
-        fs.SphereGeometry(radius: 0.2, segments: 16, rings: 8),
-        white,
-      ))..position = vm.Vector3(0, 1.45, 0));
+      playerNode.add(
+        box(vm.Vector3(0.44, 0.8, 0.3), vm.Vector3(0, 0.85, 0), blue),
+      );
+      playerNode.add(
+        fs.Node(
+          mesh: fs.Mesh(
+            fs.SphereGeometry(radius: 0.2, segments: 16, rings: 8),
+            white,
+          ),
+        )..position = vm.Vector3(0, 1.45, 0),
+      );
       // Feet disc makes the line-touching convention visible.
-      playerNode.add(fs.Node(mesh: fs.Mesh(
-        fs.DiscGeometry(radius: c.footRadius), blue,
-      ))..position = vm.Vector3(0, 0.025, 0));
+      playerNode.add(
+        fs.Node(mesh: fs.Mesh(fs.DiscGeometry(radius: c.footRadius), blue))
+          ..position = vm.Vector3(0, 0.025, 0),
+      );
       root.add(playerNode);
       ballNode = fs.Node(
         name: 'ball',
-        mesh: fs.Mesh(fs.SphereGeometry(
-          radius: c.ballRadius, segments: 20, rings: 10,
-        ), orange),
+        mesh: fs.Mesh(
+          fs.SphereGeometry(radius: c.ballRadius, segments: 20, rings: 10),
+          orange,
+        ),
       );
       root.add(ballNode);
       camera = fs.PerspectiveCamera(
         position: vm.Vector3(0, 10, 14),
         target: vm.Vector3(0, 1.2, 0),
-        fovNear: 0.1, fovFar: 80,
+        fovNear: 0.1,
+        fovFar: 80,
       );
       scene = s;
       syncScene();
@@ -178,12 +213,24 @@ class _PracticePageState extends State<PracticePage>
     if (!mounted) return;
     final p = game.player;
     final points = game.shot?.pointValue ?? game.pointsAt(p);
-    final text = 'Điểm: ' + game.score.toString() +
-        ' | ' + game.phase.name + ' | Lượt: ' + game.round.toString() +
-        '\nVị trí: ' + p.x.toStringAsFixed(2) + ', ' +
-        p.z.toStringAsFixed(2) + ' | Giá trị: ' + points.toString() +
-        '\nCharge: ' + (game.charge * 100).toStringAsFixed(0) +
-        '% | Canh khoảng ' + (c.idealCharge * 100).toStringAsFixed(0) + '%';
+    final text =
+        'Điểm: ' +
+        game.score.toString() +
+        ' | ' +
+        game.phase.name +
+        ' | Lượt: ' +
+        game.round.toString() +
+        '\nVị trí: ' +
+        p.x.toStringAsFixed(2) +
+        ', ' +
+        p.z.toStringAsFixed(2) +
+        ' | Giá trị: ' +
+        points.toString() +
+        '\nCharge: ' +
+        (game.charge * 100).toStringAsFixed(0) +
+        '% | Canh khoảng ' +
+        (c.idealCharge * 100).toStringAsFixed(0) +
+        '%';
     hud.value = (text, game.charge);
   }
 
@@ -196,25 +243,17 @@ class _PracticePageState extends State<PracticePage>
     game.advance(dt);
     if (seenRound != game.round) {
       seenRound = game.round;
-      movePointers.clear();
-      shotPointer = null;
-      game.setMove(0, 0);
+      cancelInputs('round_changed');
+      // Rebuild only at the round transition, not every frame.
+      setState(() {});
     }
     syncScene();
     publish();
   }
 
-  void updateMove() {
-    var x = 0.0, z = 0.0;
-    for (final direction in movePointers.values) {
-      x += direction.dx;
-      z += direction.dy;
-    }
-    game.setMove(x, z);
-  }
-
   void cancelInputs(String reason) {
-    movePointers.clear();
+    // Synchronous logic neutralization precedes the child's rebuild.
+    joystickResetToken++;
     shotPointer = null;
     game.setMove(0, 0);
     game.cancelCharge(reason);
@@ -231,47 +270,30 @@ class _PracticePageState extends State<PracticePage>
     publish();
   }
 
-  Widget moveButton(String label, String text, Offset direction) {
-    return Semantics(
-      label: label, button: true, excludeSemantics: true,
-      child: Listener(
-        behavior: HitTestBehavior.opaque,
-        onPointerDown: (event) {
-          if (!resumed) return;
-          movePointers[event.pointer] = direction;
-          updateMove();
-        },
-        onPointerUp: (event) {
-          movePointers.remove(event.pointer);
-          updateMove();
-        },
-        onPointerCancel: (event) {
-          movePointers.remove(event.pointer);
-          updateMove();
-        },
-        child: Container(
-          width: 66, height: 42, alignment: Alignment.center,
-          margin: const EdgeInsets.all(2),
-          color: Colors.blueGrey,
-          child: Text(text, style: const TextStyle(color: Colors.white)),
-        ),
-      ),
-    );
-  }
-
   Widget controls() {
+    final inputEpoch = joystickResetToken;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Column(mainAxisSize: MainAxisSize.min, children: [
-          moveButton('move_toward_rim', 'Lên', const Offset(0, -1)),
-          Row(mainAxisSize: MainAxisSize.min, children: [
-            // Camera is on +Z, so +X appears on its left.
-            moveButton('move_left', 'Trái', const Offset(1, 0)),
-            moveButton('move_right', 'Phải', const Offset(-1, 0)),
-          ]),
-          moveButton('move_away_rim', 'Xuống', const Offset(0, 1)),
-        ]),
+        PracticeJoystick(
+          key: const ValueKey('practice_joystick'),
+          enabled: resumed,
+          resetToken: inputEpoch,
+          deadZone: 0.15,
+          hitSize: 152,
+          radius: 64,
+          thumbRadius: 20,
+          onChanged: (axis) {
+            if (!mounted ||
+                !resumed ||
+                inputEpoch != joystickResetToken ||
+                seenRound != game.round) {
+              return;
+            }
+            // Screen right maps to -X because the camera is on +Z.
+            game.setMove(-axis.dx, axis.dy);
+          },
+        ),
         const Spacer(),
         Semantics(
           label: 'new_round',
@@ -280,6 +302,7 @@ class _PracticePageState extends State<PracticePage>
               cancelInputs('manual_reset');
               game.newRound();
               seenRound = game.round;
+              setState(() {});
               publish();
             },
             child: const Text('Lượt mới'),
@@ -288,7 +311,8 @@ class _PracticePageState extends State<PracticePage>
         const SizedBox(width: 16),
         Semantics(
           label: 'shoot_hold_release',
-          button: true, excludeSemantics: true,
+          button: true,
+          excludeSemantics: true,
           child: Listener(
             behavior: HitTestBehavior.opaque,
             onPointerDown: (event) {
@@ -304,17 +328,21 @@ class _PracticePageState extends State<PracticePage>
               publish();
             },
             onPointerCancel: (event) {
-              if (shotPointer == event.pointer) {
-                cancelInputs('pointer_cancel');
-                publish();
-              }
+              if (shotPointer != event.pointer) return;
+              // Cancel only this shoot owner; leave joystick untouched.
+              shotPointer = null;
+              game.cancelCharge('pointer_cancel');
+              publish();
             },
             child: Container(
-              width: 130, height: 64,
+              width: 130,
+              height: 64,
               alignment: Alignment.center,
               color: Colors.deepOrange,
-              child: const Text('Giữ / thả ném',
-                  style: TextStyle(color: Colors.white)),
+              child: const Text(
+                'Giữ / thả ném',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ),
@@ -341,39 +369,58 @@ class _PracticePageState extends State<PracticePage>
         future: ready,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
-            return Center(child: Text('Scene error: ' +
-                snapshot.error.toString()));
+            return Center(
+              child: Text('Scene error: ' + snapshot.error.toString()),
+            );
           }
           final s = scene;
           if (snapshot.connectionState != ConnectionState.done || s == null) {
             return const Center(child: CircularProgressIndicator());
           }
-          return Stack(fit: StackFit.expand, children: [
-            // Keep the view's SingleTickerProvider alive; pause our logic above.
-            fs.SceneView(s, camera: camera, onTick: tick),
-            SafeArea(child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                ValueListenableBuilder<(String, double)>(
-                  valueListenable: hud,
-                  builder: (context, value, child) => Semantics(
-                    label: 'practice_hud', value: value.$1,
-                    excludeSemantics: true,
-                    child: Card(child: Padding(
-                      padding: const EdgeInsets.all(6),
-                      child: Column(mainAxisSize: MainAxisSize.min, children: [
-                        Text(value.$1, textAlign: TextAlign.center),
-                        SizedBox(width: 220,
-                            child: LinearProgressIndicator(value: value.$2)),
-                      ]),
-                    )),
+          return Stack(
+            fit: StackFit.expand,
+            children: [
+              // Keep the view's SingleTickerProvider alive; pause our logic above.
+              fs.SceneView(s, camera: camera, onTick: tick),
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ValueListenableBuilder<(String, double)>(
+                        valueListenable: hud,
+                        builder: (context, value, child) => Semantics(
+                          label: 'practice_hud',
+                          value: value.$1,
+                          excludeSemantics: true,
+                          child: Card(
+                            child: Padding(
+                              padding: const EdgeInsets.all(6),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(value.$1, textAlign: TextAlign.center),
+                                  SizedBox(
+                                    width: 220,
+                                    child: LinearProgressIndicator(
+                                      value: value.$2,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      controls(),
+                    ],
                   ),
                 ),
-                const Spacer(),
-                controls(),
-              ]),
-            )),
-          ]);
+              ),
+            ],
+          );
         },
       ),
     );

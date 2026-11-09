@@ -1,0 +1,7 @@
+adb.exe : .scratch/m2-touch/dex/classes.dex: 1 file pushed, 0 skipped. 0.3 MB/s (4288 bytes in 0.014s)
+At line:10 char:1
++ & $adbM2 -s emulator-5554 push .scratch/m2-touch/dex/classes.dex /dat ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (.scratch/m2-tou...ytes in 0.014s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

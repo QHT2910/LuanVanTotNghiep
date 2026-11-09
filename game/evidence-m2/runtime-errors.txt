@@ -1,0 +1,1 @@
+PASS no matching fatal/ticker errors in current app log buffer

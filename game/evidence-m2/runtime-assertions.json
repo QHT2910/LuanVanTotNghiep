@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "releases": [
+    {
+      "shotId": 1,
+      "charge": 0.611111111111111,
+      "feetX": -1.9652406417112283,
+      "feetZ": 1.951883428560815
+    },
+    {
+      "shotId": 2,
+      "charge": 0.6319444444444443,
+      "feetX": -3.78,
+      "feetZ": 1.951883428560815
+    }
+  ],
+  "scores": [
+    [
+      1,
+      3,
+      3
+    ],
+    [
+      2,
+      3,
+      6
+    ]
+  ],
+  "cancel": true,
+  "resumeThenShot": true,
+  "limits": "No per-pointer cancel runtime oracle; that independence is covered by widget tests. AVD is not a physical phone."
+}

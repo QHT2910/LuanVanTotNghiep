@@ -1,0 +1,321 @@
+[
+  {
+    "event": "dt_clamped",
+    "eventId": 1,
+    "simTime": 0,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 2,
+    "simTime": 0.12499999999999999,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 3,
+    "simTime": 7.308333333333486,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 4,
+    "simTime": 12.29166666666661,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 5,
+    "simTime": 12.416666666666602,
+    "round": 1,
+    "shotId": 0,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 6,
+    "simTime": 31.87499999999883,
+    "round": 1,
+    "shotId": 0
+  },
+  {
+    "event": "shot_release",
+    "eventId": 7,
+    "simTime": 32.608333333332126,
+    "round": 1,
+    "shotId": 1,
+    "charge": 0.611111111111111,
+    "pointValue": 3,
+    "feetX": -1.9652406417112283,
+    "feetZ": 1.951883428560815,
+    "originX": -1.9652406417112283,
+    "originY": 1.8,
+    "originZ": 1.951883428560815
+  },
+  {
+    "event": "score",
+    "eventId": 8,
+    "simTime": 34.01666666666538,
+    "round": 1,
+    "shotId": 1,
+    "points": 3,
+    "score": 3
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 9,
+    "simTime": 34.01666666666538,
+    "round": 1,
+    "shotId": 1,
+    "inside": true,
+    "x": 0.016394630004741728,
+    "z": -3.041310104683758
+  },
+  {
+    "event": "shot_end",
+    "eventId": 10,
+    "simTime": 34.383333333332025,
+    "round": 1,
+    "shotId": 1,
+    "scored": true,
+    "score": 3
+  },
+  {
+    "event": "round_reset",
+    "eventId": 11,
+    "simTime": 35.3916666666653,
+    "round": 2,
+    "shotId": 1,
+    "reason": "auto",
+    "score": 3
+  },
+  {
+    "event": "charge_start",
+    "eventId": 12,
+    "simTime": 99.97500000002563,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "charge_cancel",
+    "eventId": 13,
+    "simTime": 100.30833333335923,
+    "round": 2,
+    "shotId": 1,
+    "reason": "pointer_cancel"
+  },
+  {
+    "event": "paused",
+    "eventId": 14,
+    "simTime": 104.75833333336277,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "resumed",
+    "eventId": 15,
+    "simTime": 104.75833333336277,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "paused",
+    "eventId": 16,
+    "simTime": 104.75833333336277,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "resumed",
+    "eventId": 17,
+    "simTime": 104.75833333336277,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 18,
+    "simTime": 134.7583333333751,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 19,
+    "simTime": 166.81666666667928,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 20,
+    "simTime": 250.15833333327015,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 21,
+    "simTime": 265.6333333332561,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 22,
+    "simTime": 265.9999999999224,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 23,
+    "simTime": 266.6166666665885,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 24,
+    "simTime": 266.75833333325505,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 25,
+    "simTime": 266.85833333325496,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 26,
+    "simTime": 266.95833333325487,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 27,
+    "simTime": 267.0583333332548,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 28,
+    "simTime": 267.30833333325455,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 29,
+    "simTime": 267.4583333332544,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 30,
+    "simTime": 270.15833333325196,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "charge_start",
+    "eventId": 31,
+    "simTime": 280.2916666665761,
+    "round": 2,
+    "shotId": 1
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 32,
+    "simTime": 280.8249999999089,
+    "round": 2,
+    "shotId": 1,
+    "accepted": 0.1
+  },
+  {
+    "event": "shot_release",
+    "eventId": 33,
+    "simTime": 281.0499999999087,
+    "round": 2,
+    "shotId": 2,
+    "charge": 0.6319444444444443,
+    "pointValue": 3,
+    "feetX": -3.78,
+    "feetZ": 1.951883428560815,
+    "originX": -3.78,
+    "originY": 1.8,
+    "originZ": 1.951883428560815
+  },
+  {
+    "event": "score",
+    "eventId": 34,
+    "simTime": 282.4583333332408,
+    "round": 2,
+    "shotId": 2,
+    "points": 3,
+    "score": 6
+  },
+  {
+    "event": "rim_crossing",
+    "eventId": 35,
+    "simTime": 282.4583333332408,
+    "round": 2,
+    "shotId": 2,
+    "inside": true,
+    "x": 0.077531436396856,
+    "z": -3.101567892879923
+  },
+  {
+    "event": "shot_end",
+    "eventId": 36,
+    "simTime": 282.8249999999071,
+    "round": 2,
+    "shotId": 2,
+    "scored": true,
+    "score": 6
+  },
+  {
+    "event": "round_reset",
+    "eventId": 37,
+    "simTime": 283.8333333332395,
+    "round": 3,
+    "shotId": 2,
+    "reason": "auto",
+    "score": 6
+  },
+  {
+    "event": "dt_clamped",
+    "eventId": 38,
+    "simTime": 285.6416666665712,
+    "round": 3,
+    "shotId": 2,
+    "accepted": 0.1
+  }
+]

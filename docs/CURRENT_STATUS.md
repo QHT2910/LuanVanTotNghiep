@@ -1,3 +1,7 @@
+# Trạng thái hiện hành — mốc 2 joystick QA đạt
+
+09/11/2026: joystick thay pad, analyze/22 test/build x64 đạt; runtime hai pointer trên một AVD, 3+3 điểm, cancel cả hai và background/resume rồi ném tiếp. Source/APK cài khớp. Xem MILESTONE_2_PROGRESS.md và game/evidence-m2. QA đạt; đang chốt Git theo AGENTS, đọc git log/status trước replay. Hủy riêng/race mới kiểm widget; chưa máy thật/Internet/full game. Giữ Wordv0.3, Figma chưa file/session. Bên dưới là lịch sử.
+
 # Trạng thái hiện hành — demo mốc 1
 
 07/11/2026: ưu tiên demo từng phần trên AVD, luận văn sửa song song. ProbeF Scene/Fox chạy trên Pixel_9a Android37 x86_64, backendImpellerOpenGLES; game/evidence-m1/probe-render.png. App game/offline-practice/main entrypoint lib/main.dart, Androidlandscape/camera/court/player/ball/rim; di chuyển/charge/release/2–3 một lần/reset/chơi tiếp. 13test/analyze/build/installPASS; ADBsuitecuốiđạt3+2,2miss,2backgroundresume,resetflight+hủyshotcũ/tiếp2,tổng7; runtime-assertions.json. AA-none mitigation sạch vệt ở ảnh cuối; ticker khôngtạolạiqua autoTick. Chi tiết MILESTONE_1_REVIEW.md, code/README và evidence-m1. QA cuối đạt phạm vi source/test/evidence, không P1/P2 chặn; qa/milestone-1-final.md. Sau tạm ngưng đã xác minh APK/source/kernel khớp, không AVD/worker đang chạy, queue0; không chạy lại probe/build. Lead chốt Git theo AGENTS. Chưa fullgame/multiplayer/Dash/Block,khôngbenchmarkRedmi/haiAndroid/Internet. Figmađãchọnchưa file/session, UIhiệnchỉtạm. Wordv0.7giữnguyên,khôngxuấtlại; Wordv0.3loạistaging.
