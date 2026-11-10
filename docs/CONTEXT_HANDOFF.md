@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## M3b cuối10/11 — QAđạt
+
+Nền1ac51f9.47test/analyze/build/install/audit7/runtimecleanPASS;docs/MILESTONE_3B_PROGRESS,game/evidence-m3b. APK5ea9514aaf16d060494e1f46b668c2ec4864c1f7c4e774071ba7f8172c3d0f44 cài/snapshotkhớp.7Dash/end, cooldown/bounds/cancel/backgroundresume/chargecancel/ném3once. Userđãtrựctiếpchokhoảngkhôngchạm,workflowxongđãdừnginput. SourceProposaldeveloperterminalSol6.1/rootOLDreadonly;Leadthựchiện,QAterminalPASS. Workspaceuserđínhchínhchỉgame/offline-practiceđãmở,khôngcácrighthồsơ/release. FigmaComputerUsevẫnthiếu,khôngeditable/PNG. ChưacommitM3b,Wordv0.3giữ. Tấtcảđoạnmultiroot/chưaDashdướilàlịchsử;khôngreplay. SauQAfinish-session/remoteverifybàngiaoCindy,khôngmởBlock.
+
 ## 10/11/2026 — snapshot/structure/UI/thesis trước Dash
 
 Nền ab9bf92, chỉ Wordv0.3 ngoài lượt ban đầu. Đã copy/hash verify APK M3a local demos/releases/m3a/offline-practice-m3a-x64.apk; M1/M2 APK missing/rebuildable, demos/README.md. ROADMAP.md mới; workspace multi-root đã mở VSCode; migration plan/apply xong,4file+classbodyhashkhớp, analyze/34testsPASS, build/Nodeaudit6sourcePASS,game/evidence-refactor;PythonStorealiasthiếuinterpreter,khôngcài,NodefallbackdùngZIPreaderđãcó. Khôngrerunmigration. Figma.exe đã gọi mở, Computer Use không có trong ALL_TOOLS/hostcapabilities yêu cầu bật Settings→Built-inTools, chưa xác minh login/file/PNG. Không shell giảclick/credential/debugport. Quyđịnhstyle copy docs/THESIS_FORMAT_2026-11-09.md; tiêuđềbold/caps theo useroverride, Afterchưađịnh. Developer/thesis đều terminal proposal/review (Sol6.1/rootOLDchỉđọc); Leadđãtíchhợp. QA bkm37d3uiwhgp757im7y9hov đangràsnapshot/workspace/thesis, chưarefactorgatecuối. Ch2/3source/combined/refs44đãđổi,WordPDFkhôngđổi;Ch4draftresearchriêng. ChưaM3bDash, ưu tiênsnapshot/structure/Figmasession/thesisreview; khôngBlock/mạng/model/provider. Bướctiếp tíchhợpproposal/gates/sourceAPK/QA, không sửa evidencecũ/Wordv0.3.
@@ -61,10 +65,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T04:53:25.963Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `811493dbfde4db121e512b419be592f037f24eb0`.
-- Local tracking origin/main: `811493dbfde4db121e512b419be592f037f24eb0` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 8 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T05:20:13.044Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `1ac51f94d687cbbd995a9d959b43c4f92ccf0c3b`.
+- Local tracking origin/main: `1ac51f94d687cbbd995a9d959b43c4f92ccf0c3b` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 23 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
@@ -89,3 +93,5 @@ Cindy review độc lập v0.6 theo báo cáo xuất bản, đặc biệt chấp
 Nếu nhận yêu cầu tiếp, đọc đúng phạm vi và Git hiện tại rồi thực hiện phần đó. Root worker phải được sửa qua host hỗ trợ và xác nhận quyền trước ghi. Không retry Argon/provider bị từ chối hoặc tạo worker trùng. Dùng native compaction và CONTEXT_PROTOCOL; chưa có auto rollover được xác minh, không /clear, cron hoặc polling.
 
 Cập nhật chốt mốc: OrcaQArefactor terminalPASS khôngP1/P2, qa/refactor-layout-2026-11-10.md; source/test/body/API khôngđổihànhvi. Chuẩnbịchốtorganizationriêng(loạithesis/research), rồichốtcontentthesisriêng. Đọcgitlog/status trước replay. DeveloperchỉđọcđangchuẩnbịDashproposal, CHƯAápDash; Figma chưaComputerUse/file/PNG. KhôngruntimeAPKrefactor.
+
+QA M3b terminalđạt (OrcaWorkerSol6.1/rootOLDchỉđọc); qa/milestone-3b-final.md. ChưaFigmaComputerUse/file/PNG, khôngcoiUIxong. ChốtGitM3btheoAGENTS, mãcommittraGitlogthayvìreplaylệnhcũ. KhôngthêmBlock/mạng.

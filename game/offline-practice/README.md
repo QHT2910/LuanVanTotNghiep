@@ -107,4 +107,25 @@ Compile JoystickTouch.java như hướng dẫn M2 nhưng push dex tới /data/lo
 
 Bốn source logic/input và toàn thân PracticePage được chuyển nguyên byte; tests chỉ đổi11 import. Logs kiểm bản refactor ở ../evidence-refactor; runtime M3a ở evidence-m3a thuộc layout/commit cũ, không nhận là đã chạy bản mới. Không chạy các helper AVD lịch sử để ghi đè evidence cũ.
 
-Audit đã chạy bằng `node tool/audit-apk-sources.cjs`, dùng ZIP reader sẵn trong .local-tools của repo, không đổi dependency app. Có bản Python standard-library `python tool/audit-apk-sources.py` tùy chọn; máy hiện không có Python thật nên chưa chạy bản này. Script xuất JSON stdout, kiểm cả sáu source mới nhúng trong debug kernel và không còn source flat; không chứng minh APK đã cài hoặc runtime. Không dùng APK release stripped để kết luận PASS. Snapshot M3a trước refactor ở ../../demos/releases/m3a, hash xem manifest.
+Audit đã chạy bằng `node tool/audit-apk-sources.cjs`, dùng ZIP reader sẵn trong .local-tools của repo, không đổi dependency app. Có bản Python standard-library `python tool/audit-apk-sources.py` tùy chọn; máy hiện không có Python thật nên chưa chạy bản này. Script xuất JSON stdout, kiểm manifest source hiện hành nhúng trong debug kernel (6 file ở refactor, 7 khi thêm Dash) và không còn source flat; không chứng minh APK đã cài hoặc runtime. Không dùng APK release stripped để kết luận PASS. Snapshot M3a trước refactor ở ../../demos/releases/m3a, hash xem manifest.
+## M3b — Dash thử nghiệm
+
+Dash chỉ khi grounded, không paused/waiting, hết cooldown. Hướng joystick hiện tại hoặc facing gần nhất (mặc định hướng rổ) được chốt lúc bắt đầu; đổi joystick không bẻ hướng Dash. Tốc độ8 thay walk, không cộng chéo; duration0,2s rồi cooldown0,8s theo thời gian mô phỏng. Tới biên dừng theo cùng ray, không trượt dọc biên. Bước chuyển tiếp không walk phần thời gian dư tối đa một fixed step.
+
+Dash hủy charge, chặn jump/startCharge/release, không queue. Shot đã bay vẫn giữ origin/điểm đã cache. Thả/hủy pointer Dash chỉ kết thúc giữ nút, không đảo ngược hành động đã bắt đầu; giữ qua hồi chiêu không tự lặp. Reset/background hủy Dash nhưng giữ deadline cooldown; pause đóng băng simTime, resume không tự Dash, phải nhấn mới sau cooldown.
+
+Nút Dash riêng bên phải, nhóm nút scale-down khi màn hẹp; chưa khẳng định kích thước touch phù hợp mọi thiết bị. Không thêm countdown/clock liên tục vào HUD. Runtime helpers mới ghi evidence-m3b, không ghi đè M3a/refactor.
+
+```powershell
+node tool/dash-avd.cjs <avd-id> layout
+node tool/dash-avd.cjs <avd-id> move-dash
+node tool/dash-avd.cjs <avd-id> repeat
+node tool/dash-avd.cjs <avd-id> bounds
+node tool/dash-avd.cjs <avd-id> charge-dash
+node tool/dash-avd.cjs <avd-id> background
+node tool/dash-avd.cjs <avd-id> cancel
+node tool/dash-avd.cjs <avd-id> after-resume
+node tool/dash-avd.cjs <avd-id> shot
+```
+
+Compile tool/DashTouch.java bằng JDK/android.jar/d8 như harness trước, push classes.dex tới /data/local/tmp/dash-m3b.dex. Helper chỉ gửi input khi demo foreground; không chạy khi người dùng đang chạm AVD. Lượt thử đầu có input ngoài helper được giữ exploratory và không dùng làm oracle sạch; người dùng sau đó trực tiếp cho một khoảng không chạm để kiểm riêng. Xem docs/MILESTONE_3B_PROGRESS.md từ root repo cho kết quả và giới hạn cuối. Chưa Block/multiplayer/model thật.

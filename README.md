@@ -36,6 +36,6 @@ Nguồn Mermaid và SVG UML trong `diagrams/` có thể chỉnh sửa. Tài li�
 Game dùng tên tạm Bóng rổ đối kháng 3D. Các tệp v0.1/v0.2 và wireframe 3-9 lưu lại để theo dõi lịch sử. Mục 3.3 cần bộ thiết kế bằng phần mềm bên thứ ba; Figma đã được sinh viên chọn; chưa có file/session hoặc bộ thiết kế chính thức. Xem [đặc tả UI](design/ui-spec-r1.md) và [kiểm chứng khả thi](game/feasibility-r1.md).
 # Workspace phát triển
 
-Mở `LuanVanTotNghiep.code-workspace` trong VS Code. Các root hiển thị: Game và demos (`game`, gồm probe/tutorial/offline/evidence), Thesis (`thesis`), UI (`design`), Research (`research`), QA (`qa`), Docs (`docs`), Tools (`tools`), Demo manifest (`demos`). Chỉ workspace settings ẩn build/.dart_tool/.scratch/.git; không đổi global settings.
+Mở `LuanVanTotNghiep.code-workspace` trong VS Code: chỉ hiển thị root `game`, trỏ `game/offline-practice`. Theo đính chính 10/11, cấu trúc project ở đây chỉ là code Flutter. Thesis/research/docs/design/qa/tools/demos giữ nguyên vị trí ngoài cây game, chỉ mở file khi cần. Workspace settings ẩn build/.dart_tool/.scratch/.git, không đổi global settings.
 
 `demos/README.md` ghi commit và APK từng mốc; APK M3a bảo toàn local dưới demos/releases (không Git). `docs/ROADMAP.md` ghi thứ tự công việc. Các nguồn lịch sử và evidence giữ nguyên; UI tạm không phải thiết kế Figma chính thức. Quy định trình bày mới ở `docs/THESIS_FORMAT_2026-11-09.md`, chưa xuất lại Word/PDF trong lượt tổ chức này.

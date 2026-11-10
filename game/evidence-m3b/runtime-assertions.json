@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "dashStarts": 7,
+  "dashEnds": 7,
+  "endReasons": [
+    "duration",
+    "duration",
+    "bounds",
+    "bounds",
+    "background",
+    "duration",
+    "duration"
+  ],
+  "durationDistance": 1.6,
+  "rejected": [
+    "already_dashing",
+    "cooldown"
+  ],
+  "chargeCancelledWithoutShot": true,
+  "backgroundCancelledAndFrozenCooldown": true,
+  "noAutoDashOnResume": true,
+  "score": [
+    [
+      1,
+      3,
+      3
+    ]
+  ],
+  "limits": "One AVD; jump/shoot rejection during Dash and reset/races covered in unit/widget, not this runtime sequence. Exploratory mixed-input trace excluded."
+}

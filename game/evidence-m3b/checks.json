@@ -1,0 +1,18 @@
+{
+    "analyzeExitCode":  0,
+    "baseline":  "1ac51f9",
+    "buildExitCode":  0,
+    "installedHashMatches":  true,
+    "sourceAudit":  "7 sources embedded, final APK",
+    "figma":  "App present/launched, Computer Use absent; no verified login/editable source/PNG",
+    "limits":  "Jump/shoot blocking, reset/races/diagonal/multiple resolutions unit/widget only; no physical phone, Internet, Block or multiplayer",
+    "workspace":  "Single game folder game/offline-practice per user correction",
+    "apkSHA256":  "5ea9514aaf16d060494e1f46b668c2ec4864c1f7c4e774071ba7f8172c3d0f44",
+    "installExitCode":  0,
+    "runtimeAssertionExitCode":  0,
+    "runtime":  "Clean session with explicit user no-touch approval; 7 Dash starts/ends, bounds, repeated/cooldown rejection, chargecancel, background/resume, global pointercancel, continued Dash, score3once",
+    "exploratory":  "Mixed-input earlier trace preserved separately; excluded from oracle",
+    "testExitCode":  0,
+    "testsPassed":  47,
+    "date":  "2026-11-10"
+}

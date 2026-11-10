@@ -21,3 +21,7 @@ git worktree add --detach ../LuanVan-demo-m3a ab9bf92
 Các lệnh chỉ là hướng dẫn, chưa tạo worktree trong lượt này; chọn vị trí được cấp quyền ghi. Đọc README tại commit tương ứng, dùng SDK/dependency đã ghi ở đó. Có thể xem một file mà không checkout bằng `git show ab9bf92:game/offline-practice/lib/main.dart`.
 
 Probe/tutorial giữ nguyên: game/probe-r1, game/tutorial-r2, game/tutorial-r3 và các game/evidence-r1,r2,r3,v07. Không xóa build/source hàng loạt. UI tạm của demo không phải nguồn thiết kế Figma.
+
+## M3b snapshot local
+
+Source/evidence M3b đã QA đạt; commit triển khai tra bằng `git log --all --grep="Hoàn thành Dash M3b" --format=%H -1` (lệnh đọc, không tạo worktree). Không gán hash giả trong snapshot trước commit. APK x86_64 đã copy/hashverify demos/releases/m3b/offline-practice-m3b-x64.apk, SHA2565ea9514aaf16d060494e1f46b668c2ec4864c1f7c4e774071ba7f8172c3d0f44. Binary bịignore; sauchốt đọcgitloghoặcMILESTONE_3B_PROGRESSđểlấycommit. M3asnapshotgiữnguyên. Workspacehiệnhànhchỉapp, releasesngoàicâyFlutter.

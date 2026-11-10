@@ -10,6 +10,7 @@ import 'package:offline_practice/src/simulation/config.dart';
 import 'package:offline_practice/src/simulation/practice.dart';
 import 'package:offline_practice/src/input/joystick.dart';
 import 'package:offline_practice/src/input/jump_button.dart';
+import 'package:offline_practice/src/input/dash_button.dart';
 
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
@@ -225,11 +226,11 @@ class _PracticePageState extends State<PracticePage>
         (c.idealCharge * 100).toStringAsFixed(0) +
         '%';
     final jumpInfo =
-        ' | y=' +
+        '\ny=' +
         p.y.toStringAsFixed(3) +
         ' | ' +
         (game.grounded ? 'grounded' : 'airborne');
-    hud.value = (text + jumpInfo, game.charge);
+    hud.value = (text + jumpInfo + ' | Dash: ' + game.dashStatus, game.charge);
   }
 
   void tick(Duration elapsed, double dt) {
@@ -255,6 +256,7 @@ class _PracticePageState extends State<PracticePage>
     shotPointer = null;
     game.setMove(0, 0);
     game.cancelCharge(reason);
+    game.cancelDash(reason);
   }
 
   @override
@@ -270,6 +272,12 @@ class _PracticePageState extends State<PracticePage>
 
   Widget controls() {
     final inputEpoch = joystickResetToken;
+    bool inputValid() =>
+        mounted &&
+        resumed &&
+        inputEpoch == joystickResetToken &&
+        seenRound == game.round;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -282,81 +290,101 @@ class _PracticePageState extends State<PracticePage>
           radius: 64,
           thumbRadius: 20,
           onChanged: (axis) {
-            if (!mounted ||
-                !resumed ||
-                inputEpoch != joystickResetToken ||
-                seenRound != game.round) {
-              return;
-            }
-            // Screen right maps to -X because the camera is on +Z.
+            if (!inputValid()) return;
             game.setMove(-axis.dx, axis.dy);
           },
         ),
-        const Spacer(),
-        Semantics(
-          label: 'new_round',
-          child: ElevatedButton(
-            onPressed: () {
-              cancelInputs('manual_reset');
-              game.newRound();
-              seenRound = game.round;
-              syncScene();
-              setState(() {});
-              publish();
-            },
-            child: const Text('Lượt mới'),
-          ),
-        ),
         const SizedBox(width: 12),
-        PracticeJumpButton(
-          key: const ValueKey('practice_jump'),
-          enabled: resumed,
-          resetToken: inputEpoch,
-          onJump: () {
-            if (!mounted ||
-                !resumed ||
-                inputEpoch != joystickResetToken ||
-                seenRound != game.round) {
-              return;
-            }
-            game.jump();
-            publish();
-          },
-        ),
-        const SizedBox(width: 16),
-        Semantics(
-          label: 'shoot_hold_release',
-          button: true,
-          excludeSemantics: true,
-          child: Listener(
-            behavior: HitTestBehavior.opaque,
-            onPointerDown: (event) {
-              if (shotPointer == null && game.startCharge()) {
-                shotPointer = event.pointer;
-                publish();
-              }
-            },
-            onPointerUp: (event) {
-              if (shotPointer != event.pointer) return;
-              shotPointer = null;
-              game.release();
-              publish();
-            },
-            onPointerCancel: (event) {
-              if (shotPointer != event.pointer) return;
-              // Cancel only this shoot owner; leave joystick untouched.
-              shotPointer = null;
-              game.cancelCharge('pointer_cancel');
-              publish();
-            },
-            child: Container(
-              width: 130,
-              height: 64,
-              alignment: Alignment.center,
-              color: Colors.deepOrange,
-              child: const Text(
-                'Giữ / thả ném',
-                style: TextStyle(color: Colors.white),
+        Expanded(
+          child: Align(
+            alignment: Alignment.bottomRight,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.bottomRight,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Semantics(
+                    label: 'new_round',
+                    child: ElevatedButton(
+                      onPressed: () {
+                        cancelInputs('manual_reset');
+                        game.newRound();
+                        seenRound = game.round;
+                        syncScene();
+                        setState(() {});
+                        publish();
+                      },
+                      child: const Text('Lượt mới'),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  PracticeJumpButton(
+                    key: const ValueKey('practice_jump'),
+                    enabled: resumed,
+                    resetToken: inputEpoch,
+                    onJump: () {
+                      if (!inputValid()) return;
+                      game.jump();
+                      publish();
+                    },
+                  ),
+                  const SizedBox(width: 8),
+                  PracticeDashButton(
+                    key: const ValueKey('practice_dash'),
+                    enabled: resumed,
+                    resetToken: inputEpoch,
+                    onDash: () {
+                      if (!inputValid()) return;
+                      if (game.dash()) {
+                        // The old charging finger cannot release after Dash.
+                        // Do not reset joystick/jump ownership here.
+                        shotPointer = null;
+                      }
+                      publish();
+                    },
+                  ),
+                  const SizedBox(width: 8),
+                  Semantics(
+                    label: 'shoot_hold_release',
+                    button: true,
+                    excludeSemantics: true,
+                    child: Listener(
+                      behavior: HitTestBehavior.opaque,
+                      onPointerDown: (event) {
+                        if (!inputValid()) return;
+                        if (shotPointer == null && game.startCharge()) {
+                          shotPointer = event.pointer;
+                          publish();
+                        }
+                      },
+                      onPointerUp: (event) {
+                        if (!inputValid() || shotPointer != event.pointer)
+                          return;
+                        shotPointer = null;
+                        game.release();
+                        publish();
+                      },
+                      onPointerCancel: (event) {
+                        if (shotPointer != event.pointer) return;
+                        shotPointer = null;
+                        game.cancelCharge('pointer_cancel');
+                        publish();
+                      },
+                      child: Container(
+                        width: 130,
+                        height: 64,
+                        alignment: Alignment.center,
+                        color: Colors.deepOrange,
+                        child: const Text(
+                          'Giữ / thả ném',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

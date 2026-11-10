@@ -1,0 +1,7 @@
+Formatted lib/src/simulation/config.dart
+Formatted lib/src/simulation/practice.dart
+Formatted lib/src/presentation/practice_page.dart
+Formatted lib/src/input/dash_button.dart
+Formatted test/dash_test.dart
+Formatted test/dash_button_test.dart
+Formatted 6 files (6 changed) in 0.07 seconds.

@@ -1,0 +1,7 @@
+adb.exe : .scratch/m3b-touch/dex/classes.dex: 1 file pushed, 0 skipped. 0.2 MB/s (4852 bytes in 0.023s)
+At line:2 char:666
++ ...  0){exit 1};& "$sdk/platform-tools/adb.exe" -s emulator-5554 push .sc ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (.scratch/m3b-to...ytes in 0.023s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

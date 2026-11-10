@@ -1,0 +1,47 @@
+[
+  {
+    "mode": "layout",
+    "beforeId": 1,
+    "afterId": 1
+  },
+  {
+    "mode": "move-dash",
+    "beforeId": 1,
+    "afterId": 3
+  },
+  {
+    "mode": "repeat",
+    "beforeId": 3,
+    "afterId": 7
+  },
+  {
+    "mode": "bounds",
+    "beforeId": 7,
+    "afterId": 9
+  },
+  {
+    "mode": "charge-dash",
+    "beforeId": 9,
+    "afterId": 13
+  },
+  {
+    "mode": "background",
+    "beforeId": 13,
+    "afterId": 17
+  },
+  {
+    "mode": "cancel",
+    "beforeId": 17,
+    "afterId": 19
+  },
+  {
+    "mode": "after-resume",
+    "beforeId": 19,
+    "afterId": 21
+  },
+  {
+    "mode": "shot",
+    "beforeId": 21,
+    "afterId": 27
+  }
+]

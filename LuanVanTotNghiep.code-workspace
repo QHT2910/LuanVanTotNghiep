@@ -1,16 +1,21 @@
 {
-  "folders": [
-    {"name":"Game và demos","path":"game"},
-    {"name":"Thesis","path":"thesis"},
-    {"name":"UI","path":"design"},
-    {"name":"Research","path":"research"},
-    {"name":"QA","path":"qa"},
-    {"name":"Docs","path":"docs"},
-    {"name":"Tools","path":"tools"},
-    {"name":"Demo manifest","path":"demos"}
-  ],
-  "settings": {
-    "files.exclude": {"**/.git":true,"**/.scratch":true,"**/build":true,"**/.dart_tool":true},
-    "search.exclude": {"**/build":true,"**/.dart_tool":true,"**/.scratch":true,"**/releases":true}
-  }
+    "settings":  {
+                     "files.exclude":  {
+                                           "**/.scratch":  true,
+                                           "**/build":  true,
+                                           "**/.git":  true,
+                                           "**/.dart_tool":  true
+                                       },
+                     "search.exclude":  {
+                                            "**/.scratch":  true,
+                                            "**/build":  true,
+                                            "**/.dart_tool":  true
+                                        }
+                 },
+    "folders":  [
+                    {
+                        "name":  "game",
+                        "path":  "game/offline-practice"
+                    }
+                ]
 }

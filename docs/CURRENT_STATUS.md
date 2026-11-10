@@ -1,3 +1,7 @@
+# M3b — sạchruntimeđạt,QAđạt
+
+47tests/analyze/build/install/audit7PASS,7Dash vàscore3once. Workspacechỉgame/offline-practice theođínhchính; hồsơreleasesngoàicâyapp. Figma chưaComputerUse/session/source/PNG; stylethesis/source44đãpush1ac51f9,khôngxuấtWord. ChưaGitM3b,Wordv0.3giữ. Xem MILESTONE_3B_PROGRESS. Bêndướilịchsử.
+
 # 10/11/2026 — tổ chức và rà luận văn
 
 Nền ab9bf92; snapshot APKM3a localhashđạt, manifest/roadmap/workspace đãcó. Refactorlayout sourceđãáp,4file+classbodybytekhớp; analyze/34testđạt, build/Nodeaudit6sourceđạt. Ch2/Ch3/refs44sourceđãsửa,Ch4draft riêng,Word/PDFgiữ. QAđangràphầnchuẩnbị. FigmaappgọimởnhưngthiếuComputerUse, chưalogin/file/PNG. ChưaDash, chưacommitlượtmới. Chi tiết PROGRESS_2026-11-10.md, ROADMAP.md, PROJECT_STRUCTURE.md. Wordv0.3giữngoàilượt. Bêndướilàlịchsử.
@@ -78,3 +82,5 @@ Root của worker vẫn là thư mục cũ. Research/thesis/diagrams ghi đượ
 Bản Word đã được kiểm tra cấu trúc và hình nhúng; bố cục từng trang, mục lục/header/footer/caption và độ dài quyển vẫn cần rà trên Word trước khi nộp. Sơ đồ tuần tự dài cần cân nhắc tách hình khi dàn trang cuối.
 
 Cập nhật chốt mốc: OrcaQArefactor terminalPASS khôngP1/P2, qa/refactor-layout-2026-11-10.md; source/test/body/API khôngđổihànhvi. Chuẩnbịchốtorganizationriêng(loạithesis/research), rồichốtcontentthesisriêng. Đọcgitlog/status trước replay. DeveloperchỉđọcđangchuẩnbịDashproposal, CHƯAápDash; Figma chưaComputerUse/file/PNG. KhôngruntimeAPKrefactor.
+
+QA M3b terminalđạt (OrcaWorkerSol6.1/rootOLDchỉđọc); qa/milestone-3b-final.md. ChưaFigmaComputerUse/file/PNG, khôngcoiUIxong. ChốtGitM3btheoAGENTS, mãcommittraGitlogthayvìreplaylệnhcũ. KhôngthêmBlock/mạng.

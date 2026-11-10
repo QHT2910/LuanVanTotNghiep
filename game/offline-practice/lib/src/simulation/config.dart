@@ -29,6 +29,9 @@ class PracticeConfig {
     this.maxFlight = 4,
     this.lineTolerance = 1e-9,
     this.jumpSpeed = 5,
+    this.dashSpeed = 8,
+    this.dashDuration = 0.2,
+    this.dashCooldown = 0.8,
   });
 
   final double minX, maxX, minZ, maxZ, spawnX, spawnZ;
@@ -37,6 +40,7 @@ class PracticeConfig {
   final double chargeSeconds, idealCharge, missScale, flightSeconds;
   final double gravity, step, maxFrame, resetDelay, maxFlight;
   final double lineTolerance, jumpSpeed;
+  final double dashSpeed, dashDuration, dashCooldown;
 
   double get jumpApex => jumpSpeed * jumpSpeed / (2 * gravity);
   double get jumpDuration => 2 * jumpSpeed / gravity;
@@ -70,6 +74,9 @@ class PracticeConfig {
       maxFlight,
       lineTolerance,
       jumpSpeed,
+      dashSpeed,
+      dashDuration,
+      dashCooldown,
     ];
     if (values.any((v) => !v.isFinite) ||
         minX >= maxX ||
@@ -104,7 +111,10 @@ class PracticeConfig {
         maxFrame > 0.25 ||
         resetDelay <= 0 ||
         lineTolerance < 0 ||
-        jumpSpeed <= 0) {
+        jumpSpeed <= 0 ||
+        dashSpeed <= 0 ||
+        dashDuration <= 0 ||
+        dashCooldown < 0) {
       throw ArgumentError('Invalid experimental practice configuration');
     }
 
@@ -128,6 +138,8 @@ class PracticeConfig {
       highestOriginVy,
       groundLanding,
       gravity * t,
+      dashSpeed * dashDuration,
+      dashDuration + dashCooldown,
     ];
     // Upward launch for every reachable player height; the chosen time
     // must be on the descending branch, even for a ground release.

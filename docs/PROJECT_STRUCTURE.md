@@ -1,18 +1,21 @@
-# Vai trò thư mục
+# Cấu trúc project Flutter
 
-Workspace `LuanVanTotNghiep.code-workspace` dùng tám root ngang hàng, không mở đồng thời repo root và các thư mục con để tránh lặp cây.
+Đính chính của sinh viên 10/11/2026: workspace chỉ có một folder tên game trỏ game/offline-practice. Không hiển thị repository/thesis/research/docs/design/qa/tools/demos trong workspace mặc định; không xóa hoặc di chuyển những hồ sơ đó. Mở file hỗ trợ riêng khi cần đọc.
 
-| Root VS Code | Thư mục | Vai trò |
-|---|---|---|
-| Game và demos | game | App offline, probe/tutorial và bằng chứng từng mốc; không trộn kết quả giữa sản phẩm |
-| Thesis | thesis | Source chương, bản tổng hợp, references và bản Word/PDF lưu theo phiên bản |
-| UI | design | Đặc tả màn hình; nguồn Figma/PNG thật khi đã tạo, không nhận UI tạm thành thiết kế chính thức |
-| Research | research | Claim map, nguồn đã đọc, review/draft chưa chốt |
-| QA | qa | Review độc lập, chỉ kết luận trong phạm vi đã quan sát |
-| Docs | docs | Roadmap, tiến độ, checkpoint và giới hạn |
-| Tools | tools | Migration/validation/publication/finish-session; không tự động chạy chỉ vì mở workspace |
-| Demo manifest | demos | Bảng commit/hash; releases là binary local bị ignore |
+```text
+game/offline-practice/
+  lib/
+    main.dart
+    src/
+      simulation/     config.dart, practice.dart
+      input/          joystick.dart, jump_button.dart, dash_button.dart
+      presentation/   practice_page.dart
+  test/
+  android/
+  tool/
+  pubspec.yaml
+```
 
-Trong app: `lib/main.dart` chỉ bootstrap; `src/simulation` giữ config và mô phỏng; `src/input` giữ joystick/nút nhảy; `src/presentation` giữ Scene và HUD. Tests giữ nguyên assertion, chỉ cập nhật imports trong lượt refactor. Bản layout mới phải có gate riêng; evidence lịch sử giữ đường dẫn đúng với commit cũ.
+main.dart giữ entrypoint/bootstrap. Simulation là trạng thái/chuyển động/luật tập offline; input xử lý pointer; presentation tổ chức Scene/HUD/lifecycle. Dash đang kiểm M3b, không nhận refactor đã có Dash ở commit811493d.
 
-`.git`, `.scratch`, build và `.dart_tool` bị ẩn trong workspace, không xóa. Settings này không đổi global VS Code. Quy trình Git chỉ Lead chạy khi kiểm xong; Wordv0.3 ngoài lượt luôn loại staging. Không force-add APK/raw log hoặc sao chép credential từ máy.
+build/.dart_tool/.scratch/.git ẩn bằng settings workspace, không đổi global/không xóa. Snapshot APK và manifest ở demos ngoài cây Flutter, binary không Git. Lịch sử multi-root trong QA chuẩn bị thuộc thời điểm trước đính chính, không cấu hình hiện hành.

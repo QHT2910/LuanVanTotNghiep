@@ -12,6 +12,7 @@ SOURCES = [
     "lib/src/simulation/practice.dart",
     "lib/src/input/joystick.dart",
     "lib/src/input/jump_button.dart",
+    "lib/src/input/dash_button.dart",
     "lib/src/presentation/practice_page.dart",
 ]
 OLD = [

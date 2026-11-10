@@ -84,6 +84,7 @@ class Practice {
     config.validate();
     _player = V3(config.spawnX, 0, config.spawnZ);
     _ball = _held;
+    _faceRim();
   }
 
   final PracticeConfig config;
@@ -98,6 +99,11 @@ class Practice {
   bool _jumpActive = false;
   double _jumpTime = 0;
   int _jumpSerial = 0;
+  bool _dashActive = false;
+  double _dashUntil = 0, _dashReadyAt = 0;
+  int _dashSerial = 0;
+  V3 _facing = const V3(0, 0, -1);
+  V3 _dashDirection = const V3(0, 0, -1);
 
   V3 get player => _player;
   V3 get ball => _ball;
@@ -111,6 +117,21 @@ class Practice {
   double get jumpVelocity =>
       _jumpActive ? config.jumpSpeed - config.gravity * _jumpTime : 0;
   double get simulatedTime => _simTime;
+  bool get dashing => _dashActive;
+  V3 get facing => _facing;
+  V3 get dashDirection => _dashDirection;
+  double get dashRemaining =>
+      _dashActive ? math.max(0.0, _dashUntil - _simTime) : 0;
+  double get dashCooldownRemaining {
+    final remaining = _dashReadyAt - _simTime;
+    return remaining > 1e-9 ? remaining : 0;
+  }
+
+  String get dashStatus => dashing
+      ? 'dashing'
+      : dashCooldownRemaining > 0
+      ? 'cooldown'
+      : 'ready';
   double get charge =>
       (_charge / config.chargeSeconds).clamp(0.0, 1.0).toDouble();
 
@@ -136,9 +157,161 @@ class Practice {
         'jumpId': _jumpSerial,
         'playerY': _player.y,
         'grounded': grounded,
+        'dashId': _dashSerial,
+        'dashing': dashing,
+        'dashDirectionX': _dashDirection.x,
+        'dashDirectionZ': _dashDirection.z,
+        'dashCooldownRemaining': dashCooldownRemaining,
         ...data,
       }),
     );
+  }
+
+  V3 _heading(double x, double z) {
+    final length = math.sqrt(x * x + z * z);
+    return length > 1e-9 ? V3(x / length, 0, z / length) : _facing;
+  }
+
+  void _faceRim() {
+    final dx = config.hoopX - _player.x;
+    final dz = config.hoopZ - _player.z;
+    final length = math.sqrt(dx * dx + dz * dz);
+    _facing = length > 1e-9
+        ? V3(dx / length, 0, dz / length)
+        : const V3(0, 0, -1);
+  }
+
+  bool dash() {
+    String? reason;
+    if (_paused) {
+      reason = 'paused';
+    } else if (dashing) {
+      reason = 'already_dashing';
+    } else if (!grounded) {
+      reason = 'airborne';
+    } else if (_phase == PracticePhase.waiting) {
+      reason = 'waiting';
+    } else if (dashCooldownRemaining > 0) {
+      reason = 'cooldown';
+    }
+    if (reason != null) {
+      _emit('dash_rejected', {'reason': reason});
+      return false;
+    }
+    final direction = _heading(_axisX, _axisZ);
+    cancelCharge('dash_start');
+    _dashSerial++;
+    _dashDirection = direction;
+    _facing = direction;
+    _dashActive = true;
+    _dashUntil = _simTime + config.dashDuration;
+    _dashReadyAt = _dashUntil + config.dashCooldown;
+    _emit('dash_start', {
+      'x': _player.x,
+      'z': _player.z,
+      'duration': config.dashDuration,
+      'speed': config.dashSpeed,
+      'plannedEndSimTime': _dashUntil,
+      'readyAtSimTime': _dashReadyAt,
+    });
+    return true;
+  }
+
+  void _endDash(String reason, {double? endedAt}) {
+    if (!_dashActive) return;
+    _dashActive = false;
+    _emit('dash_end', {
+      'reason': reason,
+      'x': _player.x,
+      'z': _player.z,
+      'dashEndSimTime': endedAt ?? _simTime,
+      'readyAtSimTime': _dashReadyAt,
+    });
+  }
+
+  void cancelDash([String reason = 'cancel']) {
+    if (!_dashActive) return;
+    _endDash(reason);
+    _axisX = 0;
+    _axisZ = 0;
+  }
+
+  void _advanceHorizontal(double dt, double stepStart) {
+    if (_phase == PracticePhase.waiting) {
+      cancelDash('waiting');
+      return;
+    }
+    if (!_dashActive) {
+      final magnitude = math.sqrt(_axisX * _axisX + _axisZ * _axisZ);
+      if (magnitude > 1e-9) _facing = _heading(_axisX, _axisZ);
+      _player = V3(
+        (_player.x + _axisX * config.moveSpeed * dt)
+            .clamp(
+              config.minX + config.footRadius,
+              config.maxX - config.footRadius,
+            )
+            .toDouble(),
+        _player.y,
+        (_player.z + _axisZ * config.moveSpeed * dt)
+            .clamp(
+              config.minZ + config.footRadius,
+              config.maxZ - config.footRadius,
+            )
+            .toDouble(),
+      );
+      return;
+    }
+
+    final activeDt = math.min(dt, math.max(0.0, _dashUntil - stepStart));
+    final distance = config.dashSpeed * activeDt;
+    var limit = double.infinity;
+    final dx = _dashDirection.x, dz = _dashDirection.z;
+    if (dx > 0) {
+      limit = math.min(
+        limit,
+        (config.maxX - config.footRadius - _player.x) / dx,
+      );
+    } else if (dx < 0) {
+      limit = math.min(
+        limit,
+        (config.minX + config.footRadius - _player.x) / dx,
+      );
+    }
+    if (dz > 0) {
+      limit = math.min(
+        limit,
+        (config.maxZ - config.footRadius - _player.z) / dz,
+      );
+    } else if (dz < 0) {
+      limit = math.min(
+        limit,
+        (config.minZ + config.footRadius - _player.z) / dz,
+      );
+    }
+    limit = math.max(0.0, limit);
+    final travel = math.min(distance, limit);
+    _player = V3(
+      (_player.x + dx * travel)
+          .clamp(
+            config.minX + config.footRadius,
+            config.maxX - config.footRadius,
+          )
+          .toDouble(),
+      _player.y,
+      (_player.z + dz * travel)
+          .clamp(
+            config.minZ + config.footRadius,
+            config.maxZ - config.footRadius,
+          )
+          .toDouble(),
+    );
+    if (limit <= distance) {
+      _endDash('bounds', endedAt: stepStart + travel / config.dashSpeed);
+    } else if (_simTime + 1e-12 >= _dashUntil) {
+      _endDash('duration', endedAt: _dashUntil);
+    }
+    // No walk on the fixed step that consumed Dash. Any sub-step remainder
+    // is deliberately idle; normal walk may resume on the next fixed step.
   }
 
   void setMove(double x, double z) {
@@ -152,9 +325,16 @@ class Practice {
     final length = math.sqrt(x * x + z * z);
     _axisX = length > 1 ? x / length : x;
     _axisZ = length > 1 ? z / length : z;
+    if (!dashing && length > 1e-9) {
+      _facing = _heading(_axisX, _axisZ);
+    }
   }
 
   bool jump() {
+    if (dashing) {
+      _emit('jump_rejected', {'reason': 'dashing'});
+      return false;
+    }
     final reason = _paused
         ? 'paused'
         : !grounded
@@ -198,6 +378,10 @@ class Practice {
   }
 
   bool startCharge() {
+    if (dashing) {
+      _emit('charge_rejected', {'reason': 'dashing'});
+      return false;
+    }
     if (_paused || _phase != PracticePhase.ready) return false;
     _charge = 0;
     _phase = PracticePhase.charging;
@@ -214,6 +398,10 @@ class Practice {
   }
 
   bool release() {
+    if (dashing) {
+      _emit('shot_rejected', {'reason': 'dashing'});
+      return false;
+    }
     if (_paused || _phase != PracticePhase.charging) return false;
     final q = charge;
     final feet = V3(_player.x, 0, _player.z);
@@ -274,6 +462,7 @@ class Practice {
     _paused = value;
     _accumulator = 0;
     if (value) {
+      cancelDash('background');
       cancelCharge('background');
       _axisX = 0;
       _axisZ = 0;
@@ -282,6 +471,8 @@ class Practice {
   }
 
   void newRound([String reason = 'manual']) {
+    final wasDashing = dashing;
+    cancelDash('round_reset');
     final wasAirborne = _jumpActive;
     cancelCharge('new_round');
     _shot = null;
@@ -293,12 +484,14 @@ class Practice {
     _jumpActive = false;
     _jumpTime = 0;
     _player = V3(_player.x, 0, _player.z);
+    _faceRim();
     _ball = _held;
     _round++;
     _emit('round_reset', {
       'reason': reason,
       'score': _score,
       'jumpCancelled': wasAirborne,
+      'dashCancelled': wasDashing,
     });
   }
 
@@ -320,25 +513,10 @@ class Practice {
   }
 
   void _step(double dt) {
+    final stepStart = _simTime;
     _simTime += dt;
     _advanceJump(dt);
-    if (_phase != PracticePhase.waiting) {
-      _player = V3(
-        (_player.x + _axisX * config.moveSpeed * dt)
-            .clamp(
-              config.minX + config.footRadius,
-              config.maxX - config.footRadius,
-            )
-            .toDouble(),
-        _player.y,
-        (_player.z + _axisZ * config.moveSpeed * dt)
-            .clamp(
-              config.minZ + config.footRadius,
-              config.maxZ - config.footRadius,
-            )
-            .toDouble(),
-      );
-    }
+    _advanceHorizontal(dt, stepStart);
 
     if (_phase == PracticePhase.charging) {
       _charge = math.min(config.chargeSeconds, _charge + dt);
