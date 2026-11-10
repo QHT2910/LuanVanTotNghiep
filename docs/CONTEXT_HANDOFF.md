@@ -1,5 +1,11 @@
 # Checkpoint tiếp tục dự án
 
+## Audit route và rà spec — chỉ đọc runtime, không dispatch
+
+10/11/2026, nền ef9829c. Đã đọc get_session_runtime đúng7session, baseline/effective/pending, Orca team/queue, handoff trước đổi. docs/MODEL_EVALUATION.md và model-runtime-audit-2026-11-10.json ghi kết quả: dev/QA/thesis/diagrams SolCodexOpenAIgen0pendingnull, Lead tương tựlive; researchCodexArgon/gen0; game-designPiArgon/gen0 persisted. Khác generation1 Cindy báo; chưa đủ audit actor/mutation để kết luận Orca ghi đè hoặc rollback. Không đổi route/provider/generation/queue. Pilot game-design đúng1tin user/position0/consumingfalse, queue_paused=true, idle/not_running; không tự resume/hủy/sửa hoặc gửi trùng, chưa output mới/quality/cost verdict. Cần Cindy/host đối chiếu receiptgeneration1 đúng ngữ cảnh và xử lý queue cũ qua Orca.
+
+Rà spec giữ UI02notfound/UI03countdown/UI05loss/draw ở mức thiết kế; đã sửa câu trạng thái04/11 gây hiểu nhầm như chưa có Figma hoặc chưa chạy demo. Không sửa game/canvas, không hỏi backup lặp. UI04 V3 tiếp sau bảo toàn; các màn khác sketch chờ duyệt Figma. Wordv0.3 giữ nguyên.
+
 ## Rà spec trong lúc chờ backup V3
 
 10/11/2026, nền 6eebac4. Cindy đã báo user cách Save local copy; không hỏi lặp. Chỉ cập nhật design/ui-spec-r1.md theo review nghiệp vụ: UI02 không mã giả trước create success, join phân biệt trống/not-found/full/network; UI03 BạnReady→Hủy sẵn sàng/Chờ đối thủ, không Start thủ công; UI05 nhãn Bạn/Đối thủ, win/loss/draw, roomgone khóa Về sảnh, điểm sketch chỉ minh họa. Đây là yêu cầu thiết kế, chưa triển khai game/Figma. UI04V3 vẫn đã duyệt nhưng chờ bảo toàn nguồn; các màn khác chỉ conceptboard chờ review. Lượt này không desktop input/canvas mutation/export/dispatch worker hoặc pilot trùng. Giữ draft mở và Wordv0.3; sau xác nhận backup mới nối tiếp UI04V3.
@@ -107,10 +113,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T14:58:31.260Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `6eebac4f12e2e0327cf79a1110dbce526069dc15`.
-- Local tracking origin/main: `6eebac4f12e2e0327cf79a1110dbce526069dc15` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T15:23:01.933Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `ef9829c45fbba148adf87f75c3701910dec79fdc`.
+- Local tracking origin/main: `ef9829c45fbba148adf87f75c3701910dec79fdc` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 5 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

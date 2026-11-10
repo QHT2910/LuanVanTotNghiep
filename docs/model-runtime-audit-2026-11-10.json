@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-10",
+  "method": "cindy_helper.get_session_runtime read-only, plus Orca team and queue",
+  "notProven": [
+    "Writer that changed session configuration",
+    "Orca overwrote generation-1 settings",
+    "Any new model pilot ran",
+    "Quality, usage or cost comparison"
+  ],
+  "sessions": [
+    {
+      "role": "lead",
+      "session_id": "f803dbbb-c27e-4ad8-b1c2-b8a55da1aae3",
+      "source": "live",
+      "phase": "running",
+      "active": true,
+      "generation": 0,
+      "turn_generation": 5,
+      "baseline": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-10T15:20:48.085Z"
+    },
+    {
+      "role": "developer",
+      "session_id": "ddab0b98-abe6-4524-9b16-9a548be30b63",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-10T05:39:51.933Z"
+    },
+    {
+      "role": "qa",
+      "session_id": "2e4ee883-bf67-44e2-bcd7-5f0463da63c5",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-10T05:39:52.125Z"
+    },
+    {
+      "role": "game_design",
+      "session_id": "7c38b0a7-e9a8-4c63-96cf-b475fdb67365",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "pi",
+        "model": "gemini-4-argon",
+        "provider_id": "google-gemini-api",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "pi",
+        "model": "gemini-4-argon",
+        "provider_id": "google-gemini-api",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-04T09:11:06.646Z"
+    },
+    {
+      "role": "research",
+      "session_id": "bd683ce7-bf43-4b13-9ff8-28a3d8e12f00",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "codex",
+        "model": "gemini-4-argon",
+        "provider_id": "google-gemini-api",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gemini-4-argon",
+        "provider_id": "google-gemini-api",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-05T07:20:36.361Z"
+    },
+    {
+      "role": "thesis",
+      "session_id": "d9e7034f-a590-430c-b57d-ed1fe49955f6",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-10T05:39:52.026Z"
+    },
+    {
+      "role": "diagrams",
+      "session_id": "b073d21c-afb4-4ebe-94af-ecf43cbde76a",
+      "source": "persisted",
+      "phase": "completed",
+      "active": false,
+      "generation": 0,
+      "turn_generation": null,
+      "baseline": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "effective": {
+        "harness": "codex",
+        "model": "gpt-6.1-sol",
+        "provider_id": "openai",
+        "effort": "medium",
+        "fast": false
+      },
+      "pending": null,
+      "fallback_enabled": false,
+      "last_activity_at": "2026-11-06T09:01:59.570Z"
+    }
+  ],
+  "gameDesignQueue": {
+    "queued_count": 1,
+    "queue_paused": true,
+    "source": "user",
+    "position": 0,
+    "consuming": false,
+    "changedByLead": false
+  }
+}

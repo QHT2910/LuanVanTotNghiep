@@ -24,9 +24,9 @@ Ngày rà soát: 04/11/2026. Phạm vi: UI01–UI06 và các trạng thái lỗi
 
 Gameplay đã được sinh viên đồng ý: nửa sân 1v1, một rổ, 2/3 điểm, 11 điểm hoặc 3 phút, di chuyển/ném/nhảy/Dash/Block và tạo/vào phòng bằng mã. Ghép trận nhanh bổ sung sau. Mục tiêu ưu tiên kết nối Internet từ hai mạng khác nhau; LAN phục vụ thử nghiệm bước đầu.
 
-Kiến trúc mạng, cách ném, tham số kỹ năng và chính sách xử lý mất kết nối chưa được kiểm chứng. Hiện có một Redmi Note 11; chưa có bằng chứng chạy game hoặc thử trên hai Android.
+Thiết kế mạng 1v1 và chính sách mất kết nối chưa được kiểm chứng. Tập offline M1–M3b đã có kiểm tra trên một AVD theo hồ sơ milestone; điều đó không chứng minh multiplayer, hai Android hoặc Redmi Note 11 đã chạy. Tham số demo là thử nghiệm, không tự trở thành luật đã chốt cho prototype UI.
 
-Mục 3.1.3 gọi màn hình ngang là đề xuất, trong khi 3.3.1 viết như đã xác nhận. Đặc tả này dùng hướng ngang làm phương án chuẩn bị frame; Lead cần thống nhất trạng thái quyết định.
+Ở lần rà04/11, cách ghi hướng màn hình giữa3.1.3 và3.3.1 chưa thống nhất. Hiện concept UI04 V3 đã được duyệt với frame ngang960×540; đây là kích thước thiết kế, không phải bằng chứng mọi thiết bị đã qua kiểm tra giao diện.
 
 ## 2. Công cụ thực tế và điều kiện dựng UI
 
@@ -37,9 +37,9 @@ Mục 3.1.3 gọi màn hình ngang là đề xuất, trong khi 3.3.1 viết như
 | Công cụ được chọn | Figma mới là đề xuất; sinh viên đang cân nhắc lựa chọn | Chưa có quyết định chọn hoặc quyền tạo project |
 | Nguồn thiết kế | Chưa có URL file/project hoặc design session được cung cấp | Chưa có nguồn chỉnh sửa và ảnh xuất mới |
 
-Chưa đăng nhập, đăng ký, tạo tài khoản/project, dựng hình hoặc dùng SVG AI cũ làm bộ thiết kế chính thức.
+Tại lượt04/11 chưa đăng nhập, đăng ký, tạo tài khoản/project hoặc dựng hình. Từ lượt10/11 đã có draft/frame Figma cũ, nhưng chưa nghiệm thu và chưa có PNG chính thức. Không dùng SVG AI cũ làm nguồn thiết kế chính thức.
 
-UI production remains blocked by the missing tool selection and design file/session. The Lead can save this specification now; editable UI and exported images require the selected tool and an accessible design file.
+The missing-tool/file blocker described on 04/11 is historical. The current blocker is unverified source preservation/sync before building the approved UI04 V3. No new PNG export is verified.
 
 ## 3. Frame và component đề xuất
 
