@@ -1,5 +1,11 @@
 # Checkpoint tiếp tục dự án
 
+## UI04 V3 đã duyệt — đang bảo toàn nguồn trước dựng
+
+10/11/2026, nền a58bcf5. User qua Cindy đã DUYỆT V3: chỉ HUD và background trước, không nhân vật/model/placeholder nhân vật, không ba panel/footer; matte/daylight/đơn giản. Lead đã xem ảnh concept gốc. Đầu ra Figma native960×540 tách BG_Court/HUD, ba PNG composite/HUD alpha/background. Giữ bản cũ, pageV3 mới; chưa tạo pageV3. Xem design/figma/UI04-V3.md; trạng thái chờ review V3 bên dưới đã hết hiệu lực, không áp cho lệnh mới này.
+
+Computer preflight đạt; Figma ban đầu không có window, launch qua cindy_computer khôi phục draft cũ đủ4frame, không warning sync ở snapshot nhưng chưa chứng minh sync/backup. LivePID18052/HWND394772 cần re-read khi tiếp. Foreground bị USER_INPUT_ACTIVE giữa chuỗi menu, đã dừng rồi user xác nhận idle mới tiếp. Save local copy/Show version history chưa có kết quả xác minh, chưa `.fig` Downloads. Đang hỏi user lưu local `design/figma/source/UI04-before-V3.fig` qua menu, không credential. Chưa sửa canvas hoặc game/thesis, chưa PNG/frame/linkV3. Không đóng/reload. Không pilot/task/model mới; không năm màn khác. `.fig` local ignore. Tiếp sau bảo toàn/sync: BG rồi HUD rồi native exports/alpha960×540, progress thật từng mốc.
+
 ## Dừng UI04 cũ — chờ review phác thảo mới trong chat
 
 10/11/2026, nền a50ec3e. Sinh viên không hài lòng UI hiện tại và yêu cầu đánh giá/phác thảo lại trước khi hoàn thiện. Cindy chuẩn bị phương án trong chat để sinh viên góp ý. Dừng triển khai/sửa/hoàn thiện UI04 cũ; không mở màn khác hoặc sửa game. Giữ nguyên draft AKyJ1SFfjiJH8oS8q8m4JW và bốn frame làm version tham khảo; không xóa, ghi đè, đóng hoặc reload. Chưa xác minh sync/.fig/PNG export; không nâng trạng thái bảo toàn thành đã đạt. Lượt dừng này không gửi desktop input hay dispatch/đổi queue worker. Pilot cũ chưa có output mới, không gửi trùng hoặc tự resume khi chờ review. Các báo cáo đã xong được giữ.
@@ -97,9 +103,9 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T14:29:41.130Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `a50ec3e5a2b4c1088d8a2073ad1dbd51322c4d15`.
-- Local tracking origin/main: `a50ec3e5a2b4c1088d8a2073ad1dbd51322c4d15` (không tự fetch hoặc suy ra remote live).
+Ghi UTC: 2026-11-10T14:54:09.997Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `a58bcf5aeaf2e165ba7dcf9abe7d9eef4c4f2769`.
+- Local tracking origin/main: `a58bcf5aeaf2e165ba7dcf9abe7d9eef4c4f2769` (không tự fetch hoặc suy ra remote live).
 - Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
