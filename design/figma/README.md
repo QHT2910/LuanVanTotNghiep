@@ -1,5 +1,7 @@
 # UI04 trong Figma — bản đang làm
 
+Trạng thái mới nhất 10/11/2026: dừng triển khai bản này vì sinh viên yêu cầu đánh giá/phác thảo lại trong chat trước khi hoàn thiện. Giữ nguyên các frame làm version tham khảo, không xóa/ghi đè. Chờ sinh viên review phương án mới do Cindy chuẩn bị; không tự tiếp tục các bước sửa canvas bên dưới. Sync/.fig/PNG vẫn chưa được xác minh.
+
 Ngày 10/11/2026. Nguồn chỉnh sửa trong draft [Bóng rổ đối kháng 3D — UI](https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/?node-id=1-2), Page 1. Không tạo thêm file khi tiếp tục.
 
 Đã trực tiếp tạo lớp chữ, hình chữ nhật và ellipse trong Figma, không nhập ảnh phẳng hoặc SVG thay cho nguồn. Frame gốc 960×540; ba frame trạng thái được nhân từ frame gốc:

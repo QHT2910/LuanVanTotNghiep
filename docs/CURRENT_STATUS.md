@@ -1,5 +1,7 @@
 # Trạng thái hiện hành — UI04 Figma đang làm
 
+Cập nhật mới nhất 10/11/2026: DỪNG triển khai UI04 cũ theo yêu cầu sinh viên; Cindy chuẩn bị phác thảo lại trong chat, chờ sinh viên review/góp ý trước thực hiện Figma/game. Giữ nguyên bốn frame cũ làm version, chưa xác minh sync/.fig/PNG. Không mở màn khác hoặc dispatch task/pilot UI mới. Các bước tiếp tục bên dưới là lịch sử trước lệnh dừng.
+
 10/11/2026: đã thao tác trực tiếp Figma, có bốn frame UI04 native editable trong draft AKyJ1SFfjiJH8oS8q8m4JW: Sẵn sàng, Canh ném, Hồi chiêu và Mất kết nối. Frame gốc 960×540; ảnh progress local ở design/figma/progress, không phải export. Chưa duyệt bố cục, chưa component/prototype; Figma báo chưa sync, chưa xác minh cloud save/bản .fig local/PNG chính thức. Xem design/figma/README.md. Giữ cửa sổ hiện hành để bảo toàn nguồn; không tạo file trùng. Chưa UI01–03/UI05–06; không xuất Word/PDF, không thêm tính năng game. Các trạng thái chưa cửa sổ/file dưới đây là lịch sử.
 
 # Lịch sử — chờ kết nối Figma

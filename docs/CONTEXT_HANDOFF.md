@@ -1,5 +1,11 @@
 # Checkpoint tiếp tục dự án
 
+## Dừng UI04 cũ — chờ review phác thảo mới trong chat
+
+10/11/2026, nền a50ec3e. Sinh viên không hài lòng UI hiện tại và yêu cầu đánh giá/phác thảo lại trước khi hoàn thiện. Cindy chuẩn bị phương án trong chat để sinh viên góp ý. Dừng triển khai/sửa/hoàn thiện UI04 cũ; không mở màn khác hoặc sửa game. Giữ nguyên draft AKyJ1SFfjiJH8oS8q8m4JW và bốn frame làm version tham khảo; không xóa, ghi đè, đóng hoặc reload. Chưa xác minh sync/.fig/PNG export; không nâng trạng thái bảo toàn thành đã đạt. Lượt dừng này không gửi desktop input hay dispatch/đổi queue worker. Pilot cũ chưa có output mới, không gửi trùng hoặc tự resume khi chờ review. Các báo cáo đã xong được giữ.
+
+Chỉ tiếp tục Figma/game sau khi sinh viên review phương án phác thảo mới. Yêu cầu mở lại Figma ở lượt trước không còn là lời nhắc triển khai UI cũ. Wordv0.3, source game/demo/APK và hồ sơ lịch sử giữ nguyên. Các bước sửa UI04 bên dưới là kế hoạch trước lệnh dừng, không tự replay.
+
 ## Review UI04 của Cindy — bảo toàn trước chỉnh bố cục
 
 Nền daadc5e. Cindy chưa nghiệm thu: tách HUD tên/điểm/đồng hồ thành semantic groups; tách Nhảy/Dash/ACTION thành nhóm/component và vùng chạm riêng; dời chú giải joystick khỏi giữa sân; possession độc lập cooldown; chưa chốt tự reconnect. Đã ghi vào design/figma/README, CHƯA sửa canvas theo review. Status/check_permissions ComputerUse đạt; list_windows live thấy draft Figma cũ minimized, get_window_state trả CUA_UNAVAILABLE/window_not_on_screen. Không desktop input, không đóng/reload, đang hỏi user restore và để yên máy. Không suy sync đã xong từ AX tree còn đọc được.
@@ -91,9 +97,9 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T08:31:44.676Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `daadc5e36b5baef2cfd4081fe933f6ea8b7805d1`.
-- Local tracking origin/main: `daadc5e36b5baef2cfd4081fe933f6ea8b7805d1` (không tự fetch hoặc suy ra remote live).
+Ghi UTC: 2026-11-10T14:29:41.130Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `a50ec3e5a2b4c1088d8a2073ad1dbd51322c4d15`.
+- Local tracking origin/main: `a50ec3e5a2b4c1088d8a2073ad1dbd51322c4d15` (không tự fetch hoặc suy ra remote live).
 - Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
