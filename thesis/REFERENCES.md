@@ -81,3 +81,9 @@
 [40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. Truy cập ngày 07/11/2026; chưa chạy editor.
 
 [41] Gói flutter_scene 0.24.3, mã nguồn phân phối scene_view.dart, declarative.dart và hot_reload_coordinator.dart trong lib/src: https://pub.dev/packages/flutter_scene/versions/0.24.3. Đối chiếu cache ngày 07/11/2026.
+
+[42] Flutter API, PointerEvent.pointer: https://api.flutter.dev/flutter/gestures/PointerEvent/pointer.html. Truy cập ngày 10/11/2026.
+
+[43] Flutter API, Listener: https://api.flutter.dev/flutter/widgets/Listener-class.html. Truy cập ngày 10/11/2026.
+
+[44] Flutter API, AppLifecycleState: https://api.flutter.dev/flutter/dart-ui/AppLifecycleState.html. Truy cập ngày 10/11/2026.

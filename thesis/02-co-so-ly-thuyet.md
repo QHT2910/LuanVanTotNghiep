@@ -385,7 +385,11 @@ Ví dụ bộ tích lũy dùng h = 0,02 s. Nếu đang dư 0,005 s và frame m�
 
 Sự kiện thiết bị là dữ liệu thô như chạm, di chuyển ngón tay hoặc thả nút. Lệnh biểu diễn ý định ở mức ứng dụng, ví dụ một vector hướng hoặc yêu cầu hành động. Việc ánh xạ qua lớp lệnh giúp tách phương thức nhập với mô phỏng, đồng thời thuận lợi khi ghi lại thao tác hoặc truyền qua mạng.
 
-Cần phân biệt trạng thái giữ và sự kiện cạnh. Một nút đang giữ có thể duy trì nhiều bước mô phỏng; một lần nhấn chỉ nên tạo một sự kiện nếu chức năng yêu cầu như vậy. Khi nhiều pointer cùng tồn tại, ứng dụng phải xác định pointer nào điều khiển thành phần nào. Mất chạm hoặc chuyển xuống nền cần kết thúc trạng thái giữ để tránh lệnh tồn tại ngoài ý muốn.
+Cần phân biệt trạng thái giữ và sự kiện cạnh. Một nút giữ có thể tạo lệnh trong nhiều bước mô phỏng; một lần nhấn chỉ nên tạo một yêu cầu nếu chức năng cần như vậy. Flutter cung cấp định danh pointer cho từng tương tác và các callback down, move, up, cancel qua Listener. Ứng dụng phải tự quy định pointer nào sở hữu từng điều khiển; cancel là kết thúc tương tác bị hủy, không được mặc định diễn giải như thả để thực hiện hành động. [42], [43]
+
+Khi nhiều ngón hoạt động đồng thời, mỗi điều khiển cần kiểm tra định danh trước khi cập nhật hoặc kết thúc lệnh. Hủy thao tác ném không mặc nhiên xóa hướng di chuyển còn được pointer khác giữ. Khi reset hoặc mất khả năng tương tác, ứng dụng cần đưa đầu vào về trung tính và loại bỏ callback thuộc trạng thái cũ. Đây là chính sách của lớp nhập liệu, không phải quyền sở hữu do Listener tự thiết lập.
+
+Với joystick tròn, độ dời so với tâm cần được chia cho bán kính hành trình để thu vector không thứ nguyên u. Có thể giới hạn vector vào đĩa đơn vị bằng u_c = u/max(1,||u||), rồi áp dụng vùng chết xuyên tâm δ với 0 ≤ δ < 1. Nếu r = ||u_c|| ≤ δ, đầu ra bằng 0; nếu r > δ, đầu ra là (u_c/r)(r−δ)/(1−δ). Cách ánh xạ này giữ hướng, tăng liên tục độ lớn từ 0 tới 1 ngoài vùng chết và không làm thao tác chéo có độ lớn vượt quá 1. Việc luôn chuẩn hóa mọi vector khác 0 thành độ dài 1 sẽ làm mất mức điều khiển analog. Dữ liệu không hữu hạn cần bị loại hoặc đưa về trung tính trước phép tính.
 
 Với một điểm màn hình, picking đổi tọa độ đó thành tia trong thế giới. Tia có dạng r(t) = o + td, t ≥ 0, với o là gốc và d là hướng. Tài liệu Scene mô tả screenPointToRay và Scene.raycast cho truy vấn hình học render. Truy vấn này khác truy vấn collision shapes trong thế giới vật lý; vùng viewport và hệ tọa độ đầu vào phải tương ứng nhau. [18]
 
@@ -399,6 +403,10 @@ HUD biểu diễn những thông tin lớp trên như trạng thái, thông báo
 
 SceneView quản lý vòng kết xuất trong cách tích hợp bằng widget. Khi dùng vòng lặp thủ công, ứng dụng phải chịu trách nhiệm tiến cảnh và render theo phương thức tương ứng. Ghép cả hai cách mà không phân định trách nhiệm có thể cập nhật trạng thái hai lần. Tài liệu Scene và ví dụ backend vật lý sử dụng các cách tổ chức cần được đọc trong đúng ngữ cảnh, không ghép những đoạn mã chỉ vì chúng cùng thao tác lên Scene. [10], [17]
 
+Pause logic và vòng đời ticker cần được quản lý riêng. Một mô phỏng có thể ngừng nhận lệnh và không tiêu thụ thời gian khi ứng dụng không ở trạng thái tương tác, trong khi cấu trúc điều phối khung hình vẫn được giữ. Trong Scene 0.24.3, SceneView dùng SingleTickerProviderStateMixin; việc đổi autoTick có nhánh dispose và tạo ticker. Do đó, không nên dùng chu kỳ tắt–bật autoTick như một thay thế mặc định cho cơ chế pause mô phỏng. [41]
+
+Khi nhận thay đổi vòng đời, ứng dụng cần xác định chính sách cho đầu vào đang giữ, bộ tích lũy thời gian và khoảng thời gian đầu tiên sau resume. Nếu bỏ hoặc giới hạn khoảng thời gian này, thời gian mô phỏng không còn đồng nhất với thời gian thực đã trôi qua. Flutter cũng không bảo đảm ứng dụng luôn nhận đủ mọi thông báo vòng đời, nên các callback đó không thay thế cơ chế lưu trạng thái khi tiến trình bị kết thúc. [44]
+
 ## 2.9. Chuyển động và mô phỏng vật lý
 
 ### 2.9.1. Động học và động lực học
@@ -409,6 +417,10 @@ p(t) = p₀ + v₀t + ½at²,
 v(t) = v₀ + at.
 
 Đây là nghiệm lý tưởng của một mô hình với giả thiết gia tốc không đổi. Nó phù hợp để giải thích chuyển động quỹ đạo đơn giản; sau một tiếp xúc làm thay đổi vận tốc hoặc khi có lực biến thiên, phải xét mô hình tiếp theo.
+
+Với một bước nhảy lý tưởng bắt đầu và kết thúc ở cùng mặt phẳng, mô hình y(t) = v_jt − gt²/2, g > 0, cho thời điểm trở về mặt phẳng t_land = 2v_j/g khi v_j > 0. Phát hiện đã đến mốc này cho phép đưa trạng thái về tiếp đất một lần thay vì tiếp tục nhận độ cao âm. Đây là mô hình động học; nó chưa giải quyết bề mặt dốc hoặc tiếp xúc với vật cản.
+
+Độ cao thả bóng là điều kiện đầu của quỹ đạo. Nếu cần bóng đi tới độ cao y_target sau khoảng T > 0, thành phần vận tốc đứng được giải từ cùng phương trình: v_y = (y_target − y_origin + gT²/2)/T. Khi y_origin thay đổi do nhân vật nhảy, phải tính lại vận tốc theo mô hình đã chọn; cộng thêm vận tốc nhảy vào một nghiệm đã được giải cho cùng mục tiêu sẽ làm thay đổi quỹ đạo đó. Các hệ thức là phép biến đổi từ mô hình gia tốc không đổi, không phải bằng chứng hệ vật lý đã được chạy.
 
 Động lực học liên hệ chuyển động với lực. Đối với chuyển động tịnh tiến của vật có khối lượng không đổi, F = ma. Trong mô phỏng thời gian rời rạc, một cách tích phân là cập nhật vₙ₊₁ = vₙ + aₙh rồi pₙ₊₁ = pₙ + vₙ₊₁h. Đây là Euler bán ẩn cho phần chuyển động xét ở đây. [30] Sai số phụ thuộc bước h và tính chất hệ; giảm h tăng số lần tính chứ không tự loại hết sai số.
 
@@ -433,6 +445,8 @@ Restitution biểu diễn mức phục hồi vận tốc theo pháp tuyến sau 
 Một tiếp xúc chỉ xác nhận quan hệ hình học hoặc phản ứng mô phỏng. Ứng dụng còn phải xác định nó có tạo sự kiện hợp lệ hay không, sự kiện đã xử lý chưa và những điều kiện logic nào đang có hiệu lực. Cùng một cặp collider có thể được báo ở nhiều bước liên tiếp; nếu mỗi thông báo đều tạo một tác dụng không kiểm soát thì kết quả có thể bị lặp.
 
 Thiết kế có thể dùng trạng thái trước, trạng thái sau và định danh sự kiện để quyết định tác dụng. Đối với một vật đi qua một mặt có hướng, xét dấu khoảng cách có hướng ở hai thời điểm giúp phân biệt đi xuyên qua với chỉ nằm gần mặt. Điều kiện không gian còn cần kết hợp trạng thái của hành động và giới hạn thời gian. Đây là nguyên lý xây dựng luật trên kết quả vật lý, không phải chức năng mà engine tự biết cho mọi loại ứng dụng.
+
+Với quỹ đạo giải tích, có thể giải thời điểm giao mặt phẳng trong khoảng giữa hai bước thay vì chỉ so khoảng cách tại cuối bước. Giao cắt theo chiều đi xuống còn yêu cầu vận tốc đứng tại thời điểm đó âm; chạm mặt phẳng ở nhánh đi lên không đáp ứng cùng điều kiện. Vùng giao cắt, hướng đi và cờ sự kiện đã xử lý cần được kiểm tra riêng để tránh cộng tác dụng nhiều lần. Cách này xử lý một điều kiện hình học trên quỹ đạo đã biết; nó không thay thế solver tiếp xúc, phản lực, bật nảy hoặc va chạm với bảng và vành.
 
 ## 2.10. Kết nối và đồng bộ trạng thái thời gian thực
 

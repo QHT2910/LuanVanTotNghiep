@@ -1,5 +1,7 @@
 # Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 
+Chương này trình bày thiết kế mục tiêu của game 1v1, gồm luật chơi, phòng đấu và đồng bộ giữa hai client. Phần đã hiện thực đến M3a là ứng dụng tập offline với nhân vật hình khối, di chuyển bằng joystick, giữ–thả ném và nhảy; chưa có Dash, Block, multiplayer hoặc vòng trận 11 điểm/3 phút. Các mô tả máy chủ, phòng, phân xử giữa hai người và kỹ năng còn lại dưới đây là thiết kế đề xuất, không phải danh sách chức năng đã được nghiệm thu.
+
 ## 3.1. Mô tả game
 
 ### 3.1.1. Ý tưởng, người chơi, bối cảnh và mục tiêu
@@ -26,7 +28,9 @@ Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và c�
 
 Máy trạng thái giúp ngăn các hành động mâu thuẫn. Nhân vật có thể ở trạng thái di chuyển, bật cao, Dash hoặc Block; quyền giữ bóng được lưu riêng thay vì tạo mọi tổ hợp thành một trạng thái mới. Hệ thống kiểm tra trạng thái trận, quyền giữ bóng và hồi chiêu trước khi nhận hành động. Khi ứng dụng mất chạm hoặc xuống nền, lệnh điều khiển liên tục phải trở về trung tính để tránh nhân vật tiếp tục chạy ngoài ý muốn.
 
-Phương án ném ban đầu sử dụng mô hình arcade: máy chủ tính xác suất từ cự ly, mức canh thời điểm và tình huống phòng thủ, sau đó dùng bộ sinh ngẫu nhiên có seed để chọn quỹ đạo dự kiến vào hoặc lệch rổ. Lựa chọn quỹ đạo không trực tiếp cộng điểm; bóng vẫn có thể bị Block hoặc trận hết giờ. Cách này cần được so sánh với backend vật lý như Rapier trước khi chốt. Không mặc định việc dùng cùng mã Dart, seed và bước thời gian cố định bảo đảm tính tất định trên mọi nền tảng.
+Thiết kế 1v1 từng đề xuất để máy chủ chọn quỹ đạo bằng xác suất có seed và phân xử tương tác phòng thủ. Phương án đó chưa được triển khai trong bản tập offline hiện hành. Bản M3a dùng quỹ đạo giải tích với sai lệch mục tiêu theo mức giữ nút: điểm thả lấy từ mẫu vị trí bóng đang được hiển thị, vận tốc được giải lại theo độ cao thả và không cộng vận tốc đứng của nhân vật. Giá trị 2 hoặc 3 điểm lấy từ vị trí chân chiếu xuống mặt sân khi thả, độc lập với độ cao bật nhảy.
+
+Bản tập offline chỉ ghi nhận cú ném đi qua vùng rổ theo chiều xuống và chưa được tính trước đó; chưa có solver bảng–vành hoặc bóng bị Block. Kết quả của mô hình này không chứng minh phương án máy chủ, xác suất hoặc vật lý tiếp xúc đã hoạt động. Bước thời gian cố định và mã dùng chung cũng chưa đủ để kết luận tất định trên mọi nền tảng.
 
 ### 3.1.4. Kết nối hai người, tình huống biên và giới hạn
 
