@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## Thesis task terminal — Lead accept proposal, bàn giao Cindy trước tích hợp
+
+Orcathesis i5ekkscj1rnt90hdtb8zk3n2 terminalproposalCh3/4 sauM3b, khôngpatchCh2vìđãcó44refs. RuntimehostcompletedCodex/OpenAI/Sol6.1mediumgen0pendingnull, khôngmodelmới. Leadđọcsource/anchorsvàassertionsM1–M3b/checks/audit/QA, acceptproposal/vòngsửa0. Đãlưu research/thesis-m3b-ch03-proposal.md và thesis-m3b-ch04-proposal.md, docs/THESIS_M3B_WORKER_REVIEW.md/claimmap, MODEL_EVALUATION. CHƯA tíchhợpmanuscript/OUTLINE/tổnghợp hoặcxuấtv0.8. Hai sửa biên tập khi tíchhợp: tênlib/src3lớp vàtham sốDashofflinevsđềxuất1v1. Bàn giaoCindyreviewmốcworkerngay, khônggộptớicuốiFigma. Khôngworkerphụthuộc/GUIdispatchmới; FigmaMCPvẫnHARNESS_MCP_NOT_READYkhôngtools, backup/3PNGchưađạt. Tiếpsaureview: tíchhợpCh3/Ch4source, QArồi pipelinev0.8drafttheouseroverride, khôngv0.7/v0.3overwrite. Giữgame/APK/workspace/Wordv0.3.
+
 ## Hai nhánh UI04 V3 và luận văn v0.8 — lệnh mới
 
 Nền aef7aa9. User yêu cầu triển khai song song, luận văn không chờFigma. UI04V3giữbriefHUD/BGnative/khôngnhânvật, backupverifiedtrước3PNG. Leadđãkiểmtoolscope mới: custom_figmaregistered nhưngget_capabilitiesruntime trảHARNESS_MCP_NOT_READY/engineStateno-tools, ALL_TOOLSLeadkhôngFigma; chưaMCPread/write/export. GUIblockerbackup/sync vàdiagnosticchờkếtquả thật giữnguyên, khôngreload/close/signout.
@@ -127,10 +131,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T16:24:45.041Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `aef7aa954b954e75890bcbdef07302f9b1f95152`.
-- Local tracking origin/main: `aef7aa954b954e75890bcbdef07302f9b1f95152` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 2 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T16:33:50.394Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `c48082a2fc476a136d72a0e3f4d24b61948e2e75`.
+- Local tracking origin/main: `c48082a2fc476a136d72a0e3f4d24b61948e2e75` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 6 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
