@@ -52,8 +52,16 @@ Không ép mô hình cơ sở dữ liệu quan hệ nếu demo chỉ giữ trạ
 3.3.2 Thiết kế giao diện
 3.3.3 Quy tắc cập nhật và phản hồi
 
-## Chương 4. Kiểm thử — chờ sản phẩm
-Môi trường, kịch bản, kết quả thực tế, hiệu năng và mạng, giới hạn đánh giá.
+## Chương 4. Kiểm thử — kết quả bước đầu của bản tập offline
+4.1 Môi trường và phạm vi kiểm thử
+4.2 Kịch bản và phương pháp kiểm tra
+4.2.1 Các mức kiểm tra
+4.2.2 Nhóm kịch bản
+4.2.3 Các ca trọng yếu và tiêu chí đối chiếu
+4.3 Kết quả theo từng mốc M1, M2, M3a, M3b
+4.4 Giới hạn đánh giá
+
+Chỉ kết quả một AVD đã ghi nhận; chưa đánh giá máy thật, hiệu năng, Internet hoặc toàn bộ game 1v1.
 
 ## Chương 5. Kết luận — chờ kết quả
 Kết quả theo mục tiêu, hạn chế, hướng phát triển. Không viết kết luận hoàn thành khi chưa có bằng chứng.

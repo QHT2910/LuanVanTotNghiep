@@ -1,5 +1,11 @@
 # Checkpoint tiếp tục dự án
 
+## Đã tích hợp source Ch3–4 — chuẩn bị QA trước xuất v0.8
+
+Cindy đã accept proposal với5chỉnhbiêntập. Leadáp6patchCh3+chỉnhnamingthưviện/thiếtkế1v1/đãduyệtsketch/thưmụclibsrc/thamsốoffline, tạo thesis/04-kiem-thu.md có13caKT01–KT13 vớiđiềukiện/kỳvọng/kếtquả/mứcbằngchứng. CậpnhậtOUTLINE, tổnghợp1–3và1–4; Ch2/44refs khôngđổi. build-manuscript thêmflaginclude-ch4/outputv08riêng, check-thesis-v08-source đạt exactconcat/cites/13case/Ch2unchanged, diffcheckđạt. docs/THESIS_M3B_INTEGRATION.md ghi claimmap/tínhkếthừa/tests47trướcHUD/kernelnull/giớihạn. Preflightđầufailanchor4.3quárộng, chưa ghimanuscript; đãsửavàchạyđạt, khônggiảgateđầuPASS.
+
+ChưaWord/PDFv0.8, chưaápstylehoặcinspectpagination. ChuẩnbịgiaoOrcaQAexisting bkm37d3uiwhgp757im7y9hov/session2e4ee883-bf67-44e2-bcd7-5f0463da63c5 chỉđọcsource+claimmap+Ch2consistent. Teamidlequeue0, runtimeSol6.1CodexOpenAIgen0pendingnullrootOLDđãđọc; khôngLuna/Argonclaim/routechange. SauQAterminalLeadreview/báoCindyngaymốcQA trướcxuấtv0.8. GiữWordv0.3/v0.7/game/APK/workspace/Figma. TaskthesisSolđãCindyreviewaccept, khôngdispatchlạiwriter/pilot.
+
 ## Thesis task terminal — Lead accept proposal, bàn giao Cindy trước tích hợp
 
 Orcathesis i5ekkscj1rnt90hdtb8zk3n2 terminalproposalCh3/4 sauM3b, khôngpatchCh2vìđãcó44refs. RuntimehostcompletedCodex/OpenAI/Sol6.1mediumgen0pendingnull, khôngmodelmới. Leadđọcsource/anchorsvàassertionsM1–M3b/checks/audit/QA, acceptproposal/vòngsửa0. Đãlưu research/thesis-m3b-ch03-proposal.md và thesis-m3b-ch04-proposal.md, docs/THESIS_M3B_WORKER_REVIEW.md/claimmap, MODEL_EVALUATION. CHƯA tíchhợpmanuscript/OUTLINE/tổnghợp hoặcxuấtv0.8. Hai sửa biên tập khi tíchhợp: tênlib/src3lớp vàtham sốDashofflinevsđềxuất1v1. Bàn giaoCindyreviewmốcworkerngay, khônggộptớicuốiFigma. Khôngworkerphụthuộc/GUIdispatchmới; FigmaMCPvẫnHARNESS_MCP_NOT_READYkhôngtools, backup/3PNGchưađạt. Tiếpsaureview: tíchhợpCh3/Ch4source, QArồi pipelinev0.8drafttheouseroverride, khôngv0.7/v0.3overwrite. Giữgame/APK/workspace/Wordv0.3.
@@ -131,10 +137,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T16:33:50.394Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `c48082a2fc476a136d72a0e3f4d24b61948e2e75`.
-- Local tracking origin/main: `c48082a2fc476a136d72a0e3f4d24b61948e2e75` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 6 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T16:58:11.372Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `028d6309261e84be94b9b2319b389490aa8f40ea`.
+- Local tracking origin/main: `028d6309261e84be94b9b2319b389490aa8f40ea` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 10 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

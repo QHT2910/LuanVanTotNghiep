@@ -1524,7 +1524,7 @@ Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó
 
 # Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 
-Chương này trình bày thiết kế mục tiêu của game 1v1, gồm luật chơi, phòng đấu và đồng bộ giữa hai client. Phần đã hiện thực đến M3a là ứng dụng tập offline với nhân vật hình khối, di chuyển bằng joystick, giữ–thả ném và nhảy; chưa có Dash, Block, multiplayer hoặc vòng trận 11 điểm/3 phút. Các mô tả máy chủ, phòng, phân xử giữa hai người và kỹ năng còn lại dưới đây là thiết kế đề xuất, không phải danh sách chức năng đã được nghiệm thu.
+Chương này phân biệt thiết kế mục tiêu của game 1v1 với ứng dụng tập offline đã hiện thực đến M3b. Bản tập hiện có di chuyển bằng joystick, giữ–thả ném, nhảy và Dash với nhân vật hình khối. Phòng đấu, máy chủ, Block, đồng bộ hai người và vòng trận 11 điểm/3 phút vẫn thuộc thiết kế đề xuất; kết quả kiểm tra bản offline không xác nhận các chức năng đó đã hoạt động.
 
 ## 3.1. Mô tả game
 
@@ -1548,13 +1548,17 @@ Một cú ném chỉ được tính khi bóng qua vùng ghi điểm từ trên x
 
 ### 3.1.3. Điều khiển, kỹ năng và trạng thái
 
-Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION đổi ý nghĩa theo trạng thái: giữ rồi thả để ném khi có bóng; thực hiện Block khi phòng thủ. JUMP cho phép bật cao, DASH tạo dịch chuyển nhanh có hồi chiêu. Nhân vật đang Dash không được thả bóng để ném. Các kỹ năng này thuộc phạm vi demo, còn tham số hồi chiêu và phạm vi tác dụng sẽ được xác định khi triển khai.
+Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION đổi ý nghĩa theo trạng thái: giữ rồi thả để ném khi có bóng; thực hiện Block khi phòng thủ. JUMP cho phép bật cao, DASH tạo dịch chuyển nhanh có hồi chiêu. Nhân vật đang Dash không được thả bóng để ném. Nhảy và Dash đã có trong bản tập offline; tham số cân bằng và phạm vi tác dụng khi đối kháng 1v1 còn cần được xác định.
 
 Máy trạng thái giúp ngăn các hành động mâu thuẫn. Nhân vật có thể ở trạng thái di chuyển, bật cao, Dash hoặc Block; quyền giữ bóng được lưu riêng thay vì tạo mọi tổ hợp thành một trạng thái mới. Hệ thống kiểm tra trạng thái trận, quyền giữ bóng và hồi chiêu trước khi nhận hành động. Khi ứng dụng mất chạm hoặc xuống nền, lệnh điều khiển liên tục phải trở về trung tính để tránh nhân vật tiếp tục chạy ngoài ý muốn.
 
-Thiết kế 1v1 từng đề xuất để máy chủ chọn quỹ đạo bằng xác suất có seed và phân xử tương tác phòng thủ. Phương án đó chưa được triển khai trong bản tập offline hiện hành. Bản M3a dùng quỹ đạo giải tích với sai lệch mục tiêu theo mức giữ nút: điểm thả lấy từ mẫu vị trí bóng đang được hiển thị, vận tốc được giải lại theo độ cao thả và không cộng vận tốc đứng của nhân vật. Giá trị 2 hoặc 3 điểm lấy từ vị trí chân chiếu xuống mặt sân khi thả, độc lập với độ cao bật nhảy.
+Phương án cho game 1v1 là để máy chủ chọn quỹ đạo bằng xác suất có seed và phân xử tương tác phòng thủ; phương án này vẫn thuộc thiết kế đề xuất. Bản tập offline M3b chưa triển khai phương án đó. Nó dùng quỹ đạo giải tích với sai lệch mục tiêu theo mức giữ nút. Khi thả, điểm xuất phát được lấy từ mẫu vị trí bóng đã đồng bộ để hiển thị; vận tốc được giải lại theo độ cao này, không cộng thêm vận tốc đứng của nhân vật. Vị trí chân chiếu xuống mặt sân quyết định giá trị 2 hoặc 3 điểm và được lưu cùng cú ném, nên di chuyển hoặc thay đổi độ cao sau khi thả không làm đổi giá trị đã xác định.
 
 Bản tập offline chỉ ghi nhận cú ném đi qua vùng rổ theo chiều xuống và chưa được tính trước đó; chưa có solver bảng–vành hoặc bóng bị Block. Kết quả của mô hình này không chứng minh phương án máy chủ, xác suất hoặc vật lý tiếp xúc đã hoạt động. Bước thời gian cố định và mã dùng chung cũng chưa đủ để kết luận tất định trên mọi nền tảng.
+
+Dash đã được hiện thực trong bản tập M3b. Khi nhận hành động hợp lệ trên mặt sân, hệ mô phỏng chốt hướng từ joystick hoặc hướng nhìn hiện có; trong thời gian Dash, hướng này không bị đổi và vận tốc đi bộ không được cộng thêm. Cấu hình thử nghiệm dùng tốc độ 8 đơn vị cảnh/giây, thời lượng 0,2 giây và khoảng hồi 0,8 giây sau thời điểm kết thúc dự kiến. Đây là tham số của bản tập, chưa phải cấu hình cân bằng cho game 1v1.
+
+Dash hủy thao tác canh ném đang giữ; khi đang Dash, yêu cầu nhảy và ném bị từ chối. Nút giữ không tự xếp hàng Dash tiếp theo. Reset hoặc xuống nền có thể kết thúc Dash sớm nhưng không rút ngắn mốc sẵn sàng đã xác lập; pause làm dừng thời gian mô phỏng và hồi chiêu. Những quy tắc này thuộc hiện thực offline, còn tương tác Dash với đối thủ và Block chưa được triển khai.
 
 ### 3.1.4. Kết nối hai người, tình huống biên và giới hạn
 
@@ -1678,6 +1682,16 @@ UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người ch�
 | Hậu điều kiện | Phiên đã rời không tiếp tục điều khiển nhân vật; trạng thái phòng và kết quả chỉ thay đổi theo chính sách được máy chủ áp dụng |
 
 ### 3.2.5. Kiến trúc hệ thống và thiết kế mạng
+
+Ứng dụng offline hiện hành tách ba trách nhiệm: nhập liệu, mô phỏng và trình bày. Ba phần tương ứng với các thư mục `lib/src/input`, `lib/src/simulation` và `lib/src/presentation`. Cách tổ chức này đã có trong mã nguồn, trong khi phần máy chủ và kết nối trình bày phía sau vẫn là phương án cho game 1v1.
+
+| Lớp hiện thực | Trách nhiệm |
+|---|---|
+| Nhập liệu | Nhận pointer, quản lý ngón sở hữu joystick/nút, chuyển thao tác thành yêu cầu di chuyển, nhảy, Dash hoặc giữ–thả ném |
+| Mô phỏng | Giữ trạng thái và cấu hình, tiến bước thời gian, kiểm điều kiện hành động, tính quỹ đạo và ghi điểm; không phụ thuộc widget hoặc node Scene |
+| Trình bày | Kết nối vòng cập nhật với mô phỏng, đồng bộ trạng thái sang node Scene và HUD, xử lý vòng đời và đưa đầu vào về trung tính khi cần |
+
+Mỗi lần cập nhật hợp lệ, lớp trình bày cho mô phỏng tiến trước rồi đồng bộ cảnh và HUD. Khi mất trạng thái tương tác, đầu vào được hủy và logic pause được áp dụng; ticker không được dùng như nơi lưu luật game. Việc tách lớp hỗ trợ kiểm tra logic độc lập nhưng chưa chứng minh cùng một mô phỏng đã được dùng trên máy chủ hoặc đồng bộ qua mạng.
 
 Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene chỉ nhận trạng thái để dựng cảnh; không tự phán định điểm. Đây là hướng thiết kế để đánh giá, chưa quyết định loại bỏ `flutter_scene_net` hoặc chọn dịch vụ hosting cụ thể.
 
@@ -2035,6 +2049,8 @@ Hình 3.7(c2). Kiểm tra trượt và lặp lại. Nguồn: thiết kế đề 
 
 Trong sơ đồ tuần tự, cờ resolved điều khiển việc dừng xử lý cú ném sau hết giờ, Block, ghi điểm hoặc ném trượt. Nhánh ghi điểm thực hiện check-ball khi trận chưa kết thúc. Thứ tự hết giờ trước ghi điểm kế thừa luật đang mô tả; thứ tự Block và bóng qua rổ trong cùng một tick hiện là đề xuất cần xác nhận hoặc thay bằng đối chiếu thời điểm va chạm. Sơ đồ chưa chứng minh tính đúng của phép phân xử này trên sản phẩm.
 
+Bảng trạng thái sau mô tả phạm vi đầy đủ của thiết kế. Các hành vi nhảy và Dash đã có biến thể offline, nhưng điều kiện máy chủ, tương tác với đối thủ và Block trong bảng chưa được nghiệm thu trên một trận 1v1.
+
 Các trạng thái logic dự kiến của nhân vật và bóng được mô tả dưới đây để đối chiếu luật với xử lý. Tên trạng thái không phải API đã triển khai; các guard về phạm vi, thời gian và hồi chiêu còn cần thống nhất.
 
 | Đối tượng / trạng thái | Chuyển trạng thái và guard | Ngoại lệ, giới hạn |
@@ -2109,7 +2125,7 @@ Hình 3.8. Luồng chuyển màn hình dự kiến. Nguồn: thiết kế đề 
 
 ### 3.3.2. Thiết kế giao diện
 
-Các màn hình sẽ được thiết kế trong phần mềm thiết kế giao diện và lưu tệp nguồn có thể chỉnh sửa. Mỗi màn hình cần có kích thước khung, vị trí thành phần, nội dung nhãn, kiểu chữ và các trạng thái tương tác. Hình xuất để đưa vào luận văn phải tương ứng với một phiên bản của tệp thiết kế. Phần mềm sử dụng chưa được lựa chọn; bản thảo hiện chưa có bộ hình giao diện đáp ứng yêu cầu này.
+Figma đã được chọn làm công cụ thiết kế UI01–UI06. Các phác thảo UI01–UI06 đã được duyệt. Riêng UI04 V3 được duyệt theo hướng nền sân và HUD tách lớp, chưa có nhân vật trong phạm vi thiết kế này. Việc duyệt concept chưa đồng nghĩa hoàn tất bộ màn hình hoặc có ảnh xuất Figma chính thức. Bản thảo hiện chưa có bộ hình xuất được xác minh để dùng thay thiết kế giao diện; UI của bản tập offline chỉ phục vụ kiểm tra thao tác.
 
 Đối với màn hình trận đấu, cần bố trí cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION hiển thị chức năng ném khi người chơi có bóng và Block khi phòng thủ. Thanh canh ném xuất hiện trong lúc giữ ACTION. Điểm và đồng hồ đặt ở vùng dễ quan sát; thông báo kết nối tránh che nhân vật, bóng và các nút điều khiển.
 
