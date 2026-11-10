@@ -1,4 +1,8 @@
-# Trạng thái hiện hành — chờ kết nối Figma chính thức
+# Trạng thái hiện hành — UI04 Figma đang làm
+
+10/11/2026: đã thao tác trực tiếp Figma, có bốn frame UI04 native editable trong draft AKyJ1SFfjiJH8oS8q8m4JW: Sẵn sàng, Canh ném, Hồi chiêu và Mất kết nối. Frame gốc 960×540; ảnh progress local ở design/figma/progress, không phải export. Chưa duyệt bố cục, chưa component/prototype; Figma báo chưa sync, chưa xác minh cloud save/bản .fig local/PNG chính thức. Xem design/figma/README.md. Giữ cửa sổ hiện hành để bảo toàn nguồn; không tạo file trùng. Chưa UI01–03/UI05–06; không xuất Word/PDF, không thêm tính năng game. Các trạng thái chưa cửa sổ/file dưới đây là lịch sử.
+
+# Lịch sử — chờ kết nối Figma
 
 10/11/2026: M3b đã commit/push6d1c120; organization811493d, source luận văn1ac51f9. 47tests/analyze/build/install/audit7/runtimeAVD và QA đã đạt theo MILESTONE_3B_PROGRESS, không chạy lại. Workspace chỉ game/offline-practice; snapshot M3a/M3b hash khớp, binary ignored, M1/M2 binary missing/rebuildable. Wordv0.3 ngoài lượt giữ nguyên.
 

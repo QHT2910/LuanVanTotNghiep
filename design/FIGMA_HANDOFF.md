@@ -1,5 +1,7 @@
 # Bàn giao để dựng UI chính thức trong Figma
 
+Cập nhật 10/11/2026 sau khi cửa sổ được khôi phục: đã đăng nhập và dựng bốn frame UI04 bằng lớp native trong draft [Bóng rổ đối kháng 3D — UI](https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/?node-id=1-2). Có ảnh tiến độ local; chưa xác minh đồng bộ cloud, bản `.fig` local hoặc PNG export. UI04 chưa hoàn tất/nghiệm thu. Xem [figma/README.md](figma/README.md). Bảng “Chưa có” bên dưới là trạng thái chuẩn bị trước lượt dựng, không phải trạng thái UI04 mới nhất. Năm màn khác chưa bắt đầu.
+
 10/11/2026. Sinh viên đã chọn Figma và cho phép kết nối. Figma có trên máy; host báo Computer Use available=false/joined=false, không MCP Figma hay plugin Figma khả dụng. Chưa xác minh đăng nhập, chưa tạo file, chưa có export. Việc cho phép kết nối không tự tạo session hoặc connector.
 
 Đây là bảng chuẩn bị nội dung, không phải bộ thiết kế đã hoàn thành. Không SVG/mockup tự sinh hoặc ảnh demo được nhận thành sản phẩm Figma. Nguồn yêu cầu: ui-spec-r1.md; các thông tin công cụ chưa chọn ở bản R1 là lịch sử ngày04/11, không phải quyết định hiện hành.

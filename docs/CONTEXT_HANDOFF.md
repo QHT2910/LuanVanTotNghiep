@@ -1,5 +1,17 @@
 # Checkpoint tiếp tục dự án
 
+## UI04 Figma — đã dựng bốn frame, chưa export/đồng bộ được xác minh
+
+10/11/2026, nền Git 929ad3a. Chỉ làm UI04, không sửa game/thesis hoặc chạy lại AVD/gate. User đã khôi phục Figma và nhiều lần cho khoảng không thao tác; mỗi lần USER_INPUT_ACTIVE đều dừng input, hỏi lại và chỉ tiếp sau trả lời. Cửa sổ live PID18436/HWND657632 đã đọc được; phải lấy state mới khi nối tiếp, không coi PID là cố định.
+
+Draft hiện hành https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/?node-id=1-2 tên Bóng rổ đối kháng 3D — UI, Page1. Frame gốc UI04-Trận đấu / Sẵn sàng 960×540, ba bản Canh ném/Hồi chiêu/Mất kết nối; chữ và hình học native editable. Chưa component variants/prototype. HUD/joystick/nhãn Nhảy-Dash-Ném hoặc Block/thanh charge/cooldown/thông báo mất kết nối đã có ở mức bản đang làm. Cảnh3D ghi rõ placeholder; chưa duyệt bố cục/vùng chạm. Không tạo file trùng.
+
+Figma vẫn báo chưa thể sync; chưa xác minh cloud save. File→Save local copy chưa cho tệp/hộp lưu được quan sát, Export chưa cho PNG xác minh. Sidebar scroll tool gửi wheel ở tâm cửa sổ dù đã chỉ định element; foreground focus một số nút bị từ chối, không có phím gửi ở lần từ chối. Không CLI/clipboard/debugport hoặc tool khác lách GUI. Không đóng/reload cửa sổ trước bảo toàn nguồn. `design/figma/README.md` ghi sản phẩm/giới hạn; sáu ảnh progress local ignored, không phải export. Chưa có `.fig` local/PNG chính thức; không xuất Word/PDF.
+
+Không dispatch/retry/đổi route worker. Cindy báo next_send generation1 cho research/thesis/game-design Pi+Argon, developer Terra, QA/diagrams Luna, Lead giữ Sol; đây là cấu hình kế thừa, chưa xác minh runtime mới. Pilot game-design do Cindy gửi, không gửi trùng. Chưa nhận kết quả pilot trong lượt này. MODEL_EVALUATION chỉ ghi trạng thái chưa đánh giá, không nhận cấu hình là đã chạy. Các worker game/thesis cũ terminal được giữ, không replay.
+
+Bước tiếp: đọc live state đúng draft → bảo toàn/sync nguồn và sửa bố cục UI04 còn dở → native export PNG thật → review. Giữ snapshots/demo/workspace game-only và Wordv0.3. Các mục bên dưới là lịch sử.
+
 ## Figma UI04 — Computer Use đã gọi được, chờ cửa sổ hiện
 
 Nền da0e3a6. Chỉ UI04Figma960x540/frame+charge/cooldown/connectionlost, không5mànkhác/game/thesis. Toolcindy_computer nay cólist_tools/call_tool; status installed/running vàcheck_permissionsPASSWindowsnot_required. launch_appFigmađãgọi; list_windows xácđịnhexistingRecents - Figma PID18436/window657632 minimized. Khôngtạofiletrùng. get_window_state khôngảnh/0AX doiconic; press_keyforegroundESCđầubịSTALE→reobserve; lầnsauUSER_INPUT_ACTIVE refusedkhônggửi. UserđãbáoFigmađãmở,cóthểthao tác; freshstatevẫnminimized; ESCđãdeliverednhưngunverifiable/cửa sổvẫnminimized,khôngreplayinput. ĐanghỏiusernhấpiconFigmađểthấyRecents/canvas/login,khôngsửashell/clipboard/CLI/debugport. Chưanhậnloginpromptnênchưagọiask_ownerfill. Chưacóảnh/fileeditable/link/exportPNG/UI04. M3b/snapshots/workspacegame-only/Wordv0.3giữ. Khôngworker/GUImodelthaythế. Bướctiếpuserrestore→freshlist/state/screenshotđúngwindow→nếuloginask_ownerfill(chờkhôngchạmvàowindow)→inspectexistingfile→thiếtkếUI04nativeFigma/lưu/exportPNG. Chỉdoccheckpointđổi,chưachốtGitlượtnày.
@@ -73,10 +85,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T05:46:43.769Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `da0e3a6cdb1ef9b5bf3fd08a1590376b0be39faf`.
-- Local tracking origin/main: `da0e3a6cdb1ef9b5bf3fd08a1590376b0be39faf` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T08:02:21.984Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `929ad3aeda2d8c0cbd31e5e13c770d9710f37d9b`.
+- Local tracking origin/main: `929ad3aeda2d8c0cbd31e5e13c770d9710f37d9b` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 7 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
