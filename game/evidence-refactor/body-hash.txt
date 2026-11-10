@@ -1,0 +1,1 @@
+PASS moved-source and class body byte hashes unchanged

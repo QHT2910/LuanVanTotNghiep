@@ -1,6 +1,6 @@
 # M3a — QA đạt, chốt Git
 
-09/11/2026. Nền112afd0, chưa commit M3a. Lead tích hợp và thực thi; Orca developer Sol6.1/root OLD chỉ đọc proposal. Orca Worker QA Sol6.1/rootOLD đã terminal PASS source/test/evidence/8ảnh, không P1/P2 chặn; qa/milestone-3a-final.md. Không thêm worker/model/provider. Wordv0.3 giữ nguyên; M2 ghi chú commit đã sửa đúng112afd0.
+09/11/2026. Nền112afd0; M3a đã commit/push ab9bf92. Lead tích hợp và thực thi; Orca developer Sol6.1/root OLD chỉ đọc proposal. Orca Worker QA Sol6.1/rootOLD đã terminal PASS source/test/evidence/8ảnh, không P1/P2 chặn; qa/milestone-3a-final.md. Không thêm worker/model/provider. Wordv0.3 giữ nguyên; M2 ghi chú commit đã sửa đúng112afd0.
 
 Gate thực chạy: flutter analyze PASS game/evidence-m3a/analyze-final.txt; flutter test PASS34 (22cũ+12mới) tests-final.txt; build x64 PASS build-apk-final.txt; install/launch PASS install-final.txt/launch-final.txt. Test đầu phát hiện latecancel setState sau dispose, đã fix mounted/owner cleanup, test không đổi. APK đầu HUDsimTime làm uiautomator không idle; đã bỏ clockHUD, giữeventtime, analyze/build/install lại. Không nhận lỗi trung gian là trạng thái cuối.
 

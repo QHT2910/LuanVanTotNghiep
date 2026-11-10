@@ -3,6 +3,7 @@
 Đây là chỉ dẫn mới cho workspace D:\totnghiep\LuanVanTotNghiep; AGENTS.md của workspace trước đã được người dùng thu hồi.
 
 - Làm việc bằng tiếng Việt, tuân thủ yêu cầu ngôn ngữ báo lỗi của host.
+- Quy định style do người dùng cập nhật 09–10/11/2026 ưu tiên quy tắc không bold/caps cũ cho các tiêu đề: xem docs/THESIS_FORMAT_2026-11-09.md. Nội dung TNR13/Before6pt/Multiple1,3; không tự chọn After hoặc thuộc tính chưa quy định. Không xuất lại Word/PDF trước khi bộ UI sẵn sàng trong lượt hiện hành.
 - Khi biên tập luận văn, dùng research-paper-writing và humanizer. Không tự nhấn đậm hoặc viết hoa toàn bộ tiêu đề/nội dung. Giữ cách viết chuẩn của tên riêng, mã và định danh kỹ thuật. Đưa ghi chú quy trình, đường dẫn nội bộ và checklist rà soát ra tài liệu riêng, không chèn vào bản luận văn.
 - Tên game tạm: Bóng rổ đối kháng 3D. Gameplay demo đã được sinh viên đồng ý theo gợi ý: nửa sân 1v1, 2/3 điểm, 11 điểm hoặc 3 phút, di chuyển/ném/nhảy/Dash/Block, phòng bằng mã và ghép trận nhanh bổ sung sau. Kiến trúc và kết quả thực nghiệm vẫn chưa được xác nhận.
 - Ch2 có 2.1 Các hệ thống tương tự, các mục cũ dịch tăng một số. Ch3 có 3.3 Hệ thống màn hình riêng theo mẫu; bản UI tự sinh cũ không được dùng làm hình thiết kế chính thức. Giao diện phải được thiết kế trong công cụ bên thứ ba, lưu nguồn và ảnh xuất thực tế.

@@ -1,0 +1,34 @@
+{
+  "mode": "plan",
+  "create": [
+    "lib/src/simulation/config.dart",
+    "lib/src/simulation/practice.dart",
+    "lib/src/input/joystick.dart",
+    "lib/src/input/jump_button.dart",
+    "lib/src/presentation/practice_page.dart"
+  ],
+  "update": [
+    "lib/main.dart",
+    "test/joystick_coordination_test.dart",
+    "test/joystick_test.dart",
+    "test/jump_button_test.dart",
+    "test/jump_test.dart",
+    "test/practice_test.dart",
+    "test/widget_test.dart"
+  ],
+  "removeFiles": [
+    "lib/config.dart",
+    "lib/practice.dart",
+    "lib/joystick.dart",
+    "lib/jump_button.dart"
+  ],
+  "changedImportDirectives": 11,
+  "practicePageBodySha256": "131d655b9752282aaed5e4cbb245d3958b6f50ec63faadab11014efaea888297",
+  "unchangedMovedSourceHashes": {
+    "lib/src/simulation/config.dart": "f93f0f5e7b8bfe9f7f925742eec29324e4ee75dad2c48c6a2776f01dcc8b7c9f",
+    "lib/src/simulation/practice.dart": "cd610d36ceb3b5ed7fc50edac88dd03e5a3e7ba1de76ddf58c9ae0b757391a1e",
+    "lib/src/input/joystick.dart": "5d681abd15cba959fd648647b04d39f81ebf3bc093821761506c524b52fe5df6",
+    "lib/src/input/jump_button.dart": "fbb94725f92b881cc884b4af5b47efa605a613b47e3b7dd97e18af0d65227fad"
+  }
+}
+Plan only; review before --apply.

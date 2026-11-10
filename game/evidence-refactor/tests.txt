@@ -1,0 +1,36 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart
+00:00 +0: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +1: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +2: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +3: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +4: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +5: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +6: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +7: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +8: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +9: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +10: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +11: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +12: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +13: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +14: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +15: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +16: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +17: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +18: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +19: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +20: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +21: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +22: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +23: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +24: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +25: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +26: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +27: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +28: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +29: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +30: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Reset/disable clears owner without generating an edge
+00:00 +31: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Reset/disable clears owner without generating an edge
+00:00 +32: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Cancel shoot leaves move active; cancel move leaves charge
+00:00 +33: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Round reset and disable neutralize old pointers and knob
+00:00 +34: All tests passed!

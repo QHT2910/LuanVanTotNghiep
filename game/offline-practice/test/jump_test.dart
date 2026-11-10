@@ -1,8 +1,8 @@
 import 'dart:math' as math;
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:offline_practice/config.dart';
-import 'package:offline_practice/practice.dart';
+import 'package:offline_practice/src/simulation/config.dart';
+import 'package:offline_practice/src/simulation/practice.dart';
 
 void elapse(Practice g, double time, [double frame = 0.05]) {
   var remaining = time;

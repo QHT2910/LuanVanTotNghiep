@@ -12,7 +12,7 @@ try {
  if(git(['branch','--show-current']).stdout.trim()!=='main') throw new Error('Expected main branch');
  if(process.argv.includes('--check')) {console.log(git(['status','--short']).stdout);console.log('Check only: no staging, commit or push.');process.exit(0);}
  if(git(['ls-files','-u']).stdout.trim()) throw new Error('Unresolved merge conflicts');
- const allowed=['AGENTS.md','.gitignore','README.md','thesis','diagrams','research','tools','docs','game','qa','design'];
+ const allowed=['AGENTS.md','.gitignore','README.md','LuanVanTotNghiep.code-workspace','demos','thesis','diagrams','research','tools','docs','game','qa','design'];
  const staged=git(['diff','--cached','--name-only']).stdout.trim().split('\n').filter(Boolean);
  const excluded=[];
  for(let i=2;i<process.argv.length;i++)if(process.argv[i]==='--exclude'){

@@ -1,8 +1,12 @@
 # Checkpoint tiếp tục dự án
 
+## 10/11/2026 — snapshot/structure/UI/thesis trước Dash
+
+Nền ab9bf92, chỉ Wordv0.3 ngoài lượt ban đầu. Đã copy/hash verify APK M3a local demos/releases/m3a/offline-practice-m3a-x64.apk; M1/M2 APK missing/rebuildable, demos/README.md. ROADMAP.md mới; workspace multi-root đã mở VSCode; migration plan/apply xong,4file+classbodyhashkhớp, analyze/34testsPASS, build/Nodeaudit6sourcePASS,game/evidence-refactor;PythonStorealiasthiếuinterpreter,khôngcài,NodefallbackdùngZIPreaderđãcó. Khôngrerunmigration. Figma.exe đã gọi mở, Computer Use không có trong ALL_TOOLS/hostcapabilities yêu cầu bật Settings→Built-inTools, chưa xác minh login/file/PNG. Không shell giảclick/credential/debugport. Quyđịnhstyle copy docs/THESIS_FORMAT_2026-11-09.md; tiêuđềbold/caps theo useroverride, Afterchưađịnh. Developer/thesis đều terminal proposal/review (Sol6.1/rootOLDchỉđọc); Leadđãtíchhợp. QA bkm37d3uiwhgp757im7y9hov đangràsnapshot/workspace/thesis, chưarefactorgatecuối. Ch2/3source/combined/refs44đãđổi,WordPDFkhôngđổi;Ch4draftresearchriêng. ChưaM3bDash, ưu tiênsnapshot/structure/Figmasession/thesisreview; khôngBlock/mạng/model/provider. Bướctiếp tíchhợpproposal/gates/sourceAPK/QA, không sửa evidencecũ/Wordv0.3.
+
 ## M3a bắt đầu — nhảy, 09/11/2026
 
-Nền 112afd0, status ban đầu chỉ Wordv0.3 ngoài lượt. M2 đã được Cindy chấp nhận. Chỉ thêm nhảy/no double-jump, bóng giữ theo độ cao và ném từ bóng hiển thị; điểm theo chân mặt sân. Chưa Dash/Block/multiplayer/model thật. VS Code reuse-window mở practice.dart trước sửa. Developer cũ chỉ đọc đề xuất, Lead tích hợp/chạy;  Giữ Wordv0.3 và version/AA/ticker; kiểm AVD/process trước runtime, không mở trùng hoặc giành input. M3a hiện analyze/34tests/build/install/runtime PASS, QA cuối PASS không P1/P2 chặn; qa/milestone-3a-final.md, docs/MILESTONE_3A_PROGRESS.md và game/evidence-m3a. 6jump/5land+1reset; score3+2=tổng5, airborneorigin đúngheight/projectedfeet0, pause/resume ổn định. APKhashd4745966535ecf924d13f617dc357c3c4549a77d3140176158c29b3719413c14. ChưacommitM3a; QA đọc rồi chốtGit, không mởDash. Không đổi model/provider.
+Nền 112afd0, status ban đầu chỉ Wordv0.3 ngoài lượt. M2 đã được Cindy chấp nhận. Chỉ thêm nhảy/no double-jump, bóng giữ theo độ cao và ném từ bóng hiển thị; điểm theo chân mặt sân. Chưa Dash/Block/multiplayer/model thật. VS Code reuse-window mở practice.dart trước sửa. Developer cũ chỉ đọc đề xuất, Lead tích hợp/chạy;  Giữ Wordv0.3 và version/AA/ticker; kiểm AVD/process trước runtime, không mở trùng hoặc giành input. M3a hiện analyze/34tests/build/install/runtime PASS, QA cuối PASS không P1/P2 chặn; qa/milestone-3a-final.md, docs/MILESTONE_3A_PROGRESS.md và game/evidence-m3a. 6jump/5land+1reset; score3+2=tổng5, airborneorigin đúngheight/projectedfeet0, pause/resume ổn định. APKhashd4745966535ecf924d13f617dc357c3c4549a77d3140176158c29b3719413c14. M3a đã commit/push ab9bf92, QA đạt; không replay finish-session. Không đổi model/provider.
 
 ## Mốc 2 joystick — 09/11/2026, QA đạt
 
@@ -57,10 +61,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-09T02:10:23.552Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `112afd0e55f96871a9dd9343fe9dcbf60d9b2f93`.
-- Local tracking origin/main: `112afd0e55f96871a9dd9343fe9dcbf60d9b2f93` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 17 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T04:52:50.256Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `ab9bf929b8b2b567a658af1afc1b4a80d818728f`.
+- Local tracking origin/main: `ab9bf929b8b2b567a658af1afc1b4a80d818728f` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 39 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
@@ -83,3 +87,5 @@ Không đổi model/provider/Lead/mặc định ứng dụng. Không còn nhiệ
 Cindy review độc lập v0.6 theo báo cáo xuất bản, đặc biệt chấp nhận cách chia panel và phần trắng khi panel dùng trang riêng. Không tuyên bố bản thảo đã đủ điều kiện nộp: bìa/header/TOC và bộ UI còn thiếu; native Word pagination chưa rà hết. Không tự chạy lại R3 hoặc Android/Internet. Một Redmi Note11, chưa có bằng chứng render Android/asset runtime/hai Android hoặc Internet mới.
 
 Nếu nhận yêu cầu tiếp, đọc đúng phạm vi và Git hiện tại rồi thực hiện phần đó. Root worker phải được sửa qua host hỗ trợ và xác nhận quyền trước ghi. Không retry Argon/provider bị từ chối hoặc tạo worker trùng. Dùng native compaction và CONTEXT_PROTOCOL; chưa có auto rollover được xác minh, không /clear, cron hoặc polling.
+
+Cập nhật chốt mốc: OrcaQArefactor terminalPASS khôngP1/P2, qa/refactor-layout-2026-11-10.md; source/test/body/API khôngđổihànhvi. Chuẩnbịchốtorganizationriêng(loạithesis/research), rồichốtcontentthesisriêng. Đọcgitlog/status trước replay. DeveloperchỉđọcđangchuẩnbịDashproposal, CHƯAápDash; Figma chưaComputerUse/file/PNG. KhôngruntimeAPKrefactor.

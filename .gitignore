@@ -17,6 +17,7 @@ local.properties
 .flutter-plugins
 .flutter-plugins-dependencies
 build/
+demos/releases/
 node_modules/
 ~$*
 tools/read-asar.cjs

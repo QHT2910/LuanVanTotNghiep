@@ -29,7 +29,7 @@ Lượt mới hủy cú ném, giữ tổng điểm và vị trí chân. Sau bón
 
 ## Mô hình và giới hạn
 
-config.dart gom bounds, vạch, footprint, kích thước, charge, gravity, flight time/reset/timestep; tất cả là tham số thử nghiệm. Quỹ đạo ballistic giải tích, không va chạm bảng/vành hoặc bật nảy; bóng có thể xuyên bảng. Đường tròn là ranh giới thử nghiệm, không nhận là sân chuẩn.
+src/simulation/config.dart gom bounds, vạch, footprint, kích thước, charge, gravity, flight time/reset/timestep; tất cả là tham số thử nghiệm. Quỹ đạo ballistic giải tích, không va chạm bảng/vành hoặc bật nảy; bóng có thể xuyên bảng. Đường tròn là ranh giới thử nghiệm, không nhận là sân chuẩn.
 
 Tâm bóng đi qua mặt phẳng rổ từ trên xuống và nằm trong lỗ sau khi trừ bán kính bóng mới tính điểm. Crossing dùng nghiệm thời gian trong khoảng bước; shot crossed/scored khóa cộng lặp. Vị trí chân và giá trị 2/3 được cache lúc nhả. Footprint tiếp xúc vạch tính 2; chỉ hoàn toàn ngoài vạch mới 3. lineTolerance=1e-9 là dung sai số học, không phải biên gameplay hữu hình.
 
@@ -98,3 +98,13 @@ node tool/assert-jump-runtime.cjs
 ```
 
 Compile JoystickTouch.java như hướng dẫn M2 nhưng push dex tới /data/local/tmp/joystick-m3.dex. Harness thêm leadInMillis tùy chọn (mặc định300 để giữ M2), M3a jump+shoot dùng50ms trước khi nhấn ném. Timing wall-clock không phải oracle; chỉ nhận ném trên không khi event releasePlayerY>0. Helper dùng AVD hiện hành/foreground demo, không boot/đóng AVD; mode background dùng HOME. Assertions là oracle phiên M3a lưu (6jump/2release/tổng5), không phải mọi phiên tùy ý. Không dùng helper trong khi người dùng đang điều khiển. Không thêm Dash/Block/multiplayer/model thật.
+## Cấu trúc hiện hành sau refactor 10/11
+
+- lib/main.dart: bootstrap, orientation, entrypoint giữ nguyên.
+- lib/src/simulation/config.dart và practice.dart: tham số/mô phỏng thuần.
+- lib/src/input/joystick.dart và jump_button.dart: input widgets/model pointer.
+- lib/src/presentation/practice_page.dart: Scene/HUD/vòng đời.
+
+Bốn source logic/input và toàn thân PracticePage được chuyển nguyên byte; tests chỉ đổi11 import. Logs kiểm bản refactor ở ../evidence-refactor; runtime M3a ở evidence-m3a thuộc layout/commit cũ, không nhận là đã chạy bản mới. Không chạy các helper AVD lịch sử để ghi đè evidence cũ.
+
+Audit đã chạy bằng `node tool/audit-apk-sources.cjs`, dùng ZIP reader sẵn trong .local-tools của repo, không đổi dependency app. Có bản Python standard-library `python tool/audit-apk-sources.py` tùy chọn; máy hiện không có Python thật nên chưa chạy bản này. Script xuất JSON stdout, kiểm cả sáu source mới nhúng trong debug kernel và không còn source flat; không chứng minh APK đã cài hoặc runtime. Không dùng APK release stripped để kết luận PASS. Snapshot M3a trước refactor ở ../../demos/releases/m3a, hash xem manifest.

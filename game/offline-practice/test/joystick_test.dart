@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:offline_practice/joystick.dart';
+import 'package:offline_practice/src/input/joystick.dart';
 
 void expectAxis(Offset actual, Offset expected) {
   expect(actual.dx, closeTo(expected.dx, 1e-9));

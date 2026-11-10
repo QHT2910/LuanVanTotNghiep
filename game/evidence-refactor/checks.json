@@ -1,0 +1,17 @@
+{
+    "date":  "2026-11-10",
+    "baseline":  "ab9bf92",
+    "scope":  "Layout-only refactor, no gameplay changes",
+    "analyzeExitCode":  0,
+    "testExitCode":  0,
+    "testsPassed":  34,
+    "buildExitCode":  0,
+    "nodeAuditExitCode":  0,
+    "pythonAudit":  "NOT RUN: Store alias, no Python interpreter; Node equivalent passed",
+    "runtimeAfterRefactor":  "NOT RUN: historical M3a runtime is not evidence for this APK",
+    "apkSHA256":  "49a2f3629e7593b7ec749017a2a40a2f582bd00f28f1d594539dc789f773739a",
+    "snapshotM3aSHA256":  "d4745966535ecf924d13f617dc357c3c4549a77d3140176158c29b3719413c14",
+    "unchangedMovedSources":  4,
+    "unchangedPageBody":  true,
+    "testImportChanges":  11
+}

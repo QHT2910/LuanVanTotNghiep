@@ -1,6 +1,10 @@
+# 10/11/2026 — tổ chức và rà luận văn
+
+Nền ab9bf92; snapshot APKM3a localhashđạt, manifest/roadmap/workspace đãcó. Refactorlayout sourceđãáp,4file+classbodybytekhớp; analyze/34testđạt, build/Nodeaudit6sourceđạt. Ch2/Ch3/refs44sourceđãsửa,Ch4draft riêng,Word/PDFgiữ. QAđangràphầnchuẩnbị. FigmaappgọimởnhưngthiếuComputerUse, chưalogin/file/PNG. ChưaDash, chưacommitlượtmới. Chi tiết PROGRESS_2026-11-10.md, ROADMAP.md, PROJECT_STRUCTURE.md. Wordv0.3giữngoàilượt. Bêndướilàlịchsử.
+
 # M3a — QA đạt, chốt Git
 
-09/11/2026: thêm nhảy, analyze/34test/build/install PASS; một AVD hai ca hai pointer joystick+jump và jump+shoot, score3+2=tổng5, no doublejump/reset/backgroundresume oracle đạt. Xem MILESTONE_3A_PROGRESS.md. QA đã đạt, chuẩn bị finish-session; đọc Git trước replay; Wordv0.3giữ; chưaDash/Block/multiplayer/máythật. M2 đãpush112afd0/Cindy chấp nhận. Bên dưới lịch sử.
+09/11/2026: thêm nhảy, analyze/34test/build/install PASS; một AVD hai ca hai pointer joystick+jump và jump+shoot, score3+2=tổng5, no doublejump/reset/backgroundresume oracle đạt. Xem MILESTONE_3A_PROGRESS.md. M3a đã commit/push ab9bf92, QA đạt; Wordv0.3giữ; chưaDash/Block/multiplayer/máythật. M2 đãpush112afd0/Cindy chấp nhận. Bên dưới lịch sử.
 
 # Trạng thái hiện hành — mốc 2 joystick QA đạt
 
@@ -72,3 +76,5 @@ Tái sử dụng đủ sáu worker; Lead và tất cả worker giữ GPT-6.1-Sol
 Root của worker vẫn là thư mục cũ. Research/thesis/diagrams ghi được đầu ra vào đường dẫn hiện hành; game-design/developer/QA bị chặn tạo thư mục. Lead lưu báo cáo trả trực tiếp và chạy probe bằng quyền workspace hiện hành. Chỉ Lead commit/push.
 
 Bản Word đã được kiểm tra cấu trúc và hình nhúng; bố cục từng trang, mục lục/header/footer/caption và độ dài quyển vẫn cần rà trên Word trước khi nộp. Sơ đồ tuần tự dài cần cân nhắc tách hình khi dàn trang cuối.
+
+Cập nhật chốt mốc: OrcaQArefactor terminalPASS khôngP1/P2, qa/refactor-layout-2026-11-10.md; source/test/body/API khôngđổihànhvi. Chuẩnbịchốtorganizationriêng(loạithesis/research), rồichốtcontentthesisriêng. Đọcgitlog/status trước replay. DeveloperchỉđọcđangchuẩnbịDashproposal, CHƯAápDash; Figma chưaComputerUse/file/PNG. KhôngruntimeAPKrefactor.

@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "scope": "Current refactored source versus current debug APK; not installed identity/runtime",
+  "pass": true,
+  "apkSHA256": "49a2f3629e7593b7ec749017a2a40a2f582bd00f28f1d594539dc789f773739a",
+  "apkBytes": 97469581,
+  "kernelSHA256": "996a40de144970e89bf67990eed8979cf8c5ef47da77d7e6520d25fcabd4649b",
+  "localKernelMatchesAPK": null,
+  "sources": {
+    "lib/main.dart": {
+      "sha256": "a2451a7873da8fda07b2854c54e144f8b096c60db48f903e947b102d5d9b9065",
+      "bytes": 382,
+      "embeddedInAPKKernel": true
+    },
+    "lib/src/simulation/config.dart": {
+      "sha256": "f93f0f5e7b8bfe9f7f925742eec29324e4ee75dad2c48c6a2776f01dcc8b7c9f",
+      "bytes": 3876,
+      "embeddedInAPKKernel": true
+    },
+    "lib/src/simulation/practice.dart": {
+      "sha256": "cd610d36ceb3b5ed7fc50edac88dd03e5a3e7ba1de76ddf58c9ae0b757391a1e",
+      "bytes": 11088,
+      "embeddedInAPKKernel": true
+    },
+    "lib/src/input/joystick.dart": {
+      "sha256": "5d681abd15cba959fd648647b04d39f81ebf3bc093821761506c524b52fe5df6",
+      "bytes": 7493,
+      "embeddedInAPKKernel": true
+    },
+    "lib/src/input/jump_button.dart": {
+      "sha256": "fbb94725f92b881cc884b4af5b47efa605a613b47e3b7dd97e18af0d65227fad",
+      "bytes": 1907,
+      "embeddedInAPKKernel": true
+    },
+    "lib/src/presentation/practice_page.dart": {
+      "sha256": "73e676dee4bc27bb5106fcada6d289ff5910de40f3fe522d5d68c77ceee2788c",
+      "bytes": 13534,
+      "embeddedInAPKKernel": true
+    }
+  },
+  "staleFlatSources": [],
+  "apkArchitectures": [
+    "lib/x86_64/libflutter.so"
+  ],
+  "notProven": [
+    "Installed device APK identity",
+    "Runtime after refactor",
+    "Performance"
+  ]
+}

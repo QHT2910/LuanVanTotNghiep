@@ -2,8 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:offline_practice/jump_button.dart';
-import 'package:offline_practice/practice.dart';
+import 'package:offline_practice/src/input/jump_button.dart';
+import 'package:offline_practice/src/simulation/practice.dart';
 
 void elapse(Practice g, double seconds) {
   var left = seconds;
