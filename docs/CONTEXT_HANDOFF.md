@@ -1,5 +1,11 @@
 # Checkpoint tiếp tục dự án
 
+## Review UI04 của Cindy — bảo toàn trước chỉnh bố cục
+
+Nền daadc5e. Cindy chưa nghiệm thu: tách HUD tên/điểm/đồng hồ thành semantic groups; tách Nhảy/Dash/ACTION thành nhóm/component và vùng chạm riêng; dời chú giải joystick khỏi giữa sân; possession độc lập cooldown; chưa chốt tự reconnect. Đã ghi vào design/figma/README, CHƯA sửa canvas theo review. Status/check_permissions ComputerUse đạt; list_windows live thấy draft Figma cũ minimized, get_window_state trả CUA_UNAVAILABLE/window_not_on_screen. Không desktop input, không đóng/reload, đang hỏi user restore và để yên máy. Không suy sync đã xong từ AX tree còn đọc được.
+
+Orca team/queue đã đọc trực tiếp: game-design abdcapmgtptm06rzkdgyhkxp idle/not_running, pi/gemini-4-argon theo metadata, đúng một tin user pilot checklist ở position0/consumingfalse/queue_pausedfalse. Chưa terminal output/provider-effective receipt; MODEL_EVALUATION ghi pending, không đánh giá tiết kiệm/quality/rollback. Không dispatch hoặc thay queue. Các worker còn lại không có việc chạy/queue0 theo snapshot này; không coi metadata model cũ là effective route mới. Tiếp tục đúng draft UI04 sau restore: bảo toàn .fig/sync, rồi sửa và native export; không game/thesis/năm màn khác. Wordv0.3 giữ nguyên.
+
 ## UI04 Figma — đã dựng bốn frame, chưa export/đồng bộ được xác minh
 
 10/11/2026, nền Git 929ad3a. Chỉ làm UI04, không sửa game/thesis hoặc chạy lại AVD/gate. User đã khôi phục Figma và nhiều lần cho khoảng không thao tác; mỗi lần USER_INPUT_ACTIVE đều dừng input, hỏi lại và chỉ tiếp sau trả lời. Cửa sổ live PID18436/HWND657632 đã đọc được; phải lấy state mới khi nối tiếp, không coi PID là cố định.
@@ -85,10 +91,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T08:02:21.984Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `929ad3aeda2d8c0cbd31e5e13c770d9710f37d9b`.
-- Local tracking origin/main: `929ad3aeda2d8c0cbd31e5e13c770d9710f37d9b` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 7 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T08:31:44.676Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `daadc5e36b5baef2cfd4081fe933f6ea8b7805d1`.
+- Local tracking origin/main: `daadc5e36b5baef2cfd4081fe933f6ea8b7805d1` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

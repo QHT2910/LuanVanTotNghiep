@@ -11,6 +11,14 @@ Ngày 10/11/2026. Nguồn chỉnh sửa trong draft [Bóng rổ đối kháng 3D
 
 Đây là các frame trạng thái riêng, chưa phải component set/prototype tương tác. Phần sân 3D được ghi rõ là minh họa thiết kế. Điểm, đồng hồ và kết nối là dữ liệu thiết kế mẫu, không phải kết quả game hoặc mạng đã chạy. Chưa được Cindy/sinh viên duyệt bố cục; cần tiếp tục tách, căn chỉnh nhóm nút và rà vùng chạm/độ đọc.
 
+## Review Cindy — chưa tích hợp vào canvas
+
+UI04 chưa nghiệm thu. Ưu tiên bảo toàn nguồn trước khi sửa thêm. Sau đó tách ba nút Nhảy, Dash và ACTION thành các nhóm/component riêng với hình nền, nhãn và vùng chạm rõ; hiện tại chúng còn là một lớp chữ trên mảng chung. Tách tên/điểm của từng người, đồng hồ và trạng thái kết nối thành các nhóm HUD riêng, không chỉnh cả dòng bằng khoảng trắng. Đưa hướng dẫn joystick về gần joystick hoặc thành chú giải onboarding, giữ giữa sân thoáng.
+
+Possession và cooldown là hai trục độc lập. Bản hồi chiêu hiện đồng thời hiển thị Block chỉ là tổ hợp đang vẽ, không phải quy tắc cooldown đổi ACTION sang Block. Bản sửa cần thể hiện Ném/Block theo possession và trạng thái Dash sẵn sàng/đang hồi riêng. Thông báo “Đang kết nối lại” hiện có chưa được coi là chính sách tự động reconnect đã chốt; cần đổi sang thông báo trung tính “Kết nối bị gián đoạn” trong lần sửa canvas, chưa hứa tự kết nối hay tự phát lại lệnh.
+
+Lượt kiểm tiếp: Computer Use hoạt động, nhưng cửa sổ draft đang minimized; đọc canvas trả CUA_UNAVAILABLE/window_not_on_screen. Chưa gửi input hoặc thay đổi Figma trong lượt review này; đang chờ chủ máy đưa cửa sổ hiện ra. Không đóng/reload để thử sửa sync.
+
 ## Bảo toàn và phần chưa xong
 
 Figma vẫn hiện “Some changes won't be synced until Figma is able to reconnect.” Có nguồn đang chỉnh sửa được trong cửa sổ hiện hành, nhưng chưa chứng minh toàn bộ thay đổi đã được lưu lên cloud. Không đóng/reload app trước khi kiểm tra đồng bộ hoặc lưu được bản local.
