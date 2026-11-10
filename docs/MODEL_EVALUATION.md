@@ -1,5 +1,11 @@
 # Theo dõi thử cấu hình worker
 
+## Task QA nguồn v0.8 — terminal và Lead accept
+
+Orca Worker tester bkm37d3uiwhgp757im7y9hov/session2e4ee883-bf67-44e2-bcd7-5f0463da63c5. Host sau terminal: Codex/OpenAI/gpt-6.1-sol medium, generation0/pendingnull, sourcepersisted/completed; start10/11/2026 16:58:24UTC, lastactivity17:00:10UTC, khoảng1phút46giâyhost. KhôngLuna/Argonrunclaim; usage/costchưacó, khôngbenchmark/tiếtkiệm.
+
+Task đọc Ch3/4/Ch2/claimmap/evidence và chạy checker nguồn readonly; PASS khôngP1/P2, không Word/style/pagination/export. Leadreviewaccept/vòngsửa0, tựchạy checker nguồnPASS; qa/thesis-v08-source.md là artifactbàngiaoCindyngaytrướcbướcxuất. Không gamegate/GUI/route/queue mutation. Task đã đạt phạm vi source, chưa nghiệmthu v0.8Word/PDF.
+
 ## Task thesis sau M3b — đã có kết quả và Lead review
 
 Orca Worker thesis i5ekkscj1rnt90hdtb8zk3n2/session d9e7034f-a590-430c-b57d-ed1fe49955f6. Host get_session_runtime sau terminal: completed, sourcepersisted, Codex/OpenAI/gpt-6.1-sol medium, generation0/pendingnull; start16:25:12UTC, lastactivity16:29:48UTC ngày10/11/2026. Task:6patchCh3/toànvănCh4/ràgapsCh2, chỉđọc source/evidence. Không phải pilot route mới. Vòng sửa0; khoảng thời gianhost4phút36, usage/cost không có.

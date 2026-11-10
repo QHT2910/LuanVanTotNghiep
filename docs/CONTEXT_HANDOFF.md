@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## QA source v0.8 terminalPASS — bàn giao Cindy trước xuất
+
+11/11/2026AsiaSaigon, nền91d20ee. OrcaQA bkm37d3uiwhgp757im7y9hov terminalPASSsource4chương/44refs/13ca/claimmap/Ch2consistent, khôngP1P2. RuntimehostcompletedCodex/OpenAI/Sol6.1mediumgen0pendingnull, khôngLuna/Argon. Leadreviewaccept/vòngsửa0 vàchạylạicheckernguồnPASS(log.scratch/thesis-v08-lead-qa-review.txt). Đãlưureportqa/thesis-v08-source.md, cậpnhậtMODEL_EVALUATION, bàngiaoCindyreviewngaymốcQA. CHƯA Word/PDF/style/paginationv0.8, chưa taskxuấtphụthuộc. TiếpsauCindyreview: kiểmpipelinev0.8/styleuser/Afterchưachốt, xuấtdraftgiữv0.7/v0.3vàQA/inspectthật. UIvẫnthiếubackup/exportverified, khôngdùngconceptAIhìnhchínhthức. Giữgame/demos/APK/workspace, khôngđổiroute/đánhthứcqueuepaused.
+
 ## Đã tích hợp source Ch3–4 — chuẩn bị QA trước xuất v0.8
 
 Cindy đã accept proposal với5chỉnhbiêntập. Leadáp6patchCh3+chỉnhnamingthưviện/thiếtkế1v1/đãduyệtsketch/thưmụclibsrc/thamsốoffline, tạo thesis/04-kiem-thu.md có13caKT01–KT13 vớiđiềukiện/kỳvọng/kếtquả/mứcbằngchứng. CậpnhậtOUTLINE, tổnghợp1–3và1–4; Ch2/44refs khôngđổi. build-manuscript thêmflaginclude-ch4/outputv08riêng, check-thesis-v08-source đạt exactconcat/cites/13case/Ch2unchanged, diffcheckđạt. docs/THESIS_M3B_INTEGRATION.md ghi claimmap/tínhkếthừa/tests47trướcHUD/kernelnull/giớihạn. Preflightđầufailanchor4.3quárộng, chưa ghimanuscript; đãsửavàchạyđạt, khônggiảgateđầuPASS.
@@ -137,10 +141,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T16:58:11.372Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `028d6309261e84be94b9b2319b389490aa8f40ea`.
-- Local tracking origin/main: `028d6309261e84be94b9b2319b389490aa8f40ea` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 10 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T17:01:22.894Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `91d20ee3cfc42f35dfb9e4b807f693a8ef6ef862`.
+- Local tracking origin/main: `91d20ee3cfc42f35dfb9e4b807f693a8ef6ef862` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
