@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## Rà spec trong lúc chờ backup V3
+
+10/11/2026, nền 6eebac4. Cindy đã báo user cách Save local copy; không hỏi lặp. Chỉ cập nhật design/ui-spec-r1.md theo review nghiệp vụ: UI02 không mã giả trước create success, join phân biệt trống/not-found/full/network; UI03 BạnReady→Hủy sẵn sàng/Chờ đối thủ, không Start thủ công; UI05 nhãn Bạn/Đối thủ, win/loss/draw, roomgone khóa Về sảnh, điểm sketch chỉ minh họa. Đây là yêu cầu thiết kế, chưa triển khai game/Figma. UI04V3 vẫn đã duyệt nhưng chờ bảo toàn nguồn; các màn khác chỉ conceptboard chờ review. Lượt này không desktop input/canvas mutation/export/dispatch worker hoặc pilot trùng. Giữ draft mở và Wordv0.3; sau xác nhận backup mới nối tiếp UI04V3.
+
 ## UI04 V3 đã duyệt — đang bảo toàn nguồn trước dựng
 
 10/11/2026, nền a58bcf5. User qua Cindy đã DUYỆT V3: chỉ HUD và background trước, không nhân vật/model/placeholder nhân vật, không ba panel/footer; matte/daylight/đơn giản. Lead đã xem ảnh concept gốc. Đầu ra Figma native960×540 tách BG_Court/HUD, ba PNG composite/HUD alpha/background. Giữ bản cũ, pageV3 mới; chưa tạo pageV3. Xem design/figma/UI04-V3.md; trạng thái chờ review V3 bên dưới đã hết hiệu lực, không áp cho lệnh mới này.
@@ -103,10 +107,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T14:54:09.997Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `a58bcf5aeaf2e165ba7dcf9abe7d9eef4c4f2769`.
-- Local tracking origin/main: `a58bcf5aeaf2e165ba7dcf9abe7d9eef4c4f2769` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T14:58:31.260Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `6eebac4f12e2e0327cf79a1110dbce526069dc15`.
+- Local tracking origin/main: `6eebac4f12e2e0327cf79a1110dbce526069dc15` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

@@ -1,6 +1,16 @@
 # Đặc tả giao diện R1
 
-Cập nhật trạng thái 10/11/2026: sinh viên đã chọn và cho phép kết nối Figma. Chưa có tool/session được hỗ trợ, file editable hoặc PNG. Xem FIGMA_HANDOFF.md; thông tin lựa chọn/công cụ ngày04/11 bên dưới là lịch sử, không phải trạng thái hiện hành. Đặc tả UI01–UI06 giữ làm căn cứ dựng, chưa nhận là sản phẩm UI.
+Cập nhật trạng thái 10/11/2026: Figma đã có draft và bốn frame UI04 cũ, chưa nghiệm thu. Concept UI04 V3 đã được sinh viên duyệt: chỉ background và HUD trước, không nhân vật; chưa dựng V3 hoặc xuất ba PNG, đang chờ bảo toàn nguồn. Xem figma/UI04-V3.md và FIGMA_HANDOFF.md. Các màn khác vẫn ở mức sketch chờ review, chưa được phép dựng Figma. Thông tin công cụ ngày04/11 bên dưới là lịch sử, không phải trạng thái hiện hành.
+
+## Bổ sung nghiệp vụ cho sketch — 10/11/2026
+
+Các quy tắc dưới đây dùng để rà bản phác thảo, không xác nhận game hoặc giao diện đã triển khai:
+
+- UI02 tách chế độ Tạo phòng và Vào phòng. Trước khi tạo thành công, không hiển thị mã phòng giả; chỉ hiển thị mã do hệ thống trả về sau phản hồi thành công. Vào phòng có các trường hợp riêng: mã trống, không tìm thấy phòng, phòng đầy và lỗi mạng. Giữ mã đã nhập khi có lỗi; không coi lỗi mạng là đã vào phòng.
+- UI03: khi card Bạn đang Sẵn sàng, nút tương ứng phải là Hủy sẵn sàng. Nếu đối thủ chưa sẵn sàng, hiển thị Chờ đối thủ sẵn sàng. Không có nút Start/Bắt đầu thủ công; đếm ngược và chuyển trận theo trạng thái phòng được xác nhận.
+- UI05: đặt nhãn Bạn và Đối thủ trên phần điểm tương ứng. Có bản thắng, thua và hòa; điểm trong sketch chỉ minh họa, không phải kết quả thử nghiệm. Khi phòng không còn, Về sảnh bị vô hiệu và có lý do, vẫn cho Về menu.
+
+Checklist này chưa cho phép triển khai Figma UI01/02/03/05/06 trước khi sinh viên review concept. Chính sách reconnect chưa chốt; không thêm tự kết nối hoặc phát lại lệnh vào thiết kế như hành vi đã duyệt.
 
 
 Ngày rà soát: 04/11/2026. Phạm vi: UI01–UI06 và các trạng thái lỗi, chờ, hồi chiêu phục vụ mục 3.3. Đây là đặc tả đề xuất để dựng trong công cụ thiết kế, chưa phải giao diện đã triển khai.
@@ -58,9 +68,9 @@ Không dùng riêng màu hoặc âm thanh để truyền trạng thái. Font ph�
 |---|---|---|
 | UI01 Menu chính | Tên tạm Bóng rổ đối kháng 3D; trạng thái kết nối; Tạo phòng, Vào phòng, Cài đặt | Tạo/Vào → UI02 theo chế độ; Cài đặt → UI06. Ghép trận nhanh ẩn hoặc ghi chưa hỗ trợ trong bản đầu |
 | UI02 Tạo/vào phòng | Tiêu đề theo chế độ; xác nhận tạo hoặc ô nhập mã; thông báo cạnh form | Thành công → UI03; lỗi giữ UI02; Quay lại → UI01. Mã phòng lấy từ hệ thống, không sinh mã giả |
-| UI03 Sảnh chờ | Mã phòng; hai vị trí người chơi; Sẵn sàng/Hủy sẵn sàng; đếm ngược; Rời phòng | Đủ hai người và cùng sẵn sàng mới đếm; bắt đầu theo trạng thái phòng → UI04; người rời khi đếm → chờ; rời phòng → UI01 |
+| UI03 Sảnh chờ | Mã phòng; hai vị trí người chơi; Sẵn sàng/Hủy sẵn sàng; đếm ngược; Rời phòng; không nút Start thủ công | Bạn đã sẵn sàng → nút Hủy sẵn sàng; đối thủ chưa sẵn sàng → Chờ đối thủ sẵn sàng. Đủ hai người và cùng sẵn sàng mới đếm; bắt đầu theo trạng thái phòng → UI04; người rời khi đếm → chờ; rời phòng → UI01 |
 | UI04 Trận đấu | Cảnh 3D ở giữa; điểm/thời gian phía trên; joystick trái; ACTION/JUMP/DASH phải; thanh canh ném | Có bóng: giữ/thả ACTION để yêu cầu ném nếu hợp lệ; không bóng: Block. Mất chạm/xuống nền đưa input liên tục về trung tính. Kết thúc xác nhận → UI05 |
-| UI05 Kết quả | Tỷ số; thắng/thua/hòa; lý do kết thúc; trạng thái kết nối | Về sảnh → UI03 nếu phòng còn hợp lệ và đặt lại sẵn sàng; Về menu → UI01. Phòng không còn thì khóa Về sảnh |
+| UI05 Kết quả | Nhãn Bạn/Đối thủ trên điểm tương ứng; thắng/thua/hòa; lý do kết thúc; trạng thái kết nối; điểm sketch chỉ minh họa | Về sảnh → UI03 nếu phòng còn hợp lệ và đặt lại sẵn sàng; Về menu → UI01. Phòng không còn thì khóa Về sảnh và nêu lý do |
 | UI06 Cài đặt | Bật/tắt âm thanh; âm lượng; Quay lại | Phương án đầu: UI01 ↔ UI06. Chưa tự mở cài đặt trong trận hoặc coi cài đặt là Pause |
 
 Luồng chuẩn bị:
@@ -80,12 +90,14 @@ Các tên variant dưới đây dùng để tổ chức frame trong công cụ; 
 | UI01/connecting | Đang nối dịch vụ | “Đang kết nối”; khóa thao tác cần mạng; Cài đặt còn dùng | Kết nối thành công hoặc lỗi |
 | UI01/offline | Không nối được | “Chưa kết nối được”; Thử lại và Cài đặt | Thử lại thành công |
 | UI02/empty-invalid | Trống hoặc sai định dạng | Nhắc nhập mã/lỗi cạnh ô; không gửi mã trống | Người dùng sửa mã |
+| UI02/create-before-success | Chưa nhận phản hồi tạo thành công | Chưa có mã phòng để hiển thị; không điền mã minh họa như mã thật | Tạo thành công nhận mã hệ thống hoặc lỗi |
 | UI02/submitting | Đã gửi tạo/vào phòng | “Đang tạo phòng”/“Đang vào phòng”; chặn nhấn lặp | Thành công, lỗi hoặc hủy ý định |
 | UI02/not-found | Không có phòng | “Không tìm thấy phòng”; giữ mã | Sửa mã, thử lại hoặc về menu |
 | UI02/full | Phòng đủ người | “Phòng đã đủ người”; giữ mã | Đổi mã hoặc về menu |
 | UI02/network-error | Lỗi gửi hoặc chưa nhận phản hồi | “Chưa nhận được phản hồi”; không tự kết luận đã vào | Đối chiếu yêu cầu cũ trước khi thử lại hoặc về menu |
 | UI03/waiting-player | Phòng có một người | “Đang chờ đối thủ”; hiện mã và Rời phòng | Người thứ hai vào hoặc rời phòng |
 | UI03/waiting-ready | Đủ hai người, chưa cùng sẵn sàng | Hiện trạng thái từng người; cho đổi sẵn sàng khi được phép | Cùng sẵn sàng hoặc một người rời |
+| UI03/you-ready | Bạn sẵn sàng, đối thủ chưa sẵn sàng | Card Bạn Sẵn sàng; nút Hủy sẵn sàng; Chờ đối thủ sẵn sàng; không Start thủ công | Hủy sẵn sàng, đối thủ sẵn sàng hoặc trạng thái phòng đổi |
 | UI03/countdown | Phòng xác nhận bắt đầu đếm | Hiện đếm ngược; tránh gửi sẵn sàng lặp | Bắt đầu trận hoặc hủy đếm |
 | UI03/room-lost | Phòng đóng hoặc mất kết nối | “Không còn kết nối với phòng”; bỏ đếm cũ | Về menu; reconnect chỉ khi được thiết kế |
 | UI04/possess-charge | Có bóng và thao tác hợp lệ | ACTION là Ném; giữ hiện thanh canh | Thả, mất bóng, kết thúc hoặc mất chạm |
