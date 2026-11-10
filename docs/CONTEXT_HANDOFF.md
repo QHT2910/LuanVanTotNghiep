@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## Figma UI04 — Computer Use đã gọi được, chờ cửa sổ hiện
+
+Nền da0e3a6. Chỉ UI04Figma960x540/frame+charge/cooldown/connectionlost, không5mànkhác/game/thesis. Toolcindy_computer nay cólist_tools/call_tool; status installed/running vàcheck_permissionsPASSWindowsnot_required. launch_appFigmađãgọi; list_windows xácđịnhexistingRecents - Figma PID18436/window657632 minimized. Khôngtạofiletrùng. get_window_state khôngảnh/0AX doiconic; press_keyforegroundESCđầubịSTALE→reobserve; lầnsauUSER_INPUT_ACTIVE refusedkhônggửi. UserđãbáoFigmađãmở,cóthểthao tác; freshstatevẫnminimized; ESCđãdeliverednhưngunverifiable/cửa sổvẫnminimized,khôngreplayinput. ĐanghỏiusernhấpiconFigmađểthấyRecents/canvas/login,khôngsửashell/clipboard/CLI/debugport. Chưanhậnloginpromptnênchưagọiask_ownerfill. Chưacóảnh/fileeditable/link/exportPNG/UI04. M3b/snapshots/workspacegame-only/Wordv0.3giữ. Khôngworker/GUImodelthaythế. Bướctiếpuserrestore→freshlist/state/screenshotđúngwindow→nếuloginask_ownerfill(chờkhôngchạmvàowindow)→inspectexistingfile→thiếtkếUI04nativeFigma/lưu/exportPNG. Chỉdoccheckpointđổi,chưachốtGitlượtnày.
+
 ## 10/11 — bảo toàn xong, chờ Figma host hỗ trợ
 
 Git cơ sở6d1c120(M3b đãpush),811493dorganization/1ac51f9thesissource; statusđầulượtnàychỉWordv0.3ngoàilượt. Đãràkhôngchạylại47test/runtime. Workspace1foldergame→game/offline-practice; M3a/M3b local snapshots hashđúng/ignored, manifestchỉrõcommitM3b. UI Figmađãđượcphépkếtnối nhưnghostcomputeravailable=false/joined=false/MCPpluginabsent, ALL_TOOLSLeadkhôngcomputer/figma. Chưa login/sourceeditable/PNG. design/FIGMA_HANDOFF.md chuẩn bị6màn(UI04trước),khôngphảisảnphẩmthiếtkế. Cindyđangtìmkếtnốihỗtrợ;sẽbáo,khôngtựconfig/credential/debugport/càiapp. KhôngmởBlock/mạng/tínhnăngmớitrướcDashreview. Khôngworker/taskmới; developervàQA/thesisOrcaSol6.1/rootOLDđãterminal. Lượtnàychỉđồngbộhồsơ,tracGitlogtrướcreplayfinish-session. Wordv0.3giữ;WordPDFchưaxuấtmới. Bướctiếpnhậnkếtnốihosthợplệ→kiểmsession/login→fileFigmaeditable+PNG→reviewUI;khôngcoiủyquyềnlàkếtnốixong.
@@ -69,10 +73,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T05:39:22.238Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `6d1c120e7baabd2565badfe1871333e2d219b5c2`.
-- Local tracking origin/main: `6d1c120e7baabd2565badfe1871333e2d219b5c2` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 8 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-10T05:46:43.769Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `da0e3a6cdb1ef9b5bf3fd08a1590376b0be39faf`.
+- Local tracking origin/main: `da0e3a6cdb1ef9b5bf3fd08a1590376b0be39faf` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao
