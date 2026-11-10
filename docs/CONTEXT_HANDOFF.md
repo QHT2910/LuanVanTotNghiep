@@ -1,5 +1,9 @@
 # Checkpoint tiếp tục dự án
 
+## Chẩn đoán kết nối backup — HTTP đạt, app vẫn cảnh báo sync
+
+Lượt sau9799284, chỉ chẩn đoán theo yêu cầu mới: ComputerUse thấy Figma18052/394772minimized; AX vẫn warning sync, không login dialog/errorcode cụ thể. HEAD readonly từmáy tớiwww.figma.com vàstatus.figma.com cùng200; trangstatusofficialbáooperational. Không suyHTTP200thànhWebSocket/authPASS hoặc quy lỗiVPN/firewall. KhôngretrySave/reload/close/signout/xóacache/canvasmutation/game/worker. design/figma/BACKUP_DIAGNOSTIC.md ghi bằngchứng/giới hạn/nguồn. Figmaofficial có Check network settings từcanvasCtrl+/; đang nhờusermởdiagnosticđóvàgiữhộphiệnđểLeadđọc, khônghỏibackupđãlưuchưa. Chưa có.fig/hash/V3/PNG. Tiếpchỉsaukếtquảdiagnostic/bảotoànnguồn; Wordv0.3giữ.
+
 ## Lead tự backup Figma — xác nhận warning sync còn hiện
 
 Nền5416892, 10/11/2026. Lệnh mới giao Lead tựSaveLocalCopy, không hỏi user đã lưu chưa; localpath source/UI04-before-V3.fig không phải cloudlink. Ban đầu Figma minimized; không gửi phím mù. User đã xác nhận đưa Figma ra trước/idle, Lead live-read đúng draft AKyJ1SFfjiJH8oS8q8m4JW, đủ4framecũ, không pendingSave/linkconfirm. Menu File→Save local copy quaComputerUse chưa códialog/tệp; listwindowschỉdraft, source/Downloads không.fig. FreshAX lại hiện Some changes won't be synced until Figma is able to reconnect. Không xác minhbackup/hash/sync; không đổisharing/public/quyền, không đóng/reload. Không dựngV3 trướcgatebackup, không game/thesis/model/Orcaqueue. Tool foreground tự trả focus về cửa sổ trước có thể ảnh hưởng chuỗi menu nhưng chưa xác minh là nguyên nhân save; UI warning sync là quan sát trực tiếp. Cần khôi phục kết nối draft rồi Lead thực hiệnbackup xác minhfile/nonempty/hash, tiếpBG_Court/HUD và3PNG. Không hỏi backup lặp. GiữUI04V3khôngnhânvật, demo/Wordv0.3/workspacegame-only. Cácmànkhácđãđượcuserbáoduyệtsketch nhưngưu tiênxongUI04+reviewtrước, khôngGUItranhnhau.
@@ -117,9 +121,9 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T15:31:21.491Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `541689291ef5bd49b61cd4fd51af47fe7e002de8`.
-- Local tracking origin/main: `541689291ef5bd49b61cd4fd51af47fe7e002de8` (không tự fetch hoặc suy ra remote live).
+Ghi UTC: 2026-11-10T15:37:30.444Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `97992846f72418cf9feacf47d9708daad9071b49`.
+- Local tracking origin/main: `97992846f72418cf9feacf47d9708daad9071b49` (không tự fetch hoặc suy ra remote live).
 - Git status lúc ghi: có 3 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
