@@ -1,3 +1,10 @@
+# Trạng thái hiện hành — chờ kết nối Figma chính thức
+
+10/11/2026: M3b đã commit/push6d1c120; organization811493d, source luận văn1ac51f9. 47tests/analyze/build/install/audit7/runtimeAVD và QA đã đạt theo MILESTONE_3B_PROGRESS, không chạy lại. Workspace chỉ game/offline-practice; snapshot M3a/M3b hash khớp, binary ignored, M1/M2 binary missing/rebuildable. Wordv0.3 ngoài lượt giữ nguyên.
+
+Sinh viên đã cho phép kết nối Figma. Host live: Computer Use available=false/joined=false, không MCP/plugin Figma; không suy có quyền là đã kết nối. Chưa xác minh login/fileeditable/PNG, chưa UI01–06 chính thức. Bảng chuẩn bị design/FIGMA_HANDOFF.md, không thay nguồn Figma bằng SVG/ảnh demo. Cindy đang tìm kết nối hỗ trợ; chờ cập nhật, không cấu hình thủ công/credential/debugport.
+
+Không thêm Block/mạng/model/provider/worker hoặc thao tác AVD. Source luận văn44refs đã sửa, Word/PDF giữ nguyên chờ UI. Các phần sau là lịch sử trước chốt Git, không replay.
 # M3b — sạchruntimeđạt,QAđạt
 
 47tests/analyze/build/install/audit7PASS,7Dash vàscore3once. Workspacechỉgame/offline-practice theođínhchính; hồsơreleasesngoàicâyapp. Figma chưaComputerUse/session/source/PNG; stylethesis/source44đãpush1ac51f9,khôngxuấtWord. ChưaGitM3b,Wordv0.3giữ. Xem MILESTONE_3B_PROGRESS. Bêndướilịchsử.

@@ -1,5 +1,8 @@
 # Đặc tả giao diện R1
 
+Cập nhật trạng thái 10/11/2026: sinh viên đã chọn và cho phép kết nối Figma. Chưa có tool/session được hỗ trợ, file editable hoặc PNG. Xem FIGMA_HANDOFF.md; thông tin lựa chọn/công cụ ngày04/11 bên dưới là lịch sử, không phải trạng thái hiện hành. Đặc tả UI01–UI06 giữ làm căn cứ dựng, chưa nhận là sản phẩm UI.
+
+
 Ngày rà soát: 04/11/2026. Phạm vi: UI01–UI06 và các trạng thái lỗi, chờ, hồi chiêu phục vụ mục 3.3. Đây là đặc tả đề xuất để dựng trong công cụ thiết kế, chưa phải giao diện đã triển khai.
 
 ## 1. Căn cứ và trạng thái yêu cầu

@@ -1,5 +1,8 @@
 # Kế hoạch tiếp tục — 10/11/2026
 
+Trạng thái chốt: organization811493d, thesis source1ac51f9, DashM3b6d1c120 đã push. Snapshot/workspacegame-only/refactor/source review/DashQA hoàn tất trong phạm vi bằng chứng đã ghi. Việc đang chờ là UI Figma chính thức: đã cho phép kết nối nhưng chưa tool/session, chưa source/PNG. Không làm Block/mạng/tính năng mới trước review Dash. Các mục dưới ghi thứ tự kế hoạch và cách kiểm, không yêu cầu chạy lại mốc đã đạt.
+
+
 Nền ab9bf92: M1 offline, M2 joystick, M3a nhảy đã commit/push và QA theo phạm vi một AVD. Không chạy lại gate cũ khi không đổi source. Giữ Wordv0.3 ngoài lượt.
 
 1. Bảo toàn demo: manifest commit/source/evidence/ABI/hash; copy APK M3a local trước build mới. M1/M2 APK đã bị ghi đè, chỉ source/evidence và hướng dựng lại được bảo toàn.
