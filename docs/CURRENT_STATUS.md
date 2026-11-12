@@ -1,3 +1,11 @@
+## UI offline task1 QA PASS — bàn giao Cindy, 12/11/2026
+
+Orca QA bkm37d3uiwhgp757im7y9hov đã terminalPASSkhôngP1/P2; LeadreviewACCEPT. qa/ui-offline-1.md: tựhash10source/localAPK/snapshot vàview6PNG, gate49tests/build/runtimekếthừaLead. KhôngHUDfigmaaccept. Chốt mốcMenu/settings/routesriêng trướcCindyreview; tasktiếpHUDsaukhiCindyreviewmốc. game/evidence-ui-offline-1 + docs/UI_OFFLINE_1_REVIEW.md. EmulatorexistingPixel_9ađangMenu, VSCodegameonlymenu_pages.dart. APK2599f692…afa9a8snapshotlocalignored; M3bgiữ. Còn pending-initrace/pause-resumeroute/exitDashruntime/audio/backend/realphone. Khôngthesis/gamefeatures/modeldispatchmới. BaWordv03/v09/v010modifiedtừngoàingoàistage. Cleanupnestedfolderrefusedđểnguyênkhôngbypass. KhôngreplaygatesđãPASS.
+
+## Game UI offline task1 — chờ QA, 12/11/2026
+
+Dừng thesis theo user. Đã tích hợp Menu/Settings/Practice->Menu từ proposal Orca developer o7v9oxz0vq8wm7n5527dnta1 chỉđọc; Leadaccept kiếntrúc vàtựghi currentroot. AnalyzePASS49testsPASS(47cũnguyên), buildx64/audit10source/installPASS. MộtPixel_9a emulator-5554 mở; coldlaunch/appmenu thật,settingsback,charge+Menu2pointercancel/noShot,reentry0/round1,AndroidBackMenuPASS; ảnh+checks game/evidence-ui-offline-1. APKlocal/installed/snapshot2599f692…afa9a8; M3b5ea9514a…d0f44giữpre-ui snapshot. VSCodegameonlymenu_pages.dartvisible. Report docs/UI_OFFLINE_1_REVIEW.md. ChưaHUD Figma/gameplay runtime sauHUD/pendinginitrace/audio/backend/realphone. Chưacommit chờQA/Cindy; tasktiếpHUDsauQA. Wordv03/v09/v010modifiedtừngoàigiữnguyên, khôngstage. Workerrootcũreadonly; khônggửiArgonpausedpilot. Cleanupemptyfoldernestedbịauto-reviewrefusedđểnguyênkhôngbypass.
+
 ## Sửa trực tiếp v0.10 normal/caption — 12/11/2026
 
 Đã backup DOCX/PDF hiện tại tại thesis/archive/v010-before-normal-style-2026-11-12 trước sửa. Sửa cùngv0.10, khôngv11: body/ôbảng normalTNR13 khôngcode/shading, exactcase; captiondưới/giữa/tên+refs; bảngsentencecase. Source4chương/combined/rules/pipeline đồngbộ. XML1877normalruns32captions38PNG3OMMLPASS. PDF107trang inspectđủok; zerooverflow; chapterpages1/6/61/97. Leadviewpages3/31/58/59vàđầubốnchương. Report docs/V010_NORMAL_STYLE_REVIEW.md. Khôngworker/game/UI/modelchange; giữv03/v09ngoàistage. TiếpCindyreview bảncùngpath, khôngreplaybackup/applyscript.

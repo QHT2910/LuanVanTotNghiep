@@ -61,3 +61,9 @@ Khi có báo cáo: đối chiếu model/provider/engine thực từ cùng kênh 
 
 ## 12/11 — xuất bản UI v0.9
 Lead trực tiếp bảo toàn/xuất bộ người dùng chọn và kiểm bản xuất; không dispatch worker/model pilot mới. Không có bằng chứng Luna/Argon/Terra chạy trong mốc này; không kết luận tiết kiệm chi phí. Review Lead ACCEPT DRAFT để Cindy review; xem PUBLICATION_v0.9_REVIEW.
+
+## Game UI task1 developer — 12/11
+Orca developer o7v9oxz0vq8wm7n5527dnta1 proposal readonly, host metadata Codex/gpt-6.1-sol medium; khôngđổi route hoặc nhận Terra/Argon. Leadreview ACCEPT kiếntrúc rồi tíchhợpvariant nhỏ; 2test mới, nativepainterđơngiản, chưaHUD. Gate49tests/analyze/build/audit/runtime navigation đạt do Lead, khônggán workerđãchạy. Cost/usagekhôngcó. Report UI_OFFLINE_1_REVIEW, chờQA.
+
+## UI offline task1 QA — Lead review ACCEPT
+Orca tester bkm37d3uiwhgp757im7y9hov hiện có, actualsend_to_lead readonly; khôngđổi model/provider/khôngnhậnLuna. Source/diff/hash6PNGđọc mới;49tests/build/runtimekếthừaLead. VerdictPASSkhôngP1/P2, LeadACCEPTvòngsửa0; qa/ui-offline-1.md. Cost/usage/runtimeproviderreceiptkhôngcó, khôngkếtluậntiếtkiệm. BàngiaoCindytrướcHUDtask2.

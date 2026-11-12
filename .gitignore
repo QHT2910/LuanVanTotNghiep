@@ -25,3 +25,6 @@ PROJECT_BRIEF.md
 # Local Figma progress captures include application chrome/account avatar.
 design/figma/progress/
 design/figma/source/*.fig
+
+# Exploratory emulator launcher capture; not application evidence.
+game/evidence-ui-offline-1/menu.png

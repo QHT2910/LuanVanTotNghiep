@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'src/presentation/practice_page.dart';
+import 'src/presentation/offline_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -8,5 +10,5 @@ Future<void> main() async {
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
   ]);
-  runApp(const MaterialApp(home: PracticePage()));
+  runApp(OfflineApp(practiceBuilder: (_) => const PracticePage()));
 }

@@ -26,3 +26,6 @@ Probe/tutorial giữ nguyên: game/probe-r1, game/tutorial-r2, game/tutorial-r3 
 ## M3b snapshot local
 
 Source/evidence M3b đã QA đạt và commit/push 6d1c120; có thể đối chiếu bằng `git log --all --grep="Hoàn thành Dash M3b" --format=%H -1` (lệnh đọc, không tạo worktree). Commit được xác nhận từ Git sau khi chốt. APK x86_64 đã copy/hashverify demos/releases/m3b/offline-practice-m3b-x64.apk, SHA2565ea9514aaf16d060494e1f46b668c2ec4864c1f7c4e774071ba7f8172c3d0f44. Binary bịignore;  M3asnapshotgiữnguyên. Workspacehiệnhànhchỉapp, releasesngoàicâyFlutter.
+
+## UI offline task1 — snapshot đã QA
+APK local demos/releases/ui-offline-1/offline-practice-ui1-x64.apk x86_64 SHA2562599f6928e7c4b2f81d761de04cbcff818a222886b3e8637a3faff5721afa9a8; source mốc UI offline task1 sau1ad37e9 đã QA PASS; tra commit bằng git log --grep="Menu offline". Evidence game/evidence-ui-offline-1; report docs/UI_OFFLINE_1_REVIEW.md. Prebuild M3b copy demos/releases/pre-ui-offline-1/app-debug.apk hash5ea9514a…d0f44 đã verify; binaries ignored. Không nhận HUD Figma/gameplay gate đã xong.

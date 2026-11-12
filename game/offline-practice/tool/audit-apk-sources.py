@@ -14,6 +14,9 @@ SOURCES = [
     "lib/src/input/jump_button.dart",
     "lib/src/input/dash_button.dart",
     "lib/src/presentation/practice_page.dart",
+    "lib/src/presentation/offline_app.dart",
+    "lib/src/presentation/menu_pages.dart",
+    "lib/src/presentation/practice_navigation.dart",
 ]
 OLD = [
     "lib/config.dart", "lib/practice.dart",

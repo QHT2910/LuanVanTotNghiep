@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const Zip=require('../../../.local-tools/node_modules/jszip');
 const app=path.resolve(__dirname,'..'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const sources=['lib/main.dart','lib/src/simulation/config.dart','lib/src/simulation/practice.dart','lib/src/input/joystick.dart','lib/src/input/jump_button.dart','lib/src/input/dash_button.dart','lib/src/presentation/practice_page.dart'];
+const sources=['lib/main.dart','lib/src/simulation/config.dart','lib/src/simulation/practice.dart','lib/src/input/joystick.dart','lib/src/input/jump_button.dart','lib/src/input/dash_button.dart','lib/src/presentation/practice_page.dart','lib/src/presentation/offline_app.dart','lib/src/presentation/menu_pages.dart','lib/src/presentation/practice_navigation.dart'];
 (async()=>{
  if(process.argv.length>2)throw Error('No arguments supported; audits current debug APK');
  const apk=fs.readFileSync(path.join(app,'build/app/outputs/flutter-apk/app-debug.apk')),zip=await Zip.loadAsync(apk);

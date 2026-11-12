@@ -1,0 +1,42 @@
+{
+  "scope": "UI offline task1 navigation on one existing Pixel_9a AVD",
+  "analyze": "PASS",
+  "tests": 49,
+  "unchangedRegressionTests": 47,
+  "build": "PASS x86_64 debug",
+  "sourceAudit": "10 sources embedded",
+  "installedSHA256": "2599f6928e7c4b2f81d761de04cbcff818a222886b3e8637a3faff5721afa9a8",
+  "installedMatchesLocal": true,
+  "snapshot": "demos/releases/ui-offline-1/offline-practice-ui1-x64.apk",
+  "menuSettingsBack": true,
+  "menuPracticeBack": true,
+  "chargeExit": {
+    "twoPointerShellHarness": true,
+    "cancelReason": "return_menu",
+    "shotReleaseCount": 0
+  },
+  "freshEntry": {
+    "score": 0,
+    "round": 1,
+    "charge": 0
+  },
+  "androidBackToMenu": true,
+  "newTickErrorObserved": false,
+  "notProven": [
+    "HUD Figma integration",
+    "Movement/jump/Dash gameplay runtime after this patch",
+    "Exit during pending Scene preparation",
+    "Pause/resume sequences after navigation patch",
+    "Real phone or Internet",
+    "Audio playback"
+  ],
+  "images": [
+    "menu-after-charge-exit.png",
+    "menu-after-system-back.png",
+    "menu-ready.png",
+    "menu.png",
+    "practice-reentry.png",
+    "practice.png",
+    "settings.png"
+  ]
+}

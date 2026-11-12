@@ -1,3 +1,11 @@
+## UI offline task1 QA PASS — bàn giao Cindy, 12/11/2026
+
+Orca QA bkm37d3uiwhgp757im7y9hov đã terminalPASSkhôngP1/P2; LeadreviewACCEPT. qa/ui-offline-1.md: tựhash10source/localAPK/snapshot vàview6PNG, gate49tests/build/runtimekếthừaLead. KhôngHUDfigmaaccept. Chốt mốcMenu/settings/routesriêng trướcCindyreview; tasktiếpHUDsaukhiCindyreviewmốc. game/evidence-ui-offline-1 + docs/UI_OFFLINE_1_REVIEW.md. EmulatorexistingPixel_9ađangMenu, VSCodegameonlymenu_pages.dart. APK2599f692…afa9a8snapshotlocalignored; M3bgiữ. Còn pending-initrace/pause-resumeroute/exitDashruntime/audio/backend/realphone. Khôngthesis/gamefeatures/modeldispatchmới. BaWordv03/v09/v010modifiedtừngoàingoàistage. Cleanupnestedfolderrefusedđểnguyênkhôngbypass. KhôngreplaygatesđãPASS.
+
+## Game UI offline task1 — chờ QA, 12/11/2026
+
+Dừng thesis theo user. Đã tích hợp Menu/Settings/Practice->Menu từ proposal Orca developer o7v9oxz0vq8wm7n5527dnta1 chỉđọc; Leadaccept kiếntrúc vàtựghi currentroot. AnalyzePASS49testsPASS(47cũnguyên), buildx64/audit10source/installPASS. MộtPixel_9a emulator-5554 mở; coldlaunch/appmenu thật,settingsback,charge+Menu2pointercancel/noShot,reentry0/round1,AndroidBackMenuPASS; ảnh+checks game/evidence-ui-offline-1. APKlocal/installed/snapshot2599f692…afa9a8; M3b5ea9514a…d0f44giữpre-ui snapshot. VSCodegameonlymenu_pages.dartvisible. Report docs/UI_OFFLINE_1_REVIEW.md. ChưaHUD Figma/gameplay runtime sauHUD/pendinginitrace/audio/backend/realphone. Chưacommit chờQA/Cindy; tasktiếpHUDsauQA. Wordv03/v09/v010modifiedtừngoàigiữnguyên, khôngstage. Workerrootcũreadonly; khônggửiArgonpausedpilot. Cleanupemptyfoldernestedbịauto-reviewrefusedđểnguyênkhôngbypass.
+
 ## Sửa trực tiếp v0.10 normal/caption — 12/11/2026
 
 Đã backup DOCX/PDF hiện tại tại thesis/archive/v010-before-normal-style-2026-11-12 trước sửa. Sửa cùngv0.10, khôngv11: body/ôbảng normalTNR13 khôngcode/shading, exactcase; captiondưới/giữa/tên+refs; bảngsentencecase. Source4chương/combined/rules/pipeline đồngbộ. XML1877normalruns32captions38PNG3OMMLPASS. PDF107trang inspectđủok; zerooverflow; chapterpages1/6/61/97. Leadviewpages3/31/58/59vàđầubốnchương. Report docs/V010_NORMAL_STYLE_REVIEW.md. Khôngworker/game/UI/modelchange; giữv03/v09ngoàistage. TiếpCindyreview bảncùngpath, khôngreplaybackup/applyscript.
@@ -237,10 +245,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-12T02:54:49.075Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `3d811de0958b46fbc50ba286b98c38f1091ad5c1`.
-- Local tracking origin/main: `3d811de0958b46fbc50ba286b98c38f1091ad5c1` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 22 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-12T11:09:38.252Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `1ad37e90c2c3adb46669779e9b989e2e17adaab2`.
+- Local tracking origin/main: `1ad37e90c2c3adb46669779e9b989e2e17adaab2` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 36 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

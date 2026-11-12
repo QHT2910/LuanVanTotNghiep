@@ -12,6 +12,8 @@ import 'package:offline_practice/src/input/joystick.dart';
 import 'package:offline_practice/src/input/jump_button.dart';
 import 'package:offline_practice/src/input/dash_button.dart';
 
+import 'practice_navigation.dart';
+
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
 
@@ -34,6 +36,7 @@ class _PracticePageState extends State<PracticePage>
   bool resumed = true;
   bool skipFrame = false;
   int seenRound = 1;
+  bool _leaving = false;
 
   @override
   void initState() {
@@ -62,7 +65,7 @@ class _PracticePageState extends State<PracticePage>
 
   Future<void> prepare() async {
     await fs.Scene.initializeStaticResources();
-    if (!mounted) return;
+    if (!mounted || _leaving) return;
     // Keep the emulator diagnostic path simple; no temporal/MSAA history.
     final s = fs.Scene()..antiAliasingMode = fs.AntiAliasingMode.none;
     try {
@@ -259,9 +262,18 @@ class _PracticePageState extends State<PracticePage>
     game.cancelDash(reason);
   }
 
+  void _stopForMenu() {
+    if (_leaving) return;
+    _leaving = true;
+    resumed = false;
+    cancelInputs('return_menu');
+    game.setPaused(true);
+    skipFrame = true;
+  }
+
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (!mounted) return;
+    if (!mounted || _leaving) return;
     resumed = state == AppLifecycleState.resumed;
     if (!resumed) cancelInputs('background');
     game.setPaused(!resumed);
@@ -407,64 +419,67 @@ class _PracticePageState extends State<PracticePage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder<void>(
-        future: ready,
-        builder: (context, snapshot) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text('Scene error: ' + snapshot.error.toString()),
-            );
-          }
-          final s = scene;
-          if (snapshot.connectionState != ConnectionState.done || s == null) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          return Stack(
-            fit: StackFit.expand,
-            children: [
-              // Keep the view's SingleTickerProvider alive; pause our logic above.
-              fs.SceneView(s, camera: camera, onTick: tick),
-              SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ValueListenableBuilder<(String, double)>(
-                        valueListenable: hud,
-                        builder: (context, value, child) => Semantics(
-                          label: 'practice_hud',
-                          value: value.$1,
-                          excludeSemantics: true,
-                          child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(6),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(value.$1, textAlign: TextAlign.center),
-                                  SizedBox(
-                                    width: 220,
-                                    child: LinearProgressIndicator(
-                                      value: value.$2,
+    return PracticeNavigation(
+      onExit: _stopForMenu,
+      child: Scaffold(
+        body: FutureBuilder<void>(
+          future: ready,
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return Center(
+                child: Text('Scene error: ' + snapshot.error.toString()),
+              );
+            }
+            final s = scene;
+            if (snapshot.connectionState != ConnectionState.done || s == null) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                // Keep the view's SingleTickerProvider alive; pause our logic above.
+                fs.SceneView(s, camera: camera, onTick: tick),
+                SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ValueListenableBuilder<(String, double)>(
+                          valueListenable: hud,
+                          builder: (context, value, child) => Semantics(
+                            label: 'practice_hud',
+                            value: value.$1,
+                            excludeSemantics: true,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(6),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(value.$1, textAlign: TextAlign.center),
+                                    SizedBox(
+                                      width: 220,
+                                      child: LinearProgressIndicator(
+                                        value: value.$2,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      const Spacer(),
-                      controls(),
-                    ],
+                        const Spacer(),
+                        controls(),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          );
-        },
+              ],
+            );
+          },
+        ),
       ),
     );
   }
