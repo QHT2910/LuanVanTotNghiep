@@ -26,6 +26,10 @@ Phông chữ của các tiêu đề là Times New Roman. Cỡ chữ và kiểu t
 
 ## 3. Lưu ý khi áp dụng
 
+- Cập nhật 12/11/2026: tên hàm/method/class/API/package/engine và định danh kỹ thuật trong văn xuôi hoặc ô bảng dùng chữ thường về định dạng: Times New Roman 13, normal như nội dung xung quanh. Không in đậm/nghiêng/gạch dưới riêng, không monospace, nền tô/highlight/codebox hoặc dấu backtick. Giữ nguyên chính tả và hoa/thường của định danh, ví dụ SceneMesh, SceneNode, initState, _tint(), _prepare(). Không áp dụng quy tắc bỏ đậm này lên tiêu đề chương.
+- Caption hình và bảng đặt dưới đối tượng, căn giữa, chữ normal. Giữ nhãn Hình/Bảng và số, chỉ ghi tên kèm số nguồn có căn cứ, ví dụ “Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng[26].”. Không ghi “Nguồn:” hoặc diễn giải nguồn dài trong caption. Hình do tác giả tự xây dựng không có nguồn đánh số thì chỉ ghi tên, không tự gán nguồn.
+- Tên bảng/nhãn như “Lỗi thường gặp”, “Hiện tượng”, “Điều cần kiểm tra” dùng sentence case; không chuyển thành tiêu đề cấp 2 để viết hoa toàn bộ.
+
 - Cập nhật 12/11/2026 theo yêu cầu người dùng: mỗi chương bắt đầu ở một trang mới. Dùng Page Break hoặc thuộc tính pageBreakBefore trên tiêu đề chương; không dùng các dòng Enter trống. Không bắt buộc trang lẻ và không chèn trang trắng. Pipeline DOCX/PDF phải kiểm ngắt trước Chương 2, 3, 4, tránh ngắt kép.
 
 - Tiêu đề thấp nhất có cỡ chữ 13 pt; không giảm cỡ chữ tiêu đề xuống dưới mức này.

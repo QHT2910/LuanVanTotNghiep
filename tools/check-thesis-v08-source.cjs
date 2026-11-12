@@ -7,7 +7,7 @@ const numbers=[...refs.matchAll(/^\[(\d+)\]/gm)].map(m=>Number(m[1]));
 assert.deepEqual(numbers,Array.from({length:44},(_,i)=>i+1));
 for(const n of [3,4])assert.equal(read(`thesis/BAN_THAO_CHUONG_1-${n}.md`),files.slice(0,n).map(read).join('\n\n')+'\n\n'+refs);
 for(const p of files){const s=read(p),prose=s.replace(/```[\s\S]*?```/g,'');assert.equal((s.match(/^```/gm)||[]).length%2,0,p);assert(!/D:\\|C:\\|D:\/|C:\/|logpath=|PROJECT_BRIEF\.md|THESIS_M3B|NGUỒN-|\*\*/.test(prose),p);for(const m of prose.matchAll(/\[(\d+(?:\s*,\s*\d+)*)\]/g))for(const id of m[1].split(/\s*,\s*/))assert(numbers.includes(Number(id)),p+': unknown citation '+id);}
-for(const p of ['thesis/02-co-so-ly-thuyet.md','thesis/REFERENCES.md'])assert.equal(read(p),execFileSync('git',['show','HEAD:'+p],{encoding:'utf8'}),'Unplanned Ch2/reference edit');
+for(const p of ['thesis/REFERENCES.md'])assert.equal(read(p),execFileSync('git',['show','HEAD:'+p],{encoding:'utf8'}),'Unplanned Ch2/reference edit');
 const ch3=read(files[2]),ch4=read(files[3]);
 assert(!ch3.includes('Thiết kế 1v1 từng đề xuất'));
 for(const dir of ['lib/src/input','lib/src/simulation','lib/src/presentation'])assert(ch3.includes(dir));
@@ -16,4 +16,4 @@ const cases=[...ch4.matchAll(/^\| (KT\d{2}) \|/gm)].map(m=>m[1]);assert.deepEqua
 for(const id of ['4.1.','4.2.','4.3.','4.4.'])assert(ch4.includes('## '+id));
 for(const term of ['| M1 | 13 |','| M2 | 22 |','| M3a | 34 |','| M3b | 47 |','hai ca hai pointer riêng','Bộ ảnh thiết kế Figma'])assert(ch4.includes(term),term);
 const ui=[...ch3.matchAll(/!\[Figma UI — ([^\]]+)\]\(([^)]+)\)/g)];assert.equal(ui.length,11);for(const m of ui)assert(fs.existsSync(require('path').resolve('thesis',m[2])),m[2]);for(let n=9;n<=19;n++)assert.equal((ch3.match(new RegExp('Hình 3\\.'+n+'\\.','g'))||[]).length,1);
-console.log(JSON.stringify({result:'PASS',chapters:4,references:44,cases:cases.length,combinedExact:true,ch2Unchanged:true,wordOrPDFValidated:false},null,2));
+console.log(JSON.stringify({result:'PASS',chapters:4,references:44,cases:cases.length,combinedExact:true,referencesUnchanged:true,wordOrPDFValidated:false},null,2));

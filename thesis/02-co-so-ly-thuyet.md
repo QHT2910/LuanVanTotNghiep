@@ -63,7 +63,7 @@ Hình 2.1 phân biệt lớp tổ chức cảnh với lớp lệnh đồ họa v
 
 ![Các lớp kết xuất nội dung 3D trên nền tảng native](../diagrams/2-rendering-layers-v06.png)
 
-Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native. Nguồn: tác giả tổng hợp theo [7], [9], [10].
+Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native[7],[9],[10].
 
 Các mũi tên biểu diễn quan hệ giữa những lớp trách nhiệm; chúng không mô tả lịch thực thi thread hoặc độ dài từng giai đoạn. Hình giới hạn ở đường kết xuất native, không đại diện cho backend web.
 
@@ -122,7 +122,7 @@ Hình 2.2 giữ nguyên dữ liệu và chỉ đổi thứ tự thao tác để 
 
 ![Ảnh hưởng của thứ tự quay và tịnh tiến](../diagrams/2-transform-order-r3.png)
 
-Hình 2.2. Ảnh hưởng của thứ tự quay và tịnh tiến. Nguồn: tác giả xây dựng theo nguyên lý [28].
+Hình 2.2. Ảnh hưởng của thứ tự quay và tịnh tiến[28].
 
 Hai nhánh là sơ đồ thao tác, không phải đồ thị tọa độ theo tỷ lệ hoặc ảnh render Scene.
 
@@ -147,7 +147,7 @@ Chuỗi đổi hệ tọa độ của một đỉnh được tóm tắt ở Hìn
 
 ![Chuỗi biến đổi từ hệ mô hình đến tọa độ clip](../diagrams/2-mvp-spaces-v06.png)
 
-Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip. Nguồn: tác giả tổng hợp theo [28].
+Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip[28].
 
 M, V và P lần lượt nối hệ mô hình với thế giới, hệ camera và tọa độ clip. Sau đầu ra clip còn có chia cho w và ánh xạ viewport; hình không quy định miền depth cụ thể của Scene bằng quy ước OpenGL.
 
@@ -163,7 +163,7 @@ Quan hệ truyền transform giữa node cha và node con được biểu diễn
 
 ![Tích lũy biến đổi trong cây node](../diagrams/2-scenegraph-transform-r2.png)
 
-Hình 2.4. Tích lũy biến đổi trong cây node. Nguồn: tác giả tổng hợp theo [11].
+Hình 2.4. Tích lũy biến đổi trong cây node[11].
 
 Biến đổi thế giới của node con được tính từ biến đổi thế giới của cha và biến đổi cục bộ của con. Node gốc được ký hiệu bằng W_root, không mặc định bằng ma trận đơn vị. Quan hệ này giải thích vì sao đổi transform của cha có thể đổi vị trí thế giới của con dù dữ liệu cục bộ của con giữ nguyên.
 
@@ -177,7 +177,7 @@ Hình 2.5 thể hiện đường gắn và nạp thành công của Component th
 
 ![Vòng đời Component và trách nhiệm sở hữu Scene](../diagrams/2-lifecycle-ownership-v06.png)
 
-Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3. Nguồn: tác giả tổng hợp từ mã nguồn gói phiên bản 0.24.3 [35].
+Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3[35].
 
 Mã mount gọi onMount trước khi khởi động onLoad. update chỉ được gọi khi component đồng thời mounted, enabled và loaded; việc nạp hoàn tất sau unmount không tự đặt loaded trong nhánh kiểm tra này. Quyền sở hữu Scene là trách nhiệm riêng: ứng dụng dispose Scene do mình tạo; SceneView.declarative chịu trách nhiệm với Scene nội bộ khi view được dispose. Đây không phải bước tiếp nối của mọi component. Hình không bao quát mọi trường hợp lỗi hoặc remount và không khẳng định mọi tài nguyên GPU dùng chung được hủy đồng bộ khi gọi dispose.
 
@@ -357,7 +357,7 @@ Với w₀ = 0,25 và w₁ = 0,75, kết quả là 0,25q₀ + 0,75q₁ = (1,25;0
 
 ![Một đỉnh chịu ảnh hưởng của hai joint](../diagrams/2-skinning-two-joints-r3.png)
 
-Hình 2.6. Một đỉnh chịu ảnh hưởng của hai joint. Nguồn: ví dụ tác giả xây dựng theo [33].
+Hình 2.6. Một đỉnh chịu ảnh hưởng của hai joint[33].
 
 Inverse bind đưa đỉnh về hệ joint ở tư thế gốc; G đưa mỗi đóng góp về cùng world space để trộn. Đây là phép tính minh họa, chưa kiểm chứng importer hoặc hoạt ảnh runtime.
 
@@ -375,7 +375,7 @@ Hình 2.7 tách bước mô phỏng cố định khỏi trạng thái được d
 
 ![Bước mô phỏng cố định và nội suy hiển thị](../diagrams/2-fixed-render-interpolation-v06.png)
 
-Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị. Nguồn: tác giả tổng hợp theo [22].
+Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị[22].
 
 Phần thời gian chưa đủ một bước h xác định hệ số nội suy giữa hai trạng thái mô phỏng gần nhau. Trạng thái nội suy chỉ phục vụ hiển thị; ghi ngược nó vào mô phỏng làm thay đổi bài toán tính bước cố định. Cách tổ chức này không tự chứng minh tất định giữa các nền tảng.
 
@@ -478,7 +478,7 @@ Hình 2.8 minh họa việc đệm hai snapshot để tạo trạng thái hiển
 
 ![Đệm snapshot và nội suy trạng thái qua mạng](../diagrams/2-network-snapshot-timeline-v06.png)
 
-Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng. Nguồn: tác giả tổng hợp theo [26].
+Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng[26].
 
 Các mốc t_a, t_b và t_r phải được diễn giải trong cùng miền thời gian, với t_a ≤ t_r ≤ t_b. Hình không giả định mỗi input sinh đúng một snapshot hoặc client nhận gói theo nhịp đều. Khi không có hai mẫu bao quanh thời điểm cần vẽ, hệ phải áp dụng chính sách khác; hình không chứng minh độ trễ hoặc chất lượng kết nối thực tế.
 
@@ -576,9 +576,9 @@ Tạo các thư mục lib/checkpoints/a đến f; mỗi tệp dưới đây lưu
 
 Mục tiêu: hiển thị một khối hộp bằng SceneView với camera cố định. Chưa có component chuyển động, input, vật lý hoặc asset.
 
-Tiền đề: đã lưu `lesson_host.dart`, resolve dependency và cấu hình GPU khi chạy Android.
+Tiền đề: đã lưu lesson_host.dart, resolve dependency và cấu hình GPU khi chạy Android.
 
-Tệp `lib/checkpoints/a/main.dart`:
+Tệp lib/checkpoints/a/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -631,7 +631,7 @@ Mục tiêu: quan sát phép biến đổi cha–con và component cập nhật 
 
 Tiền đề: checkpoint A đã analyze đạt; khi có thiết bị, cần quan sát được A trước khi đánh giá B.
 
-Tệp `lib/checkpoints/b/main.dart`:
+Tệp lib/checkpoints/b/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -684,14 +684,14 @@ flutter run --target lib/checkpoints/b/main.dart
 
 Kết quả dự kiến: marker quay quanh pivot và chịu scale theo trục Y của cha. Actor chính không quay.
 
-`position`, `rotation` và `scale` trong Scene 0.24.3 trả bản sao. Để cập nhật vị trí phải gán lại:
+position, rotation và scale trong Scene 0.24.3 trả bản sao. Để cập nhật vị trí phải gán lại:
 
 ```dart
 final p = node.position;
 node.position = vm.Vector3(p.x + 0.1, p.y, p.z);
 ```
 
-Không dùng `node.position.x += 0.1`. Khi component không cập nhật, kiểm tra node đã nằm trong scene và component đã load/mount; không tự thêm ticker thứ hai.
+Không dùng node.position.x += 0.1. Khi component không cập nhật, kiểm tra node đã nằm trong scene và component đã load/mount; không tự thêm ticker thứ hai.
 
 Giới hạn delta 0.05 giây là quy ước minh họa, không phải timestep mạng hoặc ngưỡng nghiệm thu.
 
@@ -701,7 +701,7 @@ Mục tiêu: thay màu, độ nhám của actor, thêm nền và PointLight. Ch�
 
 Tiền đề: mốc B hoạt động; không thêm dependency mới.
 
-Tệp `lib/checkpoints/c/main.dart`:
+Tệp lib/checkpoints/c/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -753,17 +753,17 @@ flutter run --target lib/checkpoints/c/main.dart
 
 Kết quả dự kiến: actor màu cam, nền xanh xám; thay đổi vị trí lamp hoặc intensity làm thay đổi phần chiếu sáng trực tiếp. Môi trường mặc định vẫn có thể đóng góp ánh sáng.
 
-Nền dày 0.1, tâm tại `y = -0.05`, nên mặt trên nằm ở `y = 0`. Actor vẫn chưa có trọng lực.
+Nền dày 0.1, tâm tại y = -0.05, nên mặt trên nằm ở y = 0. Actor vẫn chưa có trọng lực.
 
 Nếu bề mặt quá sáng, kiểm tra intensity, metallic và exposure trước khi đổi renderer. Mốc này tắt shadow; không dùng nó để dự đoán hiệu năng cảnh có bóng đổ.
 
 ### 2.12.7. Mốc D — Input và HUD
 
-Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ `Drive` ghi vị trí actor trong mốc này.
+Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ Drive ghi vị trí actor trong mốc này.
 
 Tiền đề: giữ source A–C và host chung. Không import physics.
 
-Tệp `lib/checkpoints/d/main.dart`:
+Tệp lib/checkpoints/d/main.dart:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -847,9 +847,9 @@ flutter analyze lib/checkpoints/d/main.dart
 flutter run --target lib/checkpoints/d/main.dart
 ```
 
-Kết quả dự kiến: chọn hướng làm actor chuyển động đến biên `[-2, 2]`; nút Dừng đặt vận tốc điều khiển về 0. Nút là chế độ chọn hướng, chưa phải nhấn giữ hoặc joystick đa chạm.
+Kết quả dự kiến: chọn hướng làm actor chuyển động đến biên [-2, 2]; nút Dừng đặt vận tốc điều khiển về 0. Nút là chế độ chọn hướng, chưa phải nhấn giữ hoặc joystick đa chạm.
 
-HUD được cập nhật qua notifier; không dựng Scene mới mỗi frame. Nếu vị trí không đổi, kiểm tra direction, lifecycle component và phép gán `node.position`.
+HUD được cập nhật qua notifier; không dựng Scene mới mỗi frame. Nếu vị trí không đổi, kiểm tra direction, lifecycle component và phép gán node.position.
 
 Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của game.
 
@@ -857,9 +857,9 @@ Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của g
 
 Mục tiêu: thêm vùng giao nhau và đếm số lần actor đi vào. Actor đổi từ hộp sang cầu để hình học và collider cùng bán kính.
 
-Tiền đề: D đã được kiểm tra. Backend chỉ là `BasicSimulation`, không cần Rapier và không mô phỏng bật nảy.
+Tiền đề: D đã được kiểm tra. Backend chỉ là BasicSimulation, không cần Rapier và không mô phỏng bật nảy.
 
-Tệp `lib/checkpoints/e/main.dart`:
+Tệp lib/checkpoints/e/main.dart:
 
 ```dart
 import 'dart:async';
@@ -950,9 +950,9 @@ flutter run --target lib/checkpoints/e/main.dart
 
 Kết quả dự kiến: cầu đi xuyên hộp xanh; counter tăng khi bắt đầu vào vùng, giữ nguyên khi đứng trong vùng, tăng tiếp sau khi ra rồi vào lại.
 
-`CuboidGeometry` dùng kích thước đầy đủ; `BoxShape` dùng half extents. Hai bộ số trong code mô tả cùng thể tích.
+CuboidGeometry dùng kích thước đầy đủ; BoxShape dùng half extents. Hai bộ số trong code mô tả cùng thể tích.
 
-`BasicSimulation` chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Không gọi counter này là điểm bóng rổ. Không chọn fixed timestep hoặc solver của toàn game từ mốc này.
+BasicSimulation chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Không gọi counter này là điểm bóng rổ. Không chọn fixed timestep hoặc solver của toàn game từ mốc này.
 
 Nếu không có event, kiểm tra PhysicsWorld ở ancestor, collider và thể tích giao nhau. Actor được Drive di chuyển theo frame; pose kinematic được đưa vào bước vật lý, nên không mặc định event xảy ra đúng frame nút được nhấn.
 
@@ -962,7 +962,7 @@ Mục tiêu: thêm texture tạo từ dữ liệu trước; sau đó bật nhán
 
 Tiền đề: A–E và host đã tồn tại. Không import helper khác; hàm nạp asset được định nghĩa ngay trong checkpoint F.
 
-Tệp `lib/checkpoints/f/main.dart`:
+Tệp lib/checkpoints/f/main.dart:
 
 ```dart
 import 'dart:typed_data';
@@ -1068,13 +1068,13 @@ flutter run --target lib/checkpoints/f/main.dart --dart-define=MODEL_ASSET=asset
 
 Nhánh TEXTURE_ASSET là bài mở rộng, chỉ chạy khi có ảnh thật đã khai báo và giấy phép phù hợp. Fox.glb đã chứa texture của model; không cần surface.png để thử Fox.
 
-Chỉ truyền `CLIP_NAME` sau khi đã đọc tên clip thực từ:
+Chỉ truyền CLIP_NAME sau khi đã đọc tên clip thực từ:
 
 ```dart
 model.parsedAnimations.map((animation) => animation.name).toList()
 ```
 
-Không giả định model có clip `Idle`. Khi không truyền tên, code chọn clip đầu tiên nếu có; model không có animation được hiển thị tĩnh. Fox có ba clip Survey, Walk và Run theo JSON thực trong GLB; chỉ phát một clip tại một thời điểm. Scale 0,01 đưa kích thước asset về cỡ cảnh ví dụ, không khẳng định đơn vị xuất của mọi model là mét. [37]
+Không giả định model có clip Idle. Khi không truyền tên, code chọn clip đầu tiên nếu có; model không có animation được hiển thị tĩnh. Fox có ba clip Survey, Walk và Run theo JSON thực trong GLB; chỉ phát một clip tại một thời điểm. Scale 0,01 đưa kích thước asset về cỡ cảnh ví dụ, không khẳng định đơn vị xuất của mọi model là mét. [37]
 
 Giới hạn 1024 là tham số minh họa giới hạn texture khi nạp, không phải ngân sách bộ nhớ đã đo. Placement model còn phụ thuộc đơn vị, gốc tọa độ và kích thước sample; không khẳng định mọi model sẽ vừa camera với vị trí mặc định.
 
@@ -1190,11 +1190,11 @@ Khi một mốc lỗi, quay lại mốc ngay trước đã đạt để khoanh p
 
 ### 2.12.13 Ví dụ khai báo tùy chọn
 
-Mục tiêu của ví dụ là biểu diễn khối hộp tương tự bài A bằng `SceneView.declarative`, `SceneNode` và `SceneMesh`. Cảnh dùng geometry, material và camera được tạo một lần trong State. Một nút đếm giúp quan sát state và identity của node khi rebuild.
+Mục tiêu của ví dụ là biểu diễn khối hộp tương tự bài A bằng SceneView.declarative, SceneNode và SceneMesh. Cảnh dùng geometry, material và camera được tạo một lần trong State. Một nút đếm giúp quan sát state và identity của node khi rebuild.
 
-Tiền đề: dùng project hiện có với `flutter_scene` 0.24.3, `scene` 0.4.1 và `vector_math` 2.4.4 theo lockfile R3. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ không cần model, texture hoặc asset ngoài.
+Tiền đề: dùng project hiện có với flutter_scene 0.24.3, scene 0.4.1 và vector_math 2.4.4 theo lockfile R3. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ không cần model, texture hoặc asset ngoài.
 
-Tệp mới: `lib/checkpoints/declarative/main.dart`.
+Tệp mới: lib/checkpoints/declarative/main.dart.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -1340,7 +1340,7 @@ class _DeclarativeLessonState extends State<DeclarativeLesson> {
 }
 ```
 
-Trong project ví dụ, chạy từ `game/tutorial-r3`:
+Trong project ví dụ, chạy từ game/tutorial-r3:
 
 ```powershell
 flutter analyze lib/checkpoints/declarative/main.dart
@@ -1364,37 +1364,37 @@ Kết quả dự kiến là một khối hộp được tô màu, có camera và
 
 | Nội dung | Bài A | Ví dụ khai báo |
 |---|---|---|
-| Scene | Ứng dụng tạo và host quản lý cleanup | `SceneView.declarative` tạo và sở hữu scene nội bộ |
-| Cấu trúc | Tạo `Node`, `Mesh`, gọi `add` | Mô tả bằng `SceneNode`, `SceneMesh`, `children` |
+| Scene | Ứng dụng tạo và host quản lý cleanup | SceneView.declarative tạo và sở hữu scene nội bộ |
+| Cấu trúc | Tạo Node, Mesh, gọi add | Mô tả bằng SceneNode, SceneMesh, children |
 | Geometry/material | Builder tạo đối tượng | State giữ đối tượng ổn định qua rebuild |
 | Node | Ứng dụng thao tác trực tiếp | Widget sở hữu node được giữ lại |
 | Controller | Không cần cho bài A | Chỉ đọc node để so sánh identity |
 
-Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. `SceneMesh` tạo một mesh node con dưới `SceneNode`; cây engine vì thế không hoàn toàn giống cấu trúc một node có mesh ở A.
+Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. SceneMesh tạo một mesh node con dưới SceneNode; cây engine vì thế không hoàn toàn giống cấu trúc một node có mesh ở A.
 
-`SceneMesh` đối chiếu geometry/material theo identity. Tạo hai đối tượng này trong mỗi lần `build()` sẽ làm mất sự ổn định cần minh họa. Mã trên chỉ tạo widget mô tả và giá trị vector nhỏ khi rebuild; không tạo lại geometry, material hoặc camera.
+SceneMesh đối chiếu geometry/material theo identity. Tạo hai đối tượng này trong mỗi lần build() sẽ làm mất sự ổn định cần minh họa. Mã trên chỉ tạo widget mô tả và giá trị vector nhỏ khi rebuild; không tạo lại geometry, material hoặc camera.
 
-State là nơi duy nhất cập nhật `baseColorFactor`. Controller chỉ đọc node, không gán position hoặc thay cấu trúc cây. Không để mã khác đồng thời ghi thuộc tính mà `SceneNode` đã khai báo.
+State là nơi duy nhất cập nhật baseColorFactor. Controller chỉ đọc node, không gán position hoặc thay cấu trúc cây. Không để mã khác đồng thời ghi thuộc tính mà SceneNode đã khai báo.
 
-Khi view bị hủy, source của `SceneView` thu hồi ticker/listener và dispose scene nội bộ. Widget node chịu trách nhiệm detach node/component và bỏ liên kết controller. Ví dụ không giữ một `Scene` riêng để tự dispose và không gọi API `controller.dispose()` không có trong lớp này. Geometry/material là các payload được State giữ tham chiếu; không suy rằng việc bỏ widget bảo đảm GPU memory được trả đồng bộ ngay lập tức.
+Khi view bị hủy, source của SceneView thu hồi ticker/listener và dispose scene nội bộ. Widget node chịu trách nhiệm detach node/component và bỏ liên kết controller. Ví dụ không giữ một Scene riêng để tự dispose và không gọi API controller.dispose() không có trong lớp này. Geometry/material là các payload được State giữ tham chiếu; không suy rằng việc bỏ widget bảo đảm GPU memory được trả đồng bộ ngay lập tức.
 
 ### Loading và warm-up
 
-Future bên ngoài chờ static resources và tạo các đối tượng dùng lại. Bên trong, `warmUp: true` yêu cầu view chuẩn bị render pipelines trước khi reveal; `loadingBuilder` cung cấp giao diện chờ.
+Future bên ngoài chờ static resources và tạo các đối tượng dùng lại. Bên trong, warmUp: true yêu cầu view chuẩn bị render pipelines trước khi reveal; loadingBuilder cung cấp giao diện chờ.
 
-Trường `loading` của API là `ResourceGroup?`, không phải boolean hoặc future tùy ý. Ví dụ không có nhóm asset nên bỏ trường này. Loading, warm-up và hoàn tất I/O là các trạng thái khác nhau; không dùng spinner hoặc bật warm-up làm bằng chứng đã loại bỏ mọi stall.
+Trường loading của API là ResourceGroup?, không phải boolean hoặc future tùy ý. Ví dụ không có nhóm asset nên bỏ trường này. Loading, warm-up và hoàn tất I/O là các trạng thái khác nhau; không dùng spinner hoặc bật warm-up làm bằng chứng đã loại bỏ mọi stall.
 
-### Lỗi thường gặp
+Lỗi thường gặp
 
 | Hiện tượng | Điều cần kiểm tra |
 |---|---|
-| Không nhận constructor/member | Import `package:flutter_scene/scene.dart` và lockfile đúng 0.24.3 |
-| Không tìm thấy SceneScope | `SceneNode`/`SceneMesh` phải nằm dưới SceneView; không đặt cạnh nó trong Stack |
-| Controller trả null | Node chưa mount hoặc đã unmount; không đọc một lần trong `initState` rồi mặc định luôn có |
-| Assert transform | Không truyền đồng thời `transform` và bộ `position`/`rotation`/`scale` |
+| Không nhận constructor/member | Import package:flutter_scene/scene.dart và lockfile đúng 0.24.3 |
+| Không tìm thấy SceneScope | SceneNode/SceneMesh phải nằm dưới SceneView; không đặt cạnh nó trong Stack |
+| Controller trả null | Node chưa mount hoặc đã unmount; không đọc một lần trong initState rồi mặc định luôn có |
+| Assert transform | Không truyền đồng thời transform và bộ position/rotation/scale |
 | Node bị đổi ngoài dự kiến | Kiểm tra key, kiểu widget, vị trí cây và thao tác remount |
 | Màn hình trống/loading kéo dài | Đọc log static initialization, GPU và warm-up; analyze đạt không chứng minh runtime |
-| Màu không đổi sau reload | Sửa thân `_tint()`, không chỉ sửa initializer hoặc `_prepare()` đã chạy một lần |
+| Màu không đổi sau reload | Sửa thân _tint(), không chỉ sửa initializer hoặc _prepare() đã chạy một lần |
 
 Trạng thái: đã đối chiếu source 0.24.3, analyze và build bundle đạt; chưa quan sát runtime.
 
@@ -1404,7 +1404,7 @@ Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận di
 
 1. Chạy đúng entrypoint khai báo. Đợi cảnh xuất hiện, nhấn “Ghi nhận state” ba lần. Ghi lại màu, bộ đếm bằng 3 và trạng thái identity. Không ghi serial vào tài liệu công khai.
 
-2. Chỉ sửa thân `_tint()`:
+2. Chỉ sửa thân _tint():
 
    ```dart
    vm.Vector4 _tint() => vm.Vector4(0.1, 0.35, 0.9, 1);
@@ -1412,21 +1412,21 @@ Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận di
 
    Không sửa key, tên lớp hoặc initializer trong lần thử này.
 
-3. Thực hiện hot reload bằng nút của IDE hoặc `r` trong phiên `flutter run` tương tác. Không chạy thêm `flutter run` để thay thế thao tác reload.
+3. Thực hiện hot reload bằng nút của IDE hoặc r trong phiên flutter run tương tác. Không chạy thêm flutter run để thay thế thao tác reload.
 
 4. Quan sát màu và bộ đếm trước khi nhấn tiếp. Sau đó nhấn nút một lần nữa để so identity với node đã đánh dấu trước reload.
 
-   Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. `_ready`, geometry và material được kỳ vọng giữ nguyên vì State không được tạo lại trong lần hot reload thông thường.
+   Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. _ready, geometry và material được kỳ vọng giữ nguyên vì State không được tạo lại trong lần hot reload thông thường.
 
-5. Thực hiện hot restart bằng IDE hoặc `R` trong phiên tương tác. Kỳ vọng State được khởi tạo lại: counter về 0, identity về “Chưa đánh dấu”, geometry/material được tạo lại. Không so identity xuyên hai lần restart bằng trường tham chiếu đã bị reset.
+5. Thực hiện hot restart bằng IDE hoặc R trong phiên tương tác. Kỳ vọng State được khởi tạo lại: counter về 0, identity về “Chưa đánh dấu”, geometry/material được tạo lại. Không so identity xuyên hai lần restart bằng trường tham chiếu đã bị reset.
 
 6. Ghi kết quả thực tế từng thao tác, kể cả lỗi. Nếu Flutter yêu cầu restart hoặc reload thất bại, ghi đúng thông báo; không sửa kết quả thành hành vi kỳ vọng.
 
 | Thao tác | Nội dung quan sát |
 |---|---|
 | Rebuild do nhấn nút | Counter tăng; kiểm tra node còn cùng identity |
-| Hot reload thân `_tint()` | Kiểm tra mã màu mới và State cũ |
+| Hot reload thân _tint() | Kiểm tra mã màu mới và State cũ |
 | Hot restart | Kiểm tra khởi tạo lại State |
 | Dừng rồi chạy lại | Phiên ứng dụng mới; không gọi là hot reload |
 
-Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng reload GLB, ảnh texture, `.fmat`, shader bundle hoặc tài nguyên tiền xử lý. Source có coordinator cho asset reload trong debug, nhưng mỗi đường nạp cần bài thử riêng. Không suy hành vi bản release từ kết quả hot reload.
+Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng reload GLB, ảnh texture, .fmat, shader bundle hoặc tài nguyên tiền xử lý. Source có coordinator cho asset reload trong debug, nhưng mỗi đường nạp cần bài thử riêng. Không suy hành vi bản release từ kết quả hot reload.

@@ -15,6 +15,7 @@ const W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
  if(rows.length>10||table.textContent.length>=2400)continue;count++;
  for(let i=0;i<rows.length;i++)for(const p of all(rows[i],'p')){let pp=Array.from(p.childNodes).find(x=>x.localName==='pPr');if(!pp){pp=d.createElementNS(W,'w:pPr');p.insertBefore(pp,p.firstChild);}set(pp,'keepNext',i<rows.length-1?'1':'0');}
  }
+ if(/v0\.(?:8|9|10)\.docx$/.test(file))require('./normal-publication.cjs')(d);
  z.file('word/document.xml',new XMLSerializer().serializeToString(d));const c=parse(await z.file('docProps/core.xml').async('string'));
  for(const n of Array.from(c.getElementsByTagName('*')))if(['creator','lastModifiedBy'].includes(n.localName))n.textContent='Cindy';
  z.file('docProps/core.xml',new XMLSerializer().serializeToString(c));fs.writeFileSync(file,await z.generateAsync({type:'nodebuffer',compression:'DEFLATE'}));console.log('PASS short-table groups '+count+'; neutral document metadata');

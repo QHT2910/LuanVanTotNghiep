@@ -6,7 +6,7 @@
 
 Game 3D trên mobile cần phối hợp cảnh, kết xuất, nhập liệu, chuyển động, luật và tài nguyên. Khi chơi qua mạng, các thiết bị phải thống nhất diễn biến dù thông điệp đến không đồng thời. Vì vậy, nghiên cứu engine cần xem xét từng thành phần lẫn cách tích hợp trong ứng dụng.
 
-Flutter Scene, được phân phối qua gói `flutter_scene`, là một engine 3D dành cho Flutter. Tài liệu của dự án giới thiệu việc tổ chức đồ thị cảnh, mô hình, vật liệu, ánh sáng, camera và hoạt ảnh trong môi trường Flutter, dựa trên Flutter GPU và Impeller ở các nền tảng native [1], [2]. Hướng tiếp cận này cho phép nghiên cứu sự kết hợp giữa giao diện Flutter và nội dung 3D trong cùng một ứng dụng Dart. Tuy nhiên, việc một thành phần được giới thiệu trong tài liệu không đồng nghĩa toàn bộ game dự kiến sẽ hoạt động phù hợp trên thiết bị và cấu hình mạng của đề tài.
+Flutter Scene, được phân phối qua gói flutter_scene, là một engine 3D dành cho Flutter. Tài liệu của dự án giới thiệu việc tổ chức đồ thị cảnh, mô hình, vật liệu, ánh sáng, camera và hoạt ảnh trong môi trường Flutter, dựa trên Flutter GPU và Impeller ở các nền tảng native [1], [2]. Hướng tiếp cận này cho phép nghiên cứu sự kết hợp giữa giao diện Flutter và nội dung 3D trong cùng một ứng dụng Dart. Tuy nhiên, việc một thành phần được giới thiệu trong tài liệu không đồng nghĩa toàn bộ game dự kiến sẽ hoạt động phù hợp trên thiết bị và cấu hình mạng của đề tài.
 
 Đề tài lựa chọn game bóng rổ đối kháng 3D làm tình huống ứng dụng để nghiên cứu Flutter Scene. Không gian sân, nhân vật, quả bóng và rổ giúp minh họa rõ vai trò của hình học, phép biến đổi, camera và chuyển động. Các hành động di chuyển, giữ bóng, ném và tranh bóng tạo điều kiện khảo sát mối liên hệ giữa trạng thái logic với hình ảnh hiển thị. Khi hai người chơi tham gia từ hai thiết bị, bài toán còn mở rộng sang trao đổi thao tác, đồng bộ bóng, cập nhật điểm và kết thúc trận nhất quán.
 
@@ -39,7 +39,6 @@ Phản hồi trên máy khách cần được đối chiếu với trạng thái
 
 Điều kiện thử nghiệm hiện còn giới hạn: hiện có một Redmi Note 11, chưa có Android thứ hai hoặc kết quả chạy game. Client trên máy tính/giả lập hỗ trợ phát triển nhưng không thay bằng chứng thử hai điện thoại. Cần bố trí việc bổ sung thiết bị phù hợp tiến độ.
 
-Bảng 1-1. Thách thức và hướng xử lý dự kiến
 
 | Nhóm | Hướng xử lý | Bằng chứng cần bổ sung |
 |---|---|---|
@@ -49,6 +48,8 @@ Bảng 1-1. Thách thức và hướng xử lý dự kiến
 | Đồng bộ mạng | Xác định quyền phân xử và dữ liệu trao đổi | Thiết kế thông điệp, log và trạng thái hai phía |
 | Thiết bị di động | Giảm độ phức tạp cảnh theo kết quả đo | Thiết bị/OS, chế độ build, dữ liệu hiệu năng |
 | Phạm vi và tiến độ | Hoàn thiện bản thảo nghiên cứu, cập nhật theo sản phẩm | Bản thảo có nguồn, quyết định thiết kế, bằng chứng thực tế |
+
+Bảng 1-1. Thách thức và hướng xử lý dự kiến
 
 ## 1.3. Nội dung, phạm vi thực hiện
 
@@ -72,7 +73,6 @@ Demo sử dụng tên tạm Bóng rổ đối kháng 3D, gồm hai người trê
 
 Kết quả nghiên cứu được đánh giá bằng mức độ giải thích và khả năng truy vết, còn kết quả sản phẩm được đánh giá bằng hành vi quan sát được và dữ liệu kiểm tra. Việc mô tả một cơ chế trong thiết kế không thay thế bằng chứng cơ chế đó đã được triển khai. Tương tự, thông tin hỗ trợ nền tảng trong tài liệu không chứng minh hiệu năng trên Redmi Note 11.
 
-Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến
 
 | Kết quả | Tiêu chí đối chiếu | Cách đánh giá |
 |---|---|---|
@@ -84,6 +84,8 @@ Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến
 | Kết nối Internet | Kiểm chứng từ hai mạng khác nhau khi điều kiện triển khai cho phép | Ghi mô hình mạng, môi trường và cách tái hiện |
 | Luật và tình huống biên | Không tính điểm lặp; xử lý hành động sai, hết giờ và mất kết nối theo đặc tả | Ca thử logic và tích hợp |
 | Hiệu năng, ổn định | Chỉ kết luận theo thiết bị, chế độ build và ngưỡng đã thống nhất | Thu dữ liệu đo gốc và báo cáo giới hạn |
+
+Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến
 
 Các giá trị như FPS mục tiêu, độ trễ chấp nhận, số trận lặp và thời lượng đo sẽ được chốt sau khi xác định môi trường và phạm vi sản phẩm. Những con số trong bản nháp cũ chỉ là đầu vào tham khảo, không được đưa thành kết quả đạt. Nếu chưa có đủ thiết bị hoặc chưa hoàn thành một phép thử, báo cáo phải ghi rõ phần chưa kiểm chứng.
 
@@ -153,7 +155,7 @@ Hình 2.1 phân biệt lớp tổ chức cảnh với lớp lệnh đồ họa v
 
 ![Các lớp kết xuất nội dung 3D trên nền tảng native](../diagrams/2-rendering-layers-v06.png)
 
-Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native. Nguồn: tác giả tổng hợp theo [7], [9], [10].
+Hình 2.1. Các lớp kết xuất nội dung 3D trên nền tảng native[7],[9],[10].
 
 Các mũi tên biểu diễn quan hệ giữa những lớp trách nhiệm; chúng không mô tả lịch thực thi thread hoặc độ dài từng giai đoạn. Hình giới hạn ở đường kết xuất native, không đại diện cho backend web.
 
@@ -212,7 +214,7 @@ Hình 2.2 giữ nguyên dữ liệu và chỉ đổi thứ tự thao tác để 
 
 ![Ảnh hưởng của thứ tự quay và tịnh tiến](../diagrams/2-transform-order-r3.png)
 
-Hình 2.2. Ảnh hưởng của thứ tự quay và tịnh tiến. Nguồn: tác giả xây dựng theo nguyên lý [28].
+Hình 2.2. Ảnh hưởng của thứ tự quay và tịnh tiến[28].
 
 Hai nhánh là sơ đồ thao tác, không phải đồ thị tọa độ theo tỷ lệ hoặc ảnh render Scene.
 
@@ -237,7 +239,7 @@ Chuỗi đổi hệ tọa độ của một đỉnh được tóm tắt ở Hìn
 
 ![Chuỗi biến đổi từ hệ mô hình đến tọa độ clip](../diagrams/2-mvp-spaces-v06.png)
 
-Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip. Nguồn: tác giả tổng hợp theo [28].
+Hình 2.3. Chuỗi biến đổi từ hệ mô hình đến tọa độ clip[28].
 
 M, V và P lần lượt nối hệ mô hình với thế giới, hệ camera và tọa độ clip. Sau đầu ra clip còn có chia cho w và ánh xạ viewport; hình không quy định miền depth cụ thể của Scene bằng quy ước OpenGL.
 
@@ -253,7 +255,7 @@ Quan hệ truyền transform giữa node cha và node con được biểu diễn
 
 ![Tích lũy biến đổi trong cây node](../diagrams/2-scenegraph-transform-r2.png)
 
-Hình 2.4. Tích lũy biến đổi trong cây node. Nguồn: tác giả tổng hợp theo [11].
+Hình 2.4. Tích lũy biến đổi trong cây node[11].
 
 Biến đổi thế giới của node con được tính từ biến đổi thế giới của cha và biến đổi cục bộ của con. Node gốc được ký hiệu bằng W_root, không mặc định bằng ma trận đơn vị. Quan hệ này giải thích vì sao đổi transform của cha có thể đổi vị trí thế giới của con dù dữ liệu cục bộ của con giữ nguyên.
 
@@ -267,7 +269,7 @@ Hình 2.5 thể hiện đường gắn và nạp thành công của Component th
 
 ![Vòng đời Component và trách nhiệm sở hữu Scene](../diagrams/2-lifecycle-ownership-v06.png)
 
-Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3. Nguồn: tác giả tổng hợp từ mã nguồn gói phiên bản 0.24.3 [35].
+Hình 2.5. Vòng đời Component và trách nhiệm sở hữu Scene trong Scene 0.24.3[35].
 
 Mã mount gọi onMount trước khi khởi động onLoad. update chỉ được gọi khi component đồng thời mounted, enabled và loaded; việc nạp hoàn tất sau unmount không tự đặt loaded trong nhánh kiểm tra này. Quyền sở hữu Scene là trách nhiệm riêng: ứng dụng dispose Scene do mình tạo; SceneView.declarative chịu trách nhiệm với Scene nội bộ khi view được dispose. Đây không phải bước tiếp nối của mọi component. Hình không bao quát mọi trường hợp lỗi hoặc remount và không khẳng định mọi tài nguyên GPU dùng chung được hủy đồng bộ khi gọi dispose.
 
@@ -447,7 +449,7 @@ Với w₀ = 0,25 và w₁ = 0,75, kết quả là 0,25q₀ + 0,75q₁ = (1,25;0
 
 ![Một đỉnh chịu ảnh hưởng của hai joint](../diagrams/2-skinning-two-joints-r3.png)
 
-Hình 2.6. Một đỉnh chịu ảnh hưởng của hai joint. Nguồn: ví dụ tác giả xây dựng theo [33].
+Hình 2.6. Một đỉnh chịu ảnh hưởng của hai joint[33].
 
 Inverse bind đưa đỉnh về hệ joint ở tư thế gốc; G đưa mỗi đóng góp về cùng world space để trộn. Đây là phép tính minh họa, chưa kiểm chứng importer hoặc hoạt ảnh runtime.
 
@@ -465,7 +467,7 @@ Hình 2.7 tách bước mô phỏng cố định khỏi trạng thái được d
 
 ![Bước mô phỏng cố định và nội suy hiển thị](../diagrams/2-fixed-render-interpolation-v06.png)
 
-Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị. Nguồn: tác giả tổng hợp theo [22].
+Hình 2.7. Bước mô phỏng cố định và nội suy hiển thị[22].
 
 Phần thời gian chưa đủ một bước h xác định hệ số nội suy giữa hai trạng thái mô phỏng gần nhau. Trạng thái nội suy chỉ phục vụ hiển thị; ghi ngược nó vào mô phỏng làm thay đổi bài toán tính bước cố định. Cách tổ chức này không tự chứng minh tất định giữa các nền tảng.
 
@@ -568,7 +570,7 @@ Hình 2.8 minh họa việc đệm hai snapshot để tạo trạng thái hiển
 
 ![Đệm snapshot và nội suy trạng thái qua mạng](../diagrams/2-network-snapshot-timeline-v06.png)
 
-Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng. Nguồn: tác giả tổng hợp theo [26].
+Hình 2.8. Đệm snapshot và nội suy trạng thái qua mạng[26].
 
 Các mốc t_a, t_b và t_r phải được diễn giải trong cùng miền thời gian, với t_a ≤ t_r ≤ t_b. Hình không giả định mỗi input sinh đúng một snapshot hoặc client nhận gói theo nhịp đều. Khi không có hai mẫu bao quanh thời điểm cần vẽ, hệ phải áp dụng chính sách khác; hình không chứng minh độ trễ hoặc chất lượng kết nối thực tế.
 
@@ -666,9 +668,9 @@ Tạo các thư mục lib/checkpoints/a đến f; mỗi tệp dưới đây lưu
 
 Mục tiêu: hiển thị một khối hộp bằng SceneView với camera cố định. Chưa có component chuyển động, input, vật lý hoặc asset.
 
-Tiền đề: đã lưu `lesson_host.dart`, resolve dependency và cấu hình GPU khi chạy Android.
+Tiền đề: đã lưu lesson_host.dart, resolve dependency và cấu hình GPU khi chạy Android.
 
-Tệp `lib/checkpoints/a/main.dart`:
+Tệp lib/checkpoints/a/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -721,7 +723,7 @@ Mục tiêu: quan sát phép biến đổi cha–con và component cập nhật 
 
 Tiền đề: checkpoint A đã analyze đạt; khi có thiết bị, cần quan sát được A trước khi đánh giá B.
 
-Tệp `lib/checkpoints/b/main.dart`:
+Tệp lib/checkpoints/b/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -774,14 +776,14 @@ flutter run --target lib/checkpoints/b/main.dart
 
 Kết quả dự kiến: marker quay quanh pivot và chịu scale theo trục Y của cha. Actor chính không quay.
 
-`position`, `rotation` và `scale` trong Scene 0.24.3 trả bản sao. Để cập nhật vị trí phải gán lại:
+position, rotation và scale trong Scene 0.24.3 trả bản sao. Để cập nhật vị trí phải gán lại:
 
 ```dart
 final p = node.position;
 node.position = vm.Vector3(p.x + 0.1, p.y, p.z);
 ```
 
-Không dùng `node.position.x += 0.1`. Khi component không cập nhật, kiểm tra node đã nằm trong scene và component đã load/mount; không tự thêm ticker thứ hai.
+Không dùng node.position.x += 0.1. Khi component không cập nhật, kiểm tra node đã nằm trong scene và component đã load/mount; không tự thêm ticker thứ hai.
 
 Giới hạn delta 0.05 giây là quy ước minh họa, không phải timestep mạng hoặc ngưỡng nghiệm thu.
 
@@ -791,7 +793,7 @@ Mục tiêu: thay màu, độ nhám của actor, thêm nền và PointLight. Ch�
 
 Tiền đề: mốc B hoạt động; không thêm dependency mới.
 
-Tệp `lib/checkpoints/c/main.dart`:
+Tệp lib/checkpoints/c/main.dart:
 
 ```dart
 import 'package:flutter_scene/scene.dart' as fs;
@@ -843,17 +845,17 @@ flutter run --target lib/checkpoints/c/main.dart
 
 Kết quả dự kiến: actor màu cam, nền xanh xám; thay đổi vị trí lamp hoặc intensity làm thay đổi phần chiếu sáng trực tiếp. Môi trường mặc định vẫn có thể đóng góp ánh sáng.
 
-Nền dày 0.1, tâm tại `y = -0.05`, nên mặt trên nằm ở `y = 0`. Actor vẫn chưa có trọng lực.
+Nền dày 0.1, tâm tại y = -0.05, nên mặt trên nằm ở y = 0. Actor vẫn chưa có trọng lực.
 
 Nếu bề mặt quá sáng, kiểm tra intensity, metallic và exposure trước khi đổi renderer. Mốc này tắt shadow; không dùng nó để dự đoán hiệu năng cảnh có bóng đổ.
 
 ### 2.12.7. Mốc D — Input và HUD
 
-Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ `Drive` ghi vị trí actor trong mốc này.
+Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ Drive ghi vị trí actor trong mốc này.
 
 Tiền đề: giữ source A–C và host chung. Không import physics.
 
-Tệp `lib/checkpoints/d/main.dart`:
+Tệp lib/checkpoints/d/main.dart:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -937,9 +939,9 @@ flutter analyze lib/checkpoints/d/main.dart
 flutter run --target lib/checkpoints/d/main.dart
 ```
 
-Kết quả dự kiến: chọn hướng làm actor chuyển động đến biên `[-2, 2]`; nút Dừng đặt vận tốc điều khiển về 0. Nút là chế độ chọn hướng, chưa phải nhấn giữ hoặc joystick đa chạm.
+Kết quả dự kiến: chọn hướng làm actor chuyển động đến biên [-2, 2]; nút Dừng đặt vận tốc điều khiển về 0. Nút là chế độ chọn hướng, chưa phải nhấn giữ hoặc joystick đa chạm.
 
-HUD được cập nhật qua notifier; không dựng Scene mới mỗi frame. Nếu vị trí không đổi, kiểm tra direction, lifecycle component và phép gán `node.position`.
+HUD được cập nhật qua notifier; không dựng Scene mới mỗi frame. Nếu vị trí không đổi, kiểm tra direction, lifecycle component và phép gán node.position.
 
 Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của game.
 
@@ -947,9 +949,9 @@ Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của g
 
 Mục tiêu: thêm vùng giao nhau và đếm số lần actor đi vào. Actor đổi từ hộp sang cầu để hình học và collider cùng bán kính.
 
-Tiền đề: D đã được kiểm tra. Backend chỉ là `BasicSimulation`, không cần Rapier và không mô phỏng bật nảy.
+Tiền đề: D đã được kiểm tra. Backend chỉ là BasicSimulation, không cần Rapier và không mô phỏng bật nảy.
 
-Tệp `lib/checkpoints/e/main.dart`:
+Tệp lib/checkpoints/e/main.dart:
 
 ```dart
 import 'dart:async';
@@ -1040,9 +1042,9 @@ flutter run --target lib/checkpoints/e/main.dart
 
 Kết quả dự kiến: cầu đi xuyên hộp xanh; counter tăng khi bắt đầu vào vùng, giữ nguyên khi đứng trong vùng, tăng tiếp sau khi ra rồi vào lại.
 
-`CuboidGeometry` dùng kích thước đầy đủ; `BoxShape` dùng half extents. Hai bộ số trong code mô tả cùng thể tích.
+CuboidGeometry dùng kích thước đầy đủ; BoxShape dùng half extents. Hai bộ số trong code mô tả cùng thể tích.
 
-`BasicSimulation` chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Không gọi counter này là điểm bóng rổ. Không chọn fixed timestep hoặc solver của toàn game từ mốc này.
+BasicSimulation chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Không gọi counter này là điểm bóng rổ. Không chọn fixed timestep hoặc solver của toàn game từ mốc này.
 
 Nếu không có event, kiểm tra PhysicsWorld ở ancestor, collider và thể tích giao nhau. Actor được Drive di chuyển theo frame; pose kinematic được đưa vào bước vật lý, nên không mặc định event xảy ra đúng frame nút được nhấn.
 
@@ -1052,7 +1054,7 @@ Mục tiêu: thêm texture tạo từ dữ liệu trước; sau đó bật nhán
 
 Tiền đề: A–E và host đã tồn tại. Không import helper khác; hàm nạp asset được định nghĩa ngay trong checkpoint F.
 
-Tệp `lib/checkpoints/f/main.dart`:
+Tệp lib/checkpoints/f/main.dart:
 
 ```dart
 import 'dart:typed_data';
@@ -1158,13 +1160,13 @@ flutter run --target lib/checkpoints/f/main.dart --dart-define=MODEL_ASSET=asset
 
 Nhánh TEXTURE_ASSET là bài mở rộng, chỉ chạy khi có ảnh thật đã khai báo và giấy phép phù hợp. Fox.glb đã chứa texture của model; không cần surface.png để thử Fox.
 
-Chỉ truyền `CLIP_NAME` sau khi đã đọc tên clip thực từ:
+Chỉ truyền CLIP_NAME sau khi đã đọc tên clip thực từ:
 
 ```dart
 model.parsedAnimations.map((animation) => animation.name).toList()
 ```
 
-Không giả định model có clip `Idle`. Khi không truyền tên, code chọn clip đầu tiên nếu có; model không có animation được hiển thị tĩnh. Fox có ba clip Survey, Walk và Run theo JSON thực trong GLB; chỉ phát một clip tại một thời điểm. Scale 0,01 đưa kích thước asset về cỡ cảnh ví dụ, không khẳng định đơn vị xuất của mọi model là mét. [37]
+Không giả định model có clip Idle. Khi không truyền tên, code chọn clip đầu tiên nếu có; model không có animation được hiển thị tĩnh. Fox có ba clip Survey, Walk và Run theo JSON thực trong GLB; chỉ phát một clip tại một thời điểm. Scale 0,01 đưa kích thước asset về cỡ cảnh ví dụ, không khẳng định đơn vị xuất của mọi model là mét. [37]
 
 Giới hạn 1024 là tham số minh họa giới hạn texture khi nạp, không phải ngân sách bộ nhớ đã đo. Placement model còn phụ thuộc đơn vị, gốc tọa độ và kích thước sample; không khẳng định mọi model sẽ vừa camera với vị trí mặc định.
 
@@ -1280,11 +1282,11 @@ Khi một mốc lỗi, quay lại mốc ngay trước đã đạt để khoanh p
 
 ### 2.12.13 Ví dụ khai báo tùy chọn
 
-Mục tiêu của ví dụ là biểu diễn khối hộp tương tự bài A bằng `SceneView.declarative`, `SceneNode` và `SceneMesh`. Cảnh dùng geometry, material và camera được tạo một lần trong State. Một nút đếm giúp quan sát state và identity của node khi rebuild.
+Mục tiêu của ví dụ là biểu diễn khối hộp tương tự bài A bằng SceneView.declarative, SceneNode và SceneMesh. Cảnh dùng geometry, material và camera được tạo một lần trong State. Một nút đếm giúp quan sát state và identity của node khi rebuild.
 
-Tiền đề: dùng project hiện có với `flutter_scene` 0.24.3, `scene` 0.4.1 và `vector_math` 2.4.4 theo lockfile R3. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ không cần model, texture hoặc asset ngoài.
+Tiền đề: dùng project hiện có với flutter_scene 0.24.3, scene 0.4.1 và vector_math 2.4.4 theo lockfile R3. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ không cần model, texture hoặc asset ngoài.
 
-Tệp mới: `lib/checkpoints/declarative/main.dart`.
+Tệp mới: lib/checkpoints/declarative/main.dart.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -1430,7 +1432,7 @@ class _DeclarativeLessonState extends State<DeclarativeLesson> {
 }
 ```
 
-Trong project ví dụ, chạy từ `game/tutorial-r3`:
+Trong project ví dụ, chạy từ game/tutorial-r3:
 
 ```powershell
 flutter analyze lib/checkpoints/declarative/main.dart
@@ -1454,37 +1456,37 @@ Kết quả dự kiến là một khối hộp được tô màu, có camera và
 
 | Nội dung | Bài A | Ví dụ khai báo |
 |---|---|---|
-| Scene | Ứng dụng tạo và host quản lý cleanup | `SceneView.declarative` tạo và sở hữu scene nội bộ |
-| Cấu trúc | Tạo `Node`, `Mesh`, gọi `add` | Mô tả bằng `SceneNode`, `SceneMesh`, `children` |
+| Scene | Ứng dụng tạo và host quản lý cleanup | SceneView.declarative tạo và sở hữu scene nội bộ |
+| Cấu trúc | Tạo Node, Mesh, gọi add | Mô tả bằng SceneNode, SceneMesh, children |
 | Geometry/material | Builder tạo đối tượng | State giữ đối tượng ổn định qua rebuild |
 | Node | Ứng dụng thao tác trực tiếp | Widget sở hữu node được giữ lại |
 | Controller | Không cần cho bài A | Chỉ đọc node để so sánh identity |
 
-Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. `SceneMesh` tạo một mesh node con dưới `SceneNode`; cây engine vì thế không hoàn toàn giống cấu trúc một node có mesh ở A.
+Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. SceneMesh tạo một mesh node con dưới SceneNode; cây engine vì thế không hoàn toàn giống cấu trúc một node có mesh ở A.
 
-`SceneMesh` đối chiếu geometry/material theo identity. Tạo hai đối tượng này trong mỗi lần `build()` sẽ làm mất sự ổn định cần minh họa. Mã trên chỉ tạo widget mô tả và giá trị vector nhỏ khi rebuild; không tạo lại geometry, material hoặc camera.
+SceneMesh đối chiếu geometry/material theo identity. Tạo hai đối tượng này trong mỗi lần build() sẽ làm mất sự ổn định cần minh họa. Mã trên chỉ tạo widget mô tả và giá trị vector nhỏ khi rebuild; không tạo lại geometry, material hoặc camera.
 
-State là nơi duy nhất cập nhật `baseColorFactor`. Controller chỉ đọc node, không gán position hoặc thay cấu trúc cây. Không để mã khác đồng thời ghi thuộc tính mà `SceneNode` đã khai báo.
+State là nơi duy nhất cập nhật baseColorFactor. Controller chỉ đọc node, không gán position hoặc thay cấu trúc cây. Không để mã khác đồng thời ghi thuộc tính mà SceneNode đã khai báo.
 
-Khi view bị hủy, source của `SceneView` thu hồi ticker/listener và dispose scene nội bộ. Widget node chịu trách nhiệm detach node/component và bỏ liên kết controller. Ví dụ không giữ một `Scene` riêng để tự dispose và không gọi API `controller.dispose()` không có trong lớp này. Geometry/material là các payload được State giữ tham chiếu; không suy rằng việc bỏ widget bảo đảm GPU memory được trả đồng bộ ngay lập tức.
+Khi view bị hủy, source của SceneView thu hồi ticker/listener và dispose scene nội bộ. Widget node chịu trách nhiệm detach node/component và bỏ liên kết controller. Ví dụ không giữ một Scene riêng để tự dispose và không gọi API controller.dispose() không có trong lớp này. Geometry/material là các payload được State giữ tham chiếu; không suy rằng việc bỏ widget bảo đảm GPU memory được trả đồng bộ ngay lập tức.
 
 ### Loading và warm-up
 
-Future bên ngoài chờ static resources và tạo các đối tượng dùng lại. Bên trong, `warmUp: true` yêu cầu view chuẩn bị render pipelines trước khi reveal; `loadingBuilder` cung cấp giao diện chờ.
+Future bên ngoài chờ static resources và tạo các đối tượng dùng lại. Bên trong, warmUp: true yêu cầu view chuẩn bị render pipelines trước khi reveal; loadingBuilder cung cấp giao diện chờ.
 
-Trường `loading` của API là `ResourceGroup?`, không phải boolean hoặc future tùy ý. Ví dụ không có nhóm asset nên bỏ trường này. Loading, warm-up và hoàn tất I/O là các trạng thái khác nhau; không dùng spinner hoặc bật warm-up làm bằng chứng đã loại bỏ mọi stall.
+Trường loading của API là ResourceGroup?, không phải boolean hoặc future tùy ý. Ví dụ không có nhóm asset nên bỏ trường này. Loading, warm-up và hoàn tất I/O là các trạng thái khác nhau; không dùng spinner hoặc bật warm-up làm bằng chứng đã loại bỏ mọi stall.
 
-### Lỗi thường gặp
+Lỗi thường gặp
 
 | Hiện tượng | Điều cần kiểm tra |
 |---|---|
-| Không nhận constructor/member | Import `package:flutter_scene/scene.dart` và lockfile đúng 0.24.3 |
-| Không tìm thấy SceneScope | `SceneNode`/`SceneMesh` phải nằm dưới SceneView; không đặt cạnh nó trong Stack |
-| Controller trả null | Node chưa mount hoặc đã unmount; không đọc một lần trong `initState` rồi mặc định luôn có |
-| Assert transform | Không truyền đồng thời `transform` và bộ `position`/`rotation`/`scale` |
+| Không nhận constructor/member | Import package:flutter_scene/scene.dart và lockfile đúng 0.24.3 |
+| Không tìm thấy SceneScope | SceneNode/SceneMesh phải nằm dưới SceneView; không đặt cạnh nó trong Stack |
+| Controller trả null | Node chưa mount hoặc đã unmount; không đọc một lần trong initState rồi mặc định luôn có |
+| Assert transform | Không truyền đồng thời transform và bộ position/rotation/scale |
 | Node bị đổi ngoài dự kiến | Kiểm tra key, kiểu widget, vị trí cây và thao tác remount |
 | Màn hình trống/loading kéo dài | Đọc log static initialization, GPU và warm-up; analyze đạt không chứng minh runtime |
-| Màu không đổi sau reload | Sửa thân `_tint()`, không chỉ sửa initializer hoặc `_prepare()` đã chạy một lần |
+| Màu không đổi sau reload | Sửa thân _tint(), không chỉ sửa initializer hoặc _prepare() đã chạy một lần |
 
 Trạng thái: đã đối chiếu source 0.24.3, analyze và build bundle đạt; chưa quan sát runtime.
 
@@ -1494,7 +1496,7 @@ Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận di
 
 1. Chạy đúng entrypoint khai báo. Đợi cảnh xuất hiện, nhấn “Ghi nhận state” ba lần. Ghi lại màu, bộ đếm bằng 3 và trạng thái identity. Không ghi serial vào tài liệu công khai.
 
-2. Chỉ sửa thân `_tint()`:
+2. Chỉ sửa thân _tint():
 
    ```dart
    vm.Vector4 _tint() => vm.Vector4(0.1, 0.35, 0.9, 1);
@@ -1502,24 +1504,24 @@ Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận di
 
    Không sửa key, tên lớp hoặc initializer trong lần thử này.
 
-3. Thực hiện hot reload bằng nút của IDE hoặc `r` trong phiên `flutter run` tương tác. Không chạy thêm `flutter run` để thay thế thao tác reload.
+3. Thực hiện hot reload bằng nút của IDE hoặc r trong phiên flutter run tương tác. Không chạy thêm flutter run để thay thế thao tác reload.
 
 4. Quan sát màu và bộ đếm trước khi nhấn tiếp. Sau đó nhấn nút một lần nữa để so identity với node đã đánh dấu trước reload.
 
-   Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. `_ready`, geometry và material được kỳ vọng giữ nguyên vì State không được tạo lại trong lần hot reload thông thường.
+   Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. _ready, geometry và material được kỳ vọng giữ nguyên vì State không được tạo lại trong lần hot reload thông thường.
 
-5. Thực hiện hot restart bằng IDE hoặc `R` trong phiên tương tác. Kỳ vọng State được khởi tạo lại: counter về 0, identity về “Chưa đánh dấu”, geometry/material được tạo lại. Không so identity xuyên hai lần restart bằng trường tham chiếu đã bị reset.
+5. Thực hiện hot restart bằng IDE hoặc R trong phiên tương tác. Kỳ vọng State được khởi tạo lại: counter về 0, identity về “Chưa đánh dấu”, geometry/material được tạo lại. Không so identity xuyên hai lần restart bằng trường tham chiếu đã bị reset.
 
 6. Ghi kết quả thực tế từng thao tác, kể cả lỗi. Nếu Flutter yêu cầu restart hoặc reload thất bại, ghi đúng thông báo; không sửa kết quả thành hành vi kỳ vọng.
 
 | Thao tác | Nội dung quan sát |
 |---|---|
 | Rebuild do nhấn nút | Counter tăng; kiểm tra node còn cùng identity |
-| Hot reload thân `_tint()` | Kiểm tra mã màu mới và State cũ |
+| Hot reload thân _tint() | Kiểm tra mã màu mới và State cũ |
 | Hot restart | Kiểm tra khởi tạo lại State |
 | Dừng rồi chạy lại | Phiên ứng dụng mới; không gọi là hot reload |
 
-Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng reload GLB, ảnh texture, `.fmat`, shader bundle hoặc tài nguyên tiền xử lý. Source có coordinator cho asset reload trong debug, nhưng mỗi đường nạp cần bài thử riêng. Không suy hành vi bản release từ kết quả hot reload.
+Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng reload GLB, ảnh texture, .fmat, shader bundle hoặc tài nguyên tiền xử lý. Source có coordinator cho asset reload trong debug, nhưng mỗi đường nạp cần bài thử riêng. Không suy hành vi bản release từ kết quả hot reload.
 
 
 # Chương 3. Xây dựng game Bóng rổ đối kháng 3D
@@ -1612,7 +1614,7 @@ flowchart TB
   M1 ~~~ M2
 ```
 
-Hình 3.1(a). Phân rã chức năng phiên, phòng và thi đấu. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.1(a). Phân rã chức năng phiên, phòng và thi đấu.
 
 <!-- diagram: 3-1b-chuc-nang-v06.mmd -->
 ```mermaid
@@ -1636,7 +1638,7 @@ flowchart TB
   V1 ~~~ V2
 ```
 
-Hình 3.1(b). Phân rã chức năng đồng bộ, hiển thị và âm thanh. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.1(b). Phân rã chức năng đồng bộ, hiển thị và âm thanh.
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
@@ -1645,7 +1647,7 @@ Tác nhân Người chơi đại diện cho vai trò của mỗi người trong 
 <!-- diagram-svg: 3-2-usecase-uml.svg -->
 ![Thiết kế đề xuất — 3-2-usecase-uml.svg](../diagrams/3-2-usecase-uml.png)
 
-Hình 3.2. Use case tổng quát của hệ thống đề xuất. Nguồn: tác giả thiết kế theo ký pháp UML.
+Hình 3.2. Use case tổng quát của hệ thống đề xuất.
 
 Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
@@ -1683,7 +1685,7 @@ UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người ch�
 
 ### 3.2.5. Kiến trúc hệ thống và thiết kế mạng
 
-Ứng dụng offline hiện hành tách ba trách nhiệm: nhập liệu, mô phỏng và trình bày. Ba phần tương ứng với các thư mục `lib/src/input`, `lib/src/simulation` và `lib/src/presentation`. Cách tổ chức này đã có trong mã nguồn, trong khi phần máy chủ và kết nối trình bày phía sau vẫn là phương án cho game 1v1.
+Ứng dụng offline hiện hành tách ba trách nhiệm: nhập liệu, mô phỏng và trình bày. Ba phần tương ứng với các thư mục lib/src/input, lib/src/simulation và lib/src/presentation. Cách tổ chức này đã có trong mã nguồn, trong khi phần máy chủ và kết nối trình bày phía sau vẫn là phương án cho game 1v1.
 
 | Lớp hiện thực | Trách nhiệm |
 |---|---|
@@ -1693,7 +1695,7 @@ UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người ch�
 
 Mỗi lần cập nhật hợp lệ, lớp trình bày cho mô phỏng tiến trước rồi đồng bộ cảnh và HUD. Khi mất trạng thái tương tác, đầu vào được hủy và logic pause được áp dụng; ticker không được dùng như nơi lưu luật game. Việc tách lớp hỗ trợ kiểm tra logic độc lập nhưng chưa chứng minh cùng một mô phỏng đã được dùng trên máy chủ hoặc đồng bộ qua mạng.
 
-Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene chỉ nhận trạng thái để dựng cảnh; không tự phán định điểm. Đây là hướng thiết kế để đánh giá, chưa quyết định loại bỏ `flutter_scene_net` hoặc chọn dịch vụ hosting cụ thể.
+Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene chỉ nhận trạng thái để dựng cảnh; không tự phán định điểm. Đây là hướng thiết kế để đánh giá, chưa quyết định loại bỏ flutter_scene_net hoặc chọn dịch vụ hosting cụ thể.
 
 <!-- diagram: 3-3-kien-truc.mmd -->
 ```mermaid
@@ -1713,7 +1715,7 @@ flowchart TD
   C --> W[Trạng thái trận trong bộ nhớ]
 ```
 
-Hình 3.3. Kiến trúc kết nối dự kiến. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.3. Kiến trúc kết nối dự kiến.
 
 Client B trong hình biểu diễn vai trò logic; hiện chưa có điện thoại thứ hai. Phương án WebSocket/JSON được chọn làm ứng viên vì dễ theo dõi thông điệp trong giai đoạn nghiên cứu. Kết nối triển khai công khai dự kiến dùng WSS và chứng chỉ hợp lệ; chưa có endpoint hoặc dịch vụ trả phí nào được tạo.
 
@@ -1769,7 +1771,7 @@ classDiagram
   %% WorldState được khai triển trong Hình 3.4(b).
 ```
 
-Hình 3.4(a). Cấu trúc phòng và phiên kết nối. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(a). Cấu trúc phòng và phiên kết nối.
 
 WorldState trong panel (a) được khai triển tại (b). slotIndex ổn định trong phòng, là 0 hoặc 1 và không trùng; chỉ số này còn dùng phân xử nhặt bóng khi bằng khoảng cách.
 
@@ -1805,7 +1807,7 @@ classDiagram
   %% BallState được khai triển trong Hình 3.4(c).
 ```
 
-Hình 3.4(b). Trạng thái trận và hai nhân vật. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(b). Trạng thái trận và hai nhân vật.
 
 score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do khi trận kết thúc. BallState được khai triển tại panel (c); đó là cùng lớp tham chiếu trong panel (b).
 
@@ -1835,7 +1837,7 @@ classDiagram
   %% BallState là cùng lớp được tham chiếu ở Hình 3.4(b).
 ```
 
-Hình 3.4(c). Trạng thái bóng và dữ liệu cú ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(c). Trạng thái bóng và dữ liệu cú ném.
 
 Các lớp mang nhãn reference được khai triển ở panel kế tiếp. pointValue được chốt từ releasePosition tại releaseTick; vị trí trên vạch tính 2 điểm. scored ngăn cộng điểm lặp. holderId chỉ có nghĩa khi bóng được giữ và shot có thể vắng. Kiểu giá trị và đơn vị thời gian còn cần cụ thể hóa khi triển khai.
 
@@ -1859,7 +1861,7 @@ stateDiagram-v2
   Closed --> [*]
 ```
 
-Hình 3.5. Trạng thái phòng và trận. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.5. Trạng thái phòng và trận.
 
 Hình 3.6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
 
@@ -1886,7 +1888,7 @@ sequenceDiagram
   end
 ```
 
-Hình 3.6(a). Nhận input và kiểm tra tạo cú ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.6(a). Nhận input và kiểm tra tạo cú ném.
 
 <!-- diagram: 3-6b1-thoi-gian-block-v06.mmd -->
 ```mermaid
@@ -1994,7 +1996,7 @@ flowchart TB
   C --> XT
 ```
 
-Hình 3.7(a). Tiếp nhận yêu cầu ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.7(a). Tiếp nhận yêu cầu ném.
 
 <!-- diagram: 3-7b1-thoi-gian-v06.mmd -->
 ```mermaid
@@ -2126,7 +2128,7 @@ flowchart TD
   S --> M
 ```
 
-Hình 3.8. Luồng chuyển màn hình dự kiến. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.8. Luồng chuyển màn hình dự kiến.
 
 ### 3.3.2. Thiết kế giao diện
 
@@ -2136,7 +2138,7 @@ UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo p
 
 ![Figma UI — ui01.png](../design/figma/exports/user-revised-v010/thesis/ui01.png)
 
-Hình 3.9. Thiết kế màn hình Menu chính. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.9. Thiết kế màn hình Menu chính.
 
 Tập luyện là lựa chọn offline độc lập với kết nối phòng. HUD tập luyện chỉ trình bày thông tin và điều khiển của chế độ tập; không dùng đồng hồ trận hoặc điểm đối thủ minh họa như dữ liệu thật. Bố cục được tái dùng từ UI04, còn các yếu tố dành riêng cho 1v1 được bỏ khỏi biến thể này.
 
@@ -2144,37 +2146,37 @@ UI02A — Tạo phòng tập trung vào yêu cầu tạo, phản hồi đang x�
 
 ![Figma UI — ui02a.png](../design/figma/exports/user-revised-v010/thesis/ui02a.png)
 
-Hình 3.10. Thiết kế màn hình Tạo phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.10. Thiết kế màn hình Tạo phòng.
 
 UI02B — Vào phòng gồm ô mã, thông báo cạnh form, xác nhận và quay lại. Trống hoặc sai định dạng được xử lý trước khi gửi. Không tìm thấy phòng, Phòng đầy và Lỗi mạng phải phân biệt. Giữ mã đã nhập để sửa; chỉ chuyển UI03 sau xác nhận thành công.
 
 ![Figma UI — ui02b.png](../design/figma/exports/user-revised-v010/thesis/ui02b.png)
 
-Hình 3.11. Thiết kế màn hình Vào phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.11. Thiết kế màn hình Vào phòng.
 
 UI03 — Sảnh chờ có mã phòng, hai vị trí Bạn/Đối thủ, trạng thái sẵn sàng, vùng đếm ngược và Rời phòng. Khi Bạn sẵn sàng, nút đổi thành Hủy sẵn sàng; nếu đối thủ chưa sẵn sàng, hiện Chờ đối thủ sẵn sàng. Không có Start thủ công. Đếm ngược chỉ theo trạng thái phòng được xác nhận; khi điều kiện mất hiệu lực, bỏ đếm cũ và trở về chờ.
 
 ![Figma UI — ui03.png](../design/figma/exports/user-revised-v010/thesis/ui03.png)
 
-Hình 3.12. Thiết kế màn hình Sảnh chờ. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.12. Thiết kế màn hình Sảnh chờ.
 
 UI04 — Trận đấu ở Hình 3.13 gồm nền sân minh họa và HUD, chưa có nhân vật. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame này thể hiện bố cục HUD cơ bản. Các biến thể canh ném, khóa, hồi chiêu và gián đoạn kết nối chưa có đủ ảnh trong bộ hình. Trong thiết kế đầy đủ, hành động chính đổi theo quyền giữ bóng, độc lập với trạng thái hồi chiêu. Block và xử lý mạng vẫn là đề xuất.
 
 ![Figma UI — ui04.png](../design/figma/exports/user-revised-v010/thesis/ui04.png)
 
-Hình 3.13. Thiết kế màn hình Trận đấu. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.13. Thiết kế màn hình Trận đấu.
 
 UI05 — Kết quả đặt nhãn Bạn/Đối thủ trên điểm, cùng thắng/thua/hòa và lý do. Chưa nhận kết quả xác nhận thì hiện đang chờ, không tự suy kết quả từ điểm tạm. Về sảnh chỉ khả dụng khi phòng hợp lệ; phòng không còn thì khóa và nêu lý do, vẫn cho Về menu. Điểm trong sketch là minh họa.
 
 ![Figma UI — ui05.png](../design/figma/exports/user-revised-v010/thesis/ui05.png)
 
-Hình 3.14. Thiết kế màn hình Kết quả. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.14. Thiết kế màn hình Kết quả.
 
 UI06 — Âm thanh có bật/tắt, âm lượng, quay lại. Khi tắt, thanh âm lượng thể hiện vô hiệu theo đặc tả; phản hồi thị giác vẫn giữ. Lỗi lưu cần phân biệt lựa chọn đang áp dụng và chưa lưu. Màn mở từ Menu, không dùng làm pause online.
 
 ![Figma UI — ui06.png](../design/figma/exports/user-revised-v010/thesis/ui06.png)
 
-Hình 3.15. Thiết kế màn hình Âm thanh. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.15. Thiết kế màn hình Âm thanh.
 
 Các trạng thái bổ sung dưới đây cụ thể hóa phản hồi ở form, sảnh và kết quả. Mã AB12CD, mã DEMO, điểm và số đếm là dữ liệu minh họa bố cục, không phải phòng hoặc trận đã chạy.
 
@@ -2182,23 +2184,23 @@ Khi không tìm thấy phòng, form giữ mã đã nhập, nêu lỗi và cho ph
 
 ![Figma UI — ui02-notfound.png](../design/figma/exports/user-revised-v010/thesis/ui02-notfound.png)
 
-Hình 3.16. Thiết kế màn hình Không tìm thấy phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.16. Thiết kế màn hình Không tìm thấy phòng.
 
 Khi cả hai người đã sẵn sàng, màn chuẩn bị trận hiển thị số đếm và điều kiện bắt đầu được hệ thống xác nhận. Đây là thiết kế cho trạng thái phòng chung, không phải đồng hồ cục bộ tự quyết định bắt đầu.
 
 ![Figma UI — ui03-countdown.png](../design/figma/exports/user-revised-v010/thesis/ui03-countdown.png)
 
-Hình 3.17. Thiết kế màn hình Chuẩn bị trận. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.17. Thiết kế màn hình Chuẩn bị trận.
 
 Kết quả thua vẫn giữ nhãn Bạn/Đối thủ và hai đường quay về. Ở trạng thái hòa khi phòng đã đóng, Về sảnh bị khóa còn Về menu khả dụng.
 
 ![Figma UI — ui05-loss.png](../design/figma/exports/user-revised-v010/thesis/ui05-loss.png)
 
-Hình 3.18. Thiết kế màn hình Kết quả thua. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.18. Thiết kế màn hình Kết quả thua.
 
 ![Figma UI — ui05-draw.png](../design/figma/exports/user-revised-v010/thesis/ui05-draw.png)
 
-Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng.
 
 ### 3.3.3. Quy tắc cập nhật và phản hồi
 

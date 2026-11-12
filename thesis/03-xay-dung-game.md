@@ -88,7 +88,7 @@ flowchart TB
   M1 ~~~ M2
 ```
 
-Hình 3.1(a). Phân rã chức năng phiên, phòng và thi đấu. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.1(a). Phân rã chức năng phiên, phòng và thi đấu.
 
 <!-- diagram: 3-1b-chuc-nang-v06.mmd -->
 ```mermaid
@@ -112,7 +112,7 @@ flowchart TB
   V1 ~~~ V2
 ```
 
-Hình 3.1(b). Phân rã chức năng đồng bộ, hiển thị và âm thanh. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.1(b). Phân rã chức năng đồng bộ, hiển thị và âm thanh.
 
 ### 3.2.3. Tác nhân và use case tổng quát
 
@@ -121,7 +121,7 @@ Tác nhân Người chơi đại diện cho vai trò của mỗi người trong 
 <!-- diagram-svg: 3-2-usecase-uml.svg -->
 ![Thiết kế đề xuất — 3-2-usecase-uml.svg](../diagrams/3-2-usecase-uml.png)
 
-Hình 3.2. Use case tổng quát của hệ thống đề xuất. Nguồn: tác giả thiết kế theo ký pháp UML.
+Hình 3.2. Use case tổng quát của hệ thống đề xuất.
 
 Ghép trận nhanh là chức năng bổ sung sau khi luồng phòng bằng mã ổn định. Kiểm tra dữ liệu, cộng điểm và gửi snapshot là xử lý nội bộ, không tách thành mục tiêu độc lập của tác nhân.
 
@@ -159,7 +159,7 @@ UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người ch�
 
 ### 3.2.5. Kiến trúc hệ thống và thiết kế mạng
 
-Ứng dụng offline hiện hành tách ba trách nhiệm: nhập liệu, mô phỏng và trình bày. Ba phần tương ứng với các thư mục `lib/src/input`, `lib/src/simulation` và `lib/src/presentation`. Cách tổ chức này đã có trong mã nguồn, trong khi phần máy chủ và kết nối trình bày phía sau vẫn là phương án cho game 1v1.
+Ứng dụng offline hiện hành tách ba trách nhiệm: nhập liệu, mô phỏng và trình bày. Ba phần tương ứng với các thư mục lib/src/input, lib/src/simulation và lib/src/presentation. Cách tổ chức này đã có trong mã nguồn, trong khi phần máy chủ và kết nối trình bày phía sau vẫn là phương án cho game 1v1.
 
 | Lớp hiện thực | Trách nhiệm |
 |---|---|
@@ -169,7 +169,7 @@ UC08 Rời phòng thuộc nhóm chức năng F01 và áp dụng khi người ch�
 
 Mỗi lần cập nhật hợp lệ, lớp trình bày cho mô phỏng tiến trước rồi đồng bộ cảnh và HUD. Khi mất trạng thái tương tác, đầu vào được hủy và logic pause được áp dụng; ticker không được dùng như nơi lưu luật game. Việc tách lớp hỗ trợ kiểm tra logic độc lập nhưng chưa chứng minh cùng một mô phỏng đã được dùng trên máy chủ hoặc đồng bộ qua mạng.
 
-Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene chỉ nhận trạng thái để dựng cảnh; không tự phán định điểm. Đây là hướng thiết kế để đánh giá, chưa quyết định loại bỏ `flutter_scene_net` hoặc chọn dịch vụ hosting cụ thể.
+Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene chỉ nhận trạng thái để dựng cảnh; không tự phán định điểm. Đây là hướng thiết kế để đánh giá, chưa quyết định loại bỏ flutter_scene_net hoặc chọn dịch vụ hosting cụ thể.
 
 <!-- diagram: 3-3-kien-truc.mmd -->
 ```mermaid
@@ -189,7 +189,7 @@ flowchart TD
   C --> W[Trạng thái trận trong bộ nhớ]
 ```
 
-Hình 3.3. Kiến trúc kết nối dự kiến. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.3. Kiến trúc kết nối dự kiến.
 
 Client B trong hình biểu diễn vai trò logic; hiện chưa có điện thoại thứ hai. Phương án WebSocket/JSON được chọn làm ứng viên vì dễ theo dõi thông điệp trong giai đoạn nghiên cứu. Kết nối triển khai công khai dự kiến dùng WSS và chứng chỉ hợp lệ; chưa có endpoint hoặc dịch vụ trả phí nào được tạo.
 
@@ -245,7 +245,7 @@ classDiagram
   %% WorldState được khai triển trong Hình 3.4(b).
 ```
 
-Hình 3.4(a). Cấu trúc phòng và phiên kết nối. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(a). Cấu trúc phòng và phiên kết nối.
 
 WorldState trong panel (a) được khai triển tại (b). slotIndex ổn định trong phòng, là 0 hoặc 1 và không trùng; chỉ số này còn dùng phân xử nhặt bóng khi bằng khoảng cách.
 
@@ -281,7 +281,7 @@ classDiagram
   %% BallState được khai triển trong Hình 3.4(c).
 ```
 
-Hình 3.4(b). Trạng thái trận và hai nhân vật. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(b). Trạng thái trận và hai nhân vật.
 
 score có hai phần tử theo slotIndex; result biểu diễn thắng/thua/hòa và lý do khi trận kết thúc. BallState được khai triển tại panel (c); đó là cùng lớp tham chiếu trong panel (b).
 
@@ -311,7 +311,7 @@ classDiagram
   %% BallState là cùng lớp được tham chiếu ở Hình 3.4(b).
 ```
 
-Hình 3.4(c). Trạng thái bóng và dữ liệu cú ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.4(c). Trạng thái bóng và dữ liệu cú ném.
 
 Các lớp mang nhãn reference được khai triển ở panel kế tiếp. pointValue được chốt từ releasePosition tại releaseTick; vị trí trên vạch tính 2 điểm. scored ngăn cộng điểm lặp. holderId chỉ có nghĩa khi bóng được giữ và shot có thể vắng. Kiểu giá trị và đơn vị thời gian còn cần cụ thể hóa khi triển khai.
 
@@ -335,7 +335,7 @@ stateDiagram-v2
   Closed --> [*]
 ```
 
-Hình 3.5. Trạng thái phòng và trận. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.5. Trạng thái phòng và trận.
 
 Hình 3.6 tách phản hồi giao diện khỏi xác nhận của máy chủ. Thông báo “không hợp lệ” được biểu diễn logic, không bắt buộc tạo gói lỗi riêng cho từng input; snapshot cũng có thể sửa lại trạng thái dự đoán.
 
@@ -362,7 +362,7 @@ sequenceDiagram
   end
 ```
 
-Hình 3.6(a). Nhận input và kiểm tra tạo cú ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.6(a). Nhận input và kiểm tra tạo cú ném.
 
 <!-- diagram: 3-6b1-thoi-gian-block-v06.mmd -->
 ```mermaid
@@ -470,7 +470,7 @@ flowchart TB
   C --> XT
 ```
 
-Hình 3.7(a). Tiếp nhận yêu cầu ném. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.7(a). Tiếp nhận yêu cầu ném.
 
 <!-- diagram: 3-7b1-thoi-gian-v06.mmd -->
 ```mermaid
@@ -602,7 +602,7 @@ flowchart TD
   S --> M
 ```
 
-Hình 3.8. Luồng chuyển màn hình dự kiến. Nguồn: thiết kế đề xuất của tác giả.
+Hình 3.8. Luồng chuyển màn hình dự kiến.
 
 ### 3.3.2. Thiết kế giao diện
 
@@ -612,7 +612,7 @@ UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo p
 
 ![Figma UI — ui01.png](../design/figma/exports/user-revised-v010/thesis/ui01.png)
 
-Hình 3.9. Thiết kế màn hình Menu chính. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.9. Thiết kế màn hình Menu chính.
 
 Tập luyện là lựa chọn offline độc lập với kết nối phòng. HUD tập luyện chỉ trình bày thông tin và điều khiển của chế độ tập; không dùng đồng hồ trận hoặc điểm đối thủ minh họa như dữ liệu thật. Bố cục được tái dùng từ UI04, còn các yếu tố dành riêng cho 1v1 được bỏ khỏi biến thể này.
 
@@ -620,37 +620,37 @@ UI02A — Tạo phòng tập trung vào yêu cầu tạo, phản hồi đang x�
 
 ![Figma UI — ui02a.png](../design/figma/exports/user-revised-v010/thesis/ui02a.png)
 
-Hình 3.10. Thiết kế màn hình Tạo phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.10. Thiết kế màn hình Tạo phòng.
 
 UI02B — Vào phòng gồm ô mã, thông báo cạnh form, xác nhận và quay lại. Trống hoặc sai định dạng được xử lý trước khi gửi. Không tìm thấy phòng, Phòng đầy và Lỗi mạng phải phân biệt. Giữ mã đã nhập để sửa; chỉ chuyển UI03 sau xác nhận thành công.
 
 ![Figma UI — ui02b.png](../design/figma/exports/user-revised-v010/thesis/ui02b.png)
 
-Hình 3.11. Thiết kế màn hình Vào phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.11. Thiết kế màn hình Vào phòng.
 
 UI03 — Sảnh chờ có mã phòng, hai vị trí Bạn/Đối thủ, trạng thái sẵn sàng, vùng đếm ngược và Rời phòng. Khi Bạn sẵn sàng, nút đổi thành Hủy sẵn sàng; nếu đối thủ chưa sẵn sàng, hiện Chờ đối thủ sẵn sàng. Không có Start thủ công. Đếm ngược chỉ theo trạng thái phòng được xác nhận; khi điều kiện mất hiệu lực, bỏ đếm cũ và trở về chờ.
 
 ![Figma UI — ui03.png](../design/figma/exports/user-revised-v010/thesis/ui03.png)
 
-Hình 3.12. Thiết kế màn hình Sảnh chờ. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.12. Thiết kế màn hình Sảnh chờ.
 
 UI04 — Trận đấu ở Hình 3.13 gồm nền sân minh họa và HUD, chưa có nhân vật. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame này thể hiện bố cục HUD cơ bản. Các biến thể canh ném, khóa, hồi chiêu và gián đoạn kết nối chưa có đủ ảnh trong bộ hình. Trong thiết kế đầy đủ, hành động chính đổi theo quyền giữ bóng, độc lập với trạng thái hồi chiêu. Block và xử lý mạng vẫn là đề xuất.
 
 ![Figma UI — ui04.png](../design/figma/exports/user-revised-v010/thesis/ui04.png)
 
-Hình 3.13. Thiết kế màn hình Trận đấu. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.13. Thiết kế màn hình Trận đấu.
 
 UI05 — Kết quả đặt nhãn Bạn/Đối thủ trên điểm, cùng thắng/thua/hòa và lý do. Chưa nhận kết quả xác nhận thì hiện đang chờ, không tự suy kết quả từ điểm tạm. Về sảnh chỉ khả dụng khi phòng hợp lệ; phòng không còn thì khóa và nêu lý do, vẫn cho Về menu. Điểm trong sketch là minh họa.
 
 ![Figma UI — ui05.png](../design/figma/exports/user-revised-v010/thesis/ui05.png)
 
-Hình 3.14. Thiết kế màn hình Kết quả. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.14. Thiết kế màn hình Kết quả.
 
 UI06 — Âm thanh có bật/tắt, âm lượng, quay lại. Khi tắt, thanh âm lượng thể hiện vô hiệu theo đặc tả; phản hồi thị giác vẫn giữ. Lỗi lưu cần phân biệt lựa chọn đang áp dụng và chưa lưu. Màn mở từ Menu, không dùng làm pause online.
 
 ![Figma UI — ui06.png](../design/figma/exports/user-revised-v010/thesis/ui06.png)
 
-Hình 3.15. Thiết kế màn hình Âm thanh. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.15. Thiết kế màn hình Âm thanh.
 
 Các trạng thái bổ sung dưới đây cụ thể hóa phản hồi ở form, sảnh và kết quả. Mã AB12CD, mã DEMO, điểm và số đếm là dữ liệu minh họa bố cục, không phải phòng hoặc trận đã chạy.
 
@@ -658,23 +658,23 @@ Khi không tìm thấy phòng, form giữ mã đã nhập, nêu lỗi và cho ph
 
 ![Figma UI — ui02-notfound.png](../design/figma/exports/user-revised-v010/thesis/ui02-notfound.png)
 
-Hình 3.16. Thiết kế màn hình Không tìm thấy phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.16. Thiết kế màn hình Không tìm thấy phòng.
 
 Khi cả hai người đã sẵn sàng, màn chuẩn bị trận hiển thị số đếm và điều kiện bắt đầu được hệ thống xác nhận. Đây là thiết kế cho trạng thái phòng chung, không phải đồng hồ cục bộ tự quyết định bắt đầu.
 
 ![Figma UI — ui03-countdown.png](../design/figma/exports/user-revised-v010/thesis/ui03-countdown.png)
 
-Hình 3.17. Thiết kế màn hình Chuẩn bị trận. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.17. Thiết kế màn hình Chuẩn bị trận.
 
 Kết quả thua vẫn giữ nhãn Bạn/Đối thủ và hai đường quay về. Ở trạng thái hòa khi phòng đã đóng, Về sảnh bị khóa còn Về menu khả dụng.
 
 ![Figma UI — ui05-loss.png](../design/figma/exports/user-revised-v010/thesis/ui05-loss.png)
 
-Hình 3.18. Thiết kế màn hình Kết quả thua. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.18. Thiết kế màn hình Kết quả thua.
 
 ![Figma UI — ui05-draw.png](../design/figma/exports/user-revised-v010/thesis/ui05-draw.png)
 
-Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng.
 
 ### 3.3.3. Quy tắc cập nhật và phản hồi
 
