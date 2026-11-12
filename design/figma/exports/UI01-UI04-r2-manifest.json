@@ -1,0 +1,100 @@
+{
+    "schema":  1,
+    "status":  "Lead-reviewed UI04 r2 and UI01 native design; Cindy review pending",
+    "date":  "2026-11-11",
+    "frames":  [
+                   {
+                       "name":  "UI04-V3-composite",
+                       "node":  "25:5"
+                   },
+                   {
+                       "name":  "UI01-Menu",
+                       "node":  "29:36"
+                   }
+               ],
+    "sources":  [
+                    {
+                        "path":  "design/figma/source/UI04-V3-r2-2026-11-11.fig",
+                        "bytes":  62723,
+                        "sha256":  "3c4e312f6b53d96e74fdd5f2783e7110a8334503e5af3d15111a9a75754db414",
+                        "entries":  [
+                                        {
+                                            "FullName":  "canvas.fig",
+                                            "Length":  52848
+                                        },
+                                        {
+                                            "FullName":  "thumbnail.png",
+                                            "Length":  8816
+                                        },
+                                        {
+                                            "FullName":  "meta.json",
+                                            "Length":  336
+                                        },
+                                        {
+                                            "FullName":  "images/",
+                                            "Length":  0
+                                        }
+                                    ]
+                    },
+                    {
+                        "path":  "design/figma/source/UI01-and-UI04-review-2026-11-11.fig",
+                        "bytes":  69553,
+                        "sha256":  "0f4af4a097d189037ae9c7b4bf76efbd06281dfe250f14c1c4d7f336511f8631",
+                        "entries":  [
+                                        {
+                                            "FullName":  "canvas.fig",
+                                            "Length":  59893
+                                        },
+                                        {
+                                            "FullName":  "thumbnail.png",
+                                            "Length":  8601
+                                        },
+                                        {
+                                            "FullName":  "meta.json",
+                                            "Length":  337
+                                        },
+                                        {
+                                            "FullName":  "images/",
+                                            "Length":  0
+                                        }
+                                    ]
+                    }
+                ],
+    "exports":  [
+                    {
+                        "path":  "design\\figma\\exports\\UI01-Menu.png",
+                        "bytes":  43343,
+                        "sha256":  "254e71a298ea982972305ed9281630ad0c9e18546761f2cd123f67b22eeef328",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  0,
+                        "centerAlpha":  255
+                    },
+                    {
+                        "path":  "design\\figma\\exports\\UI04-V3-r2-composite.png",
+                        "bytes":  37950,
+                        "sha256":  "e0670d28fe269abc72b5bdec61f5a7548baa635e9a0b8962de51d065be92322e",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  0,
+                        "centerAlpha":  255
+                    },
+                    {
+                        "path":  "design\\figma\\exports\\UI04-V3-r2-HUD.png",
+                        "bytes":  13814,
+                        "sha256":  "682878fe8ddcf1e7701e86ea7b2d09f6f46d27188d9d22356c81211c72a9a2ba",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  459523,
+                        "centerAlpha":  0
+                    }
+                ],
+    "backgroundReused":  "UI04-V3-background.png unchanged from previous verified export",
+    "notProven":  [
+                      "Cloud sync",
+                      "Prototype navigation",
+                      "Implemented menu or multiplayer",
+                      "Other screen/state exports",
+                      "Thesis new publication"
+                  ]
+}

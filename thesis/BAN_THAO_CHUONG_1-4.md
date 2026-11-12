@@ -2091,20 +2091,25 @@ Các quyết định còn mở gồm tham số kỹ năng, phương án vật l�
 
 ### 3.3.1. Danh sách màn hình và luồng chuyển
 
-Giao diện game Bóng rổ đối kháng 3D được đề xuất theo hướng ngang. Bố cục dự kiến dành vùng giữa cho sân và nhân vật, hai bên cho điều khiển cảm ứng. Bảng dưới mô tả các màn hình cần thiết kế; chúng chưa phải giao diện đã triển khai.
+Hệ thống giao diện được đề xuất theo hướng ngang, gồm sáu nhóm chức năng UI01–UI06. UI02 tách thành Tạo phòng và Vào phòng, tạo thành bảy frame trình bày. Đây là giao diện mục tiêu của game 1v1; bản tập offline M3b chỉ cung cấp bằng chứng cho các thao tác trong phạm vi của nó.
 
-| Mã | Màn hình | Thông tin và thao tác chính | Màn hình tiếp theo |
-|---|---|---|---|
-| UI01 | Menu chính | Tên game, trạng thái kết nối, tạo phòng, nhập mã phòng, ghép trận nhanh và cài đặt | Tạo/vào phòng hoặc Cài đặt |
-| UI02 | Tạo/vào phòng | Mã phòng, ô nhập mã, thông báo mã sai hoặc phòng đầy, nút xác nhận và quay lại | Sảnh chờ hoặc Menu |
-| UI03 | Sảnh chờ | Mã phòng, hai vị trí người chơi, trạng thái sẵn sàng, đếm ngược và rời phòng | Trận đấu hoặc Menu |
-| UI04 | Trận đấu | Cảnh 3D, người giữ bóng, điểm, thời gian, thông tin mạng, cần di chuyển và ACTION/JUMP/DASH | Kết quả |
-| UI05 | Kết quả | Tỷ số, thắng/thua/hòa, lý do kết thúc, trở lại sảnh hoặc Menu | Sảnh chờ hoặc Menu |
-| UI06 | Cài đặt | Bật/tắt âm thanh, âm lượng và quay lại | Menu chính trong phương án đầu |
+| Frame | Mục đích và thông tin | Hành động và đích chuyển |
+|---|---|---|
+| UI01 Menu chính | Tên game, trạng thái kết nối, chọn chức năng | Tập luyện → biến thể offline của UI04; Tạo phòng → UI02A; Vào phòng → UI02B; Âm thanh → UI06 |
+| UI02A Tạo phòng | Yêu cầu tạo phòng, tiến trình và lỗi | Thành công → UI03; quay lại → UI01 |
+| UI02B Vào phòng | Nhập mã, phản hồi mã hoặc lỗi tham gia | Thành công → UI03; quay lại → UI01 |
+| UI03 Sảnh chờ | Mã phòng, Bạn/Đối thủ, sẵn sàng và đếm ngược | Bắt đầu được xác nhận → UI04; rời phòng → UI01 |
+| UI04 Trận đấu | Điểm, thời gian, kết nối, quyền giữ bóng, điều khiển | Kết quả được xác nhận → UI05 |
+| UI05 Kết quả | Tỷ số Bạn/Đối thủ, thắng/thua/hòa, lý do | Về sảnh → UI03 nếu phòng hợp lệ; Menu → UI01 |
+| UI06 Âm thanh | Bật/tắt và âm lượng | Quay lại → UI01 trong phương án đầu |
 
-Ghép trận nhanh là chức năng bổ sung sau; khi triển khai cần có trạng thái chờ đối thủ và thao tác hủy. Việc vào đủ phòng không tự bắt đầu trận; hai người phải xác nhận sẵn sàng. Khi trở lại sảnh sau trận, trạng thái sẵn sàng được đặt lại để tránh khởi động trận ngoài ý muốn.
+Luồng chính đi từ Menu qua Tạo hoặc Vào phòng tới Sảnh chờ, Trận đấu và Kết quả. Khi trở lại sảnh, trạng thái sẵn sàng được đặt lại. Cài đặt âm thanh là nhánh riêng từ Menu. Ghép trận nhanh thuộc phần bổ sung sau.
 
-Hình 3.8 mô tả luồng chuyển giữa sáu màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Sơ đồ luồng không thay thế thiết kế giao diện.
+Hai người vào đủ phòng chưa làm trận bắt đầu. Cả hai cần sẵn sàng, sau đó đếm ngược và chuyển trận theo trạng thái được máy chủ xác nhận. Luồng này là thiết kế cho hệ thống mạng dự kiến, chưa phải kết quả kiểm chứng multiplayer.
+
+Nhánh Tập luyện đi trực tiếp từ Menu tới giao diện tập offline, không qua tạo phòng hoặc sảnh chờ. Nhánh này tái dùng bố cục UI04 với HUD riêng cho tập luyện, không hiển thị đồng hồ trận hoặc đối thủ giả. Việc bổ sung nhánh trong thiết kế Menu không có nghĩa Menu đã được triển khai trong ứng dụng.
+
+Hình 3.8 mô tả nhánh phòng đấu giữa các nhóm màn hình, bao gồm bước Tạo/vào phòng trước Sảnh chờ. Nhánh Tập luyện offline đi riêng từ Menu như đã mô tả ở trên. Sơ đồ luồng không thay thế thiết kế giao diện.
 
 <!-- diagram: 3-8-giao-dien-r1.mmd -->
 ```mermaid
@@ -2125,21 +2130,87 @@ Hình 3.8. Luồng chuyển màn hình dự kiến. Nguồn: thiết kế đề 
 
 ### 3.3.2. Thiết kế giao diện
 
-Figma đã được chọn làm công cụ thiết kế UI01–UI06. Các phác thảo UI01–UI06 đã được duyệt. Riêng UI04 V3 được duyệt theo hướng nền sân và HUD tách lớp, chưa có nhân vật trong phạm vi thiết kế này. Việc duyệt concept chưa đồng nghĩa hoàn tất bộ màn hình hoặc có ảnh xuất Figma chính thức. Bản thảo hiện chưa có bộ hình xuất được xác minh để dùng thay thiết kế giao diện; UI của bản tập offline chỉ phục vụ kiểm tra thao tác.
+Bộ thiết kế UI01–UI06 được lưu trong Figma và các hình dưới đây được xuất từ từng frame. Các màn Menu, phòng, sảnh, kết quả và âm thanh dùng nền minh họa dạng ảnh; chữ, nút và bảng nội dung được tách thành các lớp chỉnh sửa. UI04 dùng nền sân và HUD tách lớp, chưa có nhân vật. Các hình mô tả giao diện mục tiêu; chúng không chứng minh chức năng phòng đấu hoặc đồng bộ mạng đã được triển khai.
 
-Đối với màn hình trận đấu, cần bố trí cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION hiển thị chức năng ném khi người chơi có bóng và Block khi phòng thủ. Thanh canh ném xuất hiện trong lúc giữ ACTION. Điểm và đồng hồ đặt ở vùng dễ quan sát; thông báo kết nối tránh che nhân vật, bóng và các nút điều khiển.
+UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo phòng, Vào phòng và Cài đặt. Frame này chưa thể hiện trạng thái chờ hoặc mất kết nối. Đặc tả yêu cầu khóa thao tác cần dịch vụ mạng kèm lý do khi không kết nối; Tập luyện và Cài đặt vẫn là các nhánh độc lập. Thử lại kết nối không tự đưa người chơi vào phòng. Ghép nhanh chưa được đưa vào giao diện này.
 
-Trong phương án đầu, Cài đặt được mở từ Menu chính; chưa thiết kế lớp phủ cài đặt trong trận online.
+![Figma UI — ui01.png](../design/figma/exports/thesis/ui01.png)
 
-Ngoài trạng thái bình thường, bộ thiết kế cần thể hiện nút bị vô hiệu hóa hoặc đang hồi chiêu, chờ kết nối, chờ đối thủ, phòng đầy, mã không hợp lệ và mất kết nối trong trận. Mỗi trạng thái phải có nội dung thông báo và hành động tiếp theo. Không đưa nút tạm dừng vào trận online khi luật không hỗ trợ dừng mô phỏng.
+Hình 3.9. Thiết kế màn hình Menu chính. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+Tập luyện là lựa chọn offline độc lập với kết nối phòng. HUD tập luyện chỉ trình bày thông tin và điều khiển của chế độ tập; không dùng đồng hồ trận hoặc điểm đối thủ minh họa như dữ liệu thật. Bố cục được tái dùng từ UI04, còn các yếu tố dành riêng cho 1v1 được bỏ khỏi biến thể này.
+
+UI02A — Tạo phòng tập trung vào yêu cầu tạo, phản hồi đang xử lý, lỗi và quay lại. Không hiển thị mã minh họa như mã thật trước thành công. Chỉ sau khi nhận xác nhận và mã do hệ thống cấp mới chuyển UI03. Trong khi gửi, chặn thao tác tạo lặp; khi lỗi, giữ màn để đọc lý do và chọn bước tiếp.
+
+![Figma UI — ui02a.png](../design/figma/exports/thesis/ui02a.png)
+
+Hình 3.10. Thiết kế màn hình Tạo phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+UI02B — Vào phòng gồm ô mã, thông báo cạnh form, xác nhận và quay lại. Trống hoặc sai định dạng được xử lý trước khi gửi. Không tìm thấy phòng, Phòng đầy và Lỗi mạng phải phân biệt. Giữ mã đã nhập để sửa; chỉ chuyển UI03 sau xác nhận thành công.
+
+![Figma UI — ui02b.png](../design/figma/exports/thesis/ui02b.png)
+
+Hình 3.11. Thiết kế màn hình Vào phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+UI03 — Sảnh chờ có mã phòng, hai vị trí Bạn/Đối thủ, trạng thái sẵn sàng, vùng đếm ngược và Rời phòng. Khi Bạn sẵn sàng, nút đổi thành Hủy sẵn sàng; nếu đối thủ chưa sẵn sàng, hiện Chờ đối thủ sẵn sàng. Không có Start thủ công. Đếm ngược chỉ theo trạng thái phòng được xác nhận; khi điều kiện mất hiệu lực, bỏ đếm cũ và trở về chờ.
+
+![Figma UI — ui03.png](../design/figma/exports/thesis/ui03.png)
+
+Hình 3.12. Thiết kế màn hình Sảnh chờ. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+UI04 — Trận đấu V3 ở Hình 3.13 tách nền sân và HUD, chưa có nhân vật. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame này thể hiện bố cục HUD cơ bản. Các biến thể canh ném, khóa, hồi chiêu và gián đoạn kết nối chưa có đủ ảnh trong bộ hình. Trong thiết kế đầy đủ, hành động chính đổi theo quyền giữ bóng, độc lập với trạng thái hồi chiêu. Block và xử lý mạng vẫn là đề xuất.
+
+![Figma UI — ui04.png](../design/figma/exports/thesis/ui04.png)
+
+Hình 3.13. Thiết kế màn hình Trận đấu. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+UI05 — Kết quả đặt nhãn Bạn/Đối thủ trên điểm, cùng thắng/thua/hòa và lý do. Chưa nhận kết quả xác nhận thì hiện đang chờ, không tự suy kết quả từ điểm tạm. Về sảnh chỉ khả dụng khi phòng hợp lệ; phòng không còn thì khóa và nêu lý do, vẫn cho Về menu. Điểm trong sketch là minh họa.
+
+![Figma UI — ui05.png](../design/figma/exports/thesis/ui05.png)
+
+Hình 3.14. Thiết kế màn hình Kết quả. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+UI06 — Âm thanh có bật/tắt, âm lượng, quay lại. Khi tắt, thanh âm lượng thể hiện vô hiệu theo đặc tả; phản hồi thị giác vẫn giữ. Lỗi lưu cần phân biệt lựa chọn đang áp dụng và chưa lưu. Màn mở từ Menu, không dùng làm pause online.
+
+![Figma UI — ui06.png](../design/figma/exports/thesis/ui06.png)
+
+Hình 3.15. Thiết kế màn hình Âm thanh. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+Các trạng thái bổ sung dưới đây cụ thể hóa phản hồi ở form, sảnh và kết quả. Mã AB12CD, mã DEMO, điểm và số đếm là dữ liệu minh họa bố cục, không phải phòng hoặc trận đã chạy.
+
+Khi không tìm thấy phòng, form giữ mã đã nhập, nêu lỗi và cho phép thử lại hoặc quay lại. Lỗi định dạng, phòng đầy và lỗi mạng vẫn cần phản hồi riêng; hình này không bao phủ các trường hợp đó.
+
+![Figma UI — ui02-notfound.png](../design/figma/exports/thesis/ui02-notfound.png)
+
+Hình 3.16. Thiết kế màn hình Không tìm thấy phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+Khi cả hai người đã sẵn sàng, màn chuẩn bị trận hiển thị số đếm và điều kiện bắt đầu được hệ thống xác nhận. Đây là thiết kế cho trạng thái phòng chung, không phải đồng hồ cục bộ tự quyết định bắt đầu.
+
+![Figma UI — ui03-countdown.png](../design/figma/exports/thesis/ui03-countdown.png)
+
+Hình 3.17. Thiết kế màn hình Chuẩn bị trận. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+Kết quả thua vẫn giữ nhãn Bạn/Đối thủ và hai đường quay về. Ở trạng thái hòa khi phòng đã đóng, Về sảnh bị khóa còn Về menu khả dụng.
+
+![Figma UI — ui05-loss.png](../design/figma/exports/thesis/ui05-loss.png)
+
+Hình 3.18. Thiết kế màn hình Kết quả thua. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
+
+![Figma UI — ui05-draw.png](../design/figma/exports/thesis/ui05-draw.png)
+
+Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 ### 3.3.3. Quy tắc cập nhật và phản hồi
 
-Giao diện sảnh chờ cập nhật theo trạng thái phòng do máy chủ gửi. Trong trận, bảng điểm, thời gian và kết quả lấy từ trạng thái đã được máy chủ xác nhận. Máy khách có thể phản hồi thao tác sớm bằng chuyển động hoặc hoạt ảnh, sau đó đối chiếu với dữ liệu nhận được. Nội suy vị trí chỉ ảnh hưởng phần hiển thị.
+Phản hồi phải thuộc đúng yêu cầu, phòng và trận đang hiệu lực. Khi tạo/vào phòng, trạng thái gửi ngăn nhấn lặp; phản hồi muộn không đưa người đã rời trở lại phòng cũ. Lỗi đi kèm hành động sửa mã, thử lại có kiểm soát hoặc về Menu.
 
-Âm thanh và hiệu ứng được phát theo sự kiện có mã định danh để tránh lặp khi nhiều snapshot chứa cùng một sự kiện. Cài đặt âm thanh chỉ có tác dụng trên thiết bị hiện tại. Khi tắt âm thanh, điểm số và thông báo vẫn phải thể hiện đầy đủ diễn biến cần thiết.
+Sảnh cập nhật từng người độc lập. Sẵn sàng của Bạn nhất quán với Hủy sẵn sàng, không tự đổi trạng thái đối thủ. Máy khách hiển thị đếm ngược đã được xác nhận, không tự bắt đầu bằng đồng hồ riêng. Về sảnh sau Kết quả phải bỏ cờ sẵn sàng cũ.
 
-Khi ứng dụng xuống nền hoặc mất chạm, điều khiển liên tục trở về trung tính. Nếu mạng bị gián đoạn, màn hình hiển thị tình trạng kết nối và hành động được phép theo trạng thái trận. Việc tiếp tục mô phỏng hoặc xử kết quả thuộc quy tắc của máy chủ; giao diện không tự coi trận đã tạm dừng.
+Điểm, thời gian và kết quả lấy từ trạng thái chung được xác nhận; phản hồi sớm/nội suy chỉ phục vụ trình bày. Quyền giữ bóng và hồi chiêu là hai trục riêng. Có bóng chưa chắc được ném khi trạng thái cấm; không có bóng không đồng nghĩa kỹ năng đang hồi.
+
+Mất chạm/xuống nền đưa lệnh liên tục về trung tính và hủy giữ không hợp lệ; cancel không tự thành cú ném. Gián đoạn kết nối phải báo tình trạng và hành động được phép, không tự xử thắng/thua, pause toàn trận, reconnect hoặc phát lại lệnh. Chính sách khôi phục còn cần thiết kế và kiểm riêng.
+
+Âm thanh/hiệu ứng bổ sung phản hồi thị giác; sự kiện có định danh trong phương án đồng bộ giúp tránh phát tác dụng lặp. Tắt âm thanh không làm mất điểm, thông báo hoặc chỉ báo khóa. Đây là đặc tả mục tiêu, chưa nghiệm thu full UI/1v1.
 
 
 # Chương 4. Kiểm thử
@@ -2257,7 +2328,7 @@ Hệ chuyển động và cú ném dùng mô hình giải tích, chưa có solve
 
 Mức bằng chứng giữa các ca khác nhau: unit kiểm logic, widget kiểm phối hợp thành phần trong fixture, runtime kiểm một số chuỗi trên AVD. Chuỗi hai pointer không bao phủ ba ngón, mọi race hoặc mọi độ phân giải. Ảnh chụp và báo cáo QA chỉ hỗ trợ phạm vi đã quan sát.
 
-UI runtime là giao diện thử nghiệm. Concept UI04 V3 đã được duyệt nhưng chưa có bộ ảnh Figma xuất được xác minh để đưa vào bản thảo; các phác thảo UI01–UI06 đã được duyệt nhưng bộ màn hình Figma và ảnh xuất vẫn cần hoàn thiện. Vì vậy, kết quả thao tác trên demo chưa phải nghiệm thu bộ giao diện chính thức.
+UI runtime là giao diện thử nghiệm. Bộ ảnh thiết kế Figma đã được bổ sung ở mục 3.3, nhưng chưa được tích hợp và kiểm chứng đầy đủ trong ứng dụng. Vì vậy, kết quả thao tác trên demo chưa phải nghiệm thu việc triển khai bộ giao diện đó.
 
 
 # Tài liệu tham khảo

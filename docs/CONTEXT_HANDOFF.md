@@ -1,3 +1,91 @@
+## Bàn giao UI và DRAFT v0.9 — 12/11/2026
+
+Ưu tiên hiện hành: dùng bộ FigmaAI người dùng chọn, không vẽ lại Page 4/Menu cũ. Đã backup FIG 3615396 bytes SHA256 df1fdffc…f3a9, xuất native 10 PNG Page 3 và xem cả 10; dùng riêng UI04 V3 r2 Page 4. 11 ảnh thật đã chèn mục 3.3 (Hình 3.9–3.19); tổng DOCX 38 PNG/3 OMML. Manifest design/figma/exports/user-selected-2026-11-12/manifest.json. FIG local ignored, không nhận cloud sync đã đạt.
+
+DRAFT v0.9 DOCX/PDF đã xuất và kiểm XML/nguồn; PDF Chromium 114 trang inspect đủ, render không text vượt mép; rà UI lớn và contact sheets cuối. P2 repeat-header bảng trang 107 đã sửa. Report docs/PUBLICATION_v0.9_REVIEW.md, qa/thesis-v09-lead-review.md. Chưa Word native/bìa/TOC/After cuối/UI04 variants đầy đủ hoặc game tích hợp. Giữ v0.8/v0.7/v0.3/demos; v0.3 ngoài stage. Không worker mới, không model/provider/game/Ch4 test mới. Bước tiếp: Cindy review bản có ảnh; chỉ sửa điểm có bằng chứng, không replay GUI/export hay gate đã xong.
+
+Các mục bên dưới là lịch sử; trạng thái thiếu ảnh/đang chờ v0.9 không còn là hiện hành.
+
+## UI01 native + UI04 r2 xuất xong — bàn giao Cindy review ngay
+
+11/11: UI04r2fontNhảy/Dash18bo10; nativeexports UI04-V3-r2-composite/HUD.png960540, HUD459523transparentcenter0. BGkhôngđổi dùngfileV3-backgroundcũ. SourceUI04-V3-r2-2026-11-11.fig62723byteshash3c4e312f6b53d96e74fdd5f2783e7110a8334503e5af3d15111a9a75754db414.
+
+UI01-Menu mớiPage4node29:36X1000Y0W960H540 từ đúng1duplicateUI04, oldroot25:5giữ. BỏHUDclone29:68đãverifyIDtrướcDelete. BGclonehoop9layersgroupGroup1X770Y75; title+4buttons+connectionchip12objectsGroup2reparentraUI_Overlaynode29:100X203Y20 ngangBG. Title36Boldcenter, button28Bold; TạoPhòngcam/VàoPhòngdark/TậpLuyệnblue/CàiĐặtDark; chipĐãkếtnối20BoldX805(tham sốrelativeframe), chỉminhhọaUI. PNGexports/UI01-Menu.png43343byteshash254e71a298ea982972305ed9281630ad0c9e18546761f2cd123f67b22eeef328960540opaqueđãview. SourceUI01-and-UI04-review-2026-11-11.fig69553byteshash0f4af4a097d189037ae9c7b4bf76efbd06281dfe250f14c1c4d7f336511f8631ZIPcanvas59893/thumbnail8601/meta337. Allbackupgiữ.
+
+Manifestexports/UI01-UI04-r2-manifest.json; reviewdesign/figma/UI01_UI04_R2_REVIEW.md LeadacceptmilestoneđểCindyreview, khôngfullUIaccept. ChưaUI02A/B/03/05/06/statevariants/offlinepracticeprototype/ảnh3.3/v0.9. Khôngworker/game/Ch4/routechange. ChưaGitfinishvìchờreviewmốccanvas. Bàn giao ngayảnhUI01+UI04r2; taskkếtiếpUI02A/B táidùngBGmenu, khôngduplicateUI01khicóframehiệncó. Khiresume đọcfreshlayers/ID.
+
+GUIlive11268/5900361789x1081screenshot1568x947, menuviewport-803,155,zoom84%, Menu bounds371,211→1259,711; Figmaopen sauSavecopy, khôngdialogpendingconfirmedfileexists. OriginalUI04boundskhácđừngreplaycoord. HelpersfunctionsstorecuaSelect/Field/FieldRadius/Text/Shape/Rename/SaveDialog/ExportCurrent/LocalCopy; ExportCurrent(path,name)đãgeneric, tênUI01-Menu. Frame-layercountersglobalnewRect19–24; titletext29:92, menulabel29:93–96, chiptext29:98, UIOverlay29:100; nativecounterdynamicfreshread. Shape/textcreationautoBGinnermost; groupOverlayreparentCtrlX selectBG CtrlShiftV rồisetX/Ycapturedprecut. NativefontchỉnhsauEscape+selecttextlayer, đừngchỉđổicaretstyle. GroupcardtitleUI01full12objectsverified. Khôngcloudsyncclaim.
+## UI04 V3 đã có FIG mới + 3 PNG native — bàn giao Cindy review
+
+11/11 resume thực: mở Figma qua supported launch, PID11268/window590036,1789x1081 screenshot1568x947. App ban đầu trắng rồi tải lại đúng draft AKy…4JW, Page4/frame25:5 còn nguyên BG-r2/HUD dở. Không tạo frame/page. Rà và sửa nhóm HUD lẫn Ellipse14: bỏ nhóm cũ, gom đúng7controls, thêm7text native22px, thumb/bar; reparent thành HUD_Overlay28:16 ngang cấp BG_Court25:6. RootX0Y0W960H540 verified. BG tán cuối dựng lại Ellipse17 xanh91AA72. Ném cam bo18; cardscoreW360X300bo12. Nhảy/Dash còn chữ sátmép đểCindyreview. Nocharacter/model.
+
+Nativeexport1x3file design/figma/exports/UI04-V3-{composite,HUD,background}.png đều960540, đãview cả3. HUD459340transparentpixels,centerAlpha0; composite/backgroundopaque. manifestexports/UI04-V3-manifest.json đầyđủhash. FIGmới source/UI04-V3-review-2026-11-11.fig62576byteshash4af82950b59e1e5b0c2d179ec9b24b8473223b48bf489f9fe0a3cb30d71ce8a9ZIPcanvas52722/thumbnail8794/meta336. Backupcũgiữ. IntermediateFIGresumed-HUD-progress59677bytese272…f73b cũnggiữ. Khôngcloudsyncclaim. Sourcefreshsaved saukhirestoreBG/HUDvisible; rootfillhidden+Showinexportsfalse choalpha. Reportdesign/figma/UI04-V3_EXPORT_REVIEW.md Leadacceptmốcsource/exportđểCindyreview, chưaacceptfullUI. CầnCindyreviewrồisửafix/statevariantsvàUI01/02A/B/03/05/06. Ảnh3.3/v0.9chưa, nogame/Ch4/routechange/workerdispatch.
+
+Toolcầnfreshsnapshotws-*vàsettle2.2s. NativecanvasTextDocumentkhôngValuePattern; type_textforegroundtoolđãchấpnhận vàreadbacktext+ảnh, khôngformfieldbypass. Fieldfont/color/radiusset_valuephảifocus+settle+Enter+settle. Enter trênframeselectchildrenvàexpandAX; ArrowRightlàmove(!), đãundoX0. Cut/paste native GUI reparent đặt lạiX/Yexplicit; khôngdùngclipboardCLI. SaveWin32phảibackslashpath (slashbịfilenameinvalidđãsửa). Scrolltool bỏquaelementtarget/cuộnmặcđịnhcanvas; khônglặplại, dùngdragscrollbarphảix1562từ600→920bằngscreenshotfresh. ExportButton1xPNG/saveDialogverified. HelpersfunctionsstorecuaSelect/Field/FieldRadius/Text/Shape/SaveDialog/ExportCurrentcóruntime11268; nếucompactionmấtthìrereadschema khôngreplay uncertain input. Draftopen,khôngreloadclose. ChưacommitworkingtreegomtrướcvìUIđangreview; giữWordv0.3exclude/old/demos.
+## USER TẠM NGƯNG — BG r2 đã sửa, HUD mới dở — 11/11/2026
+
+User yêu cầu tạm ngưng; dừng GUI, không input thêm/không đóng reload draft. BG đã sửa Rectangle7 innerwhite38x23 khép targetbox; Rectangle8rimHeight10/corner5; Vector1 bringfront, thêm Vector5netcross27:39; Rectangle11padding27:25cam; bỏ facetedVector3 và ellipse thử, thayBezierVector3(27:27)Ucurve vàVector4(27:28)innerhalf. Clouds1/2+Ellipse5–8white, thêmEllipse9–14green91AA72; Rect9/10Y213Height30wall. Ảnh thật đã xem/copy design/figma/progress/UI04-V3-BG-r2-2026-11-11.png (238071bytes), chưaPNGexport cuối.
+
+HUD dở: 7shape mới27:40–46 (scorecard/connection/jump/dash/shoot/charge/joystick) fill20314B, nhóm Group1 node27:47. CHÚ Ý Group1 còn có một phần xanh91AA72 theo AX selection colors; cần inspect membership trước nhận HUD sạch (có thể Shift range bao gồm Ellipse14). Chưa text/rounding/shootorange/joystickthumb/táchHUDkhỏiBG. Screenshot hiện hành trước pause get_window_state-132738-1794393779076-0raso9.png trongTemp, chưa lưu progressHUD. BG r2 screenshot đã gửi user. Chưa save FIG mới sau r2/HUD, backupV3BGprogress cũ931d… vẫn giữ; draftopen có syncwarning, khôngcloudPASS. Main8272/132738 restored1779x1081 screenshot1568x952; Page4root25:5.
+
+CtrlR bị auto-review từ chối do nguy cơ reload, khôngexecuted; đã chuyển dự định rename bằngvisiblelayerdoubleclick, nhưng double_clickGroup1 bị automatic approval review usage-limit, KHÔNGexecuted; tool ghi try again8:30PM (không tự quy timezone). Khôngretry/đổiprovider/bypass. Read-only sau đó node27:47groupselected xác nhận; latestws-9q-mvd6tl đã cũ khi resume cầnfresh. User pause ưu tiên hơn các lệnh tiếp. Chưa3PNG/FIG-r2/thesisimages/v0.9/gamechange/commit. Khiuserchoresume: freshGUI, inspectGroup1membership, textHUD+names+separatelayers, save localFIGnew, exports3PNG960540alpha vàreview. Không replay textQA/Ch4/worker/modelroute.
+## BG revision bị chặn vì Figma minimized — 11/11/2026
+
+Fresh read xác nhận đúng draft AKy…4JW/node25:5, Rectangle7 selected, nhưng window8272/132738 minimized (iconic sentinel, không rendered screenshot). Click đầu dùng inner snapshot bị STALE, chưa delivered; fresh top ws-5x-qjau9f+idx75 foreground bị window_minimized, chưa delivered. Không sửa canvas trong lượt này, không replay input/CLI. Host discovery không có thao tác restore/bring_to_front trong tool surface hiện hành. Đã yêu cầu user restore đúng cửa sổ hiện có, giữ visible; không yêu cầu backup lại. Backup old và V3BG progress giữ nguyên. Cindy verdict REVISE: targetbox kín, ovalrim/net trước pole+padding, native smootharc+innerhalf, cloud/tree roundclusters+wallheight; tiếp HUD riêng sau sửaBG, không cần chờ duyệtuser. Chưa BG-r2/HUD/3PNG/thesisUIimages/v0.9. Không game/Ch4/worker/model change. Các thay đổi source/thesis từ lượt trước vẫn chưa commit; không finish-session trên sản phẩm UI chưa rà.
+## Nền V3 native + FIG local mới — bàn giao Cindy mốc BG
+
+11/11: Page4 rootUI04-V3-composite25:5/BG_Court25:6W960H540giữ. ThêmRectangle5 trắng26:11,Rect6ôdark26:12,Rect7innerwhite26:13,Rect8rim26:14; paintRect2 chỉnh2topvertices→trapezoid+whiteStroke4. Vector1net26:16white3,Vector2boundary26:17white3,Vector3arc26:18white3(faceted). Ellipse1/2cloud26:19/20D9D9D9;Ellipse3/4bush26:21/22green91AA72;Rect9/10wall26:23/24D9D9D9. Khôngmodel/AIimport. Screenshotprogress/UI04-V3-BG-review-2026-11-11.png.
+
+Save localcopyV3 thậtđãverifiedsource/UI04-V3-BG-progress-2026-11-11.fig56302byteshash931d13937e150a9633b9b1d9929968aa090e78ca099f45070b5426cb7bee0d2b, ZIPcanvas.fig/thumbnail/meta,ignored,oldbackupgiữ. manifestsource/UI04-V3-BG-progress-manifest.json;design/figma/UI04-V3_BG_REVIEW.md Leadacceptmilestone nativeBG+source, cònrevisevớiconceptchưahoàntoàn(mâyoval/arcgấp/netđơngiản). CHƯAHUD/3PNGexport/ảnh3.3/v0.9. BàngiaoCindyreviewBGngay trướcHUD nhưyêucầu. GUIcurrentdraftopen, SaveDialog1247052đãđóngsaulưu, main8272/132738. Cloudsyncchưaverified, khôngreload/close. Khôngworker/game/Ch4/modelchange. TiếpHUDseparategroup/componentvàđầura3PNG960540alpha sauBGreview, khôngtạotrùngframe.
+
+Toolorchestration: dùngtopws-*snapshot+index,freshstateafter2–3sđểtránhAXreindex. functionsstore cófigmaSetField/LastField,figmaDrawRectangle (phímR),figmaDrawEllipse,figmaNewPen+ContinuePenPoints; nếucontextmất thìkhôngblindrerun, readcurrentstate. Mọicoordinateclick cầnobserveinclude_screenshottruegiữcontextchođiểmtiếp. CácsourcehelperslàJSorchestratingComputerUsetools,khôngCLI/clipboard/debugport. NextsavequaActionsCtrlK,setSearchSave localcopy,đợiresultstableclickđúngbutton→freshSaveDialog.
+## UI04V3 native đangdựng — USER_INPUT_ACTIVE dừngsafe
+
+11/11: diagnosticthậtPASSdomainaccess “Your network has access to the domains needed to run Figma”, reconnectwarningvẫncó; khôngcloudPASS. ĐườngGUIhoạtđộngsaukhi freshsnapshot/đợistateổnđịnh: top-levelws-*snapshot+index, khôngdùnginner s000tokenvìreusedcrosswindow. Palettequeryreindexgâymộtclicknhầmsangassets,GoBackfreshread107Checknetworkđãđạt. Khôngcầnhỏiuseropendiaglại.
+
+Page4node19:4: rootUI04-V3-compositenode25:5W960H540verifiedcanvas; childBG_Court25:6W960H540x0y0skyB8DCF2. Rectangle1floor25:7AEB7C1,Rect2orange25:8F39A50,Rect3pole25:9526178,Rect4board25:10pendingColor526178inputnhưngcanvasD9D9D9chưaapply. USER_INPUT_ACTIVE chặnforegroundEntercuốicủahelperColor, khôngdelivered; stopinput/freshreadcapture. Dropdown#526178cònmở. Screenshotdesign/figma/progress/UI04-V3-BG-native-in-progress-2026-11-11.png, khôngexport. docsprogressdesign/figma/UI04-V3_PROGRESS_2026-11-11.md. Backupoldhashgiữ. NewV3chưalocalFIG/syncverified; KHÔNGđóng/reload.
+
+Cầndesktopidleđểtiếpcommitboardcolor/hoànthiệnBG/rim/courtlines rồiHUDriêng/NémJumpDash/3PNGnativeexportkiểmalpha/saveFIGmới. NativeSky/floor/paint/pole/boardmớilàbasekhôngBGcomplete. Khôngảnhthesismới/v0.9/ch4/game. MốcGUIhandoffCindyngay: acceptdiagnostic+nativeeditproof,revisecontinueV3partial. Người dùng đã được báoEnglishrefusalvàđềnghịđểidle; khônginputbypass/worker/modelchange.
+## QA3.3 terminalPASS —2P2specđãsửaLead
+
+11/11 QAread source/combined/spec/Hình3.8PASSmanuscript,2P2spec. Leadđọcđúngvịtrí,sửaUI01connecting/offlineTậpluyệnvẫndùng+thoátvàcâubackupblocker→historical. Checkernguồnsau sửaPASS44refs/13ca/concatCh2unchanged;diffcheckPASS. Lưuqa/thesis-ui33-source.md,MODEL_EVALUATION,docsTHESIS_UI33_INTEGRATION. HostQAcompletedSol6.1OpenAImediumgen0pendingnull. BàngiaoCindyreviewngay trướcviệcphụthuộc. ChưaảnhFigma/V3/v0.9/QAvisualnew;backupverifiedgiữ, screenshotdiagnosticresultđangxinuserdofreshcapturechỉPage4rỗng. KhôngGUIretry/game/modelroute/queuepaused. Chưafinish-sessionlượtgomoutput;Wordv0.3excludevàold/demosgiữ.
+
+## 3.3 tích hợp text + Tập luyện — chuẩn bị QA độc lập
+
+11/11 theoCindyacceptwithrevision: SourceCh3 đãtíchhợp3.3.1–3.3.3/proposal, thêmMenuTậpluyện→UI04biếnthểofflineHUDriêngkhôngclock/đốithủgiả; khôngclaimMenuimplemented. Giữdiagram/caption3.8chỉnhánhphòngđấu, captionmap3.9–3.15ngoàimanuscript, khôngimagelinkmới. CậpnhậtspecUI01/đánhdấuchờreviewcũhistorical vàtổnghợp1–3/1–4. CheckerPASS4chương44refs13caexactconcatCh2unchanged; Ch4khôngdiff. DOCX/PDFv0.8vàoldkhôngxuấtlại, outputcũgiữ.
+
+Artifactdocs/THESIS_UI33_INTEGRATION.md; QAexistingidlequeue0runtimeSol6.1CodexOpenAImediumgen0pendingnullrootOLDreadonly, chuẩn bịgiaoreadonlytext/spec/offlinebranch/nofakeimages. Khôngroutechange/pilotpaused/GUIretry. MCPfreshHARNESS_MCP_NOT_READY/no-tools; backupverifiedgiữ, cầnảnhdiagnosticresultchưacótrongcapture. SauQAterminalLeadreview+bàngiaoCindyngaytrướcexport/ảnh. Khônggame/Ch4new.
+## Proposal3.3 terminal đã Leadreview — bàn giao Cindy
+
+11/11 Orcathesis terminalreadonly3.3/captionmap3.9–3.15, Leadđọcspec/3.3/3.8 acceptvớiđổitừđềxuấtđểkhôngclaimcanvas. Lưuresearch/thesis-ui33-proposal.md vàdocs/THESIS_UI33_WORKER_REVIEW.md; chưa tíchhợpmanuscript/ảnh/export. HostcompletedSol6.1OpenAImediumgen0pendingnull. UIvẫnPage4rỗng/warning, khôngdiagnosticresulttrongcapture, đãxinảnhkếtquảkhôngmởlạimenu. Backupverifiedgiữ. SauCindyreviewcóthểtiếpGUIđãủyquyền/nghiệmvụđộclập, khôngdispatchlặp/pilotpaused. Outputcũ/game/demosgiữ.
+
+## Fresh diagnostic read không có result — chuẩn bị text3.3 độc lập
+
+11/11: userbáodiagnosticđãmở; Leadlistwindows+FigmaAX/screenshotđúng8272/132738 thấyPage4node19-4rỗng, khôngdiagnosticdialog/result. Edgequerynetworkkhôngmatch, khôngdùngthôngtinkhác. ScreenshotprogressUI04-current-empty-page4-2026-11-11.png; warningreconnectcòn. CtrlKforegroundsupported (lệnhmớiuserchotiếpthử) vàActionsbutton khôngxácnhậnpalette; khôngretrythêm/inputbypass. Đãxin1ảnhkếtquảđanghiệntừuser, khôngyêucầumởlạimenubackup. Backupverifiedgiữ.
+
+Thesisexistingidlequeue0runtimeSol6.1CodexOpenAImediumgen0pendingnullrootOLDreadonly, chuẩn bịgiaoproposaltext3.3+captionmapkhôngảnhfake/khôngclaimFigmahoànthành. Khôngpilotpaused/routechange/workernew. SauworkerterminalLeadreview+bàngiaoCindytrướcintegrate. ChưaV3/3PNG/v0.9, khônggamefeature. Nội dungCh3chỉtíchhợpảnhkhiFigmaexportthậtcó.
+## Diagnostic UI bị refusal — tiếp sau Cindy accept backup
+
+11/11/2026: backupPASSgiữ, khôngchờxácnhậnlại. FreshFigma8272/132738 cóPage1–4 (xuấthiện trễsaucácAddpagecũ), ảnhvẫnPage1/4framecũ; khôngV3confirmed, khôngtạo/xóathêm. CtrlKdiagnosticbackground trảbackground_unavailable Chrome_WidgetWin_1/key_combo, khôngdelivered; dừngGUIkhôngreplayforeground/CLI. Đãyêucầuuser mởActionsCtrlK→Checknetworksettings giữkếtquảđểđọc. Warningreconnectvẫncó, chưaauth/networkrootcause. design/figma/CONNECTION_2026-11-11.md lưuactualstate/refusal/nextstep. Khôngảnhexport/Ch3UI/v0.9yet; Word/demos/backupgiữ. KhiGUIhoạtđộngtiếpUI04V3nativeBG/HUDkhôngmodel,3PNGthật,reviewtừngmốc; chưa gamefeature/workerduplicate/modelchange.
+## BACKUP FIG ĐÃ ĐẠT — 11/11/2026, trước UI04 V3
+
+UsermởSave dialog, Leadset_value pathvàUIA Save; verifieddesign/figma/source/UI04-before-V3.fig50855bytes SHA2562ad3772a5dc7cf75fd747c6996fad2f80447f5215b3ed06bfc91140d0042bf59. ZIPđọccócanvas.fig/thumbnail.png/meta.json, tênfileđúngdraft, exportedAt2026-11-11T07:35:25.347Z. manifestsource/backup-manifest.json, binarygitignored. MốcbackupLeadaccept; khôngchờuserlưunữa. SaveclickđầuSTALEwindowtoken khôngdelivered, fresh top snapshot+indexSaveđạt.
+
+FigmaPID8272/window132738, draftAKy…4JW4framecũ vẫn còn; Addnewpage background/foreground chưa xácnhậnpage mới. AXcuối lạiwarningSome changes won't be synced until Figma is able to reconnect. ChưaV3/UIexport/ch3ảnh. Khôngretryloop/reload/close/signout. ScreenshotprogressUI04-backup-verified-old-frames-2026-11-11.png làappkhôngexport. Bước kế chẩnđoánChecknetworksettings quaComputerUse/host; nếuinputkhônghiệulựccầnhost/user mởdiagnostic thật. Bàn giaoCindyreviewmốcbackupngay; khônggame/model/workertrùng. Outputv0.8/v0.7/v0.3/demosgiữ.
+## Ưu tiên UI luận văn — pipeline P2 sửa, GUI backup đang vướng
+
+11/11/2026. User yêu cầu UI+ảnh Ch3 trước Ch4/game. finalize-publication thêm tblHeader cho bảngKT; publication-html đọc tblHeader→thead/table-header-group. Bản sao .scratch/header-check-v0.8.docx +HTML kiểmPASS (.scratch/v08-repeat-header-check.txt), v0.8gốc hashgiữ, chưa rendertrangtiếpsausửa; gộpxuấtbảnUIkếtiếp đểtránhreplay. Không sửa Ch4nội dung.
+
+MCPcustom_figma lầnmới HARNESS_DISCOVERY_FAILED/timeout, không toolsconfirmed. ComputerUse status/permissionsPASS; launch_appFigma đã mở PID8272/window132738 đúngdraftAKy…4JW,4framecũ. Screenshot/tree không warning sync nhưngkhôngcloud/backupPASS. Mainmenu mở được; clickFilebackground/foreground vàCtrlK khôngxácnhậnsubmenu/search, khôngdialogSave. Khôngreload/close/signout/canvasmutation. ĐãbáoEnglish cầnuser mởFile→Save localcopy vàđểdialogmởđểLeadnhập/verify. Chưa.fig/V3/PNG/captionsCh3; giữdemos/v0.3/v0.7/v0.8. Khôngworkerdispatch/modelchange. Bước kế đọcdialoglive/lưubackupnonemptyhash rồiUI04BG/HUD native và3PNG, reviewCindy từngmốc.
+## QA bản xuất v0.8 terminal — bàn giao Cindy
+
+11/11/2026, HEAD46dd157 chưacommit lượt xuất. OrcaQA terminalPASS DRAFT vớiP2 repeatheader bảngKT trang101; Leadđọcreport/xemlạipage101 acceptvòngsửa0. HostcompletedSol6.1CodexOpenAImediumgen0pendingnull, khôngLuna/Argon. Lưuqa/thesis-v08-export.md/MODEL_EVALUATION. DOCX/PDFhashgiữnhưPUBLICATIONreview; QAreadonlyXML/hash/27sheet+5large, khôngnativeWord. ChờCindyreviewmốcQA trước sửa/xuấtlại/chốt; khôngclaimreadytosubmit. UIkhôngwindowFigmaởlivechecktrước, MCPno-tools; khônglaunch/reload draft. GiữWordv0.3/v0.7/game/demos. Bước kế: Cindyreview, xửlýP2nếuyêucầu, finish-sessionexcludev0.3saukhiđủreview; khôngreplayexport/AVD.
+## Tiếp QA bản xuất — 11/11/2026
+
+HEAD46dd157, chưa chốt lượt xuất; DOCX/PDF hash khớp báo cáo, Wordv0.3 giữ hash706209…10404. QAexisting idle queue0, runtime completed Codex/OpenAI/Sol6.1medium gen0 pendingnull; chuẩn bị giao readonly bản xuất, không đổi route/root. ComputerUse status/permissions đạt nhưng list_windows process Figma và query Figma (kể cả offscreen) không có window; không thao tác/reload/launch draft. custom_figma vẫn HARNESS_MCP_NOT_READY/no-tools; không coi quotareset là sync/backup. Đã báo cần khôi phục draft hiện có. Không game/export replay/AVD/pilotpaused. Sau QA phải Leadreview+báoCindy trướcfinish-session; chưa claim nativeWordpagination.
+## DRAFT v0.8 đã xuất — chờ Cindy review mốc xuất
+
+11/11/2026, nền46dd157. Có DOCX/PDF Chương1–4 v0.8 mới, giữ v0.7/v0.3. DOCX XML/style PASS TNR13/Before6/Multiple1.3, 27 hình/3OMML; After kế thừa mẫu0/6pt chưa chốt. PDF Cindy Chromium108 trang (không native Word), inspect đủ108, renderer0text vượt trang; Lead xem27contactsheet và lớn19/55/100/101. Xem docs/PUBLICATION_v0.8_REVIEW.md chohash/phươngpháp/giớihạn. ChưaQA bảnxuất độc lập/chưa nghiệmthu Wordpagination/bìa/mụclục/UI. Pipeline/output đangworkingtree, chưacommit lượtxuất. UIbackup/sync/FigmaMCPblocker giữnguyên, khôngGUI hoặcgamechange. Bước tiếp: Cindyreview mốcxuất, QA độc lập artifact trướcchốt. Khôngreplaymake_docx/renderđãxong.
 # Checkpoint tiếp tục dự án
 
 ## QA source v0.8 terminalPASS — bàn giao Cindy trước xuất
@@ -141,10 +229,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-10T17:01:22.894Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `91d20ee3cfc42f35dfb9e4b807f693a8ef6ef862`.
-- Local tracking origin/main: `91d20ee3cfc42f35dfb9e4b807f693a8ef6ef862` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 4 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-12T00:09:52.203Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `46dd157e687aab6ae2e1df640013651821985855`.
+- Local tracking origin/main: `46dd157e687aab6ae2e1df640013651821985855` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 38 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-11",
+  "file": "UI04-before-V3.fig",
+  "bytes": 50855,
+  "sha256": "2ad3772a5dc7cf75fd747c6996fad2f80447f5215b3ed06bfc91140d0042bf59",
+  "method": "Figma Save local copy, native Save dialog via Computer Use",
+  "verified": ["nonempty", "ZIP readable", "canvas.fig present", "thumbnail.png present", "meta.json file_name matches draft"],
+  "draft": "https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/",
+  "fileName": "Bóng rổ đối kháng 3D — UI",
+  "figmaExportedAt": "2026-11-11T07:35:25.347Z",
+  "scope": "Four old UI04 frames before V3; not a V3 design or PNG export",
+  "cloudSyncVerified": false
+}

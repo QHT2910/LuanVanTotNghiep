@@ -11,8 +11,9 @@ const word=text.replace(/<!-- diagram: ([^\r\n]+) -->\s*```mermaid\s*[\s\S]*?```
  .replace(/!\[([^\n]*?)\]\((\.\.\/diagrams\/(2-[^)]+)\.png)\)/g,(_,caption,url,name)=>`![Thiết kế đề xuất — ${name}.mmd](${url})`)
  .replace(/<!--[\s\S]*?-->/g,'')
  .replace(/```(\w*)\n([\s\S]*?)```/g,(whole,lang,body)=>{
-  const lines=body.trimEnd().split('\n');if(lines.length<=32)return whole;
-  const chunks=[];while(lines.length){let count=Math.min(28,lines.length);if(lines.length>28){for(let n=28;n>=20;n--)if(!lines[n-1].trim()){count=n;break;}}chunks.push('```'+lang+'\n'+lines.splice(0,count).join('\n')+'\n```');}
+  const limit=includeCh4?12:28;
+  const lines=body.trimEnd().split('\n');if(lines.length<=(includeCh4?limit:32))return whole;
+  const chunks=[];while(lines.length){let count=Math.min(limit,lines.length);if(lines.length>limit){for(let n=limit;n>=Math.max(6,limit-8);n--)if(!lines[n-1].trim()){count=n;break;}}chunks.push('```'+lang+'\n'+lines.splice(0,count).join('\n')+'\n```');}
   return chunks.join('\n\nMã ví dụ (tiếp):\n\n');
  });
 fs.mkdirSync(path.join(root,'.scratch'),{recursive:true});

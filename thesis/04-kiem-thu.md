@@ -113,4 +113,4 @@ Hệ chuyển động và cú ném dùng mô hình giải tích, chưa có solve
 
 Mức bằng chứng giữa các ca khác nhau: unit kiểm logic, widget kiểm phối hợp thành phần trong fixture, runtime kiểm một số chuỗi trên AVD. Chuỗi hai pointer không bao phủ ba ngón, mọi race hoặc mọi độ phân giải. Ảnh chụp và báo cáo QA chỉ hỗ trợ phạm vi đã quan sát.
 
-UI runtime là giao diện thử nghiệm. Concept UI04 V3 đã được duyệt nhưng chưa có bộ ảnh Figma xuất được xác minh để đưa vào bản thảo; các phác thảo UI01–UI06 đã được duyệt nhưng bộ màn hình Figma và ảnh xuất vẫn cần hoàn thiện. Vì vậy, kết quả thao tác trên demo chưa phải nghiệm thu bộ giao diện chính thức.
+UI runtime là giao diện thử nghiệm. Bộ ảnh thiết kế Figma đã được bổ sung ở mục 3.3, nhưng chưa được tích hợp và kiểm chứng đầy đủ trong ứng dụng. Vì vậy, kết quả thao tác trên demo chưa phải nghiệm thu việc triển khai bộ giao diện đó.

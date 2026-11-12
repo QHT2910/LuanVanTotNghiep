@@ -1,5 +1,9 @@
 # Đặc tả giao diện R1
 
+Trạng thái 12/11/2026: người dùng chọn bộ mới trên Page 3 của draft hiện hành. Đã lưu FIG mới và xuất 10 PNG native; chữ/nút/panel chỉnh sửa được, nền minh họa là ảnh khóa. UI04 dùng riêng bản Page 4 V3 r2. Mục 3.3 đã có 11 hình thật trong DRAFT v0.9; manifest tại figma/exports/user-selected-2026-11-12/manifest.json. Các dòng thiếu V3/PNG hoặc chờ duyệt dưới đây là lịch sử. Cloud sync và các biến thể UI04 đầy đủ chưa được xác minh; thiết kế chưa đồng nghĩa game đã tích hợp.
+
+Cập nhật ưu tiên 11/11/2026: sketch UI01–UI06 đã được duyệt để dựng Figma; các dòng “chờ review/chưa được phép” ngày10/11 dưới đây là lịch sử. UI01 phải có Tập luyện offline, tái dùng bố cục UI04 với HUD tập riêng, không đồng hồ trận hoặc đối thủ giả. Đây là thiết kế, không nhận Menu đã được triển khai. Backup .fig cũ đã verified tại source/backup-manifest.json; chưa có V3/PNG chính thức. Thứ tự: UI04 V3 trước, review rồi các màn chính; không tự reconnect hoặc phát lại lệnh.
+
 Cập nhật trạng thái 10/11/2026: Figma đã có draft và bốn frame UI04 cũ, chưa nghiệm thu. Concept UI04 V3 đã được sinh viên duyệt: chỉ background và HUD trước, không nhân vật; chưa dựng V3 hoặc xuất ba PNG, đang chờ bảo toàn nguồn. Xem figma/UI04-V3.md và FIGMA_HANDOFF.md. Các màn khác vẫn ở mức sketch chờ review, chưa được phép dựng Figma. Thông tin công cụ ngày04/11 bên dưới là lịch sử, không phải trạng thái hiện hành.
 
 ## Bổ sung nghiệp vụ cho sketch — 10/11/2026
@@ -39,7 +43,7 @@ Thiết kế mạng 1v1 và chính sách mất kết nối chưa được kiểm
 
 Tại lượt04/11 chưa đăng nhập, đăng ký, tạo tài khoản/project hoặc dựng hình. Từ lượt10/11 đã có draft/frame Figma cũ, nhưng chưa nghiệm thu và chưa có PNG chính thức. Không dùng SVG AI cũ làm nguồn thiết kế chính thức.
 
-The missing-tool/file blocker described on 04/11 is historical. The current blocker is unverified source preservation/sync before building the approved UI04 V3. No new PNG export is verified.
+Ghi nhận lịch sử trước cập nhật11/11: thiếu công cụ, bảo toàn nguồn và sync từng là blocker. Backup .fig cũ nay đã được xác minh; cloud sync, native UI04 V3 và PNG chính thức vẫn chưa được xác minh. Backup không thay bằng chứng V3 hoặc đồng bộ cloud.
 
 ## 3. Frame và component đề xuất
 
@@ -66,7 +70,7 @@ Không dùng riêng màu hoặc âm thanh để truyền trạng thái. Font ph�
 
 | Mã | Nội dung frame | Tương tác và đích |
 |---|---|---|
-| UI01 Menu chính | Tên tạm Bóng rổ đối kháng 3D; trạng thái kết nối; Tạo phòng, Vào phòng, Cài đặt | Tạo/Vào → UI02 theo chế độ; Cài đặt → UI06. Ghép trận nhanh ẩn hoặc ghi chưa hỗ trợ trong bản đầu |
+| UI01 Menu chính | Tên tạm Bóng rổ đối kháng 3D; trạng thái kết nối; Tập luyện, Tạo phòng, Vào phòng, Cài đặt | Tập luyện → biến thể UI04 offline, HUD riêng không đồng hồ trận/đối thủ giả; Tạo/Vào → UI02 theo chế độ; Cài đặt → UI06. Ghép trận nhanh ẩn hoặc ghi chưa hỗ trợ trong bản đầu |
 | UI02 Tạo/vào phòng | Tiêu đề theo chế độ; xác nhận tạo hoặc ô nhập mã; thông báo cạnh form | Thành công → UI03; lỗi giữ UI02; Quay lại → UI01. Mã phòng lấy từ hệ thống, không sinh mã giả |
 | UI03 Sảnh chờ | Mã phòng; hai vị trí người chơi; Sẵn sàng/Hủy sẵn sàng; đếm ngược; Rời phòng; không nút Start thủ công | Bạn đã sẵn sàng → nút Hủy sẵn sàng; đối thủ chưa sẵn sàng → Chờ đối thủ sẵn sàng. Đủ hai người và cùng sẵn sàng mới đếm; bắt đầu theo trạng thái phòng → UI04; người rời khi đếm → chờ; rời phòng → UI01 |
 | UI04 Trận đấu | Cảnh 3D ở giữa; điểm/thời gian phía trên; joystick trái; ACTION/JUMP/DASH phải; thanh canh ném | Có bóng: giữ/thả ACTION để yêu cầu ném nếu hợp lệ; không bóng: Block. Mất chạm/xuống nền đưa input liên tục về trung tính. Kết thúc xác nhận → UI05 |
@@ -87,8 +91,8 @@ Các tên variant dưới đây dùng để tổ chức frame trong công cụ; 
 
 | Frame/variant | Điều kiện | Phản hồi và thao tác | Điều kiện thoát |
 |---|---|---|---|
-| UI01/connecting | Đang nối dịch vụ | “Đang kết nối”; khóa thao tác cần mạng; Cài đặt còn dùng | Kết nối thành công hoặc lỗi |
-| UI01/offline | Không nối được | “Chưa kết nối được”; Thử lại và Cài đặt | Thử lại thành công |
+| UI01/connecting | Đang nối dịch vụ | “Đang kết nối”; khóa thao tác cần mạng; Tập luyện và Cài đặt vẫn dùng | Kết nối thành công/lỗi hoặc chọn Tập luyện/Cài đặt |
+| UI01/offline | Không nối được | “Chưa kết nối được”; Tập luyện, Thử lại và Cài đặt | Chọn Tập luyện/Cài đặt hoặc thử lại thành công |
 | UI02/empty-invalid | Trống hoặc sai định dạng | Nhắc nhập mã/lỗi cạnh ô; không gửi mã trống | Người dùng sửa mã |
 | UI02/create-before-success | Chưa nhận phản hồi tạo thành công | Chưa có mã phòng để hiển thị; không điền mã minh họa như mã thật | Tạo thành công nhận mã hệ thống hoặc lỗi |
 | UI02/submitting | Đã gửi tạo/vào phòng | “Đang tạo phòng”/“Đang vào phòng”; chặn nhấn lặp | Thành công, lỗi hoặc hủy ý định |

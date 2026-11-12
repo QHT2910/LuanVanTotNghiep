@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-12",
+  "draft": "https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/",
+  "page": "Page 3",
+  "source": {
+    "path": "design/figma/source/User-selected-FigmaAI-2026-11-12.fig",
+    "bytes": 3615396,
+    "sha256": "df1fdffc4365e44deb78ed214af51c4784c77eb0b279ee146b978ade9ba7f3a9",
+    "gitIgnored": true,
+    "cloudSyncVerified": false
+  },
+  "method": "Native Figma PNG export; aliases are byte-identical copies",
+  "editability": "User-selected frames: editable text/buttons/panels; locked background illustrations. UI04 from Page 4 V3 r2.",
+  "originals": [
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI01 • Menu chính.png",
+      "bytes": 222316,
+      "width": 724,
+      "height": 280,
+      "sha256": "ba4d5b9ca624e7094e5f52b6fe1d006e875117070fecbf02012aa888cd35e4e9"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI02 • Không tìm thấy phòng.png",
+      "bytes": 334613,
+      "width": 758,
+      "height": 466,
+      "sha256": "f51592a2fd870b0d64c00caaad9f3acb1cf1c0335ff132ec13b8e4e6dd62f169"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI02A • Tạo phòng.png",
+      "bytes": 181738,
+      "width": 724,
+      "height": 280,
+      "sha256": "4c4e9968423c498b115f864666369593f93d646d3be63915f8527b5c5a9ffbd2"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI02B • Vào phòng.png",
+      "bytes": 175058,
+      "width": 724,
+      "height": 269,
+      "sha256": "c1f293c5f375a0e60f537db3deb757fcacf4740cdc04599d078ca15ae870c2c8"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI03 • Chuẩn bị trận.png",
+      "bytes": 328824,
+      "width": 758,
+      "height": 466,
+      "sha256": "89130dcb102f048a2223a172961846fa2ae3f09fa5c91cfde4060a7ca5dd8418"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI03 • Sảnh chờ.png",
+      "bytes": 172358,
+      "width": 724,
+      "height": 269,
+      "sha256": "4f594bd6c9ebf62db2fc3e5b92de560aabd0595da7e5e61d526a843c06d19a34"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI05 • Bạn thua.png",
+      "bytes": 303775,
+      "width": 758,
+      "height": 463,
+      "sha256": "7d921131afe89d9ba982b75dc689267d84f00e4a5e83aae267db7e7dc2531bb6"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI05 • Hòa – Phòng đã đóng.png",
+      "bytes": 302449,
+      "width": 758,
+      "height": 463,
+      "sha256": "8c76ed67ff50988ca810c6bc4a5d3ddd5db838dee1032a9b6117677566ab7269"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI05 • Kết quả thắng.png",
+      "bytes": 157526,
+      "width": 724,
+      "height": 257,
+      "sha256": "0268cd98c4f582b4419b6b73bbb380deb8e1e55856c369a9be2a733290e2b275"
+    },
+    {
+      "path": "design/figma/exports/user-selected-2026-11-12/UI06 • Âm thanh.png",
+      "bytes": 173997,
+      "width": 724,
+      "height": 257,
+      "sha256": "caaa1353c3518875edc4264d2e0d233e372eb44a5a3a245c657851991d13491c"
+    }
+  ],
+  "thesisAliases": [
+    {
+      "path": "design/figma/exports/thesis/ui01.png",
+      "bytes": 222316,
+      "width": 724,
+      "height": 280,
+      "sha256": "ba4d5b9ca624e7094e5f52b6fe1d006e875117070fecbf02012aa888cd35e4e9",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI01 • Menu chính.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui02-notfound.png",
+      "bytes": 334613,
+      "width": 758,
+      "height": 466,
+      "sha256": "f51592a2fd870b0d64c00caaad9f3acb1cf1c0335ff132ec13b8e4e6dd62f169",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI02 • Không tìm thấy phòng.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui02a.png",
+      "bytes": 181738,
+      "width": 724,
+      "height": 280,
+      "sha256": "4c4e9968423c498b115f864666369593f93d646d3be63915f8527b5c5a9ffbd2",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI02A • Tạo phòng.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui02b.png",
+      "bytes": 175058,
+      "width": 724,
+      "height": 269,
+      "sha256": "c1f293c5f375a0e60f537db3deb757fcacf4740cdc04599d078ca15ae870c2c8",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI02B • Vào phòng.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui03-countdown.png",
+      "bytes": 328824,
+      "width": 758,
+      "height": 466,
+      "sha256": "89130dcb102f048a2223a172961846fa2ae3f09fa5c91cfde4060a7ca5dd8418",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI03 • Chuẩn bị trận.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui03.png",
+      "bytes": 172358,
+      "width": 724,
+      "height": 269,
+      "sha256": "4f594bd6c9ebf62db2fc3e5b92de560aabd0595da7e5e61d526a843c06d19a34",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI03 • Sảnh chờ.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui04.png",
+      "bytes": 37950,
+      "width": 960,
+      "height": 540,
+      "sha256": "e0670d28fe269abc72b5bdec61f5a7548baa635e9a0b8962de51d065be92322e",
+      "source": "design/figma/exports/UI04-V3-r2-composite.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui05-draw.png",
+      "bytes": 302449,
+      "width": 758,
+      "height": 463,
+      "sha256": "8c76ed67ff50988ca810c6bc4a5d3ddd5db838dee1032a9b6117677566ab7269",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI05 • Hòa – Phòng đã đóng.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui05-loss.png",
+      "bytes": 303775,
+      "width": 758,
+      "height": 463,
+      "sha256": "7d921131afe89d9ba982b75dc689267d84f00e4a5e83aae267db7e7dc2531bb6",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI05 • Bạn thua.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui05.png",
+      "bytes": 157526,
+      "width": 724,
+      "height": 257,
+      "sha256": "0268cd98c4f582b4419b6b73bbb380deb8e1e55856c369a9be2a733290e2b275",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI05 • Kết quả thắng.png"
+    },
+    {
+      "path": "design/figma/exports/thesis/ui06.png",
+      "bytes": 173997,
+      "width": 724,
+      "height": 257,
+      "sha256": "caaa1353c3518875edc4264d2e0d233e372eb44a5a3a245c657851991d13491c",
+      "source": "design/figma/exports/user-selected-2026-11-12/UI06 • Âm thanh.png"
+    }
+  ]
+}

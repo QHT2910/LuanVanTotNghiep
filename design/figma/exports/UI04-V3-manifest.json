@@ -1,0 +1,80 @@
+{
+    "schema":  1,
+    "date":  "2026-11-11",
+    "status":  "UI04 V3 native editable review milestone; other screens and thesis figures pending",
+    "figmaFile":  "https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/?node-id=25-5",
+    "frame":  "Page 4 / UI04-V3-composite",
+    "frameSize":  [
+                      960,
+                      540
+                  ],
+    "layers":  [
+                   "HUD_Overlay",
+                   "BG_Court"
+               ],
+    "source":  {
+                   "path":  "design/figma/source/UI04-V3-review-2026-11-11.fig",
+                   "bytes":  62576,
+                   "sha256":  "4af82950b59e1e5b0c2d179ec9b24b8473223b48bf489f9fe0a3cb30d71ce8a9",
+                   "zipEntries":  [
+                                      {
+                                          "FullName":  "canvas.fig",
+                                          "Length":  52722
+                                      },
+                                      {
+                                          "FullName":  "thumbnail.png",
+                                          "Length":  8794
+                                      },
+                                      {
+                                          "FullName":  "meta.json",
+                                          "Length":  336
+                                      },
+                                      {
+                                          "FullName":  "images/",
+                                          "Length":  0
+                                      }
+                                  ]
+               },
+    "exports":  [
+                    {
+                        "path":  "design\\figma\\exports\\UI04-V3-composite.png",
+                        "bytes":  37843,
+                        "sha256":  "815909fcaeda211264de38372db4d492d4679a141e7dd22d693df2077a11b8e5",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  0,
+                        "centerAlpha":  255
+                    },
+                    {
+                        "path":  "design\\figma\\exports\\UI04-V3-HUD.png",
+                        "bytes":  13669,
+                        "sha256":  "29c26ab11c02ced424c7bd73eaf35313648d1cf0a23a935835e8abe0f2708df2",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  459340,
+                        "centerAlpha":  0
+                    },
+                    {
+                        "path":  "design\\figma\\exports\\UI04-V3-background.png",
+                        "bytes":  27761,
+                        "sha256":  "673010fef8bf9940d4f46904024ede44abd33c4487c2667d37ec90647bc8e11b",
+                        "width":  960,
+                        "height":  540,
+                        "transparentPixels":  0,
+                        "centerAlpha":  255
+                    }
+                ],
+    "verification":  [
+                         "Actual Figma GUI PNG exports at 1x",
+                         "All three images visually inspected by Lead",
+                         "HUD alpha measured; transparent center",
+                         "No character/model or flattened concept import"
+                     ],
+    "limitations":  [
+                        "Cindy review pending",
+                        "UI04 state variants pending",
+                        "UI01/02A/02B/03/05/06 pending",
+                        "Thesis image integration and new publication pending",
+                        "Cloud synchronization not claimed"
+                    ]
+}

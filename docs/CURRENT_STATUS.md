@@ -1,3 +1,23 @@
+## Bàn giao UI và DRAFT v0.9 — 12/11/2026
+
+Ưu tiên hiện hành: dùng bộ FigmaAI người dùng chọn, không vẽ lại Page 4/Menu cũ. Đã backup FIG 3615396 bytes SHA256 df1fdffc…f3a9, xuất native 10 PNG Page 3 và xem cả 10; dùng riêng UI04 V3 r2 Page 4. 11 ảnh thật đã chèn mục 3.3 (Hình 3.9–3.19); tổng DOCX 38 PNG/3 OMML. Manifest design/figma/exports/user-selected-2026-11-12/manifest.json. FIG local ignored, không nhận cloud sync đã đạt.
+
+DRAFT v0.9 DOCX/PDF đã xuất và kiểm XML/nguồn; PDF Chromium 114 trang inspect đủ, render không text vượt mép; rà UI lớn và contact sheets cuối. P2 repeat-header bảng trang 107 đã sửa. Report docs/PUBLICATION_v0.9_REVIEW.md, qa/thesis-v09-lead-review.md. Chưa Word native/bìa/TOC/After cuối/UI04 variants đầy đủ hoặc game tích hợp. Giữ v0.8/v0.7/v0.3/demos; v0.3 ngoài stage. Không worker mới, không model/provider/game/Ch4 test mới. Bước tiếp: Cindy review bản có ảnh; chỉ sửa điểm có bằng chứng, không replay GUI/export hay gate đã xong.
+
+Các mục bên dưới là lịch sử; trạng thái thiếu ảnh/đang chờ v0.9 không còn là hiện hành.
+
+## Mốc UI01 + UI04 r2 — 11/11
+
+Menu native và UI04 r2 đã có nguồn FIG/PNG960×540 mới; manifest/review tại design/figma/UI01_UI04_R2_REVIEW.md. Lead đã rà ảnh, chờ Cindy review. Các màn/trạng thái còn lại và ảnh3.3 chưa xong; không xuất Word/PDF mới. Thông tin cũ dưới đây là lịch sử.
+
+## Mốc mới 11/11 — UI04 V3 có nguồn và ảnh xuất thật
+
+UI04 V3 đã có FIG local mới và ba PNG native960×540 (HUD alpha verified); chờ Cindy review theo design/figma/UI04-V3_EXPORT_REVIEW.md. Các màn còn lại, trạng thái và ảnh Ch3 chưa hoàn thành; chưa xuất v0.9. Các dòng trạng thái cũ phía dưới là lịch sử, không phủ nhận mốc mới. Không khẳng định cloud sync.
+
+# Cập nhật 11/11/2026 — DRAFT v0.8 đã xuất
+
+DOCX/PDF Chương 1–4 mới đã có; PDF108 trang, XML/style và Lead review đạt phạm vi ghi tại docs/PUBLICATION_v0.8_REVIEW.md. Chờ Cindy review mốc xuất và QA bản xuất độc lập; chưa bản nộp, chưa Word native pagination/bìa/mục lục/UI. V0.3/v0.7 giữ nguyên. Các lệnh chờ UI/cấm xuất phía dưới là lịch sử, đã được yêu cầu mới cho phép DRAFT v0.8 thay thế. UI04 V3 đã duyệt concept nhưng backup/sync/PNG chính thức chưa xác minh; không tiếp canvas trước bảo toàn.
+
 # Trạng thái hiện hành — UI04 Figma đang làm
 
 Cập nhật mới nhất 10/11/2026: DỪNG triển khai UI04 cũ theo yêu cầu sinh viên; Cindy chuẩn bị phác thảo lại trong chat, chờ sinh viên review/góp ý trước thực hiện Figma/game. Giữ nguyên bốn frame cũ làm version, chưa xác minh sync/.fig/PNG. Không mở màn khác hoặc dispatch task/pilot UI mới. Các bước tiếp tục bên dưới là lịch sử trước lệnh dừng.

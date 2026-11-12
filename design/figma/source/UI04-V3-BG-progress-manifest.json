@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-11",
+  "source": "UI04-V3-BG-progress-2026-11-11.fig",
+  "bytes": 56302,
+  "sha256": "931d13937e150a9633b9b1d9929968aa090e78ca099f45070b5426cb7bee0d2b",
+  "verifiedZipEntries": ["canvas.fig", "thumbnail.png", "meta.json", "images/"],
+  "draft": "https://www.figma.com/design/AKyJ1SFfjiJH8oS8q8m4JW/?node-id=25-5",
+  "page": "Page 4",
+  "frame": "UI04-V3-composite",
+  "dimensions": [960, 540],
+  "backgroundFrame": "BG_Court",
+  "progressScreenshot": "../progress/UI04-V3-BG-review-2026-11-11.png",
+  "method": "Native Figma editing and Save local copy via Computer Use",
+  "status": "BG review milestone; HUD and final native PNG exports not created",
+  "cloudSyncVerified": false,
+  "oldBackupOverwritten": false
+}

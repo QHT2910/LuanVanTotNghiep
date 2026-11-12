@@ -1,3 +1,14 @@
+## QA3.3 terminal — Leadaccept sau2sửa spec
+
+11/11OrcaQA bkm37d3uiwhgp757im7y9hov hostcompletedSol6.1Codex/OpenAImediumgen0pendingnull;08:26:03–08:31:16UTC(~5phút13), usage/costkhôngcó. Readonlysource/combined/spec, PASSmanuscript+2P2spec. Leadđốichiếu/sửahaiP2vàcheckerPASS;vòngsửa1Lead, khôngworkerretry/modelbenchmark. qa/thesis-ui33-source.md; bàngiaoCindyngaymốc, khôngảnhWordPDFclaim.
+
+## Task proposal3.3 terminal — Lead accept
+
+11/11/2026 Orcathesis i5ekkscj1rnt90hdtb8zk3n2 hostcompletedCodex/OpenAI/Sol6.1mediumgen0pendingnull,08:05:34–08:09:22UTC (~3phút48); usage/costkhôngcó. Taskreadonly3.3text/captionmap, khôngcanvas/ảnh/export. Leadacceptvòngsửa0+biêntậpphạmviđềxuất, artifactresearch/thesis-ui33-proposal.md/docsTHESIS_UI33_WORKER_REVIEW. KhôngArgon/Lunaclaim/routechange/tiếtkiệm. BàngiaoCindytrướcintegrate.
+
+## QA artifact v0.8 — terminal, Lead accept DRAFT với P2
+
+Orca tester bkm37d3uiwhgp757im7y9hov/session2e4ee883-bf67-44e2-bcd7-5f0463da63c5. Host terminal11/11/2026: completed/persisted, Codex/OpenAI/gpt-6.1-sol medium gen0 pendingnull; start03:29:36UTC, last03:32:53UTC (~3phút17). Usage/cost không được host cung cấp, không kết luận tiết kiệm. Task readonly XML/style/hash/27contactsheet+5page lớn. Verdict Leadaccept DRAFT/vòngsửa0, P2 bảng KT tiếp trang thiếu header; chưa nativeWord/readytosubmit. Artifact qa/thesis-v08-export.md; Lead xem lạipage101 xácnhậnP2. Bàn giaoCindyngaytrướcsửaphụthuộc/chốtGit; khôngmodelmới/queuechange.
 # Theo dõi thử cấu hình worker
 
 ## Task QA nguồn v0.8 — terminal và Lead accept
@@ -47,3 +58,6 @@ Cindy báo host đã chấp nhận generation1: research/thesis/game-design → 
 Kiểm trực tiếp bằng Orca trong lượt nhận review: workflow ekqlxbvecxq4y7s62pd7c3rg, worker game-design abdcapmgtptm06rzkdgyhkxp/session 7c38b0a7-e9a8-4c63-96cf-b475fdb67365. Metadata đang ghi agent_kind=pi/model=gemini-4-argon; worker idle/not_running. Queue đúng một tin nguồn user, position0, consuming=false, queue_paused=false; nội dung là pilot checklist UI04 chỉ đọc, tối đa12mục. Chưa có terminal output mới. Đây là metadata/queue của Orca, chưa phải receipt runtime provider/effective generation hoặc bằng chứng Argon đã chạy. Không dispatch, sửa queue, resume hay đổi route trong lượt này. Không quyết định tiết kiệm hoặc rollback chất lượng khi chưa có kết quả chạy.
 
 Khi có báo cáo: đối chiếu model/provider/engine thực từ cùng kênh chạy, rà nguồn và gate, ghi accept/revise/rollback trước tích hợp hoặc giao task tiếp. Tối đa hai task nhỏ mỗi route; runtime/tool/vision/provider fail thì xử lý rollback trước dispatch mới, hai vòng sửa vẫn fail hoặc bịa evidence thì rollback theo bàn giao Cindy. Không sửa route/root/quyền trong lượt UI04.
+
+## 12/11 — xuất bản UI v0.9
+Lead trực tiếp bảo toàn/xuất bộ người dùng chọn và kiểm bản xuất; không dispatch worker/model pilot mới. Không có bằng chứng Luna/Argon/Terra chạy trong mốc này; không kết luận tiết kiệm chi phí. Review Lead ACCEPT DRAFT để Cindy review; xem PUBLICATION_v0.9_REVIEW.

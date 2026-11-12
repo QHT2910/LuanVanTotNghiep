@@ -1,3 +1,11 @@
+## Bàn giao UI và DRAFT v0.9 — 12/11/2026
+
+Ưu tiên hiện hành: dùng bộ FigmaAI người dùng chọn, không vẽ lại Page 4/Menu cũ. Đã backup FIG 3615396 bytes SHA256 df1fdffc…f3a9, xuất native 10 PNG Page 3 và xem cả 10; dùng riêng UI04 V3 r2 Page 4. 11 ảnh thật đã chèn mục 3.3 (Hình 3.9–3.19); tổng DOCX 38 PNG/3 OMML. Manifest design/figma/exports/user-selected-2026-11-12/manifest.json. FIG local ignored, không nhận cloud sync đã đạt.
+
+DRAFT v0.9 DOCX/PDF đã xuất và kiểm XML/nguồn; PDF Chromium 114 trang inspect đủ, render không text vượt mép; rà UI lớn và contact sheets cuối. P2 repeat-header bảng trang 107 đã sửa. Report docs/PUBLICATION_v0.9_REVIEW.md, qa/thesis-v09-lead-review.md. Chưa Word native/bìa/TOC/After cuối/UI04 variants đầy đủ hoặc game tích hợp. Giữ v0.8/v0.7/v0.3/demos; v0.3 ngoài stage. Không worker mới, không model/provider/game/Ch4 test mới. Bước tiếp: Cindy review bản có ảnh; chỉ sửa điểm có bằng chứng, không replay GUI/export hay gate đã xong.
+
+Các mục bên dưới là lịch sử; trạng thái thiếu ảnh/đang chờ v0.9 không còn là hiện hành.
+
 # UI04 trong Figma — bản đang làm
 
 Trạng thái mới nhất 10/11/2026: dừng triển khai bản này vì sinh viên yêu cầu đánh giá/phác thảo lại trong chat trước khi hoàn thiện. Giữ nguyên các frame làm version tham khảo, không xóa/ghi đè. Chờ sinh viên review phương án mới do Cindy chuẩn bị; không tự tiếp tục các bước sửa canvas bên dưới. Sync/.fig/PNG vẫn chưa được xác minh.
