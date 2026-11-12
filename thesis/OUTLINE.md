@@ -4,6 +4,8 @@ Cập nhật 07/11/2026: thêm 2.4.4 khai báo/thao tác trực tiếp; mở r�
 
 Đây là phiên bản làm việc, có thể sửa khi sinh viên thông báo. Không khẳng định đã được GVHD phê duyệt.
 
+Quy tắc cấu trúc cập nhật 12/11/2026: mỗi chương bắt đầu trang mới bằng Page Break hoặc pageBreakBefore trên tiêu đề chương, không dùng Enter trống; không bắt buộc trang lẻ hoặc chèn trang trắng. Khi xuất DOCX/PDF kiểm ngắt trước Chương 2, 3, 4 và tránh ngắt kép.
+
 ## Chương 1. Giới thiệu
 1.1 Đặt vấn đề, mục tiêu luận văn
 1.1.1 Đặt vấn đề

@@ -1,3 +1,7 @@
+## UI sửa mới và v0.10 — 12/11/2026
+
+Đã backup FIG mới 4179914bytes SHA9087c214…6f1aa; native export 11frame Page3 gồm UI04node35:2. Năm ảnh đổi, đã xem lớn và cập nhật Ch3/combined/Hình3.9–3.19 bằng alias mới. Rule mỗi chương trang mới đã thêm THESIS_FORMAT/OUTLINE; XML4pageBreakBefore/PDFchapterpages2,7,68,104, không blank/doublebreak. v0.10DOCX/PDF mới đủ114trang, inspectok, style38PNG3OMMLPASS. Report docs/PUBLICATION_v0.10_REVIEW.md; manifest design/figma/exports/user-revised-v010/manifest.json. Không redraw/game/Ch4test/model/worker mới. v0.9 hiện usermodified hash7d5f8e54…810ac giữ ngoài stage cùngv0.3; v0.10base committed8f43bb6. Tiếp Cindyreview bản xuất; chưa nativeWord/bìaTOC/After cuối. Không replay GUI/export đã xong.
+
 ## Bàn giao UI và DRAFT v0.9 — 12/11/2026
 
 Ưu tiên hiện hành: dùng bộ FigmaAI người dùng chọn, không vẽ lại Page 4/Menu cũ. Đã backup FIG 3615396 bytes SHA256 df1fdffc…f3a9, xuất native 10 PNG Page 3 và xem cả 10; dùng riêng UI04 V3 r2 Page 4. 11 ảnh thật đã chèn mục 3.3 (Hình 3.9–3.19); tổng DOCX 38 PNG/3 OMML. Manifest design/figma/exports/user-selected-2026-11-12/manifest.json. FIG local ignored, không nhận cloud sync đã đạt.
@@ -229,10 +233,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-12T00:09:52.203Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `46dd157e687aab6ae2e1df640013651821985855`.
-- Local tracking origin/main: `46dd157e687aab6ae2e1df640013651821985855` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 38 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-12T02:11:08.544Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `8f43bb63f742eedf59eb0fe8d0e7156eceb285e3`.
+- Local tracking origin/main: `8f43bb63f742eedf59eb0fe8d0e7156eceb285e3` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 19 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

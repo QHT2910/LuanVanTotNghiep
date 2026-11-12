@@ -26,6 +26,8 @@ Phông chữ của các tiêu đề là Times New Roman. Cỡ chữ và kiểu t
 
 ## 3. Lưu ý khi áp dụng
 
+- Cập nhật 12/11/2026 theo yêu cầu người dùng: mỗi chương bắt đầu ở một trang mới. Dùng Page Break hoặc thuộc tính pageBreakBefore trên tiêu đề chương; không dùng các dòng Enter trống. Không bắt buộc trang lẻ và không chèn trang trắng. Pipeline DOCX/PDF phải kiểm ngắt trước Chương 2, 3, 4, tránh ngắt kép.
+
 - Tiêu đề thấp nhất có cỡ chữ 13 pt; không giảm cỡ chữ tiêu đề xuống dưới mức này.
 - Khi thiết lập giãn dòng trong Word, chọn chế độ **Multiple**, nhập **1,3** (hoặc **1.3** tùy thiết lập dấu thập phân của ứng dụng).
 - Khoảng cách trước đoạn (Before) là 6 pt, theo xác nhận của người dùng. Khoảng cách sau đoạn (After) chưa được quy định trong thông tin cung cấp.

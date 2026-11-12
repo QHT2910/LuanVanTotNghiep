@@ -6,7 +6,7 @@ const W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const R='http://schemas.openxmlformats.org/officeDocument/2006/relationships';
 const root=path.resolve(__dirname,'..');
 const file=path.resolve(root,process.argv[2]||'thesis/Ban_thao_Chuong_1-3_v0.3.docx');
-const v08=/v0\.[89]\.docx$/.test(file);
+const v08=/v0\.(?:8|9|10)\.docx$/.test(file);
 const parse=x=>new DOMParser().parseFromString(x,'text/xml');
 const serial=x=>new XMLSerializer().serializeToString(x);
 const all=(n,name)=>Array.from(n.getElementsByTagNameNS(W,name));

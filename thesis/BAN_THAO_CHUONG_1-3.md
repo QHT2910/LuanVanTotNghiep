@@ -2134,7 +2134,7 @@ Bộ thiết kế UI01–UI06 được lưu trong Figma và các hình dưới �
 
 UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo phòng, Vào phòng và Cài đặt. Frame này chưa thể hiện trạng thái chờ hoặc mất kết nối. Đặc tả yêu cầu khóa thao tác cần dịch vụ mạng kèm lý do khi không kết nối; Tập luyện và Cài đặt vẫn là các nhánh độc lập. Thử lại kết nối không tự đưa người chơi vào phòng. Ghép nhanh chưa được đưa vào giao diện này.
 
-![Figma UI — ui01.png](../design/figma/exports/thesis/ui01.png)
+![Figma UI — ui01.png](../design/figma/exports/user-revised-v010/thesis/ui01.png)
 
 Hình 3.9. Thiết kế màn hình Menu chính. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
@@ -2142,37 +2142,37 @@ Tập luyện là lựa chọn offline độc lập với kết nối phòng. HU
 
 UI02A — Tạo phòng tập trung vào yêu cầu tạo, phản hồi đang xử lý, lỗi và quay lại. Không hiển thị mã minh họa như mã thật trước thành công. Chỉ sau khi nhận xác nhận và mã do hệ thống cấp mới chuyển UI03. Trong khi gửi, chặn thao tác tạo lặp; khi lỗi, giữ màn để đọc lý do và chọn bước tiếp.
 
-![Figma UI — ui02a.png](../design/figma/exports/thesis/ui02a.png)
+![Figma UI — ui02a.png](../design/figma/exports/user-revised-v010/thesis/ui02a.png)
 
 Hình 3.10. Thiết kế màn hình Tạo phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 UI02B — Vào phòng gồm ô mã, thông báo cạnh form, xác nhận và quay lại. Trống hoặc sai định dạng được xử lý trước khi gửi. Không tìm thấy phòng, Phòng đầy và Lỗi mạng phải phân biệt. Giữ mã đã nhập để sửa; chỉ chuyển UI03 sau xác nhận thành công.
 
-![Figma UI — ui02b.png](../design/figma/exports/thesis/ui02b.png)
+![Figma UI — ui02b.png](../design/figma/exports/user-revised-v010/thesis/ui02b.png)
 
 Hình 3.11. Thiết kế màn hình Vào phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 UI03 — Sảnh chờ có mã phòng, hai vị trí Bạn/Đối thủ, trạng thái sẵn sàng, vùng đếm ngược và Rời phòng. Khi Bạn sẵn sàng, nút đổi thành Hủy sẵn sàng; nếu đối thủ chưa sẵn sàng, hiện Chờ đối thủ sẵn sàng. Không có Start thủ công. Đếm ngược chỉ theo trạng thái phòng được xác nhận; khi điều kiện mất hiệu lực, bỏ đếm cũ và trở về chờ.
 
-![Figma UI — ui03.png](../design/figma/exports/thesis/ui03.png)
+![Figma UI — ui03.png](../design/figma/exports/user-revised-v010/thesis/ui03.png)
 
 Hình 3.12. Thiết kế màn hình Sảnh chờ. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
-UI04 — Trận đấu V3 ở Hình 3.13 tách nền sân và HUD, chưa có nhân vật. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame này thể hiện bố cục HUD cơ bản. Các biến thể canh ném, khóa, hồi chiêu và gián đoạn kết nối chưa có đủ ảnh trong bộ hình. Trong thiết kế đầy đủ, hành động chính đổi theo quyền giữ bóng, độc lập với trạng thái hồi chiêu. Block và xử lý mạng vẫn là đề xuất.
+UI04 — Trận đấu ở Hình 3.13 gồm nền sân minh họa và HUD, chưa có nhân vật. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame này thể hiện bố cục HUD cơ bản. Các biến thể canh ném, khóa, hồi chiêu và gián đoạn kết nối chưa có đủ ảnh trong bộ hình. Trong thiết kế đầy đủ, hành động chính đổi theo quyền giữ bóng, độc lập với trạng thái hồi chiêu. Block và xử lý mạng vẫn là đề xuất.
 
-![Figma UI — ui04.png](../design/figma/exports/thesis/ui04.png)
+![Figma UI — ui04.png](../design/figma/exports/user-revised-v010/thesis/ui04.png)
 
 Hình 3.13. Thiết kế màn hình Trận đấu. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 UI05 — Kết quả đặt nhãn Bạn/Đối thủ trên điểm, cùng thắng/thua/hòa và lý do. Chưa nhận kết quả xác nhận thì hiện đang chờ, không tự suy kết quả từ điểm tạm. Về sảnh chỉ khả dụng khi phòng hợp lệ; phòng không còn thì khóa và nêu lý do, vẫn cho Về menu. Điểm trong sketch là minh họa.
 
-![Figma UI — ui05.png](../design/figma/exports/thesis/ui05.png)
+![Figma UI — ui05.png](../design/figma/exports/user-revised-v010/thesis/ui05.png)
 
 Hình 3.14. Thiết kế màn hình Kết quả. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 UI06 — Âm thanh có bật/tắt, âm lượng, quay lại. Khi tắt, thanh âm lượng thể hiện vô hiệu theo đặc tả; phản hồi thị giác vẫn giữ. Lỗi lưu cần phân biệt lựa chọn đang áp dụng và chưa lưu. Màn mở từ Menu, không dùng làm pause online.
 
-![Figma UI — ui06.png](../design/figma/exports/thesis/ui06.png)
+![Figma UI — ui06.png](../design/figma/exports/user-revised-v010/thesis/ui06.png)
 
 Hình 3.15. Thiết kế màn hình Âm thanh. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
@@ -2180,23 +2180,23 @@ Các trạng thái bổ sung dưới đây cụ thể hóa phản hồi ở form
 
 Khi không tìm thấy phòng, form giữ mã đã nhập, nêu lỗi và cho phép thử lại hoặc quay lại. Lỗi định dạng, phòng đầy và lỗi mạng vẫn cần phản hồi riêng; hình này không bao phủ các trường hợp đó.
 
-![Figma UI — ui02-notfound.png](../design/figma/exports/thesis/ui02-notfound.png)
+![Figma UI — ui02-notfound.png](../design/figma/exports/user-revised-v010/thesis/ui02-notfound.png)
 
 Hình 3.16. Thiết kế màn hình Không tìm thấy phòng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 Khi cả hai người đã sẵn sàng, màn chuẩn bị trận hiển thị số đếm và điều kiện bắt đầu được hệ thống xác nhận. Đây là thiết kế cho trạng thái phòng chung, không phải đồng hồ cục bộ tự quyết định bắt đầu.
 
-![Figma UI — ui03-countdown.png](../design/figma/exports/thesis/ui03-countdown.png)
+![Figma UI — ui03-countdown.png](../design/figma/exports/user-revised-v010/thesis/ui03-countdown.png)
 
 Hình 3.17. Thiết kế màn hình Chuẩn bị trận. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
 Kết quả thua vẫn giữ nhãn Bạn/Đối thủ và hai đường quay về. Ở trạng thái hòa khi phòng đã đóng, Về sảnh bị khóa còn Về menu khả dụng.
 
-![Figma UI — ui05-loss.png](../design/figma/exports/thesis/ui05-loss.png)
+![Figma UI — ui05-loss.png](../design/figma/exports/user-revised-v010/thesis/ui05-loss.png)
 
 Hình 3.18. Thiết kế màn hình Kết quả thua. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 
-![Figma UI — ui05-draw.png](../design/figma/exports/thesis/ui05-draw.png)
+![Figma UI — ui05-draw.png](../design/figma/exports/user-revised-v010/thesis/ui05-draw.png)
 
 Hình 3.19. Thiết kế màn hình Hòa khi phòng đã đóng. Nguồn: bộ thiết kế trong Figma được lựa chọn cho đề tài.
 

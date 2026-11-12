@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-12",
+  "method": "Native Figma export",
+  "page": "Page 3",
+  "fig": {
+    "path": "design/figma/source/User-revised-2026-11-12-v010.fig",
+    "sha256": "9087c214cd6c0ce53102f4f109aecbbbd0b7b43cef6b4bf5cfa3e0a9f276f1aa",
+    "entries": [
+      "canvas.fig",
+      "thumbnail.png",
+      "meta.json",
+      "images/",
+      "images/5f3bf56697a9c16b9bd9adfc2f9d24d3782b2e86",
+      "images/311c619c4f5e356dfd3cc03714cbc7388efb7232",
+      "images/032da33bfcfb706da6f5ea92dd2235948ae302e5",
+      "images/632c64bd269897728cd00553dc07a80d340a8bf2",
+      "images/6720e62d9a64f1402f9ece54307dcbf59271de68",
+      "images/cf37592a6aa4dd84d765364d2c1fe76313cde814",
+      "images/7298cd0579e2b928d23eab45b109da8dab1986d5"
+    ]
+  },
+  "images": [
+    {
+      "id": "ui01",
+      "path": "design/figma/exports/user-revised-v010/UI01 • Menu chính.png",
+      "bytes": 222316,
+      "width": 724,
+      "height": 280,
+      "sha256": "ba4d5b9ca624e7094e5f52b6fe1d006e875117070fecbf02012aa888cd35e4e9",
+      "changed": false
+    },
+    {
+      "id": "ui02a",
+      "path": "design/figma/exports/user-revised-v010/UI02A • Tạo phòng.png",
+      "bytes": 181738,
+      "width": 724,
+      "height": 280,
+      "sha256": "4c4e9968423c498b115f864666369593f93d646d3be63915f8527b5c5a9ffbd2",
+      "changed": false
+    },
+    {
+      "id": "ui02b",
+      "path": "design/figma/exports/user-revised-v010/UI02B • Vào phòng.png",
+      "bytes": 175058,
+      "width": 724,
+      "height": 269,
+      "sha256": "c1f293c5f375a0e60f537db3deb757fcacf4740cdc04599d078ca15ae870c2c8",
+      "changed": false
+    },
+    {
+      "id": "ui03",
+      "path": "design/figma/exports/user-revised-v010/UI03 • Sảnh chờ.png",
+      "bytes": 172358,
+      "width": 724,
+      "height": 269,
+      "sha256": "4f594bd6c9ebf62db2fc3e5b92de560aabd0595da7e5e61d526a843c06d19a34",
+      "changed": false
+    },
+    {
+      "id": "ui05",
+      "path": "design/figma/exports/user-revised-v010/UI05 • Kết quả thắng.png",
+      "bytes": 157526,
+      "width": 724,
+      "height": 257,
+      "sha256": "0268cd98c4f582b4419b6b73bbb380deb8e1e55856c369a9be2a733290e2b275",
+      "changed": false
+    },
+    {
+      "id": "ui06",
+      "path": "design/figma/exports/user-revised-v010/UI06 • Âm thanh.png",
+      "bytes": 173997,
+      "width": 724,
+      "height": 257,
+      "sha256": "caaa1353c3518875edc4264d2e0d233e372eb44a5a3a245c657851991d13491c",
+      "changed": false
+    },
+    {
+      "id": "ui02-notfound",
+      "path": "design/figma/exports/user-revised-v010/UI02 • Không tìm thấy phòng.png",
+      "bytes": 288763,
+      "width": 758,
+      "height": 466,
+      "sha256": "797dbd47c898f6121eb1b7c0c8bee92c71a7393ef654bd9cd5da0b03721b76df",
+      "changed": true
+    },
+    {
+      "id": "ui03-countdown",
+      "path": "design/figma/exports/user-revised-v010/UI03 • Chuẩn bị trận.png",
+      "bytes": 292590,
+      "width": 758,
+      "height": 466,
+      "sha256": "2fdac4db0b113994fbbff77edb67b5d6bd77699356664f38461191537764d7cd",
+      "changed": true
+    },
+    {
+      "id": "ui05-loss",
+      "path": "design/figma/exports/user-revised-v010/UI05 • Bạn thua.png",
+      "bytes": 264243,
+      "width": 758,
+      "height": 463,
+      "sha256": "b21e43ea1dfbbfee756b34bdc1a14e004936917894a0a13f3a47784ebfd36b51",
+      "changed": true
+    },
+    {
+      "id": "ui05-draw",
+      "path": "design/figma/exports/user-revised-v010/UI05 • Hòa – Phòng đã đóng.png",
+      "bytes": 259576,
+      "width": 758,
+      "height": 463,
+      "sha256": "60a26660f31d2aa89eceefebd22ff2971f6ad89d6d96e81d1e02d2d4fabfb2ba",
+      "changed": true
+    },
+    {
+      "id": "ui04",
+      "path": "design/figma/exports/user-revised-v010/ui04-revised.png",
+      "bytes": 425813,
+      "width": 898,
+      "height": 505,
+      "sha256": "7731de2c37696406c9bd70b43a98b124b94ca75e01fb2a2de5501832c97305ec",
+      "changed": true
+    }
+  ],
+  "chapterPageBreakBefore": [
+    "CHƯƠNG 1. GIỚI THIỆU",
+    "CHƯƠNG 2. CƠ SỞ LÝ THUYẾT",
+    "CHƯƠNG 3. XÂY DỰNG GAME BÓNG RỔ ĐỐI KHÁNG 3D",
+    "CHƯƠNG 4. KIỂM THỬ"
+  ],
+  "base": "Committed v0.9 at 8f43bb6; current user-modified v0.9 kept untouched"
+}
