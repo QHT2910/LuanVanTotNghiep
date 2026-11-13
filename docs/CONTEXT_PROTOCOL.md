@@ -35,6 +35,14 @@ Không dùng `/clear`: trợ giúp host nêu lệnh này xóa context/nội dung
 
 ## Nếu thật sự cần một session mới hoàn toàn
 
+### Quy tắc quota người dùng — 12/11/2026
+
+- Kiểm usage subscription accounts qua host ở đầu task, mốc bàn giao và trước lệnh build/runtime dài; kiểm cả primary theo giờ và secondary theo tuần, không polling vòng lặp.
+- Khi primary used >=95% (còn5%), không nhận task/build dài mới. Dừng worker an toàn nếu đang làm, giữ file dở và ghi checkpoint ngay: file đổi, task done/pending, lệnh đã chạy/kết quả/evidence, side effect chưa rõ, bước tiếp, quota used và resetsAt thực đọc. Không ép commit code hỏng.
+- Sau reset giờ, đọc lại usage xác nhận rồi mới resume từ checkpoint; reset giờ không reset tuần. Không đổi account/provider để né hạn mức, không replay bước đã xong.
+- Nếu host không expose phép đọc, ghi rõ chưa thể tự đọc; số Cindy cung cấp là bằng chứng kế thừa, không giả đã đọc mới hoặc bịa resetsAt. Yêu cầu host refresh tại mốc trước công việc dài; không đọc credential/config riêng để lách.
+
+
 Chưa tạo session mới hoặc cài luồng tự nối tiếp. Host có `send_to_session` create/jump và UI có New/fork; đây là khả năng tạo/gửi task, không phải trigger context hoặc chuyển team. Create không truyền context Orca/team của Lead một cách đã được chứng minh; jump không thay working_dir/model task cũ. Không dùng các đường này để tự tạo nhiều Lead hoặc thay worker.
 
 Quy trình chỉ thực hiện khi được phép và host đủ hỗ trợ:

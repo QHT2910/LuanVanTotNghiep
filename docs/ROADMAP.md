@@ -1,4 +1,28 @@
-# Kế hoạch tiếp tục — 10/11/2026
+# Kế hoạch tiếp tục — cập nhật 13/11/2026
+
+## Đích hoàn thành và thứ tự hiện hành
+
+Đích là game Android 3D có vòng chơi hoàn chỉnh trong phạm vi đã chốt: phòng 1v1, di chuyển/ném/nhảy/Dash/Block, ghi 2/3 điểm, kết thúc theo 11 điểm hoặc 3 phút và hiển thị kết quả. Quy tắc xử lý các tình huống biên phải được chốt và kiểm trước nghiệm thu. HUD offline, model probe và các demo riêng chỉ là milestone; không đủ để tuyên bố game hoàn thành. Không mở rộng tính năng chỉ để trang trí.
+
+Thứ tự: HUD task2 → probe model/animation trên flutter_scene 0.24.3 và tích hợp → mạng tối thiểu hai client → vòng trận 1v1 hoàn chỉnh. HUD hiện đã có gate 52 tests/build/audit/runtime, đang được Orca QA đọc độc lập; chưa kết luận toàn game. Reference UI là bộ Figma user-revised-v010, không bản concept cũ. Kế hoạch ngày 10/11 bên dưới là lịch sử, không dùng các blocker hoặc lệnh chờ cũ thay trạng thái này.
+
+Mỗi nội dung nghiên cứu phải nối được thành chuỗi: thành phần Scene → code thực chạy → tình huống thử → ảnh/log/data → nhận xét và giới hạn. Bảng sau là tiêu chí nghiệm thu, không phải báo cáo tất cả đã đạt.
+
+| Thành phần | Code/hiện thực cần truy vết | Tình huống và bằng chứng cần có |
+|---|---|---|
+| Scene graph và transform | Quan hệ node, tọa độ nhân vật/bóng/rổ, cập nhật transform | Di chuyển/nhảy, giữ và thả bóng; log trạng thái và ảnh đúng bản APK |
+| Camera | Cấu hình camera và ánh xạ tọa độ điều khiển | Góc nhìn sân, phạm vi hiển thị, kiểm hướng điều khiển và HUD safe area |
+| Material và light | Material/ánh sáng thực dùng trong Scene | So sánh cấu hình có kiểm soát, ảnh và giới hạn backend/thiết bị |
+| Asset/model | Nạp GLB, scale/orientation/material/skin | Asset origin/license/hash, warning/load data và ảnh model thực |
+| Animation | Clip binding, transition, pause, tách animation khỏi luật mô phỏng | Idle/run/jump/shoot và Dash phù hợp; clip list, log và ảnh/video khi thực chạy |
+| Flutter HUD và input | Widget tương tác nối mô phỏng/Scene | Đa chạm, cancel, lifecycle, charge/Dash và chuyển Menu; test + AVD evidence |
+| Vòng game 1v1 | Hai client, phòng, trạng thái trận, ghi điểm và kết thúc | Chuỗi vào phòng → sẵn sàng → chơi → kết quả; đối chiếu hai phía, lỗi/ngắt kết nối và giới hạn mạng |
+
+Lead tự review sau mỗi task terminal trước tích hợp hoặc tuyên bố hoàn thành: artifact/code thay đổi, analyze/tests/build/APK, runtime, lỗi còn biết và mức bằng chứng. Phân biệt kiểm tự chạy với kết quả kế thừa; bàn giao Cindy review độc lập từng milestone. Tuyên bố hoàn thành game chỉ sau gate vòng chơi toàn tuyến, không ghép kết quả các probe rời thành nghiệm thu full game.
+
+Quota: kiểm primary và secondary ở đầu task/mốc/trước công việc dài khi host cung cấp; primary used ≥95% dừng nhận task/build dài, dừng worker an toàn, lưu checkpoint và reset timestamp. Chỉ resume sau xác minh quota đã reset, không đổi tài khoản/provider để né giới hạn. Hour reset không có nghĩa weekly reset.
+
+## Kế hoạch lịch sử — 10/11/2026
 
 Trạng thái chốt: organization811493d, thesis source1ac51f9, DashM3b6d1c120 đã push. Snapshot/workspacegame-only/refactor/source review/DashQA hoàn tất trong phạm vi bằng chứng đã ghi. Việc đang chờ là UI Figma chính thức: đã cho phép kết nối nhưng chưa tool/session, chưa source/PNG. Không làm Block/mạng/tính năng mới trước review Dash. Các mục dưới ghi thứ tự kế hoạch và cách kiểm, không yêu cầu chạy lại mốc đã đạt.
 

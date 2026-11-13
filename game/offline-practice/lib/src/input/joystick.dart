@@ -86,6 +86,9 @@ class PracticeJoystick extends StatefulWidget {
     this.hitSize = 152,
     this.radius = 64,
     this.thumbRadius = 20,
+    this.backgroundColor,
+    this.thumbColor,
+    this.visualThumbRadius,
   });
 
   final ValueChanged<Offset> onChanged;
@@ -95,6 +98,8 @@ class PracticeJoystick extends StatefulWidget {
   final double hitSize;
   final double radius;
   final double thumbRadius;
+  final Color? backgroundColor, thumbColor;
+  final double? visualThumbRadius;
 
   @override
   State<PracticeJoystick> createState() => _PracticeJoystickState();
@@ -106,10 +111,18 @@ class _PracticeJoystickState extends State<PracticeJoystick> {
 
   void _validate() {
     _checkDeadZone(widget.deadZone);
-    final values = [widget.hitSize, widget.radius, widget.thumbRadius];
+    final visualRadius = widget.visualThumbRadius ?? widget.thumbRadius;
+    final values = [
+      widget.hitSize,
+      widget.radius,
+      widget.thumbRadius,
+      visualRadius,
+    ];
     if (values.any((v) => !v.isFinite) ||
         widget.thumbRadius <= 0 ||
         widget.radius <= widget.thumbRadius ||
+        visualRadius <= 0 ||
+        visualRadius >= widget.radius ||
         widget.hitSize < widget.radius * 2) {
       throw ArgumentError('Invalid joystick geometry');
     }
@@ -167,7 +180,8 @@ class _PracticeJoystickState extends State<PracticeJoystick> {
   @override
   Widget build(BuildContext context) {
     final center = widget.hitSize / 2;
-    final travel = widget.radius - widget.thumbRadius;
+    final thumbRadius = widget.visualThumbRadius ?? widget.thumbRadius;
+    final travel = widget.radius - thumbRadius;
     final knob = _input.knob * travel;
     return Semantics(
       label: 'move_joystick',
@@ -206,7 +220,7 @@ class _PracticeJoystickState extends State<PracticeJoystick> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: widget.enabled
-                        ? Colors.blueGrey.shade700
+                        ? widget.backgroundColor ?? Colors.blueGrey.shade700
                         : Colors.grey.shade700,
                     border: Border.all(color: Colors.white70),
                   ),
@@ -227,16 +241,16 @@ class _PracticeJoystickState extends State<PracticeJoystick> {
                 ),
               ),
               Positioned(
-                left: center + knob.dx - widget.thumbRadius,
-                top: center + knob.dy - widget.thumbRadius,
+                left: center + knob.dx - thumbRadius,
+                top: center + knob.dy - thumbRadius,
                 child: IgnorePointer(
                   child: Container(
                     key: const ValueKey('joystick_thumb'),
-                    width: widget.thumbRadius * 2,
-                    height: widget.thumbRadius * 2,
-                    decoration: const BoxDecoration(
+                    width: thumbRadius * 2,
+                    height: thumbRadius * 2,
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.lightBlueAccent,
+                      color: widget.thumbColor ?? Colors.lightBlueAccent,
                     ),
                   ),
                 ),

@@ -1,0 +1,182 @@
+[
+  {
+    "mode": "reentry",
+    "beforeEventCount": 0,
+    "afterEventCount": 1
+  },
+  {
+    "mode": "layout",
+    "beforeEventCount": 1,
+    "bounds": {
+      "move_joystick": [
+        163,
+        597,
+        562,
+        996
+      ],
+      "jump_button": [
+        1747,
+        844,
+        1915,
+        996
+      ],
+      "dash_button": [
+        1944,
+        844,
+        2112,
+        996
+      ],
+      "shoot_hold_release": [
+        2141,
+        733,
+        2403,
+        996
+      ],
+      "Menu": [
+        2141,
+        158,
+        2403,
+        284
+      ]
+    },
+    "afterEventCount": 1
+  },
+  {
+    "mode": "move-shot",
+    "beforeEventCount": 1,
+    "touch": {
+      "first": [
+        362.5,
+        796.5
+      ],
+      "target": [
+        291.625,
+        796.5
+      ],
+      "second": [
+        2272,
+        864.5
+      ],
+      "hold": 720,
+      "kind": "shoot",
+      "lead": 100,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 7
+  },
+  {
+    "mode": "jump-shot",
+    "beforeEventCount": 7,
+    "touch": {
+      "first": [
+        1831,
+        920
+      ],
+      "target": [
+        1831,
+        920
+      ],
+      "second": [
+        2272,
+        864.5
+      ],
+      "hold": 720,
+      "kind": "shoot",
+      "lead": 50,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 15
+  },
+  {
+    "mode": "move-dash",
+    "beforeEventCount": 15,
+    "touch": {
+      "first": [
+        362.5,
+        796.5
+      ],
+      "target": [
+        291.625,
+        796.5
+      ],
+      "second": [
+        2028,
+        920
+      ],
+      "hold": 900,
+      "kind": "shoot",
+      "lead": 100,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 17
+  },
+  {
+    "mode": "cancel",
+    "beforeEventCount": 17,
+    "touch": {
+      "first": [
+        362.5,
+        796.5
+      ],
+      "target": [
+        291.625,
+        796.5
+      ],
+      "second": [
+        2272,
+        864.5
+      ],
+      "hold": 250,
+      "kind": "cancel",
+      "lead": 100,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 19
+  },
+  {
+    "mode": "background",
+    "beforeEventCount": 19,
+    "touch": {
+      "first": [
+        1831,
+        920
+      ],
+      "target": [
+        1831,
+        920
+      ],
+      "second": [
+        2272,
+        864.5
+      ],
+      "hold": 0,
+      "kind": "background",
+      "lead": 120,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 25
+  },
+  {
+    "mode": "exit",
+    "beforeEventCount": 25,
+    "touch": {
+      "first": [
+        2272,
+        864.5
+      ],
+      "target": [
+        2272,
+        864.5
+      ],
+      "second": [
+        2272,
+        221
+      ],
+      "hold": 0,
+      "kind": "shoot",
+      "lead": 300,
+      "scope": "two pointers; harness stdout labels are historical"
+    },
+    "afterEventCount": 28
+  }
+]

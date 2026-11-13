@@ -1,0 +1,1 @@
+PASS comparison boards; original reference/runtime PNGs unchanged

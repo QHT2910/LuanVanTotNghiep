@@ -1,0 +1,5 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_hud_test.dart
+00:00 +0: Landscape input bounds fit without overlap
+00:00 +1: Typed score, configurable charge target and independent cooldown
+00:00 +2: Charge updates retain held joystick state and release
+00:00 +3: All tests passed!

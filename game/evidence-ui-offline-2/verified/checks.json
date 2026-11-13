@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "base": "318d094",
+  "scope": "HUD offline task2; one AVD",
+  "analyze": true,
+  "tests": 52,
+  "build": "debug android-x64",
+  "sourceAudit": "game/evidence-ui-offline-2/source-apk-audit-accepted.json",
+  "sourceCount": 11,
+  "localKernelMatchesAPK": null,
+  "installedIdentity": true,
+  "apkSHA256": "db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db",
+  "snapshot": "demos/releases/ui-offline-2/offline-practice-ui2-calibrated-x64.apk",
+  "snapshotSHA256": "db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db",
+  "runtimeAssertions": "game/evidence-ui-offline-2/verified/runtime-assertions.json",
+  "comparison": "game/evidence-ui-offline-2/verified/figma-vs-avd.png",
+  "reference": "design/figma/exports/user-revised-v010/ui04-revised.png",
+  "referenceNode": "35:2",
+  "referencePage": 3,
+  "notProven": [
+    "Three-pointer runtime",
+    "Real phone performance",
+    "Internet/multiplayer",
+    "Full Figma scene/model"
+  ],
+  "historicalEvidence": "Root evidence and final/ are earlier calibration; accepted logs and verified/ are authoritative"
+}

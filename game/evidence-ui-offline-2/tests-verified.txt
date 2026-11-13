@@ -1,0 +1,54 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart
+00:00 +0: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Default idle heading faces rim and Dash has bounded duration
+00:00 +1: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Analog direction is cached; speed does not add walk or steering
+00:00 +2: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Diagonal unit distance is not faster
+00:00 +3: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Ray bounds ends Dash without tunneling and reserves cooldown
+00:00 +4: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Air, waiting, paused and double Dash are rejected
+00:00 +5: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Dash cancels charge and blocks shoot/jump without a queue
+00:00 +6: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_test.dart: Background cancels Dash and freezes cooldown, no auto resume
+00:00 +7: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +8: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +9: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +10: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +11: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +12: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +13: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +14: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +15: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +16: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +17: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +18: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +19: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +20: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +21: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +22: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +23: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +24: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +25: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +26: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:00 +27: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +28: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_test.dart: Widget ignores a second pointer on stick; cancel centers knob
+00:01 +29: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Holding through landing does not autojump or accept pointer2
+00:01 +30: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Holding through landing does not autojump or accept pointer2
+00:01 +31: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Holding through landing does not autojump or accept pointer2
+00:01 +32: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Holding through landing does not autojump or accept pointer2
+00:01 +33: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:01 +34: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:02 +35: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/practice_hud_test.dart: Landscape input bounds fit without overlap
+00:02 +36: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +37: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +38: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +39: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +40: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +41: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +42: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +43: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +44: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +45: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +46: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +47: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +48: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +49: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +50: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:02 +51: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/widget_test.dart: Non-finite launch settings are rejected before rendering
+00:02 +52: All tests passed!

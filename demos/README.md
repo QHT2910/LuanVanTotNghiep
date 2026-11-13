@@ -29,3 +29,7 @@ Source/evidence M3b đã QA đạt và commit/push 6d1c120; có thể đối chi
 
 ## UI offline task1 — snapshot đã QA
 APK local demos/releases/ui-offline-1/offline-practice-ui1-x64.apk x86_64 SHA2562599f6928e7c4b2f81d761de04cbcff818a222886b3e8637a3faff5721afa9a8; source mốc UI offline task1 sau1ad37e9 đã QA PASS; tra commit bằng git log --grep="Menu offline". Evidence game/evidence-ui-offline-1; report docs/UI_OFFLINE_1_REVIEW.md. Prebuild M3b copy demos/releases/pre-ui-offline-1/app-debug.apk hash5ea9514a…d0f44 đã verify; binaries ignored. Không nhận HUD Figma/gameplay gate đã xong.
+
+## HUD task2 — snapshot cuối chờ QA, 13/11/2026
+
+Local ignored `demos/releases/ui-offline-2/offline-practice-ui2-calibrated-x64.apk`, SHA256 `db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db`, hash bản cài khớp. UI1/M3b và candidate UI2 trước vẫn giữ nguyên. Source/evidence hiện chờ QA: docs/HUD_TASK2_REVIEW.md và game/evidence-ui-offline-2/verified. Đây là HUD offline; Scene/model chưa thay theo Figma.

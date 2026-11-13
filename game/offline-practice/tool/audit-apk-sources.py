@@ -17,6 +17,7 @@ SOURCES = [
     "lib/src/presentation/offline_app.dart",
     "lib/src/presentation/menu_pages.dart",
     "lib/src/presentation/practice_navigation.dart",
+    "lib/src/presentation/practice_hud.dart",
 ]
 OLD = [
     "lib/config.dart", "lib/practice.dart",

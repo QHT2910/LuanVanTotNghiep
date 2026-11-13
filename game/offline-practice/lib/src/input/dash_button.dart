@@ -6,11 +6,22 @@ class PracticeDashButton extends StatefulWidget {
     required this.onDash,
     required this.resetToken,
     this.enabled = true,
+    this.backgroundColor,
+    this.pressedColor,
+    this.borderRadius,
+    this.size = const Size(88, 64),
+    this.label = 'Dash',
+    this.textStyle,
   });
 
   final VoidCallback onDash;
   final int resetToken;
   final bool enabled;
+  final Color? backgroundColor, pressedColor;
+  final BorderRadius? borderRadius;
+  final Size size;
+  final String label;
+  final TextStyle? textStyle;
 
   @override
   State<PracticeDashButton> createState() => _PracticeDashButtonState();
@@ -57,15 +68,21 @@ class _PracticeDashButtonState extends State<PracticeDashButton> {
         onPointerUp: (event) => _end(event.pointer),
         onPointerCancel: (event) => _end(event.pointer),
         child: Container(
-          width: 88,
-          height: 64,
+          width: widget.size.width,
+          height: widget.size.height,
           alignment: Alignment.center,
-          color: !widget.enabled
-              ? Colors.grey
-              : _owner == null
-              ? Colors.teal
-              : Colors.tealAccent,
-          child: const Text('Dash', style: TextStyle(color: Colors.white)),
+          decoration: BoxDecoration(
+            color: !widget.enabled
+                ? Colors.grey
+                : _owner == null
+                ? widget.backgroundColor ?? Colors.teal
+                : widget.pressedColor ?? Colors.tealAccent,
+            borderRadius: widget.borderRadius,
+          ),
+          child: Text(
+            widget.label,
+            style: widget.textStyle ?? const TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );

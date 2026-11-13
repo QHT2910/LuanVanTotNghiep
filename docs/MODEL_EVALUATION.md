@@ -67,3 +67,12 @@ Orca developer o7v9oxz0vq8wm7n5527dnta1 proposal readonly, host metadata Codex/g
 
 ## UI offline task1 QA — Lead review ACCEPT
 Orca tester bkm37d3uiwhgp757im7y9hov hiện có, actualsend_to_lead readonly; khôngđổi model/provider/khôngnhậnLuna. Source/diff/hash6PNGđọc mới;49tests/build/runtimekếthừaLead. VerdictPASSkhôngP1/P2, LeadACCEPTvòngsửa0; qa/ui-offline-1.md. Cost/usage/runtimeproviderreceiptkhôngcó, khôngkếtluậntiếtkiệm. BàngiaoCindytrướcHUDtask2.
+
+## HUD task2 proposal — Lead review ACCEPT source direction
+Orca developer o7v9oxz0vq8wm7n5527dnta1 chỉđọcsource+UI04v010, terminalproposal typedHUD/visualoptions/3tests. Worker khôngqueryroute ởlượt, khôngmodelmới/providerclaim. Leadtựtíchhợp, dartformatPASSparse; tests/analyze/runtimeNOTRUNchờhostquota. Khôngcost/qualitysavingsclaim. Report HUD_TASK2_SOURCE_REVIEW; vòngsửa0proposal, layout thựcchưaverify.
+
+## HUD task2 — Lead integration review, 13/11/2026
+
+Orca developer o7v9oxz0vq8wm7n5527dnta1 proposal readonly; metadata Codex/OpenAI/gpt-6.1-sol medium. Lead ACCEPT architecture, integrated and corrected Dash label geometry + visual/logical joystick radius after calibration. Analyze/52tests/build/audit11source/runtime verified PASS; docs/HUD_TASK2_REVIEW.md. QA independent pending. No Terra/Luna/Argon execution or savings claim; usage/cost unavailable.
+
+HUD task2 QA terminal13/11: Orca tester bkm37d3uiwhgp757im7y9hov metadata Sol6.1medium, readonly source/hash/8ảnh. PASS khôngP1/P2, Lead ACCEPT vòngsửa0; qa/hud-task2.md. Usage/cost không có, không model benchmark.

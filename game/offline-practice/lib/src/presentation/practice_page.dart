@@ -13,6 +13,7 @@ import 'package:offline_practice/src/input/jump_button.dart';
 import 'package:offline_practice/src/input/dash_button.dart';
 
 import 'practice_navigation.dart';
+import 'practice_hud.dart';
 
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
@@ -30,7 +31,14 @@ class _PracticePageState extends State<PracticePage>
   fs.Scene? scene;
   late fs.Node playerNode, ballNode, feetNode;
   late fs.PerspectiveCamera camera;
-  final hud = ValueNotifier<(String, double)>(('', 0.0));
+  final hud = ValueNotifier<PracticeHudData>((
+    score: 0,
+    round: 1,
+    points: 3,
+    charge: 0.0,
+    target: c.idealCharge,
+    dash: 'ready',
+  ));
   int joystickResetToken = 0;
   int? shotPointer;
   bool resumed = true;
@@ -208,32 +216,14 @@ class _PracticePageState extends State<PracticePage>
 
   void publish() {
     if (!mounted) return;
-    final p = game.player;
-    final points = game.shot?.pointValue ?? game.pointsAt(p);
-    final text =
-        'Điểm: ' +
-        game.score.toString() +
-        ' | ' +
-        game.phase.name +
-        ' | Lượt: ' +
-        game.round.toString() +
-        '\nVị trí: ' +
-        p.x.toStringAsFixed(2) +
-        ', ' +
-        p.z.toStringAsFixed(2) +
-        ' | Giá trị: ' +
-        points.toString() +
-        '\nCharge: ' +
-        (game.charge * 100).toStringAsFixed(0) +
-        '% | Canh khoảng ' +
-        (c.idealCharge * 100).toStringAsFixed(0) +
-        '%';
-    final jumpInfo =
-        '\ny=' +
-        p.y.toStringAsFixed(3) +
-        ' | ' +
-        (game.grounded ? 'grounded' : 'airborne');
-    hud.value = (text + jumpInfo + ' | Dash: ' + game.dashStatus, game.charge);
+    hud.value = (
+      score: game.score,
+      round: game.round,
+      points: game.shot?.pointValue ?? game.pointsAt(game.player),
+      charge: game.charge,
+      target: c.idealCharge,
+      dash: game.dashStatus,
+    );
   }
 
   void tick(Duration elapsed, double dt) {
@@ -290,118 +280,125 @@ class _PracticePageState extends State<PracticePage>
         inputEpoch == joystickResetToken &&
         seenRound == game.round;
 
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        PracticeJoystick(
-          key: const ValueKey('practice_joystick'),
-          enabled: resumed,
-          resetToken: inputEpoch,
-          deadZone: 0.15,
-          hitSize: 152,
-          radius: 64,
-          thumbRadius: 20,
-          onChanged: (axis) {
-            if (!inputValid()) return;
-            game.setMove(-axis.dx, axis.dy);
-          },
+    final joystick = PracticeJoystick(
+      key: const ValueKey('practice_joystick'),
+      enabled: resumed,
+      resetToken: inputEpoch,
+      deadZone: 0.15,
+      hitSize: 152,
+      radius: 64,
+      thumbRadius: 20,
+      visualThumbRadius: 27,
+      backgroundColor: practiceNavy,
+      thumbColor: Colors.white,
+      onChanged: (axis) {
+        if (!inputValid()) return;
+        game.setMove(-axis.dx, axis.dy);
+      },
+    );
+    final reset = Semantics(
+      label: 'new_round',
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size(88, 48),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          backgroundColor: practiceNavy,
+          foregroundColor: Colors.white,
         ),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Align(
-            alignment: Alignment.bottomRight,
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              alignment: Alignment.bottomRight,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Semantics(
-                    label: 'new_round',
-                    child: ElevatedButton(
-                      onPressed: () {
-                        cancelInputs('manual_reset');
-                        game.newRound();
-                        seenRound = game.round;
-                        syncScene();
-                        setState(() {});
-                        publish();
-                      },
-                      child: const Text('Lượt mới'),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  PracticeJumpButton(
-                    key: const ValueKey('practice_jump'),
-                    enabled: resumed,
-                    resetToken: inputEpoch,
-                    onJump: () {
-                      if (!inputValid()) return;
-                      game.jump();
-                      publish();
-                    },
-                  ),
-                  const SizedBox(width: 8),
-                  PracticeDashButton(
-                    key: const ValueKey('practice_dash'),
-                    enabled: resumed,
-                    resetToken: inputEpoch,
-                    onDash: () {
-                      if (!inputValid()) return;
-                      if (game.dash()) {
-                        // The old charging finger cannot release after Dash.
-                        // Do not reset joystick/jump ownership here.
-                        shotPointer = null;
-                      }
-                      publish();
-                    },
-                  ),
-                  const SizedBox(width: 8),
-                  Semantics(
-                    label: 'shoot_hold_release',
-                    button: true,
-                    excludeSemantics: true,
-                    child: Listener(
-                      behavior: HitTestBehavior.opaque,
-                      onPointerDown: (event) {
-                        if (!inputValid()) return;
-                        if (shotPointer == null && game.startCharge()) {
-                          shotPointer = event.pointer;
-                          publish();
-                        }
-                      },
-                      onPointerUp: (event) {
-                        if (!inputValid() || shotPointer != event.pointer)
-                          return;
-                        shotPointer = null;
-                        game.release();
-                        publish();
-                      },
-                      onPointerCancel: (event) {
-                        if (shotPointer != event.pointer) return;
-                        shotPointer = null;
-                        game.cancelCharge('pointer_cancel');
-                        publish();
-                      },
-                      child: Container(
-                        width: 130,
-                        height: 64,
-                        alignment: Alignment.center,
-                        color: Colors.deepOrange,
-                        child: const Text(
-                          'Giữ / thả ném',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+        onPressed: () {
+          cancelInputs('manual_reset');
+          game.newRound();
+          seenRound = game.round;
+          syncScene();
+          setState(() {});
+          publish();
+        },
+        child: const Text('Lượt mới'),
+      ),
+    );
+    final jump = PracticeJumpButton(
+      size: practiceActionSize,
+      label: 'NHẢY',
+      textStyle: const TextStyle(color: Colors.white, fontSize: 16),
+      key: const ValueKey('practice_jump'),
+      enabled: resumed,
+      backgroundColor: practiceNavy,
+      pressedColor: const Color(0xff355777),
+      borderRadius: BorderRadius.circular(12),
+      resetToken: inputEpoch,
+      onJump: () {
+        if (!inputValid()) return;
+        game.jump();
+        publish();
+      },
+    );
+    final dash = PracticeDashButton(
+      size: practiceActionSize,
+      label: 'DASH',
+      textStyle: const TextStyle(color: Colors.white, fontSize: 16),
+      key: const ValueKey('practice_dash'),
+      enabled: resumed,
+      backgroundColor: practiceNavy,
+      pressedColor: const Color(0xff355777),
+      borderRadius: BorderRadius.circular(12),
+      resetToken: inputEpoch,
+      onDash: () {
+        if (!inputValid()) return;
+        if (game.dash()) {
+          // The old charging finger cannot release after Dash.
+          // Do not reset joystick/jump ownership here.
+          shotPointer = null;
+        }
+        publish();
+      },
+    );
+    final shoot = Semantics(
+      label: 'shoot_hold_release',
+      button: true,
+      excludeSemantics: true,
+      child: Listener(
+        behavior: HitTestBehavior.opaque,
+        onPointerDown: (event) {
+          if (!inputValid()) return;
+          if (shotPointer == null && game.startCharge()) {
+            shotPointer = event.pointer;
+            publish();
+          }
+        },
+        onPointerUp: (event) {
+          if (!inputValid() || shotPointer != event.pointer) return;
+          shotPointer = null;
+          game.release();
+          publish();
+        },
+        onPointerCancel: (event) {
+          if (shotPointer != event.pointer) return;
+          shotPointer = null;
+          game.cancelCharge('pointer_cancel');
+          publish();
+        },
+        child: Container(
+          width: practiceShootSize.width,
+          height: practiceShootSize.height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: practiceOrange,
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: const Text(
+            'NÉM',
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
-      ],
+      ),
+    );
+    return OfflinePracticeHud(
+      data: hud,
+      joystick: joystick,
+      reset: reset,
+      jump: jump,
+      dash: dash,
+      shoot: shoot,
     );
   }
 
@@ -439,43 +436,7 @@ class _PracticePageState extends State<PracticePage>
               children: [
                 // Keep the view's SingleTickerProvider alive; pause our logic above.
                 fs.SceneView(s, camera: camera, onTick: tick),
-                SafeArea(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ValueListenableBuilder<(String, double)>(
-                          valueListenable: hud,
-                          builder: (context, value, child) => Semantics(
-                            label: 'practice_hud',
-                            value: value.$1,
-                            excludeSemantics: true,
-                            child: Card(
-                              child: Padding(
-                                padding: const EdgeInsets.all(6),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(value.$1, textAlign: TextAlign.center),
-                                    SizedBox(
-                                      width: 220,
-                                      child: LinearProgressIndicator(
-                                        value: value.$2,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Spacer(),
-                        controls(),
-                      ],
-                    ),
-                  ),
-                ),
+                controls(),
               ],
             );
           },

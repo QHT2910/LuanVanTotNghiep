@@ -1,0 +1,8 @@
+{
+  "package": "com.example.offline_practice",
+  "serial": "emulator-5554",
+  "localSHA256": "db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db",
+  "installedSHA256": "db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db",
+  "matching": true,
+  "method": "adb pm path then pull base.apk; SHA256 byte comparison"
+}

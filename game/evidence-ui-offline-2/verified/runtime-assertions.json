@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "scope": "Final HUD build, one AVD, separate two-pointer sequences; not three pointers",
+  "releaseCount": 2,
+  "scores": [
+    [
+      1,
+      3,
+      3
+    ],
+    [
+      2,
+      3,
+      6
+    ]
+  ],
+  "airborneRelease": {
+    "playerY": 0.8841927083333339,
+    "originY": 2.6841927083333337,
+    "feetY": 0
+  },
+  "dash": {
+    "duration": 0.2,
+    "distance": 1.6,
+    "heldBeyondCooldownStarts": 1,
+    "boundsX": 3.78,
+    "boundsFromInside": true
+  },
+  "pauseResume": {
+    "simTime": 66.74166666666585,
+    "playerY": 0.8037999999999998,
+    "chargeCancelReason": "pointer_cancel",
+    "cancelBeforePause": true
+  },
+  "cancelNoShot": true,
+  "resetGroundedScore": 6,
+  "exitChargeNoShot": true,
+  "systemBackPaused": true,
+  "touchRectsNonOverlapping": true,
+  "limitations": [
+    "Individual-pointer cancel and races remain unit/widget evidence",
+    "No real phone/Internet/performance claim",
+    "Scene/background/model still the probe, not full Figma scene"
+  ]
+}

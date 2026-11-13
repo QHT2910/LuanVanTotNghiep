@@ -1,3 +1,27 @@
+## HUD task2 QA terminal — Lead ACCEPT, 13/11/2026
+
+Orca QA bkm37d3uiwhgp757im7y9hov đã tự đọc source/diff/hash11source/APK và8ảnh verified, PASS khôngP1/P2; Lead ACCEPT milestone, qa/hud-task2.md. Gates analyze52tests/build/audit/runtime do Lead chạy, QA phân biệt kế thừa. Bàn giao Cindy review trước model probe; chưa fullgamecomplete. Evidence TXT65file đổi UTF16→UTF8, không đổi nội dung; quét mẫu debugURI/IP TXT không hit, không bảo đảm mọi PII. Ba Word ngoài phạm vi khôngstage. Snapshot calibrated db9a6b7d…af203db, UI1/M3b giữ.
+
+## Tiêu chí đích đã chốt — 13/11/2026
+
+User yêu cầu bám nghiên cứu Scene và game Android 3D có vòng chơi 1v1 hoàn chỉnh; HUD/model/probe chỉ milestone. Đã ghi acceptance và map Scene→code→thử→evidence→giới hạn trong docs/ROADMAP.md. Giữ thứ tự HUD→modelprobe/tích hợp→networkminimal→vòngtrận. Lead tự review mỗi task terminal, phân biệt kiểm mới/kế thừa và bàn giao Cindy trước claim hoàn thành. QA HUD đã dispatch thành công wake_kind=resumed tới existing bkm37d3uiwhgp757im7y9hov; không dispatch trùng hoặc polling. Không thay phạm vi task HUD đang QA. report_task_delivery helper lần trước trả UNKNOWN_TOOL; không nhận host bookkeeping đã thành công.
+
+## HUD task2 gates/runtime đạt — chờ QA độc lập, 13/11/2026
+
+Base318d094. Lead tích hợp proposal Orca developer readonly; 52tests/analyze/build/audit11source/install PASS. APK local/pull-installed/snapshot cùng SHA256 db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db. Snapshot demos/releases/ui-offline-2/offline-practice-ui2-calibrated-x64.apk giữ UI1/M3b/candidate cũ. Bằng chứng cuối: game/evidence-ui-offline-2/*-accepted.txt, source-apk-audit-accepted.json và verified/. Runtime assertion PASS move+shoot/jump+shoot 3+3, airborne height, Dash duration1,6/boundsfrominside/noRepeat, cancel/reset/pause-resume/exit/systemBack. Đã xem ảnh so Figma Page3 node35:2 và airborne; HUD thích nghi offline, Scene vẫn primitive. Đã sửa labelDash dịch nút và tách thumb visual27 khỏi logical20/travel44. Report docs/HUD_TASK2_REVIEW.md. Không replay runtime/build đã đạt.
+
+Next QA existing bkm37d3uiwhgp757im7y9hov readonly source/log/hash/ảnh, Lead review rồi bàn giao Cindy trước model probe. Worker root cũ không được ghi project; model metadata Sol6.1, không thay route/paused Argon. game/MODEL_PROBE_PROPOSAL.md là đề xuất pinned0.24.3, chưa model runtime. Quota Cindy đầu13/11 primary0%used/secondary81%used/reset1794559578 kế thừa; Lead accounts.settings not_exposed. Cần host refresh trước task dài kế tiếp, primary>=95% dừng checkpoint. Ba Word modified ngoài scope không stage. VSCode game-only và Pixel_9a existing mở, app phiên tập mới; chưa commit mốc HUD chờ QA.
+
+## HUD task2 source tích hợp — cần host refresh quota trước gates, 12/11/2026
+
+Base318d094, chưa commitHUD. LeadreviewACCEPT proposal Orcadeveloper readonly và tíchhợp: practice_hud.dart mới typedrecord/scoreoffline/charge-target/Dashstatus; practice_page slots giữhandlers/epoch/mapping; joystick/jump/dash optionalvisual giữdefaults; test/practice_hud_test.dart mới3ca. dartformat6filesPASSparse (.scratch/hud2-format.txt), diffcheckPASS; simulation/deps/49testcũkhôngđổi. Chưaanalyze/tests/build/runtime/audit11source. SnapshotUI1hash2599f692…afa9a8giữ; AVDlastknownUI1Menu, chưacàiHUD. Report docs/HUD_TASK2_SOURCE_REVIEW.md. Sourcefilesdởgiữ, khôngépcommit.
+
+Quota: hostaccounts.settingsdetail not_exposed/operations[]; listtools vàcapabilitiesđãkiểm, chưa tựrefreshusage. SốCindyđọcđầutask35%primary/79%secondary/statusready, resetsAtunknown — kếthừa, khônglivereadLead. Quy tắcprimary>=95%stop/taskcheckpoint trongCONTEXT_PROTOCOL. Next: Cindy/hostrefreshprimary+weekly+resetsAt; đủquota thìanalyze->3HUDtests->fullregression, updateaudit11source, trướcbuilddàicheckquota mới rồi build/runtimeđa chạm/exit/lifecycle/ảnh. KhôngreplayUI1gate/dùng49tests cũthayHUDgates; khôngđổiprovider/account. DeveloperproposalterminalkhôngworkerđanglàmHUD; pausedArgonpilotđểnguyên. Word3filemodifiedngoàiphạmvi, khôngstage.
+
+## Bắt đầu HUD task2 — quota gate, 12/11/2026
+
+Cindy ACCEPT task1commit318d094; tiếpHUD UI04userrevisedv010 offlinekhôngopponent/clock/networkgiả. Cầngiữsimulation/owner/epoch/exit/lifecycle; testmultitouch/runtimeảnhmới, khôngreplay49tests/buildcũ. Leadđọcsourcehiệnhành vàchuẩnbịproposalreadonlydeveloper. Host list_tools subscription/get_capabilitiescontrol trảaccounts.settings not_exposed; chưa tựrefreshusage. SốCindyđọc ởlệnhmới nhất: primary35%used/secondary79%used/statusready; resetsAtkhôngđược cungcấp. Ghi quy tắcstop primary>=95% trong CONTEXT_PROTOCOL. Trướcbuil dài phảirefreshhost, khôngsuytừquota cũ/đổiprovider. Chưachạygate/codeHUDmới, APKUI1snapshotgiữ. Word3filemodifiedngoàiphạmvi, khôngstage. Developer/QAexistingrootcũreadonly; Argonpilotpausedgiữnguyên.
+
 ## UI offline task1 QA PASS — bàn giao Cindy, 12/11/2026
 
 Orca QA bkm37d3uiwhgp757im7y9hov đã terminalPASSkhôngP1/P2; LeadreviewACCEPT. qa/ui-offline-1.md: tựhash10source/localAPK/snapshot vàview6PNG, gate49tests/build/runtimekếthừaLead. KhôngHUDfigmaaccept. Chốt mốcMenu/settings/routesriêng trướcCindyreview; tasktiếpHUDsaukhiCindyreviewmốc. game/evidence-ui-offline-1 + docs/UI_OFFLINE_1_REVIEW.md. EmulatorexistingPixel_9ađangMenu, VSCodegameonlymenu_pages.dart. APK2599f692…afa9a8snapshotlocalignored; M3bgiữ. Còn pending-initrace/pause-resumeroute/exitDashruntime/audio/backend/realphone. Khôngthesis/gamefeatures/modeldispatchmới. BaWordv03/v09/v010modifiedtừngoàingoàistage. Cleanupnestedfolderrefusedđểnguyênkhôngbypass. KhôngreplaygatesđãPASS.
@@ -245,10 +269,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-12T11:09:38.252Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `1ad37e90c2c3adb46669779e9b989e2e17adaab2`.
-- Local tracking origin/main: `1ad37e90c2c3adb46669779e9b989e2e17adaab2` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 36 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-13T04:28:09.731Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `318d0942e6ffab77d76edc2bc46856faaf5bc0da`.
+- Local tracking origin/main: `318d0942e6ffab77d76edc2bc46856faaf5bc0da` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 183 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

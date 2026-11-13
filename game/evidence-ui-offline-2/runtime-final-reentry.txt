@@ -1,0 +1,7 @@
+node : Demo not foreground; no input
+At line:2 char:792
++ ... txt -Tail 4;node tool/hud-avd.cjs emulator-5554 reentry final > ../ev ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Demo not foreground; no input:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -40,11 +40,16 @@ class _PracticeNavigationState extends State<PracticeNavigation> {
           top: 8,
           right: 8,
           child: SafeArea(
-            child: FilledButton.tonalIcon(
+            child: FilledButton(
               key: const ValueKey('return_menu'),
               onPressed: Navigator.canPop(context) ? _back : null,
-              icon: const Icon(Icons.arrow_back),
-              label: const Text('Menu'),
+              style: FilledButton.styleFrom(
+                backgroundColor: const Color(0xff1d344e),
+                foregroundColor: Colors.white,
+                minimumSize: const Size(100, 40),
+                shape: const RoundedRectangleBorder(),
+              ),
+              child: const Text('Menu'),
             ),
           ),
         ),

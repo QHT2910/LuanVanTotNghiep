@@ -28,3 +28,7 @@ design/figma/source/*.fig
 
 # Exploratory emulator launcher capture; not application evidence.
 game/evidence-ui-offline-1/menu.png
+# Raw Android home/resume transition captures are not stable app screenshots.
+game/evidence-ui-offline-2/hud-resume.png
+game/evidence-ui-offline-2/final/hud-resume.png
+game/evidence-ui-offline-2/verified/hud-resume.png
