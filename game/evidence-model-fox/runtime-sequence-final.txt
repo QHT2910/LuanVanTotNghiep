@@ -1,0 +1,15 @@
+node : /sdcard/fox.png: 1 file pulled, 0 skipped. 29.7 MB/s (75881 bytes in 0.002s)
+At line:2 char:319
++ ... ,$foxText); node game/tutorial-r3/tool/run-model-diagnostic.cjs > gam ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/fox.png...ytes in 0.002s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+/sdcard/fox.png: 1 file pulled, 0 skipped. 15.8 MB/s (76723 bytes in 0.005s)
+/sdcard/fox.png: 1 file pulled, 0 skipped. 23.3 MB/s (76259 bytes in 0.003s)
+/sdcard/fox.png: 1 file pulled, 0 skipped. 12.4 MB/s (82168 bytes in 0.006s)
+Warning: Activity not started, its current task has been brought to the front
+/sdcard/fox.png: 1 file pulled, 0 skipped. 24.7 MB/s (76334 bytes in 0.003s)
+Warning: Activity not started, its current task has been brought to the front
+/sdcard/fox.png: 1 file pulled, 0 skipped. 20.7 MB/s (77144 bytes in 0.004s)
+PASS runtime sequence captured; assertions pending

@@ -1,0 +1,9 @@
+
+┌─────────────────────────────────────────────────────────┐
+│ A new version of Flutter is available!                  │
+│                                                         │
+│ To update to the latest version, run "flutter upgrade". │
+└─────────────────────────────────────────────────────────┘
+Upgrading analysis_options.yaml to exclude build and platform directories.
+Analyzing model_diagnostic.dart...                              
+No issues found! (ran in 36.9s)

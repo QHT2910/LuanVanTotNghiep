@@ -1,0 +1,22 @@
+{
+  "asset": "game/tutorial-r3/assets/Fox.glb",
+  "bytes": 162852,
+  "sha256": "d97044e701822bac5a62696459b27d7b375aada5de8574ed4362edbba94771f7",
+  "clips": [
+    "Survey",
+    "Walk",
+    "Run"
+  ],
+  "skinJointCounts": [
+    24
+  ],
+  "meshes": 1,
+  "materials": 1,
+  "licenseFiles": [
+    "game/tutorial-r3/assets/ATTRIBUTION.md",
+    "game/tutorial-r3/assets/Fox-LICENSE-README.md"
+  ],
+  "role": "baseline diagnostic; not basketball player",
+  "sceneVersion": "0.24.3",
+  "runtimeValidated": false
+}

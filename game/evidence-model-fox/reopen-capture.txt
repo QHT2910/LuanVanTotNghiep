@@ -1,0 +1,8 @@
+node : /sdcard/fox.png: 1 file pulled, 0 skipped. 19.2 MB/s (74751 bytes in 0.004s)
+At line:2 char:1
++ node game/tutorial-r3/tool/run-model-diagnostic.cjs capture > game/ev ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/fox.png...ytes in 0.004s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+PASS reopen evidence captured; review pending

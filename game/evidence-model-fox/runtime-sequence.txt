@@ -1,0 +1,7 @@
+node : Unexpected end of JSON input
+At line:2 char:1
++ node game/tutorial-r3/tool/run-model-diagnostic.cjs > game/evidence-m ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Unexpected end of JSON input:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

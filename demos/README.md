@@ -33,3 +33,7 @@ APK local demos/releases/ui-offline-1/offline-practice-ui1-x64.apk x86_64 SHA256
 ## HUD task2 — snapshot cuối chờ QA, 13/11/2026
 
 Local ignored `demos/releases/ui-offline-2/offline-practice-ui2-calibrated-x64.apk`, SHA256 `db9a6b7d56e05fb360fb29b8ab2fcfe9c26568c2cacea375131499489af203db`, hash bản cài khớp. UI1/M3b và candidate UI2 trước vẫn giữ nguyên. Source/evidence hiện chờ QA: docs/HUD_TASK2_REVIEW.md và game/evidence-ui-offline-2/verified. Đây là HUD offline; Scene/model chưa thay theo Figma.
+
+## Fox model diagnostic14/11
+
+Local ignored demos/releases/model-fox/fox-diagnostic-x64.apk SHA256d6b66c04fa11334b7df6304701afe7c42c124956c6d8e2265ffe4c4fce96270f; package com.example.scene_tutorial_r3 riêng, giữHUD APK. Entrypoint tutorial-r3/lib/model_diagnostic.dart, Scene0.24.3, Foxlicense giữ. Repro build --target lib/model_diagnostic.dart --debug --target-platform android-x64 --no-pub. QA baseline qa/model-fox.md; chưamodelngười/gameplay.

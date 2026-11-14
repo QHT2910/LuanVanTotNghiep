@@ -1,0 +1,47 @@
+[
+  {
+    "name": "pose0",
+    "before": 4,
+    "after": 5
+  },
+  {
+    "name": "pose50",
+    "before": 5,
+    "after": 6
+  },
+  {
+    "name": "pose0-repeat",
+    "before": 6,
+    "after": 7
+  },
+  {
+    "name": "play-pause",
+    "before": 7,
+    "after": 11
+  },
+  {
+    "name": "pause-samples",
+    "before": 11,
+    "after": 13
+  },
+  {
+    "name": "replay",
+    "before": 13,
+    "after": 16
+  },
+  {
+    "name": "root",
+    "before": 16,
+    "after": 19
+  },
+  {
+    "name": "lifecycle-paused",
+    "before": 19,
+    "after": 26
+  },
+  {
+    "name": "lifecycle-playing",
+    "before": 26,
+    "after": 36
+  }
+]

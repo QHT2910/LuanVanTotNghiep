@@ -1,0 +1,85 @@
+{
+  "pass": true,
+  "scope": "One AVD debug Fox diagnostic, not gameplay",
+  "pose0RepeatMatricesEqual": true,
+  "pose50Differs": true,
+  "pauseSamplesEqual": true,
+  "replayTimeZero": true,
+  "rootTransformChangedWithJointLocalPreserved": true,
+  "lifecycleFreezeAndIntentResume": true,
+  "metadata": {
+    "schema": 1,
+    "runId": "2026-11-14T03:45:08.819525Z",
+    "seq": 1,
+    "event": "asset_metadata",
+    "clip": "Run",
+    "clipTime": null,
+    "playing": null,
+    "appActive": true,
+    "asset": "assets/Fox.glb",
+    "bytes": 162852,
+    "bundleReadMs": 21.172,
+    "importFutureMs": 411.256,
+    "timingScope": "Bundle read/import Future; not GPU readiness",
+    "clips": [
+      {
+        "name": "Survey",
+        "duration": 3.4166667461395264,
+        "channels": 21
+      },
+      {
+        "name": "Walk",
+        "duration": 0.7083333134651184,
+        "channels": 21
+      },
+      {
+        "name": "Run",
+        "duration": 1.1583333015441895,
+        "channels": 21
+      }
+    ],
+    "runtimeSkinnedNodes": [
+      {
+        "node": "fox",
+        "jointCount": 24,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "nodeNames": [
+      "root",
+      "root",
+      "_rootJoint",
+      "b_Root_00",
+      "b_Hip_01",
+      "b_Spine01_02",
+      "b_Spine02_03",
+      "b_Neck_04",
+      "b_Head_05",
+      "b_RightUpperArm_06",
+      "b_RightForeArm_07",
+      "b_RightHand_08",
+      "b_LeftUpperArm_09",
+      "b_LeftForeArm_010",
+      "b_LeftHand_011",
+      "b_Tail01_012",
+      "b_Tail02_013",
+      "b_Tail03_014",
+      "b_LeftLeg01_015",
+      "b_LeftLeg02_016",
+      "b_LeftFoot01_017",
+      "b_LeftFoot02_018",
+      "b_RightLeg01_019",
+      "b_RightLeg02_020",
+      "b_RightFoot01_021",
+      "b_RightFoot02_022",
+      "fox"
+    ]
+  },
+  "limits": [
+    "Three sampled joints do not prove every channel binding",
+    "No GPU-ready/frame-time benchmark",
+    "No per-frame oracle for double advance; source path reviewed",
+    "Fox not basketball character"
+  ]
+}

@@ -76,3 +76,7 @@ Orca developer o7v9oxz0vq8wm7n5527dnta1 chỉđọcsource+UI04v010, terminalprop
 Orca developer o7v9oxz0vq8wm7n5527dnta1 proposal readonly; metadata Codex/OpenAI/gpt-6.1-sol medium. Lead ACCEPT architecture, integrated and corrected Dash label geometry + visual/logical joystick radius after calibration. Analyze/52tests/build/audit11source/runtime verified PASS; docs/HUD_TASK2_REVIEW.md. QA independent pending. No Terra/Luna/Argon execution or savings claim; usage/cost unavailable.
 
 HUD task2 QA terminal13/11: Orca tester bkm37d3uiwhgp757im7y9hov metadata Sol6.1medium, readonly source/hash/8ảnh. PASS khôngP1/P2, Lead ACCEPT vòngsửa0; qa/hud-task2.md. Usage/cost không có, không model benchmark.
+
+## Fox diagnostic14/11 — proposal vàQA terminal
+
+Orca developer o7v9oxz0vq8wm7n5527dnta1 readonlyproposal/API/GLB, LeadACCEPTsource vàtíchhợp. Sửa logchunk doAndroidtruncate, sửahelpercontent-desc; build/analyze/audit/runtimeLeadPASS. Orca QA bkm37d3uiwhgp757im7y9hov readonlysource/hash/matrices/7ảnh PASS, LeadACCEPT vòngsửaQA0. Metadata cảhaiSol6.1medium; khôngproviderchange/Argonclaim, costusagekhôngcó. Artifact qa/model-fox.md vàdocs/MODEL_FOX_RUNTIME_REVIEW.md. Chưahuman/gameintegration.

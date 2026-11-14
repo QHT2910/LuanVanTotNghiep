@@ -1,3 +1,21 @@
+## Fox QA terminal — Lead ACCEPT baseline, 14/11/2026
+
+Orca QA bkm37d3uiwhgp757im7y9hov readonly source/hash/matrixcomparisons/7PNG PASS khôngP1/P2. Leadreview ACCEPT diagnostic, qa/model-fox.md; gates build/runtime kếthừa Lead. Chưa human/gameintegration/fullbinding/GPU/performance. Bàn giao Cindy trướchuman; quota inherited primary14 weekly91 cầnrefresh trướcnextlongtask, stop>=95%either. APKFoxsnapshot d6b66c04…6270f vàHUDdb9a giữ. Source/audit/runtime/limits trong docs/MODEL_FOX_RUNTIME_REVIEW.md. BaWord ngoài scope, khôngstage.
+
+## Fox runtime baseline đạt — chờ QA/Cindy, 14/11/2026
+
+Lead build/analyze-final/audit/install PASS; APK source/asset/installed/snapshot d6b66c04…6270f. Fox visible pose0/50/root/reopen; assertion pose repeat/pause matrices/replay0/root/lifecycle PASS. Scene0.24.3/tutorial-r3 riêng, gameHUD a1ca7a4/APKdb9a giữ. Report docs/MODEL_FOX_RUNTIME_REVIEW.md, evidence-model-fox/*final+runtimeJSON+PNGs. Android truncation log đã sửa chunk500, rebuild/audit cuối; parser content-desc đãsửa trước sequence. Sample3joints khôngfullbinding/GPUready/realphone; chưahuman/gameintegration. Next QAexisting readonly rồi Cindyreview; không task phụ thuộc trước review. Quota inherited Cindyprimary14%/weekly91%reset1794644148/1794897288, reserve5% cảhai; refresh trước task dài mới. Chưa commit chờQA; baWord ngoài scope.
+
+## Fox diagnostic source đã analyze — 14/11/2026
+
+Lead ACCEPT proposal Orcadeveloper readonly và tích hợp lib/model_diagnostic.dart trong tutorial-r3, giữ appgame/HUD/APK. dartformat/analyze entrypointPASS, log game/evidence-model-fox; raw GLB manifest hash d97044…71f7/3clips/24joints. Chưa build/install/runtime/modelhuman. Review docs/MODEL_FOX_SOURCE_REVIEW.md. Cần Cindy refresh quota trướcbuild dài (inherited primary0 weekly89, reserve5% cảhai; ownusage not_exposed). Next build đúngtarget --no-pub, verify provenance rồi AVD pose/pause/root/lifecycle/ảnh; chưa claimprobe/fullgamecomplete. BaWordmodified ngoài scope giữ. Worker terminal Sol6.1readonly, LeadreviewACCEPTsource; pausedArgon không đụng. Không replay52HUDgates.
+
+## Bắt đầu model diagnostic — 14/11/2026
+
+Cindy ACCEPT HUD milestone interactive/provenance/regression, không full visual Scene. HEAD a1ca7a4; APK HUD db9a6b7d…af203db và snapshot giữ. Tiếp Fox existing diagnostic trên Scene0.24.3, ưu tiên tái dùng tutorial-r3 entrypoint mới nhỏ, không sửa game/HUD hoặc tạo project probe trùng. Mục tiêu load/clip/scale/orientation/material/light/camera/skin, pose/playbacktime/pause-resume, warnings/load/first-frame evidence; Fox không cầu thủ. Developer existing o7v9oxz0vq8wm7n5527dnta1 root cũ chỉ đọc proposal; Lead sẽ tích hợp/chạy và QA đọc sau. Chưa build/model runtime mới. Không chạy lại52HUDtests. Ba Wordmodified ngoài scope giữ nguyên.
+
+Quota host Cindy14/11 ready: primary0%used/resetsAt1794644114; weekly89%used/reset1794897287. Đây là số kế thừa, không Lead tự đọc. Reserve5% cho cảprimary/weekly; >=95% dừng/checkpoint, hour reset không giải quyết weekly. Refresh trướcbuild dài; không đổi provider/account/route. PausedArgonpilot giữ nguyên; chưa giao human asset tải mới, không pack lớn/mua/rerig. Model diagnostic là đầu vào tích hợp game3D1v1, không fullgamecomplete.
+
 ## HUD task2 QA terminal — Lead ACCEPT, 13/11/2026
 
 Orca QA bkm37d3uiwhgp757im7y9hov đã tự đọc source/diff/hash11source/APK và8ảnh verified, PASS khôngP1/P2; Lead ACCEPT milestone, qa/hud-task2.md. Gates analyze52tests/build/audit/runtime do Lead chạy, QA phân biệt kế thừa. Bàn giao Cindy review trước model probe; chưa fullgamecomplete. Evidence TXT65file đổi UTF16→UTF8, không đổi nội dung; quét mẫu debugURI/IP TXT không hit, không bảo đảm mọi PII. Ba Word ngoài phạm vi khôngstage. Snapshot calibrated db9a6b7d…af203db, UI1/M3b giữ.
@@ -269,10 +287,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-13T04:28:09.731Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `318d0942e6ffab77d76edc2bc46856faaf5bc0da`.
-- Local tracking origin/main: `318d0942e6ffab77d76edc2bc46856faaf5bc0da` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 183 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-14T03:52:27.834Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `a1ca7a4bab4b9def5e3613f112afe304b797a225`.
+- Local tracking origin/main: `a1ca7a4bab4b9def5e3613f112afe304b797a225` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 46 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

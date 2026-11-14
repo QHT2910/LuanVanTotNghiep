@@ -1,0 +1,8 @@
+Formatted no files in 0.00 seconds.
+dart.bat : No file or directory found at "game/tutorial-r3/lib/model_diagnostic.dart".
+At line:2 char:79
++ ... | Out-Null; & D:/flutter/bin/dart.bat format game/tutorial-r3/lib/mod ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (No file or dire...agnostic.dart".:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

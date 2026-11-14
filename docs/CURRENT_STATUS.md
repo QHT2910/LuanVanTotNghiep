@@ -1,3 +1,15 @@
+## Fox QA terminal — Lead ACCEPT baseline, 14/11/2026
+
+Orca QA bkm37d3uiwhgp757im7y9hov readonly source/hash/matrixcomparisons/7PNG PASS khôngP1/P2. Leadreview ACCEPT diagnostic, qa/model-fox.md; gates build/runtime kếthừa Lead. Chưa human/gameintegration/fullbinding/GPU/performance. Bàn giao Cindy trướchuman; quota inherited primary14 weekly91 cầnrefresh trướcnextlongtask, stop>=95%either. APKFoxsnapshot d6b66c04…6270f vàHUDdb9a giữ. Source/audit/runtime/limits trong docs/MODEL_FOX_RUNTIME_REVIEW.md. BaWord ngoài scope, khôngstage.
+
+## Fox runtime baseline đạt — chờ QA/Cindy, 14/11/2026
+
+Lead build/analyze-final/audit/install PASS; APK source/asset/installed/snapshot d6b66c04…6270f. Fox visible pose0/50/root/reopen; assertion pose repeat/pause matrices/replay0/root/lifecycle PASS. Scene0.24.3/tutorial-r3 riêng, gameHUD a1ca7a4/APKdb9a giữ. Report docs/MODEL_FOX_RUNTIME_REVIEW.md, evidence-model-fox/*final+runtimeJSON+PNGs. Android truncation log đã sửa chunk500, rebuild/audit cuối; parser content-desc đãsửa trước sequence. Sample3joints khôngfullbinding/GPUready/realphone; chưahuman/gameintegration. Next QAexisting readonly rồi Cindyreview; không task phụ thuộc trước review. Quota inherited Cindyprimary14%/weekly91%reset1794644148/1794897288, reserve5% cảhai; refresh trước task dài mới. Chưa commit chờQA; baWord ngoài scope.
+
+## Fox diagnostic source đã analyze — 14/11/2026
+
+Lead ACCEPT proposal Orcadeveloper readonly và tích hợp lib/model_diagnostic.dart trong tutorial-r3, giữ appgame/HUD/APK. dartformat/analyze entrypointPASS, log game/evidence-model-fox; raw GLB manifest hash d97044…71f7/3clips/24joints. Chưa build/install/runtime/modelhuman. Review docs/MODEL_FOX_SOURCE_REVIEW.md. Cần Cindy refresh quota trướcbuild dài (inherited primary0 weekly89, reserve5% cảhai; ownusage not_exposed). Next build đúngtarget --no-pub, verify provenance rồi AVD pose/pause/root/lifecycle/ảnh; chưa claimprobe/fullgamecomplete. BaWordmodified ngoài scope giữ. Worker terminal Sol6.1readonly, LeadreviewACCEPTsource; pausedArgon không đụng. Không replay52HUDgates.
+
 ## HUD task2 QA terminal — Lead ACCEPT, 13/11/2026
 
 Orca QA bkm37d3uiwhgp757im7y9hov đã tự đọc source/diff/hash11source/APK và8ảnh verified, PASS khôngP1/P2; Lead ACCEPT milestone, qa/hud-task2.md. Gates analyze52tests/build/audit/runtime do Lead chạy, QA phân biệt kế thừa. Bàn giao Cindy review trước model probe; chưa fullgamecomplete. Evidence TXT65file đổi UTF16→UTF8, không đổi nội dung; quét mẫu debugURI/IP TXT không hit, không bảo đảm mọi PII. Ba Word ngoài phạm vi khôngstage. Snapshot calibrated db9a6b7d…af203db, UI1/M3b giữ.

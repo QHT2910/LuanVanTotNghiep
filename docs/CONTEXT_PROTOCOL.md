@@ -38,7 +38,7 @@ Không dùng `/clear`: trợ giúp host nêu lệnh này xóa context/nội dung
 ### Quy tắc quota người dùng — 12/11/2026
 
 - Kiểm usage subscription accounts qua host ở đầu task, mốc bàn giao và trước lệnh build/runtime dài; kiểm cả primary theo giờ và secondary theo tuần, không polling vòng lặp.
-- Khi primary used >=95% (còn5%), không nhận task/build dài mới. Dừng worker an toàn nếu đang làm, giữ file dở và ghi checkpoint ngay: file đổi, task done/pending, lệnh đã chạy/kết quả/evidence, side effect chưa rõ, bước tiếp, quota used và resetsAt thực đọc. Không ép commit code hỏng.
+- Khi primary hoặc secondary weekly used >=95% (còn5%), không nhận task/build dài mới. Dừng worker an toàn nếu đang làm, giữ file dở và ghi checkpoint ngay: file đổi, task done/pending, lệnh đã chạy/kết quả/evidence, side effect chưa rõ, bước tiếp, quota used và resetsAt thực đọc. Không ép commit code hỏng. Ngưỡng dự phòng5% áp dụng cho cả giờ và tuần theo cập nhật14/11/2026.
 - Sau reset giờ, đọc lại usage xác nhận rồi mới resume từ checkpoint; reset giờ không reset tuần. Không đổi account/provider để né hạn mức, không replay bước đã xong.
 - Nếu host không expose phép đọc, ghi rõ chưa thể tự đọc; số Cindy cung cấp là bằng chứng kế thừa, không giả đã đọc mới hoặc bịa resetsAt. Yêu cầu host refresh tại mốc trước công việc dài; không đọc credential/config riêng để lách.
 

@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.example.scene_tutorial_r3/.MainActivity }
+Status: ok
+LaunchState: WARM
+Activity: com.example.scene_tutorial_r3/.MainActivity
+TotalTime: 1872
+WaitTime: 1875
+Complete
