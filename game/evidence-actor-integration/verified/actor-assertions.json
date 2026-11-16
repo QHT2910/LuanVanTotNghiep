@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "scope": "Actor asset and state-transition logs only; not every-frame joint pose",
+  "assetLoads": 3,
+  "stateTransitions": 35,
+  "allDirectionsLogged": true,
+  "heldUsesIdleZero": true,
+  "transitionClipTimeMatchesAcceptedDelta": true,
+  "limits": [
+    "Clip time between transitions reviewed from source/policy tests, not independent per-frame matrix oracle",
+    "Idle/Jog only; no basketball shooting clip or hand attachment",
+    "Full-body game images small; detailed skin acceptance inherited from human diagnostic"
+  ]
+}

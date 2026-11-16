@@ -1,0 +1,541 @@
+[
+  {
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanDiagnostic.glb",
+    "bytes": 7618436,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "minus_Z_visual_offset_pi; verify directional captures"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.09999999999999999,
+    "acceptedDelta": 0.09999999999999999,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.00833333333333286,
+    "acceptedDelta": 0.00833333333333286,
+    "x": 0.011363636363636357,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 0.1249999999999999,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333144,
+    "acceptedDelta": 0.03333333333333144,
+    "x": 1.6477272727272776,
+    "y": 0,
+    "z": 3,
+    "facingX": -0.2648168829239247,
+    "facingZ": -0.964298718509185,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 1.6477272727272776,
+    "y": 0.08197083333333333,
+    "z": 3,
+    "facingX": -0.2648168829239247,
+    "facingZ": -0.964298718509185,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 1.6477272727272776,
+    "y": 0,
+    "z": 3,
+    "facingX": -0.2648168829239247,
+    "facingZ": -0.964298718509185,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 1.6704545454545505,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 3.78,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 3.7798929851296577,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.02499999999999858,
+    "acceptedDelta": 0.02499999999999858,
+    "x": 3.5232419819253464,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 3.545969254652619,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 3.78,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666667993,
+    "acceptedDelta": 0.01666666666667993,
+    "x": 3.7572727272727273,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666667993,
+    "acceptedDelta": 0.01666666666667993,
+    "x": 0.1345454545466408,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.008333333333339965,
+    "acceptedDelta": 0.008333333333339965,
+    "x": 0.14590909091027715,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.01666666666667993,
+    "x": 0.2595454545466407,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666667993,
+    "acceptedDelta": 0.01666666666667993,
+    "x": 0.5890909090920949,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.025000000000019895,
+    "x": 0.5890909090920949,
+    "y": 0.121934375,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.025000000000019895,
+    "acceptedDelta": 0.025000000000019895,
+    "x": 0.5890909090920949,
+    "y": 0,
+    "z": 3,
+    "facingX": -0.09771199205763258,
+    "facingZ": -0.9952147339183284,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.01666666666667993,
+    "x": 0.5890909090920949,
+    "y": 0.08197083333333333,
+    "z": 3,
+    "facingX": -0.09771199205763258,
+    "facingZ": -0.9952147339183284,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.025000000000019895,
+    "acceptedDelta": 0.025000000000019895,
+    "x": 0.5890909090920949,
+    "y": 0,
+    "z": 3,
+    "facingX": -0.09771199205763258,
+    "facingZ": -0.9952147339183284,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.025000000000019895,
+    "x": 0.5890909090920949,
+    "y": 0,
+    "z": 3,
+    "facingX": -0.09771199205763258,
+    "facingZ": -0.9952147339183284,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanDiagnostic.glb",
+    "bytes": 7618436,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "minus_Z_visual_offset_pi; verify directional captures"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.049999999999999996,
+    "acceptedDelta": 0.049999999999999996,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanDiagnostic.glb",
+    "bytes": 7618436,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "minus_Z_visual_offset_pi; verify directional captures"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.09999999999999999,
+    "acceptedDelta": 0.09999999999999999,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.02499999999999858,
+    "acceptedDelta": 0.02499999999999858,
+    "x": -0.0013069325741660004,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.9425096802452038,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.9416383918624265,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.0004074605694547942,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.0004074605694547942,
+    "y": 0,
+    "z": 2.9995643143621082,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.0004074605694547942,
+    "y": 0,
+    "z": 2.0274243634480293,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.0004074605694547942,
+    "y": 0,
+    "z": 2.0282956518308066,
+    "facingX": 0,
+    "facingZ": 1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": -0.0004074605694547942,
+    "y": 0,
+    "z": 2.9821621712131807,
+    "facingX": 0,
+    "facingZ": 1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  }
+]

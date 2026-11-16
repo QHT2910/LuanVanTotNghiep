@@ -1,0 +1,16 @@
+{
+  "scope": "ComputerUse window observations before/after runtime",
+  "pid": 19376,
+  "windowId": 722426,
+  "bounds": {
+    "x": 418,
+    "y": 283,
+    "width": 1083,
+    "height": 515
+  },
+  "screen": {
+    "width": 1920,
+    "height": 1080
+  },
+  "unchanged": true
+}

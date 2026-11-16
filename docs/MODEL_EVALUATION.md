@@ -84,3 +84,11 @@ Orca developer o7v9oxz0vq8wm7n5527dnta1 readonlyproposal/API/GLB, LeadACCEPTsour
 ## Human diagnostic16/11 — Lead/QA review
 
 Orca developer readonlycandidate/APIpatch Sol6.1medium, LeadACCEPTWITHCONDITIONS trướcuserZIPverify. Lead safeimport/preflight/build/runtime: corrected importrootwrapper duplicate and rejected internalAPI usage beforefinalcleananalyze; 1bindingfixiteration, notnewmodelroute. OrcaQA Sol6.1medium readonlyhash/source/26posesamples/8ảnh PASSbaseline vớiP2limitslabel; Leadfixlabel1vòng, noAVDrerun. qa/model-human.md/docsMODEL_HUMAN_RUNTIME_REVIEW; chưaintegration/fullbinding. Usage/costkhôngcó, khôngclaimtiếtkiệm.
+
+## Actor proposal terminal16/11 — Lead source review
+
+Orcadeveloper o7v9oxz0vq8wm7n5527dnta1 readonlySol6.1medium; LeadACCEPTmanualseekpolicy/asyncguard vàtíchhợp source69a1305. Analyze55testsPASS, runtimependingGUIhandoff. docs/ACTOR_INTEGRATION_SOURCE_REVIEW.md. Không model/providerchange/costcomparison, usagekhôngcó. KhôngclaimAVD/gameintegrationđạt từpurepolicytests.
+
+## Actor QA terminal16/11 — Lead ACCEPT
+
+Orcatester bkm37d3uiwhgp757im7y9hov readonlySol6.1medium, source/hash13+3asset/JSON35transitions/10PNG PASSkhôngP1/P2, LeadACCEPT0vòngsửaQA. Leadvisualyawcalibration1vòng trướcQA, regression55beforepi+3after/runtimePASS. qa/actor-integration.md. Khôngcost/modelcomparison; chưahandattach/animationbóngrổ/network.

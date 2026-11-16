@@ -1,0 +1,1 @@
+PASS actor asset/state-transition/direction assertions

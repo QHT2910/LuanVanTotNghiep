@@ -1,0 +1,5 @@
+Formatted game/offline-practice/lib/src/presentation/actor_motion.dart
+Formatted game/offline-practice/lib/src/presentation/human_actor.dart
+Formatted game/offline-practice/lib/src/presentation/practice_page.dart
+Formatted game/offline-practice/test/actor_motion_test.dart
+Formatted 4 files (4 changed) in 0.04 seconds.

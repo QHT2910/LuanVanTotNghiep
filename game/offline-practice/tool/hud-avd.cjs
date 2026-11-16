@@ -2,8 +2,8 @@
 const fs=require('fs'),path=require('path'),cp=require('child_process');
 const serial=process.argv[2],mode=process.argv[3];
 if(!serial||!['layout','move-shot','jump-shot','move-dash','bounds','dash-duration','reset','cancel','background','exit','reentry','system-back'].includes(mode))throw Error('Existing serial and supported mode required');
-if(process.argv[4]&&!['final','verified'].includes(process.argv[4]))throw Error('Only final/verified output suffix supported');
-const adb=path.join(process.env.LOCALAPPDATA,'Android/Sdk/platform-tools/adb.exe'),out=path.resolve(__dirname,'../../evidence-ui-offline-2',process.argv[4]||'');fs.mkdirSync(out,{recursive:true});
+if(process.argv[4]&&!['final','verified','actor'].includes(process.argv[4]))throw Error('Unknown evidence variant');
+const adb=path.join(process.env.LOCALAPPDATA,'Android/Sdk/platform-tools/adb.exe'),out=process.argv[4]==='actor'?path.resolve(__dirname,'../../evidence-actor-integration/verified'):path.resolve(__dirname,'../../evidence-ui-offline-2',process.argv[4]||'');fs.mkdirSync(out,{recursive:true});
 const run=(...args)=>cp.execFileSync(adb,['-s',serial,...args].map(String),{encoding:'utf8',windowsHide:true,timeout:20000,stdio:['ignore','pipe','pipe']});
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 function image(name){run('shell','screencap','-p','/sdcard/hud2.png');run('pull','/sdcard/hud2.png',path.join(out,name+'.png'));}

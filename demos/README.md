@@ -41,3 +41,7 @@ Local ignored demos/releases/model-fox/fox-diagnostic-x64.apk SHA256d6b66c04fa11
 ## Human Idle/Jog diagnostic16/11
 
 Local ignored demos/releases/model-human/human-idle-jog-x64.apk SHA25652f45d5eb20c592ff72024f416a9557861227a98728bedd22d5adc2c8b103b14, installedhashmatch. Scene0.24.3/tutorial-r3 entrypointmodel_diagnostic.dart --dart-define=HUMAN=true; CC0QuaterniusStandardselectednonRMGLB. QA baseline qa/model-human.md, chưagameactor/basketballshoot. Fox/HUDold giữ.
+
+## Offline human actor16/11
+
+Snapshotignored demos/releases/actor-integration/offline-human-actor-x64.apk SHA25618dbb700a5f96ef8039d24d65a63e7f13507ace638ccda498242dbc328bdda6b. Installedhashmatch; oldHUD/Fox/humanprobe giữ. Offline IdleJogactor+gameplayregression1AVD đãQA, qa/actor-integration.md. Chưahandattach/shootjumpDashclip riêng/network/fullgame. Buildoffline-practice lib/main.dart debugandroidx64 nhưREADMEapp, currentassetsCC0/licensegiữ.

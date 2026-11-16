@@ -1,0 +1,5 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/actor_motion_test.dart
+00:00 +0: actual displacement selects locomotion, blocked movement idles
+00:00 +1: air, action lock and reset hold pose rather than fake clips
+00:00 +2: animation accepts simulation time rather than raw long frame
+00:00 +3: All tests passed!

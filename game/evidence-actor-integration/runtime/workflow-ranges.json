@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "reentry",
+    "beforeEventCount": 0,
+    "afterEventCount": 0
+  },
+  {
+    "mode": "layout",
+    "beforeEventCount": 1,
+    "bounds": {
+      "move_joystick": [
+        163,
+        597,
+        562,
+        996
+      ],
+      "jump_button": [
+        1763,
+        844,
+        1931,
+        996
+      ],
+      "dash_button": [
+        1952,
+        844,
+        2120,
+        996
+      ],
+      "shoot_hold_release": [
+        2141,
+        733,
+        2403,
+        996
+      ],
+      "Menu": [
+        2141,
+        158,
+        2403,
+        284
+      ]
+    },
+    "afterEventCount": 1
+  }
+]

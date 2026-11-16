@@ -1,0 +1,18 @@
+[
+  {
+    "event": "dt_clamped",
+    "eventId": 1,
+    "simTime": 0,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "accepted": 0.1
+  }
+]

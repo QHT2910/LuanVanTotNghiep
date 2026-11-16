@@ -14,6 +14,7 @@ import 'package:offline_practice/src/input/dash_button.dart';
 
 import 'practice_navigation.dart';
 import 'practice_hud.dart';
+import 'human_actor.dart';
 
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
@@ -29,7 +30,8 @@ class _PracticePageState extends State<PracticePage>
   late final SemanticsHandle semanticsHandle;
   late final Future<void> ready;
   fs.Scene? scene;
-  late fs.Node playerNode, ballNode, feetNode;
+  late fs.Node ballNode, feetNode;
+  HumanActor? human;
   late fs.PerspectiveCamera camera;
   final hud = ValueNotifier<PracticeHudData>((
     score: 0,
@@ -74,6 +76,19 @@ class _PracticePageState extends State<PracticePage>
   Future<void> prepare() async {
     await fs.Scene.initializeStaticResources();
     if (!mounted || _leaving) return;
+    final actor = await HumanActor.load(
+      alive: () => mounted && !_leaving,
+      log: (event) {
+        if (mounted && !_leaving)
+          debugPrint('practice_actor ' + jsonEncode(event));
+      },
+    );
+    if (actor == null) return;
+    if (!mounted || _leaving) {
+      actor.dispose();
+      return;
+    }
+    human = actor;
     // Keep the emulator diagnostic path simple; no temporal/MSAA history.
     final s = fs.Scene()..antiAliasingMode = fs.AntiAliasingMode.none;
     try {
@@ -163,25 +178,22 @@ class _PracticePageState extends State<PracticePage>
         )..position = vm.Vector3(c.hoopX, c.rimY, c.hoopZ),
       );
 
-      playerNode = fs.Node(name: 'player');
-      playerNode.add(
-        box(vm.Vector3(0.44, 0.8, 0.3), vm.Vector3(0, 0.85, 0), blue),
-      );
-      playerNode.add(
-        fs.Node(
-          mesh: fs.Mesh(
-            fs.SphereGeometry(radius: 0.2, segments: 16, rings: 8),
-            white,
-          ),
-        )..position = vm.Vector3(0, 1.45, 0),
-      );
       // Ground projection stays on the court while the player jumps.
       feetNode = fs.Node(
         name: 'feet_projection',
         mesh: fs.Mesh(fs.DiscGeometry(radius: c.footRadius), blue),
       );
       root.add(feetNode);
-      root.add(playerNode);
+      root.add(actor.node);
+      root.add(
+        fs.Node()
+          ..position = vm.Vector3(-2, 6, 1)
+          ..addComponent(
+            fs.PointLightComponent(
+              fs.PointLight(intensity: 40, range: 25, castsShadow: false),
+            ),
+          ),
+      );
       ballNode = fs.Node(
         name: 'ball',
         mesh: fs.Mesh(
@@ -198,8 +210,12 @@ class _PracticePageState extends State<PracticePage>
       );
       scene = s;
       syncScene();
+      s.update(0);
       publish();
     } catch (_) {
+      actor.dispose();
+      human = null;
+      scene = null;
       s.removeAll();
       s.dispose();
       rethrow;
@@ -207,9 +223,26 @@ class _PracticePageState extends State<PracticePage>
   }
 
   // The only runtime writer of player/ball Scene transforms.
-  void syncScene() {
-    final p = game.player, b = game.ball;
-    playerNode.position = vm.Vector3(p.x, p.y, p.z);
+  void syncScene({
+    double accepted = 0,
+    double dx = 0,
+    double dz = 0,
+    bool reset = false,
+  }) {
+    final p = game.player, b = game.ball, f = game.facing;
+    human?.setPose(
+      x: p.x,
+      y: p.y,
+      z: p.z,
+      facingX: f.x,
+      facingZ: f.z,
+      accepted: accepted,
+      dx: dx,
+      dz: dz,
+      grounded: game.grounded,
+      ready: game.phase == PracticePhase.ready,
+      reset: reset,
+    );
     ballNode.position = vm.Vector3(b.x, b.y, b.z);
     feetNode.position = vm.Vector3(p.x, 0.025, p.z);
   }
@@ -227,19 +260,40 @@ class _PracticePageState extends State<PracticePage>
   }
 
   void tick(Duration elapsed, double dt) {
-    if (!mounted || !resumed || scene == null) return;
-    if (skipFrame) {
-      skipFrame = false;
+    final s = scene;
+    if (!mounted || s == null) return;
+    if (_leaving || !resumed) {
+      human?.pauseAll();
+      s.update(0);
       return;
     }
+    if (skipFrame) {
+      skipFrame = false;
+      human?.pauseAll();
+      s.update(0);
+      return;
+    }
+    final before = game.player, beforeTime = game.simulatedTime;
     game.advance(dt);
-    if (seenRound != game.round) {
+    final changedRound = seenRound != game.round;
+    if (changedRound) {
       seenRound = game.round;
       cancelInputs('round_changed');
-      // Rebuild only at the round transition, not every frame.
       setState(() {});
     }
-    syncScene();
+    final accepted = game.simulatedTime - beforeTime;
+    if (accepted <= 0 && !changedRound) {
+      s.update(0);
+      publish();
+      return;
+    }
+    syncScene(
+      accepted: accepted,
+      dx: game.player.x - before.x,
+      dz: game.player.z - before.z,
+      reset: changedRound,
+    );
+    s.update(0);
     publish();
   }
 
@@ -256,6 +310,7 @@ class _PracticePageState extends State<PracticePage>
     if (_leaving) return;
     _leaving = true;
     resumed = false;
+    human?.pauseAll();
     cancelInputs('return_menu');
     game.setPaused(true);
     skipFrame = true;
@@ -265,6 +320,7 @@ class _PracticePageState extends State<PracticePage>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (!mounted || _leaving) return;
     resumed = state == AppLifecycleState.resumed;
+    human?.pauseAll();
     if (!resumed) cancelInputs('background');
     game.setPaused(!resumed);
     skipFrame = true;
@@ -309,7 +365,7 @@ class _PracticePageState extends State<PracticePage>
           cancelInputs('manual_reset');
           game.newRound();
           seenRound = game.round;
-          syncScene();
+          syncScene(reset: true);
           setState(() {});
           publish();
         },
@@ -407,6 +463,8 @@ class _PracticePageState extends State<PracticePage>
     WidgetsBinding.instance.removeObserver(this);
     cancelInputs('dispose');
     game.setPaused(true);
+    human?.dispose();
+    human = null;
     scene?.removeAll();
     scene?.dispose();
     hud.dispose();

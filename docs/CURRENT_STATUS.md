@@ -1,3 +1,19 @@
+## Actor QA terminal — Lead ACCEPT,16/11/2026
+
+OrcaQA bkm37d3uiwhgp757im7y9hov readonlysource/hash13+3asset/rawJSON/10PNG PASSkhôngP1/P2. LeadACCEPT IdleJogintegration/gameplayregression1AVD, qa/actor-integration.md; chưafullgame/handattach/ballshootjumpDashclip/fullskin. Actor35transitions/3assetloads, 4facing; finalAPK18dbb700…28bdda6b, tests55beforepi+3after, runtimegameplayoraclePASS. GUIcenterreceiptbefore/afterx418y283W1083H515, khôngmove. Bàn giaoCindyreview trướcnexttask/networkminimal; demosold giữ,3Wordngoàiscope. Quotaownnotexposed/Cindy16primary0weekly0inherited,refreshbeforelongtask/stop>=95%either.
+
+## Actor runtime đạt — chờQA,16/11/2026
+
+Leadbuild/analyze-final/audit13source+3assets/install PASS, APK18dbb700…28bdda6b installed/snapshotmatch. Tests55beforevisualyawfix+3policyafteryaw, khôngclaim55rerunafter. Yaw0reversed→visualoffsetpi, finalảnhdirections/neutral đúnghướngmôphỏng. Gameplay2shots3+3/airborneorigin/Dash/bounds/cancel/reset/lifecycle/exit/reentry oraclePASS; actorstateassert65/null0/4directions/acceptedtimeattransitionsPASS. Report docs/ACTOR_INTEGRATION_RUNTIME_REVIEW.md. Authoritative verified/ và*final; runtime/ làyaw0calibration. ClipIdle/Jogonly, ballcũvẫntrênđầu/nohandattach, nojump/shootanimation; khôngfullgameaccept.
+
+GUICindyhandoffdone: freshbefore/afterwindow19376/722426 vẫncenterx418y283W1083H515, khôngmoveoffscreen. NextQAexistingreadonly rồiLead/Cindyreview; chưacommitchờQA, giữdemosold và3Wordngoàiscope. Quotaownnotexposed/Cindy16primary0weekly0inherited, refreshbeforelongtask,stop>=95%either. Khôngnetwork/thesis tựmở.
+
+## Actor source tíchhợp /55testsPASS — 16/11/2026
+
+LeadACCEPT Orcadeveloperreadonlyproposal vàtíchhợp HumanActor/actor_motion vàoofflinepractice, source docs/ACTOR_INTEGRATION_SOURCE_REVIEW.md. Asset3filecopyhashbaseline, asyncguardtrướcScenecreate, simulationownsposition/yaw/jump; manualseekacceptedtime/clipsalwayspaused/Scene.update0once. SourceanalyzePASS/tests55PASS(52cũ+3policy), auditNode13source+3assetexpectedhash syntaxPASS, chưabuild/auditAPK/install/runtime. Simulation/input/deps/52tests cũkhôngđổi. Yaw+Z/light40/ballvisual/holdpose thiếushootjump cầnAVDverify. KhôngclaimgameactorPASS/fullgame.
+
+GUICindyđangcenteringemulator, LeadchưadùngGUI/ADBinput vàkhôngmoveoffscreen. CầnCindyhandoffGUI+freshquotaprimaryweekly trướcbuilddài; inherited16/11primary0weekly0, reserve5%both. APKHUD/Fox/human giữ, Word3modifiedngoàiscope. Nextbuilddebugx64/audit/installruntimevisiblecenter/quadsdirections+multitouch/lifecycle/exit, rồiQA/Cindyreview. Chưa commit sourceactor vìruntimegatepending, giữfiledởkhôngreplay55tests nếusourcekhôngđổi.
+
 ## Human QA terminal — Lead ACCEPT baseline,16/11/2026
 
 OrcaQA bkm37d3uiwhgp757im7y9hov readonlysource/hash/26posesamples/8PNG PASSkhôngP1; P2limitsFoxlabel đãsửa humanconditional + regenerateJSONoraclePASS, khôngrerunAVD. qa/model-human.md. LeadACCEPTbaseline đểCindyreview, chưaactorintegration/fullbinding/reopenhuman/Foxnewcode regression. APK52f45d5e…b103b14/humanGLB69591853…ed67997, HUD/Foxsnapshotgiữ. NextCindyreview trướcgameintegration giữsimulation/input/ballrelease vàrootmotionownedbysimulation; quota inherited16/11primary0weekly0需refreshtrướclệnhdài,stop>=95%either. BaWordmodifiedngoàiscope khôngstage.

@@ -18,6 +18,8 @@ SOURCES = [
     "lib/src/presentation/menu_pages.dart",
     "lib/src/presentation/practice_navigation.dart",
     "lib/src/presentation/practice_hud.dart",
+    "lib/src/presentation/actor_motion.dart",
+    "lib/src/presentation/human_actor.dart",
 ]
 OLD = [
     "lib/config.dart", "lib/practice.dart",

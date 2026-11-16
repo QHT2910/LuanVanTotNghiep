@@ -1,0 +1,1 @@
+PASS input workflow move-shot; assertions/visual review separate
