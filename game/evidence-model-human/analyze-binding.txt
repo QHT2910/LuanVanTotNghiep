@@ -1,0 +1,6 @@
+Analyzing model_diagnostic.dart...
+
+warning - model_diagnostic.dart:137:54 - The member 'hasEngineAssignedName' can only be used within its package. - invalid_use_of_internal_member
+warning - model_diagnostic.dart:152:52 - The member 'hasEngineAssignedName' can only be used within its package. - invalid_use_of_internal_member
+
+2 issues found.

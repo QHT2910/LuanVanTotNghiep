@@ -5,6 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_scene/scene.dart' as fs;
 import 'package:vector_math/vector_math.dart' as vm;
 
+const humanDiagnostic = bool.fromEnvironment('HUMAN');
+const modelAsset = humanDiagnostic
+    ? 'assets/human-ual-standard/HumanDiagnostic.glb'
+    : 'assets/Fox.glb';
+const runClipName = humanDiagnostic ? 'Jog_Fwd_Loop' : 'Run';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([
@@ -27,6 +33,9 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
   fs.Scene? scene;
   fs.Node? actor, model;
   fs.AnimationClip? clip;
+  final clips = <String, fs.AnimationClip>{};
+  final durations = <String, double>{};
+  String selectedClip = runClipName;
   fs.PerspectiveCamera? camera;
   final joints = <fs.Node>[];
   double duration = 0;
@@ -50,7 +59,15 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
       'runId': runId,
       'seq': ++seq,
       'event': event,
-      'clip': 'Run',
+      'clip': selectedClip,
+      'clipStates': {
+        for (final e in clips.entries)
+          e.key: {
+            'playing': e.value.playing,
+            'weight': e.value.weight,
+            'time': e.value.playbackTime,
+          },
+      },
       'clipTime': clip?.playbackTime,
       'playing': clip?.playing,
       'appActive': active,
@@ -78,7 +95,7 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     await fs.Scene.initializeStaticResources();
     if (!alive) return;
     final watch = Stopwatch()..start();
-    final data = await rootBundle.load('assets/Fox.glb');
+    final data = await rootBundle.load(modelAsset);
     watch.stop();
     final readMs = watch.elapsedMicroseconds / 1000;
     final warnings = <String>[];
@@ -94,11 +111,44 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     );
     watch.stop();
     if (!alive) return;
-    final animation = loaded.findAnimationByName('Run');
+    final animation = loaded.findAnimationByName(runClipName);
     if (animation == null || animation.endTime <= 0) {
       throw StateError('Run clip missing or empty');
     }
     final nodes = walk(loaded).toList();
+    final requested = {runClipName, if (humanDiagnostic) 'Idle_Loop'};
+    final bindingAudit = <Map<String, Object?>>[];
+    for (final name in requested) {
+      final matches = loaded.parsedAnimations
+          .where((a) => a.name == name)
+          .toList();
+      if (matches.length != 1 || matches.single.endTime <= 0) {
+        throw StateError('Missing/duplicate requested clip: $name');
+      }
+      final targets = matches.single.channels
+          .map((c) => c.bindTarget.nodeName)
+          .toSet();
+      final counts = {
+        for (final name in targets)
+          name: nodes
+              .where((n) => n.name == name && !identical(n, loaded))
+              .length,
+      };
+      if (counts.values.any((n) => n != 1)) {
+        emit('binding_rejected', {
+          'clip': name,
+          'counts': counts,
+          'nodeNames': [for (final n in nodes) n.name],
+        });
+        throw StateError('Ambiguous clip binding');
+      }
+      bindingAudit.add({
+        'clip': name,
+        'targetMatches': counts,
+        'syntheticImportRootExcluded': true,
+        'importRootName': loaded.name,
+      });
+    }
     final skins = <Map<String, Object?>>[];
     for (final node in nodes) {
       final skin = node.skin;
@@ -113,7 +163,8 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
       }
     }
     emit('asset_metadata', {
-      'asset': 'assets/Fox.glb',
+      'asset': modelAsset,
+      'bindingAudit': bindingAudit,
       'bytes': data.lengthInBytes,
       'bundleReadMs': readMs,
       'importFutureMs': watch.elapsedMicroseconds / 1000,
@@ -133,7 +184,7 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     final s = fs.Scene()..antiAliasingMode = fs.AntiAliasingMode.none;
     try {
       final wrapper = fs.Node(name: 'diagnostic_actor')
-        ..scale = vm.Vector3.all(0.01);
+        ..scale = vm.Vector3.all(humanDiagnostic ? 1 : 0.01);
       wrapper.add(loaded);
       s.add(wrapper);
       final floor = fs.UnlitMaterial()
@@ -151,19 +202,28 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
             ),
           ),
       );
-      final playback = loaded.createAnimationClip(animation)
-        ..loop = true
-        ..weight = 1
-        ..playbackTimeScale = 1;
-      playback.pause();
-      playback.seek(0);
+      for (final name in requested) {
+        final a = loaded.findAnimationByName(name)!;
+        final p = loaded.createAnimationClip(a)
+          ..loop = true
+          ..weight = 0;
+        p.pause();
+        p.seek(0);
+        clips[name] = p;
+        durations[name] = a.endTime;
+      }
       model = loaded;
       actor = wrapper;
-      clip = playback;
+      clip = clips[selectedClip]!;
+      clip!.weight = 1;
       duration = animation.endTime;
       camera = fs.PerspectiveCamera(
-        position: vm.Vector3(4, 3, -5),
-        target: vm.Vector3(0.5, 0.8, 0),
+        position: humanDiagnostic
+            ? vm.Vector3(2.5, 1.8, -3.5)
+            : vm.Vector3(4, 3, -5),
+        target: humanDiagnostic
+            ? vm.Vector3(0, 0.9, 0)
+            : vm.Vector3(0.5, 0.8, 0),
         fovNear: 0.1,
         fovFar: 30,
       );
@@ -229,6 +289,24 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     setState(() {});
   }
 
+  void switchClip(String name) {
+    if (!alive || !active || !clips.containsKey(name)) return;
+    emit('before_clip_switch', {'next': name});
+    for (final old in clips.values) {
+      old.pause();
+      old.weight = 0;
+    }
+    selectedClip = name;
+    clip = clips[name]!;
+    duration = durations[name]!;
+    clip!.seek(0);
+    clip!.weight = 1;
+    wantsPlay = false;
+    skipDelta = true;
+    pendingSample = 'clip_switch_$name';
+    setState(() {});
+  }
+
   void pose(double fraction) {
     wantsPlay = false;
     clip!.pause();
@@ -243,7 +321,9 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     emit('before_lifecycle', {'next': state.name});
     active = state == AppLifecycleState.resumed;
     if (!active) {
-      clip?.pause();
+      for (final c in clips.values) {
+        c.pause();
+      }
     } else if (wantsPlay) {
       clip?.play();
     }
@@ -258,7 +338,9 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
     emit('dispose_requested');
     closed = true;
     WidgetsBinding.instance.removeObserver(this);
-    clip?.pause();
+    for (final c in clips.values) {
+      c.pause();
+    }
     scene?.removeAll();
     scene?.dispose();
     super.dispose();
@@ -288,7 +370,7 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
                     ? 'Flutter callback; GPU unverified'
                     : 'waiting',
                 child: Text(
-                  'Fox baseline / Run / ${wantsPlay ? "playing" : "paused"}',
+                  '${humanDiagnostic ? "Human" : "Fox baseline"} / $selectedClip / ${wantsPlay ? "playing" : "paused"}',
                 ),
               ),
               Expanded(
@@ -297,6 +379,10 @@ class _FoxDiagnosticState extends State<FoxDiagnostic>
               Wrap(
                 alignment: WrapAlignment.center,
                 children: [
+                  if (humanDiagnostic)
+                    button('diag_idle', 'Idle', () => switchClip('Idle_Loop')),
+                  if (humanDiagnostic)
+                    button('diag_run', 'Run', () => switchClip(runClipName)),
                   button('diag_play', 'Play', () => play(true)),
                   button('diag_pause', 'Pause', () => play(false)),
                   button('diag_replay', 'Replay', () {

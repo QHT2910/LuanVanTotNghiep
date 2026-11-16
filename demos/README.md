@@ -37,3 +37,7 @@ Local ignored `demos/releases/ui-offline-2/offline-practice-ui2-calibrated-x64.a
 ## Fox model diagnostic14/11
 
 Local ignored demos/releases/model-fox/fox-diagnostic-x64.apk SHA256d6b66c04fa11334b7df6304701afe7c42c124956c6d8e2265ffe4c4fce96270f; package com.example.scene_tutorial_r3 riêng, giữHUD APK. Entrypoint tutorial-r3/lib/model_diagnostic.dart, Scene0.24.3, Foxlicense giữ. Repro build --target lib/model_diagnostic.dart --debug --target-platform android-x64 --no-pub. QA baseline qa/model-fox.md; chưamodelngười/gameplay.
+
+## Human Idle/Jog diagnostic16/11
+
+Local ignored demos/releases/model-human/human-idle-jog-x64.apk SHA25652f45d5eb20c592ff72024f416a9557861227a98728bedd22d5adc2c8b103b14, installedhashmatch. Scene0.24.3/tutorial-r3 entrypointmodel_diagnostic.dart --dart-define=HUMAN=true; CC0QuaterniusStandardselectednonRMGLB. QA baseline qa/model-human.md, chưagameactor/basketballshoot. Fox/HUDold giữ.

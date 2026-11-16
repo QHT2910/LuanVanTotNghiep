@@ -1,3 +1,15 @@
+## Human QA terminal — Lead ACCEPT baseline,16/11/2026
+
+OrcaQA bkm37d3uiwhgp757im7y9hov readonlysource/hash/26posesamples/8PNG PASSkhôngP1; P2limitsFoxlabel đãsửa humanconditional + regenerateJSONoraclePASS, khôngrerunAVD. qa/model-human.md. LeadACCEPTbaseline đểCindyreview, chưaactorintegration/fullbinding/reopenhuman/Foxnewcode regression. APK52f45d5e…b103b14/humanGLB69591853…ed67997, HUD/Foxsnapshotgiữ. NextCindyreview trướcgameintegration giữsimulation/input/ballrelease vàrootmotionownedbysimulation; quota inherited16/11primary0weekly0需refreshtrướclệnhdài,stop>=95%either. BaWordmodifiedngoàiscope khôngstage.
+
+## Human Idle/Jog baseline — chờQA,16/11/2026
+
+UserZIPverifiedCC0/GLB65joints/Idle_Loop+Jog_Fwd_Loop. Leadbuild/analyze-final/audit/install/runtimeassertPASS; APK52f45d5e…b103b14 installed/snapshotmatch, giữFox/HUDold. Report docs/MODEL_HUMAN_RUNTIME_REVIEW.md/evidence-model-human. Fixpreflightrootwrappervsjointroot theoScene0.24.3, finalkhônginternalAPI; initialguarderror/AndroidtransitionảnhkhôngfinalPASS. Rootrawtranslationsall0, pelvisbob giữ. Modelngườihiểnthịtoànthân/IdleJogswitch; chưagameintegration/shoot/mọibinding/reopenhuman. NextQAexistingreadonly rồiCindyreview trướcgameactorintegration. Quota inheritedCindy16/11primary0weekly0, reserve5%cảhai, ownnotexposed; refresh trướclệnhdài. BaWordmodifiedngoàiscope, chưacommitchờQA.
+
+## Human candidate review — download chưa đạt, 16/11/2026
+
+Leadreview Orcadeveloper task1 ACCEPT WITH CONDITIONS, docs/HUMAN_TASK1_REVIEW.md. Candidate Quaternius UniversalAnimationLibraryStandard15MBfree; exactZIP/GLB/IdleRun/licensefile/hash chưaverify. BrowserEdge qua supportedGUI đã vào officialpurchase, clickNoThanks navigationđến downloadpage nhưng trắng; refresh một lần outcomeunverifiable, khôngreplay/khôngpayment. ChưaZIPDownloads, chưaasset/codediagnostic/humanbuild mới. Khônglưu signedURL. Next xácminhdownloadpage/tảiStandard, inspectfile rồiparameterizeexistingprobe, khôngclaimhumanPASS. Fox/HUDAPK/Wordgiữ. Quota inherited16/11primary0weekly0, reserve5%cảhai. Workerterminal readonlySol6.1; khôngdispatchtrùng/Argonroute.
+
 ## Fox QA terminal — Lead ACCEPT baseline, 14/11/2026
 
 Orca QA bkm37d3uiwhgp757im7y9hov readonly source/hash/matrixcomparisons/7PNG PASS khôngP1/P2. Leadreview ACCEPT diagnostic, qa/model-fox.md; gates build/runtime kếthừa Lead. Chưa human/gameintegration/fullbinding/GPU/performance. Bàn giao Cindy trướchuman; quota inherited primary14 weekly91 cầnrefresh trướcnextlongtask, stop>=95%either. APKFoxsnapshot d6b66c04…6270f vàHUDdb9a giữ. Source/audit/runtime/limits trong docs/MODEL_FOX_RUNTIME_REVIEW.md. BaWord ngoài scope, khôngstage.

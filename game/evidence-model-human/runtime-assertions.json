@@ -1,0 +1,474 @@
+{
+  "pass": true,
+  "scope": "One AVD debug human Idle/Jog diagnostic; not gameplay",
+  "selectedClipWeightsExclusive": true,
+  "pose0RepeatMatricesEqual": true,
+  "pose50Differs": true,
+  "pauseSamplesEqual": true,
+  "replayTimeZero": true,
+  "rootTransformChangedWithJointLocalPreserved": true,
+  "lifecycleFreezeAndIntentResume": true,
+  "metadata": {
+    "schema": 1,
+    "runId": "2026-11-16T01:03:25.932742Z",
+    "seq": 1,
+    "event": "asset_metadata",
+    "clip": "Jog_Fwd_Loop",
+    "clipStates": {},
+    "clipTime": null,
+    "playing": null,
+    "appActive": true,
+    "asset": "assets/human-ual-standard/HumanDiagnostic.glb",
+    "bindingAudit": [
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targetMatches": {
+          "root": 1,
+          "pelvis": 1,
+          "spine_01": 1,
+          "spine_02": 1,
+          "spine_03": 1,
+          "neck_01": 1,
+          "Head": 1,
+          "clavicle_l": 1,
+          "upperarm_l": 1,
+          "lowerarm_l": 1,
+          "hand_l": 1,
+          "index_01_l": 1,
+          "index_02_l": 1,
+          "index_03_l": 1,
+          "index_04_leaf_l": 1,
+          "middle_01_l": 1,
+          "middle_02_l": 1,
+          "middle_03_l": 1,
+          "middle_04_leaf_l": 1,
+          "pinky_01_l": 1,
+          "pinky_02_l": 1,
+          "pinky_03_l": 1,
+          "pinky_04_leaf_l": 1,
+          "ring_01_l": 1,
+          "ring_02_l": 1,
+          "ring_03_l": 1,
+          "ring_04_leaf_l": 1,
+          "thumb_01_l": 1,
+          "thumb_02_l": 1,
+          "thumb_03_l": 1,
+          "thumb_04_leaf_l": 1,
+          "clavicle_r": 1,
+          "upperarm_r": 1,
+          "lowerarm_r": 1,
+          "hand_r": 1,
+          "index_01_r": 1,
+          "index_02_r": 1,
+          "index_03_r": 1,
+          "index_04_leaf_r": 1,
+          "middle_01_r": 1,
+          "middle_02_r": 1,
+          "middle_03_r": 1,
+          "middle_04_leaf_r": 1,
+          "pinky_01_r": 1,
+          "pinky_02_r": 1,
+          "pinky_03_r": 1,
+          "pinky_04_leaf_r": 1,
+          "ring_01_r": 1,
+          "ring_02_r": 1,
+          "ring_03_r": 1,
+          "ring_04_leaf_r": 1,
+          "thumb_01_r": 1,
+          "thumb_02_r": 1,
+          "thumb_03_r": 1,
+          "thumb_04_leaf_r": 1,
+          "thigh_l": 1,
+          "calf_l": 1,
+          "foot_l": 1,
+          "ball_l": 1,
+          "ball_leaf_l": 1,
+          "thigh_r": 1,
+          "calf_r": 1,
+          "foot_r": 1,
+          "ball_r": 1,
+          "ball_leaf_r": 1
+        },
+        "syntheticImportRootExcluded": true,
+        "importRootName": "root"
+      },
+      {
+        "clip": "Idle_Loop",
+        "targetMatches": {
+          "root": 1,
+          "pelvis": 1,
+          "spine_01": 1,
+          "spine_02": 1,
+          "spine_03": 1,
+          "neck_01": 1,
+          "Head": 1,
+          "clavicle_l": 1,
+          "upperarm_l": 1,
+          "lowerarm_l": 1,
+          "hand_l": 1,
+          "index_01_l": 1,
+          "index_02_l": 1,
+          "index_03_l": 1,
+          "index_04_leaf_l": 1,
+          "middle_01_l": 1,
+          "middle_02_l": 1,
+          "middle_03_l": 1,
+          "middle_04_leaf_l": 1,
+          "pinky_01_l": 1,
+          "pinky_02_l": 1,
+          "pinky_03_l": 1,
+          "pinky_04_leaf_l": 1,
+          "ring_01_l": 1,
+          "ring_02_l": 1,
+          "ring_03_l": 1,
+          "ring_04_leaf_l": 1,
+          "thumb_01_l": 1,
+          "thumb_02_l": 1,
+          "thumb_03_l": 1,
+          "thumb_04_leaf_l": 1,
+          "clavicle_r": 1,
+          "upperarm_r": 1,
+          "lowerarm_r": 1,
+          "hand_r": 1,
+          "index_01_r": 1,
+          "index_02_r": 1,
+          "index_03_r": 1,
+          "index_04_leaf_r": 1,
+          "middle_01_r": 1,
+          "middle_02_r": 1,
+          "middle_03_r": 1,
+          "middle_04_leaf_r": 1,
+          "pinky_01_r": 1,
+          "pinky_02_r": 1,
+          "pinky_03_r": 1,
+          "pinky_04_leaf_r": 1,
+          "ring_01_r": 1,
+          "ring_02_r": 1,
+          "ring_03_r": 1,
+          "ring_04_leaf_r": 1,
+          "thumb_01_r": 1,
+          "thumb_02_r": 1,
+          "thumb_03_r": 1,
+          "thumb_04_leaf_r": 1,
+          "thigh_l": 1,
+          "calf_l": 1,
+          "foot_l": 1,
+          "ball_l": 1,
+          "ball_leaf_l": 1,
+          "thigh_r": 1,
+          "calf_r": 1,
+          "foot_r": 1,
+          "ball_r": 1,
+          "ball_leaf_r": 1
+        },
+        "syntheticImportRootExcluded": true,
+        "importRootName": "root"
+      }
+    ],
+    "bytes": 7618436,
+    "bundleReadMs": 35.652,
+    "importFutureMs": 785.652,
+    "timingScope": "Bundle read/import Future; not GPU readiness",
+    "clips": [
+      {
+        "name": "A_TPose",
+        "duration": 2.5,
+        "channels": 195
+      },
+      {
+        "name": "Crouch_Fwd_Loop",
+        "duration": 2,
+        "channels": 195
+      },
+      {
+        "name": "Crouch_Idle_Loop",
+        "duration": 2.933333396911621,
+        "channels": 195
+      },
+      {
+        "name": "Dance_Loop",
+        "duration": 1,
+        "channels": 195
+      },
+      {
+        "name": "Death01",
+        "duration": 2.4000000953674316,
+        "channels": 195
+      },
+      {
+        "name": "Driving_Loop",
+        "duration": 1.6666666269302368,
+        "channels": 195
+      },
+      {
+        "name": "Fixing_Kneeling",
+        "duration": 5.199999809265137,
+        "channels": 195
+      },
+      {
+        "name": "Hit_Chest",
+        "duration": 0.3333333432674408,
+        "channels": 195
+      },
+      {
+        "name": "Hit_Head",
+        "duration": 0.4333333373069763,
+        "channels": 195
+      },
+      {
+        "name": "Idle_Loop",
+        "duration": 2.5,
+        "channels": 195
+      },
+      {
+        "name": "Idle_Talking_Loop",
+        "duration": 2.933333396911621,
+        "channels": 195
+      },
+      {
+        "name": "Idle_Torch_Loop",
+        "duration": 1.2666666507720947,
+        "channels": 195
+      },
+      {
+        "name": "Interact",
+        "duration": 2,
+        "channels": 195
+      },
+      {
+        "name": "Jog_Fwd_Loop",
+        "duration": 0.9333333373069763,
+        "channels": 195
+      },
+      {
+        "name": "Jump_Land",
+        "duration": 1.2666666507720947,
+        "channels": 195
+      },
+      {
+        "name": "Jump_Loop",
+        "duration": 2.5,
+        "channels": 195
+      },
+      {
+        "name": "Jump_Start",
+        "duration": 1.3333333730697632,
+        "channels": 195
+      },
+      {
+        "name": "PickUp_Table",
+        "duration": 0.8333333134651184,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Aim_Down",
+        "duration": 0.1666666716337204,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Aim_Neutral",
+        "duration": 0.1666666716337204,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Aim_Up",
+        "duration": 0.1666666716337204,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Idle_Loop",
+        "duration": 1.6666666269302368,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Reload",
+        "duration": 1.6666666269302368,
+        "channels": 195
+      },
+      {
+        "name": "Pistol_Shoot",
+        "duration": 0.6333333253860474,
+        "channels": 195
+      },
+      {
+        "name": "Punch_Cross",
+        "duration": 1,
+        "channels": 195
+      },
+      {
+        "name": "Punch_Jab",
+        "duration": 0.8666666746139526,
+        "channels": 195
+      },
+      {
+        "name": "Push_Loop",
+        "duration": 2.6666667461395264,
+        "channels": 195
+      },
+      {
+        "name": "Roll",
+        "duration": 1.4666666984558105,
+        "channels": 195
+      },
+      {
+        "name": "Sitting_Enter",
+        "duration": 1.2999999523162842,
+        "channels": 195
+      },
+      {
+        "name": "Sitting_Exit",
+        "duration": 1.0333333015441895,
+        "channels": 195
+      },
+      {
+        "name": "Sitting_Idle_Loop",
+        "duration": 1.6666666269302368,
+        "channels": 195
+      },
+      {
+        "name": "Sitting_Talking_Loop",
+        "duration": 2.933333396911621,
+        "channels": 195
+      },
+      {
+        "name": "Spell_Simple_Enter",
+        "duration": 0.5333333611488342,
+        "channels": 195
+      },
+      {
+        "name": "Spell_Simple_Exit",
+        "duration": 0.4333333373069763,
+        "channels": 195
+      },
+      {
+        "name": "Spell_Simple_Idle_Loop",
+        "duration": 2.0999999046325684,
+        "channels": 195
+      },
+      {
+        "name": "Spell_Simple_Shoot",
+        "duration": 0.5,
+        "channels": 195
+      },
+      {
+        "name": "Sprint_Loop",
+        "duration": 0.6666666865348816,
+        "channels": 195
+      },
+      {
+        "name": "Swim_Fwd_Loop",
+        "duration": 1.3333333730697632,
+        "channels": 195
+      },
+      {
+        "name": "Swim_Idle_Loop",
+        "duration": 3.3333332538604736,
+        "channels": 195
+      },
+      {
+        "name": "Sword_Attack",
+        "duration": 1.5333333015441895,
+        "channels": 195
+      },
+      {
+        "name": "Sword_Idle",
+        "duration": 1.6666666269302368,
+        "channels": 195
+      },
+      {
+        "name": "Walk_Formal_Loop",
+        "duration": 1.3333333730697632,
+        "channels": 195
+      },
+      {
+        "name": "Walk_Loop",
+        "duration": 1.3333333730697632,
+        "channels": 195
+      }
+    ],
+    "runtimeSkinnedNodes": [
+      {
+        "node": "Mannequin",
+        "jointCount": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "nodeNames": [
+      "root",
+      "Armature",
+      "Mannequin",
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "Head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "index_04_leaf_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "middle_04_leaf_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "pinky_04_leaf_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "ring_04_leaf_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_04_leaf_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "index_04_leaf_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "middle_04_leaf_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "pinky_04_leaf_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "ring_04_leaf_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_04_leaf_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "ball_leaf_l",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "ball_leaf_r"
+    ]
+  },
+  "limits": [
+    "Three sampled joints do not prove every channel binding",
+    "No GPU-ready/frame-time benchmark",
+    "No per-frame oracle for double advance; source path reviewed",
+    "Human mannequin Idle/Jog diagnostic; basketball shooting not verified"
+  ]
+}
