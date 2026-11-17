@@ -92,3 +92,11 @@ Orcadeveloper o7v9oxz0vq8wm7n5527dnta1 readonlySol6.1medium; LeadACCEPTmanualsee
 ## Actor QA terminal16/11 — Lead ACCEPT
 
 Orcatester bkm37d3uiwhgp757im7y9hov readonlySol6.1medium, source/hash13+3asset/JSON35transitions/10PNG PASSkhôngP1/P2, LeadACCEPT0vòngsửaQA. Leadvisualyawcalibration1vòng trướcQA, regression55beforepi+3after/runtimePASS. qa/actor-integration.md. Khôngcost/modelcomparison; chưahandattach/animationbóngrổ/network.
+
+## M2 inventory/interface proposal terminal16/11
+
+Orcadeveloper readonlySol6.1medium; LeadACCEPTinventory/interface, authoredposecandidatechưavisualaccept. LeadimplementedM2aorigincontract+pureclock+6tests/analyze61PASS; chưapage/hand/pose/runtime, docs/M2_HAND_ACTION_SOURCE_REVIEW.md. WorkerGLBofflineposes kếthừa khôngSceneruntime. Usage/costkhôngcó, noquality/modelcostcomparison.
+
+## M2 source QA17/11 vàLeadfix
+
+OrcaQA bkm37d3uiwhgp757im7y9hov readonlySol6.1medium phát hiện2P2(clockreleaseseek/sampleDashstale); LeadACCEPTfindings vàfix1vòng, analyze64tests/buildauditinstallp2PASS. qa/m2-source.md/docsM2_P2_FIX_REVIEW.md, workerchưareviewfix/runtime. Noquality/cost/modelrouteclaim; usagekhôngcó.

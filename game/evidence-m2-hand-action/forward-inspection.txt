@@ -1,0 +1,7 @@
+{"ball_leaf_l":[0.17264315485954285,0.014637157320976257,0.3537920117378235],"ball_l":[0.18045039474964142,0.014637164771556854,0.2752792239189148],"foot_l":[0.1951940804719925,0.10313722491264343,0.12701043486595154],"ball_leaf_r":[-0.3191598057746887,0.015198348090052605,-0.10241401195526123],"ball_r":[-0.2646859586238861,0.015198334120213985,-0.15949127078056335],"foot_r":[-0.1618138551712036,0.10369835048913956,-0.2672796845436096]}
+dart.bat : Running build hooks...Running build hooks...
+At line:2 char:1
++ & D:/flutter/bin/dart.bat run tool/author_basketball.dart --inspect-f ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Running build h... build hooks...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError

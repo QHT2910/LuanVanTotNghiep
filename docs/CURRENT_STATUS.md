@@ -1,3 +1,62 @@
+## M2 guard QA closure PASS — baseline có giới hạn,17/11/2026
+
+Orca QA terminal đã tới: qa/m2-guard-closure.md, Lead ACCEPT đóng2P2 trong scope guard/freeze submittedCPU pose/comment. QA tự hash16source4asset/APK/snapshotb784, raw65matrix4zero delta0/2lowcharge+incidentalq.020833, regression5release13score6negative/freeze và13ảnh/reentry0lượt1. Tests71/build/install/pm-pull là Lead gates kếthừa, không worker rerun. Không GPUframe/fullbinding/M2jump-shootcomplete claim. Developer proposal/correction đã review và tích hợp, không replaylate reports.
+
+Nguồn/ảnh/log/APK hiện hành theo docs/M2_GUARD_SOURCE_REVIEW.md; oldM1/a8ed/HUD/Fox/human giữ. Lead chuẩn bị chốt baseline đã QA bằng finish-session (ba Wordoutside phải exclude), trạng thái commit/push kiểm từ Git/toolreceipt, không nhận trước khi chạy. Cindy review baseline tiếp; phần cần làm trong M2 là chuyển pose/normalcharge và phối hợp airbornebody, zero-frame hiện no-shoot-animation. Chưa mở network/thesis/Figma/modelroute.
+
+Quota reset Cindy updated1794919565480 primary0%reset1794937565,weekly29%reset1795394548; reserve5%both. QA worker hồi phục đúngsession cũ/Sol6.1medium/readonlyrootold và đã terminal, không còn connectionfailure như QAresult. Sau bàn giao Cindy, nextboundedanimationpatch cần source proposal/review rồi chỉbuild/runtime khi source thay, không lặp71gates. Emucenter416,284 giữ, LeadGUI/Git; pausedArgonpilot nguyên.
+
+## Quota reset xác minh — QA closure đang chạy,17/11/2026
+
+Cindy fresh host updated1794919565480: primary0%used/reset1794937565; weekly29%used/reset1795394548, ready. Không dùng số89/46 cũ. Reserve5%cả hai, không đổi provider/model. Lượt trước approval reviewer usage-limit khiến quota-checkpoint write KHÔNG chạy; source/APK/evidence/checkpoint trước đó vẫn giữ. QA connection retry120s auto-interrupt chỉ là lỗi kết nối, không verdict.
+
+Fresh Orca workspace lần này xác nhận đúng QA bkm37d3uiwhgp757im7y9hov/session2e4ee883-bf67-44e2-bcd7-5f0463da63c5 đang running/active, queue0, route Codex/gpt-6.1-sol medium/rootoldreadonly. Không dispatch/resume trùng; giữ order closure hiện hữu và chờ terminal tự gửi, không pollworker. Developer idle, pausedArgonpilot unchanged. Lead chỉ cập nhật trạng thái, không replay71tests/build/AVD đã đạt.
+
+Actual guard source/APK b784443d…65d90 +16source4assets/71tests/4zero65matricesdelta0/2lowcharge/5shots13score vànegative/lifecycle/reentry có evidence, docs/M2_GUARD_SOURCE_REVIEW.md. Chưa QAclosure/Cindyaccept/M2complete/commitpush. Zero-frame tap khôngshootanimation, normalcharge chưa blend, airchargeIdlebody chưa layeredjump-shoot: còn tác động visual tới goalM2. Sau QAterminal Lead xử findings và đề xuất/triển khai patch animation phối hợp bounded trong M2, không tự mởnetwork. Không thesis/Figma/providerchange. Emucenter416,284 giữ, olddemos/3Wordoutside nguyên.
+
+## M2 guard runtime PASS — chờ QA closure/Cindy,17/11/2026
+
+Lead review developer correction +QA findings đã áp dụng, docs/M2_GUARD_SOURCE_REVIEW.md. ChargePoseGate currentchargegeneration/exactsubmittedframe/latchgen; unprepared earlyrelease physics ngay/exactorigin, freeze đúng submittedclip/time tránh Authored0 và flying→Idle0. Prepared recovery giữ clocksample. Groundstatechange/ready/reset/beginCharge clearfreeze; backgroundcancel giữ frozenpose. Stale yawcomment đã sửa, yawpi/GLB80fdf/mapping/physics không đổi. Trace65jointlocal matrices perjoint JSON trướcrelease/firstflight qua publiclogger.
+
+Analyze-guard-final3 No issues/full71testsPASS (64cũ+7policy), build-guard-final/Nodeaudit16source4asset/install PASS. APK b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90 local/installedpull/snapshot matching, installed-apk-guard-final.json; snapshot demos/releases/m2-hand-action/offline-hand-action-guard-x64.apk. Candidatea8ed/M1/HUD/Fox/human giữ, không overwrite.
+
+assert-m2-guard PASS bốn zero-frame Idle/Jog front/side: exactclip/time và65local matrices delta0 release→firstflight; hai lowcharge q.11111 preparedrecoverytrue. Một guard-jog-side hold0 lọtframe q.020833/preparedtrue, oraclefalse đãfail đúng; retest riêng guard-jog-side-zero mớicharge0/false. Giữ cả dữ liệu, không gán0ms luônbeforeframe. assert-m2-runtime guard-regression 5 PASS:5release/score3+3+3+2+2=13, đủ2/3groundair, exactCPUorigin/analyticfirstflight/clock,6negative noRelease vàpause/resume time/yfreeze. Guard reentry snapshot đãtạo, QA cầnđọc0điểm/lượt1.
+
+Lead đã xem cận tay/shorttap/lowchargeảnh, không nhận mọi GPUframecontinuity. Nhánh zero-frame giữpose không cóshootanimation; normalcharge chưagenericblend, airchargeIdlebody chưalayeredjump-shoot, gripđơngiản. Đây là baseline sửaedgecase, chưafullgame/M2visualcomplete trướcQA/Cindyaccept. Next existingQAreadonlyclosure source/hash/65matrix/scheduling/ảnh→Leadreview→Cindy; khôngnetwork/thesis. Sourceuncommitted chờQA, baWordoutsidegiữ. Emu20192/window918838 center416,284 giữ.
+
+Quotaownnot_exposed, latestCindy46/20reset1794907350/1795394548 kếthừa; refreshrequest y5j5tx4gc7j9c9ex1v50csv2 queued, chưafreshreply. Reserve5%both, khôngquotaerror/khôngproviderchange; cầnrefreshtrướcnextlongtask. WorkeractualSol6.1medium rootoldreadonly, Leadownswrite/GUI/ADB/Git. Worker correction report cònởownqueue sauauto-reviewrejectsteer; đãđọc nội dung, khôngreorder/bypass. Khôngdispatchtrùng/pollworker.
+
+## M2 runtime candidate cuối — chờ QA/Cindy,17/11/2026
+
+Lead review: docs/M2_HAND_ACTION_RUNTIME_REVIEW.md. Bản cuối yawOffset=pi, asset80fdf68b…025f8d; directions xác nhận toward/away đúng. Suy rawtoe→Scene yaw0 bị bác bởi ảnh court. verified/ là calibration cũ, candidate cuối ở accepted/ và *yaw-final. Analyze/build/audit15source4assets/install PASS. Full64tests ở tests-forward trước constant yawfix; không nhận fullsuite mới sau fix. APK local/installedpull/snapshot a8ed4bed9f0957ebd05d3d1f10830eaf5dbc2a0332f0df2b4686bbe6f693ab13; demos/releases/m2-hand-action/offline-hand-action-inspect-x64.apk, giữ M1 old.
+
+assert-m2-runtime.cjs accepted PASS:7release/5score3+3+3+2+2=13; đủ2/3groundair, exactCPUhand/displayed/render/origin, analyticfirstflight(t), clockbeforeafterequal. Cancel/Dash/reset/background/exit không release; pause/resume simtime/y freeze. Hai góc cận tay đã xem, bóng trước người/tách sau nhả; JumpStart/Loop/Land log. Camera cận có thể cắt đầu ở đỉnh nhảy nên dùng court kiểm toàn thân. Không nhận GPUframe/fullbinding/máy thật/fullgame. reentry-final/capture.png Lead đã xem score0/lượt1.
+
+Orca QA nguồn hai P2 đã terminal và Lead chấp nhận closure, qa/m2-source-p2.md. QA runtime cuối đã dispatch successful resumed tới existing bkm37d3uiwhgp757im7y9hov, readonly root cũ/route Sol6.1medium; không giao trùng/poll. Cần rà earlyrelease trước authoredframe có thể đổi Idle→authored0, simple palm/fist, airbornecharge Idle-backed không layered jump, comment rawaxis đầu file stale. Lead sửa findings rồi Cindy review trước network. Chưa M2 commit/finished claim, ba Word ngoài phạm vi giữ.
+
+Emu20192/window918838 fresh centered416,284W1083H515, delayed usercenter reply đã giải quyết. VSCode67486 offline-practice code harness visible; tabmainclick unverifiable không replay. Quota Cindy fresh primary46/weekly20 reset1794907350/1795394548; reserve5%cả hai. Auto-review từ chối steer user-origin quota message; giữ queue, không bypass. Next QA terminal→Lead review/fixes→Cindy handoff. Không thesis/Figma/network mới.
+
+
+## M2 QA2P2 đãsửa/build64PASS — GUIhandoffpending,17/11/2026
+
+qa/m2-source.md workerfinding2P2 acceptedLead. Clocklatchlastsamplecoverycontinuousq0/.6/1; newHeldBallLatchround/epoch/generation acceptedDashinvalidatekhôngresetjoystickowner, cancel/reset/bg/exitclear. Logs sampletime/frame/acceptedDelta/camera/lastrenderball/firstflightelapsed. Analyze/full64tests/build-p2/audit15source4assets/install-p2PASS, docs/M2_P2_FIX_REVIEW.md. ChưaM2runtime/installedpull/snapshot/visualacceptance, nofullM2claim. ExistingM1APKs và3Wordngoàiscopegiữ.
+
+Centerblocker: emu20192/918838 ở435,-931W1083H515, userasync centerrequestpending. LeadđãhandoffexistingCindy6dfa1c62-883b-40c3-920f-2c81dd95e3a8 viahelper send_to_session already-active, xincentering/VSCodevisible. LeadkhôngGUIđồngthời; chờCindyfreshbounds rồiAVDtwoangles/closeupcalibration/logs→fix→finalprovenance→QA. Nocliinputbypass/no replayhotkey. QuotaCindy17primary1weekly13inheritedreset1794907350/1795394548,reserve5%both. M2nguồncòndởkhôngcommitnhậnđãxong.
+
+## M2 wired/build61tests — runtimependingcenter,17/11/2026
+
+ĐãnốiHumanActorhand_rworld+palmoffset/finishPose/latchedreleaseorigin/recovery/JumpStartLoopLand/CCD-authoredGLB. Publicscene.dartkhôngexportAnimationChannel nên dùngofflineDartauthorGLB, khôngengineinternalimports. Newassetee7ff76a…05f5f71originalgiữ. Analyze/full61tests/builddebugx64M2_INSPECT=true/Nodeaudit14source4assets/installPASS; evidence-m2-hand-action. docs/M2_WIRED_SOURCE_REVIEW.md. Chưaruntime/installedpullhash/M2snapshot, khôngM2done. DebugbuttonsCậntrước/Cậnbên/Gócsân đểcalibrate2góc; noPistolclipfake.
+
+AVDrestartnewpid20192/window918838 restoredx435y-931W1083H515. SupportedGUIhotkeymoveunverifiable/nochangedbounds, chưaADBinputtests; askusercenterpending. Khôngshellreposition/bypass. Cầnfreshwindowboundscenter+VSCodegameonlyvisible trướclaunch/runtime. SourceQAexisting cóthểđọctrongkhichờ. Nextcapturehold/run/charge/release/jump/recover/cancel/lifecycle2angles/loghandball/shotid→fixpose→finalbuild/audit/installedsnapshot→QA/Cindyreview.
+
+QuotaCindy17primary1weekly13reset1794907350/1795394548 kếthừa, đủtiếp khôngblockquota76old; reserve5%either. M1demos/APKs/3Wordngoàiscopegiữ, sourcecurrentchưacommitM2runtimegatepending. Khôngnetwork/thesis.
+
+## M2a contract đãcode/61tests — M2còndở,16/11/2026
+
+Leadreview Orcadeveloperreadonlyinventory/interface ACCEPT, authoredposecandidate chưaapply/visual. Đãsửa Practice.acceptHeldWorld/release(displayedOrigin) +roundoffsetreset, pureShotPoseClock/jumpPose,6testsnew. Analyze/full61PASS(55old+6new), evidence-m2-hand-action/*contract. Khôngsửatrajectory/gravity/scoring đểche; điểmthả nhậnworldsample cóchủđích. Page/humanactorchưanốihand/pose/recovery/jump, chưabuild/install/runtimeM2. InstalledAPK vẫnM118dbb700…28bdda6b, sourcecurrentkhácAPK nên khôngauditM1thayM2. docs/M2_HAND_ACTION_SOURCE_REVIEW.md ghiinventoryhand~.9mdifference/pendingexactsteps.
+
+Next nối handworldafterSceneupdate→finishPose→latchedoriginrelease, authoredbasketballposecandidate+Jumpmapping/cancel/lifecycle; saufreshquota buildAVD2góc/cậntay/logs,QA/Cindyreview. Khôngdừnggoalởproposal/contract; đây làmốcnhỏ đểreview/quota. LastCindyprimary76weekly12%reset1794807609/1795394548inherited, ownnotexposed; refreshtrướcbuil dày,stop>=95%either, chưaclaimđãchạmthreshold. Emucenter418,283giữ/noGUIinputlượtM2a, VSCodegameonlyyêucầuvisibletạiruntime. M1demos/3Wordngoàiscope giữ. ChưacommitchờM2integrationgate, khôngreplay55gatescũ.
+
 ## Actor QA terminal — Lead ACCEPT,16/11/2026
 
 OrcaQA bkm37d3uiwhgp757im7y9hov readonlysource/hash13+3asset/rawJSON/10PNG PASSkhôngP1/P2. LeadACCEPT IdleJogintegration/gameplayregression1AVD, qa/actor-integration.md; chưafullgame/handattach/ballshootjumpDashclip/fullskin. Actor35transitions/3assetloads, 4facing; finalAPK18dbb700…28bdda6b, tests55beforepi+3after, runtimegameplayoraclePASS. GUIcenterreceiptbefore/afterx418y283W1083H515, khôngmove. Bàn giaoCindyreview trướcnexttask/networkminimal; demosold giữ,3Wordngoàiscope. Quotaownnotexposed/Cindy16primary0weekly0inherited,refreshbeforelongtask/stop>=95%either.

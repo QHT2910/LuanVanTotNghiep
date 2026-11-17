@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "buildVariant": "debug android-x64 M2_INSPECT=true",
+  "apkSHA256": "a8ed4bed9f0957ebd05d3d1f10830eaf5dbc2a0332f0df2b4686bbe6f693ab13",
+  "installedSHA256": "a8ed4bed9f0957ebd05d3d1f10830eaf5dbc2a0332f0df2b4686bbe6f693ab13",
+  "snapshotSHA256": "a8ed4bed9f0957ebd05d3d1f10830eaf5dbc2a0332f0df2b4686bbe6f693ab13",
+  "matching": true,
+  "snapshot": "demos/releases/m2-hand-action/offline-hand-action-inspect-x64.apk",
+  "scope": "pm path/pull identity; not runtime or kernel comparison"
+}

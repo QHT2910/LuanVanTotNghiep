@@ -1,0 +1,17 @@
+[
+  {
+    "mode": "enter",
+    "before": 143,
+    "after": 147
+  },
+  {
+    "mode": "court",
+    "before": 147,
+    "after": 147
+  },
+  {
+    "mode": "jump-shot",
+    "before": 148,
+    "after": 164
+  }
+]

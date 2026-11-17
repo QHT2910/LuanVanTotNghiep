@@ -1,0 +1,7 @@
+PASS authored GLB generated, original unchanged; visual acceptance pending
+dart.bat : Running build hooks...Running build hooks...
+At line:2 char:1
++ & D:/flutter/bin/dart.bat run tool/author_basketball.dart > ../eviden ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Running build h... build hooks...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError

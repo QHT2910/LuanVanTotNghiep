@@ -33,3 +33,12 @@ game/evidence-ui-offline-2/hud-resume.png
 game/evidence-ui-offline-2/final/hud-resume.png
 game/evidence-ui-offline-2/verified/hud-resume.png
 game/evidence-actor-integration/verified/hud-resume.png
+# M2 exploratory/transition screenshots stay local; raw events/reports remain.
+game/evidence-m2-hand-action/calibration/*.png
+game/evidence-m2-hand-action/calibration2/*.png
+game/evidence-m2-hand-action/verified/*.png
+game/evidence-m2-hand-action/final-session/*.png
+game/evidence-m2-hand-action/early-*/*.png
+game/evidence-m2-hand-action/guard-jog-side/*.png
+game/evidence-m2-hand-action/**/background-prepare.png
+game/evidence-m2-hand-action/**/background-after.png

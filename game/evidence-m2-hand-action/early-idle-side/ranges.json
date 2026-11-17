@@ -1,0 +1,12 @@
+[
+  {
+    "mode": "side",
+    "before": 160,
+    "after": 160
+  },
+  {
+    "mode": "short-idle",
+    "before": 160,
+    "after": 171
+  }
+]

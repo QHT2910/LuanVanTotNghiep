@@ -45,3 +45,26 @@ Local ignored demos/releases/model-human/human-idle-jog-x64.apk SHA25652f45d5eb2
 ## Offline human actor16/11
 
 Snapshotignored demos/releases/actor-integration/offline-human-actor-x64.apk SHA25618dbb700a5f96ef8039d24d65a63e7f13507ace638ccda498242dbc328bdda6b. Installedhashmatch; oldHUD/Fox/humanprobe giữ. Offline IdleJogactor+gameplayregression1AVD đãQA, qa/actor-integration.md. Chưahandattach/shootjumpDashclip riêng/network/fullgame. Buildoffline-practice lib/main.dart debugandroidx64 nhưREADMEapp, currentassetsCC0/licensegiữ.
+
+## M2 hand/action candidate17/11
+
+Snapshot local được bảo toàn tại `demos/releases/m2-hand-action/offline-hand-action-inspect-x64.apk`, SHA256 `a8ed4bed9f0957ebd05d3d1f10830eaf5dbc2a0332f0df2b4686bbe6f693ab13`. Hash APK build/bản cài/snapshot khớp theo `game/evidence-m2-hand-action/installed-apk-final.json`. Đây là debug x86_64 trên một Pixel_9a AVD, chưa phải APK ARM cho Redmi. Không ghi đè M1.
+
+Mở app → Tập luyện. Joystick di chuyển; giữ/thả Ném, Nhảy và Dash là các điều khiển riêng. Nút Lượt mới đặt lại lượt, Menu kết thúc phiên; vào lại có điểm0/lượt1. Bản kiểm tra này có Cận trước/Cận bên/Góc sân để xem tay và animation; camera cận cố định nên có thể cắt đầu khi nhảy. Chọn Góc sân để xem toàn thân. Tạo/Vào phòng và âm thanh vẫn chưa khả dụng.
+
+Rebuild từ `game/offline-practice` với SDK/dependencies hiện hành:
+
+```powershell
+flutter build apk --debug --no-pub --target-platform android-x64 --dart-define=M2_INSPECT=true
+node tool/audit-apk-sources.cjs
+```
+
+Build không có `M2_INSPECT` sẽ ẩn các nút camera; chưa được dùng làm bằng chứng runtime của candidate này. Rebuild có thể không cho hash byte giống snapshot. Source chưa commit trong lúc chờ QA; đọc `docs/M2_HAND_ACTION_RUNTIME_REVIEW.md` và checkpoint để biết trạng thái mới nhất.
+
+Bằng chứng cuối: `game/evidence-m2-hand-action/accepted/`, audit/logs `*yaw-final`, ảnh directions và `reentry-final/capture.png`. Các thư mục calibration/calibration2/verified/final-session là thử trung gian. Hand origin và gameplay oracle đạt trong phạm vi đã ghi; animation tự author còn đơn giản, chưa layered jump/shoot hoặc full game1v1. QA runtime/Cindy chưa chốt candidate tại thời điểm ghi hướng dẫn này.
+
+### M2 guard follow-up
+
+Snapshot mới `demos/releases/m2-hand-action/offline-hand-action-guard-x64.apk`, SHA256 `b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90`; build/bản cài/snapshot matching theo installed-apk-guard-final.json. Candidate a8ed vẫn giữ nguyên. Cùng cách chạy/build và camera debug như trên.
+
+Nhả trước frame canh ném đầu: thả bóng ngay từ tay đang thấy, giữ pose cơ sở thay vì nhảy sang Authored0/Idle0; nhánh cực ngắn này chưa có animation ném. Các cú canh đã hiển thị pose ném dùng hồi ném bình thường. Full71tests/analyze/build/audit16source4assets PASS. Trace bốn zero-frame Idle/Jog hai góc giữ65local joint matrices; lowcharge bình thường; regression5score tổng13/2–3groundair/cancel/lifecycle PASS. Báo cáo docs/M2_GUARD_SOURCE_REVIEW.md và evidence guard-*; chờ QA/Cindy closure, chưa fullgame hoặc animation phối hợp hoàn chỉnh.

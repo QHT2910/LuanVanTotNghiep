@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.example.offline_practice/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.example.offline_practice/.MainActivity
+TotalTime: 3210
+WaitTime: 3217
+Complete

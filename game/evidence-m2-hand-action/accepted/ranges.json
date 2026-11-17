@@ -1,0 +1,117 @@
+[
+  {
+    "mode": "enter",
+    "before": 0,
+    "after": 0
+  },
+  {
+    "mode": "court",
+    "before": 2,
+    "after": 5
+  },
+  {
+    "mode": "side",
+    "before": 14,
+    "after": 14
+  },
+  {
+    "mode": "inspect-side",
+    "before": 14,
+    "after": 25
+  },
+  {
+    "mode": "front",
+    "before": 25,
+    "after": 25
+  },
+  {
+    "mode": "inspect-front",
+    "before": 25,
+    "after": 36
+  },
+  {
+    "mode": "court",
+    "before": 36,
+    "after": 36
+  },
+  {
+    "mode": "ground-shot",
+    "before": 36,
+    "after": 49
+  },
+  {
+    "mode": "jump-shot",
+    "before": 49,
+    "after": 65
+  },
+  {
+    "mode": "move-shot",
+    "before": 65,
+    "after": 78
+  },
+  {
+    "mode": "cancel",
+    "before": 78,
+    "after": 82
+  },
+  {
+    "mode": "dash-cancel",
+    "before": 82,
+    "after": 89
+  },
+  {
+    "mode": "reset-held",
+    "before": 89,
+    "after": 95
+  },
+  {
+    "mode": "reset-jump",
+    "before": 95,
+    "after": 101
+  },
+  {
+    "mode": "jump-only",
+    "before": 101,
+    "after": 107
+  },
+  {
+    "mode": "inside",
+    "before": 107,
+    "after": 109
+  },
+  {
+    "mode": "side",
+    "before": 109,
+    "after": 109
+  },
+  {
+    "mode": "ground-shot",
+    "before": 109,
+    "after": 121
+  },
+  {
+    "mode": "inside",
+    "before": 121,
+    "after": 123
+  },
+  {
+    "mode": "court",
+    "before": 123,
+    "after": 123
+  },
+  {
+    "mode": "jump-shot",
+    "before": 123,
+    "after": 140
+  },
+  {
+    "mode": "background",
+    "before": 140,
+    "after": 152
+  },
+  {
+    "mode": "exit-held",
+    "before": 152,
+    "after": 156
+  }
+]

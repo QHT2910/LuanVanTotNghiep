@@ -1,0 +1,15 @@
+# M2 guard — QA closure17/11/2026
+
+Orca Worker tester bkm37d3uiwhgp757im7y9hov, Codex/gpt-6.1-sol medium, chỉ đọc. Lead đã review terminal và ACCEPT đóng hai P2 của qa/m2-runtime.md trong phạm vi guard/freeze submitted CPU pose và comment. Không có P1/P2 mới chặn bàn giao baseline có giới hạn; không nghiệm thu M2 jump-shoot hoàn chỉnh/fullgame/GPU frame continuity.
+
+QA rà production: charge generation mới, readiness chỉ record sau Scene.update0/hand-ball latch thành công, consume khớp frame/generation một lần. Pointerup kiểm owner/input/round/epoch/submitted frame rồi release physics ngay. Prepared recovery từ sample cuối; unprepared giữ đúng clip/time/grounded đã submit, không đổi Authored0 hoặc flying→Idle0. Wrapper vẫn simulation. Ready/reset/groundchange/begincharge kết thúc giữ pose; background cancel chỉ hủy gate/action. Groundchange cho phép landing là policy hữu ý, không generic blend. Cancel/Dash/reset/bg/exit invalidate gate/latch, Dash không đổi joystick owner. Comment yaw đã sửa theo AVDpi; asset/physics/mapping giữ.
+
+QA tự tính last-mode ranges: bốn guard-idle-side/front, guard-jog-side-zero/front đều1release q0/recoveryfalse,65before+65firstflight joints, delta0 và cùngclip/time. Hai guard-low-side/front q0,111111/recoverytrue, delta0,108683824539185 là animation dự kiến. Original guard-jog-side q0,020833/recoverytrue/delta0,05869323 là prepared incidental case hợp lệ; không nhận hold0ms luôn trước frame hoặc giấu oracle fail/retake. Regression mới5release/5score3+3+3+2+2=13;6negative no release; background time/y freeze. Exact origin/analytic/prepared clocks/groundair2&3 theo raw/report/oracle đọc, không dùng a8ed thay guard.
+
+QA tự xem13ảnh mới: prepare/after của sáu guard cases và guard-reentry/capture0điểm/lượt1. Base Idle/Jog giữ tư thế trong zero-frame pairs, lowcharge chuyển tay/hồi, không mesh nổ rõ. Ảnh có latency;65matrix CPU trace đóng boundary finding, không chứng minh mọi GPU frame. Zero-frame branch không shooting animation; grip đơn giản, aircharge Idle-backed chưa layered jump-shoot.
+
+QA tự hash16source/4asset khớp audit guard-final, sourceBad0/assetBad0; APKlocal/snapshot b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90. Installed matching là Lead pm-pull kế thừa; localKernelMatchesAPK=null chưa so. Analyze-final3/71tests/build/install/launch/runtime là Lead gates đã đọc, không worker chạy lại.
+
+Actual gates readonly: Get-Content/rg PASS production/comment; Get-FileHash16source4asset/APK/snapshot PASS; ConvertFrom-Json seven cases/65matrices PASS; regression counts/negative/freeze PASS; view_image13PNG PASS. logpath=none. Một phép slice PowerShell array-to-Int32 fail đã bỏ counters và sửa explicit range indexing, tính lại thành công, không đổi evidence. Không GUI/ADB/build/test/assert ghiJSON/Git mutation/provider đổi hoặc task phụ thuộc.
+
+Lead next: bàn giao Cindy baseline có giới hạn. Còn yêu cầu phối hợp animation trong M2; không mở network. Mọi GPU frame/clip transition/fullbinding/realphone/performance/fullgame chưa nghiệm thu.

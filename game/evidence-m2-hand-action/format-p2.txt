@@ -1,0 +1,6 @@
+Formatted game/offline-practice/lib/src/presentation/shot_pose_clock.dart
+Formatted game/offline-practice/lib/src/presentation/held_ball_latch.dart
+Formatted game/offline-practice/lib/src/presentation/practice_page.dart
+Formatted game/offline-practice/test/held_ball_latch_test.dart
+Formatted game/offline-practice/test/shot_pose_continuity_test.dart
+Formatted 6 files (5 changed) in 0.06 seconds.

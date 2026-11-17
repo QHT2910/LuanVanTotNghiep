@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "buildVariant": "debug android-x64 M2_INSPECT=true",
+  "apkSHA256": "b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90",
+  "installedSHA256": "b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90",
+  "snapshotSHA256": "b784443d37ab05143dd2d6de61676ea1a3b9866f8fcf24a98d659f84bba65d90",
+  "matching": true,
+  "snapshot": "demos/releases/m2-hand-action/offline-hand-action-guard-x64.apk"
+}

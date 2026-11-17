@@ -1,0 +1,15 @@
+# M2 wired source/build — 17/11/2026
+
+M2 chưa nghiệm thu runtime. Lead đã nối handworld sauScene.update0 → acceptHeldWorld → ballworld/lastdisplayedsample; pointerup dùngoriginlatched đúnground, releaseonce rồirecover, khôngadvancepose tronginput. Cancel/Dash/reset/background/exit hủyclock/sample/owner theoAPIexisting, khôngauto throw. Ball giữidentityparentpractice_world, khôngreparenthand/doubletransform. Physics/scoring giữanalytic authority, origininterface đổi cóchủđích.
+
+HumanActor thêmexactJump_Start/Loop/Land vàauthoredBasketball từGLB. Jumpmappingtheoanalyticjumpvelocity/acceptedtime, Landwindow.18s; wrapperlogicaly vẫnsimulation, khôngcộngpelvisbob. Khi canhtrênkhông authoredpose ưu tiênarms+idlebody, wrapper vẫnnhảy, khôngclaimlayeredjumpbody hoànchỉnh. Pose ném candidate bốnkeyprepare/hold/extension/recover, khôngreusePistol/Spellclip.
+
+Compile phát hiện channel/timelineconstructors khôngexport bởi publicscene.dart0.24.3; khôngimportengineinternals hoặcđổiSDK. Đã thay bằng workflow offline tool/author_basketball.dart dùngCCD trênCC0rig bindhierarchy, appendglTFanimation quaaccessors/channels, preserveoriginalGLB. Runtimeimport quaNode.fromGlbBytes nhưassetthường. GeneratedHumanBasketball.glb SHA256ee7ff76af795af92c0a133f4e5b61820b5c1ff44f8eeac1aa66fccd2705f5f71; sourceoriginal69591853…ed67997giữ. Author-data ghiworldpositions kếtquả4keys; chưaSceneruntimevisualaccept. HumanActorhand_rpalmoffsetlocal(0,.07,0) phải kiểmảnhcậntay trướcaccept.
+
+GatesLead: authorGLBgeneratedPASS/author-glb.txt; dart analyzePASS/analyze-final.txt; full61testsPASS/tests-final.txt; buildx64M2_INSPECT=truePASS/build.txt; Nodeaudit14source+4assets/x64PASS/source-apk-audit.json; installPASS/install.txt. Cùng thư mục game/evidence-m2-hand-action. Chưainstalledpullhash hoặcruntimeM2. Debugdefine M2_INSPECT thêmcameraCậntrước/Cậnbên/Gócsân đểtwoangleinspection; khôngUIredesignproductiondefault. Sourceconstructor/timelinecompileerrors vàscriptdatafix trướcfinalPASS, khôngnhậnbảnlỗilàgatemới.
+
+GUIblocker: khởiđộngexistingAVD sau máyrestart, mainpid20192/window918838 lạiởx435y-931W1083H515. SupportedWinShiftRight/AltSpace deliveredunverifiable, freshobservationkhôngconfirmmove; khôngshellreposition/bypass. Đãaskusercenterexistingwindow quaasyncquestion. ChưagửiADBinputtestM2 khiwindowchưacenter. Khôngđóng/reloadAVD hoặcchạylạiprobeold; cóthểQAreadonlysource trongkhichờ. VSCodecũngchưamởvisiblelượtnày, cầnGUIlaunchđúnggameonly trước runtime.
+
+Next: centerwindowverified+VSCodevisible, launchappmenu/practice/newdiagnosticcamera, capturehold/run/yaw/charge/release/recover/jump/landing từ2góc; calibratepose/palmoffset nếucần, loghandballorigin/time/shotid, continuityrelease/cancel/Dash/reset/lifecycle/exit. ThêmnodeoraclechoM2 khôngreuseoriginplayerY+1.8cũ. NewM2APKsnapshot saufinalsource +installedidentity; giữM1/HUD/Fox/humanold. QA/Cindyreview trướctaskkế.
+
+QuotaCindy17/11primary1weekly13%reset1794907350/1795394548 kếthừa; ownsettingsnotexposed. Reserve5%cảhai, khôngblockbởiquota76cũ; nếuhostnew>=95%stopcheckpoint. Đây làintermediate khôngM2complete; khôngthesis/network.

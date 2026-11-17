@@ -1,0 +1,10 @@
+Analyzing offline-practice...
+
+  error - lib\src\presentation\basketball_pose.dart:27:32 - The method 'multiply' isn't defined for the type 'Quaternion'. Try correcting the name to the name of an existing method, or defining a method named 'multiply'. - undefined_method
+  error - lib\src\presentation\basketball_pose.dart:59:49 - The name 'AnimationProperty' is being referenced through the prefix 'fs', but it isn't defined in any of the libraries imported using that prefix. Try correcting the prefix or importing the library that defines 'AnimationProperty'. - undefined_prefixed_name
+  error - lib\src\presentation\basketball_pose.dart:62:12 - The function 'AnimationChannel' isn't defined. Try importing the library that defines 'AnimationChannel', correcting the name to the name of an existing function, or defining a function named 'AnimationChannel'. - undefined_function
+  error - lib\src\presentation\basketball_pose.dart:63:26 - The function 'BindKey' isn't defined. Try importing the library that defines 'BindKey', correcting the name to the name of an existing function, or defining a function named 'BindKey'. - undefined_function
+  error - lib\src\presentation\basketball_pose.dart:65:26 - The name 'AnimationProperty' is being referenced through the prefix 'fs', but it isn't defined in any of the libraries imported using that prefix. Try correcting the prefix or importing the library that defines 'AnimationProperty'. - undefined_prefixed_name
+  error - lib\src\presentation\basketball_pose.dart:67:24 - The name 'PropertyResolver' is being referenced through the prefix 'fs', but it isn't defined in any of the libraries imported using that prefix. Try correcting the prefix or importing the library that defines 'PropertyResolver'. - undefined_prefixed_name
+
+6 issues found.

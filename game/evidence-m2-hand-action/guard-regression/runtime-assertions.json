@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "pass": true,
+  "scope": "One AVD M2 submitted CPU pose/ball samples and simulation events",
+  "releases": 5,
+  "scoredPoints": [
+    3,
+    3,
+    3,
+    2,
+    2
+  ],
+  "totalScore": 13,
+  "airborneReleases": 2,
+  "groundAndAirTwoAndThree": true,
+  "exactLatchedOrigins": true,
+  "firstFlightMatchesAnalytic": true,
+  "continuousClockAtRelease": true,
+  "negativeModes": [
+    "cancel",
+    "dash-cancel",
+    "reset-held",
+    "reset-jump",
+    "background",
+    "exit-held"
+  ],
+  "lifecycleFreeze": true,
+  "limits": [
+    "CPU submitted sample is not proof of GPU presentation timing",
+    "No per-frame/full skin binding assertion",
+    "Authored arms use Idle-backed full-body clip while charging airborne; no layered jump legs",
+    "Single AVD debug; not physical-device performance or network acceptance"
+  ]
+}

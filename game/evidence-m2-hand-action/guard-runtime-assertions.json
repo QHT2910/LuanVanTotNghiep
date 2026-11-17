@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "pass": true,
+  "scope": "One AVD CPU submitted pose at release versus first flight; not every GPU frame",
+  "results": [
+    {
+      "variant": "guard-idle-side",
+      "shotId": 1,
+      "charge": 0,
+      "authoredRecovery": false,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Idle_Loop"
+    },
+    {
+      "variant": "guard-idle-front",
+      "shotId": 2,
+      "charge": 0,
+      "authoredRecovery": false,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Idle_Loop"
+    },
+    {
+      "variant": "guard-jog-side-zero",
+      "shotId": 7,
+      "charge": 0,
+      "authoredRecovery": false,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Jog_Fwd_Loop"
+    },
+    {
+      "variant": "guard-jog-front",
+      "shotId": 4,
+      "charge": 0,
+      "authoredRecovery": false,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Jog_Fwd_Loop"
+    },
+    {
+      "variant": "guard-low-side",
+      "shotId": 5,
+      "charge": 0.11111111111111112,
+      "authoredRecovery": true,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0.10868382453918457,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Authored_Basketball_v1"
+    },
+    {
+      "variant": "guard-low-front",
+      "shotId": 6,
+      "charge": 0.11111111111111112,
+      "authoredRecovery": true,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0.10868382453918457,
+      "exactLatchedOrigin": true,
+      "clipBefore": "Authored_Basketball_v1"
+    }
+  ],
+  "limits": [
+    "Zero-frame taps retain base pose without a shooting animation",
+    "Prepared matrix changes are expected animation, not a freeze assertion",
+    "No layered airborne shooting, physical-device or network acceptance"
+  ]
+}

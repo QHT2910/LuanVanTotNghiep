@@ -1,0 +1,4 @@
+Formatted lib/src/simulation/practice.dart
+Formatted lib/src/presentation/shot_pose_clock.dart
+Formatted test/hand_origin_test.dart
+Formatted 3 files (3 changed) in 0.02 seconds.

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show debugPrintSynchronously;
 import 'package:flutter/semantics.dart';
 import 'package:flutter_scene/scene.dart' as fs;
 import 'package:vector_math/vector_math.dart' as vm;
@@ -15,6 +16,8 @@ import 'package:offline_practice/src/input/dash_button.dart';
 import 'practice_navigation.dart';
 import 'practice_hud.dart';
 import 'human_actor.dart';
+import 'held_ball_latch.dart';
+import 'charge_pose_gate.dart';
 
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
@@ -32,6 +35,12 @@ class _PracticePageState extends State<PracticePage>
   fs.Scene? scene;
   late fs.Node ballNode, feetNode;
   HumanActor? human;
+  final heldBall = HeldBallLatch();
+  final chargePoseGate = ChargePoseGate();
+  int poseFrame = 0;
+  double frameAccepted = 0;
+  String cameraAngle = 'court';
+  int loggedFlightShot = 0;
   late fs.PerspectiveCamera camera;
   final hud = ValueNotifier<PracticeHudData>((
     score: 0,
@@ -211,6 +220,7 @@ class _PracticePageState extends State<PracticePage>
       scene = s;
       syncScene();
       s.update(0);
+      finishPose();
       publish();
     } catch (_) {
       actor.dispose();
@@ -229,7 +239,7 @@ class _PracticePageState extends State<PracticePage>
     double dz = 0,
     bool reset = false,
   }) {
-    final p = game.player, b = game.ball, f = game.facing;
+    final p = game.player, f = game.facing;
     human?.setPose(
       x: p.x,
       y: p.y,
@@ -242,9 +252,87 @@ class _PracticePageState extends State<PracticePage>
       grounded: game.grounded,
       ready: game.phase == PracticePhase.ready,
       reset: reset,
+      jumpVelocity: game.jumpVelocity,
+      jumpSpeed: c.jumpSpeed,
+      gravity: c.gravity,
+      charge: game.charge,
+      chargeGeneration: chargePoseGate.generation,
     );
-    ballNode.position = vm.Vector3(b.x, b.y, b.z);
+
     feetNode.position = vm.Vector3(p.x, 0.025, p.z);
+  }
+
+  void finishPose() {
+    final actor = human;
+    if (actor == null || !resumed || _leaving) return;
+    if (game.phase == PracticePhase.ready ||
+        game.phase == PracticePhase.charging) {
+      final w = actor.handWorld(), held = V3(w.x, w.y, w.z);
+      if (!game.acceptHeldWorld(held)) {
+        heldBall.invalidate();
+        chargePoseGate.cancel();
+        actor.cancelAction();
+        game.cancelCharge('invalid_hand_sample');
+        shotPointer = null;
+        return;
+      }
+    } else {
+      heldBall.invalidate();
+    }
+    final b = game.ball;
+    // practice_world has identity transform; ball remains its child throughout.
+    ballNode.position = vm.Vector3(b.x, b.y, b.z);
+    poseFrame++;
+    if (game.phase == PracticePhase.ready ||
+        game.phase == PracticePhase.charging) {
+      final rendered = ballNode.globalTransform.clone().getTranslation();
+      heldBall.record(
+        world: b,
+        renderWorld: V3(rendered.x, rendered.y, rendered.z),
+        round: game.round,
+        epoch: joystickResetToken,
+        simTime: game.simulatedTime,
+        frame: poseFrame,
+        acceptedDelta: frameAccepted,
+        camera: cameraAngle,
+      );
+      final latched = heldBall.current(
+        round: game.round,
+        epoch: joystickResetToken,
+      )!;
+      actor.recordSubmitted(poseFrame);
+      chargePoseGate.record(
+        evaluatedGeneration: actor.evaluatedChargeGeneration ?? -1,
+        frame: latched.frame,
+        latchGeneration: latched.generation,
+        authored:
+            game.phase == PracticePhase.charging &&
+            actor.action.charging &&
+            actor.selected == 'Authored_Basketball_v1',
+      );
+    }
+    if (game.shot != null && loggedFlightShot != game.shot!.id) {
+      loggedFlightShot = game.shot!.id;
+      traceBoundary('first_flight', loggedFlightShot);
+      debugPrint(
+        'hand_event ' +
+            jsonEncode({
+              'event': 'first_flight',
+              'flightTime': game.shot!.elapsed,
+              'frame': poseFrame,
+              'acceptedDelta': frameAccepted,
+              'camera': cameraAngle,
+              'simTime': game.simulatedTime,
+              'shotId': loggedFlightShot,
+              'ball': [b.x, b.y, b.z],
+              'origin': [
+                game.shot!.origin.x,
+                game.shot!.origin.y,
+                game.shot!.origin.z,
+              ],
+            }),
+      );
+    }
   }
 
   void publish() {
@@ -259,18 +347,42 @@ class _PracticePageState extends State<PracticePage>
     );
   }
 
+  void traceBoundary(String stage, int shotId) {
+    final a = human;
+    if (a == null) return;
+    for (final joint in a.boundaryJoints) {
+      debugPrintSynchronously(
+        'hand_event ' +
+            jsonEncode({
+              'event': 'joint_boundary',
+              'stage': stage,
+              'shotId': shotId,
+              'joint': joint.name,
+              'clip': a.selected,
+              'clipTime': a.time,
+              'simTime': game.simulatedTime,
+              'frame': poseFrame,
+              'local': joint.localTransform.storage.toList(),
+            }),
+      );
+    }
+  }
+
   void tick(Duration elapsed, double dt) {
     final s = scene;
+    frameAccepted = 0;
     if (!mounted || s == null) return;
     if (_leaving || !resumed) {
       human?.pauseAll();
       s.update(0);
+      finishPose();
       return;
     }
     if (skipFrame) {
       skipFrame = false;
       human?.pauseAll();
       s.update(0);
+      finishPose();
       return;
     }
     final before = game.player, beforeTime = game.simulatedTime;
@@ -282,8 +394,10 @@ class _PracticePageState extends State<PracticePage>
       setState(() {});
     }
     final accepted = game.simulatedTime - beforeTime;
+    frameAccepted = accepted;
     if (accepted <= 0 && !changedRound) {
       s.update(0);
+      finishPose();
       publish();
       return;
     }
@@ -294,6 +408,7 @@ class _PracticePageState extends State<PracticePage>
       reset: changedRound,
     );
     s.update(0);
+    finishPose();
     publish();
   }
 
@@ -304,6 +419,9 @@ class _PracticePageState extends State<PracticePage>
     game.setMove(0, 0);
     game.cancelCharge(reason);
     game.cancelDash(reason);
+    chargePoseGate.cancel();
+    human?.cancelAction();
+    heldBall.invalidate();
   }
 
   void _stopForMenu() {
@@ -404,6 +522,9 @@ class _PracticePageState extends State<PracticePage>
           // The old charging finger cannot release after Dash.
           // Do not reset joystick/jump ownership here.
           shotPointer = null;
+          chargePoseGate.cancel();
+          human?.cancelAction();
+          heldBall.invalidate();
         }
         publish();
       },
@@ -418,19 +539,100 @@ class _PracticePageState extends State<PracticePage>
           if (!inputValid()) return;
           if (shotPointer == null && game.startCharge()) {
             shotPointer = event.pointer;
+            chargePoseGate.begin();
+            human?.beginCharge();
             publish();
           }
         },
         onPointerUp: (event) {
           if (!inputValid() || shotPointer != event.pointer) return;
           shotPointer = null;
-          game.release();
+          final sample = heldBall.current(
+            round: game.round,
+            epoch: joystickResetToken,
+          );
+          final origin = sample?.world;
+          if (origin != null &&
+              human!.unpreparedPose.submittedFrame == sample!.frame &&
+              game.release(displayedOrigin: origin)) {
+            final w = human!.handWorld();
+            debugPrint(
+              'hand_event ' +
+                  jsonEncode({
+                    'event': 'release_latched',
+                    'sampleTime': sample.simTime,
+                    'sampleRound': sample.round,
+                    'sampleEpoch': sample.epoch,
+                    'sampleGeneration': sample.generation,
+                    'sampleFrame': sample.frame,
+                    'sampleAcceptedDelta': sample.acceptedDelta,
+                    'camera': sample.camera,
+                    'lastRenderBall': [
+                      sample.renderWorld.x,
+                      sample.renderWorld.y,
+                      sample.renderWorld.z,
+                    ],
+                    'simTime': game.simulatedTime,
+                    'shotId': game.shot!.id,
+                    'displayed': [origin.x, origin.y, origin.z],
+                    'hand': [w.x, w.y, w.z],
+                    'origin': [
+                      game.shot!.origin.x,
+                      game.shot!.origin.y,
+                      game.shot!.origin.z,
+                    ],
+                  }),
+            );
+            final beforePose = human!.time;
+            traceBoundary('release', game.shot!.id);
+            final chargeGeneration = chargePoseGate.generation;
+            final prepared = chargePoseGate.consume(
+              frame: sample.frame,
+              latchGeneration: sample.generation,
+            );
+            human!.releaseAction(prepared: prepared, frame: sample.frame);
+            debugPrint(
+              'hand_event ' +
+                  jsonEncode({
+                    'event': 'release_visual_guard',
+                    'shotId': game.shot!.id,
+                    'chargeGeneration': chargeGeneration,
+                    'evaluatedGeneration': human!.evaluatedChargeGeneration,
+                    'sampleFrame': sample.frame,
+                    'sampleGeneration': sample.generation,
+                    'clipBefore': human!.selected,
+                    'poseTimeBefore': beforePose,
+                    'authoredRecovery': prepared,
+                  }),
+            );
+            debugPrint(
+              'hand_event ' +
+                  jsonEncode({
+                    'event': 'release_pose_clock',
+                    'shotId': game.shot!.id,
+                    'before': beforePose,
+                    'after': prepared
+                        ? human!.action.sample(game.charge)
+                        : null,
+                    'authoredRecovery': prepared,
+                    'clip': human!.selected,
+                  }),
+            );
+            heldBall.invalidate();
+          } else {
+            game.cancelCharge('missing_or_invalid_displayed_origin');
+            chargePoseGate.cancel();
+            human?.cancelAction();
+          }
           publish();
         },
         onPointerCancel: (event) {
           if (shotPointer != event.pointer) return;
           shotPointer = null;
           game.cancelCharge('pointer_cancel');
+          chargePoseGate.cancel();
+          human?.cancelAction();
+          heldBall.invalidate();
           publish();
         },
         child: Container(
@@ -495,6 +697,48 @@ class _PracticePageState extends State<PracticePage>
                 // Keep the view's SingleTickerProvider alive; pause our logic above.
                 fs.SceneView(s, camera: camera, onTick: tick),
                 controls(),
+                if (const bool.fromEnvironment('M2_INSPECT'))
+                  Positioned(
+                    top: 100,
+                    left: 8,
+                    child: Row(
+                      children: [
+                        for (final view in ['Cận trước', 'Cận bên', 'Góc sân'])
+                          TextButton(
+                            onPressed: () {
+                              final p = game.player;
+                              setState(() {
+                                cameraAngle = view;
+                                camera = view == 'Góc sân'
+                                    ? fs.PerspectiveCamera(
+                                        position: vm.Vector3(0, 10, 14),
+                                        target: vm.Vector3(0, 1.2, 0),
+                                        fovNear: .1,
+                                        fovFar: 80,
+                                      )
+                                    : fs.PerspectiveCamera(
+                                        position: view == 'Cận trước'
+                                            ? vm.Vector3(
+                                                p.x,
+                                                p.y + 1.6,
+                                                p.z - 3,
+                                              )
+                                            : vm.Vector3(
+                                                p.x + 3,
+                                                p.y + 1.8,
+                                                p.z + .3,
+                                              ),
+                                        target: vm.Vector3(p.x, p.y + 1.2, p.z),
+                                        fovNear: .1,
+                                        fovFar: 80,
+                                      );
+                              });
+                            },
+                            child: Text(view),
+                          ),
+                      ],
+                    ),
+                  ),
               ],
             );
           },

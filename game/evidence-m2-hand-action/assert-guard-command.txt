@@ -1,0 +1,31 @@
+node : node:assert:152
+At line:2 char:1
++ node game/offline-practice/tool/assert-m2-guard.cjs *> game/evidence- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:assert:152:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: guard-jog-side
+
+true !== false
+
+    at Object.<anonymous> (D:\totnghiep\LuanVanTotNghiep\game\offline-practice\tool\assert-m2-guard.cjs:11:50)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

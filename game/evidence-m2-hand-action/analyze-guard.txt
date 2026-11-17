@@ -1,0 +1,10 @@
+Analyzing offline-practice...
+
+warning - The '!' will have no effect because the receiver can't be null. Try removing the '!' operator - lib\src\presentation\practice_page.dart:586:28 - unnecessary_non_null_assertion
+
+flutter : 1 issue found. (ran in 25.6s)
+At line:2 char:214
++ ... -guard.txt; flutter analyze --no-pub *> ../evidence-m2-hand-action/an ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (1 issue found. (ran in 25.6s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError

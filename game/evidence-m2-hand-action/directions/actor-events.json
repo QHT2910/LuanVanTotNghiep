@@ -1,0 +1,175 @@
+[
+  {
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanBasketball.glb",
+    "bytes": 7640212,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Start",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Land",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "Scene imported forward calibrated by AVD court directions; raw GLB axes alone are insufficient"
+  },
+  {
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.09999999999999999,
+    "acceptedDelta": 0.09999999999999999,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.04166666666666874,
+    "acceptedDelta": 0.04166666666666874,
+    "x": -0.0009534767979161004,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333499,
+    "acceptedDelta": 0.03333333333333499,
+    "x": -0.9317010954476487,
+    "y": 0,
+    "z": 3,
+    "facingX": -1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.02499999999999858,
+    "acceptedDelta": 0.02499999999999858,
+    "x": -0.9309655029151811,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333144,
+    "acceptedDelta": 0.03333333333333144,
+    "x": 0.0476570955086576,
+    "y": 0,
+    "z": 3,
+    "facingX": 1,
+    "facingZ": 0,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 0.0476570955086576,
+    "y": 0,
+    "z": 2.9996733186645868,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333144,
+    "acceptedDelta": 0.03333333333333144,
+    "x": 0.0476570955086576,
+    "y": 0,
+    "z": 2.0491824097063063,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "jog",
+    "clip": "Jog_Fwd_Loop",
+    "clipTime": 0.01666666666666572,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 0.0476570955086576,
+    "y": 0,
+    "z": 2.049618095344198,
+    "facingX": 0,
+    "facingZ": 1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333144,
+    "acceptedDelta": 0.03333333333333144,
+    "x": 0.0476570955086576,
+    "y": 0,
+    "z": 2.9480927314107435,
+    "facingX": 0,
+    "facingZ": 1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  }
+]

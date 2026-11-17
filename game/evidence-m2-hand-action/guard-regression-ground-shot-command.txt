@@ -1,0 +1,11 @@
+node : /sdcard/m2.png: 1 file pulled, 0 skipped. 24.4 MB/s (106140 bytes in 0.004s)
+At line:2 char:852
++ ... n $modes) { node game/offline-practice/tool/m2-avd.cjs $m guard-regre ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/sdcard/m2.png:...ytes in 0.004s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+/sdcard/m2.png: 1 file pulled, 0 skipped. 33.0 MB/s (107838 bytes in 0.003s)
+/sdcard/m2.png: 1 file pulled, 0 skipped. 26.4 MB/s (107561 bytes in 0.004s)
+/sdcard/m2.png: 1 file pulled, 0 skipped. 32.4 MB/s (105648 bytes in 0.003s)
+PASS capture ground-shot; assertions/visual acceptance pending

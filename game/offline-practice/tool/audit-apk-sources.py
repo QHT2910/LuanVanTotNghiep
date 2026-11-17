@@ -20,6 +20,9 @@ SOURCES = [
     "lib/src/presentation/practice_hud.dart",
     "lib/src/presentation/actor_motion.dart",
     "lib/src/presentation/human_actor.dart",
+    "lib/src/presentation/shot_pose_clock.dart",
+    "lib/src/presentation/held_ball_latch.dart",
+    "lib/src/presentation/charge_pose_gate.dart",
 ]
 OLD = [
     "lib/config.dart", "lib/practice.dart",

@@ -1,0 +1,11 @@
+Analyzing offline-practice...
+
+  error - The method 'debugPrintSynchronously' isn't defined for the type '_PracticePageState'. Try correcting the name to the name of an existing method, or defining a method named 'debugPrintSynchronously' - lib\src\presentation\practice_page.dart:353:7 - undefined_method
+warning - The '!' will have no effect because the receiver can't be null. Try removing the '!' operator - lib\src\presentation\practice_page.dart:562:41 - unnecessary_non_null_assertion
+
+flutter : 2 issues found. (ran in 2.0s)
+At line:2 char:220
++ ... -final.txt; flutter analyze --no-pub *> ../evidence-m2-hand-action/an ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2 issues found. (ran in 2.0s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError

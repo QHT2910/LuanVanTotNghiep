@@ -1,0 +1,27 @@
+[
+  {
+    "mode": "enter",
+    "before": 0,
+    "after": 0
+  },
+  {
+    "mode": "front",
+    "before": 5,
+    "after": 5
+  },
+  {
+    "mode": "inspect-front",
+    "before": 5,
+    "after": 16
+  },
+  {
+    "mode": "side",
+    "before": 16,
+    "after": 16
+  },
+  {
+    "mode": "inspect-side",
+    "before": 16,
+    "after": 27
+  }
+]

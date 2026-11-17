@@ -1,0 +1,4 @@
+Formatted lib/src/presentation/charge_pose_gate.dart
+Formatted lib/src/presentation/human_actor.dart
+Formatted test/charge_pose_gate_test.dart
+Formatted 4 files (3 changed) in 0.03 seconds.

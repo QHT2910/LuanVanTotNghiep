@@ -16,5 +16,6 @@ flutter:
 
   assets:
     - assets/human-ual-standard/HumanDiagnostic.glb
+    - assets/human-ual-standard/HumanBasketball.glb
     - assets/human-ual-standard/License.txt
     - assets/human-ual-standard/README.txt

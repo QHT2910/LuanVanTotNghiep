@@ -5,12 +5,15 @@ import 'package:flutter_scene/scene.dart' as fs;
 import 'package:vector_math/vector_math.dart' as vm;
 
 import 'actor_motion.dart';
+import 'shot_pose_clock.dart';
+import 'charge_pose_gate.dart';
 
 class HumanActor {
   HumanActor._(this.model, this.log);
-  static const asset = 'assets/human-ual-standard/HumanDiagnostic.glb';
+  static const asset = 'assets/human-ual-standard/HumanBasketball.glb';
   static const idle = 'Idle_Loop', jog = 'Jog_Fwd_Loop';
-  // Mannequin forward is -Z; AVD initial +Z assumption faced away from rim.
+  // Visual yaw offset calibrated to pi using AVD toward/away-rim captures;
+  // raw GLB joint axes alone do not establish Scene-facing direction.
   static const yawOffset = math.pi;
   final fs.Node model;
   final void Function(Map<String, Object?>) log;
@@ -21,6 +24,16 @@ class HumanActor {
   ActorPose? previousPose;
   double time = 0;
   bool closed = false;
+  final action = ShotPoseClock();
+  final unpreparedPose = UnpreparedPoseHold();
+  final boundaryJoints = <fs.Node>[];
+  int? evaluatedChargeGeneration;
+  double landLeft = 0;
+  bool wasGrounded = true;
+  late fs.Node hand;
+  static const jumpClips = ['Jump_Start', 'Jump_Loop', 'Jump_Land'];
+  vm.Vector3 handWorld() =>
+      hand.globalTransform.clone().transform3(vm.Vector3(0, .07, 0));
 
   static Iterable<fs.Node> walk(fs.Node n) sync* {
     yield n;
@@ -44,7 +57,7 @@ class HumanActor {
     );
     if (!alive()) return null;
     final nodes = walk(model).toList(), audit = <Map<String, Object?>>[];
-    for (final name in [idle, jog]) {
+    for (final name in [idle, jog, ...jumpClips]) {
       final found = model.parsedAnimations
           .where((a) => a.name == name)
           .toList();
@@ -85,7 +98,16 @@ class HumanActor {
     }
     final a = HumanActor._(model, log);
     a.node.add(model);
-    for (final name in [idle, jog]) {
+    a.hand = nodes.singleWhere((n) => n.name == 'hand_r');
+    a.boundaryJoints.addAll(
+      nodes
+          .singleWhere((n) => n.skin != null)
+          .skin!
+          .joints
+          .whereType<fs.Node>(),
+    );
+    final authored = model.findAnimationByName('Authored_Basketball_v1')!;
+    for (final name in [idle, jog, ...jumpClips]) {
       final animation = model.findAnimationByName(name)!;
       final clip = model.createAnimationClip(animation)
         ..loop = true
@@ -95,6 +117,11 @@ class HumanActor {
       a.clips[name] = clip;
       a.durations[name] = animation.endTime;
     }
+    final shooting = model.createAnimationClip(authored)..weight = 0;
+    shooting.pause();
+    shooting.seek(0);
+    a.clips[authored.name] = shooting;
+    a.durations[authored.name] = authored.endTime;
     a.clips[idle]!.weight = 1;
     log({
       'event': 'actor_asset',
@@ -105,7 +132,7 @@ class HumanActor {
       'warnings': warnings,
       'playback': 'manual_seek_accepted_simulation_delta',
       'yawOffset': yawOffset,
-      'yawCalibration': 'minus_Z_visual_offset_pi; verify directional captures',
+      'yawCalibration': 'Scene imported forward calibrated by AVD court directions; raw GLB axes alone are insufficient',
     });
     return a;
   }
@@ -122,6 +149,11 @@ class HumanActor {
     required bool grounded,
     required bool ready,
     required bool reset,
+    required double jumpVelocity,
+    required double jumpSpeed,
+    required double gravity,
+    required double charge,
+    required int chargeGeneration,
   }) {
     if (closed) return;
     node.position = vm.Vector3(x, y, z);
@@ -137,7 +169,50 @@ class HumanActor {
       ready: ready,
       reset: reset,
     );
-    final next = pose == ActorPose.jog ? jog : idle;
+    action.advance(accepted);
+    String? override;
+    double overrideTime = 0;
+    if (!grounded) {
+      landLeft = 0;
+      final j = jumpPose(
+        velocity: jumpVelocity,
+        speed: jumpSpeed,
+        gravity: gravity,
+        startDuration: durations['Jump_Start']!,
+        loopDuration: durations['Jump_Loop']!,
+      );
+      override = j.name;
+      overrideTime = j.time;
+    } else {
+      if (!wasGrounded) landLeft = .18;
+      if (landLeft > 0) {
+        override = 'Jump_Land';
+        overrideTime = (1 - landLeft / .18) * durations['Jump_Land']!;
+        landLeft = math.max(0, landLeft - accepted);
+      }
+    }
+    wasGrounded = grounded;
+    if (action.active) {
+      override = 'Authored_Basketball_v1';
+      overrideTime = action.sample(charge);
+    }
+    if (reset) {
+      action.cancel();
+      landLeft = 0;
+      wasGrounded = true;
+      override = idle;
+      overrideTime = 0;
+    }
+    final held = unpreparedPose.sample(
+      ready: ready,
+      reset: reset,
+      grounded: grounded,
+    );
+    if (held != null) {
+      override = held.clip;
+      overrideTime = held.time;
+    }
+    final next = override ?? (pose == ActorPose.jog ? jog : idle);
     final changed = next != selected || pose != previousPose;
     if (changed) time = 0;
     selected = next;
@@ -148,7 +223,12 @@ class HumanActor {
     time = pose == ActorPose.held
         ? 0
         : actorClipTime(time, accepted, durations[selected]!);
+    if (override != null) time = overrideTime;
     clips[selected]!.seek(time);
+    evaluatedChargeGeneration =
+        action.charging && selected == 'Authored_Basketball_v1'
+        ? chargeGeneration
+        : null;
     if (changed)
       log({
         'event': 'actor_state',
@@ -169,6 +249,34 @@ class HumanActor {
   void pauseAll() {
     for (final c in clips.values) {
       c.pause();
+    }
+  }
+
+  void beginCharge() {
+    unpreparedPose.clear();
+    action.charge();
+  }
+
+  void cancelAction() {
+    action.cancel();
+  }
+
+  void recordSubmitted(int frame) => unpreparedPose.record(
+    clip: selected,
+    time: time,
+    grounded: wasGrounded,
+    frame: frame,
+  );
+
+  void releaseAction({required bool prepared, required int frame}) {
+    if (prepared) {
+      unpreparedPose.clear();
+      action.release();
+    } else {
+      if (!unpreparedPose.freeze(frame)) {
+        throw StateError('Missing matching submitted pose');
+      }
+      action.cancel();
     }
   }
 

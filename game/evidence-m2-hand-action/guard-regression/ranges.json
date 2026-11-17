@@ -1,0 +1,82 @@
+[
+  {
+    "mode": "enter",
+    "before": 0,
+    "after": 0
+  },
+  {
+    "mode": "court",
+    "before": 2,
+    "after": 4
+  },
+  {
+    "mode": "ground-shot",
+    "before": 4,
+    "after": 147
+  },
+  {
+    "mode": "jump-shot",
+    "before": 147,
+    "after": 294
+  },
+  {
+    "mode": "move-shot",
+    "before": 294,
+    "after": 438
+  },
+  {
+    "mode": "cancel",
+    "before": 438,
+    "after": 442
+  },
+  {
+    "mode": "dash-cancel",
+    "before": 442,
+    "after": 449
+  },
+  {
+    "mode": "reset-held",
+    "before": 449,
+    "after": 455
+  },
+  {
+    "mode": "reset-jump",
+    "before": 455,
+    "after": 461
+  },
+  {
+    "mode": "jump-only",
+    "before": 461,
+    "after": 467
+  },
+  {
+    "mode": "inside",
+    "before": 467,
+    "after": 469
+  },
+  {
+    "mode": "ground-shot",
+    "before": 469,
+    "after": 612
+  },
+  {
+    "mode": "inside",
+    "before": 612,
+    "after": 614
+  },
+  {
+    "mode": "jump-shot",
+    "before": 614,
+    "after": 761
+  },
+  {
+    "mode": "background",
+    "before": 761,
+    "after": 772
+  },
+  {
+    "mode": "exit-held",
+    "before": 772,
+    "after": 776
+  }
+]

@@ -104,10 +104,35 @@ class Practice {
   int _dashSerial = 0;
   V3 _facing = const V3(0, 0, -1);
   V3 _dashDirection = const V3(0, 0, -1);
+  V3? _heldOffset;
 
   V3 get player => _player;
   V3 get ball => _ball;
-  V3 get _held => V3(_player.x, _player.y + config.releaseY, _player.z);
+  V3 get _held {
+    final o = _heldOffset;
+    return V3(
+      _player.x + (o?.x ?? 0),
+      _player.y + (o?.y ?? config.releaseY),
+      _player.z + (o?.z ?? 0),
+    );
+  }
+
+  // Presentation supplies a sampled world-space ball position, never a bone
+  // reference. Physics and point valuation remain owned by this simulation.
+  bool acceptHeldWorld(V3 world) {
+    if (_paused ||
+        (_phase != PracticePhase.ready && _phase != PracticePhase.charging))
+      return false;
+    final o = V3(world.x - _player.x, world.y - _player.y, world.z - _player.z);
+    if (![o.x, o.y, o.z].every((v) => v.isFinite) ||
+        o.x * o.x + o.y * o.y + o.z * o.z > 16 ||
+        world.y <= config.ballRadius)
+      return false;
+    _heldOffset = o;
+    _ball = world;
+    return true;
+  }
+
   int get score => _score;
   int get round => _round;
   Shot? get shot => _shot;
@@ -397,12 +422,16 @@ class Practice {
     _emit('charge_cancel', {'reason': reason});
   }
 
-  bool release() {
+  bool release({V3? displayedOrigin}) {
     if (dashing) {
       _emit('shot_rejected', {'reason': 'dashing'});
       return false;
     }
     if (_paused || _phase != PracticePhase.charging) return false;
+    if (displayedOrigin != null && !acceptHeldWorld(displayedOrigin)) {
+      _emit('shot_rejected', {'reason': 'invalid_displayed_origin'});
+      return false;
+    }
     final q = charge;
     final feet = V3(_player.x, 0, _player.z);
     // Last held-ball sample. syncScene rendered this same immutable value.
@@ -485,6 +514,7 @@ class Practice {
     _jumpTime = 0;
     _player = V3(_player.x, 0, _player.z);
     _faceRim();
+    _heldOffset = null;
     _ball = _held;
     _round++;
     _emit('round_reset', {

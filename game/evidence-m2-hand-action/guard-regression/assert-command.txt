@@ -1,0 +1,1 @@
+PASS M2 runtime assertions | output=game/evidence-m2-hand-action/guard-regression/runtime-assertions.json

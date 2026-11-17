@@ -1,0 +1,447 @@
+[
+  {
+    "kind": "practice_actor",
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanBasketball.glb",
+    "bytes": 7640212,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Start",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Land",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "minus_Z_visual_offset_pi; verify directional captures"
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "dt_clamped",
+    "eventId": 1,
+    "simTime": 0,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "accepted": 0.1
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.09999999999999999,
+    "acceptedDelta": 0.09999999999999999,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "dt_clamped",
+    "eventId": 2,
+    "simTime": 1.274999999999998,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "accepted": 0.1
+  },
+  {
+    "kind": "practice_event",
+    "event": "paused",
+    "eventId": 3,
+    "simTime": 1.4583333333333306,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_asset",
+    "asset": "assets/human-ual-standard/HumanBasketball.glb",
+    "bytes": 7640212,
+    "binding": [
+      {
+        "clip": "Idle_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jog_Fwd_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Start",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Loop",
+        "targets": 65,
+        "uniqueMatches": true
+      },
+      {
+        "clip": "Jump_Land",
+        "targets": 65,
+        "uniqueMatches": true
+      }
+    ],
+    "skins": [
+      {
+        "node": "Mannequin",
+        "joints": 65,
+        "nullJoints": 0
+      }
+    ],
+    "warnings": [],
+    "playback": "manual_seek_accepted_simulation_delta",
+    "yawOffset": 3.141592653589793,
+    "yawCalibration": "minus_Z_visual_offset_pi; verify directional captures"
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "dt_clamped",
+    "eventId": 1,
+    "simTime": 0,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "accepted": 0.1
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.09999999999999999,
+    "acceptedDelta": 0.09999999999999999,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "dt_clamped",
+    "eventId": 2,
+    "simTime": 5.200000000000048,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "accepted": 0.1
+  },
+  {
+    "kind": "practice_event",
+    "event": "charge_start",
+    "eventId": 3,
+    "simTime": 6.566666666666783,
+    "round": 1,
+    "shotId": 0,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Authored_Basketball_v1",
+    "clipTime": 0.01388888888888889,
+    "acceptedDelta": 0.016666666666667496,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "shot_release",
+    "eventId": 4,
+    "simTime": 8.383333333333498,
+    "round": 1,
+    "shotId": 1,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "charge": 1,
+    "pointValue": 3,
+    "feetX": 0,
+    "feetY": 0,
+    "feetZ": 3,
+    "originX": -0.11752095818519592,
+    "originY": 1.7706410884857178,
+    "originZ": 3.2496097087860107,
+    "releasePlayerY": 0
+  },
+  {
+    "kind": "hand_event",
+    "event": "release_latched",
+    "sampleTime": 8.383333333333498,
+    "sampleRound": 1,
+    "sampleEpoch": 0,
+    "sampleGeneration": 0,
+    "sampleFrame": 470,
+    "sampleAcceptedDelta": 0.01666666666666572,
+    "camera": "Cận bên",
+    "lastRenderBall": [
+      -0.11752095818519592,
+      1.7706410884857178,
+      3.2496097087860107
+    ],
+    "simTime": 8.383333333333498,
+    "shotId": 1,
+    "displayed": [
+      -0.11752095818519592,
+      1.7706410884857178,
+      3.2496097087860107
+    ],
+    "hand": [
+      -0.11752095818519592,
+      1.7706410884857178,
+      3.2496097087860107
+    ],
+    "origin": [
+      -0.11752095818519592,
+      1.7706410884857178,
+      3.2496097087860107
+    ]
+  },
+  {
+    "kind": "hand_event",
+    "event": "release_pose_clock",
+    "shotId": 1,
+    "before": 1,
+    "after": 1,
+    "clip": "Authored_Basketball_v1"
+  },
+  {
+    "kind": "hand_event",
+    "event": "first_flight",
+    "flightTime": 0.016666666666666666,
+    "frame": 471,
+    "acceptedDelta": 0.01666666666666572,
+    "camera": "Cận bên",
+    "simTime": 8.400000000000164,
+    "shotId": 1,
+    "ball": [
+      -0.11576378099284079,
+      1.8989590517180308,
+      3.156165340981466
+    ],
+    "origin": [
+      -0.11752095818519592,
+      1.7706410884857178,
+      3.2496097087860107
+    ]
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "held",
+    "clip": "Idle_Loop",
+    "clipTime": 0,
+    "acceptedDelta": 0.01666666666666572,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "rim_crossing",
+    "eventId": 5,
+    "simTime": 9.791666666666751,
+    "round": 1,
+    "shotId": 1,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "inside": false,
+    "x": 0.03008192597263551,
+    "z": -4.599717186795771
+  },
+  {
+    "kind": "practice_event",
+    "event": "shot_end",
+    "eventId": 6,
+    "simTime": 10.16666666666673,
+    "round": 1,
+    "shotId": 1,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "scored": false,
+    "score": 0
+  },
+  {
+    "kind": "practice_event",
+    "event": "round_reset",
+    "eventId": 7,
+    "simTime": 11.175000000000006,
+    "round": 2,
+    "shotId": 1,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0,
+    "reason": "auto",
+    "score": 0,
+    "jumpCancelled": false,
+    "dashCancelled": false
+  },
+  {
+    "kind": "practice_actor",
+    "event": "actor_state",
+    "pose": "idle",
+    "clip": "Idle_Loop",
+    "clipTime": 0.03333333333333144,
+    "acceptedDelta": 0.03333333333333144,
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "facingX": 0,
+    "facingZ": -1,
+    "dashPolicy": "reuse_jog_on_actual_displacement"
+  },
+  {
+    "kind": "practice_event",
+    "event": "paused",
+    "eventId": 8,
+    "simTime": 12.633333333333256,
+    "round": 2,
+    "shotId": 1,
+    "jumpId": 0,
+    "playerY": 0,
+    "grounded": true,
+    "dashId": 0,
+    "dashing": false,
+    "dashDirectionX": 0,
+    "dashDirectionZ": -1,
+    "dashCooldownRemaining": 0
+  }
+]

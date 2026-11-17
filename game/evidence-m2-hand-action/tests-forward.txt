@@ -1,0 +1,66 @@
+00:00 +0: loading D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/actor_motion_test.dart
+00:00 +0: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/actor_motion_test.dart: actual displacement selects locomotion, blocked movement idles
+00:00 +1: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/actor_motion_test.dart: air, action lock and reset hold pose rather than fake clips
+00:00 +2: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/actor_motion_test.dart: animation accepts simulation time rather than raw long frame
+00:00 +3: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +4: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +5: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +6: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +7: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +8: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +9: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +10: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +11: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +12: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +13: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +14: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +15: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +16: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +17: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +18: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:00 +19: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:01 +20: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:01 +21: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/dash_button_test.dart: Hold beyond cooldown does not repeat or accept pointer2
+00:01 +22: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +23: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +24: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +25: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +26: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +27: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +28: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +29: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +30: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +31: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +32: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +33: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +34: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +35: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +36: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +37: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:01 +38: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:02 +39: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Two pointers keep release value 3
+00:02 +40: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_test.dart: Widget ignores a second pointer on stick; cancel centers knob
+00:02 +41: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Reset/disable clears owner without generating an edge
+00:02 +42: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/jump_button_test.dart: Reset/disable clears owner without generating an edge
+00:02 +43: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Cancel shoot leaves move active; cancel move leaves charge
+00:03 +44: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/joystick_coordination_test.dart: Round reset and disable neutralize old pointers and knob
+00:03 +45: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +46: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +47: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +48: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +49: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +50: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +51: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +52: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +53: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +54: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +55: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +56: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:03 +57: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +58: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +59: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +60: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +61: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +62: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Menu routes, disabled features, fresh entry and both exits
+00:04 +63: D:/totnghiep/LuanVanTotNghiep/game/offline-practice/test/offline_app_test.dart: Settings unavailable audio, back and responsive layout
+00:05 +64: All tests passed!
