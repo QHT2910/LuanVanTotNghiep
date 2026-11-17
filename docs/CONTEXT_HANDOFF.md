@@ -1,3 +1,13 @@
+## M2 Cindy ACCEPT / chuyển network minimal — 18/11/2026
+
+QA networkstage1 terminalREVISE1P2docs claimconsumerdedupe; Lead rà và sửa exactclaim. Server scoreonce/duplicate-sequence rejection đãtest; consoleclientchỉlogsnapshot chưaeffectconsumer. Raw27snapshot repeatedeventkhôngphải27score. Acceptance rendererpending phải assignabsolutescores/dedupeeffects(epoch,eventId), tests repeated/new/newepoch. qa/network-stage1.md đãlưu; QAindependent6hash/73statecomparison0mismatch/servercontractscopedđạt, noP1. Chỉdocsfix khôngsource/testchange/rerun. Preparingfinish-session reviewedstage1 exclude3Wordoutside; Cindyreviewpending beforeAVDnetwork. Quotafresh40/51updated1794958371254/reset1794974756/1795394548,reserve5%both.
+
+Networkstage1 Lead đã review developerinventory/proposal và implement network/stage1_room+server,toolserver/client/smoke+4coretests. NoM2game/sim/input/pubspec/depsdiff. ActualanalyzeNoissues/full78PASS(74+4); realHttpServer+2WebSocketclients sameprocesssmokePASS73same-tickstates/[3,0]/1scoreevent/duplicatereleaseignored/thirdpeerreject/leaveepochfresh/oldsession+malformed+binary+oversize+gapclose. Rawtransport-observations.json+source-manifest.json tại game/evidence-network-stage1. docs/NETWORK_STAGE1_REVIEW.md có seam canonicalorigin1.8 (KHÔNGM2handrelease), alternatingturntestpolicy vàtimer/latency/securitylimits. Không APKbuild/AVD/networkUI yet; manualCLItools compile only, smoke actualsocketsnot2Android. NewcodeuncommittedchờQAreadonly stage1 rồiCindy, khôngreplayM2. Quotaactual22/48updated1794957522213/resets1794974757/1795394548, reserve5%both. Devterminaldone; QAworkspaceidlequeue0 đọc gần nhất, chuẩn bị dispatchstage1. 3Wordoutsidegiữ.
+
+Actualcommit a9fc676 đãpushorigin/main, verifyrevlist0/0; chỉ3Wordoutside cònmodified. Cindyindependentreview qa/runtimeassertions/report, hashAPKdc2a vàảnhheldair/full/jumprelease: ACCEPT M2 FUNCTIONALPROTOTYPE scoped1AVD. Giữlimits grip/fingerpenetration/base/landingblend/zeroauthoredtapnoanim/realphone/everyGPUframe/fullbinding/fullgame. Không cần commit/push M2lặp.
+
+Nextauthorized NETWORKMINIMAL2clients: inventoryexistingbackend/deps/rules trước, gọn asset-independent verticalslice authoritymovement/ball/score+seq/dedupe,2clientscùngphòng/cùngbóngscore/1scoreperevent. KhôngclaimInternet2networknếulocal; khôngnewframework/cloudbill/publish/enginechange. GiữScene0.24.3/M2APKold, khônganimationpolish/thesis/Figma. Leadreview→QA→Cindy từngmốc; chưalaunch2AVD/hardwarechange. Latestusagequery9/46 updated1794956967901 nhưngstatusstale, đủreadonlyinventory; cầnfreshtrướclongbuild.
+
 ## Resume sau quota reset xác minh — 18/11/2026
 
 QA layeredruntime terminal đãđến vàLeadreview ACCEPT scopedbaseline: qa/m2-layered-runtime.md. Worker tựhash18/5/APKdc2a, memorycomparisons contacts/error0/early65delta0/regression5shots13score/6+6negative/reentry và16ảnh mới; khôngP1/P2. Leadgates74tests/analyze/build/audit/install được phân biệt. Không fullgame/everyGPUframe/fullbinding/realphoneclaim. Currentprimary9%weekly46 updated1794956967901/reset1794974756/1795394548, reserve5%both. Đang cuối phiên ràdiff/publicartifact rồi finish-session exclude3Wordoutside, commit/push chỉ claim sau receipt. Cindy review pending, không mởnetwork.
@@ -478,10 +488,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-17T23:11:01.301Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `7f205ad148d02c213e3753bb5d219c52a6f607c1`.
-- Local tracking origin/main: `7f205ad148d02c213e3753bb5d219c52a6f607c1` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 30 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-17T23:34:08.348Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `a9fc676032e3156d061630dd87f37b1c28bb4bf6`.
+- Local tracking origin/main: `a9fc676032e3156d061630dd87f37b1c28bb4bf6` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 14 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

@@ -1,5 +1,11 @@
 # Kế hoạch tiếp tục — cập nhật 13/11/2026
 
+## Mốc hiện hành — 18/11/2026
+
+Cindy đã ACCEPT M2 functional prototype scoped1AVD, commit a9fc676/APKdc2a2e81…13c48. Không phải fullgame/máy thật/everyGPUframe; giữ giới hạn grip/ngón, base/landingblend và zero-authoredtap không shootanimation. Không lặp build/commit M2.
+
+Tiếp mạng tối thiểu hai client: kiểm probe/backend/deps hiện có, thiết kế authoritymovement/ball/score+sequence/dedupe và roomcode gọn trong project. Acceptance hai client cùng phòng/cùng bóng+score, một score/event, logtimestamp/seq/latencylimits. Local không thay hai Android/hai mạng Internet. Không thêm framework/cloudbill/publish hoặc đổi engine. Một AVD+clientthứhai phù hợp môi trường; đánh giá tài nguyên trước2AVD, không tự đổiRAM/GPU. Leadreview/QA/Cindy trước vòng trận11điểm/3phút hoàn chỉnh. Quota dừng khi primary HOẶC weekly used>=95%, xác minh live sau reset; hourreset không resetweekly.
+
 ## Đích hoàn thành và thứ tự hiện hành
 
 Đích là game Android 3D có vòng chơi hoàn chỉnh trong phạm vi đã chốt: phòng 1v1, di chuyển/ném/nhảy/Dash/Block, ghi 2/3 điểm, kết thúc theo 11 điểm hoặc 3 phút và hiển thị kết quả. Quy tắc xử lý các tình huống biên phải được chốt và kiểm trước nghiệm thu. HUD offline, model probe và các demo riêng chỉ là milestone; không đủ để tuyên bố game hoàn thành. Không mở rộng tính năng chỉ để trang trí.

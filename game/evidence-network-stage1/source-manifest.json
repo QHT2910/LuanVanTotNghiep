@@ -1,0 +1,29 @@
+{
+  "scope": "Headless network stage1 sources; no APK build or device install",
+  "sources": {
+    "lib/src/network/stage1_room.dart": {
+      "bytes": 4817,
+      "sha256": "de294eb3df56fd577beb7f29045821b520806f9b2c521972bd23286c6113dea3"
+    },
+    "lib/src/network/stage1_server.dart": {
+      "bytes": 4463,
+      "sha256": "d1cf9dd54f442caeb415074ea0ea06af4e85b2e15b36ceda0f9377b1ff829740"
+    },
+    "tool/stage1_server.dart": {
+      "bytes": 370,
+      "sha256": "23106a549ab2dadb4d893844a524f3dbb3578a76896db83dfe67c50e7d874315"
+    },
+    "tool/stage1_client.dart": {
+      "bytes": 3740,
+      "sha256": "9e22282bd6216b280b07ca06c0df17e89ba40644c6e66903156d613ab9b877d3"
+    },
+    "tool/stage1_smoke.dart": {
+      "bytes": 7017,
+      "sha256": "efb3bef58b114f8d0f03430da0114f91450b5b9a9689b8e36348ba7434a53741"
+    },
+    "test/stage1_room_test.dart": {
+      "bytes": 2802,
+      "sha256": "47f2e25a2d5e70ce4ae2cc86cdc732848509d4309f98058fb3e6f76be70c4692"
+    }
+  }
+}

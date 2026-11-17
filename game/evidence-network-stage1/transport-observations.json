@@ -1,0 +1,9284 @@
+{
+  "scope": "Two real loopback socket clients in one diagnostic process",
+  "clientA": [
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 0,
+      "ready": false,
+      "owner": 0,
+      "ball": [
+        -1.0,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 0,
+      "result": "joined",
+      "serverMonoUs": 93938,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 3,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -1.0,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 0,
+      "result": "joined",
+      "serverMonoUs": 130024,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 6,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.8749999999999998,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.8749999999999998,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 1,
+      "result": "accepted",
+      "serverMonoUs": 177253,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 9,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 1,
+      "result": "accepted",
+      "serverMonoUs": 224643,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 12,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.041666666666666664
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 4,
+      "result": "accepted",
+      "serverMonoUs": 272102,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 15,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.08333333333333333
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 4,
+      "result": "accepted",
+      "serverMonoUs": 333398,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 18,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.125
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 5,
+      "result": "accepted",
+      "serverMonoUs": 380836,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 21,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.16666666666666666
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 5,
+      "result": "accepted",
+      "serverMonoUs": 427397,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 24,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.20833333333333331
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 6,
+      "result": "accepted",
+      "serverMonoUs": 473491,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 27,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.2500000000000001
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 6,
+      "result": "accepted",
+      "serverMonoUs": 534803,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 30,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.2916666666666669
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 7,
+      "result": "accepted",
+      "serverMonoUs": 582084,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 33,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.3333333333333337
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 7,
+      "result": "accepted",
+      "serverMonoUs": 628831,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 36,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.3750000000000005
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 8,
+      "result": "accepted",
+      "serverMonoUs": 676043,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 39,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.41666666666666724
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 8,
+      "result": "accepted",
+      "serverMonoUs": 721831,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 42,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.45833333333333376
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 9,
+      "result": "accepted",
+      "serverMonoUs": 784096,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 45,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5000000000000003
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 9,
+      "result": "accepted",
+      "serverMonoUs": 830014,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 48,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5416666666666669
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 10,
+      "result": "accepted",
+      "serverMonoUs": 876804,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 51,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5833333333333334
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 10,
+      "result": "accepted",
+      "serverMonoUs": 923033,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 54,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 11,
+      "result": "accepted",
+      "serverMonoUs": 984412,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 57,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7227713045193238,
+        2.1757303571428572,
+        2.782170436154594
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 12,
+      "result": "accepted",
+      "serverMonoUs": 1030527,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 60,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6955426090386481,
+        2.5269357142857145,
+        2.564340872309188
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 13,
+      "result": "accepted",
+      "serverMonoUs": 1075989,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 63,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6683139135579723,
+        2.8536160714285717,
+        2.346511308463782
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 13,
+      "result": "accepted",
+      "serverMonoUs": 1121240,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 66,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6410852180772967,
+        3.1557714285714287,
+        2.128681744618376
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 14,
+      "result": "accepted",
+      "serverMonoUs": 1184011,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 69,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6138565225966209,
+        3.4334017857142856,
+        1.9108521807729704
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 14,
+      "result": "accepted",
+      "serverMonoUs": 1230922,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 72,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5866278271159451,
+        3.686507142857144,
+        1.6930226169275637
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 15,
+      "result": "accepted",
+      "serverMonoUs": 1278200,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 75,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5593991316352693,
+        3.915087500000001,
+        1.475193053082157
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 15,
+      "result": "accepted",
+      "serverMonoUs": 1324244,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 78,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5321704361545935,
+        4.119142857142859,
+        1.2573634892367505
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 16,
+      "result": "accepted",
+      "serverMonoUs": 1370493,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 81,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5049417406739176,
+        4.298673214285716,
+        1.0395339253913438
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 16,
+      "result": "accepted",
+      "serverMonoUs": 1432099,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 84,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.47771304519324187,
+        4.453678571428574,
+        0.8217043615459372
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 17,
+      "result": "accepted",
+      "serverMonoUs": 1478749,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 87,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.4504843497125663,
+        4.58415892857143,
+        0.6038747977005321
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 17,
+      "result": "accepted",
+      "serverMonoUs": 1525377,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 90,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.42325565423189065,
+        4.690114285714286,
+        0.386045233855127
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 18,
+      "result": "accepted",
+      "serverMonoUs": 1571425,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 93,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.396026958751215,
+        4.771544642857142,
+        0.16821567000972193
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 18,
+      "result": "accepted",
+      "serverMonoUs": 1634018,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 96,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.3687982632705394,
+        4.82845,
+        -0.0496138938356836
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 19,
+      "result": "accepted",
+      "serverMonoUs": 1680601,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 99,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.34156956778986375,
+        4.8608303571428575,
+        -0.2674434576810887
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 19,
+      "result": "accepted",
+      "serverMonoUs": 1727892,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 102,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.3143408723091881,
+        4.868685714285714,
+        -0.48527302152649376
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 20,
+      "result": "accepted",
+      "serverMonoUs": 1774463,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 105,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.2871121768285125,
+        4.852016071428573,
+        -0.7031025853718988
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 20,
+      "result": "accepted",
+      "serverMonoUs": 1820488,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 108,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.25988348134783684,
+        4.81082142857143,
+        -0.9209321492173044
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 21,
+      "result": "accepted",
+      "serverMonoUs": 1882866,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 111,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.23265478586716115,
+        4.7451017857142865,
+        -1.138761713062709
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 21,
+      "result": "accepted",
+      "serverMonoUs": 1928967,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 114,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.20542609038648552,
+        4.6548571428571455,
+        -1.356591276908115
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 22,
+      "result": "accepted",
+      "serverMonoUs": 1974198,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 117,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.17819739490580988,
+        4.540087500000006,
+        -1.57442084075352
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 22,
+      "result": "accepted",
+      "serverMonoUs": 2020720,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 120,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.15096869942513425,
+        4.4007928571428625,
+        -1.7922504045989252
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 23,
+      "result": "accepted",
+      "serverMonoUs": 2082639,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 123,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.12374000394445872,
+        4.23697321428572,
+        -2.0100799684443302
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 23,
+      "result": "accepted",
+      "serverMonoUs": 2128625,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 126,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.09651130846378309,
+        4.04862857142858,
+        -2.2279095322897353
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 24,
+      "result": "accepted",
+      "serverMonoUs": 2175023,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 129,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.06928261298310745,
+        3.8357589285714377,
+        -2.4457390961351404
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 24,
+      "result": "accepted",
+      "serverMonoUs": 2222582,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 132,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.042053917502431815,
+        3.5983642857142986,
+        -2.6635686599805455
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 25,
+      "result": "accepted",
+      "serverMonoUs": 2284328,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 135,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.01482522202175618,
+        3.336444642857156,
+        -2.8813982238259506
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 25,
+      "result": "accepted",
+      "serverMonoUs": 2330986,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 138,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.012403473458919456,
+        3.0500000000000167,
+        -3.0992277876713565
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 26,
+      "result": "accepted",
+      "serverMonoUs": 2378106,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 141,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.03963216893959509,
+        2.739030357142875,
+        -3.3170573515167616
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 26,
+      "result": "accepted",
+      "serverMonoUs": 2424833,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 144,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.06686086442027073,
+        2.4035357142857343,
+        -3.5348869153621667
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 27,
+      "result": "accepted",
+      "serverMonoUs": 2472451,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 147,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.09408955990094636,
+        2.043516071428595,
+        -3.752716479207572
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 27,
+      "result": "accepted",
+      "serverMonoUs": 2534578,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 150,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.121318255381622,
+        1.658971428571455,
+        -3.970546043052977
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 28,
+      "result": "accepted",
+      "serverMonoUs": 2580984,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 153,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.14854695086229763,
+        1.2499017857143162,
+        -4.188375606898382
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 28,
+      "result": "accepted",
+      "serverMonoUs": 2628058,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 156,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.17577564634297327,
+        0.8163071428571769,
+        -4.406205170743787
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 29,
+      "result": "accepted",
+      "serverMonoUs": 2673517,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 159,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.2030043418236489,
+        0.3581875000000352,
+        -4.624034734589192
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 29,
+      "result": "accepted",
+      "serverMonoUs": 2720695,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 162,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 30,
+      "result": "accepted",
+      "serverMonoUs": 2782623,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 165,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 30,
+      "result": "accepted",
+      "serverMonoUs": 2830353,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 168,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 31,
+      "result": "accepted",
+      "serverMonoUs": 2877009,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 171,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 31,
+      "result": "accepted",
+      "serverMonoUs": 2923838,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 174,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 32,
+      "result": "accepted",
+      "serverMonoUs": 2971346,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 177,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 32,
+      "result": "accepted",
+      "serverMonoUs": 3033838,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 180,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 33,
+      "result": "accepted",
+      "serverMonoUs": 3080736,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 183,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 33,
+      "result": "accepted",
+      "serverMonoUs": 3127866,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 186,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 34,
+      "result": "accepted",
+      "serverMonoUs": 3174416,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 189,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 34,
+      "result": "accepted",
+      "serverMonoUs": 3220166,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 192,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 35,
+      "result": "accepted",
+      "serverMonoUs": 3282729,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 195,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 35,
+      "result": "accepted",
+      "serverMonoUs": 3329429,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 198,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 36,
+      "result": "accepted",
+      "serverMonoUs": 3376393,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 201,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 36,
+      "result": "accepted",
+      "serverMonoUs": 3423526,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 204,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 37,
+      "result": "accepted",
+      "serverMonoUs": 3470539,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 207,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 37,
+      "result": "accepted",
+      "serverMonoUs": 3533295,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 210,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 38,
+      "result": "accepted",
+      "serverMonoUs": 3579427,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 213,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 38,
+      "result": "accepted",
+      "serverMonoUs": 3626713,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 216,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 39,
+      "result": "accepted",
+      "serverMonoUs": 3672662,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 219,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 39,
+      "result": "accepted",
+      "serverMonoUs": 3733997,
+      "maxTimerGapUs": 93938
+    }
+  ],
+  "clientB": [
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 3,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -1.0,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 0,
+      "result": "joined",
+      "serverMonoUs": 130024,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 6,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.8749999999999998,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.8749999999999998,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 0,
+      "result": "joined",
+      "serverMonoUs": 177253,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 9,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "ready",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.0
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 0,
+      "result": "joined",
+      "serverMonoUs": 224643,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 12,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.041666666666666664
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 1,
+      "result": "accepted",
+      "serverMonoUs": 272102,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 15,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.08333333333333333
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 1,
+      "result": "accepted",
+      "serverMonoUs": 333398,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 18,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.125
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 2,
+      "result": "accepted",
+      "serverMonoUs": 380836,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 21,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.16666666666666666
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 2,
+      "result": "accepted",
+      "serverMonoUs": 427397,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 24,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.20833333333333331
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 3,
+      "result": "accepted",
+      "serverMonoUs": 473491,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 27,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.2500000000000001
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 3,
+      "result": "accepted",
+      "serverMonoUs": 534803,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 30,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.2916666666666669
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 4,
+      "result": "accepted",
+      "serverMonoUs": 582084,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 33,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.3333333333333337
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 4,
+      "result": "accepted",
+      "serverMonoUs": 628831,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 36,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.3750000000000005
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 5,
+      "result": "accepted",
+      "serverMonoUs": 676043,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 39,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.41666666666666724
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 5,
+      "result": "accepted",
+      "serverMonoUs": 721831,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 42,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.45833333333333376
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 6,
+      "result": "accepted",
+      "serverMonoUs": 784096,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 45,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5000000000000003
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 6,
+      "result": "accepted",
+      "serverMonoUs": 830014,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 48,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5416666666666669
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 7,
+      "result": "accepted",
+      "serverMonoUs": 876804,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 51,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.5833333333333334
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 7,
+      "result": "accepted",
+      "serverMonoUs": 923033,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 54,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7499999999999996,
+        1.8,
+        3.0
+      ],
+      "phase": "charging",
+      "shotKey": null,
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 8,
+      "result": "accepted",
+      "serverMonoUs": 984412,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 57,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.7227713045193238,
+        2.1757303571428572,
+        2.782170436154594
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 8,
+      "result": "accepted",
+      "serverMonoUs": 1030527,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 60,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6955426090386481,
+        2.5269357142857145,
+        2.564340872309188
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 9,
+      "result": "accepted",
+      "serverMonoUs": 1075989,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 63,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6683139135579723,
+        2.8536160714285717,
+        2.346511308463782
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 9,
+      "result": "accepted",
+      "serverMonoUs": 1121240,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 66,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6410852180772967,
+        3.1557714285714287,
+        2.128681744618376
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 10,
+      "result": "accepted",
+      "serverMonoUs": 1184011,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 69,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.6138565225966209,
+        3.4334017857142856,
+        1.9108521807729704
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 10,
+      "result": "accepted",
+      "serverMonoUs": 1230922,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 72,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5866278271159451,
+        3.686507142857144,
+        1.6930226169275637
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 11,
+      "result": "accepted",
+      "serverMonoUs": 1278200,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 75,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5593991316352693,
+        3.915087500000001,
+        1.475193053082157
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 11,
+      "result": "accepted",
+      "serverMonoUs": 1324244,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 78,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5321704361545935,
+        4.119142857142859,
+        1.2573634892367505
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 12,
+      "result": "accepted",
+      "serverMonoUs": 1370493,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 81,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.5049417406739176,
+        4.298673214285716,
+        1.0395339253913438
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 12,
+      "result": "accepted",
+      "serverMonoUs": 1432099,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 84,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.47771304519324187,
+        4.453678571428574,
+        0.8217043615459372
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 13,
+      "result": "accepted",
+      "serverMonoUs": 1478749,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 87,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.4504843497125663,
+        4.58415892857143,
+        0.6038747977005321
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 13,
+      "result": "accepted",
+      "serverMonoUs": 1525377,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 90,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.42325565423189065,
+        4.690114285714286,
+        0.386045233855127
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 14,
+      "result": "accepted",
+      "serverMonoUs": 1571425,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 93,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.396026958751215,
+        4.771544642857142,
+        0.16821567000972193
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 14,
+      "result": "accepted",
+      "serverMonoUs": 1634018,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 96,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.3687982632705394,
+        4.82845,
+        -0.0496138938356836
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 15,
+      "result": "accepted",
+      "serverMonoUs": 1680601,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 99,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.34156956778986375,
+        4.8608303571428575,
+        -0.2674434576810887
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 15,
+      "result": "accepted",
+      "serverMonoUs": 1727892,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 102,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.3143408723091881,
+        4.868685714285714,
+        -0.48527302152649376
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 16,
+      "result": "accepted",
+      "serverMonoUs": 1774463,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 105,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.2871121768285125,
+        4.852016071428573,
+        -0.7031025853718988
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 16,
+      "result": "accepted",
+      "serverMonoUs": 1820488,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 108,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.25988348134783684,
+        4.81082142857143,
+        -0.9209321492173044
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 17,
+      "result": "accepted",
+      "serverMonoUs": 1882866,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 111,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.23265478586716115,
+        4.7451017857142865,
+        -1.138761713062709
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 17,
+      "result": "accepted",
+      "serverMonoUs": 1928967,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 114,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.20542609038648552,
+        4.6548571428571455,
+        -1.356591276908115
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 18,
+      "result": "accepted",
+      "serverMonoUs": 1974198,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 117,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.17819739490580988,
+        4.540087500000006,
+        -1.57442084075352
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 18,
+      "result": "accepted",
+      "serverMonoUs": 2020720,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 120,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.15096869942513425,
+        4.4007928571428625,
+        -1.7922504045989252
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 19,
+      "result": "accepted",
+      "serverMonoUs": 2082639,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 123,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.12374000394445872,
+        4.23697321428572,
+        -2.0100799684443302
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 19,
+      "result": "accepted",
+      "serverMonoUs": 2128625,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 126,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.09651130846378309,
+        4.04862857142858,
+        -2.2279095322897353
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 20,
+      "result": "accepted",
+      "serverMonoUs": 2175023,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 129,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.06928261298310745,
+        3.8357589285714377,
+        -2.4457390961351404
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 20,
+      "result": "accepted",
+      "serverMonoUs": 2222582,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 132,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.042053917502431815,
+        3.5983642857142986,
+        -2.6635686599805455
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 21,
+      "result": "accepted",
+      "serverMonoUs": 2284328,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 135,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        -0.01482522202175618,
+        3.336444642857156,
+        -2.8813982238259506
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 21,
+      "result": "accepted",
+      "serverMonoUs": 2330986,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 138,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.012403473458919456,
+        3.0500000000000167,
+        -3.0992277876713565
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "eventId": 0,
+      "scoreEvents": [],
+      "ack": 22,
+      "result": "accepted",
+      "serverMonoUs": 2378106,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 141,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.03963216893959509,
+        2.739030357142875,
+        -3.3170573515167616
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 22,
+      "result": "accepted",
+      "serverMonoUs": 2424833,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 144,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.06686086442027073,
+        2.4035357142857343,
+        -3.5348869153621667
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 23,
+      "result": "accepted",
+      "serverMonoUs": 2472451,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 147,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.09408955990094636,
+        2.043516071428595,
+        -3.752716479207572
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 23,
+      "result": "accepted",
+      "serverMonoUs": 2534578,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 150,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.121318255381622,
+        1.658971428571455,
+        -3.970546043052977
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 24,
+      "result": "accepted",
+      "serverMonoUs": 2580984,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 153,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.14854695086229763,
+        1.2499017857143162,
+        -4.188375606898382
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 24,
+      "result": "accepted",
+      "serverMonoUs": 2628058,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 156,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.17577564634297327,
+        0.8163071428571769,
+        -4.406205170743787
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 25,
+      "result": "accepted",
+      "serverMonoUs": 2673517,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 159,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.2030043418236489,
+        0.3581875000000352,
+        -4.624034734589192
+      ],
+      "phase": "flying",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 25,
+      "result": "accepted",
+      "serverMonoUs": 2720695,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 162,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 26,
+      "result": "accepted",
+      "serverMonoUs": 2782623,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 165,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 26,
+      "result": "accepted",
+      "serverMonoUs": 2830353,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 168,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 27,
+      "result": "accepted",
+      "serverMonoUs": 2877009,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 171,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 27,
+      "result": "accepted",
+      "serverMonoUs": 2923838,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 174,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 28,
+      "result": "accepted",
+      "serverMonoUs": 2971346,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 177,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 28,
+      "result": "accepted",
+      "serverMonoUs": 3033838,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 180,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 29,
+      "result": "accepted",
+      "serverMonoUs": 3080736,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 183,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 29,
+      "result": "accepted",
+      "serverMonoUs": 3127866,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 186,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 30,
+      "result": "accepted",
+      "serverMonoUs": 3174416,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 189,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 30,
+      "result": "accepted",
+      "serverMonoUs": 3220166,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 192,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 31,
+      "result": "accepted",
+      "serverMonoUs": 3282729,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 195,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 31,
+      "result": "accepted",
+      "serverMonoUs": 3329429,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 198,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 32,
+      "result": "accepted",
+      "serverMonoUs": 3376393,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 201,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 32,
+      "result": "accepted",
+      "serverMonoUs": 3423526,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 204,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 33,
+      "result": "accepted",
+      "serverMonoUs": 3470539,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 207,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 33,
+      "result": "accepted",
+      "serverMonoUs": 3533295,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 210,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 34,
+      "result": "accepted",
+      "serverMonoUs": 3579427,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 213,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 34,
+      "result": "accepted",
+      "serverMonoUs": 3626713,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 216,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 35,
+      "result": "accepted",
+      "serverMonoUs": 3672662,
+      "maxTimerGapUs": 93938
+    },
+    {
+      "v": 1,
+      "type": "snapshot",
+      "epoch": "dcdf21b52026e90cc8378c41dc1e1722",
+      "tick": 219,
+      "ready": true,
+      "owner": 0,
+      "ball": [
+        0.21661868956398678,
+        0.12,
+        -4.732949516511895
+      ],
+      "phase": "waiting",
+      "shotKey": "dcdf21b52026e90cc8378c41dc1e1722:0:1",
+      "players": [
+        {
+          "slot": 0,
+          "position": [
+            -0.7499999999999996,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "grounded": true,
+          "charge": 0.6249999999999999
+        },
+        {
+          "slot": 1,
+          "position": [
+            1.0,
+            0.0,
+            3.0
+          ],
+          "facing": [
+            -0.1643989873053573,
+            0.0,
+            -0.9863939238321437
+          ],
+          "grounded": true,
+          "charge": 0
+        }
+      ],
+      "scores": [
+        3,
+        0
+      ],
+      "eventId": 1,
+      "scoreEvents": [
+        {
+          "eventId": 1,
+          "slot": 0,
+          "shotId": 1,
+          "points": 3,
+          "score": 3
+        }
+      ],
+      "ack": 35,
+      "result": "accepted",
+      "serverMonoUs": 3733997,
+      "maxTimerGapUs": 93938
+    }
+  ],
+  "commandsA": [
+    {
+      "seq": 1,
+      "op": "move",
+      "seen": 3,
+      "sentMonoUs": 64458,
+      "x": 1.0,
+      "z": 0.0
+    },
+    {
+      "seq": 2,
+      "op": "keep",
+      "seen": 9,
+      "sentMonoUs": 154226
+    },
+    {
+      "seq": 3,
+      "op": "move",
+      "seen": 9,
+      "sentMonoUs": 155384,
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "seq": 4,
+      "op": "charge",
+      "seen": 9,
+      "sentMonoUs": 155442
+    },
+    {
+      "seq": 5,
+      "op": "keep",
+      "seen": 12,
+      "sentMonoUs": 248128
+    },
+    {
+      "seq": 6,
+      "op": "keep",
+      "seen": 21,
+      "sentMonoUs": 356858
+    },
+    {
+      "seq": 7,
+      "op": "keep",
+      "seen": 24,
+      "sentMonoUs": 449357
+    },
+    {
+      "seq": 8,
+      "op": "keep",
+      "seen": 33,
+      "sentMonoUs": 558602
+    },
+    {
+      "seq": 9,
+      "op": "keep",
+      "seen": 39,
+      "sentMonoUs": 651602
+    },
+    {
+      "seq": 10,
+      "op": "keep",
+      "seen": 45,
+      "sentMonoUs": 759976
+    },
+    {
+      "seq": 11,
+      "op": "keep",
+      "seen": 51,
+      "sentMonoUs": 852415
+    },
+    {
+      "seq": 12,
+      "op": "release",
+      "seen": 54,
+      "sentMonoUs": 913688
+    },
+    {
+      "seq": 13,
+      "op": "keep",
+      "seen": 57,
+      "sentMonoUs": 959340
+    },
+    {
+      "seq": 14,
+      "op": "keep",
+      "seen": 63,
+      "sentMonoUs": 1051086
+    },
+    {
+      "seq": 15,
+      "op": "keep",
+      "seen": 69,
+      "sentMonoUs": 1160366
+    },
+    {
+      "seq": 16,
+      "op": "keep",
+      "seen": 75,
+      "sentMonoUs": 1253408
+    },
+    {
+      "seq": 17,
+      "op": "keep",
+      "seen": 81,
+      "sentMonoUs": 1346927
+    },
+    {
+      "seq": 18,
+      "op": "keep",
+      "seen": 87,
+      "sentMonoUs": 1454415
+    },
+    {
+      "seq": 19,
+      "op": "keep",
+      "seen": 90,
+      "sentMonoUs": 1548468
+    },
+    {
+      "seq": 20,
+      "op": "keep",
+      "seen": 99,
+      "sentMonoUs": 1657221
+    },
+    {
+      "seq": 21,
+      "op": "keep",
+      "seen": 105,
+      "sentMonoUs": 1750232
+    },
+    {
+      "seq": 22,
+      "op": "keep",
+      "seen": 111,
+      "sentMonoUs": 1858276
+    },
+    {
+      "seq": 23,
+      "op": "keep",
+      "seen": 117,
+      "sentMonoUs": 1949977
+    },
+    {
+      "seq": 24,
+      "op": "keep",
+      "seen": 123,
+      "sentMonoUs": 2058247
+    },
+    {
+      "seq": 25,
+      "op": "keep",
+      "seen": 129,
+      "sentMonoUs": 2152171
+    },
+    {
+      "seq": 26,
+      "op": "keep",
+      "seen": 135,
+      "sentMonoUs": 2260135
+    },
+    {
+      "seq": 27,
+      "op": "keep",
+      "seen": 141,
+      "sentMonoUs": 2354079
+    },
+    {
+      "seq": 28,
+      "op": "keep",
+      "seen": 144,
+      "sentMonoUs": 2449304
+    },
+    {
+      "seq": 29,
+      "op": "keep",
+      "seen": 153,
+      "sentMonoUs": 2556870
+    },
+    {
+      "seq": 30,
+      "op": "keep",
+      "seen": 159,
+      "sentMonoUs": 2650831
+    },
+    {
+      "seq": 31,
+      "op": "keep",
+      "seen": 165,
+      "sentMonoUs": 2759492
+    },
+    {
+      "seq": 32,
+      "op": "keep",
+      "seen": 171,
+      "sentMonoUs": 2853317
+    },
+    {
+      "seq": 33,
+      "op": "keep",
+      "seen": 174,
+      "sentMonoUs": 2948323
+    },
+    {
+      "seq": 34,
+      "op": "keep",
+      "seen": 183,
+      "sentMonoUs": 3056907
+    },
+    {
+      "seq": 35,
+      "op": "keep",
+      "seen": 189,
+      "sentMonoUs": 3149241
+    },
+    {
+      "seq": 36,
+      "op": "keep",
+      "seen": 195,
+      "sentMonoUs": 3259117
+    },
+    {
+      "seq": 37,
+      "op": "keep",
+      "seen": 201,
+      "sentMonoUs": 3353470
+    },
+    {
+      "seq": 38,
+      "op": "keep",
+      "seen": 204,
+      "sentMonoUs": 3447710
+    },
+    {
+      "seq": 39,
+      "op": "keep",
+      "seen": 213,
+      "sentMonoUs": 3555877
+    },
+    {
+      "seq": 40,
+      "op": "keep",
+      "seen": 216,
+      "sentMonoUs": 3648578
+    }
+  ],
+  "commandsB": [
+    {
+      "seq": 1,
+      "op": "keep",
+      "seen": 9,
+      "sentMonoUs": 123461
+    },
+    {
+      "seq": 2,
+      "op": "keep",
+      "seen": 12,
+      "sentMonoUs": 216777
+    },
+    {
+      "seq": 3,
+      "op": "keep",
+      "seen": 21,
+      "sentMonoUs": 325673
+    },
+    {
+      "seq": 4,
+      "op": "keep",
+      "seen": 24,
+      "sentMonoUs": 417971
+    },
+    {
+      "seq": 5,
+      "op": "keep",
+      "seen": 33,
+      "sentMonoUs": 527370
+    },
+    {
+      "seq": 6,
+      "op": "keep",
+      "seen": 39,
+      "sentMonoUs": 620377
+    },
+    {
+      "seq": 7,
+      "op": "keep",
+      "seen": 45,
+      "sentMonoUs": 728773
+    },
+    {
+      "seq": 8,
+      "op": "keep",
+      "seen": 51,
+      "sentMonoUs": 821161
+    },
+    {
+      "seq": 9,
+      "op": "keep",
+      "seen": 57,
+      "sentMonoUs": 928102
+    },
+    {
+      "seq": 10,
+      "op": "keep",
+      "seen": 63,
+      "sentMonoUs": 1019880
+    },
+    {
+      "seq": 11,
+      "op": "keep",
+      "seen": 69,
+      "sentMonoUs": 1129141
+    },
+    {
+      "seq": 12,
+      "op": "keep",
+      "seen": 75,
+      "sentMonoUs": 1222179
+    },
+    {
+      "seq": 13,
+      "op": "keep",
+      "seen": 81,
+      "sentMonoUs": 1315577
+    },
+    {
+      "seq": 14,
+      "op": "keep",
+      "seen": 87,
+      "sentMonoUs": 1423179
+    },
+    {
+      "seq": 15,
+      "op": "keep",
+      "seen": 90,
+      "sentMonoUs": 1517069
+    },
+    {
+      "seq": 16,
+      "op": "keep",
+      "seen": 99,
+      "sentMonoUs": 1626110
+    },
+    {
+      "seq": 17,
+      "op": "keep",
+      "seen": 105,
+      "sentMonoUs": 1718965
+    },
+    {
+      "seq": 18,
+      "op": "keep",
+      "seen": 111,
+      "sentMonoUs": 1827176
+    },
+    {
+      "seq": 19,
+      "op": "keep",
+      "seen": 117,
+      "sentMonoUs": 1918708
+    },
+    {
+      "seq": 20,
+      "op": "keep",
+      "seen": 123,
+      "sentMonoUs": 2027006
+    },
+    {
+      "seq": 21,
+      "op": "keep",
+      "seen": 129,
+      "sentMonoUs": 2120971
+    },
+    {
+      "seq": 22,
+      "op": "keep",
+      "seen": 135,
+      "sentMonoUs": 2228872
+    },
+    {
+      "seq": 23,
+      "op": "keep",
+      "seen": 141,
+      "sentMonoUs": 2322827
+    },
+    {
+      "seq": 24,
+      "op": "keep",
+      "seen": 144,
+      "sentMonoUs": 2417909
+    },
+    {
+      "seq": 25,
+      "op": "keep",
+      "seen": 153,
+      "sentMonoUs": 2525631
+    },
+    {
+      "seq": 26,
+      "op": "keep",
+      "seen": 159,
+      "sentMonoUs": 2619573
+    },
+    {
+      "seq": 27,
+      "op": "keep",
+      "seen": 165,
+      "sentMonoUs": 2728243
+    },
+    {
+      "seq": 28,
+      "op": "keep",
+      "seen": 171,
+      "sentMonoUs": 2822117
+    },
+    {
+      "seq": 29,
+      "op": "keep",
+      "seen": 174,
+      "sentMonoUs": 2917087
+    },
+    {
+      "seq": 30,
+      "op": "keep",
+      "seen": 183,
+      "sentMonoUs": 3025641
+    },
+    {
+      "seq": 31,
+      "op": "keep",
+      "seen": 189,
+      "sentMonoUs": 3117970
+    },
+    {
+      "seq": 32,
+      "op": "keep",
+      "seen": 195,
+      "sentMonoUs": 3227853
+    },
+    {
+      "seq": 33,
+      "op": "keep",
+      "seen": 201,
+      "sentMonoUs": 3322219
+    },
+    {
+      "seq": 34,
+      "op": "keep",
+      "seen": 204,
+      "sentMonoUs": 3416311
+    },
+    {
+      "seq": 35,
+      "op": "keep",
+      "seen": 213,
+      "sentMonoUs": 3524642
+    },
+    {
+      "seq": 36,
+      "op": "keep",
+      "seen": 216,
+      "sentMonoUs": 3617217
+    }
+  ],
+  "duplicateReleaseSequence": 12,
+  "timestampScope": "Client monotonic clocks are separate; no one-way timing inference"
+}

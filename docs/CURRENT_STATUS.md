@@ -1,3 +1,9 @@
+## Network stage1 đang QA — 18/11/2026
+
+QA terminal: server/transport scopedreview đạt, noP1; P2claimconsumerdedupe đã Lead sửa hồ sơ và thêm acceptance renderer. Client hiện chỉlogsnapshot; chưa effectdedupe. QA tự6hash/73tick0mismatch, testgates78/analyze/smoke làLeadkếthừa. qa/network-stage1.md; Cindyreviewstage1pending, chưa networkAVD. Reviewedstage1 preparingcommit, khôngrepeatM2commit.
+
+M2functionalprototype a9fc676 đã CindyACCEPT scoped1AVD. Networkminimal stage1 source mới chưa commit: serverauthority/canonicalball/2slot/seqdedupe khôngasset, actual2loopbackWebSocketclients73same-tickstates/scoreonce[3,0]/cleanupbadpackets PASS; analyzeNoissues/full78PASS. docs/NETWORK_STAGE1_REVIEW.md +game/evidence-network-stage1 rawtrace/sourcehash. ChưanetworkAVD/UI/Internet/full1v1; manualCLItools chưa chạy riêng processes. M2game/physics/input/assets/deps/APK không đổi. Lead chuẩn bị QAreadonly hiện có, rồi reviewCindy trước nextAVDrendererseam. KhôngchạylạiM2.
+
 ## M2 layered runtime — 17/11/2026
 
 18/11: Orca QA terminal PASS scoped layeredbaseline; Lead reviewed and saved qa/m2-layered-runtime.md. No P1/P2 for Cindy review. Exact contacts/mixed65 guards/5shots13score/negative/reentry independently recomputed and16PNGs viewed by QA. M2 baseline still requires Cindy final review; not fullgame/everyGPUframe/physicalphone acceptance. No new gameplay/source changes after existing dc2a APK gates. Reviewed session changes preparing commit/push, excluding3unrelatedWordfiles.
