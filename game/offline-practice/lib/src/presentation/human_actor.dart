@@ -6,11 +6,11 @@ import 'package:vector_math/vector_math.dart' as vm;
 
 import 'actor_motion.dart';
 import 'shot_pose_clock.dart';
-import 'charge_pose_gate.dart';
+import 'layered_pose.dart';
 
 class HumanActor {
   HumanActor._(this.model, this.log);
-  static const asset = 'assets/human-ual-standard/HumanBasketball.glb';
+  static const asset = 'assets/human-ual-standard/HumanBasketballLayered.glb';
   static const idle = 'Idle_Loop', jog = 'Jog_Fwd_Loop';
   // Visual yaw offset calibrated to pi using AVD toward/away-rim captures;
   // raw GLB joint axes alone do not establish Scene-facing direction.
@@ -18,14 +18,13 @@ class HumanActor {
   final fs.Node model;
   final void Function(Map<String, Object?>) log;
   final node = fs.Node(name: 'simulation_owned_human');
-  final clips = <String, fs.AnimationClip>{};
+  late final LayeredPose layer;
   final durations = <String, double>{};
   String selected = idle;
   ActorPose? previousPose;
   double time = 0;
   bool closed = false;
   final action = ShotPoseClock();
-  final unpreparedPose = UnpreparedPoseHold();
   final boundaryJoints = <fs.Node>[];
   int? evaluatedChargeGeneration;
   double landLeft = 0;
@@ -106,23 +105,13 @@ class HumanActor {
           .joints
           .whereType<fs.Node>(),
     );
-    final authored = model.findAnimationByName('Authored_Basketball_v1')!;
-    for (final name in [idle, jog, ...jumpClips]) {
+    for (final name in [idle, jog, ...jumpClips, LayeredPose.shot]) {
       final animation = model.findAnimationByName(name)!;
-      final clip = model.createAnimationClip(animation)
-        ..loop = true
-        ..weight = 0;
-      clip.pause();
-      clip.seek(0);
-      a.clips[name] = clip;
       a.durations[name] = animation.endTime;
     }
-    final shooting = model.createAnimationClip(authored)..weight = 0;
-    shooting.pause();
-    shooting.seek(0);
-    a.clips[authored.name] = shooting;
-    a.durations[authored.name] = authored.endTime;
-    a.clips[idle]!.weight = 1;
+    // Never register clips on the actual imported skeleton: its prepass must
+    // not overwrite the pose merged from the two independent proxy players.
+    a.layer = LayeredPose(model, List.of(a.boundaryJoints), transitions: true);
     log({
       'event': 'actor_asset',
       'asset': asset,
@@ -131,6 +120,8 @@ class HumanActor {
       'skins': skins,
       'warnings': warnings,
       'playback': 'manual_seek_accepted_simulation_delta',
+      'posePolicy': 'off_scene_body_and_arm_players_prepass_merge',
+      'armTransitionSeconds': .12,
       'yawOffset': yawOffset,
       'yawCalibration': 'Scene imported forward calibrated by AVD court directions; raw GLB axes alone are insufficient',
     });
@@ -166,7 +157,8 @@ class HumanActor {
       dx: dx,
       dz: dz,
       grounded: grounded,
-      ready: ready,
+      ready:
+          true, // Actual displacement drives locomotion during charge/flight.
       reset: reset,
     );
     action.advance(accepted);
@@ -192,49 +184,49 @@ class HumanActor {
       }
     }
     wasGrounded = grounded;
-    if (action.active) {
-      override = 'Authored_Basketball_v1';
-      overrideTime = action.sample(charge);
-    }
     if (reset) {
       action.cancel();
       landLeft = 0;
       wasGrounded = true;
       override = idle;
       overrideTime = 0;
-    }
-    final held = unpreparedPose.sample(
-      ready: ready,
-      reset: reset,
-      grounded: grounded,
-    );
-    if (held != null) {
-      override = held.clip;
-      overrideTime = held.time;
+      layer.clear();
     }
     final next = override ?? (pose == ActorPose.jog ? jog : idle);
     final changed = next != selected || pose != previousPose;
     if (changed) time = 0;
     selected = next;
-    for (final e in clips.entries) {
-      e.value.pause();
-      e.value.weight = e.key == selected ? 1 : 0;
-    }
     time = pose == ActorPose.held
         ? 0
         : actorClipTime(time, accepted, durations[selected]!);
     if (override != null) time = overrideTime;
-    clips[selected]!.seek(time);
-    evaluatedChargeGeneration =
-        action.charging && selected == 'Authored_Basketball_v1'
-        ? chargeGeneration
+    layer.apply(
+      base: selected,
+      baseTime: time,
+      shooting: action.active,
+      shotTime: action.active ? action.sample(charge) : 0,
+      generation: chargeGeneration,
+      accepted: accepted,
+      grounded: grounded,
+      ready: ready,
+      reset: reset,
+    );
+    evaluatedChargeGeneration = action.charging
+        ? layer.evaluatedGeneration
         : null;
-    if (changed)
+    if (changed || layer.transitionStarted || layer.transitionFinished)
       log({
         'event': 'actor_state',
         'pose': pose.name,
         'clip': selected,
         'clipTime': time,
+        'armClip': layer.armName,
+        'armTime': layer.armTime,
+        'armAlpha': layer.alpha,
+        'bodyCopyError': layer.bodyCopyError,
+        'armStartError': layer.armStartError,
+        'transitionStart': layer.transitionStarted,
+        'transitionEnd': layer.transitionFinished,
         'acceptedDelta': accepted,
         'x': x,
         'y': y,
@@ -246,14 +238,11 @@ class HumanActor {
     previousPose = pose;
   }
 
-  void pauseAll() {
-    for (final c in clips.values) {
-      c.pause();
-    }
-  }
+  void
+  pauseAll() {} // Both off-scene players always use paused clips/update(0).
 
   void beginCharge() {
-    unpreparedPose.clear();
+    layer.beginCharge();
     action.charge();
   }
 
@@ -261,19 +250,13 @@ class HumanActor {
     action.cancel();
   }
 
-  void recordSubmitted(int frame) => unpreparedPose.record(
-    clip: selected,
-    time: time,
-    grounded: wasGrounded,
-    frame: frame,
-  );
+  void recordSubmitted(int frame) => layer.recordSubmitted(frame);
 
   void releaseAction({required bool prepared, required int frame}) {
     if (prepared) {
-      unpreparedPose.clear();
       action.release();
     } else {
-      if (!unpreparedPose.freeze(frame)) {
+      if (!layer.freezeSubmitted(frame, wasGrounded)) {
         throw StateError('Missing matching submitted pose');
       }
       action.cancel();
@@ -285,7 +268,7 @@ class HumanActor {
     pauseAll();
     closed = true;
     node.removeAll();
-    clips.clear();
+    layer.dispose();
     durations.clear();
   }
 }

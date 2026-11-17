@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "source": "assets/human-ual-standard/HumanBasketball.glb",
+  "sourceSHA256": "80fdf68bcd037734e035675bb959f9e67db0e073d18a53f398c739298f025f8d",
+  "output": "assets/human-ual-standard/HumanBasketballLayered.glb",
+  "outputSHA256": "87d9b9a6d5a3e2bd89621972c38196aadb52638b91bff21eda685f5e488741ba",
+  "outputBytes": 7807996,
+  "toolSHA256": "2ca1a211f9ed4547f313f8c455821bc9e37bf6433bc7ad81b67bf73bdaeac4f1",
+  "masks": [
+    {
+      "source": "Idle_Loop",
+      "bodyChannels": 191,
+      "armChannels": 4
+    },
+    {
+      "source": "Jog_Fwd_Loop",
+      "bodyChannels": 191,
+      "armChannels": 4
+    },
+    {
+      "source": "Jump_Start",
+      "bodyChannels": 191,
+      "armChannels": 4
+    },
+    {
+      "source": "Jump_Loop",
+      "bodyChannels": 191,
+      "armChannels": 4
+    },
+    {
+      "source": "Jump_Land",
+      "bodyChannels": 191,
+      "armChannels": 4
+    },
+    {
+      "source": "Authored_Basketball_v1",
+      "bodyChannels": null,
+      "armChannels": 4
+    }
+  ],
+  "nodesSkinsMeshesMaterialsAccessorsAndBinaryUnchanged": true,
+  "scope": "Offline mask validation only; not Scene runtime or layered animation acceptance"
+}

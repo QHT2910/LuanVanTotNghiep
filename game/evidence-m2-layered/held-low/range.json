@@ -1,0 +1,94 @@
+{
+  "mode": "low",
+  "before": 9,
+  "after": 157,
+  "held": [
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 1,
+      "reason": "freeze",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 11410,
+      "simTime": 191.11666666665718,
+      "charge": 0.11111111111111112,
+      "camera": "court",
+      "chargeGeneration": 2,
+      "hand": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "ball": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "body": "Idle_Loop",
+      "bodyTime": 0.2666666666641504,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.11111111111111112,
+      "alpha": 0.972222222221338,
+      "bodyCopyError": 7.423824754937414e-8
+    },
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 2,
+      "reason": "camera",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 11548,
+      "simTime": 191.11666666665718,
+      "charge": 0.11111111111111112,
+      "camera": "Cận trước",
+      "chargeGeneration": 2,
+      "hand": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "ball": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "body": "Idle_Loop",
+      "bodyTime": 0.2666666666641504,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.11111111111111112,
+      "alpha": 0.972222222221338,
+      "bodyCopyError": 7.423824754937414e-8
+    },
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 3,
+      "reason": "camera",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 11591,
+      "simTime": 191.11666666665718,
+      "charge": 0.11111111111111112,
+      "camera": "Cận bên",
+      "chargeGeneration": 2,
+      "hand": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "ball": [
+        -0.13822166621685028,
+        1.2237303256988525,
+        2.6042022705078125
+      ],
+      "body": "Idle_Loop",
+      "bodyTime": 0.2666666666641504,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.11111111111111112,
+      "alpha": 0.972222222221338,
+      "bodyCopyError": 7.423824754937414e-8
+    }
+  ]
+}

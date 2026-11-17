@@ -23,6 +23,8 @@ SOURCES = [
     "lib/src/presentation/shot_pose_clock.dart",
     "lib/src/presentation/held_ball_latch.dart",
     "lib/src/presentation/charge_pose_gate.dart",
+    "lib/src/presentation/arm_transition.dart",
+    "lib/src/presentation/layered_pose.dart",
 ]
 OLD = [
     "lib/config.dart", "lib/practice.dart",

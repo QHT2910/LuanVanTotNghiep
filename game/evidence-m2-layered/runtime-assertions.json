@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "pass": true,
+  "scope": "Layered Scene0.24.3, one AVD debug; CPU pose samples and stable held captures",
+  "regression": {
+    "releases": 5,
+    "score": [
+      3,
+      3,
+      3,
+      2,
+      2
+    ],
+    "total": 13,
+    "groundAirTwoThree": true,
+    "exactOrigin": true,
+    "analyticFirstFlight": true,
+    "negative": [
+      "cancel",
+      "dash-cancel",
+      "reset-held",
+      "reset-jump",
+      "background",
+      "exit-held"
+    ],
+    "lifecycleFreeze": true
+  },
+  "maxBodyCopyError": 1.4874622866756226e-7,
+  "maxArmStartError": 2.3345925992401817e-7,
+  "contacts": [
+    {
+      "dir": "held-low",
+      "charge": 0.11111111111111112,
+      "body": "Idle_Loop",
+      "arms": "Authored_Basketball_v1",
+      "alpha": 0.972222222221338,
+      "handBallError": 0,
+      "frozenTime": 191.11666666665718
+    },
+    {
+      "dir": "held-full-charge",
+      "charge": 1,
+      "body": "Idle_Loop",
+      "arms": "Authored_Basketball_v1",
+      "alpha": 1,
+      "handBallError": 0,
+      "frozenTime": 9.716666666666756
+    },
+    {
+      "dir": "held-air",
+      "charge": 0.15277777777777776,
+      "body": "Jump_Loop",
+      "arms": "Authored_Basketball_v1",
+      "alpha": 1,
+      "handBallError": 0,
+      "frozenTime": 259.6166666665949
+    },
+    {
+      "dir": "held-interrupt",
+      "charge": 0.11111111111111112,
+      "body": "Idle_Loop",
+      "arms": "Authored_Basketball_v1",
+      "alpha": 1,
+      "handBallError": 0,
+      "frozenTime": 277.449999999912
+    }
+  ],
+  "guards": [
+    {
+      "dir": "early-idle-side",
+      "charge": 0,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0
+    },
+    {
+      "dir": "early-idle-front",
+      "charge": 0,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0
+    },
+    {
+      "dir": "early-jog-side",
+      "charge": 0,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0
+    },
+    {
+      "dir": "early-jog-front",
+      "charge": 0.01388888888888889,
+      "joints": 65,
+      "maxLocalMatrixDelta": 0
+    }
+  ],
+  "inspectionClearedWithoutRelease": [
+    "jump",
+    "dash",
+    "reset",
+    "cancel",
+    "background",
+    "exit"
+  ],
+  "systemBackPausedAndTwoFreshActorEntries": true,
+  "limits": [
+    "CPU submitted frame is not GPU presentation ACK or every-frame joint proof",
+    "Grip/finger contact and authored motion remain simple, not motion capture",
+    "Base clip changes and landing are not full-body blended",
+    "Zero-authored-contribution taps freeze mixed pose; no shooting animation in that branch",
+    "Single AVD debug; no physical-device FPS/network/full-game acceptance"
+  ]
+}

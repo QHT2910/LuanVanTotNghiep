@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "apkSHA256": "dc2a2e8182dd9a4adc8c3236b444298da69aeb469315c7d2fe1d7bc041f13c48",
+  "bytes": 97541586,
+  "snapshot": "demos/releases/m2-layered/layered-wired-x64.apk",
+  "snapshotMatches": true,
+  "installed": false,
+  "runtime": "NOT RUN: no AVD; reopen rejected by automatic approval review"
+}

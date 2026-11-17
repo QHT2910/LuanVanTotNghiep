@@ -1,0 +1,27 @@
+[
+  {
+    "mode": "enter",
+    "before": 1741,
+    "after": 1745
+  },
+  {
+    "mode": "capture",
+    "before": 1745,
+    "after": 1745
+  },
+  {
+    "mode": "system-back",
+    "before": 1745,
+    "after": 1746
+  },
+  {
+    "mode": "enter",
+    "before": 1746,
+    "after": 1750
+  },
+  {
+    "mode": "capture",
+    "before": 1750,
+    "after": 1750
+  }
+]

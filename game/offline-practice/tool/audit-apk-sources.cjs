@@ -9,6 +9,7 @@ const sources=['lib/main.dart','lib/src/simulation/config.dart','lib/src/simulat
  sources.push('lib/src/presentation/shot_pose_clock.dart');
  sources.push('lib/src/presentation/held_ball_latch.dart');
  sources.push('lib/src/presentation/charge_pose_gate.dart');
+ sources.push('lib/src/presentation/arm_transition.dart','lib/src/presentation/layered_pose.dart');
  if(process.argv.length>2)throw Error('No arguments supported; audits current debug APK');
  const apk=fs.readFileSync(path.join(app,'build/app/outputs/flutter-apk/app-debug.apk')),zip=await Zip.loadAsync(apk);
  const key='assets/flutter_assets/kernel_blob.bin';if(!zip.file(key))throw Error('Debug kernel missing');
@@ -17,6 +18,7 @@ const sources=['lib/main.dart','lib/src/simulation/config.dart','lib/src/simulat
  const stale=['lib/config.dart','lib/practice.dart','lib/joystick.dart','lib/jump_button.dart'].filter(f=>fs.existsSync(path.join(app,f)));
  const architectures=Object.keys(zip.files).filter(f=>/^lib\/[^/]+\/libflutter.so$/.test(f));
  const expectedAssets={
+  'assets/human-ual-standard/HumanBasketballLayered.glb':'87d9b9a6d5a3e2bd89621972c38196aadb52638b91bff21eda685f5e488741ba',
   'assets/human-ual-standard/HumanBasketball.glb':'80fdf68bcd037734e035675bb959f9e67db0e073d18a53f398c739298f025f8d',
   'assets/human-ual-standard/HumanDiagnostic.glb':'69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997',
   'assets/human-ual-standard/License.txt':'6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061',

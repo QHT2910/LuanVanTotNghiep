@@ -1,0 +1,67 @@
+[
+  {
+    "mode": "enter",
+    "before": 0,
+    "after": 0
+  },
+  {
+    "mode": "ground-shot",
+    "before": 2,
+    "after": 150
+  },
+  {
+    "mode": "jump-shot",
+    "before": 150,
+    "after": 301
+  },
+  {
+    "mode": "move-shot",
+    "before": 301,
+    "after": 449
+  },
+  {
+    "mode": "inside",
+    "before": 449,
+    "after": 451
+  },
+  {
+    "mode": "ground-shot",
+    "before": 451,
+    "after": 597
+  },
+  {
+    "mode": "jump-shot",
+    "before": 597,
+    "after": 749
+  },
+  {
+    "mode": "cancel",
+    "before": 749,
+    "after": 755
+  },
+  {
+    "mode": "dash-cancel",
+    "before": 755,
+    "after": 764
+  },
+  {
+    "mode": "reset-held",
+    "before": 764,
+    "after": 771
+  },
+  {
+    "mode": "reset-jump",
+    "before": 771,
+    "after": 777
+  },
+  {
+    "mode": "background",
+    "before": 777,
+    "after": 791
+  },
+  {
+    "mode": "exit-held",
+    "before": 791,
+    "after": 796
+  }
+]

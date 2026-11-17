@@ -1,3 +1,63 @@
+## Resume sau quota reset xác minh — 18/11/2026
+
+QA layeredruntime terminal đãđến vàLeadreview ACCEPT scopedbaseline: qa/m2-layered-runtime.md. Worker tựhash18/5/APKdc2a, memorycomparisons contacts/error0/early65delta0/regression5shots13score/6+6negative/reentry và16ảnh mới; khôngP1/P2. Leadgates74tests/analyze/build/audit/install được phân biệt. Không fullgame/everyGPUframe/fullbinding/realphoneclaim. Currentprimary9%weekly46 updated1794956967901/reset1794974756/1795394548, reserve5%both. Đang cuối phiên ràdiff/publicartifact rồi finish-session exclude3Wordoutside, commit/push chỉ claim sau receipt. Cindy review pending, không mởnetwork.
+
+QA auto-bridged usageerror đã đến sau resume. Fresh workspace báo running nhưng get_session_runtime authoritative persisted phaseerror/activefalse, baseline/effective vẫnCodexOpenAIgpt-6.1-sol medium, pendingnull/fallbackfalse. Host usage actualread vẫnprimary0/weekly45 updated1794956732155. Lead chuẩn bị ONE resume cùngQA sau verifiedreset, khôngset_session_runtime/đổiaccount/provider/model, khôngworkerreplacement. Nếu lỗi lặp phải báoCindy/runtime mismatch và dừngretryloop, không coi là QA verdict. Source/artifact không đổi.
+
+Host get_subscription_usage actualread updated1794956732155: OpenAIdefault available/connected, primary0% reset1794974731, weekly45% reset1795394548. Đã xác minh hourreset, không dùng stale98% hoặc48/36; reserve5%cảhai. Lượt trước quota98% khiến report_task_delivery bị automaticapprovalreview failure/khôngexecute; chưa có checkpointstop hoặc gracefulinterruptreceipt, không claim đã dừngworker. Ngày18 freshOrca workspace QA bkm37d3uiwhgp757im7y9hov/session2e4ee883-bf67-44e2-bcd7-5f0463da63c5 đangrunning/active queue0 đúng task layeredruntimeclosure đãdispatch thànhcông. Không dispatch lại/không pollworker/không đổi modelprovider.
+
+APKdc2a2e81…13c48/sourceuncommitted/74tests/build/audit18source5asset/heldcontact+regression+65mixedguard giữ theo review bên dưới. Không rebuild/replayinput/commit trước QAterminal. Next nhận QA readonlyterminal→Leadreview/sửa nếu cần→Cindyreview, không network/thesis. Chưa M2complete. User18/11 yêu cầu resume từ durableprogress, không repeat external sideeffects.
+
+## M2 layered runtime đang kiểm chứng — 17/11/2026
+
+Runtime candidate hoàn tất Leadboundedchecks: docs/M2_LAYERED_RUNTIME_REVIEW.md + game/evidence-m2-layered/runtime-assertions.json PASS. Fullchargeq1 hai góc, lowq.1111, airJump_Loop+ArmsShotq.15278 và cancel→recharge contact markers thật. BốnearlyIdle/Jog65mixedmatricesdelta0 (Jogfrontq.013889alpha0, không gán mọi0ms=q0). Newregression5release/13score đủgroundair2/3;6negative normal +6negative từfrozeninspection khôngrelease; final-reentrysystemBackpaused +2freshactorentries, screenshot0điểm/lượt1. Bodycopymax1.49e-7/armalpha0max2.34e-7 làCPUinvariants, khôngfullGPUproof. APKdc2a… vẫncurrent khônggameDartedit/rebuild. Publicnewassert banđầu thiếufootRadius bịFAIL, đãđối chiếu production5+.22 sửaoracle, gamekhôngđổi; finalassertPASS. Fullreview nêu grip/simplefinger/basecliplandingnonblend/zeroauthoredtapnoanim.
+
+Lead đang chuẩn bị giao QAexisting2e4ee883-bf67-44e2-bcd7-5f0463da63c5 readonlyruntimeclosure; workspace read QAidlequeue0, source readiness đãdone, khônggiao trùng. Chưa có layeredruntimeQAterminal/Cindyaccept/commitpush. Không bắt đầu task phụ thuộc. Gate report_task_delivery toolUNKNOWN_TOOL tại host, khôngclaimbookkeepingsuccess. Emu vẫncurrentcenter413,284, gamepracticevisible. Cindy đãnhận progress+freshquotarequest queuedkosy7cxcdhtmag4bcqth7zmx, chưa reply. Reserve5%both, latest inherited48/36, không dùng0/29 cũ.
+
+User đã explicit approve reopen Pixel_9a. ONE supported coldboot -no-snapshot-load đã khôi phục Home và model hiển thị; không wipe/GPUconfig. Current qemu PID21248/main1640374, landscape bounds413,284W1078H514 được verify_state SATISFIED. GUI Lead giữ, không dùng PID1728/window132836 cũ. Warning đã đóng; portrait→landscape bằng toolbar và single-step skin drag, không move offscreen.
+
+APKdc2a2e8182dd9a4adc8c3236b444298da69aeb469315c7d2fe1d7bc041f13c48 local/installed-pull/snapshot matching tại game/evidence-m2-layered/installed-apk-wired.json; snapshot demos/releases/m2-layered/layered-wired-x64.apk. Không rebuild lại source đã analyze74tests/build/audit18source5assets PASS. b784/7f205ad baseline giữ.
+
+Actual Scene đã load HumanBasketballLayered với actor_asset logs, model/material hiển thị. New HeldInspectionTouch.java + capture-layered-held.cjs dùng real shoot owner và pointer2 freeze/camera; không lifecyclecancel. held-low và held-air front/side PNG+range/events: frozen phasecharging cùng simTime/hand==ball; air Jumpbody+authoredarms nhìn được. held-full cũ delay1000 chỉ q~.83 (không gọi fullcharge); đang capture held-full-charge delay1400 riêng, không đè cũ. Java compile/d8/push PASS, log .scratch/held-touch/build.txt có PowerShell NativeCommandError do adb progress stderr nhưng file4516bytes xác minh đã push.
+
+Regression new APK: five shots ground/air 2&3, score3+3+3+2+2=13; negative cancel/Dash/reset-held/reset-jump/background/exit input sequences đã capture trong regression/. Chưa chạy oracle tổng/chưa QAterminal layeredruntime. reentry capture đang kiểm. Pending: fullcharge contact, early Idle/Jog twoangles65mixed snapshot, transition/interruption CPU invariants, assertions/ảnh review và QAexisting readonly→Cindy. Nguồn layered không đổi sau build; chỉ thêm harness/docs/evidence. Source/newasset chưa commit;3Wordoutside không đụng. Không M2complete/network/thesis.
+
+Quota latest inherited48/36, freshrequestCindy kosy7cxcdhtmag4bcqth7zmx đã queued, chờ cập nhật trước longwork; reserve5%both. Existing dev idle, QA source readiness terminal đã lưu qa/m2-layered-wired-source.md, không dispatch lại source task.
+
+## User đãapprove reopen — emu displayblack/coldbootrecovery,17/11/2026
+
+User explicit asyncanswer “Reopen Pixel_9a and center it” đãnhận, oldapprovalblockresolved. FreshCUA/noADB xácnhậnchưamởrồilaunchsavedPixel_9aONLY once thànhcông. NewqemuPID1728/main132836, adb emulator-5554device. RAMwarning đóngEscape verifiedwindowgone. Drag20steps gâyQtaccumulatedmove sai y13054; đọcactualbounds rồicorrectsingle-stepdrag(steps1/duration0) ->416,284W1083H515, verify_state1sampleSATISFIED. Khôngrepeatoldcoords; Cua schemas storedfunctions cuaSchemas.
+
+NewlayeredAPKdc2a2e81…13c48 đãinstall/launch logs install-wired/launch-wired. Attempt enter helpercócaptureI/OPASS nhưngảnhđen, UI freshvẫnMenu/noactor_assetevents; KHÔNGScenePASS. AndroidHome cũngblack dùfocusNexusLauncher/DisplayON/Awake, nênchưađổilayercode/rebuild. Sleep/Wake displaycycle1lần verifiedDozing→Awake vẫnđen; rawdiagnostics.scratchonly(debugURI/privatepaths khôngpublish).
+
+Đang coldboot cùngsavedAVD mộtlần(skipQuickBootsnapshot, khôngwipe/changeGPUmode) đểkhôiphụchiểnthị. SupportedCUA closeToolControls PID1728/main132836 token s00000009:2 đãUIAInvoke, immediateobservationstillwindow132836 (cóthểsavingasync), CHƯAconfirmclosed/CHƯAlaunch-no-snapshot-load. Nextfreshlistwindows/adb đểxácnhậnclose, khôngblindclickrepeat; khiđãclosed mới supportedlaunch_app exe cùngpath --avd Pixel_9a --no-snapshot-load, thenfreshcenter(single-stepdragonlyifneeded). Userđãauthorize reopen, noCLIwindow/inputbypass. Giữbaselineb784/7f205ad vànewlocalAPK.
+
+QA layeredwiredsource terminalPASS đượcLeadreview/lưuqa/m2-layered-wired-source.md:18source5asset/hashdc2a…/74tests source readiness, chưaimportskin/AVD/heldcontact. Installedidentitypullhash vẫnpending saucoldboot. Bodypose/runtimegates vẫnpendingactualrenderer. Quota latest48/36inherited, refreshtrướcnextlongwork/reserve5%both; khôngnetwork/thesis/provider. Source mớiuncommitted,3Wordoutside nguyên.
+
+## M2 layered đãwire/build — AVD khôngcòn mở,approvalpending17/11/2026
+
+Cindy latestusage updated1794921775589: primary48%/weekly36%, reset1794937615/1795394548; thay41/35 và0/29. Còn52/64%, reserve5%cảhai. Cindy đãrelay exactEnglishautoreviewblock; userquestionexistingpending, khônghỏitrùng/retrylaunch/toolkhác. ChỉresumeAVD sauexplicitapproval hoặcuseropenssavedPixel_9a, rồifreshdevice/window/center; newAPKlocalnotinstalled/b784oldgiữ. QAreadinesssourceexisting đãresumed, khôngdispatchtrùng/poll; dependentinstall/runtime dừngđúnggate.
+
+Latest17/11Cindyusage41/35updated1794921349409reset1794937615/1795394548, reserve5%both. Fulltests cuối sau debugedits đãrerun74PASS tests-wired-final.txt; finalanalyze/build/auditAPK18source5assets vẫncurrentkhôngsourcechange nênkhôngrebuild. AVD reopenapproval vẫnpending, quota khôngthayauthorization. HandoffstatusCindy lần cuốiPRECONDITION_FAILED, khôngretry/bypass. CóthểQAreadonlywiring/capturefreeze trướcruntime trongkhichờ, không tasktrùng/sourceeditparallel.
+
+Report docs/M2_LAYERED_WIRING_REVIEW.md +QAstage1sourcePASS lưuqa/m2-layered-stage1-source.md. Actualmodelownedclips đãbỏ,2proxyplayers/publicTRSmerge/transitions:true, BodyJump independentcharge, mixed65freeze/currentgenalpha0guard, mask191/4runtimepreflight. Newasset87d9…8741ba. Debugheldinspectionfreeze/phaseframe/time/worldhandball markers,cameraframing, no lifecyclepausefake. Analyze-wired/full74PASS trước4dòngdebugautoresume cuối; finalanalyzeNoissues/build/audit18source5assetsPASS. NewlocalAPKsnapshot+hash local-apk-wired.json, chưainstalled/runtime. Baseline7f205ad/b784 giữ.
+
+FreshCUA status/permissionPASS nhưnglistqemuwindows rỗng; adbdevices cũngrỗng. Supportedlaunch cùngPixel_9a bịautomaticapprovalreviewREJECT vìearliernorestart/reuseexisting; khôngexecute/bypass. Đã hỏiuser approve reopen sameSavedAVD hoặc tựmở, pendinganswer. Khôngtựretryinput/launch/CLI. Nextapproval→freshwindow/devicecenter→install/provenance/rendererbodyarm+heldcontactmarkers2angles→regression→QA/Cindy. Source mới chưacommit/3Wordoutside giữ. ExistingQAstage1terminaldone, khôngtasktrùng. KhôngfullM2/network/thesis/provider. Quota0/29inherited, freshrequestCindypending/reserve5%both.
+
+## M2 layered stage1 nguồn/asset đãtạo — chưanốigame,17/11/2026
+
+Cindy source-review conditional ACCEPT: cần QA/sourcewiring, chưa animationruntime. Actualskeleton phải bỏ Node-ownedclips trướcmerge, kiểm65unique names/missingduplicateproperty, bodyRoot/hip/jumpTRS giữ, alpha0/1/interruptactualsubmittedpose, generationalpha0notauthored+mixed65freeze. Finaltransitions enablecóchủđích (stage1defaultfalse khôngblendclaim). Held thật frozeninspectionkhônglifecyclecancel, phasecharging/frame/time/handballworld2góc. QAexisting đangsource-review khôngdispatchtrùng. Lead bổ sung offlinebindingvalidator độc lập, không đổi module QA đang đọc.
+
+Leadreview developerproposal vàcacheScene0.24.3: cùngplayer maskedbody+arms weight1normalizechung sai; chọn2standaloneproxyplayerspublic vàmerge TRS trướcsoleScene.update0. Đãgenerate5Body191/6Arms4 từverified80fdfGLB, newHumanBasketballLayered87d9b9a6d5a3e2bd89621972c38196aadb52638b91bff21eda685f5e488741ba, rig/material/accessors/BINunchanged. Tool/manifest+docs/M2_LAYERED_STAGE1_REVIEW.md. NoCCDregeneration/newrig/download.
+
+Newarm_transition/layered_pose modules chưaHumanActor/Pagewire/pubspecasset. Adapter actualskeleton khôngđượccóNode-ownedclips;2proxyPlayer.update0 khôngScene, actualjointwriteprepassonly. Copypublicposition/rotation/scale giữnegativeaxis; thửlocalTransformTrs nội bộ bịanalyzerwarn đãbỏ/sửa, noignore/srcimports. Analyze-stage1-finalNoissues/3targetedtestsPASS(clock/interrupt/publicNodeTRS), khôngfullsuite74/build/AVDclaim. Installedbaselineb784/7f205ad giữ,3Wordoutside untouched. NextQAreadonlysource/mask/publicAPI beforeLeadwiremixedguard/bodyJump/arms+captureheldfreeze→build/runtime/QA/Cindy. Quota0/29inherited reserve5%both, khôngnetwork/thesis.
+
+## Cindy ACCEPT guard baseline — M2 phối hợp animation đang proposal,17/11/2026
+
+Cindy đã đọc closure/report và xem guard-low-side prepare/after, ACCEPT guardbaseline chứ không M2visualcomplete. Commit/push7f205ad và APKb784 giữ. Ảnh tênprepare có latency, có thể bóng đã bay/HUD che; không suy attach lỗi hoặc held-contact đạt từ tên file. Mốc tiếp phải capture freeze/held thật trước release, cậntrước/bên kèm frame/time/range để loại ambiguity. Không dùng lifecyclepause vì hủycharge rồi giả ảnh vẫnheld; inspection freeze nếu thêm phải debug-only/honestscope, không đổi physics/input semantics để làm bằng chứng giả.
+
+Existing developer ddab0b98-abe6-4524-9b16-9a548be30b63 đã nhận sourceproposal bounded publicScene0.24.3 mask4armrotation/bodyjump analyticphase và charge/recovery transition, readonlyrootold/Sol6.1medium; Lead tích hợp/runtime saureview, QA sauđó. Không worker mới/tasktrùng/network/thesis/humanprobe. Freshquota0/29inherited còn hiệu lực đầu task, reserve5%both. Next proposal→Leadreview→stagedimplementation+heldcontact/transition/airshot/cancel/reentry traces/AVD2angles→QA/Cindy; không71tests=visualcompleteclaim.
+
 ## M2 guard QA closure PASS — baseline có giới hạn,17/11/2026
 
 Orca QA terminal đã tới: qa/m2-guard-closure.md, Lead ACCEPT đóng2P2 trong scope guard/freeze submittedCPU pose/comment. QA tự hash16source4asset/APK/snapshotb784, raw65matrix4zero delta0/2lowcharge+incidentalq.020833, regression5release13score6negative/freeze và13ảnh/reentry0lượt1. Tests71/build/install/pm-pull là Lead gates kếthừa, không worker rerun. Không GPUframe/fullbinding/M2jump-shootcomplete claim. Developer proposal/correction đã review và tích hợp, không replaylate reports.
@@ -418,10 +478,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-17T12:52:47.730Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `624fa6220765cd24a41a7b79cb31648ee2da92bf`.
-- Local tracking origin/main: `624fa6220765cd24a41a7b79cb31648ee2da92bf` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 389 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-17T23:11:01.301Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `7f205ad148d02c213e3753bb5d219c52a6f607c1`.
+- Local tracking origin/main: `7f205ad148d02c213e3753bb5d219c52a6f607c1` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 30 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

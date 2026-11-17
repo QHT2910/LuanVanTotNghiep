@@ -1,0 +1,94 @@
+{
+  "mode": "air",
+  "before": 311,
+  "after": 464,
+  "held": [
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 7,
+      "reason": "freeze",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 15962,
+      "simTime": 259.6166666665949,
+      "charge": 0.15277777777777776,
+      "camera": "Cận bên",
+      "chargeGeneration": 8,
+      "hand": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "ball": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "body": "Jump_Loop",
+      "bodyTime": 0.0033333333333332993,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.15277777777777776,
+      "alpha": 1,
+      "bodyCopyError": 8.093955661259145e-8
+    },
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 8,
+      "reason": "camera",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 16097,
+      "simTime": 259.6166666665949,
+      "charge": 0.15277777777777776,
+      "camera": "Cận trước",
+      "chargeGeneration": 8,
+      "hand": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "ball": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "body": "Jump_Loop",
+      "bodyTime": 0.0033333333333332993,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.15277777777777776,
+      "alpha": 1,
+      "bodyCopyError": 8.093955661259145e-8
+    },
+    {
+      "kind": "hand_event",
+      "event": "held_contact_capture",
+      "captureId": 9,
+      "reason": "camera",
+      "frozen": true,
+      "phase": "charging",
+      "frame": 16140,
+      "simTime": 259.6166666665949,
+      "charge": 0.15277777777777776,
+      "camera": "Cận bên",
+      "chargeGeneration": 8,
+      "hand": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "ball": [
+        -0.14712363481521606,
+        1.8804597854614258,
+        2.659125328063965
+      ],
+      "body": "Jump_Loop",
+      "bodyTime": 0.0033333333333332993,
+      "arms": "Authored_Basketball_v1",
+      "armTime": 0.15277777777777776,
+      "alpha": 1,
+      "bodyCopyError": 8.093955661259145e-8
+    }
+  ]
+}

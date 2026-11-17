@@ -42,3 +42,7 @@ game/evidence-m2-hand-action/early-*/*.png
 game/evidence-m2-hand-action/guard-jog-side/*.png
 game/evidence-m2-hand-action/**/background-prepare.png
 game/evidence-m2-hand-action/**/background-after.png
+# Layered exploratory black display and Android transition captures stay local.
+game/evidence-m2-layered/initial/*.png
+game/evidence-m2-layered/**/background-prepare.png
+game/evidence-m2-layered/**/background-after.png

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "buildVariant": "debug android-x64 M2_INSPECT=true",
+  "apkSHA256": "dc2a2e8182dd9a4adc8c3236b444298da69aeb469315c7d2fe1d7bc041f13c48",
+  "installedSHA256": "dc2a2e8182dd9a4adc8c3236b444298da69aeb469315c7d2fe1d7bc041f13c48",
+  "snapshotSHA256": "dc2a2e8182dd9a4adc8c3236b444298da69aeb469315c7d2fe1d7bc041f13c48",
+  "matching": true,
+  "snapshot": "demos/releases/m2-layered/layered-wired-x64.apk"
+}

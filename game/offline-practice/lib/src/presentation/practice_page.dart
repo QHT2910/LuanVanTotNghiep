@@ -40,6 +40,8 @@ class _PracticePageState extends State<PracticePage>
   int poseFrame = 0;
   double frameAccepted = 0;
   String cameraAngle = 'court';
+  bool inspectFrozen = false;
+  int inspectionId = 0;
   int loggedFlightShot = 0;
   late fs.PerspectiveCamera camera;
   final hud = ValueNotifier<PracticeHudData>((
@@ -308,10 +310,10 @@ class _PracticePageState extends State<PracticePage>
         authored:
             game.phase == PracticePhase.charging &&
             actor.action.charging &&
-            actor.selected == 'Authored_Basketball_v1',
+            actor.layer.evaluatedShooting,
       );
     }
-    if (game.shot != null && loggedFlightShot != game.shot!.id) {
+    if (game.shot != null && game.shot!.elapsed > 0 && loggedFlightShot != game.shot!.id) {
       loggedFlightShot = game.shot!.id;
       traceBoundary('first_flight', loggedFlightShot);
       debugPrint(
@@ -358,8 +360,11 @@ class _PracticePageState extends State<PracticePage>
               'stage': stage,
               'shotId': shotId,
               'joint': joint.name,
-              'clip': a.selected,
-              'clipTime': a.time,
+              'clip': a.layer.bodyName,
+              'clipTime': a.layer.bodyTime,
+              'armClip': a.layer.armName,
+              'armTime': a.layer.armTime,
+              'alpha': a.layer.alpha,
               'simTime': game.simulatedTime,
               'frame': poseFrame,
               'local': joint.localTransform.storage.toList(),
@@ -377,6 +382,11 @@ class _PracticePageState extends State<PracticePage>
       s.update(0);
       finishPose();
       return;
+    }
+    if (inspectFrozen) {
+      s.update(0);
+      finishPose();
+      return; // Inspection only: no simulation or pose-clock advance.
     }
     if (skipFrame) {
       skipFrame = false;
@@ -413,6 +423,10 @@ class _PracticePageState extends State<PracticePage>
   }
 
   void cancelInputs(String reason) {
+    if (inspectFrozen) {
+      inspectFrozen = false;
+      skipFrame = true;
+    }
     // Synchronous logic neutralization precedes the child's rebuild.
     joystickResetToken++;
     shotPointer = null;
@@ -502,7 +516,10 @@ class _PracticePageState extends State<PracticePage>
       resetToken: inputEpoch,
       onJump: () {
         if (!inputValid()) return;
-        game.jump();
+        if (game.jump() && inspectFrozen) {
+          setState(() => inspectFrozen = false);
+          skipFrame = true;
+        }
         publish();
       },
     );
@@ -519,6 +536,10 @@ class _PracticePageState extends State<PracticePage>
       onDash: () {
         if (!inputValid()) return;
         if (game.dash()) {
+          if (inspectFrozen) {
+            setState(() => inspectFrozen = false);
+            skipFrame = true;
+          }
           // The old charging finger cannot release after Dash.
           // Do not reset joystick/jump ownership here.
           shotPointer = null;
@@ -546,6 +567,10 @@ class _PracticePageState extends State<PracticePage>
         },
         onPointerUp: (event) {
           if (!inputValid() || shotPointer != event.pointer) return;
+          if (inspectFrozen) {
+            setState(() => inspectFrozen = false);
+            skipFrame = true; // Ignore wall time spent in diagnostic freeze.
+          }
           shotPointer = null;
           final sample = heldBall.current(
             round: game.round,
@@ -553,7 +578,7 @@ class _PracticePageState extends State<PracticePage>
           );
           final origin = sample?.world;
           if (origin != null &&
-              human!.unpreparedPose.submittedFrame == sample!.frame &&
+              human!.layer.submittedFrame == sample!.frame &&
               game.release(displayedOrigin: origin)) {
             final w = human!.handWorld();
             debugPrint(
@@ -583,7 +608,7 @@ class _PracticePageState extends State<PracticePage>
                     ],
                   }),
             );
-            final beforePose = human!.time;
+            final beforePose = human!.layer.armTime;
             traceBoundary('release', game.shot!.id);
             final chargeGeneration = chargePoseGate.generation;
             final prepared = chargePoseGate.consume(
@@ -616,6 +641,8 @@ class _PracticePageState extends State<PracticePage>
                         : null,
                     'authoredRecovery': prepared,
                     'clip': human!.selected,
+                    'armClip': human!.layer.armName,
+                    'armAlpha': human!.layer.alpha,
                   }),
             );
             heldBall.invalidate();
@@ -628,6 +655,10 @@ class _PracticePageState extends State<PracticePage>
         },
         onPointerCancel: (event) {
           if (shotPointer != event.pointer) return;
+          if (inspectFrozen) {
+            setState(() => inspectFrozen = false);
+            skipFrame = true;
+          }
           shotPointer = null;
           game.cancelCharge('pointer_cancel');
           chargePoseGate.cancel();
@@ -674,6 +705,45 @@ class _PracticePageState extends State<PracticePage>
     super.dispose();
   }
 
+  void inspectionMarker(String reason) {
+    final a = human;
+    if (a == null) return;
+    final w = a.handWorld(), b = game.ball;
+    debugPrintSynchronously(
+      'hand_event ' +
+          jsonEncode({
+            'event': 'held_contact_capture',
+            'captureId': ++inspectionId,
+            'reason': reason,
+            'frozen': inspectFrozen,
+            'phase': game.phase.name,
+            'frame': poseFrame,
+            'simTime': game.simulatedTime,
+            'charge': game.charge,
+            'camera': cameraAngle,
+            'chargeGeneration': chargePoseGate.generation,
+            'hand': [w.x, w.y, w.z],
+            'ball': [b.x, b.y, b.z],
+            'body': a.layer.bodyName,
+            'bodyTime': a.layer.bodyTime,
+            'arms': a.layer.armName,
+            'armTime': a.layer.armTime,
+            'alpha': a.layer.alpha,
+            'bodyCopyError': a.layer.bodyCopyError,
+          }),
+    );
+  }
+
+  void toggleInspection() {
+    if (!const bool.fromEnvironment('M2_INSPECT')) return;
+    if (!inspectFrozen &&
+        (game.phase != PracticePhase.charging || shotPointer == null))
+      return;
+    setState(() => inspectFrozen = !inspectFrozen);
+    skipFrame = true;
+    inspectionMarker(inspectFrozen ? 'freeze' : 'resume');
+  }
+
   @override
   Widget build(BuildContext context) {
     return PracticeNavigation(
@@ -703,6 +773,12 @@ class _PracticePageState extends State<PracticePage>
                     left: 8,
                     child: Row(
                       children: [
+                        TextButton(
+                          onPressed: toggleInspection,
+                          child: Text(
+                            inspectFrozen ? 'FROZEN inspection' : 'Giữ ảnh',
+                          ),
+                        ),
                         for (final view in ['Cận trước', 'Cận bên', 'Góc sân'])
                           TextButton(
                             onPressed: () {
@@ -720,19 +796,20 @@ class _PracticePageState extends State<PracticePage>
                                         position: view == 'Cận trước'
                                             ? vm.Vector3(
                                                 p.x,
-                                                p.y + 1.6,
-                                                p.z - 3,
+                                                p.y + 1.8,
+                                                p.z - 4,
                                               )
                                             : vm.Vector3(
-                                                p.x + 3,
+                                                p.x + 4,
                                                 p.y + 1.8,
                                                 p.z + .3,
                                               ),
-                                        target: vm.Vector3(p.x, p.y + 1.2, p.z),
+                                        target: vm.Vector3(p.x, p.y + 1.5, p.z),
                                         fovNear: .1,
                                         fovFar: 80,
                                       );
                               });
+                              if (inspectFrozen) inspectionMarker('camera');
                             },
                             child: Text(view),
                           ),
