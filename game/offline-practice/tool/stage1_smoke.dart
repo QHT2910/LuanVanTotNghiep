@@ -163,8 +163,12 @@ Future<void> main() async {
     check((a.last['scoreEvents'] as List).length == 1, 'Client score events');
     final observations = {
       'scope': 'Two real loopback socket clients in one diagnostic process',
-      'clientA': a.snapshots,
-      'clientB': b.snapshots,
+      'clientA': [
+        for (final s in a.snapshots) Map.of(s)..remove('recipientSession'),
+      ],
+      'clientB': [
+        for (final s in b.snapshots) Map.of(s)..remove('recipientSession'),
+      ],
       'commandsA': a.commands,
       'commandsB': b.commands,
       'duplicateReleaseSequence': release['seq'],
@@ -173,7 +177,11 @@ Future<void> main() async {
     };
     File.fromUri(
       Platform.script.resolve(
-        '../../evidence-network-stage1/transport-observations.json',
+        const String.fromEnvironment(
+          'SMOKE_TRACE',
+          defaultValue:
+              '../../evidence-network-stage1/transport-observations.json',
+        ),
       ),
     ).writeAsStringSync(
       const JsonEncoder.withIndent('  ').convert(observations),

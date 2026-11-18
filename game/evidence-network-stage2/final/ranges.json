@@ -1,0 +1,67 @@
+[
+  {
+    "mode": "Connect",
+    "before": 3000,
+    "after": 3000,
+    "start": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 11583
+    },
+    "end": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 11583
+    }
+  },
+  {
+    "mode": "move-x",
+    "before": 3689,
+    "after": 3834,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1044
+    },
+    "end": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1263
+    }
+  },
+  {
+    "mode": "shoot",
+    "before": 3848,
+    "after": 4095,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1284
+    },
+    "end": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1653
+    }
+  },
+  {
+    "mode": "Jump",
+    "before": 4110,
+    "after": 4238,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1677
+    },
+    "end": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1869
+    }
+  },
+  {
+    "mode": "Dash",
+    "before": 4252,
+    "after": 4378,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 1890
+    },
+    "end": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 2079
+    }
+  }
+]

@@ -55,7 +55,7 @@ Future<void> main(List<String> args) async {
             'ackObservedUs': start == null
                 ? null
                 : clock.elapsedMicroseconds - start,
-            'snapshot': d,
+            'snapshot': Map.of(d)..remove('recipientSession'),
           }),
         );
         sent.removeWhere((q, _) => q <= ack);

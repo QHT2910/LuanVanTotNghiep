@@ -1,0 +1,54 @@
+[
+  {
+    "mode": "Connect",
+    "before": 2958,
+    "after": 2958,
+    "start": {
+      "epoch": "9302f37db6ec12199c6b87bdb6fdee96",
+      "tick": 1809
+    },
+    "end": {
+      "epoch": "9302f37db6ec12199c6b87bdb6fdee96",
+      "tick": 1809
+    }
+  },
+  {
+    "mode": "move-x",
+    "before": 3010,
+    "after": 3242,
+    "start": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 90
+    },
+    "end": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 438
+    }
+  },
+  {
+    "mode": "shoot",
+    "before": 3256,
+    "after": 3502,
+    "start": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 459
+    },
+    "end": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 828
+    }
+  },
+  {
+    "mode": "capture",
+    "before": 3518,
+    "after": 3556,
+    "start": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 852
+    },
+    "end": {
+      "epoch": "fd1a416048bfaac15150d8f20c64b039",
+      "tick": 909
+    }
+  }
+]

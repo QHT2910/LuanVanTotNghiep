@@ -50,6 +50,7 @@ class Stage1Server {
           e.value.add(
             jsonEncode({
               ...room.snapshot(),
+              'recipientSession': room.peers[e.key]!.session,
               'ack': room.peers[e.key]!.ack,
               'result': room.peers[e.key]!.result,
               'serverMonoUs': now,

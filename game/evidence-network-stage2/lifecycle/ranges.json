@@ -1,0 +1,41 @@
+[
+  {
+    "mode": "Connect",
+    "before": 3000,
+    "after": 3000,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 2181
+    },
+    "end": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 42
+    }
+  },
+  {
+    "mode": "capture",
+    "before": 3204,
+    "after": 3241,
+    "start": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 348
+    },
+    "end": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 402
+    }
+  },
+  {
+    "mode": "background-held",
+    "before": 3254,
+    "after": 3364,
+    "start": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 423
+    },
+    "end": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 588
+    }
+  }
+]

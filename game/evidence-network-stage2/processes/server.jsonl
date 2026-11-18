@@ -1,0 +1,2 @@
+{"event":"server_ready","uri":"ws://127.0.0.1:8091/room/stage1","pid":16040}
+{"event":"server_closed","pid":16040}

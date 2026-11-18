@@ -1,0 +1,11 @@
+server {"event":"server_ready","uri":"ws://127.0.0.1:8091/room/stage1","pid":17840}
+peer {"event":"status","status":"connected","pid":14772}
+peer {"event":"welcome","epoch":"fd1a416048bfaac15150d8f20c64b039","slot":0,"pid":14772}
+READY separate processes; commands move x z/stop/charge/release/cancel/jump/dash/quit
+{"event":"native_shot_command","epoch":"fd1a416048bfaac15150d8f20c64b039","tick":72,"charge":0.6249999999999999}
+peer {"event":"status","status":"closed","pid":14772}
+server exit=0
+peer exit=null
+
+DEVICE_LOG_READY {"devicePid":4390,"file":"verified-live.jsonl","maximumSeconds":180}
+DEVICE_LOG_CLOSED {"devicePid":4390,"events":605,"file":"verified-live.jsonl"}

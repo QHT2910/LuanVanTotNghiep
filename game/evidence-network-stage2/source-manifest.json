@@ -1,0 +1,73 @@
+{
+  "scope": "Current client/server/helper sources; APK client subset audited separately",
+  "sources": {
+    "lib/main.dart": {
+      "bytes": 615,
+      "sha256": "2042a5591ff22ee71613c2f3b6e95ef0be2d6567ccee67c501fcf6b8be7ac81b"
+    },
+    "lib/src/network/stage1_server.dart": {
+      "bytes": 4525,
+      "sha256": "50f438f7d42b0e5c7ac7a7e748387352afac9c58f4cfa9f9013a80a82ff703b2"
+    },
+    "lib/src/network/network_snapshot.dart": {
+      "bytes": 8077,
+      "sha256": "ba968b4656f3177dd48ba8b6e9ec30f3e0da3cf2286f3c2573eb6d96eedc4e2c"
+    },
+    "lib/src/network/stage2_client.dart": {
+      "bytes": 3967,
+      "sha256": "2c901e66fc4e8fdac09a638a1779bb4e321358c59fbb57388b2e3c2747d33754"
+    },
+    "lib/src/presentation/network_stage2_page.dart": {
+      "bytes": 11109,
+      "sha256": "1ee860be5ff16ed433634fec239c58adb3ddea75d035a94e6ac4c32b07bf3535"
+    },
+    "tool/stage1_server.dart": {
+      "bytes": 1792,
+      "sha256": "64554c0097937e2d613a2d766825d7ad9c282fef21fe1431f5bca7493f216c75"
+    },
+    "tool/stage1_client.dart": {
+      "bytes": 3776,
+      "sha256": "3949d881a7720cb0162f757205f6ab797f5eea986b6d86702f8a8175c501e1be"
+    },
+    "tool/stage1_smoke.dart": {
+      "bytes": 7269,
+      "sha256": "3dcaaf50dbdc5d478fbc91c94a115c025bf0efbcf846d1478e194bd72d22d941"
+    },
+    "tool/stage2_peer.dart": {
+      "bytes": 1387,
+      "sha256": "f1003e975321d06dd1fc23628b0cfd68aedb498791fcfbef19ce59737f1a42a6"
+    },
+    "tool/stage2_smoke.dart": {
+      "bytes": 2868,
+      "sha256": "2ef202b159e31912ea332ae843d356967ceaed9064d4f702f9b36cbf01a4a357"
+    },
+    "tool/stage2-processes.cjs": {
+      "bytes": 4118,
+      "sha256": "e3621b17da77c57fde6a073c2eb1d4e71753119114743ec702b5d8b6d95b5657"
+    },
+    "tool/stage2-avd.cjs": {
+      "bytes": 4020,
+      "sha256": "cc7127e89286aff4506f4700588e2e5032dbc0356994ce9faff58ecbb664c3af"
+    },
+    "tool/stage2-device-log.cjs": {
+      "bytes": 1704,
+      "sha256": "f6e7878c6009f50e1760e164ca4d917ee5846ad644e17a5816cc1fe6fca957c8"
+    },
+    "tool/stage2-verified-run.cjs": {
+      "bytes": 2319,
+      "sha256": "324da32b769ad4ea52dbf00eea965afc00973c2e13924398b46c717c2784fb4d"
+    },
+    "tool/assert-stage2-runtime.cjs": {
+      "bytes": 4525,
+      "sha256": "04879de1cab9d772631507316bac16b15b1abe2aaeb17661bed2e46c26e37998"
+    },
+    "tool/audit-network-apk.cjs": {
+      "bytes": 2442,
+      "sha256": "7747227752f976db34beedaa20a2310d321058350ef5f7b867d25d41029f5a30"
+    },
+    "test/network_snapshot_test.dart": {
+      "bytes": 4715,
+      "sha256": "5eae03c39759768a617b355699569f0301f2caa6cf3b5796d838f017aaf4f626"
+    }
+  }
+}

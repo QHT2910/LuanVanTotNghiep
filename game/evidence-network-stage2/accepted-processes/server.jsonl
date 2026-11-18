@@ -1,0 +1,3 @@
+{"event":"server_ready","uri":"ws://127.0.0.1:8091/room/stage1","pid":6596}
+{"event":"fault_injected","kind":"invalid_ball","epoch":"d2c9395ab3ab43390de06f984a92eafa"}
+{"event":"server_closed","pid":6596}

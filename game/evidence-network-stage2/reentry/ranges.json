@@ -1,0 +1,28 @@
+[
+  {
+    "mode": "back",
+    "before": 2992,
+    "after": 2988,
+    "start": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 588
+    },
+    "end": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 588
+    }
+  },
+  {
+    "mode": "capture",
+    "before": 2989,
+    "after": 3030,
+    "start": {
+      "epoch": "cefd23848b7fcba799f6eda0ce5a7f2e",
+      "tick": 588
+    },
+    "end": {
+      "epoch": "9302f37db6ec12199c6b87bdb6fdee96",
+      "tick": 75
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "mode": "capture",
+    "before": 3000,
+    "after": 3000,
+    "start": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 2181
+    },
+    "end": {
+      "epoch": "d2c9395ab3ab43390de06f984a92eafa",
+      "tick": 2181
+    }
+  }
+]

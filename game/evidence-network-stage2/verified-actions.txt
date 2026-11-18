@@ -1,0 +1,13 @@
+PASS input/capture Connect; state/visual assertions pending
+
+/sdcard/stage2.png: 1 file pulled, 0 skipped. 22.6 MB/s (84141 bytes in 0.004s)
+PASS input/capture move-x; state/visual assertions pending
+
+/sdcard/stage2.png: 1 file pulled, 0 skipped. 21.0 MB/s (90018 bytes in 0.004s)
+PASS input/capture shoot; state/visual assertions pending
+
+/sdcard/stage2-release.png: 1 file pulled, 0 skipped. 11.6 MB/s (89835 bytes in 0.007s)
+/sdcard/stage2.png: 1 file pulled, 0 skipped. 22.0 MB/s (90861 bytes in 0.004s)
+PASS input/capture capture; state/visual assertions pending
+
+/sdcard/stage2.png: 1 file pulled, 0 skipped. 21.1 MB/s (90648 bytes in 0.004s)

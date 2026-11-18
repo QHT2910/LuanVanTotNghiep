@@ -1,3 +1,9 @@
+## Network stage2 candidate — 18/11/2026
+
+QAterminalPASS scopedstage2/noP1P2, Leadreviewsavedqa/network-stage2.md. Independent306/297match/FX[1,2]/source17/asset5/twoAPKhash7da/lifecycle/reentry5images. Connect5stimeout khôngwelcome/freshnessguarantee, documented. Noadditionalcode/tests/build needed; preparingreviewedcommitpush,3Wordexcluded. Cindyfinalreviewpending, chưafullgame/humanonline/Internet.
+
+Stage1accepted91e6622. Stage2sameproject diagnosticmode: typedatomicconsumer+effectwatermark+snapshot-onlyScene, no localphysics. Leadgates83tests/analyze/build/audit/install PASS; actualoneAVD+separateserver/nativepeer normaltrace306received/297appliedmatch, scores3:3/effects1,2onceboth; heldbackgroundnorelease/newEpoch0:0/faultrejectioncaptured. NetworkAPK7da23…af53b/M2dc2a preserved. docs/NETWORK_STAGE2_REVIEW.md; QAindependent/Cindyreviewpending, sourceuncommitted. Servicesstopped/8091free, oneemucentered; noInternet/twoAndroid/humanonline/fullgame. Lastquota77/57reserve5%both.
+
 ## Network stage1 đang QA — 18/11/2026
 
 QA terminal: server/transport scopedreview đạt, noP1; P2claimconsumerdedupe đã Lead sửa hồ sơ và thêm acceptance renderer. Client hiện chỉlogsnapshot; chưa effectdedupe. QA tự6hash/73tick0mismatch, testgates78/analyze/smoke làLeadkếthừa. qa/network-stage1.md; Cindyreviewstage1pending, chưa networkAVD. Reviewedstage1 preparingcommit, khôngrepeatM2commit.

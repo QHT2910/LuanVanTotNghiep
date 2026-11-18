@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "scope": "NETWORK_STAGE2 debugx64 exactbuildcommand in source-apk-audit.json; runtime mode verified separately",
+  "apkSHA256": "7da23a38b33567f74c0196eb9fc008a61ce58fbbc560d1567e6782cfc54af53b",
+  "installedSHA256": "7da23a38b33567f74c0196eb9fc008a61ce58fbbc560d1567e6782cfc54af53b",
+  "snapshotSHA256": "7da23a38b33567f74c0196eb9fc008a61ce58fbbc560d1567e6782cfc54af53b",
+  "matching": true
+}

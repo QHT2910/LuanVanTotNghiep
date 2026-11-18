@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'src/presentation/practice_page.dart';
 import 'src/presentation/offline_app.dart';
+import 'src/presentation/network_stage2_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,5 +11,9 @@ Future<void> main() async {
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
   ]);
-  runApp(OfflineApp(practiceBuilder: (_) => const PracticePage()));
+  runApp(
+    const bool.fromEnvironment('NETWORK_STAGE2')
+        ? const MaterialApp(home: NetworkStage2Page())
+        : OfflineApp(practiceBuilder: (_) => const PracticePage()),
+  );
 }

@@ -1,0 +1,67 @@
+[
+  {
+    "mode": "Connect",
+    "before": 3000,
+    "after": 3000,
+    "start": {
+      "epoch": "84dacfcdbcebcfc8d21b0397f872d8c7",
+      "tick": 11295
+    },
+    "end": {
+      "epoch": "84dacfcdbcebcfc8d21b0397f872d8c7",
+      "tick": 11295
+    }
+  },
+  {
+    "mode": "move-x",
+    "before": 6000,
+    "after": 6000,
+    "start": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 4752
+    },
+    "end": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 4974
+    }
+  },
+  {
+    "mode": "shoot",
+    "before": 6014,
+    "after": 6262,
+    "start": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 4995
+    },
+    "end": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 5367
+    }
+  },
+  {
+    "mode": "Jump",
+    "before": 7250,
+    "after": 7376,
+    "start": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 6849
+    },
+    "end": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 7038
+    }
+  },
+  {
+    "mode": "Dash",
+    "before": 7392,
+    "after": 7518,
+    "start": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 7062
+    },
+    "end": {
+      "epoch": "4e6ccc5f48da0d658c1f887866cf804e",
+      "tick": 7251
+    }
+  }
+]

@@ -1,0 +1,4 @@
+{"event":"status","status":"connected","pid":2992}
+{"event":"welcome","epoch":"d93b2ee429005c146b7e634760defb5c","slot":0,"pid":2992}
+{"event":"snapshot_core","epoch":"d93b2ee429005c146b7e634760defb5c","tick":0,"ready":false,"owner":0,"phase":"ready","shotKey":null,"players":[{"slot":0,"position":[-1.0,0.0,3.0],"facing":[0.1643989873053573,0.0,-0.9863939238321437],"grounded":true,"charge":0.0},{"slot":1,"position":[1.0,0.0,3.0],"facing":[-0.1643989873053573,0.0,-0.9863939238321437],"grounded":true,"charge":0.0}],"ball":[-1.0,1.8,3.0],"scores":[0,0],"eventId":0,"effectIds":[],"effectGap":false,"ack":0,"result":"joined","pid":2992}
+{"event":"status","status":"closed","pid":2992}

@@ -1,0 +1,20 @@
+{
+  "scope": "Separate server/native-peer processes; AVD separate Android process",
+  "serverWrapperPid": 2928,
+  "peerWrapperPid": 7944,
+  "serverPid": 17840,
+  "peerPid": 14772,
+  "commands": [
+    [
+      "dart",
+      "run",
+      "tool/stage1_server.dart"
+    ],
+    [
+      "dart",
+      "run",
+      "tool/stage2_peer.dart"
+    ]
+  ],
+  "startedAt": "2026-11-18T00:45:11.945Z"
+}
