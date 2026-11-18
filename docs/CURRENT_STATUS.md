@@ -1,3 +1,9 @@
+## Luận văn v0.12 final — 18/11/2026
+
+Bản bàn giao mới: thesis/Ban_thao_Chuong_1-4_v0.12_final.docx và PDF cùng tên, native Word 108 trang so với bản sửa tay đầu vào 109 trang. Giữ nguyên nguồn e606…fea3, 11 ảnh Figma, 24 OMML, 44 tham khảo; chuẩn hóa 27 sơ đồ và 38 caption theo quy định 18/11. Môi trường/kịch bản/kết quả tutorial chuyển Chương 4, không thêm kết quả game hoặc mạng mới.
+
+Lỗi chú thích mã che câu lệnh đã sửa bằng một w:br thật; mọi chữ và token giữ nguyên. Word SHA488390fb4e387c318099ee572b28c5d20b28af7b845437455f1fdf18bab6ca89; PDF SHA9bfa2481fd87a2e9b4ddd3bc02e7578942f3b5d793cbde6529d6502d90a8b3b0. Cindy đã tự hash/xem trang 59 và đóng finding; QA giới hạn đang đóng kết quả. Không nhận sẵn sàng nộp hay thẩm định học thuật toàn bộ. GAME/Stage3 vẫn PAUSED.
+
 ## Luận văn v0.11 — 18/11/2026
 
 User ưu tiên báo cáo tuần; GAME/NETWORK Stage3 PAUSED. Final Word+PDF thesis/Ban_thao_Chuong_1-4_v0.11_final.*, native Word117→111trang; chương1/6/67/101, giữmộtngắt/chương. Actualv010manualhasha3bfb…17c1 giữnguyên+backup timestamp/hash. FinalDOCXd7884362…3a3e76/PDF7878b058…f6704d; xem qa/thesis-v011/artifacts.json.

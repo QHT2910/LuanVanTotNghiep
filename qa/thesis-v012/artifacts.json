@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    {
+      "file": "thesis/Ban_thao_Chuong_1-4_v0.11_corrected.docx",
+      "bytes": 5218894,
+      "sha256": "e606d15654145595d228f70003f8e8b8ff80b48326c95a46fa85032fa504fea3"
+    },
+    {
+      "file": "thesis/Ban_thao_Chuong_1-4_v0.12.docx",
+      "bytes": 6360372,
+      "sha256": "80e4d5cb7b743584702a8dc22fd8353b2f77e4a4d26d65bde559eb8f1b41a256"
+    },
+    {
+      "file": "thesis/Ban_thao_Chuong_1-4_v0.12.pdf",
+      "bytes": 3487837,
+      "sha256": "e7b9ed9c0f000d7d78cd6c7fac3dc5e44256011edd6265c50ecc92f1e06b1f32"
+    }
+  ],
+  "beforePages": 109,
+  "afterPages": 108,
+  "nativeWord": true,
+  "independentQA": "PASS bounded preservation/caption/scope + listing closure",
+  "CindyReview": "listing closed; viewed layout scope only",
+  "finalArtifacts": [
+    {
+      "file": "thesis/Ban_thao_Chuong_1-4_v0.12_final.docx",
+      "bytes": 6360390,
+      "sha256": "488390fb4e387c318099ee572b28c5d20b28af7b845437455f1fdf18bab6ca89"
+    },
+    {
+      "file": "thesis/Ban_thao_Chuong_1-4_v0.12_final.pdf",
+      "bytes": 3487842,
+      "sha256": "9bfa2481fd87a2e9b4ddd3bc02e7578942f3b5d793cbde6529d6502d90a8b3b0"
+    }
+  ],
+  "listingFix": "one real Word line break; all code/comment text unchanged"
+}

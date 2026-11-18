@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-18",
+  "nativeWordPages": 111,
+  "baselineNativeWordPages": 117,
+  "correctedPagesComparedToFinal": [
+    1,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "files": [
+    {
+      "path": "thesis/Ban_thao_Chuong_1-4_v0.11_corrected.docx",
+      "bytes": 4887584,
+      "sha256": "1dc017ada44d9ba7a56b9f81b4e5fe3d456e58dab6b9e61af2308185dc809b38"
+    },
+    {
+      "path": "thesis/Ban_thao_Chuong_1-4_v0.11_corrected.pdf",
+      "bytes": 2861263,
+      "sha256": "9d91ad849e224f4a9ce07e44ede5de311db3cc04cfe0b68f350e72d874db3c3f"
+    }
+  ]
+}

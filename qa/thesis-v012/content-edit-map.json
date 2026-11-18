@@ -1,0 +1,947 @@
+{
+  "baseline": "thesis-v012/baseline",
+  "pIDs": "original-baseline",
+  "anchorMode": "exact-prefix",
+  "operations": [
+    {
+      "op": "replace",
+      "p": 4,
+      "text": "Flutter Scene, được phân phối qua gói flutter_scene, là một engine 3D dành cho Flutter. Tài liệu của dự án giới thiệu việc tổ chức đồ thị cảnh, mô hình, vật liệu, ánh sáng, camera và hoạt ảnh trong môi trường Flutter, dựa trên Flutter GPU và Impeller ở các nền tảng native [1], [2]. Hướng tiếp cận này cho phép nghiên cứu sự kết hợp giữa giao diện Flutter và nội dung 3D trong cùng một ứng dụng Dart. Mức độ đáp ứng của từng thành phần được xem xét theo điều kiện tích hợp và phạm vi thực nghiệm ở Chương 4.",
+      "anchor": "Flutter Scene, được phân phối qua gói flutter_scene, là một engine 3D dành cho Flutte"
+    },
+    {
+      "op": "replace",
+      "p": 6,
+      "text": "Luận văn nghiên cứu công nghệ qua tình huống ứng dụng bóng rổ 3D. Luật giản lược của game được phân biệt với luật thể thao chính thức. Thiết kế đối kháng hướng tới hai người chơi từ hai mạng khác nhau qua Internet; phạm vi ứng dụng được kiểm tra và kết quả thực nghiệm được trình bày ở Chương 4.",
+      "anchor": "Luận văn nghiên cứu công nghệ qua một demo có phạm vi kiểm soát được. Các luật giản l"
+    },
+    {
+      "op": "replace",
+      "p": 14,
+      "text": "Thiết kế kết nối hai người và cơ chế thống nhất trạng thái, với yêu cầu kết nối qua Internet giữa hai mạng khác nhau.",
+      "anchor": "Thiết kế kết nối hai người và cơ chế thống nhất trạng thái; ưu tiên khả năng chơi qua"
+    },
+    {
+      "op": "replace",
+      "p": 17,
+      "text": "Việc sử dụng các thành phần cần có quy trình có thể tái hiện, gồm điều kiện chuẩn bị, thứ tự tạo đối tượng, thiết lập tham số và dấu hiệu kiểm tra. Phiên bản và kết quả kiểm tra của các ví dụ được trình bày trong phạm vi thực nghiệm ở Chương 4.",
+      "anchor": "Việc sử dụng các thành phần cần có quy trình có thể tái hiện: điều kiện chuẩn bị, thứ"
+    },
+    {
+      "op": "replace",
+      "p": 18,
+      "text": "API và khả năng tương thích phụ thuộc phiên bản Flutter cùng các dependency. Việc đối chiếu mã với đúng phiên bản là điều kiện để giải thích hành vi và tái hiện ví dụ.",
+      "anchor": "API cần được xem xét theo phiên bản. Đề tài dự kiến cố định Flutter và dependency sau"
+    },
+    {
+      "op": "replace",
+      "p": 25,
+      "text": "Căn cứ đánh giá",
+      "anchor": "Bằng chứng cần bổ sung",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 39,
+      "text": "Xem xét ảnh hưởng của độ phức tạp cảnh tới chi phí kết xuất",
+      "anchor": "Giảm độ phức tạp cảnh theo kết quả đo",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 41,
+      "text": "Bảng 1-1. Thách thức và hướng xử lý",
+      "anchor": "Bảng 1-1. Thách thức và hướng xử lý dự kiến"
+    },
+    {
+      "op": "replace",
+      "p": 45,
+      "text": "Phần ứng dụng mô tả game, phân tích yêu cầu và xây dựng mô hình chức năng, use case, dữ liệu, lớp, tuần tự, hoạt động và giao diện. Các mô hình ở Chương 3 trình bày thiết kế hệ thống đối kháng; phạm vi hiện thực được đánh giá riêng ở Chương 4.",
+      "anchor": "Phần ứng dụng mô tả game, phân tích yêu cầu và xây dựng mô hình chức năng, use case, "
+    },
+    {
+      "op": "replace",
+      "p": 46,
+      "text": "Phần thực nghiệm đánh giá cảnh 3D, điều khiển, mô hình ném và ghi điểm trong ứng dụng tập offline. Kết quả được phân tích theo môi trường chạy, kịch bản và mức bằng chứng, tách khỏi thiết kế hệ thống hai người chơi.",
+      "anchor": "Quá trình xây dựng dự kiến đi từ cảnh nhỏ và thao tác đơn giản đến một vòng chơi hoàn"
+    },
+    {
+      "op": "replace",
+      "p": 48,
+      "text": "Phạm vi thiết kế gồm Android, nội dung bóng rổ đối kháng 3D, hai người trên hai thiết bị qua mạng và sử dụng Flutter Scene làm công nghệ nghiên cứu. Yêu cầu kết nối hướng tới Internet giữa hai mạng khác nhau. Phạm vi thực nghiệm của luận văn được xác định tại mục 4.1.",
+      "anchor": "Phạm vi đã xác nhận gồm Android, nội dung bóng rổ đối kháng 3D, hai người trên hai th"
+    },
+    {
+      "op": "replace",
+      "p": 49,
+      "text": "Thiết kế game Bóng rổ đối kháng 3D gồm hai người trên nửa sân với một rổ và một quả bóng. Người chơi di chuyển, ném, nhảy, Dash và Block. Luật tính 2 hoặc 3 điểm tùy vị trí ném; trận kết thúc khi một người đạt ít nhất 11 điểm hoặc hết 3 phút. Luồng phòng sử dụng mã để tạo hoặc tham gia phòng. Cách ném theo hướng arcade giúp giới hạn độ phức tạp của mô hình.",
+      "anchor": "Demo có tên Bóng rổ đối kháng 3D, gồm hai người trên nửa sân với một rổ và một quả bó"
+    },
+    {
+      "op": "replace",
+      "p": 50,
+      "text": "Đề tài không đặt mục tiêu xây dựng nền tảng phát hành game thương mại, hệ thống kinh tế vật phẩm hoặc giải đấu quy mô lớn. Tài khoản, bảng xếp hạng, ghép trận nhanh và chống gian lận nâng cao nằm ngoài phạm vi thiết kế được trình bày. Dữ liệu phiên chơi được xem xét độc lập với nhu cầu lưu trữ lâu dài.",
+      "anchor": "Đề tài không đặt mục tiêu xây dựng nền tảng phát hành game thương mại, hệ thống kinh "
+    },
+    {
+      "op": "replace",
+      "p": 57,
+      "text": "Đối chiếu luận điểm với tài liệu tham khảo",
+      "anchor": "Rà soát và xem kỹ tài liệu tham khảo",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 71,
+      "text": "Hai client kết nối từ hai mạng khác nhau",
+      "anchor": "Kiểm chứng từ hai mạng khác nhau khi điều kiện triển khai cho phép",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 79,
+      "text": "Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá",
+      "anchor": "Bảng 1-2. Kết quả cần đạt và tiêu chí đánh giá dự kiến"
+    },
+    {
+      "op": "replace",
+      "p": 104,
+      "text": "Căn cứ khảo sát",
+      "anchor": "Mức bằng chứng hiện có",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 108,
+      "text": "Phạm vi ngoài so sánh tài liệu",
+      "anchor": "Nội dung chưa được bảng chứng minh",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 128,
+      "text": "Tham khảo các nhóm thao tác được nhà phát hành mô tả",
+      "anchor": "Xác định các nhóm thao tác cần khảo sát tiếp",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 130,
+      "text": "Nội dung ngoài phạm vi khảo sát tài liệu",
+      "anchor": "Chưa có bằng chứng trong khảo sát này",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 278,
+      "text": "So sánh A–B hoặc C–D làm rõ roughness; so sánh A–C hoặc B–D làm rõ metallic. Metallic không phải hệ số làm vật sáng lên, còn roughness không chỉ là độ mờ màu nền. Phản xạ thực tế còn phụ thuộc môi trường. Bảng mô tả dự đoán lý thuyết của bốn cấu hình theo mô hình metallic–roughness. [12], [31]",
+      "anchor": "So sánh A–B hoặc C–D làm rõ roughness; so sánh A–C hoặc B–D làm rõ metallic. Metallic"
+    },
+    {
+      "op": "remove",
+      "p": 317,
+      "anchor": "Nguồn sáng trong hướng dẫn 2.12 là PointLight(intensity: 25, range: 10) gắn vào node "
+    },
+    {
+      "op": "insert_after",
+      "p": 614,
+      "paragraphs": [
+        {
+          "text": "Trong bài này, PointLight(intensity: 25, range: 10) gắn vào node tại (−2,3,−2), minh họa nguồn có vị trí và tầm tác động hữu hạn. Di chuyển node làm đổi vị trí nguồn so với bề mặt. Intensity và range là tham số của ví dụ, không phải số đo độ sáng hoặc thông số hiệu chỉnh thiết bị."
+        }
+      ],
+      "anchor": "Kết quả dự kiến: actor màu cam, nền xanh xám; thay đổi vị trí lamp hoặc intensity làm"
+    },
+    {
+      "op": "replace",
+      "p": 418,
+      "text": "Một quy ước có thể dùng ackSeq làm mốc đã xử lý dứt điểm, gồm cả chấp nhận lẫn từ chối. Khi server trả trạng thái cùng ackSeq = 12 và client còn các input 10–15, client bỏ 10–12, khôi phục trạng thái xác nhận rồi phát lại 13–15. Ack đã xử lý không đồng nghĩa hành động được chấp nhận. Nếu input 11 bị thiếu, hệ thống phải quy định chờ, bỏ qua hay xử lý lại; không tăng mốc liên tục qua lỗ chưa giải quyết mà vẫn gọi đó là xác nhận liên tục. Ví dụ này minh họa một quy ước giao thức. [25]",
+      "anchor": "Một quy ước có thể dùng ackSeq làm mốc đã xử lý dứt điểm, gồm cả chấp nhận lẫn từ chố"
+    },
+    {
+      "op": "replace",
+      "p": 467,
+      "text": "Scene Editor là ứng dụng desktop phục vụ tạo, quan sát và chỉnh cảnh. Công cụ biên tập hỗ trợ vòng chuẩn bị nội dung, còn ứng dụng runtime sử dụng dữ liệu để xử lý và kết xuất. Tài liệu yêu cầu xét phiên bản editor cùng phiên bản package của dự án. [40]",
+      "anchor": "Scene Editor là ứng dụng desktop phục vụ tạo, quan sát và chỉnh cảnh. Công cụ biên tậ"
+    },
+    {
+      "op": "replace",
+      "p": 470,
+      "text": "2.12.1. Mục tiêu và cách dùng các bài",
+      "anchor": "2.12.1. Mục tiêu và cách dùng các mốc",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 471,
+      "text": "Bài thực hành dùng một project với sáu entrypoint A–F. Mỗi bài gọi builder của bài trước rồi bổ sung một nhóm thành phần. Import tệp có main() không chạy main() của tệp đó. Cách tổ chức này tách việc dựng cảnh ban đầu khỏi các bước tích hợp nhập liệu, vật lý, tài nguyên và mạng.",
+      "anchor": "Bài thực hành dùng một project với sáu entrypoint A–F. Mỗi mốc gọi builder của mốc tr"
+    },
+    {
+      "op": "replace",
+      "p": 472,
+      "text": "Mỗi bài gồm mục tiêu, tiền đề, tệp, mã mới, lệnh và dấu hiệu mong đợi. Các dấu hiệu này hướng dẫn người đọc kiểm tra hành vi; kết quả phân tích tĩnh, đóng gói và phép thử headless của bộ bài được trình bày riêng tại mục 4.3.6.",
+      "anchor": "Mỗi mốc có mục tiêu, tiền đề, tệp, mã mới, lệnh và dấu hiệu dự kiến. Phân tích tĩnh k"
+    },
+    {
+      "op": "replace",
+      "p": 474,
+      "text": "Bộ bài sử dụng các phiên bản phần mềm được liệt kê tại mục 4.1. Giữ nguyên lockfile giữa các bài để đối chiếu cùng một tập API.",
+      "anchor": "Dùng Flutter 3.47.8, Dart 3.13.7, flutter_scene 0.24.3, scene 0.4.1 và vector_math 2."
+    },
+    {
+      "op": "replace",
+      "p": 475,
+      "text": "Có thể dùng bộ source game/tutorial-r3 đi kèm hoặc tạo project Android rồi đưa các tệp bài học vào. Với project chưa có Android runner, chạy lệnh tạo runner trong thư mục project trước khi sửa manifest:",
+      "anchor": "Có thể dùng bộ source game/tutorial-r3 trong repository của đề tài hoặc tạo project A"
+    },
+    {
+      "op": "replace",
+      "p": 478,
+      "text": "Sau khi tạo runner, kiểm tra diff pubspec và lockfile, giữ các phiên bản của bộ bài. Với AndroidManifest.xml, thêm metadata vào application hiện có:",
+      "anchor": "Việc tạo runner không thuộc lượt kiểm bundle nêu trên. Kiểm tra diff pubspec và lockf"
+    },
+    {
+      "op": "replace",
+      "p": 484,
+      "text": "Host cung cấp startLesson(builder) và Lesson giữ root, actor, material, camera cùng overlay. Host đợi initializeStaticResources, gọi builder một lần, rồi đặt SceneView; khi màn hình đóng, nó thu hồi lesson/scene. Một future lưu trong initState tránh khởi tạo lại từ build. Nếu builder hoàn tất sau khi widget đã đóng, cảnh tạm được giải phóng.",
+      "anchor": "Host cung cấp startLesson(builder) và Lesson giữ root, actor, material, camera cùng o"
+    },
+    {
+      "op": "replace",
+      "p": 485,
+      "text": "Tạo các thư mục lib/checkpoints/a đến f; mỗi tệp dưới đây lưu vào main.dart của đúng thư mục. Giữ toàn bộ tệp bài trước vì builder ở bài sau import chúng. Lỗi không tìm thấy lesson_host hoặc import bài trước là lỗi thiếu source.",
+      "anchor": "Tạo các thư mục lib/checkpoints/a đến f; mỗi tệp dưới đây lưu vào main.dart của đúng "
+    },
+    {
+      "op": "replace",
+      "p": 486,
+      "text": "2.12.4. Bài A — Scene và camera",
+      "anchor": "2.12.4. Mốc A — Scene và camera",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 524,
+      "text": "2.12.5. Bài B — Transform và component",
+      "anchor": "2.12.5. Mốc B — Transform và component",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 572,
+      "text": "2.12.6. Bài C — Material và ánh sáng",
+      "anchor": "2.12.6. Mốc C — Material và ánh sáng",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 617,
+      "text": "2.12.7. Bài D — Input và HUD",
+      "anchor": "2.12.7. Mốc D — Input và HUD",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 693,
+      "text": "2.12.8. Bài E — Trigger",
+      "anchor": "2.12.8. Mốc E — Trigger",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 778,
+      "text": "2.12.9. Bài F — Texture, model và animation",
+      "anchor": "2.12.9. Mốc F — Texture, model và animation",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 936,
+      "text": "2.12.12. Kiểm tra và chẩn đoán theo bài",
+      "anchor": "2.12.12. Kiểm tra và chẩn đoán theo mốc",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 523,
+      "text": "Nếu màn hình trống, kiểm tra exception khởi tạo, Flutter GPU, camera và thiết bị. Khoanh lỗi trong cảnh tối giản của bài A trước khi thêm vật lý hoặc asset.",
+      "anchor": "Nếu màn hình trống, kiểm tra exception khởi tạo, Flutter GPU, camera và thiết bị. Khô"
+    },
+    {
+      "op": "replace",
+      "p": 525,
+      "text": "Mục tiêu: quan sát phép biến đổi cha–con và component cập nhật theo frame. Khối hộp chính của A giữ nguyên; thêm một khối hộp con quay quanh pivot riêng.",
+      "anchor": "Mục tiêu: quan sát phép biến đổi cha–con và component cập nhật theo frame. Quả hộp ch"
+    },
+    {
+      "op": "replace",
+      "p": 526,
+      "text": "Tiền đề: lưu đầy đủ source của bài A và quan sát được cảnh A trước khi đánh giá B.",
+      "anchor": "Tiền đề: checkpoint A đã analyze đạt; khi có thiết bị, cần quan sát được A trước khi "
+    },
+    {
+      "op": "replace",
+      "p": 574,
+      "text": "Tiền đề: bài B hoạt động; giữ nguyên dependency.",
+      "anchor": "Tiền đề: mốc B hoạt động; không thêm dependency mới."
+    },
+    {
+      "op": "replace",
+      "p": 616,
+      "text": "Nếu bề mặt quá sáng, kiểm tra intensity, metallic và exposure trước khi đổi renderer. Bài này tắt shadow; kết quả của cảnh không bao gồm chi phí kết xuất bóng đổ.",
+      "anchor": "Nếu bề mặt quá sáng, kiểm tra intensity, metallic và exposure trước khi đổi renderer."
+    },
+    {
+      "op": "replace",
+      "p": 618,
+      "text": "Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Trong bài này, Drive là thành phần duy nhất ghi vị trí actor.",
+      "anchor": "Mục tiêu: nút Flutter đổi hướng chuyển động; HUD hiển thị tọa độ. Chỉ Drive ghi vị tr"
+    },
+    {
+      "op": "replace",
+      "p": 692,
+      "text": "Tốc độ 1.2 đơn vị/giây là tham số minh họa của bài D.",
+      "anchor": "Tốc độ 1.2 đơn vị/giây chưa phải tốc độ người chơi của game."
+    },
+    {
+      "op": "replace",
+      "p": 872,
+      "text": "Nếu không thấy model, kiểm tra camera, scale, vị trí và warning importer. Kết quả kiểm tra cấu trúc asset và đóng gói được trình bày tại mục 4.3.6.",
+      "anchor": "Trong lượt kiểm bundle của bài F, nhánh GLB đã được phân tích và đóng gói; lượt kiểm "
+    },
+    {
+      "op": "replace",
+      "p": 873,
+      "text": "Bài E minh họa trigger bằng BasicSimulation, với truy vấn giao nhau và chuyển động kinematic. Backend này không có solver phản lực, gravity/contact response hoặc bóng bật nảy. Phạm vi bài E tách biệt với lựa chọn backend động lực học cho game.",
+      "anchor": "Mốc E được gọi đúng là bài trigger với BasicSimulation. Nó không có solver phản lực, "
+    },
+    {
+      "op": "replace",
+      "p": 875,
+      "text": "Ví dụ transport trong tool/sync_smoke.dart minh họa hai client trao đổi x/tick và xử lý input trùng mà không cập nhật node. Ví dụ snapshot sử dụng lib/snapshot_replica.dart và test/snapshot_replica_test.dart; mỗi client có một fs.Node riêng không gắn Drive, RigidBody hoặc SceneView.",
+      "anchor": "tool/sync_smoke.dart giữ phép thử transport R2 như bài tiền đề: hai client trao đổi x"
+    },
+    {
+      "op": "replace",
+      "p": 933,
+      "text": "Phép kiểm adapter đối chiếu lịch sử vị trí và tick sau từng snapshot, đồng thời kiểm tra phiên, entity, tọa độ hữu hạn và trạng thái đóng. Kịch bản cụ thể và sai số so sánh được trình bày tại mục 4.2.2.",
+      "anchor": "Test headless tạo server loopback và hai WebSocket client, rồi truyền chuỗi (tick,x):"
+    },
+    {
+      "op": "replace",
+      "p": 935,
+      "text": "Kết quả phép kiểm snapshot được trình bày tại mục 4.3.6. Source test đi kèm cho phép tái hiện việc cập nhật node qua hai kết nối loopback.",
+      "anchor": "Test đã đạt trong Flutter test headless; nó xác nhận snapshot đi qua hai kết nối loop"
+    },
+    {
+      "op": "remove_table_containing",
+      "p": 937,
+      "anchor": "Mức",
+      "baselineStyle": "table",
+      "baselineParagraphs": [
+        937,
+        954
+      ],
+      "reason": "Chuyển bảng kết quả sang mục 4.3.6; bỏ toàn bộ phần tử bảng, không xóa riêng nội dung ô."
+    },
+    {
+      "op": "replace",
+      "p": 958,
+      "text": "Khi một bài lỗi, quay lại bài ngay trước để khoanh phần thay đổi. Lỗi member/import cần đối chiếu lockfile/source 0.24.3; lỗi asset cần kiểm tệp thật và pubspec; màn hình trống cần kiểm GPU/camera/khởi tạo. Trigger không tạo phản lực là giới hạn của backend minh họa. Các bước này giúp phân loại lỗi theo lớp tích hợp.",
+      "anchor": "Khi một mốc lỗi, quay lại mốc ngay trước đã đạt để khoanh phần thay đổi. Lỗi member/i"
+    },
+    {
+      "op": "replace",
+      "p": 961,
+      "text": "Tiền đề: dùng project hiện có và các phiên bản phần mềm tại mục 4.1. Khi chạy Android, giữ cấu hình Flutter GPU đã hướng dẫn. Ví dụ sử dụng hình học và vật liệu tạo trong mã.",
+      "anchor": "Tiền đề: dùng project hiện có với flutter_scene 0.24.3, scene 0.4.1 và vector_math 2."
+    },
+    {
+      "op": "remove",
+      "p": 1085,
+      "anchor": "Hai lệnh đã thực hiện ngày 07/11/2026 và đều kết thúc với mã 0. Analyze kiểm tra mã t"
+    },
+    {
+      "op": "replace",
+      "p": 1086,
+      "text": "Lệnh chạy ví dụ trên Android:",
+      "anchor": "Khi có thiết bị phù hợp:"
+    },
+    {
+      "op": "replace",
+      "p": 1088,
+      "text": "Dấu hiệu mong đợi: khối hộp được tô màu, có camera và vị trí tương tự A. Nhấn nút làm tăng bộ đếm. Từ lần ghi nhận đầu, so sánh identity của node qua các lần rebuild để kiểm tra cơ chế giữ lại đối tượng.",
+      "anchor": "Kết quả dự kiến là một khối hộp được tô màu, có camera và vị trí tương tự A. Nhấn nút"
+    },
+    {
+      "op": "replace",
+      "p": 1108,
+      "text": "Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm màu tint và HUD phục vụ bài thực hành. SceneMesh tạo một mesh node con dưới SceneNode; cây engine vì thế khác cấu trúc một node có mesh ở A.",
+      "anchor": "Kích thước hộp, camera và vị trí actor được giữ tương ứng A. Ví dụ khai báo có thêm m"
+    },
+    {
+      "op": "remove",
+      "p": 1132,
+      "anchor": "Trạng thái: đã đối chiếu source 0.24.3, analyze và build bundle đạt; chưa quan sát ru"
+    },
+    {
+      "op": "replace",
+      "p": 1134,
+      "text": "Bài thực hành hot reload yêu cầu công cụ nhận diện thiết bị, ứng dụng debug đã mở cảnh thành công và công cụ phát triển vẫn kết nối. Phân biệt kết quả biên dịch với hành vi quan sát khi thực hiện các thao tác dưới đây.",
+      "anchor": "Bài kiểm tra này chỉ thực hiện khi có thiết bị được nhận diện, ứng dụng debug đã mở c"
+    },
+    {
+      "op": "replace",
+      "p": 1141,
+      "text": "Dấu hiệu mong đợi sau hot reload: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn là 4 và identity vẫn “Giữ nguyên”. Trong lần hot reload giữ nguyên State, _ready, geometry và material vẫn giữ các tham chiếu đã khởi tạo.",
+      "anchor": "Kỳ vọng cần kiểm chứng: màu đổi, counter trước lần nhấn tiếp vẫn là 3; sau lần nhấn l"
+    },
+    {
+      "op": "replace",
+      "p": 1154,
+      "text": "Bài này tập trung vào sửa mã Dart và tham số material trong bộ nhớ. Reload GLB, ảnh texture, .fmat, shader bundle và tài nguyên tiền xử lý thuộc các đường nạp riêng. Source có coordinator cho asset reload trong debug; hành vi của cơ chế này được phân biệt với bản release.",
+      "anchor": "Bài này kiểm tra sửa mã Dart và tham số material trong bộ nhớ. Nó chưa kiểm chứng rel"
+    },
+    {
+      "op": "replace",
+      "p": 1158,
+      "text": "Thiết kế game Bóng rổ đối kháng 3D hướng tới hai người chơi trên Android, sử dụng nửa sân, một rổ và một quả bóng. Flutter Scene đảm nhiệm biểu diễn cảnh 3D; các luật, trạng thái và cơ chế đồng bộ được mô tả riêng để xác định trách nhiệm của hệ thống.",
+      "anchor": "Game Bóng rổ đối kháng 3D dành cho hai người trên thiết bị Android. Mỗi người điều kh"
+    },
+    {
+      "op": "replace",
+      "p": 1159,
+      "text": "Thiết kế sử dụng nửa sân, một rổ, hai nhân vật và một quả bóng, giới hạn độ phức tạp của đội hình và không gian thi đấu. Hai ứng dụng kết nối đến cùng một máy chủ có địa chỉ tiếp cận được qua Internet và hiển thị trạng thái trận được máy chủ xác nhận. Camera và giao diện điều khiển thuộc từng máy khách. Yêu cầu kết nối giữa hai mạng khác nhau được phân biệt với kết nối LAN.",
+      "anchor": "Game sử dụng nửa sân, một rổ, hai nhân vật và một quả bóng. Quy mô này tạo điều kiện "
+    },
+    {
+      "op": "replace",
+      "p": 1161,
+      "text": "Các chức năng thiết kế gồm tạo hoặc tham gia phòng hai người, xác nhận sẵn sàng, thi đấu, xem kết quả và quay lại sảnh. Ghép trận nhanh, tài khoản, bảng xếp hạng, giao dịch, cửa hàng, nhiều đội và chống gian lận nâng cao nằm ngoài phạm vi trình bày.",
+      "anchor": "Các chức năng gồm tạo hoặc tham gia phòng hai người, xác nhận sẵn sàng, thi đấu, xem "
+    },
+    {
+      "op": "replace",
+      "p": 1164,
+      "text": "Một cú ném chỉ được tính khi bóng qua vùng ghi điểm từ trên xuống và sự kiện đó chưa được ghi nhận. Mô hình thiết kế đặt kiểm tra kết thúc trước xử lý ghi điểm mới trong cùng nhịp hết giờ; theo quy ước này, bóng qua rổ sau thời điểm kết thúc không được tính. Đây là quy ước phân xử của mô hình, tách khỏi kết quả kiểm tra bản tập offline ở Chương 4.",
+      "anchor": "Một cú ném chỉ được tính khi bóng qua vùng ghi điểm từ trên xuống và sự kiện đó chưa "
+    },
+    {
+      "op": "replace",
+      "p": 1166,
+      "text": "Thiết kế điều khiển sử dụng màn hình ngang, với cần di chuyển bên trái và các nút ACTION, JUMP, DASH bên phải. ACTION phụ thuộc quyền giữ bóng: giữ rồi thả để ném khi có bóng, thực hiện Block khi phòng thủ. JUMP tạo chuyển động bật cao; DASH tạo chuyển động nhanh có hồi chiêu. Trạng thái Dash khóa thao tác thả bóng để ném. Bố cục và phản hồi giao diện được trình bày tại mục 3.3.",
+      "anchor": "Giao diện đề xuất đặt ngang, gồm cần di chuyển bên trái và các nút ACTION, JUMP, DASH"
+    },
+    {
+      "op": "replace",
+      "p": 1168,
+      "text": "Thiết kế 1v1 sử dụng máy chủ để chọn quỹ đạo theo xác suất có seed và phân xử tương tác phòng thủ. Mô hình ném giải tích xác định sai lệch mục tiêu theo mức giữ nút. Khi thả, điểm xuất phát được lấy từ mẫu vị trí bóng đã đồng bộ để hiển thị; vận tốc được giải lại theo độ cao này, không cộng thêm vận tốc đứng của nhân vật. Vị trí chân chiếu xuống mặt sân quyết định giá trị 2 hoặc 3 điểm và được lưu cùng cú ném; di chuyển hoặc thay đổi độ cao sau khi thả không làm đổi giá trị đó. Cơ chế phân xử 1v1 thuộc thiết kế, còn kết quả kiểm tra quỹ đạo trong bản tập offline được trình bày ở Chương 4.",
+      "anchor": "Phương án cho game 1v1 là để máy chủ chọn quỹ đạo bằng xác suất có seed và phân xử tư"
+    },
+    {
+      "op": "replace",
+      "p": 1169,
+      "text": "Dash nhận hành động hợp lệ trên mặt sân và chốt hướng từ joystick hoặc hướng nhìn hiện có. Trong thời gian Dash, hướng này giữ nguyên và vận tốc đi bộ không được cộng thêm. Tốc độ, thời lượng và thời gian hồi là các tham số của mô phỏng; cấu hình dùng trong thực nghiệm được trình bày tại mục 4.1.",
+      "anchor": "Dash đã được hiện thực. Khi nhận hành động hợp lệ trên mặt sân, hệ mô phỏng chốt hướn"
+    },
+    {
+      "op": "replace",
+      "p": 1172,
+      "text": "Thiết kế kết nối sử dụng máy chủ trung tâm để tiếp nhận các kết nối đi ra từ hai ứng dụng Android, kể cả khi chúng nằm sau NAT hoặc thuộc hai mạng di động khác nhau. Theo mô hình này, điện thoại không phải mở cổng nhận trực tiếp từ Internet. Địa chỉ công khai và chứng chỉ là các thành phần của cấu hình triển khai.",
+      "anchor": "Máy chủ trung tâm được đề xuất vì hai máy Android có thể nằm sau NAT hoặc dùng hai mạ"
+    },
+    {
+      "op": "replace",
+      "p": 1173,
+      "text": "Trong phòng, đếm ngược bắt đầu khi đủ hai người và cả hai sẵn sàng. Nếu có người rời khi đang đếm, phòng trở lại chờ. Khi mất kết nối giữa trận, máy chủ đưa input của người đó về trung tính, theo dõi thời hạn và xử kết quả theo chính sách của phiên. Chu kỳ heartbeat, timeout và khả năng kết nối lại là các tham số, chính sách riêng của thiết kế mạng.",
+      "anchor": "Trong phòng, chỉ bắt đầu đếm ngược khi đủ hai người và cả hai sẵn sàng. Nếu có người "
+    },
+    {
+      "op": "replace",
+      "p": 1176,
+      "text": "Các mã yêu cầu liên kết chức năng với mô hình thiết kế và tiêu chí kiểm tra. Bảng yêu cầu mô tả hệ thống đối kháng mục tiêu; phạm vi chức năng được kiểm tra trong bản tập offline được xác định ở Chương 4.",
+      "anchor": "Các mã yêu cầu được dùng để đối chiếu chức năng với thiết kế và ca kiểm thử. Luật chơ"
+    },
+    {
+      "op": "replace",
+      "p": 1179,
+      "text": "Tiêu chí đối chiếu",
+      "anchor": "Điều kiện quan sát dự kiến",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1206,
+      "text": "Đối chiếu frame time, độ trễ và cấu hình của từng phép đo",
+      "anchor": "Lưu frame time, độ trễ và cấu hình thử; chưa đặt ngưỡng duyệt",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1247,
+      "text": "UC05 Block nhận hành động theo trạng thái và hồi chiêu. Khi vùng Block hợp lệ chạm bóng đang bay, thiết kế quy định máy chủ đổi vận tốc, phát sự kiện và chuyển bóng thành tự do. Phạm vi, thời gian hiệu lực và hồi chiêu là các tham số của kỹ năng. UC02 hủy đếm ngược nếu thiếu người; UC06 hiển thị kết quả đã xác nhận, không tự suy luận thắng từ điểm cục bộ.",
+      "anchor": "UC05 Block chỉ nhận khi trạng thái và hồi chiêu hợp lệ. Khi vùng Block hợp lệ chạm bó"
+    },
+    {
+      "op": "replace",
+      "p": 1260,
+      "text": "Trạng thái phòng và kết quả được xử lý theo chính sách rời trận của phiên; thao tác rời phòng không tự xác lập kết quả thua",
+      "anchor": "Cần thống nhất chính sách kết thúc, xử kết quả hoặc cho phép chờ; chưa mặc định người",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1262,
+      "text": "Xử lý nhất quán mất kết nối, yêu cầu lặp, cả hai cùng rời và yêu cầu đến sau kết thúc; timeout và khả năng quay lại phụ thuộc chính sách phiên",
+      "anchor": "Mất kết nối, yêu cầu lặp, cả hai cùng rời hoặc yêu cầu đến sau kết thúc cần xử lý nhấ",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1276,
+      "text": "Mỗi lần cập nhật hợp lệ, lớp trình bày cho mô phỏng tiến trước rồi đồng bộ cảnh và HUD. Khi mất trạng thái tương tác, đầu vào được hủy và logic pause được áp dụng; ticker điều phối cập nhật, còn mô phỏng giữ luật game. Cách tách trách nhiệm này cho phép kiểm tra logic độc lập với widget và node Scene.",
+      "anchor": "Mỗi lần cập nhật hợp lệ, lớp trình bày cho mô phỏng tiến trước rồi đồng bộ cảnh và HU"
+    },
+    {
+      "op": "replace",
+      "p": 1277,
+      "text": "Kiến trúc đối kháng gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diện. Client gửi thao tác, máy chủ quyết định trạng thái chung. Scene nhận trạng thái để dựng cảnh; quyết định điểm thuộc mô phỏng và cơ chế phân xử. Kiến trúc này mô tả thiết kế hệ thống 1v1, được phân biệt với ứng dụng tập offline trong phần thực nghiệm.",
+      "anchor": "Phương án đề xuất gồm ứng dụng Flutter, máy chủ Dart và lõi mô phỏng độc lập giao diệ"
+    },
+    {
+      "op": "replace",
+      "p": 1279,
+      "text": "Hình 3.3. Kiến trúc kết nối của thiết kế 1v1.",
+      "anchor": "Hình 3.3. Kiến trúc kết nối dự kiến."
+    },
+    {
+      "op": "replace",
+      "p": 1280,
+      "text": "Client B trong hình biểu diễn một vai trò logic. Thiết kế trao đổi thông điệp sử dụng WebSocket/JSON để biểu diễn và theo dõi dữ liệu. Kết nối công khai sử dụng WSS với chứng chỉ hợp lệ theo yêu cầu triển khai; mô hình không chỉ định dịch vụ hosting cụ thể.",
+      "anchor": "Client B trong hình biểu diễn vai trò logic. Phương án WebSocket/JSON được chọn làm ứ"
+    },
+    {
+      "op": "replace",
+      "p": 1281,
+      "text": "Trong thiết kế giao thức, input chứa số thứ tự, hướng di chuyển và cờ hành động. Máy chủ lấy danh tính người gửi từ phiên kết nối, kiểm tra kiểu, miền giá trị, tần suất và điều kiện luật. Điểm hoặc vị trí do máy khách tự khai báo không quyết định trạng thái chung. Snapshot mang tick, trạng thái và ackSeq riêng cho người nhận; sự kiện có eventId để tránh phát âm thanh hoặc cộng hiệu ứng lặp.",
+      "anchor": "Input dự kiến chứa số thứ tự, hướng di chuyển và cờ hành động. Máy chủ lấy danh tính "
+    },
+    {
+      "op": "replace",
+      "p": 1283,
+      "text": "Snapshot cũ không ghi đè trạng thái mới hơn của cùng một trận. Mã sự kiện được xét cùng mã trận để phân biệt các lượt chơi. Thời hạn lưu sự kiện và quy tắc đặt lại bộ nhớ đệm là các tham số của giao thức.",
+      "anchor": "Snapshot cũ không ghi đè trạng thái mới hơn của cùng một trận. Mã sự kiện phải được x"
+    },
+    {
+      "op": "replace",
+      "p": 1284,
+      "text": "Trong thiết kế đồng bộ, prediction và reconciliation tập trung vào nhân vật cục bộ; bóng nhận trạng thái được máy chủ xác nhận. Tần suất mô phỏng, tần suất snapshot và độ dài bộ đệm nội suy là các tham số độc lập theo các nguyên lý tại mục 2.10.",
+      "anchor": "Các giá trị 60 nhịp mô phỏng/giây, 20 snapshot/giây và bộ đệm nội suy khoảng 100 ms t"
+    },
+    {
+      "op": "replace",
+      "p": 1287,
+      "text": "Cấu trúc dữ liệu thiết kế",
+      "anchor": "Cấu trúc dự kiến",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1302,
+      "text": "Hình 3.4 mô tả cấu trúc lớp của thiết kế game. Liên kết với Scene nằm ở lớp hiển thị để lõi mô phỏng độc lập với node GPU.",
+      "anchor": "Hình 3.4 mô tả cấu trúc lớp dự kiến, không phải API Flutter Scene hoặc mã đã có. Liên"
+    },
+    {
+      "op": "replace",
+      "p": 1311,
+      "text": "Các lớp mang nhãn reference được khai triển ở panel kế tiếp. pointValue được chốt từ releasePosition tại releaseTick; vị trí trên vạch tính 2 điểm. scored ngăn cộng điểm lặp. holderId chỉ có nghĩa khi bóng được giữ và shot có thể vắng.",
+      "anchor": "Các lớp mang nhãn reference được khai triển ở panel kế tiếp. pointValue được chốt từ "
+    },
+    {
+      "op": "replace",
+      "p": 1328,
+      "text": "Trong thiết kế, máy chủ quyết định điểm, quyền bóng và kết quả. Sơ đồ đặt hết giờ trước ghi điểm; thứ tự Block trước qua rổ trong cùng tick là giả định phân xử của mô hình. Các thứ tự này được phân biệt với kết quả kiểm tra bản tập offline.",
+      "anchor": "Máy chủ quyết định điểm, quyền bóng và kết quả. Thứ tự hết giờ trước ghi điểm giữ từ "
+    },
+    {
+      "op": "replace",
+      "p": 1342,
+      "text": "Bảng sau mô tả trạng thái logic và điều kiện chuyển trạng thái trong thiết kế 1v1. Các nhãn biểu diễn vai trò trong mô hình, độc lập với tên API. Kết quả kiểm tra nhảy và Dash của bản tập offline được trình bày tại Chương 4.",
+      "anchor": "Bảng sau mô tả các trạng thái logic của thiết kế 1v1, không phải tên API đã triển kha"
+    },
+    {
+      "op": "replace",
+      "p": 1351,
+      "text": "Điều kiện tiếp đất, nhảy lại và tham số thuộc mô hình chuyển động",
+      "anchor": "Điều kiện tiếp đất, nhảy lại và tham số chưa chốt",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1354,
+      "text": "Không nhận ném khi đang Dash; thời lượng và hồi chiêu là tham số kỹ năng",
+      "anchor": "Không nhận ném khi đang Dash; thời gian và hồi chiêu chưa chốt",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1360,
+      "text": "Phạm vi và thời gian hiệu lực là tham số của Block",
+      "anchor": "Phạm vi và thời gian hiệu lực chưa chốt",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1369,
+      "text": "Nhận bóng theo guard quyền sở hữu và chính sách phân xử tranh chấp đồng thời",
+      "anchor": "Guard nhận bóng và xử lý tranh chấp đồng thời chưa chốt",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1376,
+      "text": "Hình học cơ bản phục vụ biểu diễn sân, rổ, bóng và nhân vật trong cảnh tối giản. Việc sử dụng tài nguyên hoàn chỉnh gồm kiểm tra đường nạp, tỷ lệ, clip hoạt ảnh và giấy phép. Độ phức tạp hình ảnh được xem xét cùng chi phí kết xuất theo mục 2.11.",
+      "anchor": "Cần kiểm chứng đường nạp tài nguyên và clip hoạt ảnh trước khi sử dụng nhân vật hoàn "
+    },
+    {
+      "op": "replace",
+      "p": 1377,
+      "text": "3.2.9. Truy vết yêu cầu và thiết kế",
+      "anchor": "3.2.9. Truy vết và quyết định còn mở",
+      "baselineStyle": "Heading3"
+    },
+    {
+      "op": "replace",
+      "p": 1380,
+      "text": "Tiêu chí kiểm chứng",
+      "anchor": "Bằng chứng cần có sau triển khai",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1400,
+      "text": "Các mô hình trên xác định trách nhiệm, dữ liệu và luồng xử lý của thiết kế 1v1. Tham số kỹ năng, cơ chế vật lý, giao thức, cấu hình mô phỏng, triển khai máy chủ và chính sách mất kết nối là các thành phần cấu hình của mô hình. Phạm vi hiện thực và kết quả kiểm tra được trình bày ở Chương 4.",
+      "anchor": "Các quyết định còn mở gồm tham số kỹ năng, phương án vật lý, giao thức, cấu hình mô p"
+    },
+    {
+      "op": "replace",
+      "p": 1403,
+      "text": "Hệ thống giao diện của thiết kế 1v1 sử dụng bố cục ngang, gồm sáu nhóm chức năng UI01–UI06. UI02 tách thành Tạo phòng và Vào phòng, tạo thành bảy frame chính.",
+      "anchor": "Hệ thống giao diện được đề xuất theo hướng ngang, gồm sáu nhóm chức năng UI01–UI06. U"
+    },
+    {
+      "op": "replace",
+      "p": 1427,
+      "text": "Quay lại → UI01",
+      "anchor": "Quay lại → UI01 trong phương án đầu",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1429,
+      "text": "Luồng chính đi từ Menu qua Tạo hoặc Vào phòng tới Sảnh chờ, Trận đấu và Kết quả. Khi trở lại sảnh, trạng thái sẵn sàng được đặt lại. Cài đặt âm thanh là nhánh riêng từ Menu.",
+      "anchor": "Luồng chính đi từ Menu qua Tạo hoặc Vào phòng tới Sảnh chờ, Trận đấu và Kết quả. Khi "
+    },
+    {
+      "op": "replace",
+      "p": 1432,
+      "text": "Hình 3.8. Luồng chuyển màn hình của thiết kế 1v1.",
+      "anchor": "Hình 3.8. Luồng chuyển màn hình dự kiến."
+    },
+    {
+      "op": "replace",
+      "p": 1433,
+      "text": "Trong thiết kế mạng, hai người vào đủ phòng chưa làm trận bắt đầu. Cả hai cần sẵn sàng, sau đó đếm ngược và chuyển trận theo trạng thái được máy chủ xác nhận.",
+      "anchor": "Hai người vào đủ phòng chưa làm trận bắt đầu. Cả hai cần sẵn sàng, sau đó đếm ngược v"
+    },
+    {
+      "op": "replace",
+      "p": 1434,
+      "text": "Nhánh Tập luyện đi trực tiếp từ Menu tới giao diện tập offline, không qua tạo phòng hoặc sảnh chờ. Nhánh này tái dùng bố cục UI04 với HUD riêng cho tập luyện, không hiển thị đồng hồ trận hoặc đối thủ giả.",
+      "anchor": "Nhánh Tập luyện đi trực tiếp từ Menu tới giao diện tập offline, không qua tạo phòng h"
+    },
+    {
+      "op": "replace",
+      "p": 1436,
+      "text": "Bộ thiết kế UI01–UI06 được lưu trong Figma và các hình dưới đây được xuất từ từng frame. Các màn Menu, phòng, sảnh, kết quả và âm thanh dùng nền minh họa dạng ảnh; chữ, nút và bảng nội dung được tách thành các lớp chỉnh sửa. UI04 thể hiện nền sân và HUD tách lớp. Các hình mô tả thiết kế giao diện; kết quả kiểm tra giao diện trong ứng dụng được trình bày ở Chương 4.",
+      "anchor": "Bộ thiết kế UI01–UI06 được lưu trong Figma và các hình dưới đây được xuất từ từng fra"
+    },
+    {
+      "op": "replace",
+      "p": 1437,
+      "text": "UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo phòng, Vào phòng và Cài đặt. Đặc tả phản hồi quy định khóa thao tác cần dịch vụ mạng kèm lý do khi không kết nối; Tập luyện và Cài đặt vẫn là các nhánh độc lập. Thử lại kết nối không tự đưa người chơi vào phòng. Frame minh họa bố cục Menu; phản hồi chờ và mất kết nối thuộc đặc tả trạng thái.",
+      "anchor": "UI01 — Menu chính ở Hình 3.9 có tên hiển thị, Tập luyện, Tạo phòng, Vào phòng và Cài "
+    },
+    {
+      "op": "replace",
+      "p": 1449,
+      "text": "UI04 — Trận đấu ở Hình 3.13 thể hiện nền sân minh họa và HUD. Điểm Bạn, thời gian và điểm Đối thủ nằm phía trên; kết nối có vùng riêng. Joystick đặt bên trái; Ném lớn, Nhảy và Dash riêng bên phải; thanh canh ném ở gần nút Ném. Frame minh họa bố cục HUD cơ bản. Đặc tả phản hồi bao gồm canh ném, khóa, hồi chiêu và gián đoạn kết nối. Trong thiết kế 1v1, hành động chính phụ thuộc quyền giữ bóng, độc lập với trạng thái hồi chiêu; Block thuộc thiết kế kỹ năng tại mục 3.1.3.",
+      "anchor": "UI04 — Trận đấu ở Hình 3.13 gồm nền sân minh họa và HUD, chưa có nhân vật. Điểm Bạn, "
+    },
+    {
+      "op": "replace",
+      "p": 1474,
+      "text": "Mất chạm hoặc xuống nền đưa lệnh liên tục về trung tính và hủy giữ không hợp lệ; cancel không tự thành cú ném. Gián đoạn kết nối phải báo tình trạng và hành động được phép, không tự xử thắng/thua, pause toàn trận, reconnect hoặc phát lại lệnh. Phản hồi giao diện được tách khỏi chính sách khôi phục phiên.",
+      "anchor": "Mất chạm/xuống nền đưa lệnh liên tục về trung tính và hủy giữ không hợp lệ; cancel kh"
+    },
+    {
+      "op": "replace",
+      "p": 1475,
+      "text": "Âm thanh và hiệu ứng bổ sung phản hồi thị giác. Trong thiết kế đồng bộ, định danh sự kiện giúp tránh phát tác dụng lặp. Tắt âm thanh không làm mất điểm, thông báo hoặc chỉ báo khóa.",
+      "anchor": "Âm thanh/hiệu ứng bổ sung phản hồi thị giác; sự kiện có định danh trong phương án đồn"
+    },
+    {
+      "op": "replace",
+      "p": 871,
+      "text": "Đặt tệp tại assets/Fox.glb và khai báo trong pubspec trước khi chạy F. Attribution: model PixelMannen; rig/animation tomkranis; chuyển glTF @AsoboStudio và @scurest. README nguồn ghi model CC0, rig/animation và conversion CC BY 4.0; giữ attribution và điều kiện CC BY 4.0 cho asset hợp nhất. Bản phân phối kèm assets/ATTRIBUTION.md và README pháp lý. [37]",
+      "anchor": "Đặt tệp tại assets/Fox.glb và khai báo trong pubspec trước khi chạy F. GLB thực được "
+    },
+    {
+      "op": "replace",
+      "p": 1135,
+      "text": "Chạy đúng entrypoint khai báo. Đợi cảnh xuất hiện, nhấn “Ghi nhận state” ba lần. Ghi lại màu, bộ đếm bằng 3 và trạng thái identity.",
+      "anchor": "Chạy đúng entrypoint khai báo. Đợi cảnh xuất hiện, nhấn “Ghi nhận state” ba lần. Ghi "
+    },
+    {
+      "op": "replace",
+      "p": 1143,
+      "text": "Ghi kết quả từng thao tác và đối chiếu với dấu hiệu mong đợi. Nếu Flutter yêu cầu restart hoặc reload thất bại, ghi lại thông báo để phân biệt kết quả của hai thao tác.",
+      "anchor": "Ghi kết quả thực tế từng thao tác, kể cả lỗi. Nếu Flutter yêu cầu restart hoặc reload"
+    },
+    {
+      "op": "replace",
+      "p": 1478,
+      "text": "Chương này tổng hợp kết quả kiểm tra ứng dụng tập bóng rổ offline qua bốn phiên bản M1, M2, M3a và M3b, cùng các phép kiểm của bộ bài thực hành Scene. M1 tập trung vào dựng cảnh và vòng ném; M2 bổ sung joystick và phối hợp thao tác; M3a thêm nhảy; M3b thêm Dash. Kết quả được phân loại theo phiên bản và mức kiểm tra. Thiết kế hệ thống đối kháng ở Chương 3 được đối chiếu riêng với phạm vi thực nghiệm này.",
+      "anchor": "Các mốc M1, M2, M3a và M3b kiểm tra từng phần của ứng dụng tập bóng rổ offline. M1 tậ"
+    },
+    {
+      "op": "replace",
+      "p": 1494,
+      "text": "Pixel_9a là tên cấu hình AVD dùng để kiểm tra chức năng trong môi trường giả lập nêu trên.",
+      "anchor": "Pixel_9a ở đây là tên giả lập, không phải điện thoại Pixel vật lý. Cấu hình trên phục"
+    },
+    {
+      "op": "replace",
+      "p": 1498,
+      "text": "Các phiên kiểm tra sử dụng phân tích tĩnh, bài kiểm tra logic và widget, cùng thao tác runtime trên AVD. Các ca logic/widget đối chiếu cấu hình, điều kiện trạng thái và phản hồi đầu vào; phạm vi runtime được xác định bằng các chuỗi thao tác và sự kiện ứng dụng. Kết quả từng nhóm được tách riêng trong mục 4.3.",
+      "anchor": "Phân tích tĩnh được dùng để tìm lỗi mã trong phạm vi công cụ kiểm tra. Các bài kiểm t"
+    },
+    {
+      "op": "replace",
+      "p": 1517,
+      "text": "Các điều kiện được kiểm bằng logic hoặc widget được ghi riêng theo mức bằng chứng. Trong M3b, chuỗi thử có input ngoài bộ thao tác kiểm soát được phân loại là dữ liệu thăm dò và loại khỏi tập oracle của phiên cuối.",
+      "anchor": "Các điều kiện chỉ được kiểm bằng logic hoặc widget được ghi riêng, không nâng thành k"
+    },
+    {
+      "op": "replace",
+      "p": 1519,
+      "text": "Bảng sau tổng hợp các ca trọng yếu từ các phiên kiểm tra được ghi nhận. Mức bằng chứng xác định phạm vi đối chiếu của mỗi ca, phân biệt kiểm tra logic/widget với thao tác Scene trên AVD.",
+      "anchor": "Các kết quả trong bảng được kế thừa từ những phiên kiểm tra đã ghi nhận. Mức bằng chứ"
+    },
+    {
+      "op": "replace",
+      "p": 1575,
+      "text": "Logic/widget cho nhóm điều kiện này",
+      "anchor": "Logic/widget; chưa kiểm hết bằng chuỗi AVD",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1577,
+      "text": "4.3. KẾT QUẢ THỰC NGHIỆM",
+      "anchor": "4.3. KẾT QUẢ THEO TỪNG MỐC",
+      "baselineStyle": "Heading2"
+    },
+    {
+      "op": "replace",
+      "p": 1579,
+      "text": "Phiên bản",
+      "anchor": "Mốc",
+      "baselineStyle": "table"
+    },
+    {
+      "op": "replace",
+      "p": 1603,
+      "text": "Hai chu kỳ xuống nền rồi trở lại có các sự kiện hủy canh ném, pause và resume, sau đó mô phỏng tiếp tục. Phiên bản được kiểm giữ ticker và pause logic. Anti-aliasing được tắt để xử lý vệt hình trong cấu hình quan sát; kết quả này gắn với cấu hình kiểm tra đó.",
+      "anchor": "Hai chu kỳ xuống nền rồi trở lại có các sự kiện hủy canh ném, pause và resume, sau đó"
+    },
+    {
+      "op": "replace",
+      "p": 1606,
+      "text": "Hủy toàn bộ pointer đưa joystick về tâm và hủy canh ném mà không tạo cú thả mới. Sau background/resume, ứng dụng tiếp tục nhận thao tác và ném. Hủy riêng từng pointer, xử lý giá trị không hữu hạn, đường chéo và một số tình huống callback cũ được đánh giá ở mức logic hoặc widget.",
+      "anchor": "Hủy toàn bộ pointer đưa joystick về tâm và hủy canh ném mà không tạo cú thả mới. Sau "
+    },
+    {
+      "op": "replace",
+      "p": 1609,
+      "text": "Hai cú thả trên không có độ cao nhân vật khoảng 0,906904 và 0,884193 đơn vị cảnh; điểm xuất phát bóng tương ứng khoảng 2,706904 và 2,684193. Tọa độ đứng của chân dùng cho tính điểm vẫn bằng 0. Hai cú lần lượt ghi 3 và 2 điểm, tổng 5. Các giá trị này được ghi từ sự kiện mô phỏng của hai ca.",
+      "anchor": "Hai cú thả trên không có độ cao nhân vật khoảng 0,906904 và 0,884193 đơn vị cảnh; điể"
+    },
+    {
+      "op": "replace",
+      "p": 1610,
+      "text": "Joystick+jump và jump+shoot được đánh giá bằng hai ca hai pointer riêng, tương ứng từng cặp thao tác.",
+      "anchor": "Joystick+jump và jump+shoot là hai ca hai pointer riêng. Chúng chưa chứng minh thao t"
+    },
+    {
+      "op": "replace",
+      "p": 1612,
+      "text": "Phiên runtime ghi bảy lần bắt đầu và bảy lần kết thúc Dash. Bốn lần kết thúc theo thời lượng 0,2 giây đạt quãng đường 1,6 đơn vị cảnh. Hai lần kết thúc do biên bắt đầu ngay tại vị trí biên x = −3,78 nên quãng đường bằng 0. Trường hợp cắt quãng đường theo hướng và một số biên khác được đánh giá bằng đối chiếu source và unit test.",
+      "anchor": "Phiên runtime cuối ghi bảy lần bắt đầu và bảy lần kết thúc Dash. Bốn lần kết thúc the"
+    },
+    {
+      "op": "replace",
+      "p": 1615,
+      "text": "Các ca chặn jump/shoot trong Dash, reset giữa Dash, race, hướng chéo và hủy riêng từng pointer được đánh giá ở mức logic hoặc widget.",
+      "anchor": "Những ca chặn jump/shoot trong Dash, reset giữa Dash, race, hướng chéo và hủy riêng t"
+    },
+    {
+      "op": "replace",
+      "p": 1618,
+      "text": "Phạm vi đánh giá ứng dụng tập offline gồm kiểm tra logic, widget và một số chuỗi thao tác runtime trên một AVD. Kết quả phản ánh tính đúng đắn trong các ca và môi trường đó; chúng không cung cấp số đo FPS, frame time, RTT hoặc chất lượng kết nối Internet.",
+      "anchor": "Kết quả hiện có giới hạn ở một giả lập và bản tập offline. Chưa có benchmark FPS, fra"
+    },
+    {
+      "op": "replace",
+      "p": 1619,
+      "text": "Mô hình chuyển động và cú ném được đánh giá là mô hình giải tích. Phạm vi thực nghiệm gồm tập ném, joystick, nhảy và Dash. Solver tiếp xúc bảng–vành, bật nảy, Block, tương tác với đối thủ, phân xử từ máy chủ, phòng đấu và vòng trận 11 điểm/3 phút thuộc phạm vi ngoài kết quả thực nghiệm của ứng dụng tập.",
+      "anchor": "Hệ chuyển động và cú ném dùng mô hình giải tích, chưa có solver bảng–vành, bật nảy ho"
+    },
+    {
+      "op": "replace",
+      "p": 1621,
+      "text": "Giao diện runtime phục vụ các thao tác của ứng dụng tập. Bộ ảnh Figma ở mục 3.3 thể hiện thiết kế giao diện mục tiêu. Kết quả thao tác trong chương này đánh giá giao diện của bản tập, tách khỏi việc nghiệm thu triển khai toàn bộ thiết kế UI và hệ thống 1v1.",
+      "anchor": "UI runtime là giao diện thử nghiệm. Bộ ảnh thiết kế Figma đã được bổ sung ở mục 3.3, "
+    },
+    {
+      "op": "insert_after",
+      "p": 1495,
+      "paragraphs": [
+        {
+          "text": "Bộ bài thực hành tại mục 2.12 sử dụng Flutter 3.47.8, Dart 3.13.7, flutter_scene 0.24.3, scene 0.4.1 và vector_math 2.4.4 theo lockfile. Các phép kiểm của bộ bài gồm phân tích tĩnh, build bundle và test headless; kết quả được tổng hợp tại mục 4.3.6."
+        },
+        {
+          "text": "Cấu hình Dash của bản tập offline dùng tốc độ 8 đơn vị cảnh/giây, thời lượng 0,2 giây và khoảng hồi 0,8 giây sau thời điểm kết thúc dự kiến. Các giá trị này là cấu hình của phép thử, được phân biệt với tham số cân bằng của thiết kế đối kháng."
+        }
+      ],
+      "anchor": "Probe Scene/Fox và ứng dụng tập offline được phân biệt trong đánh giá. Probe hỗ trợ k"
+    },
+    {
+      "op": "insert_after",
+      "p": 1517,
+      "paragraphs": [
+        {
+          "text": "Đối với adapter snapshot của mục 2.12.11, phép kiểm headless tạo server loopback và hai WebSocket client. Chuỗi (tick,x) gồm (1,1), (1,99), (99,99) thuộc phiên khác, (3,3), (2,2). Lịch sử vị trí kỳ vọng ở mỗi node là [1,1,1,3,3], lịch sử tick cũng là [1,1,1,3,3]. Kiểm tra sau từng bước cho phép phát hiện trường hợp node nhận sai trạng thái trước khi được snapshot cuối sửa lại. Các ca bổ sung gồm NaN, entity sai và adapter đóng. Sai số so sánh tọa độ y là 10⁻⁶ do lưu trữ Float32; tick và quyết định chấp nhận hoặc từ chối được so sánh chính xác."
+        }
+      ],
+      "anchor": "Các điều kiện chỉ được kiểm bằng logic hoặc widget được ghi riêng, không nâng thành k"
+    },
+    {
+      "op": "insert_after",
+      "p": 1616,
+      "paragraphs": [
+        {
+          "style": "Heading3",
+          "text": "4.3.6. Kết quả kiểm tra bộ bài thực hành Scene"
+        },
+        {
+          "text": "Các phép kiểm dưới đây thuộc bộ bài tại mục 2.12, độc lập với tổng số bài kiểm tra của ứng dụng M1–M3b."
+        },
+        {
+          "type": "table",
+          "columns": [
+            "Đối tượng",
+            "Kết quả được ghi nhận",
+            "Phạm vi kết luận"
+          ],
+          "rows": [
+            [
+              "A–F",
+              "Analyze từng entrypoint và toàn project đạt",
+              "Kiểm tra mã tĩnh và chữ ký API"
+            ],
+            [
+              "Bài F",
+              "Build bundle Android arm64 đạt",
+              "Biên dịch và đóng gói source, asset"
+            ],
+            [
+              "Adapter snapshot",
+              "Test headless với hai WebSocket client và hai node đạt",
+              "Áp trạng thái và kiểm tra guard trong loopback"
+            ],
+            [
+              "Fox.glb",
+              "Header GLB phiên bản 2.0, kích thước 162852 byte; JSON chứa Survey, Walk và Run",
+              "Đối chiếu cấu trúc tệp asset"
+            ],
+            [
+              "Ví dụ khai báo",
+              "Analyze và build bundle thực hiện ngày 07/11/2026, cùng kết thúc với mã 0",
+              "Kiểm tra tĩnh và đóng gói ví dụ"
+            ]
+          ]
+        },
+        {
+          "text": "Phép kiểm snapshot xác nhận dữ liệu đi qua hai kết nối loopback rồi cập nhật hai đối tượng node. Bộ bài được đánh giá bằng phân tích tĩnh, đóng gói và test headless; các phép kiểm này không cung cấp kết quả render SceneView, phát clip Fox hoặc hot reload bằng quan sát runtime. Kết quả AVD của ứng dụng tập được trình bày riêng tại các mục 4.3.2–4.3.5."
+        }
+      ],
+      "anchor": "Đối chiếu mã nguồn và APK cuối phù hợp với hồ sơ bản được cài. Đây là bằng chứng truy"
+    },
+    {
+      "op": "replace",
+      "p": 351,
+      "anchor": "Trong đường reveal đã đối chiếu, view chờ tài nguyên tĩnh dùng chung,",
+      "text": "Trong đường reveal của Scene 0.24.3, view chờ tài nguyên tĩnh dùng chung, nhóm tải được truyền vào, các tác vụ nạp của cây con và tài nguyên trì hoãn liên quan. Nếu warmUp được bật, nó tiếp tục gọi Scene.warmUp với các view sẽ dùng rồi mới cho hiện cảnh. Nội dung cần được đưa vào cảnh trước bước này. Scene.initializeStaticResources(), nhóm tải và warm-up vì thế phục vụ những phạm vi khác nhau. Hiệu quả về thời gian mở cảnh, bộ nhớ và tốc độ hiển thị phụ thuộc cấu hình và nội dung. [41]"
+    },
+    {
+      "op": "replace",
+      "p": 367,
+      "anchor": "Inverse bind đưa đỉnh về hệ joint ở tư thế gốc;",
+      "text": "Inverse bind đưa đỉnh về hệ joint ở tư thế gốc; G đưa mỗi đóng góp về cùng world space để trộn. Phép tính minh họa sự phối hợp giữa biến đổi joint và trọng số skinning."
+    },
+    {
+      "op": "replace",
+      "p": 1543,
+      "anchor": "Logic/widget, không oracle AVD riêng cho mọi biên",
+      "text": "Logic/widget cho các biên đầu vào"
+    },
+    {
+      "op": "replace",
+      "p": 487,
+      "anchor": "Mục tiêu: hiển thị một khối hộp bằng SceneView",
+      "text": "Mục tiêu: hiển thị một khối hộp bằng SceneView với camera cố định. Phạm vi bài A gồm hình học và camera, không sử dụng component chuyển động, input, vật lý hoặc asset."
+    },
+    {
+      "op": "replace",
+      "p": 573,
+      "anchor": "Mục tiêu: thay màu, độ nhám của actor",
+      "text": "Mục tiêu: thay màu, độ nhám của actor, thêm nền và PointLight. Bài C sử dụng hình học và vật liệu tạo trong mã."
+    },
+    {
+      "op": "replace",
+      "p": 615,
+      "anchor": "Nền dày 0.1, tâm tại y = -0.05,",
+      "text": "Nền dày 0.1, tâm tại y = -0.05, nên mặt trên nằm ở y = 0. Actor trong bài này không chịu trọng lực."
+    },
+    {
+      "op": "replace",
+      "p": 776,
+      "anchor": "BasicSimulation chỉ hỗ trợ query/trigger",
+      "text": "BasicSimulation chỉ hỗ trợ query/trigger và chuyển động kinematic; không có solver, contact response hoặc dynamic body. Counter biểu diễn số lần vào vùng trigger, tách biệt với luật ghi điểm bóng rổ. Fixed timestep và solver của toàn game được xem xét theo yêu cầu mô phỏng riêng."
+    },
+    {
+      "op": "replace",
+      "p": 779,
+      "anchor": "Mục tiêu: thêm texture tạo từ dữ liệu trước;",
+      "text": "Mục tiêu: thêm texture tạo từ dữ liệu, sau đó sử dụng nhánh nạp model hoặc texture ngoài. Nhánh mặc định cho phép thực hành mà không cần asset ngoài."
+    },
+    {
+      "op": "replace",
+      "p": 932,
+      "anchor": "Session được xác lập từ bước tham gia phiên tin cậy,",
+      "text": "Session được xác lập từ bước tham gia phiên tin cậy, không lấy tùy ý từ packet đầu tiên. Tick là số thứ tự snapshot; không trừ timestamp hai đồng hồ. Adapter bỏ tick cũ/trùng, sai phiên/schema/entity và tọa độ không hữu hạn trước khi ghi node. Adapter áp trạng thái trực tiếp; interpolation, prediction, handshake và xác thực nằm ngoài trách nhiệm của lớp này."
+    }
+  ]
+}

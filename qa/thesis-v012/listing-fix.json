@@ -1,0 +1,9 @@
+{
+  "input": "thesis/Ban_thao_Chuong_1-4_v0.12.docx",
+  "inputSha256": "80e4d5cb7b743584702a8dc22fd8353b2f77e4a4d26d65bde559eb8f1b41a256",
+  "output": "thesis/Ban_thao_Chuong_1-4_v0.12_final.docx",
+  "outputSha256": "488390fb4e387c318099ee572b28c5d20b28af7b845437455f1fdf18bab6ca89",
+  "bytes": 6360390,
+  "change": "one w:br before assignment; all paragraph text and other ZIP parts unchanged",
+  "unchangedParts": 52
+}

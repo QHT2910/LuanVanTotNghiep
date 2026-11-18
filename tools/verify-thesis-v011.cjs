@@ -1,10 +1,10 @@
-﻿const fs=require('fs'),assert=require('assert/strict'),Zip=require('../.local-tools/node_modules/jszip'),crypto=require('crypto');
+const fs=require('fs'),assert=require('assert/strict'),Zip=require('../.local-tools/node_modules/jszip'),crypto=require('crypto');
 const {DOMParser,XMLSerializer}=require('../.local-tools/node_modules/@xmldom/xmldom');
 const W='http://schemas.openxmlformats.org/wordprocessingml/2006/main',M='http://schemas.openxmlformats.org/officeDocument/2006/math';
 const all=(n,ns,t)=>Array.from(n.getElementsByTagNameNS(ns,t)),parse=s=>new DOMParser().parseFromString(s,'text/xml'),ser=n=>new XMLSerializer().serializeToString(n);
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 (async()=>{
- const a=await Zip.loadAsync(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.10.docx')),b=await Zip.loadAsync(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.11_final.docx'));
+ const a=await Zip.loadAsync(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.10.docx')),b=await Zip.loadAsync(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.11_corrected.docx'));
  const d0=parse(await a.file('word/document.xml').async('string')),d=parse(await b.file('word/document.xml').async('string'));
  const text=p=>all(p,W,'t').map(n=>n.textContent).join('');
  assert.equal(all(d,W,'drawing').length,38);assert.equal(all(d,W,'tbl').length,27);
@@ -34,7 +34,7 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
  const original=all(d0,W,'p').slice(491,1253).map(text).filter(t=>t.trim());
  const finalTexts=all(d,W,'p').map(text);let cursor=0;
  const edited=new Set([922,1012]);for(let i=491;i<=1252;i++){const t=text(all(d0,W,'p')[i]);if(!t.trim()||edited.has(i))continue;const n=finalTexts.indexOf(t,cursor);assert(n>=0,'Lost tutorial text p'+i);cursor=n+1;}
- const report={pass:true,drawings:38,tables:27,omml:24,refs:44,unchangedMedia:33,unchangedFigmaFrames:11,changedParts,normalRuns:runs,centeredCaptionsBelowObjects:captions,chapterBreaks:4,sourceSHA256:hash(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.10.docx')),outputSHA256:hash(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.11_final.docx'))};
+ const report={pass:true,drawings:38,tables:27,omml:24,refs:44,unchangedMedia:33,unchangedFigmaFrames:11,changedParts,normalRuns:runs,centeredCaptionsBelowObjects:captions,chapterBreaks:4,sourceSHA256:hash(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.10.docx')),outputSHA256:hash(fs.readFileSync('thesis/Ban_thao_Chuong_1-4_v0.11_corrected.docx'))};
  fs.writeFileSync('.scratch/thesis-v011/preservation-check.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e.stack);process.exitCode=1;});
 

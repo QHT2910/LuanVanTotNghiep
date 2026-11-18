@@ -1,6 +1,6 @@
 # Bản rà soát v0.11 — 18/11/2026
 
-Bản gửi đọc lại: [Word](Ban_thao_Chuong_1-4_v0.11_final.docx) · [PDF](Ban_thao_Chuong_1-4_v0.11_final.pdf).
+Bản gửi đọc lại: [Word](Ban_thao_Chuong_1-4_v0.11_corrected.docx) · [PDF](Ban_thao_Chuong_1-4_v0.11_corrected.pdf).
 
 Xuất trực tiếp bằng Microsoft Word: **117 → 111 trang**, giảm 6 trang. Không dùng số 107 trang của PDF cũ để so sánh vì PDF đó được tạo trước lần sửa tay trong Word.
 
@@ -10,7 +10,7 @@ Xuất trực tiếp bằng Microsoft Word: **117 → 111 trang**, giảm 6 tran
 |---|---|
 | Mã hướng dẫn Ch2 | Bỏ 66 đoạn trắng giữa các dòng mã; chia nhỏ 95 điểm keepNext để tránh giữ cả khối dài sang trang sau. Giữ nguyên mọi dòng mã không rỗng, Before6pt và Multiple1,3. |
 | Hình2.1,2.3,2.7 | Bố trí lại nguồn vector, nhãn lớn hơn; giữ nguyên các nút, nhãn và chiều mũi tên. Không kéo méo PNG. |
-| Hình2.5 | Chuyển chuỗi vòng đời cao/hẹp thành hai hàng theo hai nhóm gắn/nạp và tham gia/rời cảnh, giữ kết nối và mũi tên đứt. |
+| Hình2.5 | Bố trí hai hàng; đối chiếu component.dart/node.dart0.24.3, ghi rõ onAttach→onMount→onLoad, guard mounted/enabled/loaded và phân biệt unmount với detach. Caption giới hạn một đường đi thành công, không claim ownership được vẽ trong hình. |
 | Hình3.7(b2) | Bố trí lại nhánh Block, giữ V/F/G và hai nhánh Có/Không; hình thấp hơn nhưng chữ lớn hơn. Ghép được cùng trang với panel trước. |
 | Hình3.8 | Đưa hai đoạn diễn giải sau caption, để hình xuất hiện sớm hơn và giảm trang gần trống trước hình. |
 | Caption | Căn giữa tám caption sơ đồ còn lệch, bỏ hậu tố nguồn dài của hình tự xây dựng; không gán nguồn số giả. |
@@ -44,6 +44,6 @@ Chương 1/2/3/4 lần lượt bắt đầu tại trang **1/6/67/101**. Ngắt t
 - Còn đủ **38 hình,27 bảng,24 OMML,44 tài liệu tham khảo**. Nội dung OMML và 44 entry tham khảo không đổi; 33 media giữ byte, 5 sơ đồ có nguồn SVG/PNG mới. Toàn bộ **11 ảnh Figma** giữ nguyên byte, tỷ lệ và nguồn người dùng.
 - Chỉ document.xml và 5 media sơ đồ thay đổi trong gói DOCX; các phần khác giữ nguyên. Font nội dung kế thừa Times New Roman từ style Normal, cỡ13; không đổi After chưa được quy định.
 - Microsoft Word bản cài trên máy thực hiện phân trang và xuất PDF. Sau đó PDF.js render toàn bộ111trang thành28contact sheets, đồng thời kiểm không có text ngoài khổ giấy. Rà pixel/caption/nhãn là bước riêng, không coi kiểm cấu trúc là thay quan sát.
-- Baseline117trang đã được Orca Worker diagram-designer xem toàn bộ; nội dung được Orca Worker thesis-writer rà có mục tiêu. Orca Worker QA độc lập đã xem đủ111trang/28contact sheets và8trang zoom, tự so hash/ZIP/XML, kết luận PASS trong phạm vi này, không có P1/P2 chặn bàn giao. Lead đã rà trang/hình thay đổi thực tế. Cindy review được yêu cầu riêng; chưa tự ghi nhận acceptance thay Cindy.
+- Baseline117trang đã được Orca Worker diagram-designer xem toàn bộ; nội dung được Orca Worker thesis-writer rà có mục tiêu. Orca Worker QA độc lập đã xem đủ111trang/28contact sheets và8trang zoom, tự so hash/ZIP/XML, kết luận PASS trong phạm vi này, không có P1/P2 chặn bàn giao. Lead đã rà trang/hình thay đổi thực tế. Cindy yêu cầu làm rõ lifecycle và caption. Bản corrected đã đối chiếu trực tiếp mã0.24.3, xuất lại111trang; chỉ12trang raster khác bản trước (1,15–25), các trang khác giữ pixel. QA bounded corrected và Cindy acceptance được ghi riêng, không tự nhận đã đóng trước khi review.
 
 Giới hạn: chưa kiểm bản in giấy hoặc mọi phiên bản Word/máy in; chưa thẩm định lại từng công thức và từng nguồn từ đầu. Công thức/nguồn được bảo toàn nguyên bản, không nhận việc bảo toàn là xác minh nội dung học thuật toàn bộ.

@@ -1,0 +1,15 @@
+{
+  "source": "thesis/Ban_thao_Chuong_1-4_v0.11_corrected.docx",
+  "sourceSha256": "e606d15654145595d228f70003f8e8b8ff80b48326c95a46fa85032fa504fea3",
+  "output": "thesis/Ban_thao_Chuong_1-4_v0.12.docx",
+  "outputSha256": "80e4d5cb7b743584702a8dc22fd8353b2f77e4a4d26d65bde559eb8f1b41a256",
+  "operations": 141,
+  "figures": 38,
+  "tables": 27,
+  "omml": 24,
+  "references": 44,
+  "captions": {
+    "figureCaptions": 38,
+    "mode": "caption-only"
+  }
+}

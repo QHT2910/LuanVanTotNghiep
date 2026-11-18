@@ -1,3 +1,5 @@
+Cập nhật 18/11/2026: văn phong báo cáo cuối cùng; bỏ nhật ký tiến độ/lời hẹn và câu nhắc chưa thử máy thật. Chương 1–3 trình bày mục tiêu, lý thuyết, thiết kế và cách hoạt động trung tính; không biến thiết kế thành chức năng đã triển khai. Sơ đồ thống nhất style/UMLkind và ưu tiên ngang khi đọc được; ảnh Figma giữ nguyên. Nhãn caption hình Hình X.Y đồng thời bold/italic/underline, sau đó colon và tên normal; caption bảng normal. Xem docs/THESIS_FORMAT_2026-11-09.md mục5.
+
 # Bố cục sơ bộ theo yêu cầu sinh viên — 2026-11-04
 
 Cập nhật 07/11/2026: thêm 2.4.4 khai báo/thao tác trực tiếp; mở rộng 2.7 về loading/warm-up; thêm 2.11.4 hot reload và 2.11.5 editor; 2.12.13 bài khai báo tùy chọn, 2.12.14 kiểm hot reload có điều kiện. Giữ các mục lớn, A–F và thứ tự hiện hành; không đổi kiến trúc game.
@@ -54,7 +56,7 @@ Không ép mô hình cơ sở dữ liệu quan hệ nếu demo chỉ giữ trạ
 3.3.2 Thiết kế giao diện
 3.3.3 Quy tắc cập nhật và phản hồi
 
-## Chương 4. Kiểm thử — kết quả bước đầu của bản tập offline
+## Chương 4. Kiểm thử
 4.1 Môi trường và phạm vi kiểm thử
 4.2 Kịch bản và phương pháp kiểm tra
 4.2.1 Các mức kiểm tra
@@ -63,7 +65,7 @@ Không ép mô hình cơ sở dữ liệu quan hệ nếu demo chỉ giữ trạ
 4.3 Kết quả theo từng mốc M1, M2, M3a, M3b
 4.4 Giới hạn đánh giá
 
-Chỉ kết quả một AVD đã ghi nhận; chưa đánh giá máy thật, hiệu năng, Internet hoặc toàn bộ game 1v1.
+Môi trường, kịch bản, thông số, phương pháp và kết quả được trình bày tại Chương 4, đúng phạm vi bằng chứng. Không diễn giải kết quả AVD thành kết quả trên thiết bị thật.
 
-## Chương 5. Kết luận — chờ kết quả
+## Chương 5. Kết luận
 Kết quả theo mục tiêu, hạn chế, hướng phát triển. Không viết kết luận hoàn thành khi chưa có bằng chứng.
