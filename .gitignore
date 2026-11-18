@@ -1,5 +1,6 @@
 .local-tools/
 .scratch/
+thesis/backups/
 inputs/
 sources-original/
 *.log
@@ -46,3 +47,8 @@ game/evidence-m2-hand-action/**/background-after.png
 game/evidence-m2-layered/initial/*.png
 game/evidence-m2-layered/**/background-prepare.png
 game/evidence-m2-layered/**/background-after.png
+
+# Local thesis review intermediates; only v0.11_final is delivered.
+thesis/Ban_thao_Chuong_1-4_v0.11.docx
+thesis/Ban_thao_Chuong_1-4_v0.11_review.docx
+thesis/Ban_thao_Chuong_1-4_v0.11_review.pdf

@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "drawings": 38,
+  "tables": 27,
+  "omml": 24,
+  "refs": 44,
+  "unchangedMedia": 33,
+  "unchangedFigmaFrames": 11,
+  "changedParts": [
+    "word/document.xml",
+    "word/media/image1.png",
+    "word/media/image24.png",
+    "word/media/image3.png",
+    "word/media/image5.png",
+    "word/media/image7.png"
+  ],
+  "normalRuns": 1820,
+  "centeredCaptionsBelowObjects": 40,
+  "chapterBreaks": 4,
+  "sourceSHA256": "a3bfb35b02d69e7c941841afe9bfd793e14978946e1d0e361ef2039624e617c1",
+  "outputSHA256": "d7884362ed1775d87a3e1e205c41bc754f2830318b3ca868cb72c0c55e3a3e76"
+}

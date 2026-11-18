@@ -1,0 +1,144 @@
+{
+  "source": "thesis/Ban_thao_Chuong_1-4_v0.10.docx",
+  "sourceSHA256": "a3bfb35b02d69e7c941841afe9bfd793e14978946e1d0e361ef2039624e617c1",
+  "output": "thesis/Ban_thao_Chuong_1-4_v0.11_final.docx",
+  "outputSHA256": "d7884362ed1775d87a3e1e205c41bc754f2830318b3ca868cb72c0c55e3a3e76",
+  "removedBlankCodeParagraphs": 66,
+  "releasedCodeKeepNext": 95,
+  "drawings": 38,
+  "omml": 24,
+  "references": 44,
+  "changes": [
+    {
+      "kind": "text",
+      "baselineParagraph": 22
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 473
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 476
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 479
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 922
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1012
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1258
+    },
+    {
+      "kind": "remove_repetition",
+      "baselineParagraph": 1443
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1444
+    },
+    {
+      "kind": "remove_repetition",
+      "baselineParagraph": 1445
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1477
+    },
+    {
+      "kind": "remove_repetition",
+      "baselineParagraph": 1544
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 216
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1384
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1422
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1424
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1426
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1428
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1435
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1437
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1439
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1442
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1583
+    },
+    {
+      "kind": "text",
+      "baselineParagraph": 1536
+    },
+    {
+      "kind": "diagram_relayout",
+      "baselineParagraph": 145,
+      "media": "image1.png",
+      "widthPt": 431,
+      "heightPt": 113.90716535433071
+    },
+    {
+      "kind": "diagram_relayout",
+      "baselineParagraph": 199,
+      "media": "image3.png",
+      "widthPt": 431,
+      "heightPt": 117.8515748031496
+    },
+    {
+      "kind": "diagram_relayout",
+      "baselineParagraph": 374,
+      "media": "image7.png",
+      "widthPt": 431,
+      "heightPt": 141.61425196850394
+    },
+    {
+      "kind": "diagram_relayout",
+      "baselineParagraph": 214,
+      "media": "image5.png",
+      "widthPt": 431,
+      "heightPt": 164.46055118110237
+    },
+    {
+      "kind": "diagram_relayout",
+      "baselineParagraph": 1436,
+      "media": "image24.png",
+      "widthPt": 431,
+      "heightPt": 170.13157480314962
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-18",
+  "nativeWordPages": 111,
+  "baselineNativeWordPages": 117,
+  "files": [
+    {
+      "path": "thesis/Ban_thao_Chuong_1-4_v0.11_final.docx",
+      "bytes": 4858227,
+      "sha256": "d7884362ed1775d87a3e1e205c41bc754f2830318b3ca868cb72c0c55e3a3e76"
+    },
+    {
+      "path": "thesis/Ban_thao_Chuong_1-4_v0.11_final.pdf",
+      "bytes": 2842568,
+      "sha256": "7878b05833fdced7b3a6a7b8de357f0fda30c426f45678cbd02a4a608ef6704d"
+    }
+  ]
+}
