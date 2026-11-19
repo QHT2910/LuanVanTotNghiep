@@ -7,7 +7,7 @@ const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&g
 const elems=n=>Array.from(n.childNodes||[]).filter(x=>x.nodeType===1);
 const find=(n,ns,t)=>Array.from(n.getElementsByTagNameNS(ns,t));
 (async()=>{
- if(/v0\.12/i.test(process.argv[2]||''))throw Error('v0.12 requires native Word PDF export; this legacy HTML path does not preserve all manual paragraph spacing');
+ if(/v0\.(?:12|13)/i.test(process.argv[2]||''))throw Error('v0.12/v0.13 require native Word PDF export; this legacy HTML path does not preserve all manual paragraph spacing');
  const z=await Zip.loadAsync(fs.readFileSync(process.argv[2]));
  const parse=s=>new DOMParser().parseFromString(s,'text/xml');
  const d=parse(await z.file('word/document.xml').async('string')),rel=parse(await z.file('word/_rels/document.xml.rels').async('string'));

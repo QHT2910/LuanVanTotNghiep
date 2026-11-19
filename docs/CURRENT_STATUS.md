@@ -1,3 +1,7 @@
+## Luận văn v0.13 final đã review — 19/11/2026
+
+Word/PDF v0.13_final đã xuất native Word84trang (v0.12_final108). Ch2 không còn listing/snippet/pseudocode;2.12giải thích thành phần/API bằng văn xuôi,giữ14tiểu mục.44nguồn bỏ ngày truy cập và processnotes36/38/40, giữ ngày xuất bản/URL/số nguồn.38hình/11Figma/24OMMLgiữ nguyên,ba bảng mã được thay bằng diễn giải;Ch1/3/4giữ chữ. Lead xem đủ84trangcandidate, finalchỉ83/84đổi đãxemlại. Cindy tựhashfinal7ae85ae3/aa748978vàxemrefs83/84đóngfinding, trướcđóxemprose36/39/40acceptable. QA Orca Worker terminalPASS content/preservation vàfinalrefsclosure,ownhash/XML/ảnh,phạmvi10trangcandidate+2final;không nhận ready-to-submit/fullacademic. Xem thesis/REVIEW_v0.13.md và qa/thesis-v013/artifacts-final.json. GAME/Stage3PAUSED.
+
 ## Luận văn v0.12 final — 18/11/2026
 
 Bản bàn giao mới: thesis/Ban_thao_Chuong_1-4_v0.12_final.docx và PDF cùng tên, native Word 108 trang so với bản sửa tay đầu vào 109 trang. Giữ nguyên nguồn e606…fea3, 11 ảnh Figma, 24 OMML, 44 tham khảo; chuẩn hóa 27 sơ đồ và 38 caption theo quy định 18/11. Môi trường/kịch bản/kết quả tutorial chuyển Chương 4, không thêm kết quả game hoặc mạng mới.

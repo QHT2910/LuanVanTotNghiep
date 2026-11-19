@@ -1,0 +1,30 @@
+{
+  "input": "thesis/Ban_thao_Chuong_1-4_v0.13.docx",
+  "inputSha256": "791952551ad589962302581e054e2ffe91a7f88ddef0b03e6bc935e5866aa87a",
+  "output": "thesis/Ban_thao_Chuong_1-4_v0.13_final.docx",
+  "bytes": 6080056,
+  "sha256": "7ae85ae3ffcc28dee7116011f5318bebf03d156346e2f09314addb29c8376aa7",
+  "changes": [
+    {
+      "id": 36,
+      "before": "[36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/. Chỉ dùng các đặc tính do nhà phát hành công bố, chưa quan sát chơi.",
+      "after": "[36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/."
+    },
+    {
+      "id": 38,
+      "before": "[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026 theo trang YouTube; không có transcript đầy đủ.",
+      "after": "[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026."
+    },
+    {
+      "id": 40,
+      "before": "[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. chưa chạy editor.",
+      "after": "[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/."
+    }
+  ],
+  "changedParagraphs": [
+    1045,
+    1047,
+    1049
+  ],
+  "scope": "Three bibliography worknotes only; no other text/media/format changed"
+}

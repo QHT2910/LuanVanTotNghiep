@@ -1,0 +1,9 @@
+# Lead review v0.13
+
+Đã xem toàn bộ sheet-01–21 của .scratch/thesis-v013/render, đủ 84/84 trang; phóng page-36/39/40/84. Lượt gọi sheet05–09 quá lớn bị truncate không dùng làm coverage; sau đó đã đọc lại sheet05–21 từng 1–2 ảnh. Không thấy lỗi chặn về tràn/cắt chữ, caption hình orphan, hình méo hoặc trang trắng hoàn toàn. Chương 2 mới đọc rõ, không có khối mã; refs [38] giữ ngày xuất bản, không còn ngày truy cập. Chương bắt đầu 1/5/42/74, refs82–84. Các bảng dài tiếp trang có header; cuối Ch2 trang41 còn trắng là kết chương hợp lệ. Một số hình nguyên khối tạo khoảng trắng hợp lệ, không ép thu nhãn.
+
+Native Word PDF do Lead xuất; renderer riêng mỗi trang 84/84, textOutsidePhysicalPage0. Không dùng HTML hoặc PDF cũ làm nguồn. Source/ZIP/math/media/caption/font/chapter gates xem các tệp check cạnh báo cáo. Review này không phải kiểm in hoặc thẩm định học thuật toàn bộ.
+
+Đối chiếu source mới có mục tiêu: tutorial lesson_host.dart, declarative/main.dart, snapshot_replica.dart; pinned flutter_scene0.24.3 components/component.dart, node.dart, light.dart, widgets/declarative.dart, widgets/scene_view.dart. Đường thử src/declarative.dart sai không tồn tại; đã dùng đúng src/widgets/declarative.dart. Không dùng lỗi đường dẫn làm kết luận API, không chạy runtime.
+
+Final cleanup: bỏ worknotes refs36/38/40. Native export vẫn84trang/0outside; hash84PNG so candidate chỉ83/84đổi,82tranggiữbyte. Lead xem riêng final83/84 ở kích thước đọc rõ, không tràn/cắt entry; pubdate38giữ. Cindy independentlyhashWord7ae85ae3/PDFaa748978 và viewfinal83/84, đóngrefsfinding. Thử sai tên tools/pdf-thesis-audit.mjs PathNotFound; dùng đúng audit-thesis-pdf.mjs thành công. Hai click đầu bị STALE_SNAPSHOT không có side effect; dùng fresh top-level snapshot_id+element_index đúng và xuấtđúngpath, không replay publish. Own Word5828 đóng bằngUIA, kiểm processgone. Finalidentity artifacts-final.json; không dùng candidatehash làm final.

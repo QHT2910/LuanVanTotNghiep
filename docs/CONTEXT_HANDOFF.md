@@ -1,3 +1,23 @@
+## v0.13 QA/Cindy closure complete — 19/11/2026
+
+Existing Orca QA bkm terminalPASS finalclosure ownhash7ae85ae3/aa748978, ZIPonly3reftexts changed,44URLs/24OMML/38caption exact,actualviewfinal83/84clear. CandidateQA14subheads/50prose+10pages/source preserved reused; nofullacademicclaim. Cindy independent finalhash/view83/84accept refs, viewedprose36/39/40acceptable. All findingsclosed; reports qa/thesis-v013/qa-{bounded,final-closure}.md; REVIEW/CURRENT updated. Lastquota42/26 updated1795070843785 reserve5. Ready finish-session onlyreviewedpaths exclude alloldmanualoriginals/pausedbrief/intermediatesv012/v013candidate; finalWordPDFdeliver. No game/newtasks needed.
+
+## v0.13 final refs cleanup / closure pending — 19/11/2026
+
+Cindy candidate actual36/39/40/84 accepted viewedprose; required remove refsworknotes38/40, existingQA terminal also36. Applied tools/close-thesis-v013-refs.cjs into distinct thesis/v0.13_final Word6080056 SHA7ae85ae3ffcc28dee7116011f5318bebf03d156346e2f09314addb29c8376aa7; PDF3400704 SHAaa7489781e24ee6a154fcf87923e7baed6111b6e0eec3ee01a2ac513bbb1bd69. Only3refsprocessnotes differ, pubdate01/10/2026 retained, noothertext/media changes. Native84pages/0outside/chapter1/5/42/74 gatesPASS, candidatevsfinalPNG only83/84changed82exact. Leadactualviewnew83/84 PASS; ownWord5828closedviaUIA and processgone. Verification/font/caption rerunfinalPASS. Artifacts-final/refsclosure/changedpages/renderfinal savedqa. QAterminal candidate savedqa-bounded.md, finalclosure notyetdispatched. Next sendexactfinalhash/pages83/84 to sameQA andCindy, nofull84replay. No game/providerchange.
+
+## v0.13 native export / Lead reviewed / QA pending — 19/11/2026
+
+Current Word thesis/Ban_thao_Chuong_1-4_v0.13.docx 6080217bytes SHA791952551ad589962302581e054e2ffe91a7f88ddef0b03e6bc935e5866aa87a; PDF3400944bytes SHA237276a60a111338ac2261a3e5f5db5ca19f315ef53394c672d15baa1b4e3d24. Native Word108→84pages, chapters1/5/42/74, refs82–84. All listings Ch2 replaced by50prose/headingparagraphs in2.12, 14subheads preserved; three code-related tables removed intentionally. 44refs accessmetadata removed, publicationdate01/10/2026 kept. All38media/24OMML/captionXML/52otherZIPparts exact; Ch1/3/4text exact. Actual checks qa/thesis-v013 PASS verification/font/caption/chapter/render0outside. Lead viewed all21sheets84pages +zoom36/39/40/84. No TOCfields in source/new. Own Word12752 closed viaUIA after native export; no userdoc forcedclose. One false automatic approval rejection on Publish resolved by readback+explicit full outputpath and freshAX; no old PDF overwritten.
+
+REVIEW_v0.13.md + artifacts/preservation/leadvisual logs saved; QA bkm existing idle0 identified, bounded review to dispatch next. Thesis i5ekk terminal proposal integrated; developer/diagrams not dispatched. Last LIVE22/22 updated1795070053419 reserve5. Git026904b, finish notrun; exclude originalmanualv0.3/v0.9/v0.10/v0.11_final and correctedv011/intermediatev012/Stage3brief. GAME PAUSED. Next QAterminal→Cindy review→finish-session exclude originals→deliver WordPDF. No build/test/game/network task.
+
+## v0.13 initial scope — 19/11/2026
+
+User yêu cầu bỏ ngày truy cập ở refs (giữ năm xuất bản/URL/DOI/citation), thay TOÀN BỘ code/snippets/pseudocode Ch2 bằng diễn giải/bảng chức năng và thứ tự API; không chuyển fullcode sang phụ lục. Game/Stage3 PAUSED. Host live0/19 updated1795068816314, reserve5. Latest actual Word v0.12_final6360390 SHA488390fb4e387c318099ee572b28c5d20b28af7b845437455f1fdf18bab6ca89 KHÔNG có sửa tay mới; timestamp/hashbackup đã thực trong thesis/backups/v012-before-v013-* +manifest. Source inventory .scratch/thesis-v013/baseline:1671paragraph38drawing27table24OMML44refs. Output riêng v0.13 WordPDF, không restoreGit/MDregen. Rule repo đã thêm mục6 ngày19/11; OUTLINE còn cần đồng bộ. Lead đã đọc academic/humanizer, giữ TNR13/Before6/Multiple1.3/After hiện có/captionBIUonly.
+
+Next existing thesis-worker i5ekk READONLY content map: Ch2 toàn bộ nhất là2.12p468…; giữ nguyên14subsection numbers để Ch4crossrefs ổn, diễn giải cảnh/camera/transform/component/material/input/trigger/asset/snapshot/declarative/hotreload thay code. Lead owns refs removal/ZIP integration/export/render/QA existingbkm. Roles queues checked idle0; no new workers/model changes. Git base026904b. No v013 output/export yet.
+
 ## v0.12 FINAL closure complete / finish pending
 
 Orca tester terminal PASS listing closure, hashes488390/9bfa correct, all text exact and realw:br. PriorboundedQA preservation/caption/4diagram pages PASS; notfullacademic. Stale REVIEW authorburden sentence corrected by Lead afterQA; noartifactchange. Cindy independentlyhash/view59 closureaccepted. Currentdeliver thesis/v0.12_final WordPDF only,108pages vs109baseline. All drafts/sourceoriginals excluded from finish. GamePAUSED.
@@ -605,10 +625,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-18T11:28:15.194Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `4e4f92b23db802004b9f8a251c80961ccdb304d3`.
-- Local tracking origin/main: `4e4f92b23db802004b9f8a251c80961ccdb304d3` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 45 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-19T06:50:49.499Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `026904bdba0a8f5e6ea80ef90d6c9e5ea965feba`.
+- Local tracking origin/main: `026904bdba0a8f5e6ea80ef90d6c9e5ea965feba` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 24 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

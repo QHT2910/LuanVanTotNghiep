@@ -58,3 +58,10 @@ Phông chữ của các tiêu đề là Times New Roman. Cỡ chữ và kiểu t
 - Không thêm câu nhắc chưa có kết quả trên máy thật hoặc lời hẹn bổ sung. Chương 4 ghi đúng môi trường đã đo và kết quả có bằng chứng; không gọi kết quả giả lập là kết quả máy thật. Khi có phép đo máy thật thì bổ sung thông số và kết quả tương ứng.
 - Sơ đồ dùng một phong cách thống nhất, có thể theo PlantUML: đồng bộ phông, đường nét, mũi tên và kiểu hộp theo loại sơ đồ. Ưu tiên bố cục ngang cho sơ đồ lớp hoặc hình quá dài nếu giúp tận dụng vùng in mà nhãn vẫn đọc rõ; không kéo méo, thu chữ quá nhỏ hoặc làm sai liên kết. Không áp phong cách này để vẽ lại ảnh chụp UI Figma.
 - Chú thích hình đặt bên dưới và căn giữa. Chỉ phần đánh số, ví dụ “Hình 3.19”, đồng thời in đậm, in nghiêng và gạch dưới. Sau đó là dấu hai chấm và tên hình dùng chữ normal: “Hình 3.19: Thiết kế màn hình Hòa khi phòng đã đóng.” Số chương trong nhãn phải khớp chương chứa hình (hình thứ 2 ở Chương 5 là Hình 5.2).
+
+## 6. Bổ sung ngày 19/11/2026: tài liệu tham khảo và Chương 2
+
+- Tài liệu tham khảo không ghi ngày truy cập. Chỉ bỏ trường truy cập và dấu câu dư; giữ tác giả, tiêu đề, ngày/năm xuất bản, URL/DOI, số nguồn và liên kết trích dẫn.
+- Không đặt nhật ký khảo sát hoặc ghi chú quy trình trong reference entry (ví dụ chưa chạy công cụ, chưa quan sát chơi, mức transcript đã đọc). Giữ giới hạn nghiên cứu cần thiết ở phần nội dung thích hợp hoặc hồ sơ rà soát riêng; không biến việc bỏ ghi chú thành khẳng định đã chạy/đã quan sát.
+- Chương 2 không chứa code listing, snippets, pseudocode dạng listing hoặc nhãn “Mã ví dụ (tiếp)”. Thay bằng văn xuôi hoặc bảng giải thích tên component/hàm/API, vai trò, cách hoạt động, thứ tự gọi, điều kiện, lifecycle, tham số quan trọng và ý nghĩa ứng dụng. Không tự chuyển toàn bộ mã sang phụ lục.
+- Giữ tên định danh đúng case, dùng chữ normal Times New Roman 13; không code font, nhấn đậm hoặc shading định danh. Giữ công thức toán/OMML, sơ đồ và lý thuyết cần thiết; không xóa tên hàm trong văn xuôi hoặc UML. Điều chỉnh lời dẫn, tham chiếu và mục lục theo nội dung mới.

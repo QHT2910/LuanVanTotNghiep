@@ -1,0 +1,196 @@
+{
+  "input": "thesis/Ban_thao_Chuong_1-4_v0.12_final.docx",
+  "inputSha256": "488390fb4e387c318099ee572b28c5d20b28af7b845437455f1fdf18bab6ca89",
+  "output": "thesis/Ban_thao_Chuong_1-4_v0.13.docx",
+  "sha256": "791952551ad589962302581e054e2ffe91a7f88ddef0b03e6bc935e5866aa87a",
+  "bytes": 6080217,
+  "removedBodyElements": 626,
+  "newSectionParagraphs": 50,
+  "drawings": 38,
+  "omml": 24,
+  "references": 44,
+  "tables": 24,
+  "unchangedZipParts": 52,
+  "referenceChanges": [
+    {
+      "before": "[1] Flutter Scene, Welcome to Scene, https://fscene.dev/getting-started/. Truy cập ngày 03/11/2026.",
+      "after": "[1] Flutter Scene, Welcome to Scene, https://fscene.dev/getting-started/. "
+    },
+    {
+      "before": "[2] Flutter Scene, Installation, https://fscene.dev/getting-started/installation/. Truy cập ngày 03/11/2026 và 04/11/2026.",
+      "after": "[2] Flutter Scene, Installation, https://fscene.dev/getting-started/installation/. "
+    },
+    {
+      "before": "[3] Godot Engine, Introduction. https://docs.godotengine.org/en/stable/about/introduction.html. Truy cập ngày 04/11/2026.",
+      "after": "[3] Godot Engine, Introduction. https://docs.godotengine.org/en/stable/about/introduction.html. "
+    },
+    {
+      "before": "[4] Godot Engine, Exporting for Android. https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html. Truy cập ngày 04/11/2026.",
+      "after": "[4] Godot Engine, Exporting for Android. https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html. "
+    },
+    {
+      "before": "[5] Flame, trang chính thức. https://flame-engine.org/. Truy cập ngày 04/11/2026.",
+      "after": "[5] Flame, trang chính thức. https://flame-engine.org/. "
+    },
+    {
+      "before": "[6] Flame, tài liệu flame_3d. https://github.com/flame-engine/flame/blob/main/packages/flame_3d/README.md. Truy cập ngày 04/11/2026.",
+      "after": "[6] Flame, tài liệu flame_3d. https://github.com/flame-engine/flame/blob/main/packages/flame_3d/README.md. "
+    },
+    {
+      "before": "[7] Flutter Scene, gói flutter_scene, 0.24.3: https://pub.dev/packages/flutter_scene. Truy cập ngày 04/11/2026.",
+      "after": "[7] Flutter Scene, gói flutter_scene, 0.24.3: https://pub.dev/packages/flutter_scene. "
+    },
+    {
+      "before": "[8] Miniclip, Basketball Stars. https://www.miniclip.com/games/basketball-stars/. Truy cập ngày 04/11/2026.",
+      "after": "[8] Miniclip, Basketball Stars. https://www.miniclip.com/games/basketball-stars/. "
+    },
+    {
+      "before": "[9] Flutter, Impeller rendering engine. https://docs.flutter.dev/perf/impeller. Truy cập ngày 04/11/2026.",
+      "after": "[9] Flutter, Impeller rendering engine. https://docs.flutter.dev/perf/impeller. "
+    },
+    {
+      "before": "[10] Flutter Scene, Core concepts: https://fscene.dev/getting-started/core-concepts/. Truy cập ngày 04/11/2026.",
+      "after": "[10] Flutter Scene, Core concepts: https://fscene.dev/getting-started/core-concepts/. "
+    },
+    {
+      "before": "[11] Flutter Scene, Scene graph: https://fscene.dev/guides/scene-graph/. Truy cập ngày 04/11/2026.",
+      "after": "[11] Flutter Scene, Scene graph: https://fscene.dev/guides/scene-graph/. "
+    },
+    {
+      "before": "[12] Flutter Scene, Materials: https://fscene.dev/guides/materials/. Truy cập ngày 04/11/2026.",
+      "after": "[12] Flutter Scene, Materials: https://fscene.dev/guides/materials/. "
+    },
+    {
+      "before": "[13] Flutter Scene, Cameras: https://fscene.dev/guides/cameras/. Truy cập ngày 04/11/2026.",
+      "after": "[13] Flutter Scene, Cameras: https://fscene.dev/guides/cameras/. "
+    },
+    {
+      "before": "[14] Flutter Scene, Lighting and environment: https://fscene.dev/guides/lighting-and-environment/. Truy cập ngày 04/11/2026.",
+      "after": "[14] Flutter Scene, Lighting and environment: https://fscene.dev/guides/lighting-and-environment/. "
+    },
+    {
+      "before": "[15] Flutter Scene, Assets and loading: https://fscene.dev/guides/assets-and-loading/. Truy cập ngày 04/11/2026.",
+      "after": "[15] Flutter Scene, Assets and loading: https://fscene.dev/guides/assets-and-loading/. "
+    },
+    {
+      "before": "[16] Flutter Scene, Animation: https://fscene.dev/guides/animation/. Truy cập ngày 04/11/2026.",
+      "after": "[16] Flutter Scene, Animation: https://fscene.dev/guides/animation/. "
+    },
+    {
+      "before": "[17] Gói flutter_scene_rapier, 0.5.2: https://pub.dev/packages/flutter_scene_rapier. Truy cập ngày 04/11/2026.",
+      "after": "[17] Gói flutter_scene_rapier, 0.5.2: https://pub.dev/packages/flutter_scene_rapier. "
+    },
+    {
+      "before": "[18] Flutter Scene, Picking and input: https://fscene.dev/guides/picking-and-input/. Truy cập ngày 04/11/2026.",
+      "after": "[18] Flutter Scene, Picking and input: https://fscene.dev/guides/picking-and-input/. "
+    },
+    {
+      "before": "[19] Gói flutter_scene_net, 0.2.2: https://pub.dev/packages/flutter_scene_net. Truy cập ngày 04/11/2026.",
+      "after": "[19] Gói flutter_scene_net, 0.2.2: https://pub.dev/packages/flutter_scene_net. "
+    },
+    {
+      "before": "[20] Khronos, Vulkan Specification, Pipelines: https://docs.vulkan.org/spec/latest/chapters/pipelines.html. Truy cập ngày 05/11/2026.",
+      "after": "[20] Khronos, Vulkan Specification, Pipelines: https://docs.vulkan.org/spec/latest/chapters/pipelines.html. "
+    },
+    {
+      "before": "[21] Khronos, glTF 2.0 Specification: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html. Truy cập ngày 05/11/2026.",
+      "after": "[21] Khronos, glTF 2.0 Specification: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html. "
+    },
+    {
+      "before": "[22] Glenn Fiedler, Fix Your Timestep!: https://gafferongames.com/post/fix_your_timestep/. Truy cập ngày 05/11/2026.",
+      "after": "[22] Glenn Fiedler, Fix Your Timestep!: https://gafferongames.com/post/fix_your_timestep/. "
+    },
+    {
+      "before": "[23] Rapier, Rigid-bodies, JavaScript guide (nguyên lý): https://rapier.rs/docs/user_guides/javascript/rigid_bodies/. Truy cập ngày 05/11/2026.",
+      "after": "[23] Rapier, Rigid-bodies, JavaScript guide (nguyên lý): https://rapier.rs/docs/user_guides/javascript/rigid_bodies/. "
+    },
+    {
+      "before": "[24] Gabriel Gambetta, Client-Server Game Architecture: https://www.gabrielgambetta.com/client-server-game-architecture.html. Truy cập ngày 05/11/2026.",
+      "after": "[24] Gabriel Gambetta, Client-Server Game Architecture: https://www.gabrielgambetta.com/client-server-game-architecture.html. "
+    },
+    {
+      "before": "[25] Gabriel Gambetta, Client-Side Prediction and Server Reconciliation: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html. Truy cập ngày 05/11/2026.",
+      "after": "[25] Gabriel Gambetta, Client-Side Prediction and Server Reconciliation: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html. "
+    },
+    {
+      "before": "[26] Gabriel Gambetta, Entity Interpolation: https://www.gabrielgambetta.com/entity-interpolation.html. Truy cập ngày 05/11/2026.",
+      "after": "[26] Gabriel Gambetta, Entity Interpolation: https://www.gabrielgambetta.com/entity-interpolation.html. "
+    },
+    {
+      "before": "[27] Flutter, Flutter performance profiling: https://docs.flutter.dev/perf/ui-performance. Truy cập ngày 05/11/2026.",
+      "after": "[27] Flutter, Flutter performance profiling: https://docs.flutter.dev/perf/ui-performance. "
+    },
+    {
+      "before": "[28] Joey de Vries, LearnOpenGL, Coordinate Systems: https://learnopengl.com/Getting-started/Coordinate-Systems. Truy cập ngày 05/11/2026.",
+      "after": "[28] Joey de Vries, LearnOpenGL, Coordinate Systems: https://learnopengl.com/Getting-started/Coordinate-Systems. "
+    },
+    {
+      "before": "[29] Joey de Vries, LearnOpenGL, Basic Lighting: https://learnopengl.com/Lighting/Basic-Lighting. Truy cập ngày 05/11/2026.",
+      "after": "[29] Joey de Vries, LearnOpenGL, Basic Lighting: https://learnopengl.com/Lighting/Basic-Lighting. "
+    },
+    {
+      "before": "[30] Glenn Fiedler, Integration Basics: https://gafferongames.com/post/integration_basics/. Truy cập ngày 05/11/2026.",
+      "after": "[30] Glenn Fiedler, Integration Basics: https://gafferongames.com/post/integration_basics/. "
+    },
+    {
+      "before": "[31] Joey de Vries, LearnOpenGL, PBR Theory: https://learnopengl.com/PBR/Theory. Truy cập ngày 05/11/2026.",
+      "after": "[31] Joey de Vries, LearnOpenGL, PBR Theory: https://learnopengl.com/PBR/Theory. "
+    },
+    {
+      "before": "[32] Khronos, glTF Tutorial, Buffers, BufferViews, and Accessors: https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.html. Truy cập ngày 05/11/2026.",
+      "after": "[32] Khronos, glTF Tutorial, Buffers, BufferViews, and Accessors: https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.html. "
+    },
+    {
+      "before": "[33] Khronos, glTF Tutorial, Skins: https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_020_Skins.html. Truy cập ngày 05/11/2026.",
+      "after": "[33] Khronos, glTF Tutorial, Skins: https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_020_Skins.html. "
+    },
+    {
+      "before": "[34] Glenn Fiedler, Physics in 3D: https://gafferongames.com/post/physics_in_3d/. Truy cập ngày 05/11/2026.",
+      "after": "[34] Glenn Fiedler, Physics in 3D: https://gafferongames.com/post/physics_in_3d/. "
+    },
+    {
+      "before": "[35] Gói flutter_scene 0.24.3, mã nguồn phân phối: component.dart, camera.dart, light.dart và các light component trong lib/src. https://pub.dev/packages/flutter_scene/versions/0.24.3. Đối chiếu cache package ngày 05/11/2026.",
+      "after": "[35] Gói flutter_scene 0.24.3, mã nguồn phân phối: component.dart, camera.dart, light.dart và các light component trong lib/src. https://pub.dev/packages/flutter_scene/versions/0.24.3. "
+    },
+    {
+      "before": "[36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/. Truy cập ngày 05/11/2026. Chỉ dùng các đặc tính do nhà phát hành công bố, chưa quan sát chơi.",
+      "after": "[36] Miniclip, Basketball Arena: https://www.miniclip.com/games/basketball-arena/. Chỉ dùng các đặc tính do nhà phát hành công bố, chưa quan sát chơi."
+    },
+    {
+      "before": "[37] KhronosGroup, glTF Sample Assets, Fox, commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/4995a638c96dbc94376d3d6164e70fee3ac7f7a2/Models/Fox. Đọc README pháp lý và metadata GLB ngày 05/11/2026.",
+      "after": "[37] KhronosGroup, glTF Sample Assets, Fox, commit 4995a638c96dbc94376d3d6164e70fee3ac7f7a2: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/4995a638c96dbc94376d3d6164e70fee3ac7f7a2/Models/Fox. "
+    },
+    {
+      "before": "[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026 theo trang YouTube; Cindy xem chọn đoạn ngày 07/11/2026, không có transcript đầy đủ.",
+      "after": "[38] Brandon DeRosier, Scene: A complete 3D engine for Flutter — Brandon DeRosier | Flutter & Friends 2026, video: https://www.youtube.com/watch?v=BPAg7qt5Dz0. Đăng 01/10/2026 theo trang YouTube; không có transcript đầy đủ."
+    },
+    {
+      "before": "[39] Flutter Scene, Declarative scenes: https://fscene.dev/guides/declarative-scenes/. Truy cập ngày 07/11/2026.",
+      "after": "[39] Flutter Scene, Declarative scenes: https://fscene.dev/guides/declarative-scenes/. "
+    },
+    {
+      "before": "[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. Truy cập ngày 07/11/2026; chưa chạy editor.",
+      "after": "[40] Flutter Scene, The Flutter Scene Editor: https://fscene.dev/editor/. chưa chạy editor."
+    },
+    {
+      "before": "[41] Gói flutter_scene 0.24.3, mã nguồn phân phối scene_view.dart, declarative.dart và hot_reload_coordinator.dart trong lib/src: https://pub.dev/packages/flutter_scene/versions/0.24.3. Đối chiếu cache ngày 07/11/2026.",
+      "after": "[41] Gói flutter_scene 0.24.3, mã nguồn phân phối scene_view.dart, declarative.dart và hot_reload_coordinator.dart trong lib/src: https://pub.dev/packages/flutter_scene/versions/0.24.3. "
+    },
+    {
+      "before": "[42] Flutter API, PointerEvent.pointer: https://api.flutter.dev/flutter/gestures/PointerEvent/pointer.html. Truy cập ngày 10/11/2026.",
+      "after": "[42] Flutter API, PointerEvent.pointer: https://api.flutter.dev/flutter/gestures/PointerEvent/pointer.html. "
+    },
+    {
+      "before": "[43] Flutter API, Listener: https://api.flutter.dev/flutter/widgets/Listener-class.html. Truy cập ngày 10/11/2026.",
+      "after": "[43] Flutter API, Listener: https://api.flutter.dev/flutter/widgets/Listener-class.html. "
+    },
+    {
+      "before": "[44] Flutter API, AppLifecycleState: https://api.flutter.dev/flutter/dart-ui/AppLifecycleState.html. Truy cập ngày 10/11/2026.",
+      "after": "[44] Flutter API, AppLifecycleState: https://api.flutter.dev/flutter/dart-ui/AppLifecycleState.html. "
+    }
+  ],
+  "bodyCodeScan": "PASS",
+  "captionXML": "exactly preserved",
+  "allMedia": "byte identical",
+  "tocFields": []
+}

@@ -1,5 +1,7 @@
 Cập nhật 18/11/2026: văn phong báo cáo cuối cùng; bỏ nhật ký tiến độ/lời hẹn và câu nhắc chưa thử máy thật. Chương 1–3 trình bày mục tiêu, lý thuyết, thiết kế và cách hoạt động trung tính; không biến thiết kế thành chức năng đã triển khai. Sơ đồ thống nhất style/UMLkind và ưu tiên ngang khi đọc được; ảnh Figma giữ nguyên. Nhãn caption hình Hình X.Y đồng thời bold/italic/underline, sau đó colon và tên normal; caption bảng normal. Xem docs/THESIS_FORMAT_2026-11-09.md mục5.
 
+Cập nhật 19/11/2026: Chương 2 không chứa listing/snippets/pseudocode hay nhãn mã tiếp; giải thích vai trò, trình tự và điều kiện API bằng văn xuôi/bảng, giữ công thức và sơ đồ. Mục 2.12 trình bày phối hợp các thành phần trong cảnh mẫu, giữ 14 số tiểu mục để dẫn chiếu ổn định. Tài liệu tham khảo bỏ trường ngày truy cập, giữ ngày/năm xuất bản và số nguồn/URL/DOI.
+
 # Bố cục sơ bộ theo yêu cầu sinh viên — 2026-11-04
 
 Cập nhật 07/11/2026: thêm 2.4.4 khai báo/thao tác trực tiếp; mở rộng 2.7 về loading/warm-up; thêm 2.11.4 hot reload và 2.11.5 editor; 2.12.13 bài khai báo tùy chọn, 2.12.14 kiểm hot reload có điều kiện. Giữ các mục lớn, A–F và thứ tự hiện hành; không đổi kiến trúc game.
@@ -28,9 +30,9 @@ Quy tắc cấu trúc cập nhật 12/11/2026: mỗi chương bắt đầu trang
 2.9. Chuyển động và mô phỏng vật lý
 2.10. Kết nối và đồng bộ trạng thái thời gian thực
 2.11. Hiệu năng và giới hạn đánh giá
-2.12. Hướng dẫn xây dựng một cảnh mẫu xuyên suốt
+2.12. Phối hợp các thành phần trong cảnh mẫu
 
-Mục 2.1–2.11 dành cho lý thuyết; 2.12 hướng dẫn riêng xuyên suốt theo yêu cầu ngày 05/11/2026.
+Mục 2.1–2.11 dành cho lý thuyết; 2.12 giải thích phối hợp các thành phần trong cảnh mẫu bằng văn xuôi, thay toàn bộ listing theo yêu cầu ngày 19/11/2026.
 
 ## Chương 3. Xây dựng game Bóng rổ đối kháng 3D
 3.1 Mô tả game
