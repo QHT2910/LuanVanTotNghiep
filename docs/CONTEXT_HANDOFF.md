@@ -1,3 +1,23 @@
+## Network Stage3 step1 QA closure PASS — 22/11/2026
+
+ExistingOrcaQA terminalencodingPASS0?/FFFD/NUL,32tablerows/42manifesthashes correct; golden1944fc37/comparison79c00548 unchanged. qa-encoding-closure.md saved; numerical/sourcePASS reused. Proof32cases/1e-4m maxhand0/local5.96e-8 only, noStep2. Cindy result sent beforefinish, reviewpending. FinalLeadreviewdone, baselineAPKrestored7da, appstopped, no sourcegameplay/thesisedits. Readyfinish onlynewdiagnostics/evidence/docs/checkpoint excludesoldmanualthesis/brief/intermediates and damagedVMlogs (localpreserved;goldenJSON/readablepublic). No new task/AVD/build authorizedneeded.
+
+## Network Stage3 step1 QA numerical PASS / encoding closure pending — 22/11/2026
+
+ExistingOrcaQA terminal own32Math.hypot max0/alpha equal/bind0/frozenexact, source/provenancePASS; P2 reportliteral?324/logBOMNUL. Lead fixed ONLYdocsUTF8 and addedcollector-reviewed-log-readable.txt fromdamagedoriginal; original preservedcollector-reviewed-log-original.txt, manifest logEncoding explicitlossyrecovery notrawpristine. Rawgolden/comparison/code unchanged. docs/NETWORK_STAGE3_STEP1_REVIEW.md now readableUTF8+same32coordinate rows. NeedexistingQAboundedencodingclosure; Cindyreview requestednext. APKbaselinealreadyrestored7da/processstopped, noAVD/buildrerunneeded. qa-review.md savedsummary.
+
+## Network Stage3 step1 measured / QA pending — 22/11/2026
+
+Lead proof actual32casesPASS<=1e-4m, maxhanddelta0, localTRSmax5.9604644775390625e-8, bindTRS0. Rawgolden-reviewed.json frompublicScene importedasset67nodes/65joints onPixel9aAPI37/x64debug; CLIpureDartindependent replaycomparison-reviewed.json. Bothyaw0/pi alpha0/.5/1 idle/fullcharge/air/recharge/cancel/freeze/reset. Negativecontrol+1mm rejects exit1. Numericalcollector skips shaderreadiness (initialawaitstalled); importer+Scene.update0 publicgetter oracle, NOTSceneView/GPUACK. FinalmarkerIMPORT_BEGIN (exploratorySTATIC_READYincorrectnotoracle). Source/asset/APK/cache/evidencehash manifestgame/evidence-network-stage3-step1; report docs/NETWORK_STAGE3_STEP1_REVIEW.md. Analyze-reviewed/build-reviewed/compare-reviewed-clean actualPASS. CWDfailure corrected; Pythonaliasattempt nofilewrites, correctedNodecasts; no fakepass from failures. Live43/54 lastupdated1795324900232 reserve5.
+
+InstalledAPKpreserved/restored/pullverifiedSHA7da23a38…; appforce-stopped, buildAPKrestored, existingAVDleftsingle noGPU/RAMchanges. Source main/libsrc/pubspec/lock/assets unchanged, oldthesis untouched. No production/network/gameplayintegration. Needs existingQAbkm independentnumeric/provenance/source review thenCindy; nofullM2replay/newworker. Pendingcommit/push onlyrevieweddiagnostic/report/evidence/checkpoint excludesoldmanualthesis/intermediates/Stage3brief. Briefexistinguntrackedunchanged. Samefixturesnotfullposecoverage,1m/sceneunitconvention. Step2notauthorized.
+
+## Network Stage3 step1 active — 22/11/2026
+
+User authorized ONLY feasibility pureDart handworld vs Scene0.24.3 public appliedTRS, threshold1e-4m fixed. No endtoend/network/gameplay/thesis integration. LastLIVE25/52updated1795324039267 reserve5. Gitbase4b19355; oldmanualthesis changes untouched. ExistingOrcadeveloper o7 terminalREADONLY sourceplanreceived (no runtimeclaim). Lead created lib/diagnostics/hand_cpu.dart, stage3_hand_golden.dart and tool/compare-stage3-hand.dart insideoffline-practice, defaultmain/gameplay untouched. RawGLB67nodes/65joints/body191arms4, LINEARFloat32; mirrorrootZ only, palm0,.07,0, yaw0/pi. 32sequencefixtures with alpha0/mid/end, air/recharge/cancel/freeze/groundreset; same inputtick CPU andScene separately. Collector uses actualLayeredPose+Scene.update0, logs publicTRS/hand; CLIpureDart replays fixture inputs independently. No comparison result yet.
+
+Analyze session76479 / build33076 started, logs.scratch/stage3-analyze.txt andgame/evidence-network-stage3-step1/build.txt. ExistingPixel_9a wasoff, launchedsingle viaemulatorCLIhidden noGPU/RAM/configchanges; adbdstarted. ExistingbuildAPKcopied.scratch/stage3-preserve/app-debug-before.apk ifpresent. MUST preserveinstalledAPK viaadbpm-path/pullBEFORE diagnosticinstall, restoreAPKaftergolden and restorebuildoutput; nooldartifacts overwrite. Goldenfilepath appcache/stage3-golden.json; CLIcompare intoNEWgame/evidence-network-stage3-step1. Needfinishanalyze/build→AVDpullbaseline/installcollector/capturegolden→numericalcompare/debug→sameQA→Cindy→finish-sessionexcludeoldthesis/brief. ProofnotyetPASS. No serversrunning.
+
 ## v0.13 QA/Cindy closure complete — 19/11/2026
 
 Existing Orca QA bkm terminalPASS finalclosure ownhash7ae85ae3/aa748978, ZIPonly3reftexts changed,44URLs/24OMML/38caption exact,actualviewfinal83/84clear. CandidateQA14subheads/50prose+10pages/source preserved reused; nofullacademicclaim. Cindy independent finalhash/view83/84accept refs, viewedprose36/39/40acceptable. All findingsclosed; reports qa/thesis-v013/qa-{bounded,final-closure}.md; REVIEW/CURRENT updated. Lastquota42/26 updated1795070843785 reserve5. Ready finish-session onlyreviewedpaths exclude alloldmanualoriginals/pausedbrief/intermediatesv012/v013candidate; finalWordPDFdeliver. No game/newtasks needed.
@@ -625,10 +645,10 @@ Cindy đã nhận nội dung R3/v0.5; lượt v0.6 chỉ sửa xuất bản, kh�
 Project D:/totnghiep/LuanVanTotNghiep, origin https://github.com/QHT2910/LuanVanTotNghiep.git, branch main; cơ sở trước tích hợp 6697b3170aff0b668eab2b67b0789f2d0c7d0427. Cuối lượt chỉ Lead dùng finish-session --exclude thesis/Ban_thao_Chuong_1-3_v0.3.docx. Đọc git status/log và log .scratch/v06-finish-session.log trước retry; snapshot dưới là trước commit, không phải lệnh replay.
 
 <!-- checkpoint-git:start -->
-Ghi UTC: 2026-11-19T06:50:49.499Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
-- Branch: `main`; HEAD cơ sở: `026904bdba0a8f5e6ea80ef90d6c9e5ea965feba`.
-- Local tracking origin/main: `026904bdba0a8f5e6ea80ef90d6c9e5ea965feba` (không tự fetch hoặc suy ra remote live).
-- Git status lúc ghi: có 24 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
+Ghi UTC: 2026-11-22T05:36:36.153Z. Snapshot trước commit chứa checkpoint, không phải HEAD cuối phiên.
+- Branch: `main`; HEAD cơ sở: `4b19355d53beeb74a37c918012b25f6165f8f88a`.
+- Local tracking origin/main: `4b19355d53beeb74a37c918012b25f6165f8f88a` (không tự fetch hoặc suy ra remote live).
+- Git status lúc ghi: có 17 mục thay đổi chưa commit. Khi khôi phục đọc lại `git status --short` và HEAD thật.
 <!-- checkpoint-git:end -->
 
 ## Worker theo mốc bàn giao

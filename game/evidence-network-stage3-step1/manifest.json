@@ -1,0 +1,272 @@
+{
+  "date": "2026-11-22",
+  "baseCommit": "4b19355d53beeb74a37c918012b25f6165f8f88a",
+  "os": {
+    "reportedProduct": "Windows 10 Home Single Language",
+    "build": "26200"
+  },
+  "flutter": "3.47.8",
+  "dart": "3.13.7",
+  "scene": "0.24.3",
+  "vectorMath": "2.4.4",
+  "mode": "Android x64 debug diagnostic target; CPU public TRS, no Scene render/GPU frame claim",
+  "device": "Pixel_9a AVD emulator-5554 Android API37 x86_64, Impeller OpenGLES logged",
+  "asset": {
+    "path": "assets/human-ual-standard/HumanBasketballLayered.glb",
+    "sha256": "87d9b9a6d5a3e2bd89621972c38196aadb52638b91bff21eda685f5e488741ba"
+  },
+  "sources": [
+    {
+      "path": "game/offline-practice/lib/diagnostics/hand_cpu.dart",
+      "sha256": "0fab4c68bae7ebc7973559fc850dd36fa2586185aa52dc481a2571afa619b549"
+    },
+    {
+      "path": "game/offline-practice/lib/diagnostics/stage3_hand_golden.dart",
+      "sha256": "1b4b62c25262a99938cf56f331701a74815bad2384f6de793bc7f6e3a5bedacf"
+    },
+    {
+      "path": "game/offline-practice/tool/compare-stage3-hand.dart",
+      "sha256": "c2ad41093d233cd37076e02036e03dcdc2feef5c9ea8df8931a34fe42f20c10f"
+    },
+    {
+      "path": "game/offline-practice/lib/src/presentation/layered_pose.dart",
+      "sha256": "4529d20f6e987d4653ccee28bc40fff8cd713b9f43e444332ca8743d2f1a5553"
+    },
+    {
+      "path": "game/offline-practice/lib/src/presentation/human_actor.dart",
+      "sha256": "7969a086eaecb929c6e55230f37d4b8a63473e70997e8e021a21ce549ec134e7"
+    },
+    {
+      "path": "game/offline-practice/lib/src/presentation/arm_transition.dart",
+      "sha256": "ee5f86433dd273484ae456a697193599f42186cdd933a4a57c2820d58992e247"
+    },
+    {
+      "path": "game/offline-practice/lib/src/presentation/shot_pose_clock.dart",
+      "sha256": "c1cceb344e9bfbc1037ab168af967b44c243b8701e78b2a7cd1c6fef9469232f"
+    }
+  ],
+  "apk": [
+    {
+      "path": ".scratch/stage3-preserve/installed-before.apk",
+      "sha256": "7da23a38b33567f74c0196eb9fc008a61ce58fbbc560d1567e6782cfc54af53b"
+    },
+    {
+      "path": ".scratch/stage3-preserve/installed-restored.apk",
+      "sha256": "7da23a38b33567f74c0196eb9fc008a61ce58fbbc560d1567e6782cfc54af53b"
+    },
+    {
+      "path": ".scratch/stage3-preserve/collector-reviewed.apk",
+      "sha256": "e0d2bafc0852f931249d35a22ccef8b343aa2160a790ecf27fe795878f7e2b59"
+    },
+    {
+      "path": ".scratch/stage3-preserve/collector-installed.apk",
+      "sha256": "e0d2bafc0852f931249d35a22ccef8b343aa2160a790ecf27fe795878f7e2b59"
+    }
+  ],
+  "raw": {
+    "path": "game/evidence-network-stage3-step1/golden-reviewed.json",
+    "sha256": "1944fc379b5d3d2cdae8c08a236bedd12d7cacdbd08878b290510f8918fabf2d"
+  },
+  "comparison": {
+    "path": "game/evidence-network-stage3-step1/comparison-reviewed.json",
+    "sha256": "79c00548dcda4e84009f0c14a9b345946cb765e107a962ce2a6f5a48edfd47c3"
+  },
+  "negativeControlExit": 1,
+  "pinnedCacheSources": [
+    {
+      "relative": "node.dart",
+      "sha256": "4c9d444593c5b2d7f8ea4ee8fc8cb954f02af4ae4f73ea9871d6e458a60e8f19"
+    },
+    {
+      "relative": "math_extensions.dart",
+      "sha256": "24440eaa6aa87a5ea59c239963ed1308c14244a78553391c86dfd8d73086a89b"
+    },
+    {
+      "relative": "animation/animation_player.dart",
+      "sha256": "60fb30b85a7a76233c314c41b984fa806919f89f5773f1f3499929bdb41f2ff2"
+    },
+    {
+      "relative": "animation/property_resolver.dart",
+      "sha256": "3ac0385899b0d10f2398856a18509798e583909d70a83cdb7ed0480048b78c6d"
+    },
+    {
+      "relative": "runtime_importer/runtime_importer.dart",
+      "sha256": "fbfe1eb35f7f9b6dc0c822fd05d1a9701b1a79d2ce4e65cc019ee1213e64e9cd"
+    }
+  ],
+  "files": [
+    {
+      "path": "analyze-final.txt",
+      "sha256": "0fe89886dcd3a88c2b11d490ac8e72dbac89002bc092bae932df957862724a99"
+    },
+    {
+      "path": "analyze-reviewed.txt",
+      "sha256": "77864a7247f6378ce3ee8e12c0dd636e51b00d491b1208ed7a3bed7364242ece"
+    },
+    {
+      "path": "analyze.txt",
+      "sha256": "d6ccf93f781531122ca657b613c1d5945cc73012ab65ecb13f9ba24be63da6e0"
+    },
+    {
+      "path": "apk-audit.json",
+      "sha256": "34991758072332a2eccb8b2e9cb20376b9561e6a96bf0d99acdf287b0b847e7a"
+    },
+    {
+      "path": "baseline-diff.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build-final.txt",
+      "sha256": "fe00645e80f0c6a23cc72847472987ec46e716ff36114544731d3f267d281a29"
+    },
+    {
+      "path": "build-numerical.txt",
+      "sha256": "8e8bf927579928d486be135006bdb8ed03046843bd2a75407c1f4d5937d834b6"
+    },
+    {
+      "path": "build-postframe.txt",
+      "sha256": "079a06e91b7abd12dd625f8f83c007739637df23482a34c352a66bdf6963190e"
+    },
+    {
+      "path": "build-reviewed.txt",
+      "sha256": "3844dc07977b5c8b5819d75a112606a79df0f3b27277d048b06614f87cbe037d"
+    },
+    {
+      "path": "build-spinner.txt",
+      "sha256": "8e8bf927579928d486be135006bdb8ed03046843bd2a75407c1f4d5937d834b6"
+    },
+    {
+      "path": "build.txt",
+      "sha256": "83a2abd4b320eb77e215159cedeb665fb683ca331b2128ef7709d42b7c52fecc"
+    },
+    {
+      "path": "capture.png",
+      "sha256": "d24fde78875f9fab848c8ac32106fb4b2efff3bc5070d03995f9c79593dc467a"
+    },
+    {
+      "path": "cleanup.txt",
+      "sha256": "9527a37b8650d9a259c416e87fe97d472f2e5d2b6c976a456a562cd072040963"
+    },
+    {
+      "path": "collector-log.txt",
+      "sha256": "da6296c2240484f370cd65200fd11974d0a76c8ff1394372fc99b00b2af66943"
+    },
+    {
+      "path": "collector-numerical-log.txt",
+      "sha256": "f64dc24a84e885232248fe46ac1e354aa6970d248b47c571348d98ec54b0a7ce"
+    },
+    {
+      "path": "collector-postframe-log.txt",
+      "sha256": "0cafe67f161165b9b5a8b11a53a216f5265a0f2403e8764d30dc959425631062"
+    },
+    {
+      "path": "collector-reviewed-log-original.txt",
+      "sha256": "76d256035f6af37b7bb81ef21a0b29203ce05fc94c1b96c9fb098edc615e615a"
+    },
+    {
+      "path": "collector-reviewed-log-readable.txt",
+      "sha256": "0e524e31e2177105b2cc371c3c0584e2eabf36acf6eefb2a28d785de865ee435"
+    },
+    {
+      "path": "collector-reviewed-log.txt",
+      "sha256": "76d256035f6af37b7bb81ef21a0b29203ce05fc94c1b96c9fb098edc615e615a"
+    },
+    {
+      "path": "collector-spinner-log.txt",
+      "sha256": "e60ed6bdbe90817d8d5e7c72bec862996ecb1ee0de2243e117a4f201b4e8faed"
+    },
+    {
+      "path": "compare-final.txt",
+      "sha256": "6acf073ba7f4a3a9624f1077b0f4ae2946a5598bcad02a2c6681ff8c1114fc5b"
+    },
+    {
+      "path": "compare-reviewed-clean.txt",
+      "sha256": "4fb1af601e61a513b56dfa4586425b788d52164f525b11eb3c201ea7c5578dd3"
+    },
+    {
+      "path": "compare-reviewed.txt",
+      "sha256": "3dafc1aaee45d0411c1aaf9f58fcb12a25da9564f18e021fca164187da3d3e76"
+    },
+    {
+      "path": "compare.txt",
+      "sha256": "af27de03db37c09fb0042a62d50a377089b580f0158ecc6547ec7683bf9d111c"
+    },
+    {
+      "path": "comparison-reviewed.json",
+      "sha256": "79c00548dcda4e84009f0c14a9b345946cb765e107a962ce2a6f5a48edfd47c3"
+    },
+    {
+      "path": "comparison.json",
+      "sha256": "79c00548dcda4e84009f0c14a9b345946cb765e107a962ce2a6f5a48edfd47c3"
+    },
+    {
+      "path": "diff-check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "format.txt",
+      "sha256": "03dccb1163d4f4524e7b98ffbdd88b6b29db4a854742a61d26d320068d876532"
+    },
+    {
+      "path": "golden-reviewed.json",
+      "sha256": "1944fc379b5d3d2cdae8c08a236bedd12d7cacdbd08878b290510f8918fabf2d"
+    },
+    {
+      "path": "golden.json",
+      "sha256": "1944fc379b5d3d2cdae8c08a236bedd12d7cacdbd08878b290510f8918fabf2d"
+    },
+    {
+      "path": "install-numerical.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": "install-postframe.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": "install-reviewed.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": "install-spinner.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": "install.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": "launch-numerical.txt",
+      "sha256": "6b1aa58663340fc7d7e0f046a4aa39b235377b7fed4d2fc52fa2e9494553350e"
+    },
+    {
+      "path": "launch-postframe.txt",
+      "sha256": "8a72a3df2a19e50984d80c554b83ba33bbf5e68321c0e4081e71ea4b5bc6c376"
+    },
+    {
+      "path": "launch-reviewed.txt",
+      "sha256": "391b06901ca1c8d1be3a86acef9460bba956464b17a37f23c99a0982a21858e8"
+    },
+    {
+      "path": "launch-spinner.txt",
+      "sha256": "ea2873d8f3970cb3b88b69ddfc5d3e35ec73b6e914178b4fa07d65a7e1fac0fc"
+    },
+    {
+      "path": "launch.txt",
+      "sha256": "c355348fadc53d6390b0a76b55e74419c15a8c3953e6301f9a473fd09cfb7554"
+    },
+    {
+      "path": "negative-control.txt",
+      "sha256": "6752d86c73279d68058a0e932443bc584d1c860eee70ff5bee520a0fd35615ed"
+    },
+    {
+      "path": "restore.txt",
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    }
+  ],
+  "logEncoding": {
+    "original": "collector-reviewed-log-original.txt",
+    "readable": "collector-reviewed-log-readable.txt",
+    "warning": "Original damaged by UTF16LE->UTF8 conversion; readable strips NUL/replacement, not pristine raw UTF8. Golden JSON unchanged."
+  }
+}

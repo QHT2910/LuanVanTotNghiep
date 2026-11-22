@@ -1,0 +1,937 @@
+{
+  "thresholdMetres": 0.0001,
+  "maxErrorMetres": 0.0,
+  "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+  "maxBindTRSComponentDelta": 0.0,
+  "cases": [
+    {
+      "id": "idle-0.0",
+      "tick": 0,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.09656243026256561,
+        0.8624367713928223,
+        -0.5454137325286865
+      ],
+      "cpu": [
+        0.09656243026256561,
+        0.8624367713928223,
+        -0.5454137325286865
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "idle-mid-0.0",
+      "tick": 1,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.10340903699398041,
+        0.8476119041442871,
+        -0.5730571746826172
+      ],
+      "cpu": [
+        0.10340903699398041,
+        0.8476119041442871,
+        -0.5730571746826172
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "charge-alpha0-0.0",
+      "tick": 2,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.09658642113208771,
+        0.8622263073921204,
+        -0.5520161390304565
+      ],
+      "cpu": [
+        0.09658642113208771,
+        0.8622263073921204,
+        -0.5520161390304565
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "charge-alphaMid-0.0",
+      "tick": 3,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.10917026549577713,
+        1.1830213069915771,
+        -1.062211036682129
+      ],
+      "cpu": [
+        0.10917026549577713,
+        1.1830213069915771,
+        -1.062211036682129
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "fullcharge-releaseT-0.0",
+      "tick": 4,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.28507864475250244,
+        1.7499231100082397,
+        -1.0022437572479248
+      ],
+      "cpu": [
+        0.28507864475250244,
+        1.7499231100082397,
+        -1.0022437572479248
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "air-start-0.0",
+      "tick": 5,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.65,
+        -0.7
+      ],
+      "scene": [
+        0.3253425061702728,
+        2.500913619995117,
+        -0.7382086515426636
+      ],
+      "cpu": [
+        0.3253425061702728,
+        2.500913619995117,
+        -0.7382086515426636
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "air-loop-releaseT-0.0",
+      "tick": 6,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.9,
+        -0.7
+      ],
+      "scene": [
+        0.24754416942596436,
+        2.5375568866729736,
+        -1.0598502159118652
+      ],
+      "cpu": [
+        0.24754416942596436,
+        2.5375568866729736,
+        -1.0598502159118652
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "cancel-alpha0-0.0",
+      "tick": 7,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.85,
+        -0.7
+      ],
+      "scene": [
+        0.24587227404117584,
+        2.487342596054077,
+        -1.0596009492874146
+      ],
+      "cpu": [
+        0.24587227404117584,
+        2.487342596054077,
+        -1.0596009492874146
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "cancel-mid-0.0",
+      "tick": 8,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.8,
+        -0.7
+      ],
+      "scene": [
+        -0.12929648160934448,
+        1.955000400543213,
+        -0.9378350973129272
+      ],
+      "cpu": [
+        -0.12929648160934448,
+        1.955000400543213,
+        -0.9378350973129272
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-alpha0-0.0",
+      "tick": 9,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.7,
+        -0.7
+      ],
+      "scene": [
+        -0.10978634655475616,
+        1.968161702156067,
+        -1.0044658184051514
+      ],
+      "cpu": [
+        -0.10978634655475616,
+        1.968161702156067,
+        -1.0044658184051514
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-mid-0.0",
+      "tick": 10,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.6,
+        -0.7
+      ],
+      "scene": [
+        0.08188051730394363,
+        1.9598513841629028,
+        -1.110942006111145
+      ],
+      "cpu": [
+        0.08188051730394363,
+        1.9598513841629028,
+        -1.110942006111145
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-end-0.0",
+      "tick": 11,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.5,
+        -0.7
+      ],
+      "scene": [
+        0.28507864475250244,
+        2.2499232292175293,
+        -1.0022437572479248
+      ],
+      "cpu": [
+        0.28507864475250244,
+        2.2499232292175293,
+        -1.0022437572479248
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "cancel-freeze-0.0",
+      "tick": 12,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.4,
+        -0.7
+      ],
+      "scene": [
+        0.28507864475250244,
+        2.149923324584961,
+        -1.0022437572479248
+      ],
+      "cpu": [
+        0.28507864475250244,
+        2.149923324584961,
+        -1.0022437572479248
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "frozen-moving-parent-0.0",
+      "tick": 13,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.2,
+        -0.7
+      ],
+      "scene": [
+        0.28507864475250244,
+        1.949923038482666,
+        -1.0022437572479248
+      ],
+      "cpu": [
+        0.28507864475250244,
+        1.949923038482666,
+        -1.0022437572479248
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "ground-change-clear-0.0",
+      "tick": 14,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        -0.07405305653810501,
+        0.7054028511047363,
+        -1.0606409311294556
+      ],
+      "cpu": [
+        -0.07405305653810501,
+        0.7054028511047363,
+        -1.0606409311294556
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "reset-0.0",
+      "tick": 15,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.09656243026256561,
+        0.8624367713928223,
+        -0.5454137325286865
+      ],
+      "cpu": [
+        0.09656243026256561,
+        0.8624367713928223,
+        -0.5454137325286865
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "idle-3.141592653589793",
+      "tick": 16,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.7034375071525574,
+        0.8624367713928223,
+        -0.8545862436294556
+      ],
+      "cpu": [
+        0.7034375071525574,
+        0.8624367713928223,
+        -0.8545862436294556
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "idle-mid-3.141592653589793",
+      "tick": 17,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.6965910196304321,
+        0.8476119041442871,
+        -0.8269428014755249
+      ],
+      "cpu": [
+        0.6965910196304321,
+        0.8476119041442871,
+        -0.8269428014755249
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "charge-alpha0-3.141592653589793",
+      "tick": 18,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.7034136056900024,
+        0.8622263073921204,
+        -0.8479838371276855
+      ],
+      "cpu": [
+        0.7034136056900024,
+        0.8622263073921204,
+        -0.8479838371276855
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "charge-alphaMid-3.141592653589793",
+      "tick": 19,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.6908296942710876,
+        1.1830213069915771,
+        -0.33778896927833557
+      ],
+      "cpu": [
+        0.6908296942710876,
+        1.1830213069915771,
+        -0.33778896927833557
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "fullcharge-releaseT-3.141592653589793",
+      "tick": 20,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.5149213075637817,
+        1.7499231100082397,
+        -0.3977562189102173
+      ],
+      "cpu": [
+        0.5149213075637817,
+        1.7499231100082397,
+        -0.3977562189102173
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "air-start-3.141592653589793",
+      "tick": 21,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.65,
+        -0.7
+      ],
+      "scene": [
+        0.47465750575065613,
+        2.500913619995117,
+        -0.6617913246154785
+      ],
+      "cpu": [
+        0.47465750575065613,
+        2.500913619995117,
+        -0.6617913246154785
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "air-loop-releaseT-3.141592653589793",
+      "tick": 22,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.9,
+        -0.7
+      ],
+      "scene": [
+        0.5524557828903198,
+        2.5375568866729736,
+        -0.34014981985092163
+      ],
+      "cpu": [
+        0.5524557828903198,
+        2.5375568866729736,
+        -0.34014981985092163
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "cancel-alpha0-3.141592653589793",
+      "tick": 23,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.85,
+        -0.7
+      ],
+      "scene": [
+        0.5541277527809143,
+        2.487342596054077,
+        -0.34039902687072754
+      ],
+      "cpu": [
+        0.5541277527809143,
+        2.487342596054077,
+        -0.34039902687072754
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 5.960464477539063e-8,
+      "pass": true
+    },
+    {
+      "id": "cancel-mid-3.141592653589793",
+      "tick": 24,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.8,
+        -0.7
+      ],
+      "scene": [
+        0.9292964935302734,
+        1.955000400543213,
+        -0.46216487884521484
+      ],
+      "cpu": [
+        0.9292964935302734,
+        1.955000400543213,
+        -0.46216487884521484
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-alpha0-3.141592653589793",
+      "tick": 25,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.7,
+        -0.7
+      ],
+      "scene": [
+        0.9097863435745239,
+        1.968161702156067,
+        -0.3955341875553131
+      ],
+      "cpu": [
+        0.9097863435745239,
+        1.968161702156067,
+        -0.3955341875553131
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-mid-3.141592653589793",
+      "tick": 26,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.6,
+        -0.7
+      ],
+      "scene": [
+        0.7181195020675659,
+        1.9598513841629028,
+        -0.28905805945396423
+      ],
+      "cpu": [
+        0.7181195020675659,
+        1.9598513841629028,
+        -0.28905805945396423
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "recharge-generation2-end-3.141592653589793",
+      "tick": 27,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.5,
+        -0.7
+      ],
+      "scene": [
+        0.5149213075637817,
+        2.2499232292175293,
+        -0.3977562189102173
+      ],
+      "cpu": [
+        0.5149213075637817,
+        2.2499232292175293,
+        -0.3977562189102173
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "cancel-freeze-3.141592653589793",
+      "tick": 28,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.4,
+        -0.7
+      ],
+      "scene": [
+        0.5149213075637817,
+        2.149923324584961,
+        -0.3977562189102173
+      ],
+      "cpu": [
+        0.5149213075637817,
+        2.149923324584961,
+        -0.3977562189102173
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "frozen-moving-parent-3.141592653589793",
+      "tick": 29,
+      "alphaScene": 0.0,
+      "alphaCPU": 0.0,
+      "feet": [
+        0.4,
+        0.2,
+        -0.7
+      ],
+      "scene": [
+        0.5149213075637817,
+        1.949923038482666,
+        -0.3977562189102173
+      ],
+      "cpu": [
+        0.5149213075637817,
+        1.949923038482666,
+        -0.3977562189102173
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "ground-change-clear-3.141592653589793",
+      "tick": 30,
+      "alphaScene": 0.5,
+      "alphaCPU": 0.5,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.8740530610084534,
+        0.7054028511047363,
+        -0.33935898542404175
+      ],
+      "cpu": [
+        0.8740530610084534,
+        0.7054028511047363,
+        -0.33935898542404175
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    },
+    {
+      "id": "reset-3.141592653589793",
+      "tick": 31,
+      "alphaScene": 1.0,
+      "alphaCPU": 1.0,
+      "feet": [
+        0.4,
+        0.0,
+        -0.7
+      ],
+      "scene": [
+        0.7034375071525574,
+        0.8624367713928223,
+        -0.8545862436294556
+      ],
+      "cpu": [
+        0.7034375071525574,
+        0.8624367713928223,
+        -0.8545862436294556
+      ],
+      "deltaMetres": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distanceMetres": 0.0,
+      "maxLocalTRSComponentDelta": 0.0,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

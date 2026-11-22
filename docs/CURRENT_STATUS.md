@@ -1,3 +1,7 @@
+## Network Stage3 bước 1 — 22/11/2026
+
+Proof Dart thuần đối chiếu public TRS/hand của Scene0.24.3:32/32fixture đạt ngưỡng đề xuất1e-4m, maxhanddelta0, localTRSmax5.96e-8. Golden trên một Pixel9aAVD/API37/x64debug, CLIWindows độc lập; không SceneView/GPUACK hoặc serverintegration. Yaw0/pi, alpha0/.5/1, idle/fullcharge/air/recharge/cancel/freeze/reset. QA Orca Worker numerical/source và encoding closure PASS; Cindy đã nhận report để review. Xem docs/NETWORK_STAGE3_STEP1_REVIEW.md và game/evidence-network-stage3-step1. BaselineAPK7da đãkhôi phục/hashverified/appstopped, gameplay và luậnvăn không đổi. STEP2 chưa giao; không tự tiếp mạng/end-to-end.
+
 ## Luận văn v0.13 final đã review — 19/11/2026
 
 Word/PDF v0.13_final đã xuất native Word84trang (v0.12_final108). Ch2 không còn listing/snippet/pseudocode;2.12giải thích thành phần/API bằng văn xuôi,giữ14tiểu mục.44nguồn bỏ ngày truy cập và processnotes36/38/40, giữ ngày xuất bản/URL/số nguồn.38hình/11Figma/24OMMLgiữ nguyên,ba bảng mã được thay bằng diễn giải;Ch1/3/4giữ chữ. Lead xem đủ84trangcandidate, finalchỉ83/84đổi đãxemlại. Cindy tựhashfinal7ae85ae3/aa748978vàxemrefs83/84đóngfinding, trướcđóxemprose36/39/40acceptable. QA Orca Worker terminalPASS content/preservation vàfinalrefsclosure,ownhash/XML/ảnh,phạmvi10trangcandidate+2final;không nhận ready-to-submit/fullacademic. Xem thesis/REVIEW_v0.13.md và qa/thesis-v013/artifacts-final.json. GAME/Stage3PAUSED.

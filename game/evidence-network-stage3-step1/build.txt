@@ -1,0 +1,28 @@
+Running Gradle task 'assembleDebug'...                          
+flutter : lib/diagnostics/stage3_hand_golden.dart:51:41: Error: Member not found: 'Vector3.fromList'.
+At line:2 char:1
++ flutter build apk --debug --no-pub --target-platform android-x64 --ta ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (lib/diagnostics...tor3.fromList'.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+        actor.node.position = v.Vector3.fromList(
+                                        ^^^^^^^^
+Target kernel_snapshot_program failed: Exception
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildDebug'.
+> Process 'command 'D:\flutter\bin\flutter.bat'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 34s
+Running Gradle task 'assembleDebug'...                             35.3s
+Gradle task assembleDebug failed with exit code 1

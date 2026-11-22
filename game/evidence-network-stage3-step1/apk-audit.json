@@ -1,0 +1,17 @@
+{
+  "assetSHA256": "87d9b9a6d5a3e2bd89621972c38196aadb52638b91bff21eda685f5e488741ba",
+  "kernelMarkers": [
+    {
+      "marker": "STAGE3_IMPORT_BEGIN",
+      "present": true
+    },
+    {
+      "marker": "STAGE3_GOLDEN_DONE",
+      "present": true
+    },
+    {
+      "marker": "stage3_hand_golden.dart",
+      "present": true
+    }
+  ]
+}

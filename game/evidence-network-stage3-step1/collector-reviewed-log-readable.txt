@@ -1,0 +1,71 @@
+--------- beginning of main
+I/libprocessgroup(10889): Created cgroup /sys/fs/cgroup/apps/uid_10235/pid_10889
+I/Zygote  (10889): Process 10889 created for com.example.offline_practice
+I/ffline_practice(10889): Late-enabling -Xcheck:jni
+I/ffline_practice(10889): Using generational CollectorTypeCMC GC.
+W/ffline_practice(10889): Unexpected CPU variant for x86: x86_64.
+W/ffline_practice(10889): Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+D/nativeloader(10889): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+D/ApplicationLoaders(10889): Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+D/ApplicationLoaders(10889): Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+D/nativeloader(10889): Configuring clns-9 for other apk /data/app/~~CTuiXC4OL-0I2-JIjlLCVg==/com.example.offline_practice-usIGzlh3BdAycJ2bGDV5vg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~CTuiXC4OL-0I2-JIjlLCVg==/com.example.offline_practice-usIGzlh3BdAycJ2bGDV5vg==/lib/x86_64:/data/app/~~CTuiXC4OL-0I2-JIjlLCVg==/com.example.offline_practice-usIGzlh3BdAycJ2bGDV5vg==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.offline_practice
+V/GraphicsEnvironment(10889): Currently set values for:
+V/GraphicsEnvironment(10889):   angle_gl_driver_selection_pkgs=[]
+V/GraphicsEnvironment(10889):   angle_gl_driver_selection_values=[]
+V/GraphicsEnvironment(10889): com.example.offline_practice is not listed in per-application setting
+V/GraphicsEnvironment(10889): No special selections for ANGLE, returning default driver choice
+V/GraphicsEnvironment(10889): Neither updatable production driver nor prerelease driver is supported.
+--------- beginning of system
+I/DisplayManager(10889): Choreographer implicitly registered for the refresh rate.
+I/GFXSTREAM(10889): [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+I/GFXSTREAM(10889): [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+W/libc    (10889): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+W/HWUI    (10889): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/HWUI    (10889): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/FlutterJNI(10889): Beginning load of flutter...
+I/ResourceExtractor(10889): Found extracted resources res_timestamp-1-1795324914968
+I/ResourceExtractor(10889): Resource version mismatch res_timestamp-1-1795325070147
+D/nativeloader(10889): Load /data/app/~~CTuiXC4OL-0I2-JIjlLCVg==/com.example.offline_practice-usIGzlh3BdAycJ2bGDV5vg==/base.apk!/lib/x86_64/libflutter.so using class loader ns clns-9 (caller=/data/app/~~CTuiXC4OL-0I2-JIjlLCVg==/com.example.offline_practice-usIGzlh3BdAycJ2bGDV5vg==/base.apk): ok
+D/FlutterJNI(10889): flutter (null) was loaded normally!
+D/skia    (10889): [SkFontMgr Android Parser] '/product/etc/fonts_customization.xml' could not be opened
+I/ResourceExtractor(10889): Extracted baseline resource assets/flutter_assets/kernel_blob.bin
+I/ResourceExtractor(10889): Extracted baseline resource assets/flutter_assets/vm_snapshot_data
+I/ResourceExtractor(10889): Extracted baseline resource assets/flutter_assets/isolate_snapshot_data
+W/ffline_practice(10889): type=1400 audit(0.0:93): avc:  denied  { read } for  name="max_map_count" dev="proc" ino=21935 scontext=u:r:untrusted_app_34:s0:c235,c256,c512,c768 tcontext=u:object_r:proc_max_map_count:s0 tclass=file permissive=0 app=com.example.offline_practice
+W/libc    (10889): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/flutter (10889): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+W/libc    (10889): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/flutter (10889): The Dart VM service is listening on [redacted local VM service URL]
+I/ffline_practice(10889): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityNodeInfo;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported,test-api) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10889): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityRecord;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10889): hiddenapi: Accessing hidden field Landroid/view/accessibility/AccessibilityNodeInfo;->mChildNodeIds:Landroid/util/LongArray; (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/ffline_practice(10889): hiddenapi: Accessing hidden method Landroid/util/LongArray;->get(I)J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+D/AccessibilityBridge(10889): Setting not found: accessibility_display_inversion_enabled, using default: 0
+D/FlutterRenderer(10889): Width is zero. 0,0
+D/CompatChangeReporter(10889): Compat change id reported: 377864165; UID 10235; state: ENABLED
+W/HWUI    (10889): Unknown dataspace 0
+W/libc    (10889): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+I/flutter (10889): STAGE3_BEGIN
+I/flutter (10889): STAGE3_IMPORT_BEGIN
+I/Choreographer(10889): Skipped 82 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher(10889): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@3e327cd
+I/ffline_practice(10889): Compiler allocated 5250KB to compile void android.view.ViewRootImpl.performTraversals(long)
+I/WindowExtensionsImpl(10889): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils(10889): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@b42476a, of which baseContext=android.app.ContextImpl@6577e71
+D/VRI[MainActivity](10889): WindowInsets changed: 2424x1080 statusBars:[0,137,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,137,0,84] 
+D/FlutterRenderer(10889): Width is zero. 0,0
+I/Surface (10889): Creating surface for consumer unnamed-10889-0 with slotExpansion=1 for 64 slots
+I/Surface (10889): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI(10889): Sending viewport metrics to the engine.
+I/Surface (10889): Creating surface for consumer unnamed-10889-1 with slotExpansion=1 for 64 slots
+I/Surface (10889): Creating surface for consumer 54d7f73 SurfaceView[com.example.offline_practice/com.example.offline_practice.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/flutter (10889): Unpacking glTF (nodes: 67, meshes: 1, materials: 2, skins: 1, animations: 55)
+I/flutter (10889): STAGE3_ACTOR_READY
+I/flutter (10889): STAGE3_GOLDEN_DONE 32 /data/user/0/com.example.offline_practice/code_cache/stage3-golden.json
+I/Choreographer(10889): Skipped 79 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI(10889): Sending viewport metrics to the engine.
+D/WindowLayoutComponentImpl(10889): Register WindowLayoutInfoListener on Context=com.example.offline_practice.MainActivity@b8eb82e, of which baseContext=android.app.ContextImpl@20fe348
+D/FlutterJNI(10889): Sending viewport metrics to the engine.
+D/InsetsController(10889): hide(ime())
+I/ImeTracker(10889): com.example.offline_practice:5b4fbaf8: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+D/ProfileInstaller(10889): Installing profile for com.example.offline_practice

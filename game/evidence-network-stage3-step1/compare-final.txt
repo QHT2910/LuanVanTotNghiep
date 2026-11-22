@@ -1,0 +1,8 @@
+cases=32 max=0.0 pass=true
+dart : Running build hooks...Running build hooks...
+At line:2 char:450
++ ... l.txt 2>&1; dart run tool/compare-stage3-hand.dart ../evidence-networ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Running build h... build hooks...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
